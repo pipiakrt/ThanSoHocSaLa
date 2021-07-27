@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,26 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('/gioi-thieu')->group(function () {
-    Route::get('/', function () {
-        return view('gioi-thieu');
-    });
-    Route::get('/chuyen-gia', function () {
-        return 'Giới thiệu chuyên gia';
-    });
-    Route::get('/su-menh', function () {
-        return 'Giới thiệu sứ mệnh';
-    });
-    Route::get('/co-hoc-sala', function () {
-        return 'Giới thiệu về cổ học sala';
-    });
-    Route::get('/than-so-hoc-sala', function () {
-        return 'Giới thiệu về cổ học sala';
-    });
+    Route::get('/', [HomeController::class, 'gioithieu']);
+    Route::get('/chuyen-gia', [HomeController::class, 'chuyengia']);
+    Route::get('/su-menh', [HomeController::class, 'sumenh']);
+    Route::get('/co-hoc-sala', [HomeController::class, 'cohocsala']);
+    Route::get('/than-so-hoc-sala', [HomeController::class, 'thansohocsala']);
 });
 
 Route::prefix('/san-pham')->group(function () {
@@ -98,5 +87,3 @@ Route::get('/tra-cuu', function () {
 });
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
