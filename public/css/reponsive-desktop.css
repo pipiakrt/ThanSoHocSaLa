@@ -1,0 +1,96 @@
+@media (min-width: 1200px) { 
+    .tamnhin-sumenh .st-col-6 {
+        width: 52.5%;
+    }
+    .tamnhin-sumenh .st-col-2 {
+        width: 18%;
+    }
+    .tamnhin-sumenh .st-col-4 {
+        width: 29.5%;
+    }
+    .chuyen-gia .ct-col-5{
+        width: 41%;
+    }
+    .chuyen-gia .ct-col-7{
+        width: 59%;
+    }
+    .form-tracuu .ct-col-4 {
+        width: 32%;
+    }
+    .form-tracuu .ct-col-3 {
+        width: 24%;
+    }
+    .form-tracuu .ct-col-2 {
+        width: 20%;
+    }
+    .service2 .ct-col-3 {
+        width: 29%;
+    }
+    .service2 .ct-col-9 {
+        width: 71%;
+    }
+    .main_ung-dung .col-cus-5 {
+        width: 35.666667%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) { 
+    .cam-nhan-kh .block-main {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1450px) { 
+    .tamnhin-sumenh .st-col-2 {
+        width: 23%;
+    }
+    .tamnhin-sumenh .st-col-4 {
+        width: 24.5%;
+    }
+    .block-2 .col-3-st {
+        width: 23.5%;
+    }
+    .block-2 .col-6-st {
+        width: 53%;
+    }
+    .post-slogan .br-cs1, .post-slogan .br-cs2 {
+        width: 20% !important;
+    }
+}
+
+/* xxl2 */
+@media (max-width: 1650px) { 
+    .position-xl-center {
+        background-position-x: center;
+    }
+}
+/* xxl */
+@media (max-width: 1450px) { 
+    .bds-lg-initial {
+        border-radius: initial;
+    }
+}
+@media (max-width: 1550px) { 
+    .main_su-menh .item-title h3 {
+        inline-size: unset !important;
+    }
+}
+@media (max-width: 1400px) { 
+    .container-ketqua .cus.col-xl-2 {
+        width: 25%;
+    }
+    .container-ketqua .cus.col-xl-10 {
+        width: 75%;
+    }
+    .ketqua .conso .nb {
+        left: 39%;
+    }
+    .form-tracuu .main-tracuu h1 {
+        font-size: 35px;
+    }
+}
+@media (min-width: 1400px) { 
+    .footer .cus-col-2 {
+        width: 18.5%;
+    }
+}

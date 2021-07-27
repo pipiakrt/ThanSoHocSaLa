@@ -1,0 +1,40 @@
+.post-header {
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+.post-header .header-title h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.post-header .header-desc {
+    font-size: 16px;
+    font-weight: 200;
+    color: #666666;
+}
+.post-header .cmt-4 {
+    margin-top: 24px;
+}
+.post-main .post-item {
+    background-color: #097364;
+    padding: 25px 50px;
+    position: relative;
+    min-height: 250px;
+}
+.post-main .post-item .item-title h5 {
+    margin: 0;
+    font-weight: 200;
+    font-size: 24px;
+}
+.post-main .post-item .item-desc {
+    margin-top: 15px;
+    font-weight: 100;
+}
+.post-main .post-item .icon-click {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.post-main .cmt-5 {
+    margin-top: 35px;
+}

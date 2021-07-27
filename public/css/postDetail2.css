@@ -1,0 +1,53 @@
+.post-sloganDetail .title h1 {
+    font-size: 35px;
+    padding-top: 15px;
+}
+.post-sloganDetail .desc-1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.post-sloganDetail .desc-1 h3 {
+    color: #097364;
+    font-size: 33px ;
+}
+.post-content {
+    margin: auto;
+    max-width: 1000px;
+    padding: 50px 0;
+}
+.post-relate {
+    background-color: #f8f8f8;
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+.post-relate .relate-title {
+    font-size: 30px;
+}
+.post-relate .item-name {
+    font-size: 30px;
+    color: #097364;
+}   
+.post-relate .item-title {
+    color: #555555;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+.post-relate .item-btn {
+    margin-top: 20px;
+    padding: 10px 70px;
+    color: white;
+    background-color: #dab066;
+    font-weight: 500;
+    font-size: 26px;
+    border-radius: 5px;
+    padding-top: 15px;
+    width: fit-content;
+}
+.post-relate .post-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    min-height: 270px;
+    background-position: center;
+}

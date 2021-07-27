@@ -1,0 +1,86 @@
+.session__mo-ta {
+    background-color: #f6ede6;
+    padding: 35px 0;
+}
+.session__mo-ta .desc span {
+    color: #0d6256;
+    letter-spacing: 0.4px;
+    font-size: 18px;
+    font-weight: 200;
+}
+.main_ung-dung {
+    padding: 50px 0;
+}
+.header_ung-dung {
+    background-image: url("/img/banner/bg-ud.png");
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    height: 85px;
+    margin-bottom: 30px;
+}
+.header_ung-dung h2 {
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.main_ung-dung ul {
+    list-style: none;
+    padding: 0;
+}
+.main_ung-dung ul li {
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+.main_ung-dung .bo-vien {
+    min-height: 200px;
+    width: 100%;
+    border: 1px solid #e3a352;
+}
+
+.bg-grray {
+    background-color: #f7f7f7;
+}
+.main_su-menh {
+    overflow: hidden;
+    margin-top: 30px;
+    padding: 50px 0;
+}
+.main_su-menh ul {
+    list-style: none;
+    padding: 0;
+}
+.main_su-menh .item-title {
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.main_su-menh .item-desc {
+    font-weight: 200;
+    margin-bottom: 20px;
+    width: 85%;
+}
+
+.main_dang-ky {
+    background-color: #0d6256;
+    min-height: 390px;
+    padding: 100px 0;
+    background-image: url("/img/banner/bg2-ud.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main_dang-ky .desc {
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+}
+.main_dang-ky .btn-dangky button {
+    margin-top: 50px;
+    padding: 0px 89px;
+    padding-top: 13px;
+    padding-bottom: 6px;
+    color: white;
+    background-color: #dab066;
+    font-weight: 200;
+    font-size: 24px;
+}

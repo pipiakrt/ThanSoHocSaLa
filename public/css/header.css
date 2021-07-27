@@ -1,0 +1,97 @@
+header {
+    overflow: hidden;
+    padding: 14px 0;
+    background-color: #ffffff;
+}
+header .logo-desktop {
+    height: 74px;
+}
+.menu-item {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 6px;
+    color: #3c3c2b;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+.menu-item:hover {
+    color: #097364;
+}
+.menu-item.right {
+    text-align: end;
+}
+.slogan {
+    padding-top: 22px;
+    padding-bottom: 8px;
+}
+.slogan h1 {
+    font-size: 31px;
+    letter-spacing: 1.4px;
+}
+
+/* mobile */
+
+.open-menu #m_ham_1 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: 13px;
+}
+.open-menu #m_ham_2 {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: -7px;
+}
+.open-menu #m_ham_3 {
+    opacity: 0;
+}
+.m_nav_ham {
+    width: 24px;
+    height: 2px;
+    background: #097364;
+    margin: 5px auto;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    transition: .5s;
+}
+.menu-mobile.hide-menu {
+    left: -100vw;
+    right: 150vw;
+}
+.menu-mobile .block-menu {
+    overflow: hidden;
+    transition: .5s;
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 1px 0px 20px 20px #92929252;
+}
+.menu-mobile .menu-done {
+    overflow: hidden;
+    width: 30%;
+    /* background: rgba(34,34,34,.8); */
+}
+.menu-mobile.hide-menu .menu-done {
+    display: none;
+}
+.menu-mobile .menu-mb-item {
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #333333;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+.menu-mobile .menu-mb-item a:hover {
+    color: #0d7464;
+    text-decoration: 1px underline;
+}

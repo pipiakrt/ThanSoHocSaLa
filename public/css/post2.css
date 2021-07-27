@@ -1,0 +1,54 @@
+.post-slogan {
+    padding-top: 23px;
+    padding-bottom: 7px;
+}
+.post-slogan .title {
+    position: relative;
+}
+.post-slogan .br-cs1 {
+    position: absolute;
+    height: 1px;
+    width: 26.5%;
+    top: 10px;
+    background: #097364;
+}
+.post-slogan .br-cs2 {
+    position: absolute;
+    height: 1px;
+    width: 26.5%;
+    right: 0;
+    top: 10px;
+    background: #097364;
+}
+.post-slogan .title h1 {
+    letter-spacing: 1px;
+    color: #097364;
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 500;
+}
+.post-main .post-name h2 {
+    color: #097364;
+    font-size: 30px;
+}
+.post-main .post-tilte h4 {
+    color: #555555;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.post-main .post-desc span {
+    font-weight: 200;
+    color: #555555;
+}
+.post-main .submit-post {
+    margin-top: 35px;
+    padding: 10px 70px;
+    color: white;
+    background-color: #dab066;
+    font-weight: 500;
+    font-size: 26px;
+    border-radius: 5px;
+    padding-top: 15px;
+    width: fit-content;
+    text-transform: uppercase;
+}

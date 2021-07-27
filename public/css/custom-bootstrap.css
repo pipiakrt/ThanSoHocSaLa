@@ -1,0 +1,39 @@
+@media (min-width: 1400px)
+{
+    .container-post {
+        max-width: 1165px;
+    }
+    .container-header {
+        max-width: 1390px;
+    }
+    .container-header2 {
+        max-width: 1435px;
+    }
+    .container-block-1 {
+        max-width: 1165px;
+    }
+    .container-chuyengia {
+        max-width: 1530px;
+    }
+    .container-ketqua {
+        max-width: 1615px;
+    }
+    .container-service {
+        max-width: 1500px;
+    }
+    .container-gtcl {
+        max-width: 1700px;
+    }
+}
+@media (min-width: 1665px)
+{
+    .container-postDetail {
+        max-width: 1665px;
+    }
+}
+.mw-fix {
+    max-width: fit-content;
+}
+._mb-8 {
+    margin-bottom: -8px;
+}

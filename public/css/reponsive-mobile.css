@@ -1,0 +1,298 @@
+/* lg */
+@media (max-width: 1200px) {
+    .content-ketqua .titlecs.text-center h4 {
+        margin-right: 0%;
+    }
+    .ketqua .conso-qk, .ketqua .btn-tt, .content-ketqua .desccs {
+        margin-left: 0;
+    }
+    .ketqua .conso {
+        background-position: center;
+    }
+    .ketqua .conso .nb {
+        left: 42%;
+    }
+    .main-tracuu .form-input input {
+        width: 100%;
+    }
+    .post-relate {
+        background-color: #f8f8f8;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .post-slogan .br-cs1, .post-slogan .br-cs2 {
+        display: none;
+    }
+    .w-md-100 {
+        width: 100%;
+    }
+    .lg-hide {
+        display: none !important;
+    } 
+    .reviews {
+        margin-bottom: 70px;
+    }
+    .service {
+        padding-bottom: 70px;
+    }
+    .chuyen-gia {
+        padding-bottom: 25px;
+    }
+    .block-1 {
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+    .footer {
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+    .tamnhin-sumenh .block .title {
+        padding-top: 50px;
+    }
+    .tamnhin-sumenh .full-height {
+        min-height: unset;
+        padding: 45px;
+        padding-top: 0;
+    }
+    .form-tracuu .btn-tracuu {
+        margin-top: 33px;
+    }
+    .gioi-thieu .block-main {
+        margin-left: 0;
+        margin-top: 25px;
+    }
+    .gia-tri .content-main img {
+        display: none;
+    }
+    .block-1 .titleheader {
+        margin: 0;
+    }
+    .service2 {
+        margin-top: 0;
+        padding-bottom: 25px;
+    } 
+    .chuyen-gia .info-chuyengia {
+        padding: 10px;
+    }
+    .chuyen-gia .block {
+        margin-top: 30px;
+    }
+    .service2 .box-item {
+        padding-bottom: 40px;
+    }
+    .gia-tri-cot-loi {
+        margin-top: 20px;
+    }
+    .service2 .block-item .fix-mgauto {
+        margin-left: 20%;
+    }
+    .gia-tri-cot-loi .block {
+        margin-top: 25px;
+    }
+    .service2 .toLink {
+        display: none !important;
+    }
+    .avatar-chuyen-gia {
+        min-height: 550px;
+        background-position-y: bottom;
+    }
+    .taisao {
+        padding: 30px 0;
+        padding-bottom: 30px;
+    }
+    .cam-nhan-kh {
+        padding: 50px 0;
+        padding-bottom: 50px;
+    }
+    .form-tracuu {
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    .cam-nhan-kh .block-main {
+        width: unset;
+    }
+    .coppyright .content-c {
+        padding: 5px 0;
+        padding-top: 7px;
+    }
+    .gioi-thieu {
+        padding: 25px 0;
+    }
+    .chuyen-gia .info-chuyengia .btn-view .btn {
+        margin-top: 25px;
+    }
+    .header_ung-dung {
+        background-image: unset;
+    }
+    .main_su-menh .item-desc {
+        width: 100%;
+    }
+    .main_ung-dung {
+        padding-bottom: 0;
+    }   
+    .main_su-menh {
+        padding-top: 0;
+    }
+    .main_dang-ky {
+        padding: 25px 0;
+    }
+    .container-ketqua .cus.col-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .youtube-responsive {
+        height: 500px;
+    }
+    .footer .form-group {
+        width: 225px;
+    }
+}
+
+/* md */
+@media (max-width: 992px) {
+    .form-tracuu .custom-form-input {
+        width: 100%;
+    }
+    .youtube-responsive {
+        height: 400px;
+    }
+    .gioi-thieu .btn-dangky button, .chuyen-gia .info-chuyengia .btn-view .btn, .form-tracuu .btn-tracuu {
+        padding: 5px;
+        padding-bottom: 2px;
+        min-width: 150px;
+        font-size: 18px;
+    }
+    .gia-tri .btn-dangky button {
+        font-size: 18px;
+        padding: 5px;
+        padding-bottom: 2px;
+    }
+    .slogan h1 {
+        font-size: 18px;
+        letter-spacing: 1.4px;
+    }
+    .gioi-thieu .block-content .cr-title h1 {
+        font-size: 28px;
+    }
+    .gioi-thieu .item .title h4, .gioi-thieu .item .desc span {
+        margin-left: 0;
+    }
+    .content-ketqua .share-ketqua {
+        padding: 30px 0;
+    }
+    .btn-ketqua button {
+        font-size: 20px;
+    }
+    .ketqua {
+        padding: 20px 0;
+    }
+    .ketqua .conso .nb {
+        left: 40%;
+    }
+    .chuyen-gia .tt-chuyengia {
+        width: 100%;
+        bottom: 10px;
+    }
+    .gia-tri {
+        padding: 50px 0;
+        padding-top: 25px;
+    }
+    .footer .footer-logo {
+        text-align: center;
+    }
+    .gia-tri .content-main {
+        margin-top: 0;
+        margin-left: 11px;
+    }
+    .gia-tri .btn-dangky button {
+        margin-top: 30px;
+    }
+    .taisao .block {
+        height: 125px;
+    }
+    .gia-tri-cot-loi .titlecotloi {
+        padding-top: 15px;
+    }
+    .gia-tri-cot-loi .titlecotloi h2 {
+        font-size: 22px !important;
+    }
+    .form-tracuu .btn-tracuu {
+        margin-top: 0;
+    }
+    .form-tracuu .main-tracuu h1 {
+        font-size: 24px;
+        margin-bottom: 20px !important;
+    }
+    .gioi-thieu .item.active {
+        width: unset;
+    }
+    .gioi-thieu .item {
+        width: unset;
+    }
+    .title-h1 {
+        font-size: 24px !important;
+    }
+    .service2 .group-content .title h4 {
+        font-size: 24px;
+    }
+    .slogan-1 {
+        padding: 0 15px;
+        padding-bottom: 30px;
+        text-align: left !important;
+    }
+    .slogan-2 {
+        height: unset;
+        padding: 30px 0;
+    }
+    .form-tracuu .main-tracuu {
+        padding: 25px 20px;
+    }
+    .block-1 .item {
+        width: 100%;
+    }
+    .block-2 .block-main {
+        width: 100%;
+    }
+    .block-2 .block {
+        height: unset;
+        padding: 50px 0;
+    }
+}
+
+/* sm */
+@media (max-width: 768px) {
+    .coppyright .content-c span {
+        font-size: 10px;
+    }
+    .footer .footer-logo {
+        margin-bottom: 0;
+    }
+    .ketqua .conso .nb {
+        left: 37%;
+    }
+    .tamnhin-sumenh .block {
+        max-width: unset;
+        margin: auto;
+    }
+    .youtube-responsive {
+        height: 300px;
+    }
+}
+
+/* xs */
+@media (max-width: 576px) {
+    .youtube-responsive {
+        height: 200px;
+    }
+    .ketqua .conso .nb {
+        left: 35%;
+    }
+    .breadcrumb-cus a {
+        font-size: 16px;
+    }
+}
+@media (max-width: 400px) {
+    .ketqua .conso .nb {
+        left: 30%;
+    }
+}

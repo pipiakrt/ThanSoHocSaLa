@@ -1,0 +1,45 @@
+.postDetailInfo {
+    padding: 75px 0;
+    padding-bottom: 50px;
+}
+.main-postDetail {
+    min-height: 1000px;
+    background-color: #0d6256;
+}
+.main-postDetail .info_desc {
+    margin: auto;
+    width: 100%;
+    max-width: 599px;
+}
+.main-postDetail .picateo {
+    margin-right: 50px;
+}
+.main-postDetail .info_title h2 {
+    letter-spacing: 3px;
+    font-size: 35px;
+}
+.khai_niem {
+    padding: 70px 0;
+    padding-bottom: 20px;
+}
+.khai_niem .titleKN {
+    letter-spacing: 2.5px;
+    margin-bottom: 35px;
+}
+.khai_niem .descKN {
+    font-weight: 100;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+    line-height: 20px;
+}
+.nguon_goc .titleNG {
+    letter-spacing: 2.5px;
+    margin-bottom: 35px;
+}
+.nguon_goc .desc {
+    font-weight: 100;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 392px;
+    line-height: 20px;
+}

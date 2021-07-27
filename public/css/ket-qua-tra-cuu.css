@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'iCiel DIN Pro Condensed';  
+    src: url(/fonts/DinPro/DINPro-CondMedium.ttf);
+    font-weight: 500;
+}
+
+.ketqua {
+    background-color: #05574b;
+    min-height: 2000px;
+    padding: 100px 0;
+    padding-bottom: 10px;
+    background-image: url("/img/ket-qua-tra-cuu/bg-1.png");
+    background-repeat: no-repeat;
+}
+.ketqua .conso {
+    background-image: url("/img/ket-qua-tra-cuu/SO.png");
+    min-height: 581px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.ketqua .conso .nb {
+    position: absolute;
+    left: 32%;
+    top: 18%;
+    font-size: 250px;
+    font-weight: 100;
+    color: white;
+}
+.ketqua .table-kq {
+    margin: auto;
+    max-width: 540px;
+}
+.ketqua .table-kq .title h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.ketqua table {
+    border-top: 1px solid white;
+}
+.ketqua table td {
+    padding: 10px 20px;
+    padding-top: 15px;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+}
+.ketqua table .header {
+    border-right: 1px solid white;
+    width: 135px;
+    background-color: #097364;
+}
+.ketqua .conso-qk {
+    background-image: url("/img/ket-qua-tra-cuu/1.png");
+    min-height: 273px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 91px;
+    margin-left: 41px;
+    position: relative;
+}
+.ketqua .number {
+    position: absolute;
+    font-size: 26px;
+}
+.ketqua .number-1 {
+    right: 0;
+    left: 0;
+    top: -36px;
+}
+.ketqua .number-2 {
+    right: 0;
+    left: 0;
+    top: 50px;
+}
+.ketqua .number-3 {
+    left: 32.85%;
+    top: 58%;
+}
+.ketqua .number-4 {
+    right: 32%;
+    top: 58%;
+}
+.ketqua .number-5 {
+    bottom: -19%;
+    left: 10%;
+}
+.ketqua .number-6 {
+    bottom: -19%;
+    right: 9%;
+}
+.ketqua .number-7 {
+    bottom: -19%;
+    left: 23%;
+}
+.ketqua .number-8 {
+    bottom: -19%;
+    right: 22%;
+}
+.ketqua .number-9 {
+    bottom: -19%;
+    left: 43%;
+}
+.ketqua .number-10 {
+    bottom: -19%;
+    right: 42%;
+}
+.ketqua .btn-tt {
+    margin-left: 41px;
+    margin-top: 100px;
+    text-align: center;
+}
+.ketqua .btn-tt button {
+    background-color: #097364;
+    border: none;
+    color: white;
+    font-weight: 200;
+    padding: 0 30px;
+    padding-top: 13px;
+    padding-bottom: 10px;
+}
+
+.slide-ketqua {
+    background-color: #097364;
+    padding: 65px 20px;
+}
+.content-ketqua .desc.title.text-white h3 {
+    font-weight: 200;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.content-ketqua .item {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.content-ketqua .item.active {
+    background-color: #097364;
+}
+.content-ketqua .fake-line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #efba86;
+    top: 0;
+    bottom: 0;
+    left: 35px;
+}
+
+.content-ketqua .item .fake-icon {
+    margin-left: 20px;
+    position: relative;
+    background-color: #05574b;
+    border-radius: 50%;
+}
+.content-ketqua .item .title-item {
+    margin-left: 30px;
+}
+.content-ketqua .item .title-item h3 {
+    font-size: 20px;
+    letter-spacing: 0.3px;
+    margin: 0;
+    font-family: 'iCiel DIN Pro Condensed';
+}
+.slide-ketqua .desc {
+    max-width: 995px;
+    margin: auto;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+.content-ketqua .item .fake-icon .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #efba86;
+}
+.content-ketqua .item.active .fake-icon .icon::after {
+    content: "";
+    top: 7px;
+    left: 7px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #efba86;
+    position: absolute;
+}
+.content-ketqua .carousel-item {
+    transition: .1s;
+}
+.content-ketqua .conso2 .title2 h4 {
+    font-weight: 200;
+    font-size: 21px;
+}
+.content-ketqua .bang-so {
+    background-image: url("/img/ket-qua-tra-cuu/luoi.png");
+    background-position-x: center;
+    margin: auto;
+    max-width: 252px;
+    min-height: 252px;
+    background-repeat: no-repeat;
+}
+.content-ketqua .bang-so .cs1 {
+    font-size: 26px;
+    font-weight: 500;
+    min-height: 85px;
+    line-height: 3.3;
+}
+.content-ketqua .share-ketqua {
+    padding: 65px 0;
+}
+.content-ketqua .share-ketqua .clear-hr {
+    width: 100%;
+    border-bottom: 1.5px solid #798668;
+    margin: 80px 0;
+}
+.content-ketqua .titlecs.text-center h4 {
+    font-weight: 200;
+    font-size: 21px;
+    margin-right: 12%;
+    text-transform: uppercase;
+}
+.content-ketqua .share-ketqua span.chiasetitle {
+    font-weight: 200;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.content-ketqua .desccs {
+    margin: auto;
+    margin-top: 25px;
+    max-width: 600px;
+    margin-left: 24%;
+}
+.btn-ketqua {
+    margin-top: 50px;
+    margin-right: 10%;
+}
+.btn-ketqua button {
+    padding: 13px 30px;
+    padding-bottom: 8px;
+    background-color: #dfb081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    min-width: 280px;
+    font-size: 27px;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,4 @@
+# Disallow all crawlers access to certain pages.
+Sitemap: https://www.thansohocsala.com/sitemap.xml
+User-agent: *
+Allow: /
