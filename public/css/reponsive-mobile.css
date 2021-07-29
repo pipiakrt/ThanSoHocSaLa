@@ -28,7 +28,7 @@
     }
     .lg-hide {
         display: none !important;
-    } 
+    }
     .reviews {
         margin-bottom: 70px;
     }
@@ -70,7 +70,7 @@
     .service2 {
         margin-top: 0;
         padding-bottom: 25px;
-    } 
+    }
     .chuyen-gia .info-chuyengia {
         padding: 10px;
     }
@@ -129,7 +129,7 @@
     }
     .main_ung-dung {
         padding-bottom: 0;
-    }   
+    }
     .main_su-menh {
         padding-top: 0;
     }
@@ -150,6 +150,9 @@
 
 /* md */
 @media (max-width: 992px) {
+    .coppyright {
+        padding: 0 15px;
+    }
     .form-tracuu .custom-form-input {
         width: 100%;
     }

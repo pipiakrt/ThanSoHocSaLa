@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/', function () {
+    return [
+        'data1' => rand(5, 15),
+        'data2' => rand(5, 15),
+        'data3' => rand(5, 15),
+    ];
 });

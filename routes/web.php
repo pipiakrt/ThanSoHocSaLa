@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\pdfController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +15,15 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+Route::get('/pdf', [pdfController::class, 'index']);
+
 Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('/gioi-thieu')->group(function () {
     Route::get('/', [HomeController::class, 'gioithieu']);
     Route::get('/chuyen-gia', [HomeController::class, 'chuyengia']);
     Route::get('/su-menh', [HomeController::class, 'sumenh']);
-    Route::get('/co-hoc-sala', [HomeController::class, 'cohocsala']);
+    Route::get('/cau-chuyen-hoc-sala', [HomeController::class, 'cohocsala']);
     Route::get('/than-so-hoc-sala', [HomeController::class, 'thansohocsala']);
 });
 

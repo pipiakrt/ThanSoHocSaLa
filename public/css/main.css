@@ -571,7 +571,7 @@ button.btn-show-tt {
 .form-tracuu {
     margin-top: 100px;
 }
-  
+
 .form-tracuu input[type="date"]::-webkit-calendar-picker-indicator {
     background-image: url("https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/calendar-icon.png");
 }
@@ -947,6 +947,8 @@ input[type="date"]:focus::before {
 }
 .service2 .anhsp {
     position: relative;
+    position: relative;
+    background-size: cover;
 }
 .service2 .anhsp button {
     border: none;

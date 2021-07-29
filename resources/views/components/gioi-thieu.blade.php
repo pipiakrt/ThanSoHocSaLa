@@ -62,7 +62,9 @@
                                                 <div class="desc fw-light mt-3"><span>HỌC VIỆN CỔ HỌC SALA tự hào là cầu nối đưa Thần Số Học đến gần hơn với mỗi cá nhân, mỗi gia đình và mỗi doanh nghiệp. Tại đây chúng tôi cung cấp các kiến thức giúp hỗ trợ phát triển toàn diện bản thân cho từng cá nhân, gia đình hay doanh nghiệp có thể hiểu và ứng dụng được Thần Số Học trong việc xây dựng bản đồ kế hoạch cuộc đời, có định hướng tương lai rõ ràng để gặt hái thành công toàn diện.</span></div>
                                             </div>
                                             <div class="btn-dangky mt-5">
-                                                <button type="submit" class="text-white">XEM THÊM</button>
+                                                <a href="/gioi-thieu/than-so-hoc-sala">
+                                                    <button type="submit" class="text-white">XEM THÊM</button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
