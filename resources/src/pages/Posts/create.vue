@@ -163,15 +163,15 @@ export default {
                 links: [
                     {
                         name: 'Bài viết',
-                        url: '/bai-viet/danh-sach',
+                        url: '/admin/bai-viet/danh-sach',
                     },
                     {
                         name: 'Thêm mới',
-                        url: '/bai-viet/them-moi',
+                        url: '/admin/bai-viet/them-moi',
                     },
                 ],
                 action: {
-                    url: '/bai-viet/danh-sach',
+                    url: '/admin/bai-viet/danh-sach',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Danh Sách',
                 }
@@ -213,7 +213,7 @@ export default {
                         $('#filemanager').modal('show');
                     }
                 });
-                return button.render(); 
+                return button.render();
                 }
                 $('.summernote').summernote({
                     height: 350,

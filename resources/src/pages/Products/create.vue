@@ -598,15 +598,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Sản phẩm',
-                        url: '/san-pham/danh-sach',
+                        url: '/admin/san-pham/danh-sach',
                     },
                     {
                         name: 'Thêm mới',
-                        url: '/san-pham/them-moi',
+                        url: '/admin/san-pham/them-moi',
                     },
                 ],
                 action: {
-                    url: '/san-pham/danh-sach',
+                    url: '/admin/san-pham/danh-sach',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Danh Sách',
                 }
@@ -710,10 +710,10 @@ export default {
     },
     methods: {
         addSuggestion(item) {
-            this.suggestion.push(item); 
+            this.suggestion.push(item);
         },
         trashSuggestion (key) {
-            this.suggestion.splice(key, 1); 
+            this.suggestion.splice(key, 1);
         },
         formatTime(time) {
             return moment(time).format('DD/MM/YYYY');
@@ -796,7 +796,7 @@ export default {
             }
         },
         async submit(status) {
-            let listId = []; 
+            let listId = [];
             this.suggestion.forEach(item => {
                 listId.push(item.id)
             });
@@ -815,7 +815,7 @@ export default {
                     category_id: this.category,
                     avatar: this.images[0].url,
                     images: this.images,
-                    attributes: this.attributes,    
+                    attributes: this.attributes,
                     description: this.description,
                     content: $('.summernote').summernote('code'),
                     status: String(status)

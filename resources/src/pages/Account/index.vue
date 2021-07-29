@@ -99,15 +99,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Tài khoản',
-                        url: '/tai-khoan',
+                        url: '/admin/tai-khoan',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/tai-khoan',
+                        url: '/admin/tai-khoan',
                     },
                 ],
                 action: {
-                    url: '/tai-khoan/thong-tin',
+                    url: '/admin/tai-khoan/thong-tin',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Thông tin',
                 },
@@ -137,6 +137,6 @@ export default {
             return moment(time).format('DD/MM/YYYY');
         },
     },
-    
+
 }
 </script>

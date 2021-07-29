@@ -206,10 +206,10 @@ export default {
             subHeader: {
                 links: [{
                     name: 'Menu',
-                    url: '/menu/tim-kiem',
+                    url: '/admin/menu/tim-kiem',
                 }, ],
                 action: {
-                    url: '/',
+                    url: '/admin/',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Dashboard',
                 }

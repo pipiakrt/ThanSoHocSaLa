@@ -111,15 +111,15 @@ export default {
                 links: [
                     {
                         name: 'thông báo',
-                        url: '/thong-bao/danh-sach',
+                        url: '/admin/thong-bao/danh-sach',
                     },
                     {
                         name: 'Thêm mới',
-                        url: '/thong-bao/them-moi',
+                        url: '/admin/thong-bao/them-moi',
                     },
                 ],
                 action: {
-                    url: '/thong-bao/danh-sach',
+                    url: '/admin/thong-bao/danh-sach',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Danh Sách',
                 }

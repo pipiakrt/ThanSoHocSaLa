@@ -164,15 +164,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Ảnh bìa',
-                        url: '/anh-bia/danh-sach',
+                        url: '/admin/anh-bia/danh-sach',
                     },
                     {
                         name: 'Thêm mới',
-                        url: '/anh-bia/them-moi',
+                        url: '/admin/anh-bia/them-moi',
                     },
                 ],
                 action: {
-                    url: '/anh-bia/danh-sach',
+                    url: '/admin/anh-bia/danh-sach',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Danh sách',
                 },

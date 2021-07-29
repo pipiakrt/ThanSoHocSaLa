@@ -113,10 +113,10 @@ export default {
             subHeader: {
                 links: [{
                     name: 'Mật khẩu',
-                    url: '/tai-khoan/mat-khau',
+                    url: '/admin/tai-khoan/mat-khau',
                 }, ],
                 action: {
-                    url: '/',
+                    url: '/admin/',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Dashboard',
                 },

@@ -263,15 +263,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'đơn hàng',
-                        url: '/don-hang/danh-sach',
+                        url: '/admin/don-hang/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/don-hang/danh-sach',
+                        url: '/admin/don-hang/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/don-hang/them-moi',
+                    url: '/admin/don-hang/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },

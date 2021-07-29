@@ -160,15 +160,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'thông báo',
-                        url: '/thong-bao/danh-sach',
+                        url: '/admin/thong-bao/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/thong-bao/danh-sach',
+                        url: '/admin/thong-bao/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/thong-bao/them-moi',
+                    url: '/admin/thong-bao/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },
@@ -277,6 +277,6 @@ export default {
             return Extends.FormatText(text, length)
         }
     },
-    
+
 }
 </script>

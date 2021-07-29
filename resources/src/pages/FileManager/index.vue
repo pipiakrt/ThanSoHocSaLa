@@ -24,11 +24,11 @@ export default {
                 links: [
                     {
                         name: 'Tệp tin',
-                        url: '/tep-tin',
+                        url: '/admin/tep-tin',
                     },
                 ],
                 action: {
-                    url: '/',
+                    url: '/admin/',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Dashboard',
                 }
@@ -46,10 +46,10 @@ export default {
     .modal-dialog.modal-full .modal-content {
         background-color: unset !important;
     }
-    #filemanager::-webkit-scrollbar { 
-        display: none; 
+    #filemanager::-webkit-scrollbar {
+        display: none;
     }
-    #filemanager { 
+    #filemanager {
         padding-right: 0px !important;
     }
 </style>

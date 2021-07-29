@@ -598,15 +598,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Sản phẩm',
-                        url: '/san-pham/danh-sach',
+                        url: '/admin/san-pham/danh-sach',
                     },
                     {
                         name: 'Thêm mới',
-                        url: '/san-pham/them-moi',
+                        url: '/admin/san-pham/them-moi',
                     },
                 ],
                 action: {
-                    url: '/san-pham/danh-sach',
+                    url: '/admin/san-pham/danh-sach',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Danh Sách',
                 }
@@ -723,10 +723,10 @@ export default {
                 typeimage = status
         },
         addSuggestion(item) {
-            this.suggestion.push(item); 
+            this.suggestion.push(item);
         },
         trashSuggestion (key) {
-            this.suggestion.splice(key, 1); 
+            this.suggestion.splice(key, 1);
         },
         async getApiKM() {
             Extends.LoadPage()
@@ -808,7 +808,7 @@ export default {
             }
         },
         async submit(status) {
-            let listId = []; 
+            let listId = [];
             this.suggestion.forEach(item => {
                 listId.push(item.id)
             });

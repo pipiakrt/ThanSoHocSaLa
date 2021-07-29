@@ -1856,12 +1856,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _components_Auth_login__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Auth/login */ "./resources/src/components/Auth/login.vue");
-/* harmony import */ var _layout_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layout/Header */ "./resources/src/layout/Header.vue");
-/* harmony import */ var _layout_HeaderMobile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layout/HeaderMobile */ "./resources/src/layout/HeaderMobile.vue");
-/* harmony import */ var _layout_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layout/Footer */ "./resources/src/layout/Footer.vue");
-/* harmony import */ var _layout_Sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layout/Sidebar */ "./resources/src/layout/Sidebar.vue");
-/* harmony import */ var _extend__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./extend */ "./resources/src/extend.js");
+/* harmony import */ var _layout_Header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layout/Header */ "./resources/src/layout/Header.vue");
+/* harmony import */ var _layout_HeaderMobile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layout/HeaderMobile */ "./resources/src/layout/HeaderMobile.vue");
+/* harmony import */ var _layout_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layout/Footer */ "./resources/src/layout/Footer.vue");
+/* harmony import */ var _layout_Sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layout/Sidebar */ "./resources/src/layout/Sidebar.vue");
 //
 //
 //
@@ -1883,20 +1881,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+// import Login from "./components/Auth/login";
 
 
 
-
-
+ // import Extends from './extend';
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "App",
   components: {
-    Header: _layout_Header__WEBPACK_IMPORTED_MODULE_1__.default,
-    HeaderMobile: _layout_HeaderMobile__WEBPACK_IMPORTED_MODULE_2__.default,
-    Footer: _layout_Footer__WEBPACK_IMPORTED_MODULE_3__.default,
-    Sidebar: _layout_Sidebar__WEBPACK_IMPORTED_MODULE_4__.default,
-    Login: _components_Auth_login__WEBPACK_IMPORTED_MODULE_0__.default
+    Header: _layout_Header__WEBPACK_IMPORTED_MODULE_0__.default,
+    HeaderMobile: _layout_HeaderMobile__WEBPACK_IMPORTED_MODULE_1__.default,
+    Footer: _layout_Footer__WEBPACK_IMPORTED_MODULE_2__.default,
+    Sidebar: _layout_Sidebar__WEBPACK_IMPORTED_MODULE_3__.default // Login
+
   },
   data: function data() {
     return {
@@ -1906,20 +1904,23 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    if (_extend__WEBPACK_IMPORTED_MODULE_5__.Auth()) {
-      try {
-        axios('/api/auth/user').then(function (response) {
-          if (response.status == 200) {
-            _this.auth = 2;
-          } else {
-            _this.auth = 1;
-          }
-        });
-      } catch (error) {
-        this.auth = 1;
-      }
-    }
-
+    // if (Extends.Auth()) {
+    //     try
+    //     {
+    //         axios('/api/auth/user').then(response => {
+    //             if(response.status == 200)
+    //             {
+    //                 this.auth = 2
+    //             }
+    //             else {
+    //                 this.auth = 1
+    //             }
+    //         })
+    //     }
+    //     catch (error) {
+    //         this.auth = 1
+    //     }
+    // }
     axios.interceptors.request.use(function (config) {
       _this.$Progress.start();
 
@@ -1956,159 +1957,6 @@ __webpack_require__.r(__webpack_exports__);
     AuthEmit: function AuthEmit(status) {
       this.auth = 2;
       this.$router.push('/');
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/components/Auth/login.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/components/Auth/login.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _extend__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../extend */ "./resources/src/extend.js");
-/* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      email: '',
-      password: '',
-      formClass: 'form-control form-control-solid h-auto py-6 px-6 rounded-lg'
-    };
-  },
-  components: {
-    ValidationObserver: vee_validate__WEBPACK_IMPORTED_MODULE_2__.ValidationObserver,
-    ValidationProvider: vee_validate__WEBPACK_IMPORTED_MODULE_2__.ValidationProvider
-  },
-  methods: {
-    login: function login() {
-      var _this = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var data;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.next = 2;
-                return _this.errors();
-
-              case 2:
-                if (!_context.sent) {
-                  _context.next = 5;
-                  break;
-                }
-
-                data = {
-                  email: _this.email,
-                  password: _this.password
-                };
-                axios('/api/auth', {
-                  params: data
-                }).then(function (res) {
-                  if (res.status == 200) {
-                    _extend__WEBPACK_IMPORTED_MODULE_1__.SetToken(res.data.access_token);
-
-                    _this.setUpToken(res.data.access_token);
-
-                    _this.$emit("Auth", true);
-                  }
-
-                  if (res.status == 202) {
-                    Swal.fire("Chưa được xác thực!", "Thông tin tài khoản chưa đúng!", "warning");
-                  }
-                });
-
-              case 5:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
-    },
-    errors: function errors() {
-      var _this2 = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _context2.next = 2;
-                return _this2.$refs['errors'].validate();
-
-              case 2:
-                return _context2.abrupt("return", _context2.sent);
-
-              case 3:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }))();
-    },
-    setUpToken: function setUpToken(token) {
-      axios.defaults.headers.common = {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + token
-      };
     }
   }
 });
@@ -2688,11 +2536,11 @@ __webpack_require__.r(__webpack_exports__);
       //     sub: [
       //         {
       //             name: 'Danh sách',
-      //             url: '/thong-bao/danh-sach'
+      //             url: '/admin/thong-bao/danh-sach'
       //         },
       //         {
       //             name: 'Thêm mới',
-      //             url: '/thong-bao/them-moi'
+      //             url: '/admin/thong-bao/them-moi'
       //         }
       //     ]
       // },
@@ -2722,11 +2570,11 @@ __webpack_require__.r(__webpack_exports__);
       //     sub: [
       //         {
       //             name: 'Danh sách',
-      //             url: '/danh-muc/danh-sach'
+      //             url: '/admin/danh-muc/danh-sach'
       //         },
       //         {
       //             name: 'Danh mục nổi bật',
-      //             url: '/danh-muc/danh-muc-noi-bat'
+      //             url: '/admin/danh-muc/danh-muc-noi-bat'
       //         },
       //     ]
       // },
@@ -2748,27 +2596,27 @@ __webpack_require__.r(__webpack_exports__);
       //     sub: [
       //         {
       //             name: 'Danh sách',
-      //             url: '/san-pham/danh-sach'
+      //             url: '/admin/san-pham/danh-sach'
       //         },
       //         {
       //             name: 'Thêm mới',
-      //             url: '/san-pham/them-moi'
+      //             url: '/admin/san-pham/them-moi'
       //         },
       //         {
       //             name: 'Danh mục',
-      //             url: '/san-pham/danh-muc'
+      //             url: '/admin/san-pham/danh-muc'
       //         },
       //         {
       //             name: 'Sản phẩm nổi bật',
-      //             url: '/san-pham/san-pham-noi-bat'
+      //             url: '/admin/san-pham/san-pham-noi-bat'
       //         },
       //         {
       //             name: 'Sản phẩm hot',
-      //             url: '/san-pham/san-pham-hot'
+      //             url: '/admin/san-pham/san-pham-hot'
       //         },
       //         {
       //             name: 'Sản phẩm top',
-      //             url: '/san-pham/san-pham-top'
+      //             url: '/admin/san-pham/san-pham-top'
       //         },
       //     ]
       // },
@@ -2811,11 +2659,11 @@ __webpack_require__.r(__webpack_exports__);
       //     sub: [
       //         {
       //             name: 'Danh sách',
-      //             url: '/khuyen-mai/danh-sach'
+      //             url: '/admin/khuyen-mai/danh-sach'
       //         },
       //         {
       //             name: 'Thêm mới',
-      //             url: '/khuyen-mai/them-moi'
+      //             url: '/admin/khuyen-mai/them-moi'
       //         }
       //     ]
       // },
@@ -2826,20 +2674,23 @@ __webpack_require__.r(__webpack_exports__);
         type: 3,
         sub: [{
           name: 'Danh sách',
-          url: '/bai-viet/danh-sach'
+          url: '/admin/bai-viet/danh-sach'
         }, {
           name: 'Thêm mới',
-          url: '/bai-viet/them-moi'
-        }, {
-          name: 'Danh mục',
-          url: '/bai-viet/danh-muc'
-        }, {
-          name: 'Bài viết nổi bật',
-          url: '/bai-viet/bai-viet-new'
-        }, {
-          name: 'Bài viết hot',
-          url: '/bai-viet/bai-viet-hot'
-        }]
+          url: '/admin/bai-viet/them-moi'
+        } // {
+        //     name: 'Danh mục',
+        //     url: '/admin/bai-viet/danh-muc'
+        // },
+        // {
+        //     name: 'Bài viết nổi bật',
+        //     url: '/admin/bai-viet/bai-viet-new'
+        // },
+        // {
+        //     name: 'Bài viết hot',
+        //     url: '/admin/bai-viet/bai-viet-hot'
+        // },
+        ]
       } // {
       //     name: 'Users',
       //     type: 1,
@@ -2869,19 +2720,19 @@ __webpack_require__.r(__webpack_exports__);
       //     sub: [
       //         {
       //             name: 'Chờ xác nhận',
-      //             url: '/don-hang/cho-xac-nhan'
+      //             url: '/admin/don-hang/cho-xac-nhan'
       //         },
       //         {
       //             name: 'Đang giao hàng',
-      //             url: '/don-hang/dang-giao'
+      //             url: '/admin/don-hang/dang-giao'
       //         },
       //         {
       //             name: 'Hoàn thành',
-      //             url: '/don-hang/hoan-thanh'
+      //             url: '/admin/don-hang/hoan-thanh'
       //         },
       //         {
       //             name: 'Đơn Hủy',
-      //             url: '/don-hang/don-huy'
+      //             url: '/admin/don-hang/don-huy'
       //         },
       //     ]
       // },
@@ -2912,11 +2763,11 @@ __webpack_require__.r(__webpack_exports__);
       //     sub: [
       //         {
       //             name: 'Danh sách',
-      //             url: '/nguoi-dung/danh-sach'
+      //             url: '/admin/nguoi-dung/danh-sach'
       //         },
       //         {
       //             name: 'Phản hồi',
-      //             url: '/nguoi-dung/phan-hoi'
+      //             url: '/admin/nguoi-dung/phan-hoi'
       //         },
       //     ]
       // },
@@ -2942,11 +2793,11 @@ __webpack_require__.r(__webpack_exports__);
       //     sub: [
       //         {
       //             name: 'Menu Tìm kiếm',
-      //             url: '/menu/tim-kiem'
+      //             url: '/admin/menu/tim-kiem'
       //         },
       //         {
       //             name: 'Menu Danh mục',
-      //             url: '/menu/danh-muc'
+      //             url: '/admin/menu/danh-muc'
       //         }
       //     ]
       // },
@@ -3030,19 +2881,19 @@ __webpack_require__.r(__webpack_exports__);
       //     sub: [
       //         {
       //             name: 'Thông tin',
-      //             url: '/tai-khoan/thong-tin'
+      //             url: '/admin/tai-khoan/thong-tin'
       //         },
       //         {
       //             name: 'Danh sách',
-      //             url: '/tai-khoan'
+      //             url: '/admin/tai-khoan'
       //         },
       //         {
       //             name: 'Thêm tài khoản',
-      //             url: '/tai-khoan/them-tai-khoan'
+      //             url: '/admin/tai-khoan/them-tai-khoan'
       //         },
       //         {
       //             name: 'Mật khẩu',
-      //             url: '/tai-khoan/mat-khau'
+      //             url: '/admin/tai-khoan/mat-khau'
       //         },
       //     ]
       // },
@@ -4518,10 +4369,10 @@ __webpack_require__.r(__webpack_exports__);
       subHeader: {
         links: [{
           name: 'Trang Chủ',
-          url: '/'
+          url: '/admin/'
         }],
         action: {
-          url: '/',
+          url: '/admin/',
           icon: '',
           text: 'Trang chủ'
         }
@@ -4731,13 +4582,13 @@ var typeimage = 'avatar';
       subHeader: {
         links: [{
           name: 'Bài viết',
-          url: '/bai-viet/danh-sach'
+          url: '/admin/bai-viet/danh-sach'
         }, {
           name: 'Thêm mới',
-          url: '/bai-viet/them-moi'
+          url: '/admin/bai-viet/them-moi'
         }],
         action: {
-          url: '/bai-viet/danh-sach',
+          url: '/admin/bai-viet/danh-sach',
           icon: 'icon-sm ki ki-long-arrow-back',
           text: 'Danh Sách'
         }
@@ -5105,13 +4956,13 @@ var typeimage = 'avatar';
       subHeader: {
         links: [{
           name: 'Bài viết',
-          url: '/bai-viet/danh-sach'
+          url: '/admin/bai-viet/danh-sach'
         }, {
           name: 'Thêm mới',
-          url: '/bai-viet/them-moi'
+          url: '/admin/bai-viet/them-moi'
         }],
         action: {
-          url: '/bai-viet/danh-sach',
+          url: '/admin/bai-viet/danh-sach',
           icon: 'icon-sm ki ki-long-arrow-back',
           text: 'Danh Sách'
         }
@@ -5512,14 +5363,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -5534,13 +5377,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       subHeader: {
         links: [{
           name: 'Bài viết',
-          url: '/bai-viet/danh-sach'
+          url: '/admin/bai-viet/danh-sach'
         }, {
           name: 'Danh sách',
-          url: '/bai-viet/danh-sach'
+          url: '/admin/bai-viet/danh-sach'
         }],
         action: {
-          url: '/bai-viet/them-moi',
+          url: '/admin/bai-viet/them-moi',
           icon: 'icon-sm ki ki-plus',
           text: 'Thêm Mới'
         }
@@ -5548,7 +5391,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       checkAll: false,
       checkbox: [],
       filterName: '',
-      filterCategory: '',
       filterOrder: '',
       categories: [],
       filterStatus: '',
@@ -5570,17 +5412,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   created: function created() {
-    var _this = this;
-
-    _extend__WEBPACK_IMPORTED_MODULE_1__.LoadPage();
     this.getApi();
-    axios('/api/categories?type=post').then(function (res) {
-      _this.categories = res.data.data;
-    });
   },
   methods: {
     getApi: function getApi() {
-      var _this2 = this;
+      var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         var query, posts;
@@ -5590,11 +5426,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _extend__WEBPACK_IMPORTED_MODULE_1__.LoadPage();
                 query = {
-                  name: _this2.filterName,
-                  category: _this2.filterCategory,
-                  order: _this2.filterOrder,
-                  status: _this2.filterStatus,
-                  page: _this2.page
+                  name: _this.filterName,
+                  order: _this.filterOrder,
+                  status: _this.filterStatus,
+                  page: _this.page
                 };
                 _context.next = 4;
                 return axios("/api/posts", {
@@ -5603,10 +5438,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 4:
                 posts = _context.sent;
-                _this2.allID = [];
-                _this2.posts = posts.data;
+                _this.allID = [];
+                _this.posts = posts.data;
                 posts.data.data.forEach(function (item) {
-                  _this2.allID.push(item.id);
+                  _this.allID.push(item.id);
                 });
                 KTApp.unblockPage();
 
@@ -5620,7 +5455,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     toPage: function toPage() {
       var _arguments = arguments,
-          _this3 = this;
+          _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
         var page;
@@ -5629,7 +5464,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context2.prev = _context2.next) {
               case 0:
                 page = _arguments.length > 0 && _arguments[0] !== undefined ? _arguments[0] : 1;
-                _this3.page = page;
+                _this2.page = page;
 
               case 2:
               case "end":
@@ -5645,7 +5480,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       });
     },
     destroy: function destroy() {
-      var _this4 = this;
+      var _this3 = this;
 
       var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.checkbox;
 
@@ -5664,7 +5499,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               }
             }).then(function (res) {
               id.forEach(function (i) {
-                _this4.posts.data = _this4.posts.data.filter(function (item) {
+                _this3.posts.data = _this3.posts.data.filter(function (item) {
                   return item.id !== i;
                 });
               });
@@ -31915,45 +31750,6 @@ component.options.__file = "resources/src/App.vue"
 
 /***/ }),
 
-/***/ "./resources/src/components/Auth/login.vue":
-/*!*************************************************!*\
-  !*** ./resources/src/components/Auth/login.vue ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _login_vue_vue_type_template_id_3836da88___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login.vue?vue&type=template&id=3836da88& */ "./resources/src/components/Auth/login.vue?vue&type=template&id=3836da88&");
-/* harmony import */ var _login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login.vue?vue&type=script&lang=js& */ "./resources/src/components/Auth/login.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
-  _login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _login_vue_vue_type_template_id_3836da88___WEBPACK_IMPORTED_MODULE_0__.render,
-  _login_vue_vue_type_template_id_3836da88___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/src/components/Auth/login.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/src/components/FileManager/index.vue":
 /*!********************************************************!*\
   !*** ./resources/src/components/FileManager/index.vue ***!
@@ -32395,22 +32191,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/src/components/Auth/login.vue?vue&type=script&lang=js&":
-/*!**************************************************************************!*\
-  !*** ./resources/src/components/Auth/login.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./login.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/components/Auth/login.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
-
-/***/ }),
-
 /***/ "./resources/src/components/FileManager/index.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************!*\
   !*** ./resources/src/components/FileManager/index.vue?vue&type=script&lang=js& ***!
@@ -32575,23 +32355,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_ab9f5064___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_ab9f5064___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./App.vue?vue&type=template&id=ab9f5064& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/App.vue?vue&type=template&id=ab9f5064&");
-
-
-/***/ }),
-
-/***/ "./resources/src/components/Auth/login.vue?vue&type=template&id=3836da88&":
-/*!********************************************************************************!*\
-  !*** ./resources/src/components/Auth/login.vue?vue&type=template&id=3836da88& ***!
-  \********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_template_id_3836da88___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_template_id_3836da88___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_template_id_3836da88___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./login.vue?vue&type=template&id=3836da88& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/components/Auth/login.vue?vue&type=template&id=3836da88&");
 
 
 /***/ }),
@@ -32802,25 +32565,6 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm.auth == 0 ? _c("div", { staticClass: "loaddings" }) : _vm._e(),
-      _vm._v(" "),
-      _vm.auth == 1
-        ? _c(
-            "div",
-            { staticClass: "loaddings" },
-            [
-              _c("Login", {
-                on: {
-                  Auth: function($event) {
-                    return _vm.AuthEmit($event)
-                  }
-                }
-              })
-            ],
-            1
-          )
-        : _vm._e(),
-      _vm._v(" "),
       _c("vue-progress-bar"),
       _vm._v(" "),
       _c("HeaderMobile"),
@@ -32853,230 +32597,6 @@ var render = function() {
       ])
     ],
     1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/components/Auth/login.vue?vue&type=template&id=3836da88&":
-/*!***********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/src/components/Auth/login.vue?vue&type=template&id=3836da88& ***!
-  \***********************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass: "row justify-content-center align-content-center h-100",
-      staticStyle: {
-        "background-image": "url(https://www.salagroup.vn/img/sala_back.jpg)",
-        "background-size": "cover"
-      }
-    },
-    [
-      _c("div", { staticClass: "col-3" }, [
-        _c(
-          "div",
-          { staticClass: "login-form login-signin" },
-          [
-            _c("ValidationObserver", { ref: "errors" }, [
-              _c("div", { staticClass: "pb-13 pt-lg-0 pt-5" }, [
-                _c(
-                  "h3",
-                  {
-                    staticClass:
-                      "font-weight-bolder text-white font-size-h4 font-size-h1-lg"
-                  },
-                  [_vm._v("Đăng nhập")]
-                )
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "form-group" },
-                [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "font-size-h6 font-weight-bolder text-white"
-                    },
-                    [_vm._v("Tài khoản")]
-                  ),
-                  _vm._v(" "),
-                  _c("validation-provider", {
-                    attrs: { rules: "required|length:0,255" },
-                    scopedSlots: _vm._u([
-                      {
-                        key: "default",
-                        fn: function(ref) {
-                          var errors = ref.errors
-                          return [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.email,
-                                  expression: "email"
-                                }
-                              ],
-                              class:
-                                _vm.formClass + (errors[0] ? "is-invalid" : ""),
-                              attrs: { type: "email" },
-                              domProps: { value: _vm.email },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.email = $event.target.value
-                                }
-                              }
-                            }),
-                            _vm._v(" "),
-                            errors[0]
-                              ? _c(
-                                  "span",
-                                  {
-                                    staticClass: "invalid-feedback",
-                                    attrs: { role: "alert" }
-                                  },
-                                  [
-                                    _c(
-                                      "strong",
-                                      {
-                                        domProps: {
-                                          textContent: _vm._s(errors[0])
-                                        }
-                                      },
-                                      [_vm._v(" ads d")]
-                                    )
-                                  ]
-                                )
-                              : _vm._e()
-                          ]
-                        }
-                      }
-                    ])
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "form-group" },
-                [
-                  _c(
-                    "div",
-                    { staticClass: "d-flex justify-content-between mt-n5" },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass:
-                            "font-size-h6 font-weight-bolder text-white pt-5"
-                        },
-                        [_vm._v("Mật khẩu")]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("validation-provider", {
-                    attrs: { rules: "required|length:0,255" },
-                    scopedSlots: _vm._u([
-                      {
-                        key: "default",
-                        fn: function(ref) {
-                          var errors = ref.errors
-                          return [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.password,
-                                  expression: "password"
-                                }
-                              ],
-                              class:
-                                _vm.formClass + (errors[0] ? "is-invalid" : ""),
-                              attrs: { type: "password" },
-                              domProps: { value: _vm.password },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.password = $event.target.value
-                                }
-                              }
-                            }),
-                            _vm._v(" "),
-                            errors[0]
-                              ? _c(
-                                  "span",
-                                  {
-                                    staticClass: "invalid-feedback",
-                                    attrs: { role: "alert" }
-                                  },
-                                  [
-                                    _c(
-                                      "strong",
-                                      {
-                                        domProps: {
-                                          textContent: _vm._s(errors[0])
-                                        }
-                                      },
-                                      [_vm._v(" ads d")]
-                                    )
-                                  ]
-                                )
-                              : _vm._e()
-                          ]
-                        }
-                      }
-                    ])
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "pb-lg-0 pb-5" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass:
-                      "btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-1",
-                    on: {
-                      click: function($event) {
-                        return _vm.login()
-                      }
-                    }
-                  },
-                  [_vm._v("Đăng nhập")]
-                )
-              ])
-            ])
-          ],
-          1
-        )
-      ])
-    ]
   )
 }
 var staticRenderFns = []
@@ -40723,59 +40243,6 @@ var render = function() {
                       }
                     }
                   })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-3" }, [
-                  _c(
-                    "select",
-                    {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.filterCategory,
-                          expression: "filterCategory"
-                        }
-                      ],
-                      staticClass:
-                        "form-control form-control-sm form-filter datatable-input",
-                      on: {
-                        change: function($event) {
-                          var $$selectedVal = Array.prototype.filter
-                            .call($event.target.options, function(o) {
-                              return o.selected
-                            })
-                            .map(function(o) {
-                              var val = "_value" in o ? o._value : o.value
-                              return val
-                            })
-                          _vm.filterCategory = $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        }
-                      }
-                    },
-                    [
-                      _c("option", { attrs: { value: "" } }, [
-                        _vm._v("Danh mục")
-                      ]),
-                      _vm._v(" "),
-                      _vm._l(_vm.categories, function(item) {
-                        return [
-                          item.parent_id > 0
-                            ? _c("option", {
-                                key: item.id,
-                                domProps: {
-                                  value: item.id,
-                                  textContent: _vm._s(item.name)
-                                }
-                              })
-                            : _vm._e()
-                        ]
-                      })
-                    ],
-                    2
-                  )
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-5" }, [

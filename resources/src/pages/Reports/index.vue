@@ -97,11 +97,11 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Phản hồi',
-                        url: '/phan-hoi',
+                        url: '/admin/phan-hoi',
                     },
                 ],
                 action: {
-                    url: '/',
+                    url: '/admin/',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Dashboard',
                 },
@@ -140,6 +140,6 @@ export default {
             return Extends.FormatText(text, length)
         }
     },
-    
+
 }
 </script>

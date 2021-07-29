@@ -154,11 +154,11 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Danh sách',
-                //             url: '/thong-bao/danh-sach'
+                //             url: '/admin/thong-bao/danh-sach'
                 //         },
                 //         {
                 //             name: 'Thêm mới',
-                //             url: '/thong-bao/them-moi'
+                //             url: '/admin/thong-bao/them-moi'
                 //         }
                 //     ]
                 // },
@@ -188,11 +188,11 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Danh sách',
-                //             url: '/danh-muc/danh-sach'
+                //             url: '/admin/danh-muc/danh-sach'
                 //         },
                 //         {
                 //             name: 'Danh mục nổi bật',
-                //             url: '/danh-muc/danh-muc-noi-bat'
+                //             url: '/admin/danh-muc/danh-muc-noi-bat'
                 //         },
                 //     ]
                 // },
@@ -214,27 +214,27 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Danh sách',
-                //             url: '/san-pham/danh-sach'
+                //             url: '/admin/san-pham/danh-sach'
                 //         },
                 //         {
                 //             name: 'Thêm mới',
-                //             url: '/san-pham/them-moi'
+                //             url: '/admin/san-pham/them-moi'
                 //         },
                 //         {
                 //             name: 'Danh mục',
-                //             url: '/san-pham/danh-muc'
+                //             url: '/admin/san-pham/danh-muc'
                 //         },
                 //         {
                 //             name: 'Sản phẩm nổi bật',
-                //             url: '/san-pham/san-pham-noi-bat'
+                //             url: '/admin/san-pham/san-pham-noi-bat'
                 //         },
                 //         {
                 //             name: 'Sản phẩm hot',
-                //             url: '/san-pham/san-pham-hot'
+                //             url: '/admin/san-pham/san-pham-hot'
                 //         },
                 //         {
                 //             name: 'Sản phẩm top',
-                //             url: '/san-pham/san-pham-top'
+                //             url: '/admin/san-pham/san-pham-top'
                 //         },
                 //     ]
                 // },
@@ -277,11 +277,11 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Danh sách',
-                //             url: '/khuyen-mai/danh-sach'
+                //             url: '/admin/khuyen-mai/danh-sach'
                 //         },
                 //         {
                 //             name: 'Thêm mới',
-                //             url: '/khuyen-mai/them-moi'
+                //             url: '/admin/khuyen-mai/them-moi'
                 //         }
                 //     ]
                 // },
@@ -303,24 +303,24 @@ export default {
                     sub: [
                         {
                             name: 'Danh sách',
-                            url: '/bai-viet/danh-sach'
+                            url: '/admin/bai-viet/danh-sach'
                         },
                         {
                             name: 'Thêm mới',
-                            url: '/bai-viet/them-moi'
+                            url: '/admin/bai-viet/them-moi'
                         },
-                        {
-                            name: 'Danh mục',
-                            url: '/bai-viet/danh-muc'
-                        },
-                        {
-                            name: 'Bài viết nổi bật',
-                            url: '/bai-viet/bai-viet-new'
-                        },
-                        {
-                            name: 'Bài viết hot',
-                            url: '/bai-viet/bai-viet-hot'
-                        },
+                        // {
+                        //     name: 'Danh mục',
+                        //     url: '/admin/bai-viet/danh-muc'
+                        // },
+                        // {
+                        //     name: 'Bài viết nổi bật',
+                        //     url: '/admin/bai-viet/bai-viet-new'
+                        // },
+                        // {
+                        //     name: 'Bài viết hot',
+                        //     url: '/admin/bai-viet/bai-viet-hot'
+                        // },
                     ]
                 },
                 // {
@@ -352,19 +352,19 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Chờ xác nhận',
-                //             url: '/don-hang/cho-xac-nhan'
+                //             url: '/admin/don-hang/cho-xac-nhan'
                 //         },
                 //         {
                 //             name: 'Đang giao hàng',
-                //             url: '/don-hang/dang-giao'
+                //             url: '/admin/don-hang/dang-giao'
                 //         },
                 //         {
                 //             name: 'Hoàn thành',
-                //             url: '/don-hang/hoan-thanh'
+                //             url: '/admin/don-hang/hoan-thanh'
                 //         },
                 //         {
                 //             name: 'Đơn Hủy',
-                //             url: '/don-hang/don-huy'
+                //             url: '/admin/don-hang/don-huy'
                 //         },
                 //     ]
                 // },
@@ -395,11 +395,11 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Danh sách',
-                //             url: '/nguoi-dung/danh-sach'
+                //             url: '/admin/nguoi-dung/danh-sach'
                 //         },
                 //         {
                 //             name: 'Phản hồi',
-                //             url: '/nguoi-dung/phan-hoi'
+                //             url: '/admin/nguoi-dung/phan-hoi'
                 //         },
                 //     ]
                 // },
@@ -425,11 +425,11 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Menu Tìm kiếm',
-                //             url: '/menu/tim-kiem'
+                //             url: '/admin/menu/tim-kiem'
                 //         },
                 //         {
                 //             name: 'Menu Danh mục',
-                //             url: '/menu/danh-muc'
+                //             url: '/admin/menu/danh-muc'
                 //         }
                 //     ]
                 // },
@@ -514,19 +514,19 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Thông tin',
-                //             url: '/tai-khoan/thong-tin'
+                //             url: '/admin/tai-khoan/thong-tin'
                 //         },
                 //         {
                 //             name: 'Danh sách',
-                //             url: '/tai-khoan'
+                //             url: '/admin/tai-khoan'
                 //         },
                 //         {
                 //             name: 'Thêm tài khoản',
-                //             url: '/tai-khoan/them-tai-khoan'
+                //             url: '/admin/tai-khoan/them-tai-khoan'
                 //         },
                 //         {
                 //             name: 'Mật khẩu',
-                //             url: '/tai-khoan/mat-khau'
+                //             url: '/admin/tai-khoan/mat-khau'
                 //         },
                 //     ]
                 // },

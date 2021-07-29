@@ -141,15 +141,15 @@ export default {
                 links: [
                     {
                         name: 'khuyến mãi',
-                        url: '/khuyen-mai/danh-sach',
+                        url: '/admin/khuyen-mai/danh-sach',
                     },
                     {
                         name: 'Thêm mới',
-                        url: '/khuyen-mai/them-moi',
+                        url: '/admin/khuyen-mai/them-moi',
                     },
                 ],
                 action: {
-                    url: '/khuyen-mai/danh-sach',
+                    url: '/admin/khuyen-mai/danh-sach',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Danh Sách',
                 }

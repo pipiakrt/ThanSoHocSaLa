@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ThanSoController;
 use App\Http\Controllers\pdfController;
 
 /*
@@ -85,12 +86,9 @@ Route::get('/chinh-sach', function () {
     return 'chính sách';
 });
 
-Route::get('/tra-cuu', function () {
-    return 'Tra cứu';
-});
+Route::get('/tra-cuu', [ThanSoController::class, 'index']);
 
 Auth::routes();
 
-Route::prefix('/admin')->group(function () {
-    Route::view('/', 'admin.index')->where('any', '.*');
-});
+Route::view('/admin', 'admin.index')->where('any', '.*');
+Route::view('/admin/{any}', 'admin.index')->where('any', '.*');

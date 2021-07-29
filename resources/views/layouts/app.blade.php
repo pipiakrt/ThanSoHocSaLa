@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="/css/reponsive-desktop.css">
     <link rel="stylesheet" href="/css/reponsive-mobile.css">
     <link rel="stylesheet" href="/plugins/owl-carousel/dist/assets/owl.carousel.min.css">
+    @stack('styles')
 
 </head>
 <body>
@@ -61,6 +62,7 @@
     <script src="/plugins/owl-carousel/dist/owl.carousel.js"></script>
     <script src="/plugins/particles/js/app.js"></script>
     <script src="/plugins/particles/js/particles.js"></script>
+    @stack('scripts')
     <script src="/js/main.js"></script>
 
     <script type="application/ld+json">

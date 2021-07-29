@@ -179,15 +179,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'khuyến mãi',
-                        url: '/khuyen-mai/danh-sach',
+                        url: '/admin/khuyen-mai/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/khuyen-mai/danh-sach',
+                        url: '/admin/khuyen-mai/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/khuyen-mai/them-moi',
+                    url: '/admin/khuyen-mai/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },
@@ -290,6 +290,6 @@ export default {
             return Extends.FormatText(text, length)
         }
     },
-    
+
 }
 </script>

@@ -35,14 +35,6 @@
                         <div class="col-3">
                             <input v-model="filterName" type="text" placeholder="Tên sản phẩm" class="form-control form-control-sm form-filter datatable-input"/>
                         </div>
-                        <div class="col-3">
-                            <select v-model="filterCategory" class="form-control form-control-sm form-filter datatable-input">
-                                <option value="">Danh mục</option>
-                                <template v-for="item in categories">
-                                    <option :key="item.id" v-if="item.parent_id > 0" :value="item.id" v-text="item.name"></option>
-                                </template>
-                            </select>
-                        </div>
                         <div class="col-5">
                             <div class="row">
                                 <div class="col-6">
@@ -200,15 +192,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Bài viết',
-                        url: '/bai-viet/danh-sach',
+                        url: '/admin/bai-viet/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/bai-viet/danh-sach',
+                        url: '/admin/bai-viet/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/bai-viet/them-moi',
+                    url: '/admin/bai-viet/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },
@@ -216,7 +208,6 @@ export default {
             checkAll: false,
             checkbox: [],
             filterName: '',
-            filterCategory: '',
             filterOrder: '',
             categories: [],
             filterStatus: '',
@@ -239,18 +230,13 @@ export default {
         }
     },
     created() {
-        Extends.LoadPage()
         this.getApi()
-        axios('/api/categories?type=post').then(res => {
-            this.categories = res.data.data
-        })
     },
     methods: {
         async getApi() {
             Extends.LoadPage()
             let query = {
                 name: this.filterName,
-                category: this.filterCategory,
                 order: this.filterOrder,
                 status: this.filterStatus,
                 page: this.page,
@@ -317,6 +303,6 @@ export default {
             return Extends.FormatText(text, length)
         }
     },
-    
+
 }
 </script>

@@ -206,10 +206,10 @@ export default {
             subHeader: {
                 links: [{
                     name: 'Menu',
-                    url: '/menu/danh-muc',
+                    url: '/admin/menu/danh-muc',
                 }, ],
                 action: {
-                    url: '/',
+                    url: '/admin/',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Dashboard',
                 }

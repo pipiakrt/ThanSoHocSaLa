@@ -62,7 +62,7 @@
                                             {{ formatTime(item.created_at) }}
                                         </div>
                                     </td>
-                                    
+
                                     <td class="text-center">
                                         <div class="dropdown dropdown-inline">
                                             <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -128,11 +128,11 @@ export default {
             subHeader: {
                 links: [{
                         name: 'checking',
-                        url: '/checking',
+                        url: '/admin/checking',
                     },
                 ],
                 action: {
-                    url: '/',
+                    url: '/admin/',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Dashboard',
                 },
@@ -159,6 +159,6 @@ export default {
             })
         },
     },
-    
+
 }
 </script>

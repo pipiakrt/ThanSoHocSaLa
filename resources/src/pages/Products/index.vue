@@ -86,7 +86,7 @@
                         <table class="table table-head-custom table-head-bg table-borderless table-vertical-center">
                             <thead>
                                 <tr class="text-uppercase">
-                                    <th style="min-width: 50px;"> 
+                                    <th style="min-width: 50px;">
                                         <label class="checkbox">
                                             <input v-model="checkAll" type="checkbox" />
                                             <span></span>
@@ -220,15 +220,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Sản phẩm',
-                        url: '/san-pham/danh-sach',
+                        url: '/admin/san-pham/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/san-pham/danh-sach',
+                        url: '/admin/san-pham/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/san-pham/them-moi',
+                    url: '/admin/san-pham/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },
@@ -351,6 +351,6 @@ export default {
             return Extends.FormatText(text, length)
         }
     },
-    
+
 }
 </script>
