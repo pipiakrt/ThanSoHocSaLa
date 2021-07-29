@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return [
-        'data1' => rand(5, 15),
-        'data2' => rand(5, 15),
-        'data3' => rand(5, 15),
-    ];
-});
+Route::resources([
+    'auth' => AuthController::class,
+]);

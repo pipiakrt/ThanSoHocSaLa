@@ -90,3 +90,7 @@ Route::get('/tra-cuu', function () {
 });
 
 Auth::routes();
+
+Route::prefix('/admin')->group(function () {
+    Route::view('/', 'admin.index')->where('any', '.*');
+});
