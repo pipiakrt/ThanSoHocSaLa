@@ -61,7 +61,7 @@ export default {
                     email: this.email,
                     password: this.password
                 };
-                axios('/api/auth', {
+                axios('/admin/api/auth', {
                     params: data
                 }).then(res => {
                     if (res.status == 200) {

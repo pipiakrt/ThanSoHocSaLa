@@ -24,6 +24,7 @@ class Post extends Model
 
     protected $casts = [
         'status' => 'boolean',
+        'created_at' => 'date',
     ];
 
     public function filterOrder(EloquentBuilder $query, $value)

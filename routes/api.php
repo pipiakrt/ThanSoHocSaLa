@@ -9,6 +9,8 @@ use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\ImageController;
 use App\Http\Controllers\Api\HomePageController;
 use App\Http\Controllers\Api\SeoPageController;
+use App\Http\Controllers\Api\AccountController;
+use App\Http\Controllers\Api\SliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,10 +24,12 @@ use App\Http\Controllers\Api\SeoPageController;
 */
 
 Route::resources([
+    'auth' => AuthController::class,
+    'accounts' => AccountController::class,
     'images' => ImageController::class,
     'posts' => PostController::class,
     'products' => ProductController::class,
     'homepage' => HomePageController::class,
-    'auth' => AuthController::class,
+    'sliders' => SliderController::class,
     'seos' => SeoPageController::class,
 ]);

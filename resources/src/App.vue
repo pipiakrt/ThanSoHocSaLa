@@ -1,9 +1,9 @@
 <template>
 <div>
-    <!-- <div v-if="auth == 0" class="loaddings"></div>
+    <div v-if="auth == 0" class="loaddings"></div>
     <div v-if="auth == 1" class="loaddings">
         <Login @Auth="AuthEmit($event)" />
-    </div> -->
+    </div>
     <vue-progress-bar></vue-progress-bar>
     <HeaderMobile />
     <div class="d-flex flex-column flex-root">
@@ -21,12 +21,12 @@
 
 <script>
 
-// import Login from "./components/Auth/login";
+import Login from "./components/Auth/login";
 import Header from "./layout/Header";
 import HeaderMobile from "./layout/HeaderMobile";
 import Footer from "./layout/Footer";
 import Sidebar from "./layout/Sidebar";
-// import Extends from './extend';
+import Extends from './extend';
 
 export default {
     name: "App",
@@ -35,7 +35,7 @@ export default {
         HeaderMobile,
         Footer,
         Sidebar,
-        // Login
+        Login
     },
     data() {
         return {
@@ -43,23 +43,23 @@ export default {
         }
     },
     created() {
-        // if (Extends.Auth()) {
-        //     try
-        //     {
-        //         axios('/api/auth/user').then(response => {
-        //             if(response.status == 200)
-        //             {
-        //                 this.auth = 2
-        //             }
-        //             else {
-        //                 this.auth = 1
-        //             }
-        //         })
-        //     }
-        //     catch (error) {
-        //         this.auth = 1
-        //     }
-        // }
+        if (Extends.Auth()) {
+            try
+            {
+                axios('/api/auth/user').then(response => {
+                    if(response.status == 200)
+                    {
+                        this.auth = 2
+                    }
+                    else {
+                        this.auth = 1
+                    }
+                })
+            }
+            catch (error) {
+                this.auth = 1
+            }
+        }
 
         axios.interceptors.request.use(config => {
             this.$Progress.start();
@@ -92,7 +92,7 @@ export default {
     methods: {
         AuthEmit(status) {
             this.auth = 2
-            this.$router.push('/admin/')
+            this.$router.push('/')
         }
     },
 }
