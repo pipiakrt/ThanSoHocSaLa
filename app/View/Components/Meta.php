@@ -37,8 +37,11 @@ class Meta extends Component
 
         $meta = SeoPage::where('url', $url)->first();
 
-        if ($meta) {
-            return view('components.meta', compact('meta'));
+        if (!$meta) {
+            $url = '/';
+            $meta = SeoPage::where('url', $url)->first();
         }
+
+        return view('components.meta', compact('meta'));
     }
 }

@@ -37,8 +37,10 @@ class Script extends Component
 
         $schema = SeoPage::where('url', $url)->first();
 
-        if ($schema) {
-            return view('components.script', compact('schema'));
+        if (!$schema) {
+            $url = '/';
+            $schema = SeoPage::where('url', $url)->first();
         }
+        return view('components.script', compact('schema'));
     }
 }
