@@ -36,6 +36,10 @@ import EditProduct from './pages/Products/edit'
 import Posts from './pages/Posts/index'
 import CreatePost from './pages/Posts/create'
 import EditPost from './pages/Posts/edit'
+// Seo
+import Seo from './pages/Seo/index'
+import CreateSeo from './pages/Seo/create'
+import EditSeo from './pages/Seo/edit'
 // ThanSo
 // import ThanSo from './pages/ThanSo/index'
 // import EditThanSo from './pages/ThanSo/edit'
@@ -161,6 +165,22 @@ const routes = [
         path: '/admin/san-pham/:id/chinh-sua',
         component: EditProduct,
         name: 'Products',
+    },
+    // Seo
+    {
+        path: '/admin/seo/danh-sach',
+        component: Seo,
+        name: 'Seo',
+    },
+    {
+        path: '/admin/seo/them-moi',
+        component: CreateSeo,
+        name: 'Seo',
+    },
+    {
+        path: '/admin/seo/:id/chinh-sua',
+        component: EditSeo,
+        name: 'Seo',
     },
     // Posts
     {

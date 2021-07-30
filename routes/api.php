@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\ImageController;
 use App\Http\Controllers\Api\HomePageController;
+use App\Http\Controllers\Api\SeoPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,5 @@ Route::resources([
     'products' => ProductController::class,
     'homepage' => HomePageController::class,
     'auth' => AuthController::class,
+    'seos' => SeoPageController::class,
 ]);
