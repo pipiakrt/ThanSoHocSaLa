@@ -26,6 +26,7 @@ Route::prefix('/gioi-thieu')->group(function () {
     Route::get('/', [HomeController::class, 'gioithieu']);
     Route::get('/chuyen-gia', [HomeController::class, 'chuyengia']);
     Route::get('/su-menh', [HomeController::class, 'sumenh']);
+    Route::get('/duong-doi', [HomeController::class, 'duongdoi']);
     Route::get('/cau-chuyen-hoc-sala', [HomeController::class, 'cohocsala']);
     Route::get('/than-so-hoc-sala', [HomeController::class, 'thansohocsala']);
 });

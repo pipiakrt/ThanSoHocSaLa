@@ -51,9 +51,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function cohocsala()
+    public function duongdoi()
     {
-        return view('gioi-thieu');
+        return view('duongdoi');
     }
 
     /**
