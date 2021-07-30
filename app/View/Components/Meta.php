@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\SeoPage;
 
 class Meta extends Component
 {
@@ -23,6 +24,21 @@ class Meta extends Component
      */
     public function render()
     {
-        return view('components.meta');
+        $url = '';
+        $pages = request()->segments();
+        if ($pages) {
+            foreach ($pages as $item) {
+                $url = $url . '/' . $item;
+            }
+        }
+        else {
+            $url = '/';
+        }
+
+        $meta = SeoPage::where('url', $url)->first();
+
+        if ($meta) {
+            return view('components.meta', compact('meta'));
+        }
     }
 }

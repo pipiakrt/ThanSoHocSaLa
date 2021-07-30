@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\SeoPage;
 
 class Script extends Component
 {
@@ -23,6 +24,21 @@ class Script extends Component
      */
     public function render()
     {
-        return view('components.script');
+        $url = '';
+        $pages = request()->segments();
+        if ($pages) {
+            foreach ($pages as $item) {
+                $url = $url . '/' . $item;
+            }
+        }
+        else {
+            $url = '/';
+        }
+
+        $schema = SeoPage::where('url', $url)->first();
+
+        if ($schema) {
+            return view('components.script', compact('schema'));
+        }
     }
 }

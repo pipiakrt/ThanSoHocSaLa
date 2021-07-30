@@ -46,7 +46,7 @@
                                     </th>
                                     <th style="min-width: 120px">Title</th>
                                     <th style="min-width: 120px">Meta description</th>
-                                    <th style="min-width: 120px">Meta keywords nhật</th>
+                                    <th style="min-width: 120px">Meta keywords</th>
                                     <th class="text-center">EXT</th>
                                 </tr>
                             </thead>
