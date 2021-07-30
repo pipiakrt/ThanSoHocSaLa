@@ -27,17 +27,16 @@ import Home from './pages/Home'
 // import MenuSearch from './pages/Menu/search'
 // import MenuCategory from './pages/Menu/category'
 // // Products
-// import Products from './pages/Products/index'
-// import CreateProduct from './pages/Products/create'
-// import EditProduct from './pages/Products/edit'
-// import CategoryProduct from './pages/Products/category'
-// import ProductHightLight from './pages/Products/hightlight'
-// import ProductTop from './pages/Products/top'
-// import ProductHot from './pages/Products/hot'
+import Products from './pages/Products/index'
+import CreateProduct from './pages/Products/create'
+import EditProduct from './pages/Products/edit'
 // posts
 import Posts from './pages/Posts/index'
 import CreatePost from './pages/Posts/create'
 import EditPost from './pages/Posts/edit'
+// ThanSo
+// import ThanSo from './pages/ThanSo/index'
+// import EditThanSo from './pages/ThanSo/edit'
 // import CategoryPost from './pages/Posts/category'
 // import PostNew from './pages/Posts/new'
 // import PostHot from './pages/Posts/hot'
@@ -145,42 +144,22 @@ const routes = [
     //     component: Checking,
     //     name: 'Checking',
     // },
-    // // Products
-    // {
-    //     path: '/admin/san-pham/danh-sach',
-    //     component: Products,
-    //     name: 'Products',
-    // },
-    // {
-    //     path: '/admin/san-pham/them-moi',
-    //     component: CreateProduct,
-    //     name: 'Products',
-    // },
-    // {
-    //     path: '/admin/san-pham/:id/chinh-sua',
-    //     component: EditProduct,
-    //     name: 'Products',
-    // },
-    // {
-    //     path: '/admin/san-pham/danh-muc',
-    //     component: CategoryProduct,
-    //     name: 'Products',
-    // },
-    // {
-    //     path: '/admin/san-pham/san-pham-noi-bat',
-    //     component: ProductHightLight,
-    //     name: 'Products',
-    // },
-    // {
-    //     path: '/admin/san-pham/san-pham-hot',
-    //     component: ProductHot,
-    //     name: 'Products',
-    // },
-    // {
-    //     path: '/admin/san-pham/san-pham-top',
-    //     component: ProductTop,
-    //     name: 'Products',
-    // },
+    // Products
+    {
+        path: '/admin/san-pham/danh-sach',
+        component: Products,
+        name: 'Products',
+    },
+    {
+        path: '/admin/san-pham/them-moi',
+        component: CreateProduct,
+        name: 'Products',
+    },
+    {
+        path: '/admin/san-pham/:id/chinh-sua',
+        component: EditProduct,
+        name: 'Products',
+    },
     // Posts
     {
         path: '/admin/bai-viet/danh-sach',
@@ -197,6 +176,16 @@ const routes = [
         component: EditPost,
         name: 'Posts',
     },
+    // {
+    //     path: '/admin/than-so/danh-sach',
+    //     component: ThanSo,
+    //     name: 'ThanSo',
+    // },
+    // {
+    //     path: '/admin/than-so/:id/chinh-sua',
+    //     component: EditThanSo,
+    //     name: 'ThanSo',
+    // },
     // {
     //     path: '/admin/bai-viet/danh-muc',
     //     component: CategoryPost,

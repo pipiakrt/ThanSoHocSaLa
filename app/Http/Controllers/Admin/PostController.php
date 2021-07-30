@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Post;
+use App\Models\Post as Model;
 use Illuminate\Http\Request;
-use Illuminate\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 class PostController extends Controller
 {
@@ -15,17 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return Model::all();
     }
 
     /**
@@ -36,51 +26,40 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Model::create($request->all());
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Model  $Model
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Model $model)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Post $post)
-    {
-        //
+        return $model;
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Model  $Model
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Model $model)
     {
-        //
+        return $model->update($request->all());
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Model  $Model
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Model $model)
     {
-        //
+        return $model->delete();
     }
 }

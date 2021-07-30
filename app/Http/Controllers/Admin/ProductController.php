@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Product;
+use App\Models\Product as Model;
 use Illuminate\Http\Request;
-use Illuminate\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return Model::all();
     }
 
     /**

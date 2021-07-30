@@ -68,7 +68,7 @@
                     </form>
                 </div>
                 <div class="card-footer text-center">
-                    <router-link to="/san-pham/danh-sach" type="reset" class="btn btn-light-primary mr-1 font-weight-bolder"><i class="icon-sm ki ki-long-arrow-back"></i> Quay Lại</router-link>
+                    <router-link to="/admin/san-pham/danh-sach" type="reset" class="btn btn-light-primary mr-1 font-weight-bolder"><i class="icon-sm ki ki-long-arrow-back"></i> Quay Lại</router-link>
                     <button type="reset" @click="submit()" class="btn btn-primary mr-1"><i class="icon-sm ki ki-bold-check-1"></i> Lưu thông báo</button>
                 </div>
             </div>
@@ -163,7 +163,7 @@ export default {
                 axios.post('/api/notifications', params).then((res) => {
                     KTApp.unblockPage();
                     toastr.success("Tạo thông báo thành công!")
-                    this.$router.push('/thong-bao/danh-sach');
+                    this.$router.push('/admin/thong-bao/danh-sach');
                 })
             }
             else {

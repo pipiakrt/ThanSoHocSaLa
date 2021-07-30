@@ -87,6 +87,7 @@ Route::get('/chinh-sach', function () {
 });
 
 Route::get('/tra-cuu', [ThanSoController::class, 'index']);
+Route::get('/ket-qua-tra-cuu', [ThanSoController::class, 'ketqua']);
 
 Auth::routes();
 

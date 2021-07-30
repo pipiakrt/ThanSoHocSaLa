@@ -234,10 +234,10 @@
                     <div class="hr"></div>
                     <div class="content">
                         <div><span>- Chuyên gia tại “Viện Nghiên Cứu Và Ứng Dụng Tiềm Năng Con Người”</span></div>
-                        <div><span>- Tư vấn trên 2000 cá nhân thấu hiểu và phát triển bản thân. Giúp họ xác định được nghề nghiệp, hướng đi và mục tiêu trên con đường sự nghiệp.</span></div>
-                        <div><span>- Tư vấn trên 300 gia đình yêu thương, gắn kết với nhau. Giúp cha mẹ hiểu con cái mình hơn và làm cách nào để định hướng đường đời cho con mình một cách đúng đắn</span></div>
-                        <div><span>- Tư vấn trên 50 doanh nghiệp tại Hà Nội và các tỉnh phía Bắc định hình được hướng đi, thấu hiểu và điều phối nhân sự hợp lý để phát triển khả năng của nhân viên, từ đó hình thành sự phát triển của doanh nghiệp</span></div>
-                        <div><span>- Là đối tác cao cấp tại nhiều công ty: Ngân hàng (MB, MSB, VIB, Seabank); Bảo hiểm (Manulife, Dai Ichi, Bảo Việt); các doanh nghiệp (Panda Uniform,  Sapo, Misa)</span></div>
+                        <div><span>- Giúp đỡ trên 2000 cá nhân thấu hiểu và phát triển bản thân. Giúp họ xác định được nghề nghiệp, hướng đi và mục tiêu trên con đường sự nghiệp.</span></div>
+                        <div><span>- Giúp đỡ trên 300 gia đình yêu thương, gắn kết với nhau. Giúp cha mẹ hiểu con cái mình hơn và làm cách nào để định hướng đường đời cho con mình một cách đúng đắn</span></div>
+                        <div><span>- Giúp đỡ trên 50 doanh nghiệp tại Hà Nội và các tỉnh phía Bắc định hình được hướng đi, thấu hiểu và điều phối nhân sự hợp lý để phát triển khả năng của nhân viên, từ đó hình thành sự phát triển của doanh nghiệp</span></div>
+                        <div><span>- Là đối tác cấp cao tại: Ngân hàng (MB, MSB, VIB, Seabank); Bảo hiểm (Manulife, Dai Ichi, Bảo Việt); các doanh nghiệp (Panda Uniform,  Sapo, Misa)</span></div>
                     </div>
                     <div class="btn-view">
                         <button class="btn">XEM THÊM</button>

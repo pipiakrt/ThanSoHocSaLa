@@ -209,7 +209,6 @@ export default {
             checkbox: [],
             filterName: '',
             filterOrder: '',
-            categories: [],
             filterStatus: '',
             allID: [],
             page: 0,

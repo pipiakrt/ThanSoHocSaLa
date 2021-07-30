@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'iCiel DIN Pro Condensed';  
+    font-family: 'iCiel DIN Pro Condensed';
     src: url(/fonts/DinPro/DINPro-CondMedium.ttf);
     font-weight: 500;
 }
@@ -127,11 +127,15 @@
     font-size: 24px;
     margin-bottom: 20px;
 }
+.content-ketqua .item .title-item:hover {
+    cursor: pointer;
+}
 .content-ketqua .item {
     min-height: 85px;
     display: flex;
     align-items: center;
     position: relative;
+    user-select: none;
 }
 .content-ketqua .item.active {
     background-color: #097364;

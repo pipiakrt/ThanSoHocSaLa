@@ -18,68 +18,13 @@ class ThanSoController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function ketqua()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      *
      * @param  \App\Models\ThanSo  $thanSo
      * @return \Illuminate\Http\Response
      */
-    public function show(ThanSo $thanSo)
+    public function ketqua(Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\ThanSo  $thanSo
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ThanSo $thanSo)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ThanSo  $thanSo
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, ThanSo $thanSo)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\ThanSo  $thanSo
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(ThanSo $thanSo)
-    {
-        //
+        return view('ketquatracuu');
     }
 }

@@ -18,6 +18,8 @@ class CreatePostsTable extends Migration
             $table->string('name')->index();
             $table->string('slug');
             $table->string('image')->nullable();
+            $table->string('author')->nullable();
+            $table->string('type')->nullable();
             $table->mediumText('description')->nullable();
             $table->longText('content')->nullable();
             $table->boolean('status')->index();

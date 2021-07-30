@@ -43,7 +43,7 @@ class HomeController extends Controller
      */
     public function sumenh()
     {
-        return view('gioi-thieu');
+        return view('sumenh');
     }
 
     /**
