@@ -44,6 +44,7 @@
                                     <th style="min-width: 300px" class="pl-0">
                                         <span class="text-dark-75">Link Page</span>
                                     </th>
+                                    <th style="min-width: 120px">Title</th>
                                     <th style="min-width: 120px">Meta description</th>
                                     <th style="min-width: 120px">Meta keywords nhật</th>
                                     <th class="text-center">EXT</th>
@@ -63,6 +64,9 @@
                                                 <router-link :to="'/admin/seo/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.url, 50)"></router-link>
                                             </div>
                                         </div>
+                                    </td>
+                                    <td>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="Text(item.title, 250)"></span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="Text(item.description, 250)"></span>

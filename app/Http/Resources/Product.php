@@ -18,24 +18,15 @@ class Product extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'slug' => $this->slug,
-            'url' => $this->avatar,
+            'image' => $this->image,
+            'price_origin' => $this->price_origin,
             'price' => $this->price,
-            'video' => $this->video,
-            'seo_title' => $this->seo_title,
-            'number' => $this->number,
-            'seo_description' => $this->seo_description,
-            'seo_keyword' => $this->seo_keyword,
             'description' => $this->description,
-            'images' => $this->images,
-            'attributes' => $this->attributes,
+            'promotion' => $this->promotion,
             'content' => $this->content,
             'status' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
-            'category_id' => $this->category_id,
-            'promotion_id' => $this->promotion_id,
-            'promotion' => $this->Promotion ? $this->Promotion->title : '',
-            'suggestion' => Suggestion::collection($this->Suggestion)
         ];
     }
 }

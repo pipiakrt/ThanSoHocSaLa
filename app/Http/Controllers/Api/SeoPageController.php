@@ -47,9 +47,9 @@ class SeoPageController extends Controller
      * @param  \App\Models\Model  $Model
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Model $model)
+    public function update(Request $request, Model $seo)
     {
-        return $model->update($request->all());
+        return $seo->update($request->all());
     }
 
     /**

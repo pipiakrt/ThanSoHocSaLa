@@ -74,22 +74,14 @@
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="Text(item.description, 250)"></span>
                                     </td>
                                     <td>
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ item.promotion }}</span>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ item.promotion[0].title }}</span>
                                     </td>
                                     <td>
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatPrice(item.price)"></span>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.price"></span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.created_at)"></span>
                                         <span class="text-muted font-weight-bold" v-text="formatHuors(item.created_at)"></span>
-                                    </td>
-                                    <td>
-                                        <span class="switch switch-primary justify-content-center">
-                                            <label>
-                                                <input @change="changeStatus(item.id, item.status = !item.status)" type="checkbox" :checked="item.status" />
-                                                <span></span>
-                                            </label>
-                                        </span>
                                     </td>
                                     <td class="text-center">
                                         <div class="dropdown dropdown-inline">
@@ -185,7 +177,7 @@ export default {
             this.products = products.data
             KTApp.unblockPage();
         },
-        destroy(id) {
+        destroy(id = this.checkbox) {
             if (id != '') {
                 Swal.fire({
                     title: "Chắc chăn chứ?",

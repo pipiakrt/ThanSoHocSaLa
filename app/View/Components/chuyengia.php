@@ -3,9 +3,9 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use App\Models\Product;
+use App\Models\HomePage;
 
-class sanpham extends Component
+class chuyengia extends Component
 {
     /**
      * Create a new component instance.
@@ -24,7 +24,7 @@ class sanpham extends Component
      */
     public function render()
     {
-        $products = Product::all();
-        return view('components.sanpham', compact('products'));
+        $data = HomePage::find(1)->data;
+        return view('components.chuyengia', compact('data'));
     }
 }

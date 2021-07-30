@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ThanSoController;
 use App\Http\Controllers\pdfController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +31,8 @@ Route::prefix('/gioi-thieu')->group(function () {
 });
 
 Route::prefix('/san-pham')->group(function () {
-    Route::get('/', function () {
-        return view('san-pham');
-    });
-    Route::get('/ca-nhan', function () {
-        return 'Gói sản phẩm cá nhân';
-    });
+    Route::get('/', [ProductController::class, 'index']);
+    Route::get('/{slug}', [ProductController::class, 'show']);
     Route::get('/gia-dinh', function () {
         return 'Gói sản phẩm gia đình';
     });

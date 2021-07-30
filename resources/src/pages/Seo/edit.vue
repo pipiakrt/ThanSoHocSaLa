@@ -43,6 +43,12 @@
                                         <textarea v-model="keywords" class="form-control" rows="9" id="description"></textarea>
                                     </div>
                                 </div>
+                                <div class="form-group row">
+                                    <label for="script" class="col-2 col-form-label">Script schema</label>
+                                    <div class="col-10">
+                                        <textarea v-model="schema" class="form-control" rows="9" id="script"></textarea>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                         <div class="card-footer text-center">
@@ -88,6 +94,7 @@ export default {
             title: '',
             description: '',
             keywords: '',
+            schema: ''
         }
     },
     async mounted() {
@@ -97,6 +104,7 @@ export default {
             this.title = res.data.title
             this.description = res.data.description
             this.keywords = res.data.keywords
+            this.schema = res.data.schema
         })
     },
     methods: {
@@ -105,7 +113,8 @@ export default {
                 url: this.url,
                 title: this.title,
                 description: this.description,
-                keywords: this.keywords
+                keywords: this.keywords,
+                schema: this.schema,
             }
 
             KTApp.blockPage({

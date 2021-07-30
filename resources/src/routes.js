@@ -50,11 +50,11 @@ import EditSeo from './pages/Seo/edit'
 // import Banner from './pages/Banner/index'
 // // Slider
 // import Slider from './pages/Slider/index'
-// // Account
-// import Account from './pages/Account/index'
-// import Profile from './pages/Account/profile'
-// import CreateUser from './pages/Account/create'
-// import Password from './pages/Account/password'
+// Account
+import Account from './pages/Account/index'
+import Profile from './pages/Account/profile'
+import CreateUser from './pages/Account/create'
+import Password from './pages/Account/password'
 // FileManager
 import FileManager from './pages/FileManager/index'
 // error
@@ -246,27 +246,27 @@ const routes = [
     //     component: Slider,
     //     name: 'Slider',
     // },
-    // // Account
-    // {
-    //     path: '/admin/tai-khoan',
-    //     component: Account,
-    //     name: 'Account',
-    // },
-    // {
-    //     path: '/admin/tai-khoan/thong-tin',
-    //     component: Profile,
-    //     name: 'Account',
-    // },
-    // {
-    //     path: '/admin/tai-khoan/them-tai-khoan',
-    //     component: CreateUser,
-    //     name: 'Account',
-    // },
-    // {
-    //     path: '/admin/tai-khoan/mat-khau',
-    //     component: Password,
-    //     name: 'Account',
-    // },
+    // Account
+    {
+        path: '/admin/tai-khoan',
+        component: Account,
+        name: 'Account',
+    },
+    {
+        path: '/admin/tai-khoan/thong-tin',
+        component: Profile,
+        name: 'Account',
+    },
+    {
+        path: '/admin/tai-khoan/them-tai-khoan',
+        component: CreateUser,
+        name: 'Account',
+    },
+    {
+        path: '/admin/tai-khoan/mat-khau',
+        component: Password,
+        name: 'Account',
+    },
     // HomePage
     {
         path: '/admin/homepage',

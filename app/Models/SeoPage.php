@@ -13,6 +13,7 @@ class SeoPage extends Model
         'url',
         'title',
         'keywords',
-        'description'
+        'description',
+        'schema',
     ];
 }

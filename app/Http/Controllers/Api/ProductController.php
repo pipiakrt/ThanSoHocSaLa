@@ -29,7 +29,7 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        return Resources::collection(Model::paginateFilter($request));
+        return Resources::collection(Model::paginate());
     }
 
     /**
@@ -40,12 +40,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = Model::create($request->all());
-        $suggestion = [];
-        foreach ($request->suggestion_id as $id) {
-            array_push($suggestion, ['product_id' => $id, 'relate_id' => $product->_id]);
-        }
-        return Suggestion::insert($suggestion);
+        return Model::create($request->all());
     }
 
     /**
@@ -66,15 +61,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Model $product)
+    public function update(Model $product, Request $request)
     {
-        $product->update($request->all());
-        $product->Suggestion()->delete();
-        $suggestion = [];
-        foreach ($request->suggestion_id as $id) {
-            array_push($suggestion, ['product_id' => $id, 'relate_id' => $product->_id]);
-        }
-        return Suggestion::insert($suggestion);
+        return $product->update($request->all());
     }
 
     /**

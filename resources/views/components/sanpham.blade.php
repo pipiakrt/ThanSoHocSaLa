@@ -89,7 +89,9 @@
                                     </div>
                                     <div class="col-xl-5 h-100">
                                         <div class="anhsp h-100 text-center" style="background-image: url('/img/kh/2.jpg');">
-                                            <button>Đăng kí</button>
+                                            <a href="/san-pham/ca-nhan">
+                                                <button>Đăng kí</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -142,7 +144,9 @@
                                     </div>
                                     <div class="col-xl-5 h-100">
                                         <div class="anhsp h-100 text-center" style="background-image: url('/img/kh/1.jpg');">
-                                            <button>Đăng kí</button>
+                                            <a href="/san-pham/doanh-nghiep">
+                                                <button>Đăng kí</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

@@ -18,8 +18,8 @@ class CreateProductsTable extends Migration
             $table->string('name')->index();
             $table->string('slug');
             $table->string('image')->nullable();
-            $table->integer('price_origin')->nullable();
-            $table->integer('price')->nullable();
+            $table->string('price_origin')->nullable();
+            $table->string('price')->nullable();
             $table->json('promotion')->nullable();
             $table->mediumText('description')->nullable();
             $table->longText('content')->nullable();

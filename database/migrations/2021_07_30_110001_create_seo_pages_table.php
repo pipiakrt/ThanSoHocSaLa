@@ -19,6 +19,7 @@ class CreateSeoPagesTable extends Migration
             $table->string('description')->nullable();
             $table->string('title')->nullable();
             $table->string('url')->nullable();
+            $table->mediumText('schema')->nullable();
             $table->timestamps();
         });
     }
