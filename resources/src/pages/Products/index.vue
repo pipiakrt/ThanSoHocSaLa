@@ -62,10 +62,10 @@
                                     <td class="pl-0 py-8">
                                         <div class="d-flex align-items-center">
                                             <div class="symbol symbol-50 flex-shrink-0 mr-4">
-                                                <div class="symbol-label" :style="`background-image: url('${item.url}')`"></div>
+                                                <div class="symbol-label" :style="`background-image: url('${item.image}')`"></div>
                                             </div>
                                             <div>
-                                                <router-link :to="'/san-pham/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.name, 50)"></router-link>
+                                                <router-link :to="'/admin/san-pham/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.name, 50)"></router-link>
                                                 <span class="text-muted d-block" v-text="Text(item.slug, 50)"></span>
                                             </div>
                                         </div>
@@ -105,7 +105,7 @@
                                                             </span>
                                                             <span class="navi-text">Tiến tới trang</span>
                                                         </a>
-                                                        <router-link :to="'/san-pham/' + item.id + '/chinh-sua'" class="navi-link">
+                                                        <router-link :to="'/admin/san-pham/' + item.id + '/chinh-sua'" class="navi-link">
                                                             <span class="navi-icon">
                                                                 <i class="fa fas fa-edit"></i>
                                                             </span>

@@ -15,7 +15,7 @@ class Menu extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->_id,
+            'id' => $this->id,
             'name' => $this->name,
             'image' => $this->image,
             'link' => $this->link,

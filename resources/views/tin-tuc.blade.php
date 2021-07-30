@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@push('styles')
+    <link rel="stylesheet" href="/css/post2.css">
+@endpush
+
 @section('content')
 
 <x-slogan />
@@ -8,7 +12,7 @@
     <div class="container container-header2">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-            <li class="breadcrumb-item"><a href="#">Câu chuyện</a></li>
+            <li class="breadcrumb-item"><a href="#">Tin tức</a></li>
         </ol>
     </div>
 </nav>
@@ -17,7 +21,7 @@
 
     <div class="post-slogan">
         <div class="container container-header2">
-            <div class="title text-center">
+            <div class="title text-center mt-2 mb-4">
                 <h1>"CHUYÊN MỤC TIN TỨC CỦA CHÚNG TÔI"</h1>
                 <div class="br-cs1"></div>
                 <div class="br-cs2"></div>
@@ -27,33 +31,29 @@
 
     <div class="post-main mb-0 mb-md-5">
         <div class="container container-header2">
+            @foreach ($posts as $item)
+                <div class="post-item mb-5">
+                    <div class="row g-0 g-md-3">
+                        <div class="col-md-6">
+                            <div class="image">
+                                <img class="mw-100" src="{{ $item->image ? $item->image : '/img/post/1.png' }}" alt="{{ $item->name }}">
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="post-preview mt-4 mt-md-0">
+                                <div class="post-name"><h2>{{ $item->author }}</h2></div>
+                                <div class="post-tilte"><h4>{{ $item->name }}</h4></div>
+                                <div class="post-desc"><span>{{ $item->description }}</span></div>
+                                <div class="submit-post">
+                                    <a href="/tin-tuc/{{ $item->slug }}">Xem thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
 
-            <x-list-post-item />
-            <x-list-post-item />
-            <x-list-post-item />
-            <x-list-post-item />
-
-            <nav aria-label="...">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item active" aria-current="page">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            {{ $posts->links('pagination::bootstrap-4') }}
         </div>
     </div>
 

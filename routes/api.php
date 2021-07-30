@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ThanSoController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\ImageController;
+use App\Http\Controllers\Api\HomePageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,6 @@ Route::resources([
     'images' => ImageController::class,
     'posts' => PostController::class,
     'products' => ProductController::class,
-    'thanso' => ThanSoController::class,
+    'homepage' => HomePageController::class,
     'auth' => AuthController::class,
 ]);

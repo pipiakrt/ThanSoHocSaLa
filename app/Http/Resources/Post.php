@@ -15,19 +15,17 @@ class Post extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->_id,
+            'id' => $this->id,
             'name' => $this->name,
             'slug' => $this->slug,
-            'url' => $this->image,
+            'author' => $this->author,
+            'image' => $this->image,
+            'type' => $this->type,
             'description' => $this->description,
             'content' => $this->content,
             'status' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
-            'category_id' => $this->category_id,
-            'seo_title' => $this->seo_title,
-            'seo_description' => $this->seo_description,
-            'seo_keyword' => $this->seo_keyword,
         ];
     }
 }

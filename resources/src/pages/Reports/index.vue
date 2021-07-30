@@ -38,7 +38,7 @@
                                                 <div class="symbol-label" style="background-image: url(/img/avatar.png)"></div>
                                             </div>
                                             <div>
-                                                <router-link :to="'/bai-viet/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.name"></router-link>
+                                                <router-link :to="'/admin/bai-viet/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.name"></router-link>
                                                 <span class="text-muted d-block" v-text="item.email"></span>
                                                 <span class="text-muted d-block" v-text="item.phone"></span>
                                             </div>

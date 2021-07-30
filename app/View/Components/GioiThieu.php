@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\HomePage;
 
 class GioiThieu extends Component
 {
@@ -23,6 +24,7 @@ class GioiThieu extends Component
      */
     public function render()
     {
-        return view('components.gioi-thieu');
+        $data = HomePage::find(1)->data;
+        return view('components.gioi-thieu', compact('data'));
     }
 }

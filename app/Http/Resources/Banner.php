@@ -15,7 +15,7 @@ class Banner extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->_id,
+            'id' => $this->id,
             'name' => $this->name,
             'link' => $this->link,
             'url' => $this->path,

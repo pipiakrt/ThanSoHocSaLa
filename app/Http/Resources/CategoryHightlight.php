@@ -15,7 +15,7 @@ class CategoryHightlight extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->_id,
+            'id' => $this->id,
             'category_id' => $this->category_id,
             'category' => new Category($this->Category)
         ];

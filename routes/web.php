@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ThanSoController;
 use App\Http\Controllers\pdfController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,18 +45,13 @@ Route::prefix('/san-pham')->group(function () {
 });
 
 Route::prefix('/tin-tuc')->group(function () {
-    Route::get('/', function () {
-        return view('tin-tuc');
-    });
-    Route::get('/chi-tiet', function () {
-        return 'chi tiết tin tức';
-    });
+    Route::get('/', [PostController::class, 'index']);
+    Route::get('/{slug}', [PostController::class, 'show']);
 });
 
 Route::prefix('/cau-chuyen')->group(function () {
-    Route::get('/', function () {
-        return view('cau-chuyen');
-    });
+    Route::get('/', [PostController::class, 'cauchuyen']);
+
     Route::get('/chi-tiet', function () {
         return 'chi tiết cau-chuyen';
     });

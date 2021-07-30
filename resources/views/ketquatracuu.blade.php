@@ -736,7 +736,9 @@
                             <div><span>trầm và ý nghĩa từng năm. Khám phá Giải mã chi tiết chuyên sâu ngay.</span></div>
                         </div>
                         <div class="btn-ketqua text-center">
-                            <button>TRA CỨU CHUYÊN SÂU</button>
+                            <a href="">
+                                <button>TRA CỨU CHUYÊN SÂU</button>
+                            </a>
                         </div>
                     </div>
                 </div>

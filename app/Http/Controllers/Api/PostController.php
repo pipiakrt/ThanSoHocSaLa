@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Resources\Post as Resources;
 use App\Models\Post as Model;
-use App\Models\CategoryPost as Category;
 
 class PostController extends Controller
 {
@@ -15,10 +14,10 @@ class PostController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth:api');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth:api');
+    // }
 
     /**
      * Display a listing of the resource.
@@ -27,7 +26,7 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        return Resources::collection(Model::paginateFilter($request));
+        return Model::paginateFilter($request);
     }
 
     /**

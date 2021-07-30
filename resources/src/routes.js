@@ -1,5 +1,7 @@
 // Home
 import Home from './pages/Home'
+// HomePage
+import HomePage from './pages/HomePage'
 // Langding Page
 // import LangdingPage from './pages/LangdingPage'
 // // Categories
@@ -49,8 +51,8 @@ import EditPost from './pages/Posts/edit'
 // import Profile from './pages/Account/profile'
 // import CreateUser from './pages/Account/create'
 // import Password from './pages/Account/password'
-// // FileManager
-// import FileManager from './pages/FileManager/index'
+// FileManager
+import FileManager from './pages/FileManager/index'
 // error
 import Error from './pages/Error'
 
@@ -245,12 +247,18 @@ const routes = [
     //     component: Password,
     //     name: 'Account',
     // },
-    // // FileManager
-    // {
-    //     path: '/admin/tep-tin',
-    //     component: FileManager,
-    //     name: 'FileManager',
-    // },
+    // HomePage
+    {
+        path: '/admin/homepage',
+        component: HomePage,
+        name: 'HomePage',
+    },
+    // FileManager
+    {
+        path: '/admin/tep-tin',
+        component: FileManager,
+        name: 'FileManager',
+    },
     // error
     {
         path: '/admin/:pathMatch(.*)*',

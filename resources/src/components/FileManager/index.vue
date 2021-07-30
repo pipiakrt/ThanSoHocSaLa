@@ -193,7 +193,7 @@ export default {
     props: ["getUrl"],
     data() {
         return {
-            domain: 'https://cdn.sieuthitamlinhsala.vn/',
+            domain: '/uploads/',
             images: [],
             dir: '',
             foldel: '',
@@ -281,8 +281,8 @@ export default {
                         this.hideModal()
                         this.foldel = ''
                         this.$refs['errors'].reset();
-                    } 
-                    else 
+                    }
+                    else
                     {
                         Swal.fire("Rất Tiếc!", "Đã có sự cố đã sảy ra, vui lòng thử lại sau!", "error");
                     }

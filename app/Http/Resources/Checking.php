@@ -15,7 +15,7 @@ class Checking extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->_id,
+            'id' => $this->id,
             'name' => $this->name,
             'content' => $this->content,
             'phone' => $this->phone,

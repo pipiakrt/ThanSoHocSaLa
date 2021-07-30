@@ -32,6 +32,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="slug" class="col-2 col-form-label">Tác giả</label>
+                                    <div class="col-10">
+                                        <input v-model="author" class="form-control" type="search" placeholder="Tác giả" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="categories" class="col-2 col-form-label">Loại bài viết</label>
                                     <div class="col-10">
                                         <select v-model="type" class="form-control" style="height: 35px">
@@ -41,17 +47,16 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="keyword" class="col-2 col-form-label">Ảnh bài viết</label>
+                                    <label for="avatar" class="col-2 col-form-label">Ảnh bài viết</label>
                                     <div class="col-10">
-                                        <div class="image-input image-input-outline" id="kt_image_4" :style="`background-position: center; background-image: url('${avatar ? '' : '/img/blank.png'}');`">
-                                            <div class="image-input-wrapper" :style="avatar ? { 'background-image': 'url(' + avatar + ')' } : ''"></div>
-                                            <label v-if="!avatar" for="avatar" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change">
+                                        <div class="image-input image-input-empty image-input-outline background-position-center" :style="`background-image: url('${avatar ? avatar : '/img/avatar.png'}')`">
+                                            <div class="image-input-wrapper"></div>
+                                            <label @click="modal = true" data-toggle="modal" data-target="#filemanager" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change">
                                                 <i class="fa fa-pen icon-sm text-muted"></i>
                                             </label>
-                                            <span v-else @click="removeFiles" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="remove">
+                                            <span v-if="avatar" @click="avatar = ''" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow d-flex" data-action="remove">
                                                 <i class="ki ki-bold-close icon-xs text-muted"></i>
                                             </span>
-                                            <input @change="previewFiles" type="file" id="avatar" name="avatar" hidden>
                                         </div>
                                     </div>
                                 </div>
@@ -80,16 +85,27 @@
             </div>
         </div>
     </div>
+    <div v-if="modal" class="modal fade" id="filemanager">
+        <div class="modal-dialog modal-full min-vh-100">
+            <div class="modal-content min-vh-100">
+                <div class="modal-body">
+                    <FileManage :getUrl="true" @url="setUrl($event)"/>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </template>
 
 <script>
 import Extends from '../../extend';
+import FileManage from '../../components/FileManager/index'
 import Breadcrumb from '../../components/breadcrumb/index'
 
+var typeimage = 'avatar';
 export default {
     components: {
-        Breadcrumb
+        Breadcrumb, FileManage
     },
     data() {
         return {
@@ -109,10 +125,10 @@ export default {
                     text: 'Danh Sách',
                 }
             },
+            modal: false,
             name: '',
             author: '',
             slug: '',
-            image: '',
             avatar: '',
             description: '',
             content: '',
@@ -126,31 +142,73 @@ export default {
     },
     mounted() {
         KTUtil.ready(function () {
+            var HelloButton = function (context) {
+            var ui = $.summernote.ui;
+            var button = ui.button({
+                contents: '<i class="fa far fa-folder"/>',
+                tooltip: 'Folder',
+                click: function () {
+                    typeimage = 'summernote';
+                    $('#filemanager').modal('show');
+                }
+            });
+            return button.render();
+            }
             $('.summernote').summernote({
-                height: 350
+                height: 350,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['mybutton', ['hello']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ],
+                buttons: {
+                    hello: HelloButton
+                },
+                callbacks: {
+                    onImageUpload: function(files) {
+                        let formdata = new FormData();
+                        formdata.append("file", files[0]);
+                        formdata.append("summernote", true);
+                        axios.post('/api/images', formdata).then(res => {
+                            var image = $('<img>').attr('src', res.data);
+                            $('.summernote').summernote("insertNode", image[0]);
+                        })
+                    },
+                },
             });
         });
     },
     methods: {
-        previewFiles (event) {
-            this.image = event.target.files[0];
-            this.avatar = URL.createObjectURL(this.image);
+        setTypeGetImg() {
+            typeimage = 'avatar'
         },
-        removeFiles () {
-            this.image = '';
-            this.avatar = '';
+        setUrl(path) {
+            console.log(path)
+            $('#filemanager').modal('hide');
+            if (typeimage == 'summernote') {
+                var image = $('<img>').attr('src', path);
+                $('.summernote').summernote("insertNode", image[0]);
+            }
+            else {
+                this.avatar = path
+            }
         },
         async submit(status) {
-            let params = new FormData();
-            params.append('name', this.name);
-            params.append('slug', this.slug);
-            params.append('author', this.author);
-            params.append('type', this.type);
-            params.append('type', this.type);
-            params.append('image', this.image);
-            params.append('status', status);
-            params.append('description', this.description);
-            params.append('content', $('.summernote').summernote('code'));
+            let params = {
+                name: this.name,
+                slug: this.slug,
+                author: this.author,
+                type: this.type,
+                image: this.avatar,
+                description: this.description,
+                content: $('.summernote').summernote('code'),
+                status: String(status),
+            }
 
             KTApp.blockPage({
                 overlayColor: "#000000",

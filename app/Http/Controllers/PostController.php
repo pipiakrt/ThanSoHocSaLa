@@ -14,7 +14,19 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::where('type', 'post')->paginate(10);
+        return view('tin-tuc', compact('posts'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function cauchuyen()
+    {
+        $posts = Post::where('type', 'story')->paginate(10);
+        return view('cau-chuyen', compact('posts'));
     }
 
     /**
@@ -23,8 +35,9 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($slug)
     {
-        //
+        $post = Post::where('slug', $slug)->first();
+        return view('tin-tuc-chi-tiet', compact('post'));
     }
 }

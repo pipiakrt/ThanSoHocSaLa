@@ -94,122 +94,17 @@
                     </div>
                 </div>
                 <div class="text-center btn-dangky">
-                    <button class="text-white">ĐĂNG KÍ</button>
+                    <a href="/tra-cuu">
+                        <button class="text-white">ĐĂNG KÍ</button>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="group-bg">
-    <div class="block-1 text-center text-white">
-        <div class="container container-block-1 mh-1150 ">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <h2 class="text-dark titleheader title-h1">Ý NGHĨA CÁC CHỈ SỐ</h2>
-                </div>
-                <div class="col-md-6 col-xl-4 col-lg-6">
-                    <div class="item active" style="background-image: url('/img/vt/2.png');">
-                        <div class="link-to"></div>
-                        <div class="box-group">
-                            <div class="box">
-                                <div class="title">NGÀY SINH</div>
-                            </div>
-                        </div>
-                        <div class="item-drop">
-                            <div class="group-item">
-                                <div class="drop-title">
-                                    <h3>Sứ mệnh</h3>
-                                </div>
-                                <div class="hr"></div>
-                                <div class="drop-desc"><span>Chỉ số này tiết lộ bạn sinh ra để làm gì và trở thành ai trong cuộc đời này. Đây là chỉ số quan trọng thứ 2 trong bản đồ thần số học của bạn và bạn cần xét đến khi lựa chọn nghề nghiệp.</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-4 col-lg-6">
-                    <div class="item" style="background-image: url('/img/vt/2.png');">
-                        <div class="link-to"></div>
-                        <div class="box-group">
-                            <div class="box">
-                                <div class="title">
-                                    ĐƯỜNG ĐỜI
-                                    <div class="desc"><span>Ý nghĩa chỉ số sứ mệnh</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-drop">
-                            <div class="group-item">
-                                <div class="drop-title"><h3>Đường đời</h3></div>
-                                <div class="hr"></div>
-                                <div class="drop-desc"><span>Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm như thế nào, và bạn học được gì sau những trải nghiệm đó. Đây là chỉ số quan trọng nhất khi bạn xem thần số học của mình. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà bạn sẽ sống.
-                                </span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-4 col-lg-6">
-                    <div class="item" style="background-image: url('/img/vt/2.png');">
-                        <div class="link-to"></div>
-                        <div class="box-group">
-                            <div class="box">
-                                <div class="title">
-                                    NHÂN CÁCH
-                                    <div class="desc"><span>Ý nghĩa chỉ số nhân cách</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-drop">
-                            <div class="group-item">
-                                <div class="drop-title"><h3>Nhân cách</h3></div>
-                                <div class="hr"></div>
-                                <div class="drop-desc"><span>Chỉ số này thể hiện cách bạn phản ứng với những gì xảy ra trong cuộc đời mình. Nó độc lập với con số Đường đời và các con số khác, số Thái độ hoàn toàn phụ thuộc vào bạn. Chúng ta không kiểm soát được những gì đến với mình nhưng chúng ta hoàn toàn làm chủ được cách phản ứng với nó nên con số này bạn hoàn toàn có thể phát huy ưu điểm và khắc phục nhược điểm của nó được.</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-4 col-lg-6">
-                    <div class="item" style="background-image: url('/img/vt/2.png');">
-                        <div class="link-to"></div>
-                        <div class="box-group">
-                            <div class="box">
-                                <div class="title">
-                                    Tâm hồn
-                                    <div class="desc"><span>Ý nghĩa chỉ số tâm hồn</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-drop">
-                            <div class="group-item">
-                                <div class="drop-title"><h3>Tâm hồn</h3></div>
-                                <div class="hr"></div>
-                                <div class="drop-desc"><span>Tâm hồn, sự khao khát từ sâu bên trong của mỗi người. Chỉ số này hé lộ tâm hồn hay sâu thẳm trong bạn mong muốn bạn trở thành con người như thế nào thì mới cảm thấy thỏa mãn và trọn vẹn. Nói cách khác, nếu bạn có những đặc điểm tích cực của chỉ số này, Tâm hồn bạn sẽ cảm thấy hạnh phúc.</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-4 col-lg-6">
-                    <div class="item" style="background-image: url('/img/vt/2.png');">
-                        <div class="link-to"></div>
-                        <div class="box-group">
-                            <div class="box">
-                                <div class="title">
-                                    TRƯỞNG THÀNH
-                                    <div class="desc"><span>Ý nghĩa chỉ số trưởng thành</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-drop">
-                            <div class="group-item">
-                                <div class="drop-title"><h3>Trưởng thành</h3></div>
-                                <div class="hr"></div>
-                                <div class="drop-desc"><span>Chỉ số này tiết lộ sự trưởng thành và thành đạt của bạn sẽ ở trên phương diện thế nào sau này. Nó cho biết bạn có thể trông đợi điều gì trong nửa sau cuộc đời, bạn cần để tâm tới chỉ số này khi đặt mục tiêu hay đưa ra quyết định trong dài hạn. Chỉ số này của bạn chỉ bắt đầu có ảnh hưởng sau khi bạn đã trưởng thành hay sống được nửa cuộc đời, cụ thể là từ tuổi 45 trở đi. Đây là một dạng năng lượng tích lũy...</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <x-chi-so />
 
     <x-sanpham />
 
@@ -240,7 +135,9 @@
                         <div><span>- Là đối tác cấp cao tại: Ngân hàng (MB, MSB, VIB, Seabank); Bảo hiểm (Manulife, Dai Ichi, Bảo Việt); các doanh nghiệp (Panda Uniform,  Sapo, Misa)</span></div>
                     </div>
                     <div class="btn-view">
-                        <button class="btn">XEM THÊM</button>
+                        <a href="/">
+                            <button class="btn">XEM THÊM</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -251,7 +148,7 @@
 <div class="taisao">
     <div class="container">
         <div class="titleheader text-dark text-center">
-            <h2 class="title-h1">Gía trị chỉ có khi làm Thần Số Học tại SALA GROUP</h2>
+            <h2 class="title-h1">Gía trị chỉ có khi làm Thần Số Học tại Thần số học Sala</h2>
         </div>
         <div class="main-tasao mt-4">
             <div class="row g-5 mt-1">
@@ -316,7 +213,7 @@
             <iframe class="w-100 m-0 youtube-responsive" height="750" src="https://www.youtube.com/embed/rwEfiiqJJK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <!--  -->
-        <form class="main-tracuu d-flex align-items-center justify-content-center" action="?">
+        <form class="main-tracuu d-flex align-items-center justify-content-center" action="/ket-qua-tra-cuu">
             <div class="w-100">
                 <div class="row g-0">
                     <div class="col-lg-12 col-xl-4 ct-col-4">
@@ -324,18 +221,18 @@
                     </div>
                     <div class="col-lg-4 col-xl-3 ct-col-3">
                         <div class="mb-2">
-                            <input class="custom-form-input mb-4" type="text" placeholder="Họ và tên:">
+                            <input class="custom-form-input mb-4" name="name" type="text" placeholder="Họ và tên:" required>
                         </div>
                         <div class="mb-2 mb-lg-0">
-                            <input class="custom-form-input mb-4 mb-lg-0" type="text" placeholder="Số điện thoại:">
+                            <input class="custom-form-input mb-4 mb-lg-0" name="phone" type="text" placeholder="Số điện thoại:">
                         </div>
                     </div>
                     <div class="col-lg-3 col-xl-3 ct-col-3">
                         <div class="mb-2">
-                            <input class="custom-form-input mb-4" type="email" placeholder="Email:">
+                            <input class="custom-form-input mb-4" name="email" type="email" placeholder="Email:">
                         </div>
                         <div class="mb-2 mb-lg-0">
-                            <input id="ngaygio" class="custom-form-input mb-4 mb-lg-0"  type="date">
+                            <input id="ngaygio" class="custom-form-input mb-4 mb-lg-0" name="date" type="date" required>
                         </div>
                     </div>
                     <div class="col-lg-4 col-xl-2 ct-col-2">

@@ -82,7 +82,7 @@
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="'#' + item.code"></span>
                                     </td>
                                     <td>
-                                        <router-link :to="'/khuyen-mai/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.title"></router-link>
+                                        <router-link :to="'/admin/khuyen-mai/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.title"></router-link>
                                         <span class="text-muted d-block" v-text="item.description"></span>
                                     </td>
                                     <td>
@@ -116,7 +116,7 @@
                                                             </span>
                                                             <span class="navi-text">Tiến tới trang</span>
                                                         </a>
-                                                        <router-link :to="'/khuyen-mai/' + item.id + '/chinh-sua'" class="navi-link">
+                                                        <router-link :to="'/admin/khuyen-mai/' + item.id + '/chinh-sua'" class="navi-link">
                                                             <span class="navi-icon">
                                                                 <i class="fa fas fa-edit"></i>
                                                             </span>

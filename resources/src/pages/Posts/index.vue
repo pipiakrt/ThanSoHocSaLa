@@ -33,22 +33,28 @@
                 <div class="card-body pt-0 pb-3">
                     <div class="row mb-5">
                         <div class="col-3">
-                            <input v-model="filterName" type="text" placeholder="Tên sản phẩm" class="form-control form-control-sm form-filter datatable-input"/>
+                            <input v-model="filterName" type="text" placeholder="Tên bài viết" class="form-control form-control-sm form-filter datatable-input"/>
                         </div>
-                        <div class="col-5">
+                        <div class="col-8">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-4">
                                     <select v-model="filterOrder" class="form-control form-control-sm form-filter datatable-input" title="Select" data-col-index="6">
-                                        <option value="">Sắp xếp</option>
                                         <option value="DESC">Mới nhất</option>
                                         <option value="ASC">Cũ nhất</option>
                                     </select>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-4">
                                     <select v-model="filterStatus" class="form-control form-control-sm form-filter datatable-input" title="Chọn" data-col-index="7">
                                         <option value="">Trạng thái</option>
                                         <option value="1">Hoạt Động</option>
                                         <option value="0">Tạm Ẩn</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <select v-model="filterType" class="form-control form-control-sm form-filter datatable-input" title="Chọn" data-col-index="7">
+                                        <option value="">Loại</option>
+                                        <option value="1">Bài viết</option>
+                                        <option value="0">Câu chuyện</option>
                                     </select>
                                 </div>
                             </div>
@@ -70,9 +76,9 @@
                                     <th style="min-width: 300px" class="pl-0">
                                         <span class="text-dark-75">Bài viết</span>
                                     </th>
-                                    <th style="min-width: 100px">Mô tả</th>
-                                    <th style="min-width: 120px">Ngày tạo</th>
-                                    <th style="min-width: 120px">cập nhật</th>
+                                    <th style="min-width: 180px">Mô tả</th>
+                                    <th style="min-width: 120px">Thể loại</th>
+                                    <th style="min-width: 120px">Cập nhật</th>
                                     <th style="min-width: 100px">Trạng thái</th>
                                     <th class="text-center">EXT</th>
                                 </tr>
@@ -88,10 +94,10 @@
                                     <td class="pl-0 py-8">
                                         <div class="d-flex align-items-center">
                                             <div class="symbol symbol-50 flex-shrink-0 mr-4">
-                                                <div class="symbol-label" :style="`background-image: url('${item.url}')`"></div>
+                                                <div class="symbol-label" :style="`background-image: url('${item.image}')`"></div>
                                             </div>
                                             <div>
-                                                <router-link :to="'/bai-viet/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.name, 50)"></router-link>
+                                                <router-link :to="'/admin/bai-viet/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.name, 50)"></router-link>
                                                 <span class="text-muted d-block" v-text="Text(item.slug, 50)"></span>
                                             </div>
                                         </div>
@@ -100,8 +106,7 @@
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="Text(item.description, 250)"></span>
                                     </td>
                                     <td>
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.created_at)"></span>
-                                        <span class="text-muted font-weight-bold" v-text="formatHuors(item.created_at)"></span>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.type == 'post' ? 'Tin tức' : 'Câu chuyện'"></span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.updated_at)"></span>
@@ -129,7 +134,7 @@
                                                             </span>
                                                             <span class="navi-text">Tiến tới trang</span>
                                                         </a>
-                                                        <router-link :to="'/bai-viet/' + item.id + '/chinh-sua'" class="navi-link">
+                                                        <router-link :to="'/admin/bai-viet/' + item.id + '/chinh-sua'" class="navi-link">
                                                             <span class="navi-icon">
                                                                 <i class="fa fas fa-edit"></i>
                                                             </span>
@@ -160,7 +165,7 @@
                         :first-button-text="`<i class='ki ki-bold-double-arrow-back icon-xs'></i>`"
                         :last-button-text="`<i class='ki ki-bold-double-arrow-next icon-xs'></i>`"
                         :no-li-surround="true"
-                        :page-count="posts.meta.last_page"
+                        :page-count="posts.last_page"
                         :page-range="3"
                         :click-handler="toPage"
                         :disabled-class="'disable'"
@@ -208,8 +213,9 @@ export default {
             checkAll: false,
             checkbox: [],
             filterName: '',
-            filterOrder: '',
+            filterOrder: 'DESC',
             filterStatus: '',
+            filterType: '',
             allID: [],
             page: 0,
             posts: []
@@ -237,6 +243,7 @@ export default {
             let query = {
                 name: this.filterName,
                 order: this.filterOrder,
+                type: this.filterType,
                 status: this.filterStatus,
                 page: this.page,
             }
