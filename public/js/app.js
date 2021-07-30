@@ -2058,7 +2058,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   email: _this.email,
                   password: _this.password
                 };
-                axios('/admin/api/auth', {
+                axios('/api/auth', {
                   params: data
                 }).then(function (res) {
                   if (res.status == 200) {
