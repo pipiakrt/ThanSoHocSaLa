@@ -55,6 +55,14 @@
                     <span>Tải file luận giải</span>
                     <strong>$20</strong>
                 </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <form method="POST" action="/logout">
+                        @csrf
+                        <button class="btn p-0" type="submit">
+                            <span>Đăng xuất</span>
+                        </button>
+                    </form>
+                </li>
             </ul>
 
             <form class="card p-2">

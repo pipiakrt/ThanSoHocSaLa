@@ -1,6 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="slogan bg-xanh-nhat text-white text-center">
+    <h1>"KIẾN TẠO CUỘC ĐỜI HẠNH PHÚC TỪ NHỮNG CON SỐ"</h1>
+</div>
+
+<nav class="breadcrumb-cus" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="#">Tài khoản</a></li>
+        </ol>
+    </div>
+</nav>
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -66,6 +78,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     Đăng Ký
                                 </button>
+                                <a class="btn btn-link" href="{{ route('login') }}">
+                                    Đăng Nhập,
+                                </a>
                             </div>
                         </div>
                     </form>
