@@ -72,10 +72,7 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="firstName">Họ tên</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required="" />
-                        <div class="invalid-feedback">
-                            Valid first name is required.
-                        </div>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="{{ $user->name }}" required="" />
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="lastName">Ngày sinh</label>
@@ -89,10 +86,7 @@
                 <div class="mb-3">
                     <label for="username">Tài khoản</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="username" placeholder="" required="" />
-                        <div class="invalid-feedback" style="width: 100%;">
-                            Your username is required.
-                        </div>
+                        <input type="text" class="form-control" id="username" value="{{ $user->email }}" disabled />
                     </div>
                 </div>
 
@@ -107,21 +101,12 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="" />
-                    <div class="invalid-feedback">
-                        Please enter a valid email address for shipping updates.
-                    </div>
-                </div>
-
-                <div class="mb-3">
                     <label for="address">Địa chỉ</label>
                     <input type="text" class="form-control" id="address" placeholder="" required="" />
                     <div class="invalid-feedback">
                         Please enter your shipping address.
                     </div>
                 </div>
-
 
                 <div class="mb-3">
                     <button class="btn btn-primary">Cập nhật</button>

@@ -11,9 +11,15 @@ class AccountController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('tai-khoan');
+        $user = $request->user();
+        if ($user) {
+            return view('tai-khoan', compact('user'));
+        }
+        else {
+            return redirect('/login');
+        }
     }
 
     /**
