@@ -20,7 +20,7 @@
                                     <span>{{ $item->description }}</span>
                                 </div>
                                 <div class="item-btn">
-                                    <a href="/">XEM THÊM</a>
+                                    <a href="/tin-tuc/{{ $item->slug }}">XEM THÊM</a>
                                 </div>
                             </div>
                         </div>

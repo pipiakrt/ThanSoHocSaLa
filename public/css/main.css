@@ -799,6 +799,10 @@ input[type="date"]:focus::before {
     background-image: url('/img/banner/8.png');
     background-size: cover;
 }
+.cus-service2 .service2 {
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
 .service2 {
     margin-top: 150px;
     padding-bottom: 150px;

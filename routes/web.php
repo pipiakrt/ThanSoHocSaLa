@@ -6,6 +6,8 @@ use App\Http\Controllers\ThanSoController;
 use App\Http\Controllers\pdfController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SocialAuthController;
+use App\Http\Controllers\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,12 +49,9 @@ Route::prefix('/tin-tuc')->group(function () {
 });
 
 Route::prefix('/tai-khoan')->group(function () {
-    Route::get('/', function () {
-        return 'tài khoản';
-    });
-    Route::get('/gio-hang/', function () {
-        return 'giỏ hàng';
-    });
+    Route::get('/', [AccountController::class, 'index']);
+    Route::get('/gio-hang/', [AccountController::class, 'giohang']);
+    Route::get('/don-hang/', [AccountController::class, 'donhang']);
 });
 
 Route::get('/dich-vu/', [HomeController::class, 'dichvu']);
@@ -76,3 +75,8 @@ Auth::routes();
 
 Route::view('/admin', 'admin.index')->where('any', '.*');
 Route::view('/admin/{any}', 'admin.index')->where('any', '.*');
+
+Route::prefix('socialite')->group(function () {
+    Route::get('login/{social}', [SocialAuthController::class, 'redirectToProvider']);
+    Route::get('/{social}/callback', [SocialAuthController::class, 'handleProviderCallback']);
+});

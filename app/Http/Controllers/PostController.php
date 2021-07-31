@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderby('id', 'desc')->where('type', 'post')->paginate(10);
+        $posts = Post::orderby('id', 'desc')->where('type', 'post')->paginate(5);
         return view('tin-tuc', compact('posts'));
     }
 
@@ -25,7 +25,7 @@ class PostController extends Controller
      */
     public function cauchuyen()
     {
-        $posts = Post::orderby('id', 'desc')->where('type', 'story')->paginate(10);
+        $posts = Post::orderby('id', 'desc')->where('type', 'story')->paginate(5);
         return view('cau-chuyen', compact('posts'));
     }
 

@@ -30,4 +30,16 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'facebook' => [
+        'client_id' => '238981638036833',
+        'client_secret' => '4a47b0d7d2c89e41e0895ad99530f2bf',
+        'redirect' => env('APP_URL') . '/socialite/facebook/callback',
+    ],
+
+    'google' => [
+        'client_id' => '642140725261-smi4k7n0jiru0a12v1hqq4cd70v1a5l9.apps.googleusercontent.com',
+        'client_secret' => '-a36EhvZzoiIEOcCxepy0Co4',
+        'redirect' => env('APP_URL') . '/socialite/google/callback',
+    ],
+
 ];

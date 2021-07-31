@@ -37,6 +37,11 @@ class AuthController extends Controller
             ], 202);
         }
         $user = $request->user();
+        if ($user->is_admin != 1) {
+            return response()->json([
+                'message' => 'Chưa được xác thực'
+            ], 202);
+        }
         $tokenResult = $user->createToken('Personal Access Token');
         $token = $tokenResult->token;
         if ($request->remember_me)
@@ -73,6 +78,7 @@ class AuthController extends Controller
     public function store(Register $data)
     {
         User::create([
+            'is_admin' => 1,
             'avatar' => $data->avatar,
             'name' => $data->name,
             'email' => $data->email,
