@@ -58,8 +58,8 @@ class SeoPageController extends Controller
      * @param  \App\Models\Model  $Model
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Model $model)
+    public function destroy(Request $request)
     {
-        return $model->delete();
+        return Model::destroy($request->id);
     }
 }

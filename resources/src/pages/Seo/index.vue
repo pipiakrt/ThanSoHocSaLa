@@ -222,7 +222,7 @@ export default {
                     if (result.value) {
                         axios.delete('/api/seos/destroy', { params: { id: id } }).then(res => {
                             id.forEach(i => {
-                                this.seos.data = this.seos.data.filter(item => item.id !== i)
+                                this.seos = this.seos.filter(item => item.id !== i)
                             });
                             Swal.fire(
                                 "Thành Công!",

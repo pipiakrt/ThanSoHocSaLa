@@ -51,6 +51,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    public function dichvu()
+    {
+        return view('dich-vu');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function duongdoi()
     {
         return view('duongdoi');

@@ -9,12 +9,12 @@
                         </a>
                     </div>
                     <div class="col-4 menu-item left text-center">
-                        <a href="/gioi-thieu">
+                        <a href="/gioi-thieu/">
                             <span>Giới thiệu</span>
                         </a>
                     </div>
                     <div class="col-4 menu-item left text-center">
-                        <a href="/san-pham">
+                        <a href="/san-pham/">
                             <span>Sản phẩm</span>
                         </a>
                     </div>
@@ -26,17 +26,17 @@
             <div class="col-4">
                 <div class="row">
                     <div class="col-4 menu-item right text-center">
-                        <a href="/tin-tuc">
+                        <a href="/tin-tuc/">
                             <span>Tin tức</span>
                         </a>
                     </div>
                     <div class="col-4 menu-item right text-end">
-                        <a href="/cau-chuyen">
+                        <a href="/cau-chuyen/">
                             <span>Câu chuyện</span>
                         </a>
                     </div>
                     <div class="col-4 menu-item right">
-                        <a href="/lien-he">
+                        <a href="/lien-he/">
                             <span>Liên hệ</span>
                         </a>
                     </div>

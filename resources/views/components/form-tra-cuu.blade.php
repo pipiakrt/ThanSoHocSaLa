@@ -4,7 +4,7 @@
             <iframe class="w-100 m-0 youtube-responsive" height="750" src="https://www.youtube.com/embed/rwEfiiqJJK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <!--  -->
-        <form class="main-tracuu d-flex align-items-center justify-content-center" action="/ket-qua-tra-cuu">
+        <form class="main-tracuu d-flex align-items-center justify-content-center" action="/ket-qua-tra-cuu/">
             <div class="w-100">
                 <div class="row g-0">
                     <div class="col-lg-12 col-xl-4 ct-col-4">

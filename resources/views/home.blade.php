@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="text-center btn-dangky">
-                    <a href="/tra-cuu">
+                    <a href="/tra-cuu/">
                         <button class="text-white">ĐĂNG KÍ</button>
                     </a>
                 </div>

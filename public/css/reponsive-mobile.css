@@ -150,6 +150,9 @@
 
 /* md */
 @media (max-width: 992px) {
+    .main-tracuu .form-input input, .main-tracuu .form-input textarea {
+        width: 100% !important;
+    }
     .coppyright {
         padding: 0 15px;
     }

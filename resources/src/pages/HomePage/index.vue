@@ -89,6 +89,32 @@
                                         <input v-model="data.chuyengia1" class="form-control" type="text" />
                                     </div>
                                 </div>
+                                <div class="form-group mb">
+                                    <div class="alert alert-custom alert-default" role="alert">
+                                        <div class="alert-icon">
+                                            <i class="ki ki-outline-info icon-2x text-primary"></i>
+                                        </div>
+                                        <div class="alert-text">Trang Dịch Vụ</div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="name" class="col-2 col-form-label">Dịch Vụ Tư Vấn</label>
+                                    <div class="col-10">
+                                        <input v-model="data.service1" class="form-control" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="name" class="col-2 col-form-label">Dịch Vụ Xem Online</label>
+                                    <div class="col-10">
+                                        <input v-model="data.service2" class="form-control" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="name" class="col-2 col-form-label">Dịch Vụ Sinh Trắc Vân Tay</label>
+                                    <div class="col-10">
+                                        <input v-model="data.service3" class="form-control" type="text" />
+                                    </div>
+                                </div>
                             </div>
                         </form>
                         <div class="card-footer text-center">
@@ -136,7 +162,10 @@ export default {
                 ynghia3: "",
                 ynghia4: "",
                 ynghia5: "",
-                chuyengia1: ""
+                chuyengia1: "",
+                service1: "",
+                service2: "",
+                service3: "",
             }
         }
     },

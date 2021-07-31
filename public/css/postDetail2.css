@@ -26,12 +26,18 @@
 .post-relate .item-name {
     font-size: 30px;
     color: #097364;
-}   
+}
 .post-relate .item-title {
     color: #555555;
     font-size: 20px;
     margin-bottom: 20px;
     margin-top: 15px;
+}
+.post-relate .item-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
 }
 .post-relate .item-btn {
     margin-top: 20px;

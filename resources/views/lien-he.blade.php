@@ -1,20 +1,21 @@
 @extends('layouts.app')
 
 @push('styles')
+    <link rel="stylesheet" href="/css/tra-cuu.css">
     <link rel="stylesheet" href="/css/lien-he.css">
 @endpush
 
 @section('content')
 
-<div class="lienhe">
-    <div class="main-lienhe">
+<div class="tracuu lienhe">
+    <div class="main-tracuu">
         <div class="container container-chuyengia">
             <div class="row g-0 align-items-center">
                 <div class="col-xl-5">
                     <iframe class="mw-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.0510767042574!2d105.80214781562714!3d20.99058959445454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad7aa568a52b%3A0xa82aeb311c9d72e3!2zWMaw4bufbmcgR-G7kW0gQsOhdCBUcsOgbmcgSMOgIE7hu5lpIC0gU-G7kSA5IE5ndXnhu4VuIFhp4buDbg!5e0!3m2!1svi!2s!4v1627658643260!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class="col-xl-7">
-                    <form action="/ket-qua-tra-cuu" method="GET">
+                    <form action="/ket-qua-tra-cuu/" method="GET">
                         <div class="block-main text-white">
                             <div class="mw-fix">
                                 <div class="title"><h1 class="text-center">GỬI PHẢN HỒI TỚI CHÚNG TÔI</h1></div>
