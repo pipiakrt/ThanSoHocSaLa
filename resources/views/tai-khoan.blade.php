@@ -18,6 +18,14 @@
 
 <div class="container">
 
+    @if (\Session::has('success'))
+        <div class="alert alert-success mt-4">
+            <ul class="mb-0">
+                <li>{!! \Session::get('success') !!}</li>
+            </ul>
+        </div>
+    @endif
+
     <div class="row my-5">
         <div class="col-md-3 mb-4">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -75,15 +83,16 @@
         </div>
         <div class="col-md-9 order-md-1">
             <h4 class="mb-3">Thông tin</h4>
-            <form class="needs-validation" novalidate="">
+            <form class="needs-validation" action="/tai-khoan/cap-nhap" method="POST">
+                @csrf
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="firstName">Họ tên</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="" value="{{ $user->name }}" />
+                        <label for="name">Họ tên</label>
+                        <input type="text" name="name" class="form-control" id="name" value="{{ $user->name }}" />
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="lastName">Ngày sinh</label>
-                        <input type="birthdate" class="form-control" id="lastName" value="{{ $user->birthdate }}" />
+                        <input type="date" name="birthdate" class="form-control" id="lastName" value="{{ $user->birthdate }}" />
                     </div>
                 </div>
 
@@ -95,19 +104,19 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="username">Điện thoại</label>
+                    <label for="phone">Điện thoại</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="username" value="{{ $user->phone }}" />
+                        <input type="text" class="form-control" name="phone" id="phone" value="{{ $user->phone }}" />
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="address">Địa chỉ</label>
-                    <textarea class="form-control" rows="5">{{ $user->address }}</textarea>
+                    <textarea class="form-control" id="address" name="address" rows="5">{{ $user->address }}</textarea>
                 </div>
 
                 <div class="mb-3">
-                    <button class="btn btn-primary">Cập nhật</button>
+                    <button type="submit" class="btn btn-primary">Cập nhật</button>
                 </div>
 
             </form>

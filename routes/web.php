@@ -50,6 +50,7 @@ Route::prefix('/tin-tuc')->group(function () {
 
 Route::prefix('/tai-khoan')->group(function () {
     Route::get('/', [AccountController::class, 'index']);
+    Route::post('/cap-nhap/', [AccountController::class, 'update']);
     Route::get('/gio-hang/', [AccountController::class, 'giohang']);
     Route::get('/don-hang/', [AccountController::class, 'donhang']);
 });

@@ -41,4 +41,15 @@ class AccountController extends Controller
     {
         return view('don-hang');
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request)
+    {
+        $request->user()->update($request->all());
+        return redirect()->back()->with('success', 'Câp nhật thành công');
+    }
 }
