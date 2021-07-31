@@ -7,20 +7,20 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class ResetPassWord extends Notification
+class NotificationEmail extends Notification
 {
     use Queueable;
 
-    protected $token;
+    protected $user;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($token)
+    public function __construct($user)
     {
-        $this->token = $token;
+        $this->user = $user;
     }
 
     /**
@@ -42,13 +42,11 @@ class ResetPassWord extends Notification
      */
     public function toMail($notifiable)
     {
-        $url = env('APP_URL') . '/tai-khoan/doi-mat-khau?token=' . $this->token;
         return (new MailMessage)
-            ->greeting('Xin chào!')
+            ->greeting('Xin chào ' . $this->user['name'])
             ->from('tkien9324@gmail.com', 'Thần Số Học Sala')
-            ->line('Bạn nhận được email này vì chúng tôi đã nhận được yêu cầu đặt lại mật khẩu cho tài khoản của bạn.')
-            ->action('Đặt lại mật khẩu', url($url))
-            ->line('Nếu bạn không yêu cầu đặt lại mật khẩu, bạn không cần thực hiện thêm hành động nào.');
+            ->line('Chào mừng bạn đến với Thần Sô Học Sala.')
+            ->action('Tiến tới Thần Số Học Sala', url(env('APP_URL')));
     }
 
     /**

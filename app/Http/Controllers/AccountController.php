@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Notifications\ResetPassWord;
-use App\Models\User as Account;
+use App\Models\User;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -69,7 +69,7 @@ class AccountController extends Controller
      */
     public function sendMail(Request $request)
     {
-        $user = Account::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)->first();
 
         if($user == '') {
             return redirect()->back()->with('error', 'Tài khoản không tồn tại!');
@@ -104,6 +104,7 @@ class AccountController extends Controller
             $passwordReset->delete();
             return redirect('/');
         }
+        $user = User::where('email', $passwordReset->email)->first();
         return view('auth.passwords.reset', compact('token'));
     }
 
@@ -127,7 +128,7 @@ class AccountController extends Controller
             $passwordReset->delete();
             return redirect()->back()->withErrors('error', 'Mã token đặt lại mật khẩu này đã hết hạn!');
         }
-        $user = Account::where('email', $passwordReset->email)->firstOrFail();
+        $user = User::where('email', $passwordReset->email)->firstOrFail();
         $update = $user->update([
             'password' => Hash::make($request->password),
         ]);
