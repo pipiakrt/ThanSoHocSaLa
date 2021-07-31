@@ -53,6 +53,10 @@ Route::prefix('/tai-khoan')->group(function () {
     Route::post('/cap-nhap/', [AccountController::class, 'update']);
     Route::get('/gio-hang/', [AccountController::class, 'giohang']);
     Route::get('/don-hang/', [AccountController::class, 'donhang']);
+
+    Route::post('/quyen-mat-khau', [AccountController::class, 'sendMail']);
+    Route::get('/doi-mat-khau', [AccountController::class, 'formreset']);
+    Route::post('/quyen-mat-khau/{token}', [AccountController::class, 'reset']);
 });
 
 Route::get('/dich-vu/', [HomeController::class, 'dichvu']);

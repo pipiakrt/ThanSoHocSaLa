@@ -17,17 +17,24 @@
 <div class="container py-5 my-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
+
+            @if (session('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            @if (session('error'))
+                <div class="alert alert-danger" role="alert">
+                    {{ session('error') }}
+                </div>
+            @endif
             <div class="card">
                 <div class="card-header">Quyên mật khẩu</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
-                    <form method="POST" action="{{ route('password.email') }}">
+                    <form method="POST" action="/tai-khoan/quyen-mat-khau">
                         @csrf
 
                         <div class="form-group row mt-3">
