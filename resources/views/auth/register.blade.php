@@ -52,6 +52,27 @@
                         </div>
 
                         <div class="form-group row mt-4">
+                            <label for="birthdate" class="col-md-4 col-form-label text-md-right">Ngày sinh</label>
+                            <div class="col-md-6">
+                                <input id="birthdate" name="birthdate" value="{{ old('birthdate') }}" type="date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mt-4">
+                            <label for="phone" class="col-md-4 col-form-label text-md-right">Điện thoại</label>
+                            <div class="col-md-6">
+                                <input id="phone" name="phone" value="{{ old('phone') }}" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mt-4">
+                            <label for="address" class="col-md-4 col-form-label text-md-right">Đỉa chỉ</label>
+                            <div class="col-md-6">
+                                <textarea class="w-100 form-control" id="address" name="address" rows="3">{{ old('address') }}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mt-4">
                             <label for="password" class="col-md-4 col-form-label text-md-right">Mật khẩu</label>
 
                             <div class="col-md-6">

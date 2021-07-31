@@ -21,7 +21,7 @@
     <div class="row my-5">
         <div class="col-md-3 mb-4">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Trần Văn Kiên</span>
+                <span class="text-muted">{{ $user->name }}</span>
             </h4>
             <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between bg-light">
@@ -64,7 +64,6 @@
                     </form>
                 </li>
             </ul>
-
             <form class="card p-2">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Nhập code" />
@@ -80,14 +79,11 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="firstName">Họ tên</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="" value="{{ $user->name }}" required="" />
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="{{ $user->name }}" />
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="lastName">Ngày sinh</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required="" />
-                        <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
+                        <input type="birthdate" class="form-control" id="lastName" value="{{ $user->birthdate }}" />
                     </div>
                 </div>
 
@@ -101,19 +97,13 @@
                 <div class="mb-3">
                     <label for="username">Điện thoại</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="username" placeholder="" required="" />
-                        <div class="invalid-feedback" style="width: 100%;">
-                            Your username is required.
-                        </div>
+                        <input type="text" class="form-control" id="username" value="{{ $user->phone }}" />
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="address">Địa chỉ</label>
-                    <input type="text" class="form-control" id="address" placeholder="" required="" />
-                    <div class="invalid-feedback">
-                        Please enter your shipping address.
-                    </div>
+                    <textarea class="form-control" rows="5">{{ $user->address }}</textarea>
                 </div>
 
                 <div class="mb-3">

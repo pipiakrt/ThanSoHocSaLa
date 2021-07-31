@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Models\user as Account;
+use App\Models\User as Account;
 use App\Models\SocialAccount;
 use Laravel\Socialite\Contracts\Provider;
 use Illuminate\Support\Facades\Hash;
