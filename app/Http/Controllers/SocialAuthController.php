@@ -15,21 +15,14 @@ class SocialAuthController extends Controller
 
     public function redirectToProvider($provider)
     {
-        return response()->json([
-            "url" => Socialite::driver($provider)->stateless()->redirect()->getTargetUrl()
-        ]);
+        return Socialite::driver($provider)->stateless()->redirect();
     }
 
     public function handleProviderCallback(SocialAccountService $service, $provider)
     {
         $user = $service->createOrGetUser(Socialite::driver($provider));
-        // Auth::login($user);
-        $tokenResult = $user->createToken('Personal Access Token');
-        $token = $tokenResult->token;
-        $token->save();
+        Auth::login($user);
 
-        dd($user);
-        $action = env('URL_FRONDTEND', 'https://beta.sieuthitamlinhsala.vn') . '/tai-khoan?token=Bearer '.$tokenResult->accessToken;
-        return '<script>window.location.replace("'. $action .'")</script>';
+        return redirect('/tai-khoan');
     }
 }

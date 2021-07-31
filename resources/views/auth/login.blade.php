@@ -78,10 +78,10 @@
                         </div>
                         <div class="form-group row mb-3 mt-4">
                             <div class="col-md-12 offset-md-4">
-                                <a class="btn text-white btn-warning">
+                                <a href="/socialite/login/google" class="btn text-white btn-warning">
                                     Đăng nhập Google
                                 </a>
-                                <a class="btn btn-primary">
+                                <a href="/socialite/login/facebook" class="btn btn-primary">
                                     Đăng nhập Facebook
                                 </a>
                             </div>

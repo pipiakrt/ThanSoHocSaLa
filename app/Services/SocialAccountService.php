@@ -2,16 +2,17 @@
 
 namespace App\Services;
 
-use App\Models\Account;
+use App\Models\user as Account;
 use App\Models\SocialAccount;
 use Laravel\Socialite\Contracts\Provider;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class SocialAccountService
 {
     public function createOrGetUser(Provider $provider)
     {
-        $providerUser = $provider->user();
+        $providerUser = $provider->stateless()->user();
         $providerName = class_basename($provider);
 
         $account = SocialAccount::whereProvider($providerName)
@@ -31,7 +32,7 @@ class SocialAccountService
                 $user = Account::create([
                     'email' => $providerUser->getEmail() ? $providerUser->getEmail() : $providerUser->getId(),
                     'name' => $providerUser->getName(),
-                    'password' => Hash::make(str_random(8)),
+                    'password' => Hash::make(Str::random(12)),
                     'avatar' => $providerUser->getAvatar(),
                 ]);
             }
