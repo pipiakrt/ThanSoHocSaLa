@@ -31,10 +31,10 @@
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/ung-dung.css">
     <link rel="stylesheet" href="/css/main.css">
+    @stack('styles')
     <link rel="stylesheet" href="/css/reponsive-desktop.css">
     <link rel="stylesheet" href="/css/reponsive-mobile.css">
     <link rel="stylesheet" href="/plugins/owl-carousel/dist/assets/owl.carousel.min.css">
-    @stack('styles')
 
 </head>
 <body>

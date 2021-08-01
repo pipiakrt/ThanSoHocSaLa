@@ -15,7 +15,6 @@
     .kimtuthap, .main-chart, .main-chart-2, .main-chart-3 {
         margin-bottom: 55px;
         position: relative;
-        width: 50%;
         float: left;
     }
     .kimtuthap{
@@ -39,50 +38,6 @@
     }
     .nang-luc {
         font-size: 16px;
-    }
-    .data-number-1 {
-        top: 278px;
-        left: 78px;
-    }
-    .data-number-2 {
-        top: 278px;
-        left: 262px;
-    }
-    .data-number-3 {
-        top: 278px;
-        left: 450px;
-    }
-    .data-number-4 {
-        top: 220px;
-        left: 150px;
-    }
-    .data-number-5 {
-        top: 220px;
-        left: 370px;
-    }
-    .data-number-6 {
-        top: 176px;
-        left: 173px;
-    }
-    .data-number-7 {
-        top: 176px;
-        left: 347px;
-    }
-    .data-number-8 {
-        top: 117px;
-        left: 256px;
-    }
-    .data-number-9 {
-        top: 70px;
-        left: 255px;
-    }
-    .data-number-10 {
-        top: 26px;
-        left: 255px;
-    }
-    .data-number-11 {
-        top: -20px;
-        left: 258px;
     }
 
     .nang-luc-1 {
@@ -188,7 +143,9 @@
                         <div class="number number-1 text-center"><?= $data['DINH_CAO'][3][0]; ?></div>
                     </div>
                     <div class="btn-tt">
-                        <button>NHẬP LẠI THÔNG TIN</button>
+                        <a href="/tra-cuu">
+                            <button>NHẬP LẠI THÔNG TIN</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -299,39 +256,57 @@
                                 </div>
                                 <div class="slide-ketqua bg text-white fw-lighter">
                                     <div class="conso2">
-                                        <div class="row g-0 justify-content-center" style="padding-left: 160px;">
-                                            <div class="main-chart">
-                                                <div>
-                                                    <div class="g-0">
-                                                        <?php foreach ($aryNL_1 AS $item1 => $aryValue) {?>
-                                                            <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
-                                                        <?php } ?>
+                                        <div class="row g-0 justify-content-center">
+                                            <div class="col-md-6">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-12 col-lg-6">
+                                                        <div class="main-chart">
+                                                            <div>
+                                                                <div class="g-0">
+                                                                    <?php foreach ($aryNL_1 AS $item1 => $aryValue) {?>
+                                                                        <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
+                                                                    <?php } ?>
+                                                                </div>
+                                                                <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
+                                                            </div>
+                                                            <div class="title2 mt-5"><h4 class="text-center text-md-start">BIỂU ĐỒ NĂNG LỰC</h4></div>
+                                                        </div>
                                                     </div>
-                                                    <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
                                                 </div>
-                                                <div class="title2 mt-5"><h4>BIỂU ĐỒ NĂNG LỰC</h4></div>
                                             </div>
-                                            <div class="main-chart-2">
-                                                <div>
-                                                    <div class="g-0">
-                                                        <?php foreach ($aryNL_2 AS $item1 => $aryValue) {?>
-                                                            <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
-                                                        <?php } ?>
+                                            <div class="col-md-6">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-12 col-lg-6">
+                                                        <div class="main-chart-2">
+                                                            <div>
+                                                                <div class="g-0">
+                                                                    <?php foreach ($aryNL_2 AS $item1 => $aryValue) {?>
+                                                                        <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
+                                                                    <?php } ?>
+                                                                </div>
+                                                                <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
+                                                            </div>
+                                                            <div class="title2 mt-5"><h4 class="text-center text-md-start">BIỂU ĐỒ BIRTH CHART</h4></div>
+                                                        </div>
+                                                        </div>
                                                     </div>
-                                                    <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
-                                                </div>
-                                                <div class="title2 mt-5"><h4>BIỂU ĐỒ BIRTH CHART</h4></div>
                                             </div>
-                                            <div class="main-chart-3">
-                                                <div>
-                                                    <div class="g-0">
-                                                        <?php foreach ($aryTong AS $item1 => $aryValue) {?>
-                                                            <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
-                                                        <?php } ?>
+                                            <div class="col-md-6">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-12 col-lg-6">
+                                                        <div class="main-chart-3">
+                                                            <div>
+                                                                <div class="g-0">
+                                                                    <?php foreach ($aryTong AS $item1 => $aryValue) {?>
+                                                                        <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
+                                                                    <?php } ?>
+                                                                </div>
+                                                                <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
+                                                            </div>
+                                                            <div class="title2 mt-5"><h4 class="text-center text-md-start">BIỂU ĐỒ TỔNG HỢP</h4></div>
+                                                        </div>
                                                     </div>
-                                                    <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
                                                 </div>
-                                                <div class="title2 mt-5"><h4>BIỂU ĐỒ TỔNG HỢP</h4></div>
                                             </div>
                                         </div>
                                     </div>
