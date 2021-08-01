@@ -8,7 +8,7 @@
                     <div class="card card-custom">
                         <div class="card-header flex-wrap border-0 pb-0">
                             <div class="card-title">
-                                <h3 class="card-label">Danh mục</h3>
+                                <h3 class="card-label">hình ảnh</h3>
                             </div>
                             <div class="symbol-group symbol-hover py-2">
                                 <div class="card-toolbar">
@@ -178,7 +178,7 @@ export default {
         return {
             subHeader: {
                 links: [{
-                    name: 'Danh mục',
+                    name: 'hình ảnh',
                     url: '/admin/tin-tuc/danh-muc',
                 }, ],
                 action: {
@@ -227,11 +227,11 @@ export default {
                     if (res.status == 201) {
                         this.link = ''
                         this.avatar = ''
-                        params.id = res.data._id
+                        params.id = res.data.id
                         params.url = params.path
                         this.sliders.push(params)
                         this.$refs['errors'].reset();
-                        toastr.success("Tạo danh mục thành công!")
+                        toastr.success("Tạo hình ảnh thành công!")
                         $('#exampleModalLong').modal('hide')
                     } else {
                         if (res.data.name) {
@@ -248,7 +248,7 @@ export default {
             axios.delete('/api/sliders/' + id).then(res => {
                 Swal.fire(
                     "Thành Công!",
-                    "Danh mục đã bị xóa hoàn toàn.",
+                    "hình ảnh đã bị xóa hoàn toàn.",
                     "success"
                 )
                 this.sliders = this.sliders.filter(item => item.id !== id)

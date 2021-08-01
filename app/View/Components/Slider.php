@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\Slider as Model;
 
 class Slider extends Component
 {
@@ -23,6 +24,7 @@ class Slider extends Component
      */
     public function render()
     {
-        return view('components.slider');
+        $sliders = Model::all();
+        return view('components.slider', compact('sliders'));
     }
 }

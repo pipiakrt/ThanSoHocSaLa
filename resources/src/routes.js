@@ -48,8 +48,8 @@ import EditSeo from './pages/Seo/edit'
 // import PostHot from './pages/Posts/hot'
 // // Banner
 // import Banner from './pages/Banner/index'
-// // Slider
-// import Slider from './pages/Slider/index'
+// Slider
+import Slider from './pages/Slider/index'
 // Account
 import Account from './pages/Account/index'
 import Profile from './pages/Account/profile'
@@ -240,12 +240,12 @@ const routes = [
     //     component: Banner,
     //     name: 'Banner',
     // },
-    // // Slider
-    // {
-    //     path: '/admin/thanh-truot/danh-sach',
-    //     component: Slider,
-    //     name: 'Slider',
-    // },
+    // Slider
+    {
+        path: '/admin/thanh-truot/danh-sach',
+        component: Slider,
+        name: 'Slider',
+    },
     // Account
     {
         path: '/admin/tai-khoan',

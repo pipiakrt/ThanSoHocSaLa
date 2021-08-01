@@ -11,6 +11,7 @@ use App\Http\Controllers\Api\HomePageController;
 use App\Http\Controllers\Api\SeoPageController;
 use App\Http\Controllers\Api\AccountController;
 use App\Http\Controllers\Api\SliderController;
+use App\Http\Controllers\Api\BannerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::resources([
     'accounts' => AccountController::class,
     'images' => ImageController::class,
     'posts' => PostController::class,
+    'banners' => BannerController::class,
     'products' => ProductController::class,
     'homepage' => HomePageController::class,
     'sliders' => SliderController::class,
