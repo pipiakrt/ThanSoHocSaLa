@@ -18,15 +18,15 @@ class CategoryController extends Controller
     {
         $this->middleware('auth:api');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        return Resources::collection(Model::paginateFilter($request, 100));
+        return Resources::collection(Model::paginate(100));
     }
 
     /**

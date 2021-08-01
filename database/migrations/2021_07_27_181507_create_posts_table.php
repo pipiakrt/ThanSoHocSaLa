@@ -23,6 +23,7 @@ class CreatePostsTable extends Migration
             $table->mediumText('description')->nullable();
             $table->longText('content')->nullable();
             $table->boolean('status')->index();
+            $table->integer('category_id')->nullable()->index();
             $table->timestamps();
         });
     }

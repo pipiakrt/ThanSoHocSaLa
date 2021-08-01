@@ -38,10 +38,23 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="categories" class="col-2 col-form-label">Danh mục</label>
+                                    <div class="col-10">
+                                        <select v-model="category" class="form-control" style="height: 35px">
+                                            <option value="" selected>Chọn danh mục</option>
+                                            <template v-for="item in categories">
+                                                <option :key="item.id" :value="item.id" v-text="item.name"></option>
+                                            </template>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="categories" class="col-2 col-form-label">Loại bài viết</label>
                                     <div class="col-10">
                                         <select v-model="type" class="form-control" style="height: 35px">
                                             <option value="post">Tin tức</option>
+                                            <option value="introduce">Giới thiệu</option>
+                                            <option value="qa">Hỏi đáp</option>
                                             <option value="story">Câu truyện</option>
                                         </select>
                                     </div>
@@ -132,7 +145,9 @@ export default {
             avatar: '',
             description: '',
             content: '',
-            type: "post"
+            type: "post",
+            categories: [],
+            category: '',
         }
     },
     watch: {
@@ -141,47 +156,50 @@ export default {
         },
     },
     mounted() {
-        KTUtil.ready(function () {
-            var HelloButton = function (context) {
-            var ui = $.summernote.ui;
-            var button = ui.button({
-                contents: '<i class="fa far fa-folder"/>',
-                tooltip: 'Folder',
-                click: function () {
-                    typeimage = 'summernote';
-                    $('#filemanager').modal('show');
+        axios('/api/categories').then(res => {
+            this.categories = res.data.data
+            KTUtil.ready(function () {
+                var HelloButton = function (context) {
+                var ui = $.summernote.ui;
+                var button = ui.button({
+                    contents: '<i class="fa far fa-folder"/>',
+                    tooltip: 'Folder',
+                    click: function () {
+                        typeimage = 'summernote';
+                        $('#filemanager').modal('show');
+                    }
+                });
+                return button.render();
                 }
-            });
-            return button.render();
-            }
-            $('.summernote').summernote({
-                height: 350,
-                toolbar: [
-                    ['style', ['style']],
-                    ['font', ['bold', 'underline', 'clear']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['table', ['table']],
-                    ['insert', ['link', 'picture', 'video']],
-                    ['mybutton', ['hello']],
-                    ['view', ['fullscreen', 'codeview', 'help']]
-                ],
-                buttons: {
-                    hello: HelloButton
-                },
-                callbacks: {
-                    onImageUpload: function(files) {
-                        let formdata = new FormData();
-                        formdata.append("file", files[0]);
-                        formdata.append("summernote", true);
-                        axios.post('/api/images', formdata).then(res => {
-                            var image = $('<img>').attr('src', res.data);
-                            $('.summernote').summernote("insertNode", image[0]);
-                        })
+                $('.summernote').summernote({
+                    height: 350,
+                    toolbar: [
+                        ['style', ['style']],
+                        ['font', ['bold', 'underline', 'clear']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['table', ['table']],
+                        ['insert', ['link', 'picture', 'video']],
+                        ['mybutton', ['hello']],
+                        ['view', ['fullscreen', 'codeview', 'help']]
+                    ],
+                    buttons: {
+                        hello: HelloButton
                     },
-                },
+                    callbacks: {
+                        onImageUpload: function(files) {
+                            let formdata = new FormData();
+                            formdata.append("file", files[0]);
+                            formdata.append("summernote", true);
+                            axios.post('/api/images', formdata).then(res => {
+                                var image = $('<img>').attr('src', res.data);
+                                $('.summernote').summernote("insertNode", image[0]);
+                            })
+                        },
+                    },
+                });
             });
-        });
+        })
     },
     methods: {
         setTypeGetImg() {
@@ -205,6 +223,7 @@ export default {
                 author: this.author,
                 type: this.type,
                 image: this.avatar,
+                category_id: this.category,
                 description: this.description,
                 content: $('.summernote').summernote('code'),
                 status: String(status),

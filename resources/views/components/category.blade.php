@@ -23,6 +23,11 @@
         display: block;
         padding: 5px 0;
     }
+    .folder-list li a.active {
+        background-color: #dab066;
+        color: white;
+        border-radius: 2px;
+    }
 
     .folder-list li {
         border-bottom: 1px solid #e7eaec;
@@ -39,7 +44,6 @@
         display: block;
         padding: 5px 0;
     }
-
     .category-list li {
         display: block;
     }
@@ -232,24 +236,11 @@
         <div class="file-manager my-2">
             <h5>Danh mục</h5>
             <ul class="folder-list" style="padding: 0;">
-                <li>
-                    <a href=""><i class="fa fa-folder"></i> Thần Số Học</a>
-                </li>
-                <li>
-                    <a href=""><i class="fa fa-folder"></i> Sinh trắc vân tay</a>
-                </li>
-                <li>
-                    <a href=""><i class="fa fa-folder"></i> Khám phá con số</a>
-                </li>
-                <li>
-                    <a href=""><i class="fa fa-folder"></i> Bí ẩn tâm linh</a>
-                </li>
-                <li>
-                    <a href=""><i class="fa fa-folder"></i> câu chuyện sala</a>
-                </li>
-                <li>
-                    <a href=""><i class="fa fa-folder"></i> chia sẻ tâm linh</a>
-                </li>
+                @foreach ($categories as $item)
+                    <li>
+                        <a class="{{ request()->segment(2) == $item->slug ? 'active' : '' }}" href="/tin-tuc/{{ $item->slug }}/"><i class="fa fa-folder"></i> {{ $item->name }}</a>
+                    </li>
+                @endforeach
             </ul>
             <h5 class="tag-title">Tags</h5>
             <ul class="tag-list" style="padding: 0;">

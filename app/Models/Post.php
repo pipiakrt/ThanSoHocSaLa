@@ -18,6 +18,7 @@ class Post extends Model
         'author',
         'type',
         'description',
+        'category_id',
         'content',
         'status',
     ];

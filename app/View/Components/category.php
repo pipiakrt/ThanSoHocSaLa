@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\Category as Model;
 
 class category extends Component
 {
@@ -23,6 +24,7 @@ class category extends Component
      */
     public function render()
     {
-        return view('components.category');
+        $categories = Model::all();
+        return view('components.category', compact('categories'));
     }
 }

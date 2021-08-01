@@ -38,6 +38,7 @@ import EditProduct from './pages/Products/edit'
 import Posts from './pages/Posts/index'
 import CreatePost from './pages/Posts/create'
 import EditPost from './pages/Posts/edit'
+import CategoryPost from './pages/Posts/category'
 // Seo
 import Seo from './pages/Seo/index'
 import CreateSeo from './pages/Seo/create'
@@ -204,6 +205,11 @@ const routes = [
     {
         path: '/admin/bai-viet/:id/chinh-sua',
         component: EditPost,
+        name: 'Posts',
+    },
+    {
+        path: '/admin/bai-viet/danh-muc',
+        component: CategoryPost,
         name: 'Posts',
     },
     // {

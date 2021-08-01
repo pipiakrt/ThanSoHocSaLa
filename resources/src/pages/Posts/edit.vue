@@ -32,6 +32,17 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="categories" class="col-2 col-form-label">Danh mục</label>
+                                    <div class="col-10">
+                                        <select v-model="category" class="form-control" style="height: 35px">
+                                            <option value="" selected>Chọn danh mục</option>
+                                            <template v-for="item in categories">
+                                                <option :key="item.id" :value="item.id" v-text="item.name"></option>
+                                            </template>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="slug" class="col-2 col-form-label">Tác giả</label>
                                     <div class="col-10">
                                         <input v-model="author" class="form-control" type="search" placeholder="Tác giả" />
@@ -42,6 +53,8 @@
                                     <div class="col-10">
                                         <select v-model="type" class="form-control" style="height: 35px">
                                             <option value="post">Tin tức</option>
+                                            <option value="introduce">Giới thiệu</option>
+                                            <option value="qa">Hỏi đáp</option>
                                             <option value="story">Câu truyện</option>
                                         </select>
                                     </div>
@@ -133,7 +146,9 @@ export default {
             author: '',
             description: '',
             content: '',
-            type: ""
+            type: "",
+            categories: [],
+            category: '',
         }
     },
     watch: {
@@ -142,12 +157,15 @@ export default {
         },
     },
     async mounted() {
-
+        await axios('/api/categories').then(res => {
+            this.categories = res.data.data
+        })
         await axios('/api/posts/' + this.$route.params.id).then(res => {
             this.id = res.data.data.id
             this.name = res.data.data.name
             this.slug = res.data.data.slug
             this.avatar = res.data.data.image
+            this.category = res.data.data.category_id
             this.author = res.data.data.author
             this.description = res.data.data.description
             this.type = res.data.data.type
@@ -219,6 +237,7 @@ export default {
                 author: this.author,
                 type: this.type,
                 image: this.avatar,
+                category_id: this.category,
                 description: this.description,
                 content: $('.summernote').summernote('code'),
                 status: String(status),

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -38,12 +39,17 @@ class PostController extends Controller
     public function show($slug)
     {
         $post = Post::where('slug', $slug)->first();
-        $posts = Post::orderby('id', 'desc')->where('id', '<', $post->id)->take(7)->get();
         if ($post) {
+            $posts = Post::orderby('id', 'desc')->where('id', '<', $post->id)->take(7)->get();
             return view('tin-tuc-chi-tiet', compact(['post', 'posts']));
         }
         else {
-            return view('errors.404');
+            $category = Category::where('slug', $slug)->first();
+            if ($category) {
+                $posts = Post::where('category_id', $category->id)->paginate(5);
+                return view('tin-tuc', compact('posts'));
+            }
         }
+        return view('errors.404');
     }
 }

@@ -22,6 +22,7 @@ class Post extends JsonResource
             'image' => $this->image,
             'type' => $this->type,
             'description' => $this->description,
+            'category_id' => $this->category_id,
             'content' => $this->content,
             'status' => $this->status,
             'created_at' => $this->created_at,

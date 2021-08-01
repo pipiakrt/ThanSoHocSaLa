@@ -293,6 +293,10 @@ export default {
                             name: 'Thêm mới',
                             url: '/admin/bai-viet/them-moi'
                         },
+                        {
+                            name: 'Danh mục',
+                            url: '/admin/bai-viet/danh-muc'
+                        },
                     ]
                 },
                 {
