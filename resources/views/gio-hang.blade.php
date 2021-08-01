@@ -87,8 +87,8 @@
                             <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
                                 <h3 class="mb-0 mt-2 font-weight-semibold">{{ $item->Product->price }}</h3>
                                 <div class="text-muted">121 đánh giá</div>
-                                <button type="button" class="btn btn-warning mt-2 text-white"><i class="icon-cart-add mr-2"></i> Thanh toán</button>
-                                <a href="/" class="btn btn-outline-danger mt-2"><i class="icon-cart-add mr-2"></i> Loại bỏ</a>
+                                <a href="/tai-khoan/gio-hang/{{ $item->id }}/dat-hang" class="btn btn-warning mt-2 text-white"><i class="icon-cart-add mr-2"></i> Thanh toán</a>
+                                <a href="/tai-khoan/gio-hang/{{ $item->id }}/xoa" class="btn btn-outline-danger mt-2"><i class="icon-cart-add mr-2"></i> Loại bỏ</a>
                             </div>
                         </div>
                     </div>

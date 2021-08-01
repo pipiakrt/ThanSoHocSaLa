@@ -11,11 +11,11 @@ import HomePage from './pages/HomePage'
 // import Promotions from './pages/Promotion/index'
 // import CreatePromotion from './pages/Promotion/create'
 // import EditPromotion from './pages/Promotion/edit'
-// // Orders
-// import OrderPending from './pages/Orders/pending'
+// Orders
+import OrderPending from './pages/Orders/pending'
 // import OrderProcess from './pages/Orders/process'
-// import OrderSuccess from './pages/Orders/success'
-// import OrderCancel from './pages/Orders/cancel'
+import OrderSuccess from './pages/Orders/success'
+import OrderCancel from './pages/Orders/cancel'
 // // Notifications
 // import Notifications from './pages/Notification/index'
 // import CreateNotification from './pages/Notification/create'
@@ -103,27 +103,27 @@ const routes = [
     //     component: EditPromotion,
     //     name: 'Promotions',
     // },
-    // // Orders
-    // {
-    //     path: '/admin/don-hang/cho-xac-nhan',
-    //     component: OrderPending,
-    //     name: 'Orders',
-    // },
+    // Orders
+    {
+        path: '/admin/don-hang/cho-xac-nhan',
+        component: OrderPending,
+        name: 'Orders',
+    },
     // {
     //     path: '/admin/don-hang/dang-giao',
     //     component: OrderProcess,
     //     name: 'Orders',
     // },
-    // {
-    //     path: '/admin/don-hang/hoan-thanh',
-    //     component: OrderSuccess,
-    //     name: 'Orders',
-    // },
-    // {
-    //     path: '/admin/don-hang/don-huy',
-    //     component: OrderCancel,
-    //     name: 'Orders',
-    // },
+    {
+        path: '/admin/don-hang/hoat-dong',
+        component: OrderSuccess,
+        name: 'Orders',
+    },
+    {
+        path: '/admin/don-hang/don-huy',
+        component: OrderCancel,
+        name: 'Orders',
+    },
     // Users
     {
         path: '/admin/nguoi-dung/danh-sach',

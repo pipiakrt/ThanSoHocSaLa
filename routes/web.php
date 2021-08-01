@@ -78,6 +78,8 @@ Route::group(['middleware' => 'login'], function(){
         Route::post('/cap-nhap/', [AccountController::class, 'update']);
         Route::get('/gio-hang/', [AccountController::class, 'giohang']);
         Route::get('/gio-hang/{slug}/', [ProductController::class, 'themsanpham']);
+        Route::get('/gio-hang/{slug}/xoa/', [ProductController::class, 'xoasanpham']);
+        Route::get('/gio-hang/{slug}/dat-hang/', [ProductController::class, 'dathang']);
         Route::get('/don-hang/', [AccountController::class, 'donhang']);
 
         Route::post('/quyen-mat-khau', [AccountController::class, 'sendMail']);

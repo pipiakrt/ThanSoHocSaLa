@@ -1,5 +1,5 @@
 <template>
-    <Order :filterStatus="2" />
+    <Order :filterStatus="1" />
 </template>
 
 <script>

@@ -1,3 +1,11 @@
+<style scoped>
+    .table td, .table th {
+        vertical-align: inherit;
+    }
+    .table-responsive {
+        overflow-x: clip !important;
+    }
+</style>
 <template>
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <Breadcrumb :data="subHeader" />
@@ -43,31 +51,6 @@
                         <div class="col-3">
                             <input v-model="filterName" type="text" placeholder="Tên đơn hàng" class="form-control form-control-sm form-filter datatable-input" />
                         </div>
-                        <div class="col-6">
-                            <div class="row">
-                                <div class="col-3">
-                                    <select v-model="filterCategory" class="form-control form-control-sm form-filter datatable-input">
-                                        <option value="">Danh mục</option>
-                                        <template v-for="item in categories">
-                                            <option :key="item.id" v-if="item.parent_id > 0" :value="item.id" v-text="item.name"></option>
-                                        </template>
-                                    </select>
-                                </div>
-                                <div class="col-3">
-                                    <select v-model="filterPrice" class="form-control form-control-sm form-filter datatable-input">
-                                        <option value="">Giá</option>
-                                        <option value="DESC">Lớn dần</option>
-                                        <option value="ASC">Giảm dần</option>
-                                    </select>
-                                </div>
-                                <div class="col-3">
-                                    <input v-model="filterPriceUp" type="number" class="form-control form-control-sm datatable-input" placeholder="Giá Từ" />
-                                </div>
-                                <div class="col-3">
-                                    <input v-model="filterPriceDown" type="number" class="form-control form-control-sm datatable-input" placeholder="Đến" />
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-2">
                             <select v-model="filterOrder" class="form-control form-control-sm form-filter datatable-input" title="Select" data-col-index="6">
                                 <option value="">Sắp xếp</option>
@@ -92,15 +75,16 @@
                                     <th style="max-width: 100px">
                                         <span class="text-dark-75">đơn hàng</span>
                                     </th>
-                                    <th>Sản phẩm</th>
-                                    <th style="max-width: 80px">Tổng tiền</th>
+                                    <th>Khách Hàng</th>
+                                    <th>Gói</th>
+                                    <th style="max-width: 80px">Giá</th>
                                     <th style="max-width: 80px">Ngày tạo</th>
                                     <th class="text-center">EXT</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <template v-for="item in orders.data">
-                                    <tr :key="'row' + item.id" v-if="item.products != ''">
+                                    <tr :key="'row' + item.id">
                                         <td>
                                             <label class="checkbox">
                                                 <input v-model="checkbox" :value="item.id" type="checkbox" />
@@ -111,21 +95,14 @@
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="`#${item.code}`"></span>
                                         </td>
                                         <td>
-                                            <template v-for="(product, i) in item.products">
-                                                <div :key="i" class="d-flex align-items-center py-1">
-                                                    <div class="symbol symbol-50 flex-shrink-0 mr-4">
-                                                        <div class="symbol-label" :style="`background-image: url('${product.avatar}')`"></div>
-                                                    </div>
-                                                    <div>
-                                                        <a class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(product.name, 50)"></a>
-                                                        <span class="text-muted d-block">{{ formatPrice(product.price) }} x{{ product.number }}</span>
-                                                    </div>
-                                                </div>
-                                            </template>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="`${item.user.name} - ${item.user.phone}`"></span>
+                                            <span class="text-muted font-weight-bold" v-text="item.user.email"></span>
                                         </td>
                                         <td>
-                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatPrice(item.total_money)"></span>
-                                            <span class="text-muted font-weight-bold" v-text="item.price"></span>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.name"></span>
+                                        </td>
+                                        <td>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.price"></span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.created_at)"></span>
@@ -145,13 +122,13 @@
                                                                 </span>
                                                                 <span class="navi-text">Chi tiết</span>
                                                             </a>
-                                                            <a v-if="filterStatus < 2" @click="confirm('confirm', [item.id])" class="navi-link">
+                                                            <a v-if="filterStatus < 1" @click="confirm('confirm', [item.id])" class="navi-link">
                                                                 <span class="navi-icon">
                                                                     <i class="fas fa-external-link-alt"></i>
                                                                 </span>
                                                                 <span class="navi-text">Xác nhận</span>
                                                             </a>
-                                                            <a v-if="filterStatus < 2" @click="confirm('cancel', [item.id])" class="navi-link">
+                                                            <a @click="confirm('cancel', [item.id])" class="navi-link">
                                                                 <span class="navi-icon">
                                                                     <i class="flaticon2 flaticon2-trash"></i>
                                                                 </span>
@@ -213,33 +190,51 @@
                                     <span class="form-control-plaintext font-weight-bolder">{{ orderInfo.user.email }}</span>
                                 </div>
                             </div>
-                            <div class="form-group row my-2  justify-content-end">
-                                <label class="col-12 col-form-label">Đơn hàng:</label>
-                                <div class="col-11">
-                                    <template v-for="(product, i) in orderInfo.products">
-                                        <div :key="i" class="d-flex py-1">
-                                            <div class="symbol symbol-50 flex-shrink-0 mr-4">
-                                                <div class="symbol-label" :style="`background-image: url('${product.avatar}')`"></div>
-                                            </div>
-                                            <div>
-                                                <a class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(product.name, 50)"></a>
-                                                <span class="text-muted d-block">{{ formatPrice(product.price) }} x{{ product.number }}</span>
-                                            </div>
-                                        </div>
-                                    </template>
+                            <div class="form-group row my-2">
+                                <label class="col-4 col-form-label">Gói:</label>
+                                <div class="col-8">
+                                    <span class="form-control-plaintext font-weight-bolder">{{ orderInfo.name }}</span>
                                 </div>
                             </div>
                             <div class="form-group row my-2">
                                 <label class="col-4 col-form-label">Tổng tiền:</label>
                                 <div class="col-8">
-                                    <span class="form-control-plaintext font-weight-bolder">{{ formatPrice(orderInfo.total_money) }}</span>
+                                    <span class="form-control-plaintext font-weight-bolder">{{ orderInfo.price }}</span>
                                 </div>
                             </div>
+                            <div class="form-group row my-2">
+                                <label class="col-4 col-form-label">Ngày kích hoạt:</label>
+                                <div class="col-8">
+                                    <div class="input-group date" id="kt_datetimepicker_1" data-target-input="nearest">
+                                        <input type="text" id="datetimepicker_1" class="form-control datetimepicker-input" placeholder="Thời gian bắt đầu" data-target="#kt_datetimepicker_1" />
+                                        <div class="input-group-append" data-target="#kt_datetimepicker_1" data-toggle="datetimepicker">
+                                            <span class="input-group-text">
+                                                <i class="ki ki-calendar"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row my-2">
+                                <label class="col-4 col-form-label">Ngày hết hạn:</label>
+                                <div class="col-8">
+                                    <div class="input-group date" id="kt_datetimepicker_2" data-target-input="nearest">
+                                        <input type="text" id="datetimepicker_2" class="form-control datetimepicker-input" placeholder="Thời gian kết thúc" data-target="#kt_datetimepicker_2" />
+                                        <div class="input-group-append" data-target="#kt_datetimepicker_2" data-toggle="datetimepicker">
+                                            <span class="input-group-text">
+                                                <i class="ki ki-calendar"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn float-right btn-light-primary font-weight-bold">Đóng</a>
+                    <button data-dismiss="modal" aria-label="Close" class="mx-2 btn float-right btn-primary font-weight-bold">Cập nhật</button>
+                    <button data-dismiss="modal" aria-label="Close" class="btn float-right btn-light-primary font-weight-bold">Đóng</button>
                 </div>
             </div>
         </div>
@@ -277,13 +272,8 @@ export default {
                 },
             },
             orderInfo: '',
-            categories: [],
             filterName: '',
-            filterCategory: '',
-            filterOrder: '',
-            filterPrice: '',
-            filterPriceUp: '',
-            filterPriceDown: '',
+            filterOrder: 'DESC',
             page: 1,
             checkAll: false,
             checkbox: [],
@@ -292,6 +282,12 @@ export default {
         }
     },
     watch: {
+        orderInfo() {
+            setTimeout(() => {
+                $('#kt_datetimepicker_1').datetimepicker();
+                $('#kt_datetimepicker_2').datetimepicker();
+            }, 1000);
+        },
         checkAll() {
             if (this.checkAll) {
                 this.checkbox = this.allID
@@ -299,21 +295,13 @@ export default {
                 this.checkbox = []
             }
         },
-        filterOrder() {
-            this.filterPrice = ''
-        },
-        filterPrice() {
-            this.filterOrder = ''
-        },
+
         page() {
             this.getApi()
         }
     },
-    created() {
-        this.getApi()
-        axios('/api/categories?type=product').then(res => {
-            this.categories = res.data.data
-        })
+    async created() {
+        await this.getApi()
     },
     methods: {
         toPage(page = 1) {
@@ -324,12 +312,8 @@ export default {
             let query = {
                 page: this.page,
                 name: this.filterName,
-                category: this.filterCategory,
                 order: this.filterOrder,
-                price: this.filterPrice,
                 status: this.filterStatus,
-                PriceUp: this.filterPriceUp,
-                PriceDown: this.filterPriceDown,
             }
             let orders = await axios("/api/orders", {
                 params: query
@@ -351,7 +335,7 @@ export default {
             } else if (type == 'cancel') {
                 params = {
                     id,
-                    status: 3
+                    status: 2
                 }
             }
             if (id != '') {

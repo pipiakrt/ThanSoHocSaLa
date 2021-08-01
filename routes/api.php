@@ -16,6 +16,7 @@ use App\Http\Controllers\Api\ReportController;
 use App\Http\Controllers\Api\MemberController;
 use App\Http\Controllers\Api\NewsletterController;
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,4 +43,5 @@ Route::resources([
     'reports' => ReportController::class,
     'newsletters' => NewsletterController::class,
     'categories' => CategoryController::class,
+    'orders' => OrderController::class,
 ]);

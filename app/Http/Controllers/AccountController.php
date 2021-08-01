@@ -43,9 +43,11 @@ class AccountController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function donhang()
+    public function donhang(Request $request)
     {
-        return view('don-hang');
+        $user = $request->user();
+        $orders = $user->Order;
+        return view('don-hang', compact('orders'));
     }
 
     /**

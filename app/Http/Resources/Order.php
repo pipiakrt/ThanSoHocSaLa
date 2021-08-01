@@ -19,13 +19,16 @@ class Order extends JsonResource
         return [
             'id' => $this->id,
             'user_id' => $this->user_id,
-            'payment' => $this->payment,
             'code' => $this->code,
-            'total_money' => $this->total_money,
-            'created_at' => $this->created_at,
+            'name' => $this->name,
+            'phone' => $this->phone,
+            'email' => $this->email,
+            'price' => $this->price,
             'status' => $this->status,
+            'bat_dau' => $this->bat_dau,
+            'ket_thuc' => $this->ket_thuc,
+            'licenses' => $this->licenses,
             'user' => new Account($this->User),
-            'products' => OrderDetail::collection(Model::where('order_id', $this->_id)->paginateFilter($request))
         ];
     }
 }

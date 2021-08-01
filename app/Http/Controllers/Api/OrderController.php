@@ -18,7 +18,7 @@ class OrderController extends Controller
     {
         $this->middleware('auth:api');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -49,6 +49,6 @@ class OrderController extends Controller
      */
     public function update(Request $request)
     {
-        return Model::whereIn('_id', $request->id)->update(['status' => $request->status]);
+        return Model::whereIn('id', $request->id)->update(['status' => $request->status]);
     }
 }
