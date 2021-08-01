@@ -61,7 +61,7 @@
     <div class="nguon_goc bg-white py-5">
         <div class="row g-0 justify-content-center">
             <div class="col-md-8">
-                <div class="px-0 px-lg-5">
+                <div class="px-2 px-lg-5">
                     <div class="titleNG text-center">
                         <h2>NGUỒN GỐC THẦN SỐ HỌC</h2>
                     </div>
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                         <div class="col-md-7">
-                            <img class="" src="/img/banner/post-3.png" alt="">
+                            <img class="mw-100" src="/img/banner/post-3.png" alt="">
                         </div>
                     </div>
                 </div>

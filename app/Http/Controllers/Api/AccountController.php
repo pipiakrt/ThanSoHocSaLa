@@ -29,7 +29,7 @@ class AccountController extends Controller
      */
     public function index()
     {
-        return Resources::collection(Model::paginate(10));
+        return Resources::collection(Model::where('is_admin', 1)->paginate(10));
     }
 
     /**

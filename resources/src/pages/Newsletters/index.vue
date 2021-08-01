@@ -6,7 +6,7 @@
             <div class="card card-custom gutter-b">
                 <div class="card-header border-0 py-5">
                     <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label font-weight-bolder text-dark">Danh sách tài khoản</span>
+                        <span class="card-label font-weight-bolder text-dark">Danh sách phản hồi</span>
                     </h3>
                     <div class="symbol-group symbol-hover">
                         <div class="card-toolbar">
@@ -23,47 +23,24 @@
                         <table class="table table-head-custom table-head-bg table-borderless table-vertical-center">
                             <thead>
                                 <tr class="text-uppercase">
-                                    <th class="pl-5">
-                                        <span class="text-dark-75">Tài khoản</span>
+                                    <th style="min-width: 250px" class="pl-5">
+                                        <span class="text-dark-75">Họ tên</span>
                                     </th>
-                                    <th class="text-center">Địa chỉ</th>
-                                    <th style="max-width: 120px" class="text-center">Điện thoại</th>
-                                    <th style="max-width: 120px" class="text-center">Ngày sinh</th>
-                                    <th style="max-width: 120px" class="text-center">Ngày tạo</th>
-                                    <th style="max-width: 80px" class="text-center">EXT</th>
+                                    <th style="min-width: 120px">Email</th>
+                                    <th style="min-width: 100px">Ngày gửi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="item in members.data" :key="item.id">
-                                    <td class="pl-5 pt-5">
-                                        <div class="d-flex align-items-center">
-                                            <div class="symbol symbol-50 flex-shrink-0 mr-4">
-                                                <div class="symbol-label" :style="`background-image: url('${item.avatar ? item.avatar : '/img/avatar.png'}')`"></div>
-                                            </div>
-                                            <div>
-                                                <a class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.name"></a>
-                                                <span class="text-muted d-block" v-text="item.email"></span>
-                                            </div>
-                                        </div>
+                                <tr v-for="item in newsletters.data" :key="'row' + item.id">
+                                    <td>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="Text(item.name, 500)"></span>
                                     </td>
-                                    <td class="text-center">
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.address"></span>
+                                    <td>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="Text(item.email, 500)"></span>
                                     </td>
-                                    <td style="max-width: 120px" class="text-center">
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.phone"></span>
-                                    </td>
-                                    <td style="max-width: 120px" class="text-center">
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.birthdate"></span>
-                                    </td>
-                                    <td style="max-width: 120px" class="text-center">
+                                    <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.created_at)"></span>
-                                    </td>
-                                    <td style="max-width: 80px" class="text-center">
-                                        <div class="dropdown dropdown-inline">
-                                            <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="ki ki-bold-more-hor"></i>
-                                            </a>
-                                        </div>
+                                        <span class="text-muted font-weight-bold" v-text="formatHuors(item.created_at)"></span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -79,7 +56,7 @@
                         :first-button-text="`<i class='ki ki-bold-double-arrow-back icon-xs'></i>`"
                         :last-button-text="`<i class='ki ki-bold-double-arrow-next icon-xs'></i>`"
                         :no-li-surround="true"
-                        :page-count="members.meta.last_page"
+                        :page-count="newsletters.meta.last_page"
                         :page-range="3"
                         :click-handler="toPage"
                         :disabled-class="'disable'"
@@ -110,37 +87,36 @@ export default {
         return {
             subHeader: {
                 links: [{
-                        name: 'Tài khoản',
-                        url: '/admin/tai-khoan',
-                    },
-                    {
-                        name: 'Danh sách',
-                        url: '/admin/tai-khoan',
+                        name: 'Phản hồi',
+                        url: '/admin/phan-hoi',
                     },
                 ],
                 action: {
-                    url: '/admin/tai-khoan/thong-tin',
+                    url: '/admin/',
                     icon: 'icon-sm ki ki-long-arrow-back',
-                    text: 'Thông tin',
+                    text: 'Dashboard',
                 },
             },
-            members: []
+            newsletters: []
         }
     },
     created() {
         Extends.LoadPage()
-        axios('/api/members').then(res => {
+        axios('/api/newsletters').then(res => {
             KTApp.unblockPage();
-            this.members = res.data
+            this.newsletters = res.data
+            res.data.data.forEach(item => {
+                this.allID.push(item.id)
+            });
         })
     },
     methods: {
         async toPage(page = 1) {
             Extends.LoadPage()
-            let members = await axios("/api/members?page=" + page);
-            this.members = members.data
+            let newsletters = await axios("/api/newsletters?page=" + page);
+            this.newsletters = newsletters.data
             this.allID = [];
-            members.data.data.forEach(item => {
+            newsletters.data.data.forEach(item => {
                 this.allID.push(item.id)
             });
             KTApp.unblockPage();
@@ -148,6 +124,12 @@ export default {
         formatTime(time) {
             return moment(time).format('DD/MM/YYYY');
         },
+        formatHuors(time) {
+            return moment(time).format('hh:mm:ss');
+        },
+        Text(text, length) {
+            return Extends.FormatText(text, length)
+        }
     },
 
 }

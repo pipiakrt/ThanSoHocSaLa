@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\User as Model;
 use Illuminate\Http\Request;
-use App\Http\Resources\Account as Resources;
+use App\Models\Newsletter as Model;
+use App\Http\Resources\Newsletter as Resources;
 
-class MemberController extends Controller
+class NewsletterController extends Controller
 {
     /**
      * Create a new AuthController instance.
@@ -26,17 +26,17 @@ class MemberController extends Controller
      */
     public function index()
     {
-        return Resources::collection(Model::where('is_admin', 0)->paginate());
+        return Resources::collection(Model::orderBy('id', 'desc')->paginate());
     }
 
     /**
-     * Display the specified resource.
+     * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Account  $account
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Account $account)
+    public function destroy(Request $request)
     {
-        //
+        return Model::destroy($request->id);
     }
 }

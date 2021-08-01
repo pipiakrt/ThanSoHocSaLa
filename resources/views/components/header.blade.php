@@ -9,12 +9,12 @@
                         </a>
                     </div>
                     <div class="col-4 menu-item left text-center">
-                        <a href="/gioi-thieu/">
+                        <a href="/gioi-thieu/" class="{{ request()->segment(1) == 'gioi-thieu' ? 'active' : '' }}">
                             <span>Giới thiệu</span>
                         </a>
                     </div>
                     <div class="col-4 menu-item left text-center">
-                        <a href="/san-pham/">
+                        <a href="/san-pham/" class="{{ request()->segment(1) == 'san-pham' ? 'active' : '' }}">
                             <span>Sản phẩm</span>
                         </a>
                     </div>
@@ -26,17 +26,17 @@
             <div class="col-4">
                 <div class="row">
                     <div class="col-4 menu-item right text-center">
-                        <a href="/tin-tuc/">
+                        <a href="/tin-tuc/" class="{{ request()->segment(1) == 'tin-tuc' ? 'active' : '' }}">
                             <span>Tin tức</span>
                         </a>
                     </div>
                     <div class="col-4 menu-item right text-end">
-                        <a href="/cau-chuyen/">
+                        <a href="/cau-chuyen/" class="{{ request()->segment(1) == 'cau-chuyen' ? 'active' : '' }}">
                             <span>Câu chuyện</span>
                         </a>
                     </div>
                     <div class="col-4 menu-item right">
-                        <a href="/lien-he/">
+                        <a href="/lien-he/" class="{{ request()->segment(1) == 'lien-he' ? 'active' : '' }}">
                             <span>Liên hệ</span>
                         </a>
                     </div>
@@ -77,32 +77,32 @@
                 </div>
                 <div class="block">
                     <div class="menu-mb-item">
-                        <a href="#">
-                            <span>Trang Chủ</span>
+                        <a href="/">
+                            <span>Trang chủ</span>
                         </a>
                     </div>
                     <div class="menu-mb-item">
-                        <a href="#">
+                        <a href="/gioi-thieu/" class="{{ request()->segment(1) == 'gioi-thieu' ? 'active' : '' }}">
                             <span>Giới thiệu</span>
                         </a>
                     </div>
                     <div class="menu-mb-item">
-                        <a href="#">
+                        <a href="/san-pham/" class="{{ request()->segment(1) == 'san-pham' ? 'active' : '' }}">
                             <span>Sản phẩm</span>
                         </a>
                     </div>
                     <div class="menu-mb-item">
-                        <a href="#">
-                            <span>Dịch vụ</span>
+                        <a href="/tin-tuc/" class="{{ request()->segment(1) == 'tin-tuc' ? 'active' : '' }}">
+                            <span>Tin tức</span>
                         </a>
                     </div>
                     <div class="menu-mb-item">
-                        <a href="#">
+                        <a href="/cau-chuyen/" class="{{ request()->segment(1) == 'cau-chuyen' ? 'active' : '' }}">
                             <span>Câu chuyện</span>
                         </a>
                     </div>
                     <div class="menu-mb-item">
-                        <a href="#">
+                        <a href="/lien-he/" class="{{ request()->segment(1) == 'lien-he' ? 'active' : '' }}">
                             <span>Liên hệ</span>
                         </a>
                     </div>

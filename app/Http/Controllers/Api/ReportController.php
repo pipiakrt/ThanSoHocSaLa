@@ -18,7 +18,7 @@ class ReportController extends Controller
     {
         $this->middleware('auth:api');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +26,7 @@ class ReportController extends Controller
      */
     public function index()
     {
-        return Resources::collection(Model::orderBy('_id', 'desc')->paginate());
+        return Resources::collection(Model::orderBy('id', 'desc')->paginate());
     }
 
     /**

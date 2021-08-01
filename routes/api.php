@@ -12,6 +12,9 @@ use App\Http\Controllers\Api\SeoPageController;
 use App\Http\Controllers\Api\AccountController;
 use App\Http\Controllers\Api\SliderController;
 use App\Http\Controllers\Api\BannerController;
+use App\Http\Controllers\Api\ReportController;
+use App\Http\Controllers\Api\MemberController;
+use App\Http\Controllers\Api\NewsletterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +37,7 @@ Route::resources([
     'homepage' => HomePageController::class,
     'sliders' => SliderController::class,
     'seos' => SeoPageController::class,
+    'members' => MemberController::class,
+    'reports' => ReportController::class,
+    'newsletters' => NewsletterController::class,
 ]);

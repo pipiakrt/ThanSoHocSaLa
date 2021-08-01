@@ -15,6 +15,12 @@ header .logo-desktop {
     white-space: nowrap;
     margin-bottom: 10px;
 }
+.menu-item a.active {
+    color: #097364;
+}
+.menu-mb-item a.active {
+    color: #097364;
+}
 .menu-item:hover {
     color: #097364;
 }

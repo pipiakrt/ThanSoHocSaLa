@@ -19,10 +19,12 @@ import HomePage from './pages/HomePage'
 // // Notifications
 // import Notifications from './pages/Notification/index'
 // import CreateNotification from './pages/Notification/create'
-// // Users
-// import Users from './pages/Users/index'
-// // Reports
-// import Reports from './pages/Reports/index'
+// Users
+import Users from './pages/Users/index'
+// Reports
+import Reports from './pages/Reports/index'
+// Newsletters
+import Newsletters from './pages/Newsletters/index'
 // // Checking
 // import Checking from './pages/Checking/index'
 // // Menu
@@ -121,12 +123,18 @@ const routes = [
     //     component: OrderCancel,
     //     name: 'Orders',
     // },
-    // // Users
-    // {
-    //     path: '/admin/nguoi-dung/danh-sach',
-    //     component: Users,
-    //     name: 'Users',
-    // },
+    // Users
+    {
+        path: '/admin/nguoi-dung/danh-sach',
+        component: Users,
+        name: 'Users',
+    },
+    // Newsletters
+    {
+        path: '/admin/nguoi-dung/newsletters',
+        component: Newsletters,
+        name: 'Users',
+    },
     // // Notifications
     // {
     //     path: '/admin/thong-bao/danh-sach',
@@ -138,12 +146,12 @@ const routes = [
     //     component: CreateNotification,
     //     name: 'Notifications',
     // },
-    // // Reports
-    // {
-    //     path: '/admin/nguoi-dung/phan-hoi',
-    //     component: Reports,
-    //     name: 'Users',
-    // },
+    // Reports
+    {
+        path: '/admin/nguoi-dung/phan-hoi',
+        component: Reports,
+        name: 'Users',
+    },
     // // Reports
     // {
     //     path: '/admin/checking',

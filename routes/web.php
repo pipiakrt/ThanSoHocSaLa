@@ -8,6 +8,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SocialAuthController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Str;
 
 /*
@@ -85,9 +86,9 @@ Route::prefix('/tai-khoan')->group(function () {
 Route::get('/dich-vu/', [HomeController::class, 'dichvu']);
 Route::get('/hoi-dap/', [HomeController::class, 'hoidap']);
 
-Route::get('/lien-he/', function () {
-    return view('lien-he');
-});
+Route::get('/lien-he/', [ReportController::class, 'index']);
+Route::post('/lien-he/', [ReportController::class, 'create']);
+Route::post('/dang-ky/', [ReportController::class, 'newsletter']);
 
 Route::get('/dieu-khoan/', function () {
     return 'điều khoản';

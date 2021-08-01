@@ -31,14 +31,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="item in posts.data" :key="'row' + item.id">
+                                <tr v-for="item in reports.data" :key="'row' + item.id">
                                     <td class="pl-0 py-8">
                                         <div class="d-flex align-items-center">
                                             <div class="symbol symbol-50 flex-shrink-0 mr-4">
                                                 <div class="symbol-label" style="background-image: url(/img/avatar.png)"></div>
                                             </div>
                                             <div>
-                                                <router-link :to="'/admin/bai-viet/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.name"></router-link>
+                                                <a class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.name"></a>
                                                 <span class="text-muted d-block" v-text="item.email"></span>
                                                 <span class="text-muted d-block" v-text="item.phone"></span>
                                             </div>
@@ -65,7 +65,7 @@
                         :first-button-text="`<i class='ki ki-bold-double-arrow-back icon-xs'></i>`"
                         :last-button-text="`<i class='ki ki-bold-double-arrow-next icon-xs'></i>`"
                         :no-li-surround="true"
-                        :page-count="posts.meta.last_page"
+                        :page-count="reports.meta.last_page"
                         :page-range="3"
                         :click-handler="toPage"
                         :disabled-class="'disable'"
@@ -106,14 +106,14 @@ export default {
                     text: 'Dashboard',
                 },
             },
-            posts: []
+            reports: []
         }
     },
     created() {
         Extends.LoadPage()
         axios('/api/reports').then(res => {
             KTApp.unblockPage();
-            this.posts = res.data
+            this.reports = res.data
             res.data.data.forEach(item => {
                 this.allID.push(item.id)
             });
@@ -122,10 +122,10 @@ export default {
     methods: {
         async toPage(page = 1) {
             Extends.LoadPage()
-            let posts = await axios("/api/posts?page=" + page);
-            this.posts = posts.data
+            let reports = await axios("/api/reports?page=" + page);
+            this.reports = reports.data
             this.allID = [];
-            posts.data.data.forEach(item => {
+            reports.data.data.forEach(item => {
                 this.allID.push(item.id)
             });
             KTApp.unblockPage();
