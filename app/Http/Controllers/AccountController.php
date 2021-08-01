@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\PasswordReset;
+use App\Models\Cart;
 
 class AccountController extends Controller
 {
@@ -22,12 +23,7 @@ class AccountController extends Controller
     public function index(Request $request)
     {
         $user = $request->user();
-        if ($user) {
-            return view('tai-khoan', compact('user'));
-        }
-        else {
-            return redirect('/login');
-        }
+        return view('tai-khoan', compact('user'));
     }
 
     /**
@@ -35,9 +31,11 @@ class AccountController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function giohang()
+    public function giohang(Request $request)
     {
-        return view('gio-hang');
+        $user = $request->user();
+        $carts = $user->Cart;
+        return view('gio-hang', compact('carts'));
     }
 
     /**

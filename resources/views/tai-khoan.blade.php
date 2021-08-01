@@ -28,9 +28,6 @@
 
     <div class="row my-5">
         <div class="col-md-3 mb-4">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">{{ $user->name }}</span>
-            </h4>
             <x-account-menu />
         </div>
         <div class="col-md-9 order-md-1">

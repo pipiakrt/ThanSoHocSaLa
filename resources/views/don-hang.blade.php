@@ -58,13 +58,10 @@
 
     <div class="row my-5">
         <div class="col-md-3 mb-4">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Trần Văn Kiên</span>
-            </h4>
             <x-account-menu />
         </div>
         <div class="col-md-9 order-md-1 form-111">
-            <h4 class="mb-3">Thông tin</h4>
+            <h4 class="mb-3">Đơn hàng</h4>
 
             @foreach ([1,2,3] as $item)
                 <div class="card card-body my-3">

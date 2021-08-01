@@ -72,15 +72,18 @@ Route::prefix('/tin-tuc')->group(function () {
     Route::get('/{slug}/', [PostController::class, 'show']);
 });
 
-Route::prefix('/tai-khoan')->group(function () {
-    Route::get('/', [AccountController::class, 'index']);
-    Route::post('/cap-nhap/', [AccountController::class, 'update']);
-    Route::get('/gio-hang/', [AccountController::class, 'giohang']);
-    Route::get('/don-hang/', [AccountController::class, 'donhang']);
+Route::group(['middleware' => 'login'], function(){
+    Route::prefix('/tai-khoan')->group(function () {
+        Route::get('/', [AccountController::class, 'index']);
+        Route::post('/cap-nhap/', [AccountController::class, 'update']);
+        Route::get('/gio-hang/', [AccountController::class, 'giohang']);
+        Route::get('/gio-hang/{slug}/', [ProductController::class, 'themsanpham']);
+        Route::get('/don-hang/', [AccountController::class, 'donhang']);
 
-    Route::post('/quyen-mat-khau', [AccountController::class, 'sendMail']);
-    Route::get('/doi-mat-khau', [AccountController::class, 'formreset']);
-    Route::post('/quyen-mat-khau/{token}', [AccountController::class, 'reset']);
+        Route::post('/quyen-mat-khau', [AccountController::class, 'sendMail']);
+        Route::get('/doi-mat-khau', [AccountController::class, 'formreset']);
+        Route::post('/quyen-mat-khau/{token}', [AccountController::class, 'reset']);
+    });
 });
 
 Route::get('/dich-vu/', [HomeController::class, 'dichvu']);
