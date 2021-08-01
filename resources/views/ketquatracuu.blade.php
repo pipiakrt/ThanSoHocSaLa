@@ -2,6 +2,126 @@
 
 @push('styles')
 <link rel="stylesheet" href="/css/ket-qua-tra-cuu.css">
+<style type="text/css" >
+    .slide-ketqua .desc {
+        line-height: 35px;
+    }
+    .content-ketqua .bang-so .cs1 {
+        font-size: 16px;
+        font-weight: 300;
+        min-height: 85px;
+        line-height: normal;
+    }
+    .kimtuthap, .main-chart, .main-chart-2, .main-chart-3 {
+        margin-bottom: 55px;
+        position: relative;
+        width: 50%;
+        float: left;
+    }
+    .kimtuthap{
+        margin-top: 234px;
+        width: 100%;
+        margin-left: -412px;
+    }
+    .data-number, .nang-luc {
+        position: absolute;
+        text-align: center;
+        letter-spacing: .583333px;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: none;
+    }
+    .chi-so-bd {
+        color: #c1bc0e;
+    }
+    .chi-so-name {
+        color: #ea3c07;
+    }
+    .nang-luc {
+        font-size: 16px;
+    }
+    .data-number-1 {
+        top: 278px;
+        left: 78px;
+    }
+    .data-number-2 {
+        top: 278px;
+        left: 262px;
+    }
+    .data-number-3 {
+        top: 278px;
+        left: 450px;
+    }
+    .data-number-4 {
+        top: 220px;
+        left: 150px;
+    }
+    .data-number-5 {
+        top: 220px;
+        left: 370px;
+    }
+    .data-number-6 {
+        top: 176px;
+        left: 173px;
+    }
+    .data-number-7 {
+        top: 176px;
+        left: 347px;
+    }
+    .data-number-8 {
+        top: 117px;
+        left: 256px;
+    }
+    .data-number-9 {
+        top: 70px;
+        left: 255px;
+    }
+    .data-number-10 {
+        top: 26px;
+        left: 255px;
+    }
+    .data-number-11 {
+        top: -20px;
+        left: 258px;
+    }
+
+    .nang-luc-1 {
+        top: 205px;
+        left: 5px;
+    }
+    .nang-luc-2 {
+        top: 120px;
+        left: 5px;
+    }
+    .nang-luc-3 {
+        top: 45px;
+        left: 5px;
+    }
+    .nang-luc-4 {
+        top: 205px;
+        left: 90px;
+    }
+    .nang-luc-5 {
+        top: 120px;
+        left: 90px;
+    }
+    .nang-luc-6 {
+        top: 45px;
+        left: 90px;
+    }
+    .nang-luc-7 {
+        top: 205px;
+        left: 175px;
+    }
+    .nang-luc-8 {
+        top: 120px;
+        left: 175px;
+    }
+    .nang-luc-9 {
+        top: 45px;
+        left: 175px;
+    }
+</style>
 @endpush
 
 @section('content')
@@ -25,7 +145,7 @@
             <div class="row g-0">
                 <div class="col-xl-6">
                     <div class="conso">
-                        <span class="nb">9</span>
+                        <span class="nb">{{ $data['soDuongDoi'] }}</span>
                     </div>
                 </div>
                 <div class="col-xl-6">
@@ -37,30 +157,35 @@
                             <tbody class="text-white">
                                 <tr>
                                     <td class="header"><span>HỌ VÀ TÊN</span></td>
-                                    <td class="text-center"><span>DANG PHU HIEP</span></td>
+                                    <td class="text-center text-uppercase"><span>{{ $params['name'] }}</span></td>
                                 </tr>
                                 <tr>
                                     <td class="header"><span>NGÀY SINH</span></td>
-                                    <td class="text-center"><span>16/10/1992</span></td>
+                                    <td class="text-center text-uppercase"><span>{{ $params['birthday'] }}</span></td>
                                 </tr>
                                 <tr>
                                     <td class="header"><span>ĐỊA CHỈ</span></td>
-                                    <td class="text-center"><span>HA NOI</span></td>
+                                    <td class="text-center"><span></span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+
                     <div class="conso-qk text-white">
-                        <div class="number number-1 text-center">1</div>
-                        <div class="number number-2 text-center">2</div>
-                        <div class="number number-3">3</div>
-                        <div class="number number-4">4</div>
-                        <div class="number number-5">5</div>
-                        <div class="number number-6">6</div>
-                        <div class="number number-7">7</div>
-                        <div class="number number-8">8</div>
-                        <div class="number number-9">9</div>
-                        <div class="number number-10">10</div>
+                        <div class="number number-11"><?= $data['DINH_CAO'][0][1]; ?></div>
+                        <div class="number number-10"><?= $data['DINH_CAO'][0][2]; ?></div>
+                        <div class="number number-9"><?= $data['DINH_CAO'][0][0]; ?></div>
+                        <div class="number number-8"><?= $data['DINH_CAO'][0][4]; ?></div>
+                        <div class="number number-7"><?= $data['DINH_CAO'][0][3]; ?></div>
+
+                        <div class="number number-6"><?= $data['DINH_CAO'][1][1]; ?></div>
+                        <div class="number number-5"><?= $data['DINH_CAO'][1][0]; ?></div>
+                        <div class="number number-4 text-center"><?= $data['DINH_CAO'][1][2]; ?></div>
+
+                        <div class="number number-3 text-center"><?= $data['DINH_CAO'][2][0]; ?></div>
+                        <div class="number number-2 text-center"><?= $data['DINH_CAO'][2][1]; ?></div>
+
+                        <div class="number number-1 text-center"><?= $data['DINH_CAO'][3][0]; ?></div>
                     </div>
                     <div class="btn-tt">
                         <button>NHẬP LẠI THÔNG TIN</button>
@@ -124,17 +249,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4">
-                                <div class="fake-line"></div>
-                                <div class="fake-icon">
-                                    <div class="icon"></div>
-                                </div>
-                                <div class="title-item">
-                                    <h3>CHỈ SỐ KHUYẾT THIẾU</h3>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="cus col-12 col-xl-10">
@@ -142,552 +256,85 @@
                         <div class="carousel-inner">
                             <div class="carousel-item h-100">
                                 <div class="slide-ketqua bg text-white fw-lighter">
-                                        <div class="desc">
-                                            <div><span>Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm như thế nào, và bạn học được gì sau những </span></div>
-                                            <div><span>trải nghiệm đó. Đây là chỉ số quan trọng nhất khi bạn xem thần số học của mình. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà bạn sẽ sống.</span></div>
-                                            <div><span>To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash</span></div>
-                                        </div>
-                                        <div class="conso2 my-5 pt-4">
-                                            <div class="row g-0 justify-content-center">
-                                                <div class="col-md-4 text-center">
-                                                    <div class="bang-so">
-                                                        <div class="row g-0">
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="title2 mt-5"><h4>BIỂU ĐỒ NĂNG LỰC</h4></div>
-                                                </div>
-                                                <div class="col-md-4 text-center">
-                                                    <div class="bang-so">
-                                                        <div class="row g-0">
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="title2 mt-5"><h4>BIỂU ĐỒ BIRTH CHART</h4></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-                                                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</span></div>
-                                            <div><span>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>The standard Lorem Ipsum passage, used since the 1500s</span></div>
-                                            <div><span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm như thế nào, và bạn học được gì sau những </span></div>
-                                            <div><span>trải nghiệm đó. Đây là chỉ số quan trọng nhất khi bạn xem thần số học của mình. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà bạn sẽ sống.</span></div>
-                                            <div><span>To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash</span></div>
-                                        </div>
+                                    <div class="desc">
+                                        {!! $data['DUONG_DOI'] !!}
+                                    </div>
                                 </div>
                             </div>
                             <div class="carousel-item active h-100">
                                 <div class="slide-ketqua bg text-white fw-lighter">
                                     <div class="desc">
-                                        <div><span>Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm như thế nào, và bạn học được gì sau những </span></div>
-                                        <div><span>trải nghiệm đó. Đây là chỉ số quan trọng nhất khi bạn xem thần số học của mình. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà bạn sẽ sống.</span></div>
-                                        <div><span>To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash</span></div>
+                                        {!! $data['SU_MENH'] !!}
                                     </div>
-                                    <div class="conso2 my-5 pt-4">
-                                        <div class="row g-0 justify-content-center">
-                                            <div class="col-md-4 text-center">
-                                                <div class="bang-so">
-                                                    <div class="row g-0">
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="slide-ketqua bg text-white fw-lighter">
+                                    @foreach ($data['KHUYET_THIEU'] as $line)
+                                        <div class="desc">
+                                            {!! $line !!}
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="desc">
+                                    <?php
+                                        $aryTong = [];
+                                        foreach ($data['BIEU_DO_NANG_LUC'][0] AS $item1) {
+                                            $aryNL_1[$item1][] = '<span class="chi-so-name">'.$item1.'</span>';
+                                            $aryTong[$item1][] = '<span class="chi-so-name">'.$item1.'</span>';
+                                        }
+                                    ?>
+                                </div>
+                                <div class="desc">
+                                    <?php
+                                        foreach ($data['BIEU_DO_NANG_LUC'][1] AS $item1) {
+                                            if ($item1 != 0) {
+                                                $aryNL_2[$item1][] = '<span class="chi-so-bd">'.$item1.'</span>';
+                                                $aryTong[$item1][] = '<span class="chi-so-bd">'.$item1.'</span>';
+                                            }
+                                        }
+                                    ?>
+                                </div>
+                                <div class="slide-ketqua bg text-white fw-lighter">
+                                    <div class="conso2">
+                                        <div class="row g-0 justify-content-center" style="padding-left: 160px;">
+                                            <div class="main-chart">
+                                                <div>
+                                                    <div class="g-0">
+                                                        <?php foreach ($aryNL_1 AS $item1 => $aryValue) {?>
+                                                            <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
+                                                        <?php } ?>
                                                     </div>
+                                                    <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
                                                 </div>
                                                 <div class="title2 mt-5"><h4>BIỂU ĐỒ NĂNG LỰC</h4></div>
                                             </div>
-                                            <div class="col-md-4 text-center">
-                                                <div class="bang-so">
-                                                    <div class="row g-0">
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="cs1"><span>6</span></div>
-                                                        </div>
+                                            <div class="main-chart-2">
+                                                <div>
+                                                    <div class="g-0">
+                                                        <?php foreach ($aryNL_2 AS $item1 => $aryValue) {?>
+                                                            <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
+                                                        <?php } ?>
                                                     </div>
+                                                    <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
                                                 </div>
                                                 <div class="title2 mt-5"><h4>BIỂU ĐỒ BIRTH CHART</h4></div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <div><span>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-                                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</span></div>
-                                    </div>
-                                    <div class="desc">
-                                        <div><span>1914 translation by H. Rackham</span></div>
-                                        <div><span>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</span></div>
-                                    </div>
-                                    <div class="desc">
-                                        <div><span>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</span></div>
-                                        <div><span>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</span></div>
-                                    </div>
-                                    <div class="desc">
-                                        <div><span>1914 translation by H. Rackham</span></div>
-                                        <div><span>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</span></div>
-                                    </div>
-                                    <div class="desc">
-                                        <div><span>The standard Lorem Ipsum passage, used since the 1500s</span></div>
-                                        <div><span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</span></div>
-                                    </div>
-                                    <div class="desc">
-                                        <div><span>1914 translation by H. Rackham</span></div>
-                                        <div><span>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</span></div>
-                                    </div>
-                                    <div class="desc">
-                                        <div><span>Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm như thế nào, và bạn học được gì sau những </span></div>
-                                        <div><span>trải nghiệm đó. Đây là chỉ số quan trọng nhất khi bạn xem thần số học của mình. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà bạn sẽ sống.</span></div>
-                                        <div><span>To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item h-100">
-                                <div class="slide-ketqua bg text-white fw-lighter">
-                                        <div class="desc">
-                                            <div><span>Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm như thế nào, và bạn học được gì sau những </span></div>
-                                            <div><span>trải nghiệm đó. Đây là chỉ số quan trọng nhất khi bạn xem thần số học của mình. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà bạn sẽ sống.</span></div>
-                                            <div><span>To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash</span></div>
-                                        </div>
-                                        <div class="conso2 my-5 pt-4">
-                                            <div class="row g-0 justify-content-center">
-                                                <div class="col-md-4 text-center">
-                                                    <div class="bang-so">
-                                                        <div class="row g-0">
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                        </div>
+                                            <div class="main-chart-3">
+                                                <div>
+                                                    <div class="g-0">
+                                                        <?php foreach ($aryTong AS $item1 => $aryValue) {?>
+                                                            <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
+                                                        <?php } ?>
                                                     </div>
-                                                    <div class="title2 mt-5"><h4>BIỂU ĐỒ NĂNG LỰC</h4></div>
+                                                    <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
                                                 </div>
-                                                <div class="col-md-4 text-center">
-                                                    <div class="bang-so">
-                                                        <div class="row g-0">
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="title2 mt-5"><h4>BIỂU ĐỒ BIRTH CHART</h4></div>
-                                                </div>
+                                                <div class="title2 mt-5"><h4>BIỂU ĐỒ TỔNG HỢP</h4></div>
                                             </div>
                                         </div>
-                                        <div class="desc">
-                                            <div><span>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-                                                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</span></div>
-                                            <div><span>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>The standard Lorem Ipsum passage, used since the 1500s</span></div>
-                                            <div><span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm như thế nào, và bạn học được gì sau những </span></div>
-                                            <div><span>trải nghiệm đó. Đây là chỉ số quan trọng nhất khi bạn xem thần số học của mình. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà bạn sẽ sống.</span></div>
-                                            <div><span>To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash</span></div>
-                                        </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item h-100">
-                                <div class="slide-ketqua bg text-white fw-lighter">
-                                        <div class="desc">
-                                            <div><span>Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm như thế nào, và bạn học được gì sau những </span></div>
-                                            <div><span>trải nghiệm đó. Đây là chỉ số quan trọng nhất khi bạn xem thần số học của mình. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà bạn sẽ sống.</span></div>
-                                            <div><span>To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash</span></div>
-                                        </div>
-                                        <div class="conso2 my-5 pt-4">
-                                            <div class="row g-0 justify-content-center">
-                                                <div class="col-md-4 text-center">
-                                                    <div class="bang-so">
-                                                        <div class="row g-0">
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="title2 mt-5"><h4>BIỂU ĐỒ NĂNG LỰC</h4></div>
-                                                </div>
-                                                <div class="col-md-4 text-center">
-                                                    <div class="bang-so">
-                                                        <div class="row g-0">
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="title2 mt-5"><h4>BIỂU ĐỒ BIRTH CHART</h4></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-                                                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</span></div>
-                                            <div><span>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>The standard Lorem Ipsum passage, used since the 1500s</span></div>
-                                            <div><span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm như thế nào, và bạn học được gì sau những </span></div>
-                                            <div><span>trải nghiệm đó. Đây là chỉ số quan trọng nhất khi bạn xem thần số học của mình. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà bạn sẽ sống.</span></div>
-                                            <div><span>To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash</span></div>
-                                        </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item h-100">
-                                <div class="slide-ketqua bg text-white fw-lighter">
-                                        <div class="desc">
-                                            <div><span>Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm như thế nào, và bạn học được gì sau những </span></div>
-                                            <div><span>trải nghiệm đó. Đây là chỉ số quan trọng nhất khi bạn xem thần số học của mình. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà bạn sẽ sống.</span></div>
-                                            <div><span>To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash</span></div>
-                                        </div>
-                                        <div class="conso2 my-5 pt-4">
-                                            <div class="row g-0 justify-content-center">
-                                                <div class="col-md-4 text-center">
-                                                    <div class="bang-so">
-                                                        <div class="row g-0">
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="title2 mt-5"><h4>BIỂU ĐỒ NĂNG LỰC</h4></div>
-                                                </div>
-                                                <div class="col-md-4 text-center">
-                                                    <div class="bang-so">
-                                                        <div class="row g-0">
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                            <div class="col-4">
-                                                                <div class="cs1"><span>6</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="title2 mt-5"><h4>BIỂU ĐỒ BIRTH CHART</h4></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-                                                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</span></div>
-                                            <div><span>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>The standard Lorem Ipsum passage, used since the 1500s</span></div>
-                                            <div><span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>1914 translation by H. Rackham</span></div>
-                                            <div><span>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</span></div>
-                                        </div>
-                                        <div class="desc">
-                                            <div><span>Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm như thế nào, và bạn học được gì sau những </span></div>
-                                            <div><span>trải nghiệm đó. Đây là chỉ số quan trọng nhất khi bạn xem thần số học của mình. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà bạn sẽ sống.</span></div>
-                                            <div><span>To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash</span></div>
-                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

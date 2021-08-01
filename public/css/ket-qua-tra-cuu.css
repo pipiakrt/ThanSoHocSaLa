@@ -59,7 +59,7 @@
 }
 .ketqua .number {
     position: absolute;
-    font-size: 26px;
+    font-size: 16px;
 }
 .ketqua .number-1 {
     right: 0;
@@ -69,39 +69,47 @@
 .ketqua .number-2 {
     right: 0;
     left: 0;
-    top: 50px;
+    top: 35px;
 }
 .ketqua .number-3 {
-    left: 32.85%;
-    top: 58%;
+    right: 0;
+    left: 0;
+    top: 65px;
 }
 .ketqua .number-4 {
-    right: 32%;
-    top: 58%;
+    right: 0;
+    left: 0;
+    top: 118px;
 }
 .ketqua .number-5 {
-    bottom: -19%;
-    left: 10%;
+    left: 34.85%;
+    top: 61%;
 }
 .ketqua .number-6 {
-    bottom: -19%;
-    right: 9%;
+    right: 35%;
+    top: 61%;
 }
 .ketqua .number-7 {
-    bottom: -19%;
-    left: 23%;
+    bottom: 9%;
+    left: 33%;
 }
 .ketqua .number-8 {
-    bottom: -19%;
-    right: 22%;
+    bottom: 9%;
+    right: 33%;
 }
 .ketqua .number-9 {
-    bottom: -19%;
-    left: 43%;
+    bottom: -15%;
+    left: 23%;
 }
 .ketqua .number-10 {
-    bottom: -19%;
-    right: 42%;
+    bottom: -15%;
+    right: 22%;
+}
+.ketqua .number-11 {
+    bottom: -15%;
+    right: 0;
+    text-align: center;
+    left: 0;
 }
 .ketqua .btn-tt {
     margin-left: 41px;

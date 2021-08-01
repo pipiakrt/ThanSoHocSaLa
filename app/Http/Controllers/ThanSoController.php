@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ThanSo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class ThanSoController extends Controller
 {
@@ -25,6 +26,10 @@ class ThanSoController extends Controller
      */
     public function ketqua(Request $request)
     {
-        return view('ketquatracuu');
+        $params = $request->only('name', 'birthday');
+        $response = Http::get('https://api.thansohocsala.com/luan-giai', $params);
+        $data = $response->json();
+
+        return view('ketquatracuu', compact(['data', 'params']));
     }
 }

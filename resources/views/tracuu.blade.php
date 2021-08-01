@@ -28,8 +28,8 @@
                                             <input id="name" name="name" type="text" required >
                                         </div>
                                         <div class="form-input">
-                                            <label for="ngaysinh">Ngày sinh</label>
-                                            <input name="ngaysinh" id="ngaysinh" type="date" required >
+                                            <label for="birthday">Ngày sinh</label>
+                                            <input name="birthday" id="birthday" type="date" required >
                                         </div>
                                         <div class="form-input">
                                             <label for="sdt">Số điện thoại</label>

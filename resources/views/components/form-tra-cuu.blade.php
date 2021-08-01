@@ -23,7 +23,7 @@
                             <input class="custom-form-input mb-4" name="email" type="email" placeholder="Email:">
                         </div>
                         <div class="mb-2 mb-lg-0">
-                            <input id="ngaygio" class="custom-form-input mb-4 mb-lg-0" name="date" type="date" required>
+                            <input id="birthday" class="custom-form-input mb-4 mb-lg-0" name="birthday" type="date" required>
                         </div>
                     </div>
                     <div class="col-lg-4 col-xl-2 ct-col-2">
