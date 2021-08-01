@@ -60,6 +60,7 @@ Route::prefix('/tai-khoan')->group(function () {
 });
 
 Route::get('/dich-vu/', [HomeController::class, 'dichvu']);
+Route::get('/hoi-dap/', [HomeController::class, 'hoidap']);
 
 Route::get('/lien-he/', function () {
     return view('lien-he');

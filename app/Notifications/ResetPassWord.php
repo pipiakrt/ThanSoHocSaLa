@@ -45,7 +45,7 @@ class ResetPassWord extends Notification
         $url = env('APP_URL') . '/tai-khoan/doi-mat-khau?token=' . $this->token;
         return (new MailMessage)
             ->greeting('Xin chào!')
-            ->from('tkien9324@gmail.com', 'Thần Số Học Sala')
+            ->from(env('MAIL_USERNAME'), 'Thần Số Học Sala')
             ->line('Bạn nhận được email này vì chúng tôi đã nhận được yêu cầu đặt lại mật khẩu cho tài khoản của bạn.')
             ->action('Đặt lại mật khẩu', url($url))
             ->line('Nếu bạn không yêu cầu đặt lại mật khẩu, bạn không cần thực hiện thêm hành động nào.');

@@ -61,6 +61,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    public function hoidap()
+    {
+        return view('hoi-dap');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function duongdoi()
     {
         return view('duongdoi');

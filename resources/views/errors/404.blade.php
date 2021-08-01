@@ -2,14 +2,70 @@
 
 @push('styles')
     <link rel="stylesheet" href="/css/tra-cuu.css">
+    <style>
+        .page_404 {
+            padding: 40px 0;
+            background: #fff;
+            font-family: "Arvo", serif;
+        }
+
+        .page_404 img {
+            width: 100%;
+        }
+
+        .four_zero_four_bg {
+            background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+            height: 400px;
+            background-position: center;
+        }
+
+        .four_zero_four_bg h1 {
+            font-size: 80px;
+        }
+
+        .four_zero_four_bg h3 {
+            font-size: 80px;
+        }
+
+        .link_404 {
+            color: #fff !important;
+            padding: 10px 20px;
+            background: #39ac31;
+            margin: 20px 0;
+            display: inline-block;
+        }
+        .contant_box_404 {
+            margin-top: -50px;
+        }
+    </style>
 @endpush
 
 @section('content')
 
-<div class="text-center py-5 my-5">
-    <div class="text-center py-5 my-5">
-        <h1>KHÔNG CÓ TRANG NÀY</h1>
+<x-slogan />
+
+<section class="page_404">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="col-sm-10 col-sm-offset-1 text-center">
+                    <div class="four_zero_four_bg">
+                        <h1 class="text-center">404</h1>
+                    </div>
+
+                    <div class="contant_box_404">
+                        <h3 class="h2">
+                            Xin lỗi, chúng tôi không tìm thấy trang mà bạn cần!
+                        </h3>
+
+                        <p>trang bạn đang tìm kiếm không có sẵn!</p>
+
+                        <a href="/" class="link_404">Trở về trang chủ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
 @endsection

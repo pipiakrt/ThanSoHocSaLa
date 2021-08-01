@@ -44,7 +44,7 @@ class NotificationEmail extends Notification
     {
         return (new MailMessage)
             ->greeting('Xin chào ' . $this->user['name'])
-            ->from('tkien9324@gmail.com', 'Thần Số Học Sala')
+            ->from(env('MAIL_USERNAME'), 'Thần Số Học Sala')
             ->line('Chào mừng bạn đến với Thần Sô Học Sala.')
             ->action('Tiến tới Thần Số Học Sala', url(env('APP_URL')));
     }
