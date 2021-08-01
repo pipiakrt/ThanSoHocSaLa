@@ -38,8 +38,9 @@ class PostController extends Controller
     public function show($slug)
     {
         $post = Post::where('slug', $slug)->first();
+        $posts = Post::orderby('id', 'desc')->where('id', '<', $post->id)->take(7)->get();
         if ($post) {
-            return view('tin-tuc-chi-tiet', compact('post'));
+            return view('tin-tuc-chi-tiet', compact(['post', 'posts']));
         }
         else {
             return view('errors.404');

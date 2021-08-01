@@ -56,6 +56,9 @@
     margin-top: 91px;
     margin-left: 41px;
     position: relative;
+    max-width: 530px;
+    margin: auto;
+    margin-top: 76px;
 }
 .ketqua .number {
     position: absolute;
@@ -82,28 +85,28 @@
     top: 118px;
 }
 .ketqua .number-5 {
-    left: 34.85%;
+    left: 31.85%;
     top: 61%;
 }
 .ketqua .number-6 {
-    right: 35%;
+    right: 33%;
     top: 61%;
 }
 .ketqua .number-7 {
     bottom: 9%;
-    left: 33%;
+    left: 27%;
 }
 .ketqua .number-8 {
     bottom: 9%;
-    right: 33%;
+    right: 27%;
 }
 .ketqua .number-9 {
     bottom: -15%;
-    left: 23%;
+    left: 12%;
 }
 .ketqua .number-10 {
     bottom: -15%;
-    right: 22%;
+    right: 12%;
 }
 .ketqua .number-11 {
     bottom: -15%;
@@ -129,7 +132,6 @@
 .slide-ketqua {
     background-color: #097364;
     padding: 65px 20px;
-    margin-top: 15px;
 }
 .content-ketqua .desc.title.text-white h3 {
     font-weight: 200;

@@ -3,9 +3,8 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use App\Models\Post;
 
-class Tintuclienquan extends Component
+class category extends Component
 {
     /**
      * Create a new component instance.
@@ -24,6 +23,6 @@ class Tintuclienquan extends Component
      */
     public function render()
     {
-        return view('components.tintuclienquan', compact('posts'));
+        return view('components.category');
     }
 }

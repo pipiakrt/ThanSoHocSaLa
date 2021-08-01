@@ -26,29 +26,38 @@
     text-transform: uppercase;
     font-size: 29px;
     font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 .post-main .post-name h2 {
     color: #097364;
     font-size: 30px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 .post-main .post-tilte h4 {
     color: #555555;
     font-size: 24px;
-    margin-bottom: 20px;
 }
 .post-main .post-desc span {
     font-weight: 200;
     color: #555555;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 .post-main .submit-post {
-    margin-top: 35px;
-    padding: 10px 70px;
+    padding: 0px 17px;
     color: white;
     background-color: #dab066;
     font-weight: 500;
-    font-size: 26px;
-    border-radius: 5px;
-    padding-top: 15px;
+    border-radius: 3px;
+    padding-top: 3px;
+    margin-top: 5px;
     width: fit-content;
-    text-transform: uppercase;
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SocialAuthController;
 use App\Http\Controllers\AccountController;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,29 @@ use App\Http\Controllers\AccountController;
 |
 */
 
+Route::get('/than-so', function () {
+    $name = "Trần Văn Kiên";
+    $birthdate = "03/09/2000";
+
+    function dequy ($birthdate) {
+        $items = Str::of($birthdate)->explode('/');
+
+        foreach ($items as $value) {
+            $value = (int) $value;
+
+            $multiplied = $collection->map(function ($item, $key) {
+                return $item * 2;
+            });
+
+            if ($value > 9) {
+                dd(str_split($value));
+                dequy($value);
+            }
+        }
+    }
+    return dequy ($birthdate);
+});
+
 Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('/gioi-thieu')->group(function () {
@@ -27,8 +51,7 @@ Route::prefix('/gioi-thieu')->group(function () {
     Route::get('/chuyen-gia/', [HomeController::class, 'chuyengia']);
     Route::get('/su-menh/', [HomeController::class, 'sumenh']);
     Route::get('/duong-doi/', [HomeController::class, 'duongdoi']);
-    Route::get('/cau-chuyen-hoc-sala/', [HomeController::class, 'cohocsala']);
-    Route::get('/than-so-hoc-sala/', [HomeController::class, 'thansohocsala']);
+    Route::get('/{slug}/', [PostController::class, 'show']);
 });
 
 Route::prefix('/san-pham')->group(function () {
