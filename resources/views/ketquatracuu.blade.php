@@ -214,14 +214,14 @@
                             <div class="carousel-item h-100">
                                 <div class="slide-ketqua bg text-white fw-lighter">
                                     <div class="desc">
-                                        {!! $data['DUONG_DOI'] !!}
+                                        {!! $data['DUONG_DOI']->page_content !!}
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item active h-100">
                                 <div class="slide-ketqua bg text-white fw-lighter">
                                     <div class="desc">
-                                        {!! $data['SU_MENH'] !!}
+                                        {!! $data['SU_MENH']->page_content !!}
                                     </div>
                                 </div>
                             </div>
@@ -229,7 +229,7 @@
                                 <div class="slide-ketqua bg text-white fw-lighter">
                                     @foreach ($data['KHUYET_THIEU'] as $line)
                                         <div class="desc">
-                                            {!! $line !!}
+                                            {!! $line->page_content !!}
                                         </div>
                                     @endforeach
                                 </div>

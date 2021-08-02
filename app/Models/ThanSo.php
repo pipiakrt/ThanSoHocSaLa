@@ -9,19 +9,17 @@ class ThanSo extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'conso',
-        'chisoduongdoi',
-        'chisosumenh',
-        'chisonhancach',
-        'chisokhuyetthieu',
-        'bieudonangluc',
-        'chiso',
-        'chiso',
-    ];
+    protected $table = 'contents';
+    public $timestamps = false;
 
-    protected $casts = [
-        'conso' => 'integer',
-        'chisoduongdoi' => 'array',
+    protected $fillable = [
+        'image',
+        'page_code',
+        'page_content',
+        'page_description',
+        'page_key',
+        'page_name',
+        'type',
+        'update_date',
     ];
 }

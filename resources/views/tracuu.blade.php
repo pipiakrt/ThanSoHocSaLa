@@ -14,7 +14,8 @@
                     <img class="mw-100" src="/img/tra-cuu/1.png" alt="than so hoc">
                 </div>
                 <div class="col-xl-7">
-                    <form action="/ket-qua-tra-cuu/" method="GET">
+                    <form method="POST" action="/tra-cuu/">
+                        @csrf
                         <div class="block-main text-white">
                             <div class="mw-fix">
                                 <div class="title"><h1 class="text-center">TRA CỨU THẦN SỐ HỌC</h1></div>

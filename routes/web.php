@@ -22,28 +22,30 @@ use Illuminate\Support\Str;
 |
 */
 
-Route::get('/than-so', function () {
-    $name = "Trần Văn Kiên";
-    $birthdate = "03/09/2000";
+Route::get('/test', [ThanSoController::class, 'test']);
 
-    function dequy ($birthdate) {
-        $items = Str::of($birthdate)->explode('/');
+// Route::get('/than-so', function () {
+//     $name = "Trần Văn Kiên";
+//     $birthdate = "03/09/2000";
 
-        foreach ($items as $value) {
-            $value = (int) $value;
+//     function dequy ($birthdate) {
+//         $items = Str::of($birthdate)->explode('/');
 
-            $multiplied = $collection->map(function ($item, $key) {
-                return $item * 2;
-            });
+//         foreach ($items as $value) {
+//             $value = (int) $value;
 
-            if ($value > 9) {
-                dd(str_split($value));
-                dequy($value);
-            }
-        }
-    }
-    return dequy ($birthdate);
-});
+//             $multiplied = $collection->map(function ($item, $key) {
+//                 return $item * 2;
+//             });
+
+//             if ($value > 9) {
+//                 dd(str_split($value));
+//                 dequy($value);
+//             }
+//         }
+//     }
+//     return dequy ($birthdate);
+// });
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -104,7 +106,7 @@ Route::get('/chinh-sach', function () {
 });
 
 Route::get('/tra-cuu/', [ThanSoController::class, 'index']);
-Route::get('/ket-qua-tra-cuu/', [ThanSoController::class, 'ketqua']);
+Route::post('/tra-cuu/', [ThanSoController::class, 'ketqua']);
 
 Auth::routes();
 
