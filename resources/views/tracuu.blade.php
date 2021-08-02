@@ -14,7 +14,7 @@
                     <img class="mw-100" src="/img/tra-cuu/1.png" alt="than so hoc">
                 </div>
                 <div class="col-xl-7">
-                    <form method="POST" action="/tra-cuu/">
+                    <form method="POST" action="/tra-cuu">
                         @csrf
                         <div class="block-main text-white">
                             <div class="mw-fix">

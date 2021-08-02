@@ -38,7 +38,9 @@
         <span>Sản phẩm yêu thích</span>
     </li>
     <li class="list-group-item d-flex justify-content-between">
-        <span>Tải file luận giải</span>
+        <a href="/tai-khoan/export">
+            <span>Tải file luận giải</span>
+        </a>
         <strong>$20</strong>
     </li>
     <li class="list-group-item d-flex justify-content-between">

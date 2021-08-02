@@ -26,6 +26,14 @@
         </div>
     @endif
 
+    @if (\Session::has('error'))
+        <div class="alert alert-danger mt-4">
+            <ul class="mb-0">
+                <li>{!! \Session::get('error') !!}</li>
+            </ul>
+        </div>
+    @endif
+
     <div class="row my-5">
         <div class="col-md-3 mb-4">
             <x-account-menu />
@@ -37,11 +45,11 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="name">Họ tên</label>
-                        <input type="text" name="name" class="form-control" id="name" value="{{ $user->name }}" />
+                        <input type="text" name="name" class="form-control" id="name" value="{{ $user->name }}" required />
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="lastName">Ngày sinh</label>
-                        <input type="date" name="birthdate" class="form-control" id="lastName" value="{{ $user->birthdate }}" />
+                        <input type="date" name="birthdate" class="form-control" id="lastName" value="{{ $user->birthdate }}" required />
                     </div>
                 </div>
 

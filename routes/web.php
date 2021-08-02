@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ThanSoController;
-use App\Http\Controllers\pdfController;
+use App\Http\Controllers\Admin\ExportController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SocialAuthController;
@@ -22,30 +22,6 @@ use Illuminate\Support\Str;
 |
 */
 
-Route::get('/test', [ThanSoController::class, 'test']);
-
-// Route::get('/than-so', function () {
-//     $name = "Trần Văn Kiên";
-//     $birthdate = "03/09/2000";
-
-//     function dequy ($birthdate) {
-//         $items = Str::of($birthdate)->explode('/');
-
-//         foreach ($items as $value) {
-//             $value = (int) $value;
-
-//             $multiplied = $collection->map(function ($item, $key) {
-//                 return $item * 2;
-//             });
-
-//             if ($value > 9) {
-//                 dd(str_split($value));
-//                 dequy($value);
-//             }
-//         }
-//     }
-//     return dequy ($birthdate);
-// });
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -83,6 +59,7 @@ Route::group(['middleware' => 'login'], function(){
         Route::get('/gio-hang/{slug}/xoa/', [ProductController::class, 'xoasanpham']);
         Route::get('/gio-hang/{slug}/dat-hang/', [ProductController::class, 'dathang']);
         Route::get('/don-hang/', [AccountController::class, 'donhang']);
+        Route::get('/export', [ExportController::class, 'index']);
 
         Route::post('/quyen-mat-khau', [AccountController::class, 'sendMail']);
         Route::get('/doi-mat-khau', [AccountController::class, 'formreset']);
@@ -106,7 +83,7 @@ Route::get('/chinh-sach', function () {
 });
 
 Route::get('/tra-cuu/', [ThanSoController::class, 'index']);
-Route::post('/tra-cuu/', [ThanSoController::class, 'ketqua']);
+Route::post('/tra-cuu', [ThanSoController::class, 'ketqua']);
 
 Auth::routes();
 
