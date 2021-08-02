@@ -15,7 +15,9 @@ class UserObserver
      */
     public function created(User $user)
     {
-        $user->notify(new NotificationEmail($user));
+        if (strpos($user->email, '@')) {
+            $user->notify(new NotificationEmail($user));
+        }
     }
 
     /**

@@ -16,6 +16,7 @@ use App\Http\Controllers\Api\MemberController;
 use App\Http\Controllers\Api\NewsletterController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\OrderController;
+use App\Http\Controllers\Api\ThanSoHocController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,4 +44,5 @@ Route::resources([
     'newsletters' => NewsletterController::class,
     'categories' => CategoryController::class,
     'orders' => OrderController::class,
+    'thanso' => ThanSoHocController::class,
 ]);

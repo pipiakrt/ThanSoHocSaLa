@@ -42,12 +42,9 @@ class ProductController extends Controller
         $user = $request->user();
         $product = Product::where('slug', $slug)->first();
         if ($product) {
-            $check = Cart::where('product_id', $product->id)->first();
+            $check = $user->Cart->where('product_id', $product->id)->first();
             if (!$check) {
-                Cart::create([
-                    'user_id' => $user->id,
-                    'product_id' => $product->id
-                ]);
+                $user->Cart->create(['product_id' => $product->id]);
             }
             return redirect('/tai-khoan/gio-hang/');
         }

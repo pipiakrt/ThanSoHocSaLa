@@ -34,6 +34,9 @@ import Newsletters from './pages/Newsletters/index'
 import Products from './pages/Products/index'
 import CreateProduct from './pages/Products/create'
 import EditProduct from './pages/Products/edit'
+// ThanSo
+import ThanSo from './pages/ThanSo/index'
+import EditThanSo from './pages/ThanSo/edit'
 // posts
 import Posts from './pages/Posts/index'
 import CreatePost from './pages/Posts/create'
@@ -190,6 +193,17 @@ const routes = [
         path: '/admin/seo/:id/chinh-sua',
         component: EditSeo,
         name: 'Seo',
+    },
+    // ThanSo
+    {
+        path: '/admin/luan-giai/danh-sach',
+        component: ThanSo,
+        name: 'ThanSo',
+    },
+    {
+        path: '/admin/luan-giai/:id/chinh-sua',
+        component: EditThanSo,
+        name: 'ThanSo',
     },
     // Posts
     {

@@ -10,6 +10,7 @@ class ThanSo extends Model
     use HasFactory;
 
     protected $table = 'contents';
+    protected $primary = 'id';
     public $timestamps = false;
 
     protected $fillable = [
