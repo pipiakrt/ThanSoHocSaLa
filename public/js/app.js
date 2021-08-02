@@ -2767,6 +2767,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -40672,15 +40677,68 @@ var render = function() {
                             ])
                           ]),
                           _vm._v(" "),
-                          _vm._m(10),
+                          _vm.filterStatus == 1
+                            ? _c(
+                                "div",
+                                { staticClass: "form-group row my-2" },
+                                [
+                                  _c(
+                                    "label",
+                                    { staticClass: "col-4 col-form-label" },
+                                    [_vm._v("Ngày kích hoạt:")]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._m(10)
+                                ]
+                              )
+                            : _vm._e(),
                           _vm._v(" "),
-                          _vm._m(11)
+                          _vm.filterStatus == 1
+                            ? _c(
+                                "div",
+                                {
+                                  staticClass: "form-group row my-2",
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.confirm("confirm", [
+                                        _vm.item.id
+                                      ])
+                                    }
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "label",
+                                    { staticClass: "col-4 col-form-label" },
+                                    [_vm._v("Ngày hết hạn:")]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._m(11)
+                                ]
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.filterStatus == 1
+                            ? _c(
+                                "div",
+                                { staticClass: "form-group row my-2" },
+                                [
+                                  _c(
+                                    "label",
+                                    { staticClass: "col-4 col-form-label" },
+                                    [_vm._v("Số lượt tra cứu:")]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._m(12)
+                                ]
+                              )
+                            : _vm._e()
                         ])
                       ])
                     : _vm._e()
                 ]),
                 _vm._v(" "),
-                _vm._m(12)
+                _vm._m(13)
               ])
             ]
           )
@@ -40825,94 +40883,93 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group row my-2" }, [
-      _c("label", { staticClass: "col-4 col-form-label" }, [
-        _vm._v("Ngày kích hoạt:")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-8" }, [
-        _c(
-          "div",
-          {
-            staticClass: "input-group date",
-            attrs: { id: "kt_datetimepicker_1", "data-target-input": "nearest" }
-          },
-          [
-            _c("input", {
-              staticClass: "form-control datetimepicker-input",
+    return _c("div", { staticClass: "col-8" }, [
+      _c(
+        "div",
+        {
+          staticClass: "input-group date",
+          attrs: { id: "kt_datetimepicker_1", "data-target-input": "nearest" }
+        },
+        [
+          _c("input", {
+            staticClass: "form-control datetimepicker-input",
+            attrs: {
+              type: "text",
+              id: "datetimepicker_1",
+              placeholder: "Thời gian bắt đầu",
+              "data-target": "#kt_datetimepicker_1"
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "input-group-append",
               attrs: {
-                type: "text",
-                id: "datetimepicker_1",
-                placeholder: "Thời gian bắt đầu",
-                "data-target": "#kt_datetimepicker_1"
+                "data-target": "#kt_datetimepicker_1",
+                "data-toggle": "datetimepicker"
               }
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "input-group-append",
-                attrs: {
-                  "data-target": "#kt_datetimepicker_1",
-                  "data-toggle": "datetimepicker"
-                }
-              },
-              [
-                _c("span", { staticClass: "input-group-text" }, [
-                  _c("i", { staticClass: "ki ki-calendar" })
-                ])
-              ]
-            )
-          ]
-        )
-      ])
+            },
+            [
+              _c("span", { staticClass: "input-group-text" }, [
+                _c("i", { staticClass: "ki ki-calendar" })
+              ])
+            ]
+          )
+        ]
+      )
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group row my-2" }, [
-      _c("label", { staticClass: "col-4 col-form-label" }, [
-        _vm._v("Ngày hết hạn:")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-8" }, [
-        _c(
-          "div",
-          {
-            staticClass: "input-group date",
-            attrs: { id: "kt_datetimepicker_2", "data-target-input": "nearest" }
-          },
-          [
-            _c("input", {
-              staticClass: "form-control datetimepicker-input",
+    return _c("div", { staticClass: "col-8" }, [
+      _c(
+        "div",
+        {
+          staticClass: "input-group date",
+          attrs: { id: "kt_datetimepicker_2", "data-target-input": "nearest" }
+        },
+        [
+          _c("input", {
+            staticClass: "form-control datetimepicker-input",
+            attrs: {
+              type: "text",
+              id: "datetimepicker_2",
+              placeholder: "Thời gian kết thúc",
+              "data-target": "#kt_datetimepicker_2"
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "input-group-append",
               attrs: {
-                type: "text",
-                id: "datetimepicker_2",
-                placeholder: "Thời gian kết thúc",
-                "data-target": "#kt_datetimepicker_2"
+                "data-target": "#kt_datetimepicker_2",
+                "data-toggle": "datetimepicker"
               }
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "input-group-append",
-                attrs: {
-                  "data-target": "#kt_datetimepicker_2",
-                  "data-toggle": "datetimepicker"
-                }
-              },
-              [
-                _c("span", { staticClass: "input-group-text" }, [
-                  _c("i", { staticClass: "ki ki-calendar" })
-                ])
-              ]
-            )
-          ]
-        )
-      ])
+            },
+            [
+              _c("span", { staticClass: "input-group-text" }, [
+                _c("i", { staticClass: "ki ki-calendar" })
+              ])
+            ]
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-8" }, [
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "text", placeholder: "", value: "4" }
+      })
     ])
   },
   function() {

@@ -33,7 +33,7 @@
             <div class="container container-header2">
                 <div class="row g-0 g-md-5">
                     <div class="col-md-3">
-                        <x-category />
+                        <x-danh-muc />
                     </div>
                     <div class="col-md-8">
                         @foreach ($posts as $item)

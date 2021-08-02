@@ -5,7 +5,7 @@ namespace App\View\Components;
 use Illuminate\View\Component;
 use App\Models\Category as Model;
 
-class Category extends Component
+class DanhMuc extends Component
 {
     /**
      * Create a new component instance.
@@ -25,6 +25,6 @@ class Category extends Component
     public function render()
     {
         $categories = Model::all();
-        return view('components.category', compact('categories'));
+        return view('components.danh-muc', compact('categories'));
     }
 }

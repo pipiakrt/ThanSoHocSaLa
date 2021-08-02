@@ -202,7 +202,7 @@
                                     <span class="form-control-plaintext font-weight-bolder">{{ orderInfo.price }}</span>
                                 </div>
                             </div>
-                            <div class="form-group row my-2">
+                            <div v-if="filterStatus == 1" class="form-group row my-2">
                                 <label class="col-4 col-form-label">Ngày kích hoạt:</label>
                                 <div class="col-8">
                                     <div class="input-group date" id="kt_datetimepicker_1" data-target-input="nearest">
@@ -215,7 +215,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group row my-2">
+                            <div v-if="filterStatus == 1" @click="confirm('confirm', [item.id])" class="form-group row my-2">
                                 <label class="col-4 col-form-label">Ngày hết hạn:</label>
                                 <div class="col-8">
                                     <div class="input-group date" id="kt_datetimepicker_2" data-target-input="nearest">
@@ -228,7 +228,12 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div v-if="filterStatus == 1" class="form-group row my-2">
+                                <label class="col-4 col-form-label">Số lượt tra cứu:</label>
+                                <div class="col-8">
+                                    <input class="form-control" type="text" placeholder="" value="4">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
