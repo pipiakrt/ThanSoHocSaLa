@@ -20,11 +20,11 @@ class CreateOrdersTable extends Migration
             $table->string('name')->nullable();
             $table->string('code')->nullable();
             $table->string('avatar')->nullable();
-            $table->integer('phone')->nullable();
+            $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->string('bat_dau')->nullable();
             $table->string('ket_thuc')->nullable();
-            $table->string('price')->default(0);
+            $table->string('price')->nullable();
             $table->integer('licenses')->default(0)->index();
             $table->boolean('status')->default(0)->index();
             $table->timestamps();

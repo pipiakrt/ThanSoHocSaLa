@@ -21,7 +21,7 @@
         <a href="/tai-khoan/tra-cuu-nang-cao">
             <div class="{{ request()->segment(2) == 'license' ? 'text-success' : '' }}">
                 <h6 class="my-0">Tra cứu nâng cao</h6>
-                <small class="{{ request()->segment(2) == 'license' ? '' : 'text-muted' }}">bạn có 1 lượt tra cứu</small>
+                <small class="{{ request()->segment(2) == 'license' ? '' : 'text-muted' }}">bạn có {{ request()->user()->License->number }} lượt tra cứu</small>
             </div>
         </a>
     </li>

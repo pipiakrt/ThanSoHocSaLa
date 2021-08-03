@@ -74,7 +74,7 @@
         </div>
         <div class="col-md-9 order-md-1 form-111">
             <h4 class="mb-3">Đơn hàng</h4>
-            @foreach ($orders as $item)
+            @forelse ($orders as $item)
                 <div class="card card-body my-3">
                     <div class="media text-lg-left row g-0 g-md-4">
                         <div class="col-md-3 col-lg-2 text-center">
@@ -85,7 +85,7 @@
                                 <h6 class="media-title font-weight-semibold"> <a href="#" data-abc="true">{{ $item->Product->name }}</a> </h6>
                                 <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
                                     @if ($item->status == 1)
-                                        <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Còn 4 lượt tra cứu</a></li>
+                                        <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Bàn còn {{ request()->user()->License->number }} lượt tra cứu</a></li>
                                     @else
                                         <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Giá {{ $item->Product->price }}</a></li>
                                     @endif
@@ -117,7 +117,15 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
+            @empty
+
+            <div class="card card-body my-3">
+                <div class="media text-lg-left">
+                    <h4 class="text-secondary">Chưa có gói sản phẩm!</h4>
+                </div>
+            </div>
+
+            @endforelse
         </div>
     </div>
 </div>

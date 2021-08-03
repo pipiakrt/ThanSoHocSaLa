@@ -83,6 +83,9 @@ class ThanSoController extends Controller
         if (!$user->birthdate) {
             return redirect('/tai-khoan')->with('error', 'Bạn hãy nhập đầy đủ thông tin!');
         }
+        if ($user->License->number == 0) {
+            return redirect('/tai-khoan')->with('error', 'Số lượt tra cứu nâng cao của bạn đã hết, nâng cấp hoạc mua thêm gói để được tiếp tục tra cứu!');
+        }
 
         // get thanso
         $dataDefineComponent = new DefinedDataComponent();

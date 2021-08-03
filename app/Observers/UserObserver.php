@@ -18,6 +18,7 @@ class UserObserver
         if (strpos($user->email, '@')) {
             $user->notify(new NotificationEmail($user));
         }
+        $user->License()->create();
     }
 
     /**

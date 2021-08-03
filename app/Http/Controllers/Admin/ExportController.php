@@ -19,6 +19,10 @@ class ExportController extends Controller
         if (!$user->birthdate) {
             return redirect('/tai-khoan')->with('error', 'Bạn hãy nhập đầy đủ thông tin!');
         }
+        $count = $user->Order->where('status', 1)->count();
+        if ($count == 0) {
+            return redirect('/tai-khoan')->with('error', 'Yêu cầu mua tối thiểu một gói sản phẩm!');
+        }
 
         // get thanso
         $dataDefineComponent = new DefinedDataComponent();
