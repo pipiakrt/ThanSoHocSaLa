@@ -55,10 +55,10 @@ Route::group(['middleware' => 'login'], function(){
         Route::get('/', [AccountController::class, 'index']);
         Route::post('/cap-nhap/', [AccountController::class, 'update']);
         Route::get('/gio-hang/', [AccountController::class, 'giohang']);
-        Route::get('/gio-hang/{slug}/', [ProductController::class, 'themsanpham']);
-        Route::get('/gio-hang/{slug}/xoa/', [ProductController::class, 'xoasanpham']);
-        Route::get('/gio-hang/{slug}/dat-hang/', [ProductController::class, 'dathang']);
-        Route::get('/don-hang/', [AccountController::class, 'donhang']);
+        Route::get('/gia-han/{id}', [AccountController::class, 'giahan']);
+        Route::get('/gio-hang/{slug}/', [ProductController::class, 'dathang']);
+        Route::get('/dich-vu/', [AccountController::class, 'donhang']);
+        Route::get('/tra-cuu-nang-cao', [ThanSoController::class, 'ketquanangcao']);
         Route::get('/export', [ExportController::class, 'index']);
 
         Route::post('/quyen-mat-khau', [AccountController::class, 'sendMail']);

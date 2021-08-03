@@ -34,8 +34,8 @@ class AccountController extends Controller
     public function giohang(Request $request)
     {
         $user = $request->user();
-        $carts = $user->Cart;
-        return view('gio-hang', compact('carts'));
+        $orders = $user->Order->whereIn('status', [0, 2]);
+        return view('don-hang', compact('orders'));
     }
 
     /**
@@ -46,8 +46,19 @@ class AccountController extends Controller
     public function donhang(Request $request)
     {
         $user = $request->user();
-        $orders = $user->Order;
+        $orders = $user->Order->whereIn('status', 1);
         return view('don-hang', compact('orders'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function giahan(Request $request, $id)
+    {
+        $request->user()->Order->find($id)->update(['status' => 0]);
+        return redirect('/tai-khoan/gio-hang/')->with('msg', 'Gói sản phẩm gia hạn thành công, thanh toán để kích hoạt gói!');
     }
 
     /**

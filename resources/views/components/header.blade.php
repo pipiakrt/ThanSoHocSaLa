@@ -36,9 +36,43 @@
                         </a>
                     </div>
                     <div class="col-4 menu-item right">
-                        <a href="/lien-he/" class="{{ request()->segment(1) == 'lien-he' ? 'active' : '' }}">
-                            <span>Liên hệ</span>
-                        </a>
+                        @auth
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="true">
+                                    Tài khoản
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="/tai-khoan">
+                                            <span>Thông tin</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/tai-khoan/gio-hang">
+                                            <span>Giỏ hàng</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/tai-khoan/tra-cuu-nang-cao">
+                                            <span>Tra cứu nâng cao</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <form method="POST" action="/logout">
+                                            @csrf
+                                            <button class="dropdown-item" type="submit">
+                                                <span>Đăng xuất</span>
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        @else
+                            <a href="/login/" class="{{ request()->segment(1) == 'login' ? 'active' : '' }}">
+                                <span>Đăng nhập</span>
+                            </a>
+                        @endauth
                     </div>
                 </div>
             </div>

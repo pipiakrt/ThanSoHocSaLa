@@ -37,6 +37,11 @@
         .fa {
             color: red
         }
+        .chips {
+            border-radius: 7px;
+            padding-top: 7px;
+            padding-bottom: 3px;
+        }
     </style>
 @endpush
 
@@ -55,6 +60,13 @@
 </nav>
 
 <div class="container">
+    @if (\Session::has('msg'))
+        <div class="alert alert-success mt-4">
+            <ul class="mb-0">
+                <li>{!! \Session::get('msg') !!}</li>
+            </ul>
+        </div>
+    @endif
 
     <div class="row my-5">
         <div class="col-md-3 mb-4">
@@ -72,7 +84,11 @@
                             <div class="media-body">
                                 <h6 class="media-title font-weight-semibold"> <a href="#" data-abc="true">{{ $item->Product->name }}</a> </h6>
                                 <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
-                                    <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Giá {{ $item->Product->price }}</a></li>
+                                    @if ($item->status == 1)
+                                        <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Còn 4 lượt tra cứu</a></li>
+                                    @else
+                                        <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Giá {{ $item->Product->price }}</a></li>
+                                    @endif
                                 </ul>
                                 <p class="mb-3">{{ $item->Product->description }}</p>
                                 @foreach ($item->Product->promotion[0]['options'] as $options)
@@ -80,20 +96,22 @@
                                         <li class="list-inline-item">{{ $options['key'] . ' - ' . $options['val'] }}</li>
                                     </ul>
                                 @endforeach
+
+                                @if ($item->status == 1)
+                                    <a class="btn btn-sm px-4 btn-warning text-white mt-2"><i class="icon-cart-add mr-2"></i> Nâng cấp</a>
+                                @elseif ($item->status == 2)
+                                    <a href="/tai-khoan/gia-han/{{ $item->id }}" class="btn btn-sm px-4 btn-warning text-white mt-2"><i class="icon-cart-add mr-2"></i> Gia Hạn</a>
+                                @endif
                             </div>
                         </div>
                         <div class="col-md-3 col-lg-2">
                             <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
                                 @if ($item->status == 0)
-                                    <h3 class="mb-0 mt-2 font-weight-semibold">Chờ Xử Lý</h3>
+                                    <h5 class="mb-0 mt-2 fw-light bg-primary text-white chips">Chờ Xử Lý</h5>
                                 @elseif ($item->status == 1)
-                                    <h3 class="mb-0 mt-2 font-weight-semibold">Kích Hoạt</h3>
+                                    <h5 class="mb-0 mt-2 fw-light bg-success text-white chips">Kích Hoạt</h5>
                                 @else
-                                    <h3 class="mb-0 mt-2 font-weight-semibold">Đơn Hủy</h3>
-                                @endif
-                                <div class="text-muted">Tình trạng</div>
-                                @if ($item->status == 1)
-                                    <a class="btn btn-warning text-white mt-2"><i class="icon-cart-add mr-2"></i> Gia Hạn</a>
+                                    <h5 class="mb-0 mt-2 fw-light bg-danger text-white chips">Hết hạn</h5>
                                 @endif
                             </div>
                         </div>

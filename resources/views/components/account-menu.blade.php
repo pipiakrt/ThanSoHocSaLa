@@ -4,38 +4,29 @@
 <ul class="list-group mb-3">
     <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == null ? 'bg-light' : 'lh-condensed' }}">
         <a href="/tai-khoan/">
-            <div class="{{ request()->segment(2) == null ? 'text-success' : '' }}">
-                <h6 class="my-0 mt-1">Thông tin tài khoản</h6>
-                <small class="{{ request()->segment(2) == null ? '' : 'text-muted' }}">Brief description</small>
-            </div>
+            <span class="{{ request()->segment(2) == '' ? 'text-success' : '' }}">Thông tin tài khoản</span>
         </a>
     </li>
     <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'gio-hang' ? 'bg-light' : 'lh-condensed' }}">
         <a href="/tai-khoan/gio-hang/">
-            <div class="{{ request()->segment(2) == 'gio-hang' ? 'text-success' : '' }}">
-                <h6 class="my-0">Giỏ hàng</h6>
-                <small class="{{ request()->segment(2) == 'gio-hang' ? '' : 'text-muted' }}">Brief description</small>
-            </div>
+            <span class="{{ request()->segment(2) == 'gio-hang' ? 'text-success' : '' }}">Thanh toán</span>
         </a>
     </li>
-    <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'don-hang' ? 'bg-light' : 'lh-condensed' }}">
-        <a href="/tai-khoan/don-hang/">
-            <div class="{{ request()->segment(2) == 'don-hang' ? 'text-success' : '' }}">
-                <h6 class="my-0">Đơn hàng</h6>
-                <small class="{{ request()->segment(2) == 'don-hang' ? '' : 'text-muted' }}">Brief description</small>
-            </div>
+    <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'dich-vu' ? 'bg-light' : 'lh-condensed' }}">
+        <a href="/tai-khoan/dich-vu/">
+            <span class="{{ request()->segment(2) == 'dich-vu' ? 'text-success' : '' }}">Dịch vụ</span>
         </a>
     </li>
     <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'license' ? 'bg-light' : 'lh-condensed' }}">
-        <a href="/tai-khoan/license">
+        <a href="/tai-khoan/tra-cuu-nang-cao">
             <div class="{{ request()->segment(2) == 'license' ? 'text-success' : '' }}">
-                <h6 class="my-0">license code</h6>
-                <small class="{{ request()->segment(2) == 'license' ? '' : 'text-muted' }}">1 lượt tra cứu thần số học</small>
+                <h6 class="my-0">Tra cứu nâng cao</h6>
+                <small class="{{ request()->segment(2) == 'license' ? '' : 'text-muted' }}">bạn có 1 lượt tra cứu</small>
             </div>
         </a>
     </li>
     <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'san-pham-yeu-thich' ? 'bg-light' : 'lh-condensed' }}">
-        <span>Sản phẩm yêu thích</span>
+        <span>Lịch sử tra cứu</span>
     </li>
     <li class="list-group-item d-flex justify-content-between">
         <a href="/tai-khoan/export">
@@ -52,11 +43,11 @@
         </form>
     </li>
 </ul>
-<form class="card p-2">
+{{-- <form class="card p-2">
     <div class="input-group">
         <input type="text" class="form-control" placeholder="Nhập code" />
         <div class="input-group-append">
             <button type="submit" class="btn btn-secondary">Tra cứu nâng cao</button>
         </div>
     </div>
-</form>
+</form> --}}

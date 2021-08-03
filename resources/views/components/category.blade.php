@@ -244,14 +244,14 @@
             </ul>
             <h5 class="tag-title">Tags</h5>
             <ul class="tag-list" style="padding: 0;">
-                <li><a href="">Family</a></li>
-                <li><a href="">Work</a></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Children</a></li>
-                <li><a href="">Holidays</a></li>
-                <li><a href="">Music</a></li>
-                <li><a href="">Photography</a></li>
-                <li><a href="">Film</a></li>
+                <li><a href="">Thần số học</a></li>
+                <li><a href="">Chính sách</a></li>
+                <li><a href="">Tin tức hot</a></li>
+                <li><a href="">Phẩn hồi</a></li>
+                <li><a href="">Tuyển dụng</a></li>
+                <li><a href="">Tra cứu</a></li>
+                <li><a href="">Khuyên mãi</a></li>
+                <li><a href="">Phản hồi</a></li>
             </ul>
             <div class="clearfix"></div>
         </div>

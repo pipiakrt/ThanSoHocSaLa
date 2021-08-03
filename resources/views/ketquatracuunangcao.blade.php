@@ -112,11 +112,11 @@
                             <tbody class="text-white">
                                 <tr>
                                     <td class="header"><span>HỌ VÀ TÊN</span></td>
-                                    <td class="text-center text-uppercase"><span>{{ $params['name'] }}</span></td>
+                                    <td class="text-center text-uppercase"><span>{{ $user['name'] }}</span></td>
                                 </tr>
                                 <tr>
                                     <td class="header"><span>NGÀY SINH</span></td>
-                                    <td class="text-center text-uppercase"><span>{{ $params['birthday'] }}</span></td>
+                                    <td class="text-center text-uppercase"><span>{{ $user['birthday'] }}</span></td>
                                 </tr>
                                 <tr>
                                     <td class="header"><span>ĐỊA CHỈ</span></td>
@@ -127,20 +127,20 @@
                     </div>
 
                     <div class="conso-qk text-white">
-                        <div class="number number-11"><?= $data['DINH_CAO'][0][1]; ?></div>
-                        <div class="number number-10"><?= $data['DINH_CAO'][0][2]; ?></div>
-                        <div class="number number-9"><?= $data['DINH_CAO'][0][0]; ?></div>
-                        <div class="number number-8"><?= $data['DINH_CAO'][0][4]; ?></div>
-                        <div class="number number-7"><?= $data['DINH_CAO'][0][3]; ?></div>
+                        <div class="number number-11"><?= $data['BIEU_DO']['DINH_CAO'][0][1]; ?></div>
+                        <div class="number number-10"><?= $data['BIEU_DO']['DINH_CAO'][0][2]; ?></div>
+                        <div class="number number-9"><?= $data['BIEU_DO']['DINH_CAO'][0][0]; ?></div>
+                        <div class="number number-8"><?= $data['BIEU_DO']['DINH_CAO'][0][4]; ?></div>
+                        <div class="number number-7"><?= $data['BIEU_DO']['DINH_CAO'][0][3]; ?></div>
 
-                        <div class="number number-6"><?= $data['DINH_CAO'][1][1]; ?></div>
-                        <div class="number number-5"><?= $data['DINH_CAO'][1][0]; ?></div>
-                        <div class="number number-4 text-center"><?= $data['DINH_CAO'][1][2]; ?></div>
+                        <div class="number number-6"><?= $data['BIEU_DO']['DINH_CAO'][1][1]; ?></div>
+                        <div class="number number-5"><?= $data['BIEU_DO']['DINH_CAO'][1][0]; ?></div>
+                        <div class="number number-4 text-center"><?= $data['BIEU_DO']['DINH_CAO'][1][2]; ?></div>
 
-                        <div class="number number-3 text-center"><?= $data['DINH_CAO'][2][0]; ?></div>
-                        <div class="number number-2 text-center"><?= $data['DINH_CAO'][2][1]; ?></div>
+                        <div class="number number-3 text-center"><?= $data['BIEU_DO']['DINH_CAO'][2][0]; ?></div>
+                        <div class="number number-2 text-center"><?= $data['BIEU_DO']['DINH_CAO'][2][1]; ?></div>
 
-                        <div class="number number-1 text-center"><?= $data['DINH_CAO'][3][0]; ?></div>
+                        <div class="number number-1 text-center"><?= $data['BIEU_DO']['DINH_CAO'][3][0]; ?></div>
                     </div>
                     <div class="btn-tt">
                         <a href="/tra-cuu">
@@ -190,7 +190,8 @@
                                     <div class="icon"></div>
                                 </div>
                                 <div class="title-item">
-                                    <h3>CHỈ SỐ KHUYẾT THIẾU</h3>
+                                    <h3>CHỈ SỐ CÂN BẰNG GIỮA</h3>
+                                    <h3>ĐƯỜNG ĐỜI VÀ SỨ MỆNH</h3>
                                 </div>
                             </div>
                         </div>
@@ -201,8 +202,119 @@
                                     <div class="icon"></div>
                                 </div>
                                 <div class="title-item">
+                                    <h3>CHỈ SỐ KHUYẾT THIẾU</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4">
+                                <div class="fake-line"></div>
+                                <div class="fake-icon">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="title-item">
                                     <h3>BIỂU ĐỒ NĂNG LỰC</h3>
                                     <h3>VÀ BIỂU ĐỒ BIRTH CHART</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5">
+                                <div class="fake-line"></div>
+                                <div class="fake-icon">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="title-item">
+                                    <h3>CHỈ SỐ TÂM HỒN</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6">
+                                <div class="fake-line"></div>
+                                <div class="fake-icon">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="title-item">
+                                    <h3>CHỈ SỐ NHÂN CÁCH</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7">
+                                <div class="fake-line"></div>
+                                <div class="fake-icon">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="title-item">
+                                    <h3>CHỈ SỐ CÂN BẰNG GIỮA</h3>
+                                    <h3>TÂM HỒN VÀ NHÂN CÁCH</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8">
+                                <div class="fake-line"></div>
+                                <div class="fake-icon">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="title-item">
+                                    <h3>CHỈ SỐ PHẢN ỨNG</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9">
+                                <div class="fake-line"></div>
+                                <div class="fake-icon">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="title-item">
+                                    <h3>CHỈ SỐ NGÀY SINH</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10">
+                                <div class="fake-line"></div>
+                                <div class="fake-icon">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="title-item">
+                                    <h3>CHỈ SỐ THÁCH THỨC</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11">
+                                <div class="fake-line"></div>
+                                <div class="fake-icon">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="title-item">
+                                    <h3>CHỈ SỐ TRƯỞNG THÀNH</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12">
+                                <div class="fake-line"></div>
+                                <div class="fake-icon">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="title-item">
+                                    <h3>CHỈ SỐ CÂN BẰNG</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="13">
+                                <div class="fake-line"></div>
+                                <div class="fake-icon">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="title-item">
+                                    <h3>LUẬN GIẢI</h3>
                                 </div>
                             </div>
                         </div>
@@ -227,6 +339,13 @@
                             </div>
                             <div class="carousel-item h-100">
                                 <div class="slide-ketqua bg text-white fw-lighter">
+                                    <div class="desc">
+                                        {!! $data['CAN_BANG_DD_SM'] !!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="slide-ketqua bg text-white fw-lighter">
                                     @foreach ($data['KHUYET_THIEU'] as $line)
                                         <div class="desc">
                                             {!! $line !!}
@@ -238,7 +357,7 @@
                                 <div class="desc">
                                     <?php
                                         $aryTong = [];
-                                        foreach ($data['BIEU_DO_NANG_LUC'][0] AS $item1) {
+                                        foreach ($data['BIEU_DO']['NANG_LUC'][0] AS $item1) {
                                             $aryNL_1[$item1][] = '<span class="chi-so-name">'.$item1.'</span>';
                                             $aryTong[$item1][] = '<span class="chi-so-name">'.$item1.'</span>';
                                         }
@@ -246,7 +365,7 @@
                                 </div>
                                 <div class="desc">
                                     <?php
-                                        foreach ($data['BIEU_DO_NANG_LUC'][1] AS $item1) {
+                                        foreach ($data['BIEU_DO']['NANG_LUC'][1] AS $item1) {
                                             if ($item1 != 0) {
                                                 $aryNL_2[$item1][] = '<span class="chi-so-bd">'.$item1.'</span>';
                                                 $aryTong[$item1][] = '<span class="chi-so-bd">'.$item1.'</span>';
@@ -288,8 +407,8 @@
                                                             </div>
                                                             <div class="title2 mt-5"><h4 class="text-center text-md-start">BIỂU ĐỒ BIRTH CHART</h4></div>
                                                         </div>
-                                                        </div>
                                                     </div>
+                                                </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="row justify-content-center">
@@ -309,6 +428,77 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="slide-ketqua bg text-white fw-lighter">
+                                    <div class="desc">
+                                        {!! $data['TAM_HON'] !!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="slide-ketqua bg text-white fw-lighter">
+                                    <div class="desc">
+                                        {!! $data['NHAN_CACH'] !!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="slide-ketqua bg text-white fw-lighter">
+                                    <div class="desc">
+                                        {!! $data['CAN_BANG_TH_NC'] !!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="slide-ketqua bg text-white fw-lighter">
+                                    <div class="desc">
+                                        {!! $data['PHAN_UNG'] !!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="slide-ketqua bg text-white fw-lighter">
+                                    <div class="desc">
+                                        {!! $data['NGAY_SINH'] !!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="slide-ketqua bg text-white fw-lighter">
+                                    <div class="desc">
+                                        @foreach ($data['THACH_THUC'] as $line)
+                                            <div class="desc">
+                                                {!! $line !!}
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="slide-ketqua bg text-white fw-lighter">
+                                    <div class="desc">
+                                        {!! $data['TRUONG_THANH'] !!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="slide-ketqua bg text-white fw-lighter">
+                                    <div class="desc">
+                                        {!! $data['CAN_BANG'] !!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="slide-ketqua bg text-white fw-lighter">
+                                    <div class="desc">
+                                        @foreach ($data['LUAN_GIAI'] as $item)
+                                            @foreach ($item as $html)
+                                                {!! $html !!}
+                                            @endforeach
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>

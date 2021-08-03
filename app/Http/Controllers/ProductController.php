@@ -6,6 +6,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\Cart;
 use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -37,57 +38,32 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function themsanpham(Request $request, $slug)
+    public function dathang(Request $request, $slug)
     {
-        $user = $request->user();
         $product = Product::where('slug', $slug)->first();
-        if ($product) {
-            $check = $user->Cart->where('product_id', $product->id)->first();
-            if (!$check) {
-                $user->Cart->create(['product_id' => $product->id]);
-            }
+        $user = $request->user();
+        $check = $user->Order->where('product_id', $product->id)->first();
+        if (!$check) {
+            Order::create([
+                'user_id' => $user->id,
+                'product_id' => $product->id,
+                'avatar' => $product->image,
+                'code' => $user->id . mt_rand(1000000000, 9999999999),
+                'name' => $product->name,
+                'phone' => $user->phone,
+                'email' => $user->email,
+                'price' => $product->price,
+            ]);
             return redirect('/tai-khoan/gio-hang/');
         }
-        return view('errors.404');
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function dathang(Request $request, $id)
-    {
-        $user = $request->user();
-        $cart = $user->Cart->find($id);
-        if ($cart) {
-            try {
-                Order::create([
-                    'user_id' => $user->id,
-                    'product_id' => $cart->Product->id,
-                    'avatar' => $cart->Product->image,
-                    'code' => $user->id . mt_rand(1000000000, 9999999999),
-                    'name' => $cart->Product->name,
-                    'phone' => $user->phone,
-                    'email' => $user->email,
-                    'price' => $cart->Product->price,
-                ]);
-            } catch (\Throwable $th) {
-                return redirect('/tai-khoan/don-hang/');
-            }
+        else if ($check->status == 1) {
+            return redirect('/tai-khoan/dich-vu/')->with('msg', 'Gói sản phẩm đang hoạt động, liên hệ 0987654321 để nâng cấp gói');;
         }
-        $cart->delete();
-        return redirect('/tai-khoan/don-hang/');
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function xoasanpham(Request $request, $id)
-    {
-        Cart::find($id)->delete();
-        return redirect()->back();
+        else if ($check->status == 0) {
+            return redirect('/tai-khoan/gio-hang/')->with('msg', 'Gói sản phẩm đã có trong giỏ hàng, thanh toán để kích hoạt gói!');
+        }
+        else {
+            return redirect('/tai-khoan/gio-hang/')->with('msg', 'Gói sản phẩm đã hết hạn, nhấn gia hạn hoạc liên hệ 0987654321 để gia hạn gói!');
+        }
     }
 }
