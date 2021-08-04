@@ -34,7 +34,7 @@
         <a href="/tai-khoan/export">
             <span>Tải file luận giải</span>
         </a>
-        <strong>$20</strong>
+        {{-- <strong>$20</strong> --}}
     </li>
     <li class="list-group-item d-flex justify-content-between">
         <form method="POST" action="/logout">
