@@ -116,7 +116,7 @@
                                 </tr>
                                 <tr>
                                     <td class="header"><span>NGÀY SINH</span></td>
-                                    <td class="text-center text-uppercase"><span>{{ $user['birthday'] }}</span></td>
+                                    <td class="text-center text-uppercase"><span>{{ $user['birthdate'] }}</span></td>
                                 </tr>
                                 <tr>
                                     <td class="header"><span>ĐỊA CHỈ</span></td>

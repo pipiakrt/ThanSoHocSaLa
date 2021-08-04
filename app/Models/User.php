@@ -55,6 +55,10 @@ class User extends Authenticatable
         return $this->hasMany(Order::class, 'user_id');
     }
 
+    public function TraCuu() {
+        return $this->hasMany(TraCuu::class, 'user_id');
+    }
+
     public function License() {
         return $this->hasOne(License::class);
     }

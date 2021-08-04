@@ -16,6 +16,8 @@ class CreateTraCuusTable extends Migration
         Schema::create('tra_cuus', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
+            $table->string('name')->nullable();
+            $table->string('birthdate')->nullable();
             $table->json('data')->nullable();
             $table->timestamps();
         });

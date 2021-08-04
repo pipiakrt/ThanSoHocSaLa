@@ -27,16 +27,16 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('/gioi-thieu')->group(function () {
     Route::get('/', [HomeController::class, 'gioithieu']);
-    Route::get('/chuyen-gia/', [HomeController::class, 'chuyengia']);
-    Route::get('/su-menh/', [HomeController::class, 'sumenh']);
-    Route::get('/duong-doi/', [HomeController::class, 'duongdoi']);
-    Route::get('/{slug}/', [PostController::class, 'show']);
+    Route::get('/chuyen-gia', [HomeController::class, 'chuyengia']);
+    Route::get('/su-menh', [HomeController::class, 'sumenh']);
+    Route::get('/duong-doi', [HomeController::class, 'duongdoi']);
+    Route::get('/{slug}', [PostController::class, 'show']);
 });
 
 Route::prefix('/san-pham')->group(function () {
     Route::get('/', [ProductController::class, 'index']);
-    Route::get('/{slug}/', [ProductController::class, 'show']);
-    Route::get('/gia-dinh/', function () {
+    Route::get('/{slug}', [ProductController::class, 'show']);
+    Route::get('/gia-dinh', function () {
         return 'Gói sản phẩm gia đình';
     });
     Route::get('/doanh-nghiep/', function () {
@@ -44,21 +44,24 @@ Route::prefix('/san-pham')->group(function () {
     });
 });
 
-Route::get('/cau-chuyen/', [PostController::class, 'cauchuyen']);
+Route::get('/cau-chuyen', [PostController::class, 'cauchuyen']);
 Route::prefix('/tin-tuc')->group(function () {
     Route::get('/', [PostController::class, 'index']);
-    Route::get('/{slug}/', [PostController::class, 'show']);
+    Route::get('/{slug}', [PostController::class, 'show']);
 });
 
 Route::group(['middleware' => 'login'], function(){
     Route::prefix('/tai-khoan')->group(function () {
         Route::get('/', [AccountController::class, 'index']);
-        Route::post('/cap-nhap/', [AccountController::class, 'update']);
-        Route::get('/gio-hang/', [AccountController::class, 'giohang']);
+        Route::post('/cap-nhap', [AccountController::class, 'update']);
+        Route::get('/gio-hang', [AccountController::class, 'giohang']);
+        Route::get('/lich-su-tra-cuu', [AccountController::class, 'lichsutracuu']);
+        Route::get('/lich-su-tra-cuu/{id}', [AccountController::class, 'ketqualichsutracuu']);
         Route::get('/gia-han/{id}', [AccountController::class, 'giahan']);
-        Route::get('/gio-hang/{slug}/', [ProductController::class, 'dathang']);
-        Route::get('/dich-vu/', [AccountController::class, 'donhang']);
-        Route::get('/tra-cuu-nang-cao', [ThanSoController::class, 'ketquanangcao']);
+        Route::get('/gio-hang/{slug}', [ProductController::class, 'dathang']);
+        Route::get('/dich-vu', [AccountController::class, 'donhang']);
+        Route::get('/tra-cuu-nang-cao', [ThanSoController::class, 'formnangcao']);
+        Route::post('/tra-cuu-nang-cao', [ThanSoController::class, 'ketquanangcao']);
         Route::get('/export', [ExportController::class, 'index']);
 
         Route::post('/quyen-mat-khau', [AccountController::class, 'sendMail']);
@@ -67,14 +70,14 @@ Route::group(['middleware' => 'login'], function(){
     });
 });
 
-Route::get('/dich-vu/', [HomeController::class, 'dichvu']);
-Route::get('/hoi-dap/', [HomeController::class, 'hoidap']);
+Route::get('/dich-vu', [HomeController::class, 'dichvu']);
+Route::get('/hoi-dap', [HomeController::class, 'hoidap']);
 
-Route::get('/lien-he/', [ReportController::class, 'index']);
-Route::post('/lien-he/', [ReportController::class, 'create']);
-Route::post('/dang-ky/', [ReportController::class, 'newsletter']);
+Route::get('/lien-he', [ReportController::class, 'index']);
+Route::post('/lien-he', [ReportController::class, 'create']);
+Route::post('/dang-ky', [ReportController::class, 'newsletter']);
 
-Route::get('/dieu-khoan/', function () {
+Route::get('/dieu-khoan', function () {
     return 'điều khoản';
 });
 
@@ -82,7 +85,7 @@ Route::get('/chinh-sach', function () {
     return 'chính sách';
 });
 
-Route::get('/tra-cuu/', [ThanSoController::class, 'index']);
+Route::get('/tra-cuu', [ThanSoController::class, 'index']);
 Route::post('/tra-cuu', [ThanSoController::class, 'ketqua']);
 
 Auth::routes();

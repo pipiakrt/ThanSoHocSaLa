@@ -26,7 +26,9 @@
         </a>
     </li>
     <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'san-pham-yeu-thich' ? 'bg-light' : 'lh-condensed' }}">
-        <span>Lịch sử tra cứu</span>
+        <a href="/tai-khoan/lich-su-tra-cuu">
+            <span>Lịch sử tra cứu</span>
+        </a>
     </li>
     <li class="list-group-item d-flex justify-content-between">
         <a href="/tai-khoan/export">

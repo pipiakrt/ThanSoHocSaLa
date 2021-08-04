@@ -12,6 +12,8 @@ class TraCuu extends Model
     protected $fillable = [
         'user_id',
         'data',
+        'birthdate',
+        'name'
     ];
 
     protected $casts = [

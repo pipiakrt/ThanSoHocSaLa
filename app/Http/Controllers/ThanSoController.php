@@ -26,6 +26,16 @@ class ThanSoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function formnangcao()
+    {
+        return view('formnangcao');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function ketqua(Request $request)
     {
         $dataPost = $request->only('name', 'birthday');
@@ -86,14 +96,15 @@ class ThanSoController extends Controller
         if ($user->License->number == 0) {
             return redirect('/tai-khoan')->with('error', 'Số lượt tra cứu nâng cao của bạn đã hết, nâng cấp hoạc mua thêm gói để được tiếp tục tra cứu!');
         }
+        $dataPost = $request->only('name', 'birthday');
 
         // get thanso
         $dataDefineComponent = new DefinedDataComponent();
-        $name = $user->name;
+        $name = $dataPost['name'];
         $buildName = $dataDefineComponent->convertAccentedCharacters($name);
         $buildNameFile = str_replace(' ', '-', $buildName);
-        $birthday = Carbon::parse($user->birthdate)->format('m/d/Y');
-        $dayBirth = Carbon::parse($user->birthdate)->format('m');
+        $birthday = Carbon::parse($dataPost['birthday'])->format('m/d/Y');
+        $dayBirth = Carbon::parse($dataPost['birthday'])->format('m');
 
         $utilsComponent = new UtilsComponent();
         $aryThanSo = $utilsComponent->getThanSo($name, $birthday, false);
@@ -165,6 +176,12 @@ class ThanSoController extends Controller
         $aryReturn['CAN_BANG_DD_SM'] = $this->getContentCS('CDS', $aryThanSo['canBangDuongDoiSuMenh']);
         $aryReturn['TRUONG_THANH'] = $this->getContentCS('TRT', $aryThanSo['truongThanh']);
         $data = $aryReturn;
+        $user->TraCuu()->create([
+            'name' => $dataPost['name'],
+            'birthdate' => $dataPost['birthday'],
+            'data' => $data,
+        ]);
+        $user->License()->decrement('number');
         return view('ketquatracuunangcao', compact(['data', 'user']));
     }
 

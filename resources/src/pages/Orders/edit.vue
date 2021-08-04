@@ -44,7 +44,7 @@
                                 <div class="form-group row">
                                     <label for="name" class="col-2 col-form-label">Lượt tra cứu</label>
                                     <div class="col-10">
-                                        <input v-model="licenses" class="form-control" type="number" />
+                                        <input v-model="licenses" class="form-control" type="number" :disabled="status != 1" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
