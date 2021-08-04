@@ -16,6 +16,7 @@ import OrderPending from './pages/Orders/pending'
 // import OrderProcess from './pages/Orders/process'
 import OrderSuccess from './pages/Orders/success'
 import OrderCancel from './pages/Orders/cancel'
+import EditOrder from './pages/Orders/edit'
 // // Notifications
 // import Notifications from './pages/Notification/index'
 // import CreateNotification from './pages/Notification/create'
@@ -117,6 +118,11 @@ const routes = [
     //     component: OrderProcess,
     //     name: 'Orders',
     // },
+    {
+        path: '/admin/don-hang/:id/chinh-sua',
+        component: EditOrder,
+        name: 'Orders',
+    },
     {
         path: '/admin/don-hang/hoat-dong',
         component: OrderSuccess,

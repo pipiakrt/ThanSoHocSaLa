@@ -26,7 +26,7 @@ class MemberController extends Controller
      */
     public function index()
     {
-        return Resources::collection(Model::where('is_admin', 0)->paginate());
+        return Resources::collection(Model::paginate());
     }
 
     /**

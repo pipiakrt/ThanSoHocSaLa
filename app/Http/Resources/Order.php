@@ -27,7 +27,7 @@ class Order extends JsonResource
             'status' => $this->status,
             'bat_dau' => $this->bat_dau,
             'ket_thuc' => $this->ket_thuc,
-            'licenses' => $this->licenses,
+            'licenses' => $this->User->License->number,
             'user' => new Account($this->User),
         ];
     }

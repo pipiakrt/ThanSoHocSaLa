@@ -47,8 +47,8 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, Model $order)
     {
-        return Model::whereIn('id', $request->id)->update(['status' => $request->status]);
+        return $order->update($request->all());
     }
 }

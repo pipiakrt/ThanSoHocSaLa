@@ -16,6 +16,7 @@ use App\Http\Controllers\Api\MemberController;
 use App\Http\Controllers\Api\NewsletterController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\OrderController;
+use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\ThanSoHocController;
 
 /*
@@ -30,6 +31,7 @@ use App\Http\Controllers\Api\ThanSoHocController;
 */
 
 Route::resources([
+    'users' => UserController::class,
     'auth' => AuthController::class,
     'accounts' => AccountController::class,
     'images' => ImageController::class,

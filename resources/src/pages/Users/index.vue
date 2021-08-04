@@ -29,6 +29,7 @@
                                     <th class="text-center">Địa chỉ</th>
                                     <th style="max-width: 120px" class="text-center">Điện thoại</th>
                                     <th style="max-width: 120px" class="text-center">Ngày sinh</th>
+                                    <th class="text-center">Lượt tra cứu</th>
                                     <th style="max-width: 120px" class="text-center">Ngày tạo</th>
                                     <th style="max-width: 80px" class="text-center">EXT</th>
                                 </tr>
@@ -54,6 +55,9 @@
                                     </td>
                                     <td style="max-width: 120px" class="text-center">
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.birthdate"></span>
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.number"></span>
                                     </td>
                                     <td style="max-width: 120px" class="text-center">
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.created_at)"></span>
