@@ -1,4 +1,4 @@
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
     .tamnhin-sumenh .st-col-6 {
         width: 52.5%;
     }
@@ -34,13 +34,22 @@
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1400px) { 
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .thongtingoi .item .image {
+        position: unset;
+    }
+    .thongtingoi .item .image {
+        height: 220px !important;
+    }
+    .thongtingoi .item .desc {
+        padding-right: 0;
+    }
     .cam-nhan-kh .block-main {
         width: 100%;
         overflow: hidden;
     }
 }
-@media (min-width: 1200px) and (max-width: 1450px) { 
+@media (min-width: 1200px) and (max-width: 1450px) {
     .tamnhin-sumenh .st-col-2 {
         width: 23%;
     }
@@ -59,23 +68,23 @@
 }
 
 /* xxl2 */
-@media (max-width: 1650px) { 
+@media (max-width: 1650px) {
     .position-xl-center {
         background-position-x: center;
     }
 }
 /* xxl */
-@media (max-width: 1450px) { 
+@media (max-width: 1450px) {
     .bds-lg-initial {
         border-radius: initial;
     }
 }
-@media (max-width: 1550px) { 
+@media (max-width: 1550px) {
     .main_su-menh .item-title h3 {
         inline-size: unset !important;
     }
 }
-@media (max-width: 1400px) { 
+@media (max-width: 1400px) {
     .container-ketqua .cus.col-xl-2 {
         width: 25%;
     }
@@ -89,7 +98,7 @@
         font-size: 35px;
     }
 }
-@media (min-width: 1400px) { 
+@media (min-width: 1400px) {
     .footer .cus-col-2 {
         width: 18.5%;
     }

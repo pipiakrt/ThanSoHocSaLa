@@ -40,7 +40,7 @@ class PostController extends Controller
     {
         $post = Post::where('slug', $slug)->first();
         if ($post) {
-            $posts = Post::orderby('id', 'desc')->where(['category_id' => $post->category_id, 'type' => $post->type, 'status' => 1])->take(7)->get();
+            $posts = Post::orderby('id', 'desc')->where(['category_id' => $post->category_id, 'status' => 1])->take(7)->get();
             return view('tin-tuc-chi-tiet', compact(['post', 'posts']));
         }
         else {

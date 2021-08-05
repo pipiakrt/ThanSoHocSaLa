@@ -270,6 +270,20 @@
 
 /* sm */
 @media (max-width: 768px) {
+    .thongtingoi .item .title {
+        background: white;
+        padding: 10px 0;
+        padding-top: 15px;
+    }
+    .thongtingoi .item .desc {
+        background: white;
+        margin-top: 0px;
+        height: 215px;
+    }
+    .thongtingoi .item .bg-ctm {
+        overflow: hidden;
+        background: #ededed;
+    }
     .coppyright .content-c span {
         font-size: 10px;
     }
@@ -303,5 +317,21 @@
 @media (max-width: 400px) {
     .ketqua .conso .nb {
         left: 30%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .thongtingoi .item .image {
+        position: unset;
+    }
+    .thongtingoi .item .image {
+        height: 220px !important;
+    }
+    .thongtingoi .item .desc {
+        padding-right: 10px;
+    }
+    .cam-nhan-kh .block-main {
+        width: 100%;
+        overflow: hidden;
     }
 }

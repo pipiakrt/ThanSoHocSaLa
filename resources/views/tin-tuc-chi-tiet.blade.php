@@ -36,9 +36,9 @@
     </nav>
     <main>
         <div class="post-slogan post-sloganDetail">
-            <div class="container container-header2">
+            <div class="container container-header2 mb-4">
                 <div class="row g-0 g-md-5">
-                    <div class="col-md-6">
+                    <div class="col-md-6 bg-white">
                         @if ($post->type == 'story')
                             <div class="title">
                                 <h1>{{ $post->author }}</h1>
@@ -57,21 +57,24 @@
                         </div>
                     </div>
                     <div class="col-md-4">
+                        <x-danh-muc />
                         <div class="list-group list-group-flush border-bottom scrollarea">
                             @foreach ($posts as $item)
-                                <a href="/tin-tuc/{{ $item->slug }}" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-                                    <div class="row g-0">
-                                        <div class="col-9">
-                                            <div class="col-11">
-                                                <strong class="mb-1 title-lienquan">{{ $item->name }}</strong>
+                                @if ($item->id != $post->id)
+                                    <a href="/tin-tuc/{{ $item->slug }}" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                                        <div class="row g-0">
+                                            <div class="col-9">
+                                                <div class="col-11">
+                                                    <strong class="mb-1 title-lienquan">{{ $item->name }}</strong>
+                                                </div>
+                                                <div class="col-11 small desc-lienquan">{{ $item->description }}</div>
                                             </div>
-                                            <div class="col-11 small desc-lienquan">{{ $item->description }}</div>
+                                            <div class="col-3">
+                                                <img style="max-width: 100px" src="{{ $item->image ? $item->image : '/img/post/1.png' }}" alt="">
+                                            </div>
                                         </div>
-                                        <div class="col-3">
-                                            <img style="max-width: 100px" src="{{ $item->image ? $item->image : '/img/post/1.png' }}" alt="">
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                @endif
                             @endforeach
                         </div>
                     </div>

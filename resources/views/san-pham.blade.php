@@ -43,6 +43,7 @@
     }
     .thongtingoi .maingoi {
         background-color: #097364;
+        background-color: white;
     }
     .thongtingoi .carousel-item {
         transition: transform .1s !important;
@@ -78,14 +79,59 @@
     .thongtingoi {
         background-color: #e7f1e9;
     }
+    .thongtingoi .item .hd1 {
+        font-family: "Open Sans", sans-serif;
+        color: rgb(238, 118, 17);
+        font-size: 23px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.6;
+    margin-bottom: 0;
+    }
+    .thongtingoi .item .hd2 {
+        font-family: "Open Sans", sans-serif;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        line-height: 1.6;
+        font-weight: 200;
+    }
+    .thongtingoi .item .title h4 {
+        font-family: "Open Sans", sans-serif;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+    .thongtingoi .item .desc span {
+        font-family: "Open Sans", sans-serif;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        text-align: justify;
+        line-height: 1.6;
+    }
+    .thongtingoi ul {
+        list-style: none; /* Remove default bullets */
+    }
+
+    .thongtingoi ul li::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: rgb(238, 118, 17); /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
     .thongtingoi .item .desc {
-        border: 2px dashed #608f6c;
-        color: #faefe3;
-        padding: 25px 35px;
+        /* border: 2px dashed #608f6c; */
+        /* color: #faefe3; */
+        padding: 0 50px;
         font-size: 18px;
         font-weight: 200;
         position: relative;
-        height: 100%;
+        /* height: 100%; */
+    margin-top: 8px;
     }
     .thongtingoi .item img.hoicham {
         position: absolute;
@@ -95,10 +141,10 @@
     .thongtingoi .itembg {
         background-color: #03402f;
         padding: 25px 0;
-        height: 230px;
+        height: 150px;
     }
     .thongtingoi .itembg.c {
-        height: 270px;
+        height: 200px;
     }
     .thongtingoi .itembg h3 {
         font-family: 'iCiel DIN Pro Condensed';
@@ -168,136 +214,181 @@
             </div>
         </div>
     </div>
+    <style>
+        .thongtingoi .item .image {
+            height: 230px;
+            position: relative;
+            width: 100%;
+        }
+        .thongtingoi .item .image .avatar {
+            width: 332.525px;
+            height: 552.013px;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .thongtingoi .item .image .avatar.c1 {
+            background-image: url(https://w.ladicdn.com/s650x900/60bf1c0b1a02f2001216e7d5/landingpage-level10-2-20210715120101.png);
+        }
+        .thongtingoi .item .image .avatar.c2 {
+            background-image: url(https://w.ladicdn.com/s650x900/60bf1c0b1a02f2001216e7d5/landingpage-level10-3-20210715120110.png);
+        }
+        .thongtingoi .item .image .avatar.c3 {
+            background-image: url(https://w.ladicdn.com/s650x900/60bf1c0b1a02f2001216e7d5/landingpage-level10-4-20210715120119.png);
+        }
+        .thongtingoi .item .titlea {
+            background-color: rgb(239, 239, 239);
+            border-radius: 13px;
+            height: 124px;
+            display: flex;
+            align-items: center;
+    justify-content: center;
+        }
+        .thongtingoi .item .titlea .gr-tl {
+            font-family: "Open Sans", sans-serif;
+            color: rgb(238, 122, 21);
+            font-size: 17px;
+            text-align: center;
+            line-height: 1.6;
+            max-width: 750px;
+        }
+    </style>
     <div class="thongtingoi">
         <div class="container px-0 px-lg-4">
             <div class="maingoi px-0 px-lg-5">
                 <div id="carouselExampleCaptions2" class="carousel slide text-dark h-100" data-bs-interval="false" data-bs-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                            <div class="item px-0 px-lg-4 py-4">
-                                <div class="row">
+                            <div class="item px-0 px-md-4 py-4">
+                                <div class="row justify-content-center">
                                     <div class="col-12">
-                                        <div class="title text-center text-white py-4">
-                                            <h5 class="fw-light">NẾU BẠN ĐANG GẶP VẤN ĐỀ SAU:</h5>
+                                        <div class="title text-center py-4">
+                                            <h5 class="hd1">MỘT LẦN MẤT KIỂM SOÁT</h5>
+                                            <h5 class="hd1">ĐÁNH MẤT HẠNH PHÚC CẢ CUỘC ĐỜI</h5>
+                                            <h5 class="hd1 hd2">Nóng giận - Đổ lỗi - Phán xét - Chê bai</h5>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
-                                        <div class="desc">
-                                            <span>Loay hoay trong việc định hướng mục tiêu cuộc đời</span>
-                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                    <div class="col-md-12 position-relative">
+                                        <div class="row g-0 justify-content-center g-lg-4">
+                                            <div class="col-sm-12 col-md-6 col-xl-4 px-4 position-relative bg-ctm">
+                                                <div class="image">
+                                                    <div class="avatar c1"></div>
+                                                </div>
+                                                <div class="title position-relative">
+                                                    <h4>ĐÁNH MẤT YÊU THƯƠNG</h4>
+                                                    <h4>TRONG GIA ĐÌNH</h4>
+                                                </div>
+                                                <div class="desc">
+                                                    <ul class="list-group">
+                                                        <li><span>Vợ chồng bất đồng, tranh cãi, tức giận nhất thời có thể ly tán cả một cuộc hôn nhân</span></li>
+                                                        <li><span>Cha mẹ con cái khó chịu, không cùng chung ý kiến, tức giận nhất thời có thể không bao giờ nhìn mặt nhau</span></li>
+                                                        <li><span>Anh chị em đỗ lỗi, chê bai, tức giận nhất thời có thể xung đột mãi mãi</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-xl-4 px-4 position-relative bg-ctm">
+                                                <div class="image">
+                                                    <div class="avatar c2"></div>
+                                                </div>
+                                                <div class="title position-relative">
+                                                    <h4>ĐÁNH MẤT CƠ HỘI THĂNG TIẾN</h4>
+                                                    <h4>THÀNH CÔNG TRONG CÔNG VIỆC</h4>
+                                                </div>
+                                                <div class="desc">
+                                                    <ul class="list-group">
+                                                        <li><span>Tranh cãi, chê bai nhau, tức giận nhất thời với đồng nghiệp có thể mất nguồn lực trong công ty</span></li>
+                                                        <li><span>Bất đồng , khó chịu, tức giận nhất thời với sếp có thể mất việc và mất niềm tin</span></li>
+                                                        <li><span>Phán xét, mâu thuẫn, tức giận nhất thời với đối tác có thể mất hợp đồng, mất doanh thu</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-xl-4 px-4 position-relative bg-ctm">
+                                                <div class="image">
+                                                    <div class="avatar c3"></div>
+                                                </div>
+                                                <div class="title position-relative">
+                                                    <h4>ĐÁNH MẤT MỐI QUAN HỆ</h4>
+                                                    <h4>TRONG XÃ HỘI</h4>
+                                                </div>
+                                                <div class="desc">
+                                                    <ul class="list-group">
+                                                        <li><span>Phán xét, bắt bẻ bạn bè, tức giận nhất thời có thể giết chết tình bạn cả 10 năm</span></li>
+                                                        <li><span>Bất đồng, tranh cãi, tức giận nhất thời với người yêu có thể chấm dứt một mối quan hệ đang tốt đẹp</span></li>
+                                                        <li><span>Khó chịu, đánh giá, tức giận với mọi người có thể khiến mình căng thẳng và bị xa lánh</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
-                                        <div class="desc">
-                                            <span>Bối rối trước những câu hỏi mình là ai, sứ mệnh của mình là gì</span>
-                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="desc">
-                                            <span>Chưa định hình được hướng đi phù hợp với bản thân</span>
-                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="desc">
-                                            <span>Muốn hiểu rõ về bản thân để phát triển và chinh phục ước mơ</span>
-                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                    <div class="col-11 px-0 mt-5">
+                                        <div class="titlea text-center">
+                                            <div>
+                                                <div class="gr-tl"><span>NẾU BẠN THƯỜNG XUYÊN NÓNG GIẬN, KHÔNG THỂ KIỂM SOÁT NHỮNG CẢM XÚC TIÊU CỰC CỦA MÌNH. BẠN KHÔNG MUỐN TRẢ GIÁ CHO SỰ NGU DẠI NHẤT THỜI ĐÓ</span></div>
+                                                <div class="gr-tl"><span>THÌ ĐÂY CHÍNH LÀ GIẢI PHÁP DÀNH CHO BẠN!</span></div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="title text-center text-white py-5 mt-4">
+                                        <div class="title text-center py-5 mt-4">
                                             <h3>GÓI SẢN PHẨM NÀY SẼ GIÚP BẠN:</h3>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="w-100">
                                             <div class="row g-0 justify-content-center g-lg-4">
-                                                <div class="col-md-4">
+                                                <div class="col-md-3">
                                                     <div class="row g-0 text-white">
                                                         <div class="col-12">
-                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                            <img class="w-100" src="/img/post/b.png" alt="">
                                                         </div>
                                                         <div class="col-12 itembg">
                                                             <div class="row justify-content-center g-0">
                                                                 <div class="col-10">
-                                                                    <h3>định vị</h3>
-                                                                    <h3>bản thân</h3>
-                                                                </div>
-                                                                <div class="col-10">
-                                                                    <div class="fw-lighter desc1"><span>Tự định vị được bản thân là ai bằng việc thấu hiểu chính mình</span></div>
+                                                                    <div class="fw-lighter desc1"><span>Tự mình mở cách cửa trí tuệ bên trong và biết cách phát triển bản thân</span></div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-md-3">
                                                     <div class="row g-0 text-white">
                                                         <div class="col-12">
-                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                            <img class="w-100" src="/img/post/c.png" alt="">
                                                         </div>
                                                         <div class="col-12 itembg">
                                                             <div class="row justify-content-center g-0">
                                                                 <div class="col-10">
-                                                                    <h3>đánh thức</h3>
-                                                                    <h3>Tiềm năng</h3>
-                                                                </div>
-                                                                <div class="col-10">
-                                                                    <div class="fw-lighter desc1"><span>Đánh thức được những khả năng tiềm ẩn để phát huy tối đa thế mạnh của bản thân trong công việc và cuộc sống</span></div>
+                                                                    <div class="fw-lighter desc1"><span>Tạo sự kết nối với nguồn năng lượng về sự thịnh vượng để có sự giàu có bền vững</span></div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-md-3">
                                                     <div class="row g-0 text-white">
                                                         <div class="col-12">
-                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                            <img class="w-100" src="/img/post/d.png" alt="">
                                                         </div>
                                                         <div class="col-12 itembg">
                                                             <div class="row justify-content-center g-0">
                                                                 <div class="col-10">
-                                                                    <h3>Tìm được</h3>
-                                                                    <h3>Đam mê</h3>
-                                                                </div>
-                                                                <div class="col-10">
-                                                                    <div class="fw-lighter desc1"><span>Tìm được lẽ sống và đam mê đích thực để sống một cuộc đời thật ý nghĩa, trọn vẹn </span></div>
+                                                                    <div class="fw-lighter desc1"><span>Tạo niềm tin và cài đặt sâu niềm tin, gieo hạt giống thịnh vượng</span></div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-md-3">
                                                     <div class="row g-0 text-white">
                                                         <div class="col-12">
-                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                            <img class="w-100" src="/img/post/e.png" alt="">
                                                         </div>
                                                         <div class="col-12 itembg">
                                                             <div class="row justify-content-center g-0">
                                                                 <div class="col-10">
-                                                                    <h3>tìm được</h3>
-                                                                    <h3>hướng đi</h3>
-                                                                </div>
-                                                                <div class="col-10">
-                                                                    <div class="fw-lighter desc1"><span>Có một la bàn cho cuộc đời để đưa ra những quyết định và con đường đúng đắn</span></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="row g-0 text-white">
-                                                        <div class="col-12">
-                                                            <img class="w-100" src="/img/post/a.png" alt="">
-                                                        </div>
-                                                        <div class="col-12 itembg">
-                                                            <div class="row justify-content-center g-0">
-                                                                <div class="col-10">
-                                                                    <h3>duy trì</h3>
-                                                                    <h3>năng lượng</h3>
-                                                                </div>
-                                                                <div class="col-10">
-                                                                    <div class="fw-lighter desc1"><span>Duy trì năng lượng tích cực và bình an trong cuộc sống</span></div>
+                                                                    <div class="fw-lighter desc1"><span>Sống một cuộc đời trọn vẹn và đầy ý nghĩa</span></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -422,36 +513,65 @@
                             <div class="item px-0 px-lg-4 py-4">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="title text-center text-white py-4">
-                                            <h5 class="fw-light">NẾU BẠN ĐANG GẶP VẤN ĐỀ SAU:</h5>
+                                        <div class="title text-center py-4">
+                                            <h5 class="hd1">MỘT LẦN MẤT KIỂM SOÁT</h5>
+                                            <h5 class="hd1">ĐÁNH MẤT SỰ NGHIỆP CẢ CUỘC ĐỜI</h5>
+                                            <h5 class="hd1 hd2">Nóng giận - Đổ lỗi - Phán xét - Chê bai</h5>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
-                                        <div class="desc">
-                                            <span>Là chủ doanh nghiệp</span>
-                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="desc">
-                                            <span>Cần xác định chiến lược, định hình kinh doanh cho năm nay</span>
-                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="desc">
-                                            <span>Bạn cần biết và dự đoán chu kỳ phát triển của doanh nghiệp mình trong năm nay và 3 năm tiếp theo</span>
-                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="desc">
-                                            <span>Có ý định kinh doanh và đang cần tìm một ngày thật đẹp để đi làm giấy đăng ký kinh doanh, tìm một cái tên</span>
-                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                    <div class="col-md-12 position-relative">
+                                        <div class="row g-0 g-lg-4">
+                                            <div class="col-md-4 px-4 position-relative">
+                                                <div class="image">
+                                                    <div class="avatar c1"></div>
+                                                </div>
+                                                <div class="title position-relative">
+                                                    <h4>ĐÁNH MẤT SỰ PHÁT TRIỂN DOANH</h4>
+                                                    <h4>NGHIỆP VÌ KHÔNG BIẾT CÁCH</h4>
+                                                    <h4>ĐIỀU PHỐI NHÂN SỰ</h4>
+                                                </div>
+                                                <div class="desc">
+                                                    <ul class="list-group">
+                                                        <li><span>Bảo thủ, chỉ trích, xu nịnh, sếp nói sao nghe vậy</span></li>
+                                                        <li><span>Đánh giá thấp người có năng lực, không thường xuyên trao đổi</span></li>
+                                                        <li><span>Đề cao chủ nghĩa cá nhân và lan truyền cảm xúc tiêu cưc</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 px-4 position-relative">
+                                                <div class="image">
+                                                    <div class="avatar c2"></div>
+                                                </div>
+                                                <div class="title position-relative">
+                                                    <h4>ĐÁNH MẤT DOANH NGHIỆP</h4>
+                                                    <h4>KHÔNG CÓ ĐỊNH HƯỚNG, KẾ HOẠCH</h4>
+                                                </div>
+                                                <div class="desc">
+                                                    <ul class="list-group">
+                                                        <li><span>Suy nghĩ ngắn hạn, chỉ tập trung vào lợi nhuận mà không phát triển doanh nghiệp</span></li>
+                                                        <li><span>Tư duy trong “tháp” - tức chỉ dựa trên đặc trưng và sự tác động đến một bộ phận sẽ làm hạn chế những ý tưởng và làm suy yếu hoạt động của công ty</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 px-4 position-relative">
+                                                <div class="image">
+                                                    <div class="avatar c3"></div>
+                                                </div>
+                                                <div class="title position-relative">
+                                                    <h4>ĐÁNH MẤT MỐI QUAN HỆ</h4>
+                                                    <h4>TRONG XÃ HỘI</h4>
+                                                </div>
+                                                <div class="desc">
+                                                    <ul class="list-group">
+                                                        <li><span>Đánh giá thấp các mối quan hệ, không tập trung xây dựng các mối quan hệ trong và ngoài công ty</span></li>
+                                                        <li><span>Không chú ý đến các nhu cầu mang tính xã hội, bỏ qua nhu cầu phát triển của các thành viên, tạo cho nhân viên cảm giác không muốn đến văn phòng, chỉ làm việc rồi về</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="title text-center text-white py-5 mt-4">
+                                        <div class="title text-center py-5 mt-4">
                                             <h3>GÓI SẢN PHẨM NÀY SẼ GIÚP BẠN:</h3>
                                         </div>
                                     </div>
@@ -461,15 +581,12 @@
                                                 <div class="col-md-3">
                                                     <div class="row g-0 text-white">
                                                         <div class="col-12">
-                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                            <img class="w-100" src="/img/post/f.png" alt="">
                                                         </div>
                                                         <div class="col-12 itembg c">
                                                             <div class="row justify-content-center g-0">
                                                                 <div class="col-10">
-                                                                    <h3>thấu hiểu bản thân</h3>
-                                                                </div>
-                                                                <div class="col-10">
-                                                                    <div class="fw-lighter desc1"><span>Hiểu sâu hơn về bản thân và những tiềm năng ẩn sâu trong bạn</span></div>
+                                                                    <div class="fw-lighter desc1"><span>Phát triển tư duy kinh doanh, xây dựng đội nhóm vững mạnh, biết cách lựa chọn và sử dụng nhân sự phù hợp</span></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -478,15 +595,12 @@
                                                 <div class="col-md-3">
                                                     <div class="row g-0 text-white">
                                                         <div class="col-12">
-                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                            <img class="w-100" src="/img/post/g.png" alt="">
                                                         </div>
                                                         <div class="col-12 itembg c">
                                                             <div class="row justify-content-center g-0">
                                                                 <div class="col-10">
-                                                                    <h3>thấu hiểu nhân sự</h3>
-                                                                </div>
-                                                                <div class="col-10">
-                                                                    <div class="fw-lighter desc1"><span>Biết cách lựa chọn và sử dụng nhân sự phù hợp</span></div>
+                                                                    <div class="fw-lighter desc1"><span>Hiểu sâu về những khả năng tiềm ẩn, phát triển bản lĩnh nhà lãnh đạo, đưa doanh nghiệp đi lên</span></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -495,16 +609,12 @@
                                                 <div class="col-md-3">
                                                     <div class="row g-0 text-white">
                                                         <div class="col-12">
-                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                            <img class="w-100" src="/img/post/h.png" alt="">
                                                         </div>
                                                         <div class="col-12 itembg c">
                                                             <div class="row justify-content-center g-0">
                                                                 <div class="col-10">
-                                                                    <h3>hỗ trợ định hình</h3>
-                                                                    <h3>sứ mệnh và văn hóa dn</h3>
-                                                                </div>
-                                                                <div class="col-10">
-                                                                    <div class="fw-lighter desc1"><span>Có chỗ dựa cho con đường định hình sứ mệnh bản thân và doanh nghiệp của mình. Xây dựng được 1 văn hóa doanh nghiệp bền vững và trường tồn</span></div>
+                                                                    <div class="fw-lighter desc1"><span>Định hình sứ mệnh bản thân và doanh nghiệp của mình. Xây dựng được 1 văn hóa doanh nghiệp bền vững và trường tồn</span></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -513,14 +623,13 @@
                                                 <div class="col-md-3">
                                                     <div class="row g-0 text-white">
                                                         <div class="col-12">
-                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                            <img class="w-100" src="/img/post/i.png" alt="">
                                                         </div>
                                                         <div class="col-12 itembg c">
                                                             <div class="row justify-content-center g-0">
-                                                                <div class="col-10">
+                                                                {{-- <div class="col-10">
                                                                     <h3>góc nhìn mới giúp định</h3>
-                                                                    <h3>hướng chiến lược kd</h3>
-                                                                </div>
+                                                                </div> --}}
                                                                 <div class="col-10">
                                                                     <div class="fw-lighter desc1"><span>Hiểu được quy luật vận hành của doanh nghiệp để định hướng chiến lược kinh doanh trong năm nay và 3 năm tiếp theo</span></div>
                                                                 </div>
