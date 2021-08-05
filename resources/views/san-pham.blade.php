@@ -267,7 +267,7 @@
                                         <div class="title text-center py-4">
                                             <h5 class="hd1">MỘT LẦN MẤT KIỂM SOÁT</h5>
                                             <h5 class="hd1">ĐÁNH MẤT HẠNH PHÚC CẢ CUỘC ĐỜI</h5>
-                                            <h5 class="hd1 hd2">Nóng giận - Đổ lỗi - Phán xét - Chê bai</h5>
+                                            <h5 class="hd1">Nóng giận - Đổ lỗi - Phán xét - Chê bai</h5>
                                         </div>
                                     </div>
                                     <div class="col-md-12 position-relative">
@@ -516,7 +516,7 @@
                                         <div class="title text-center py-4">
                                             <h5 class="hd1">MỘT LẦN MẤT KIỂM SOÁT</h5>
                                             <h5 class="hd1">ĐÁNH MẤT SỰ NGHIỆP CẢ CUỘC ĐỜI</h5>
-                                            <h5 class="hd1 hd2">Nóng giận - Đổ lỗi - Phán xét - Chê bai</h5>
+                                            <h5 class="hd1">Bảo thủ - Chỉ trích - Đổ lỗi - Chê bai</h5>
                                         </div>
                                     </div>
                                     <div class="col-md-12 position-relative">
@@ -567,6 +567,14 @@
                                                         <li><span>Không chú ý đến các nhu cầu mang tính xã hội, bỏ qua nhu cầu phát triển của các thành viên, tạo cho nhân viên cảm giác không muốn đến văn phòng, chỉ làm việc rồi về</span></li>
                                                     </ul>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-11 px-0 mt-5">
+                                        <div class="titlea text-center">
+                                            <div>
+                                                <div class="gr-tl"><span>NẾU DOANH NGHIỆP BẠN KHÔNG PHÁT TRIỂN, KHÔNG THỂ KIỂM SOÁT NHỮNG THÔNG TIN XÚC TIÊU CỰC. NẾU BẠN KHÔNG MUỐN ĐÁNH MẤT DOANH NGHIỆP, SỰ NGHIỆP MÀ CẢ ĐỜI GÂY DỰNG</span></div>
+                                                <div class="gr-tl"><span>THÌ ĐÂY CHÍNH LÀ GIẢI PHÁP DÀNH CHO BẠN!</span></div>
                                             </div>
                                         </div>
                                     </div>

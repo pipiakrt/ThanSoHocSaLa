@@ -40,6 +40,7 @@ import ThanSo from './pages/ThanSo/index'
 import EditThanSo from './pages/ThanSo/edit'
 // posts
 import Posts from './pages/Posts/index'
+import Tags from './pages/Posts/tag'
 import CreatePost from './pages/Posts/create'
 import EditPost from './pages/Posts/edit'
 import CategoryPost from './pages/Posts/category'
@@ -230,6 +231,11 @@ const routes = [
     {
         path: '/admin/bai-viet/danh-muc',
         component: CategoryPost,
+        name: 'Posts',
+    },
+    {
+        path: '/admin/bai-viet/chuyen-muc',
+        component: Tags,
         name: 'Posts',
     },
     // {

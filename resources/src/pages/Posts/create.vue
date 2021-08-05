@@ -145,9 +145,11 @@ export default {
             avatar: '',
             description: '',
             content: '',
+            keyword: '',
             type: "post",
             categories: [],
             category: '',
+            tags: [],
         }
     },
     watch: {
@@ -200,6 +202,14 @@ export default {
                 });
             });
         })
+        axios('/api/tags').then(res => {
+            this.tags = res.data.data
+            KTUtil.ready(function () {
+                $('#keyword').select2({
+                    placeholder: "Chọn từ khóa",
+                });
+            });
+        })
     },
     methods: {
         setTypeGetImg() {
@@ -225,6 +235,7 @@ export default {
                 image: this.avatar,
                 category_id: this.category,
                 description: this.description,
+                keyword: this.keyword,
                 content: $('.summernote').summernote('code'),
                 status: String(status),
             }

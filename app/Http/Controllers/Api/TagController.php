@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Models\Tag as Model;
 use Illuminate\Http\Request;
-use App\Http\Resources\Post as Resources;
-use App\Models\Post as Model;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\Tag\Store;
+use App\Http\Resources\Tag as Resources;
 
-class PostController extends Controller
+class TagController extends Controller
 {
     /**
      * Create a new AuthController instance.
@@ -24,9 +25,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        return Model::paginateFilter($request);
+        return Resources::collection(Model::orderBy('id', 'desc')->get());
     }
 
     /**
@@ -37,19 +38,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $post = Model::create($request->all());
-        return $post->Tags()->attach($request->keyword);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Model $post)
-    {
-        return new Resources($post);
+        return Model::create($request->all());
     }
 
     /**
@@ -59,12 +48,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Model $post)
+    public function update(Request $request, $id)
     {
-        $post->update($request->all());
-        if ($request->keyword) {
-            return $post->Tags()->sync($request->keyword);
-        }
+        $tag = Model::find($id);
+        return $tag->update($request->all());
     }
 
     /**
@@ -73,8 +60,8 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy($id)
     {
-        return Model::destroy($request->id);
+        return Model::destroy($id);
     }
 }

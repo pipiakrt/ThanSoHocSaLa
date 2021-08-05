@@ -28,6 +28,11 @@ class Post extends Model
         'created_at' => 'date',
     ];
 
+    public function Tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
     public function filterOrder(EloquentBuilder $query, $value)
     {
         $query->orderBy('id', $value);
