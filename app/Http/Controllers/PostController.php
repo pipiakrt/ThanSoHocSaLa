@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderby('id', 'desc')->where('type', 'post')->paginate(5);
+        $posts = Post::orderby('id', 'desc')->where(['type' => 'post', 'status' => 1])->paginate(5);
         return view('tin-tuc', compact('posts'));
     }
 
@@ -26,7 +26,7 @@ class PostController extends Controller
      */
     public function cauchuyen()
     {
-        $posts = Post::orderby('id', 'desc')->where('type', 'story')->paginate(5);
+        $posts = Post::orderby('id', 'desc')->where(['type' => 'story', 'status' => 1])->paginate(5);
         return view('cau-chuyen', compact('posts'));
     }
 
@@ -40,7 +40,7 @@ class PostController extends Controller
     {
         $post = Post::where('slug', $slug)->first();
         if ($post) {
-            $posts = Post::orderby('id', 'desc')->where('id', '<', $post->id)->take(7)->get();
+            $posts = Post::orderby('id', 'desc')->where(['category_id' => $post->category_id, 'type' => $post->type, 'status' => 1])->take(7)->get();
             return view('tin-tuc-chi-tiet', compact(['post', 'posts']));
         }
         else {

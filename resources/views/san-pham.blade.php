@@ -1,16 +1,119 @@
 @extends('layouts.app')
 
 @push('styles')
-    <style>
-        .card-pricing.popular {
-            z-index: 1;
-            border: 3px solid #007bff;
-        }
-        .card-pricing .list-unstyled li {
-            padding: .5rem 0;
-            color: #6c757d;
-        }
-    </style>
+<link rel="stylesheet" href="/css/ket-qua-tra-cuu.css">
+
+<style>
+    .mr-0 {
+        margin-right: 0px !important;
+    }
+    .ketqua-service {
+        background-color: #e7f1e9;
+        margin-top: 0;
+    }
+    .ketqua-service .gia-tri-cot-loi {
+        background-color: unset;
+        min-height: unset;
+        margin-top: 0;
+        border-top-left-radius: unset;
+        border-bottom-right-radius: unset;
+    }
+    .ketqua-service .gia-tri-cot-loi .d-flex {
+        margin-bottom: 30px;
+    }
+    .ketqua-service .gia-tri-cot-loi .titlecotloi {
+        padding-top: 100px;
+    }
+    .tieudegoi {
+        background-color: #03402f;
+    }
+    .tieudegoi .tengoi h3 {
+        color: #608f6c;
+        margin-bottom: 0;
+    }
+    .tieudegoi .active {
+        background-color: #097364;
+    }
+    .tieudegoi .active .tengoi h3 {
+        color: white;
+    }
+    .tieudegoi .tengoi {
+        text-align: center;
+        padding: 53px 0;
+    }
+    .thongtingoi .maingoi {
+        background-color: #097364;
+    }
+    .thongtingoi .carousel-item {
+        transition: transform .1s !important;
+    }
+    .sanpham {
+        background-color: #097364;
+        min-height: unset;
+        padding: unset;
+        background-image: unset;
+    }
+    .sanpham .content-ketqua .share-ketqua {
+        padding: 150px 0;
+    }
+    .sanpham .content-ketqua .titlecs.text-center h4 {
+        margin-right: 0%;
+    }
+    .sanpham .content-ketqua .desccs {
+        margin-left: 0%;
+        margin: auto;
+        font-size: 18px;
+        font-weight: 200 !important;
+        margin-top: 30px;
+    }
+    .sanpham .btn-ketqua {
+        margin-top: 50px;
+        margin-right: 0%;
+    }
+    @font-face {
+        font-family: 'iCiel DIN Pro Condensed';
+        src: url(/fonts/DinPro/DINPro-CondMedium.ttf);
+        font-weight: 500;
+    }
+    .thongtingoi {
+        background-color: #e7f1e9;
+    }
+    .thongtingoi .item .desc {
+        border: 2px dashed #608f6c;
+        color: #faefe3;
+        padding: 25px 35px;
+        font-size: 18px;
+        font-weight: 200;
+        position: relative;
+        height: 100%;
+    }
+    .thongtingoi .item img.hoicham {
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+    }
+    .thongtingoi .itembg {
+        background-color: #03402f;
+        padding: 25px 0;
+        height: 230px;
+    }
+    .thongtingoi .itembg.c {
+        height: 270px;
+    }
+    .thongtingoi .itembg h3 {
+        font-family: 'iCiel DIN Pro Condensed';
+        font-size: 28px;
+        color: #faefe3;
+        text-transform: uppercase;
+        inline-size: max-content;
+    }
+    .thongtingoi .itembg .desc1 {
+        font-size: 18px;
+        border-top: 1px solid #097364;
+        padding-top: 10px;
+    }
+</style>
+
 @endpush
 
 @section('content')
@@ -26,14 +129,511 @@
     </div>
 </nav>
 
-{{-- <div class="group-bg cus-service2">
 
-    <x-sanpham />
+<main>
+    <div class="sliders">
+        <div id="sliders" class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="header-logo" alt="Thần Số Học" src="/img/sliders/2.png">
+            </div>
+            <div class="item">
+                <img class="header-logo" alt="Thần Số Học" src="/img/sliders/2.png">
+            </div>
+        </div>
+    </div>
+    <div class="tieudegoi">
+        <div class="container px-0 px-lg-4 pt-5">
+            <div class="row g-0 h-100">
+                <div class="col-md-6">
+                    <div class="eventItem2 active item" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0">
+                        <div class="tengoi">
+                            <h3>GÓI CÁ NHÂN</h3>
+                        </div>
+                    </div>
+                </div>
+                {{-- <div class="col-md-4">
+                    <div class="eventItem2 item" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1">
+                        <div class="tengoi">
+                            <h3>GÓI GIA ĐÌNH</h3>
+                        </div>
+                    </div>
+                </div> --}}
+                <div class="col-md-6">
+                    <div class="eventItem2 item" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2">
+                        <div class="tengoi">
+                            <h3>GÓI DOANH NGHIỆP</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thongtingoi">
+        <div class="container px-0 px-lg-4">
+            <div class="maingoi px-0 px-lg-5">
+                <div id="carouselExampleCaptions2" class="carousel slide text-dark h-100" data-bs-interval="false" data-bs-ride="carousel">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <div class="item px-0 px-lg-4 py-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="title text-center text-white py-4">
+                                            <h5 class="fw-light">NẾU BẠN ĐANG GẶP VẤN ĐỀ SAU:</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Loay hoay trong việc định hướng mục tiêu cuộc đời</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Bối rối trước những câu hỏi mình là ai, sứ mệnh của mình là gì</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Chưa định hình được hướng đi phù hợp với bản thân</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Muốn hiểu rõ về bản thân để phát triển và chinh phục ước mơ</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="title text-center text-white py-5 mt-4">
+                                            <h3>GÓI SẢN PHẨM NÀY SẼ GIÚP BẠN:</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="w-100">
+                                            <div class="row g-0 justify-content-center g-lg-4">
+                                                <div class="col-md-4">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>định vị</h3>
+                                                                    <h3>bản thân</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Tự định vị được bản thân là ai bằng việc thấu hiểu chính mình</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>đánh thức</h3>
+                                                                    <h3>Tiềm năng</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Đánh thức được những khả năng tiềm ẩn để phát huy tối đa thế mạnh của bản thân trong công việc và cuộc sống</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>Tìm được</h3>
+                                                                    <h3>Đam mê</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Tìm được lẽ sống và đam mê đích thực để sống một cuộc đời thật ý nghĩa, trọn vẹn </span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>tìm được</h3>
+                                                                    <h3>hướng đi</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Có một la bàn cho cuộc đời để đưa ra những quyết định và con đường đúng đắn</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>duy trì</h3>
+                                                                    <h3>năng lượng</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Duy trì năng lượng tích cực và bình an trong cuộc sống</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center mb-4">
+                                        <div class="btn-ketqua text-center mr-0">
+                                            <a href="/tai-khoan/gio-hang/ca-nhan">
+                                                <button>Mua Ngay</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-100">
+                            <div class="item px-0 px-lg-4 py-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="title text-center text-white py-4">
+                                            <h5 class="fw-light">NẾU BẠN ĐANG GẶP VẤN ĐỀ SAU:</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Vợ chồng không thấu hiểu lẫn nhau, không cảm thấy hạng phúc</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Mong muốn định hướng đúng tương lai cho các con</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Các thế hệ trong gia đình có những mâu thuẫn không cần thiết</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Định hướng của gia đình và mong muốn của các con không đồng nhất</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="title text-center text-white py-5 mt-4">
+                                            <h3>GÓI SẢN PHẨM NÀY SẼ GIÚP BẠN:</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="w-100">
+                                            <div class="row g-0 g-lg-4 mb-5">
+                                                <div class="col-md-4">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>THẤU HIỂU NGƯỜI THÂN</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Thấu hiểu vợ/chồng và bố mẹ, cách giao tiếp, tính cách của từng người để có cách ứng xử phù hợp mà vẫn yêu thương, xây dựng gia đình hạnh phúc.</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>Những lời khuyên tích cực</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Đưa ra lời khuyên giúp cho các thành viên có góc nhìn tích cực hơn, có động lực để thay đổi và phát triển.</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>truyền cảm hứng cho con cái</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Thấu hiểu con cái, biết được con mình đang mong muốn điều gì, phù hợp với ngành nghề, lĩnh vực nào để từ đó định hướng, tư vấn và truyền cảm hứng giúp con phát triển đồng đều giữa năng lực và đam mê</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center mb-4">
+                                        <div class="btn-ketqua text-center mr-0">
+                                            <button>COMING SOON</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-100">
+                            <div class="item px-0 px-lg-4 py-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="title text-center text-white py-4">
+                                            <h5 class="fw-light">NẾU BẠN ĐANG GẶP VẤN ĐỀ SAU:</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Là chủ doanh nghiệp</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Cần xác định chiến lược, định hình kinh doanh cho năm nay</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Bạn cần biết và dự đoán chu kỳ phát triển của doanh nghiệp mình trong năm nay và 3 năm tiếp theo</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="desc">
+                                            <span>Có ý định kinh doanh và đang cần tìm một ngày thật đẹp để đi làm giấy đăng ký kinh doanh, tìm một cái tên</span>
+                                            <img class="hoicham" src="/img/icon/hoicham.png" alt="Thần số học sala">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="title text-center text-white py-5 mt-4">
+                                            <h3>GÓI SẢN PHẨM NÀY SẼ GIÚP BẠN:</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="w-100">
+                                            <div class="row g-0 g-lg-4 mb-5">
+                                                <div class="col-md-3">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg c">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>thấu hiểu bản thân</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Hiểu sâu hơn về bản thân và những tiềm năng ẩn sâu trong bạn</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg c">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>thấu hiểu nhân sự</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Biết cách lựa chọn và sử dụng nhân sự phù hợp</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg c">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>hỗ trợ định hình</h3>
+                                                                    <h3>sứ mệnh và văn hóa dn</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Có chỗ dựa cho con đường định hình sứ mệnh bản thân và doanh nghiệp của mình. Xây dựng được 1 văn hóa doanh nghiệp bền vững và trường tồn</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="/img/post/a.png" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg c">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <h3>góc nhìn mới giúp định</h3>
+                                                                    <h3>hướng chiến lược kd</h3>
+                                                                </div>
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>Hiểu được quy luật vận hành của doanh nghiệp để định hướng chiến lược kinh doanh trong năm nay và 3 năm tiếp theo</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center mb-4">
+                                        <div class="btn-ketqua text-center mr-0">
+                                            <a href="/tai-khoan/gio-hang/doanh-nghiep">
+                                                <button>Mua Ngay</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-</div> --}}
+    <div class="service2 ketqua-service" id="san-pham">
+        <div class="container">
+            <div class="gia-tri-cot-loi bds-lg-initial">
+                <div class="titlecotloi text-dark text-center">
+                    <h2 class="title-h1"><span class="h1">10</span> GIÁ TRỊ CHỈ CÓ TẠI</h2>
+                    <h2 class="title-h1">BẢN ĐỒ CUỘC ĐỜI THẦN SỐ HỌC SALA</h2>
+                </div>
+                <div class="row g-0 px-0 px-lg-5">
+                    <div class="col-lg-6">
+                        <div class="block">
+                            <div class="d-flex">
+                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
+                                <div class="w-75"><span>Cung cấp đầy đủ 19 chỉ số quan trọng toàn diện nhất dành cho bạn.</span></div>
+                            </div>
+                            <div class="d-flex">
+                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
+                                <div class="w-75"><span>Góc nhìn tích cực, xác định bản chất, tư vấn theo quan điểm xây dựng và phát triển bản thân.</span></div>
+                            </div>
+                            <div class="d-flex">
+                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
+                                <div class="w-75"><span>Cho bạn lời khuyên 3 năm sắp tới để đạt được đỉnh thành công.</span></div>
+                            </div>
+                            <div class="d-flex">
+                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
+                                <div class="w-75"><span>Hiểu sâu sắc bản thân, nhận biết điểm mạnh, điểm yếu để phát triển sức mạnh, năng lực nội tại bên trong bản thân bạn.</span></div>
+                            </div>
+                            <div class="d-flex">
+                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
+                                <div class="w-75"><span>Nhận thức năng lực thiên bẩm của bản thân làm chỗ dựa cho đam mê để lựa chọn công việc phù hợp với bạn.</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="block">
+                            <div class="d-flex justify-content-center">
+                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
+                                <div class="w-75"><span>Thấu hiểu con cái, vợ chồng của mình để đạt được hạnh phúc gia đình.</span></div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
+                                <div class="w-75"><span>Được chuyên gia hỗ trợ luận giải và định hướng giải pháp, phát triển đột phá. </span></div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
+                                <div class="w-75"><span>Hiểu rõ và điều phối nhân sự một cách hiệu quả nhất.</span></div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
+                                <div class="w-75"><span>Phát triển tối đa năng lực cá nhân, tạo ra giá trị lớn cho bản thân và xã hội.</span></div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
+                                <div class="w-75"><span>Có được điểm tựa để đi đúng định hướng bạn thân.</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ketqua sanpham">
+        <div class="content-ketqua">
+            <div class="container container-ketqua">
+                <div class="row g-0">
+                    <div class="col-xl-12">
+                        <div class="share-ketqua text-white">
+                            <div class="titlecs text-center"><h4>nhận giải mã trực tiếp</h4></div>
+                            <div class="desccs fw-lighter">
+                                <div><span>Nếu bạn muốn biết chi tiết hơn về những lời khuyên phù hợp nhất, giải mã vận mệnh, thăng trầm và ý nghĩa từng năm. Khám phá Giải mã chi tiết chuyên sâu ngay.</span></div>
+                            </div>
+                            <div class="btn-ketqua text-center">
+                                <a href="/tai-khoan/tra-cuu-nang-cao">
+                                    <button>TRA CỨU CHUYÊN SÂU</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
-<div class="container mb-5 mt-5">
+</main>
+
+{{-- <div class="container mb-5 mt-5">
     <div class="pricing card-deck flex-column justify-content-center flex-md-row mb-3 row">
         <div class="col-md-3">
             <div class="card card-pricing text-center px-3 mb-4">
@@ -87,6 +687,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 @endsection
