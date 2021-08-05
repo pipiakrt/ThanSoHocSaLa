@@ -16,4 +16,9 @@ class Tag extends MySQL
     ];
 
     public $timestamps = false;
+
+    public function Posts()
+    {
+        return $this->belongsToMany(Post::class);
+    }
 }

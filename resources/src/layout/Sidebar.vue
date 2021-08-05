@@ -297,6 +297,10 @@ export default {
                             name: 'Danh mục',
                             url: '/admin/bai-viet/danh-muc'
                         },
+                        {
+                            name: 'Chuyên mục',
+                            url: '/admin/bai-viet/chuyen-muc'
+                        },
                     ]
                 },
                 {

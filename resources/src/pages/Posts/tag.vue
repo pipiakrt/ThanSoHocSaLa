@@ -8,13 +8,13 @@
                     <div class="card card-custom">
                         <div class="card-header flex-wrap border-0 pb-0">
                             <div class="card-title">
-                                <h3 class="card-label">Từ khóa</h3>
+                                <h3 class="card-label">Chuyên mục</h3>
                             </div>
                             <div class="symbol-group symbol-hover py-2">
                                 <div class="card-toolbar">
                                     <div class="dropdown dropdown-inline">
                                         <button data-toggle="modal" data-target="#exampleModalLong" class="btn btn-primary mr-2" aria-haspopup="true" aria-expanded="false">
-                                            <i class="icon-sm ki ki-plus"></i> Thêm Mới 
+                                            <i class="icon-sm ki ki-plus"></i> Thêm Mới
                                         </button>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                                                 <span class="navi-icon">
                                                                     <i class="flaticon2 flaticon2-trash"></i>
                                                                 </span>
-                                                                <span class="navi-text">Xóa từ khóa</span>
+                                                                <span class="navi-text">Xóa Chuyên mục</span>
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -87,7 +87,7 @@
                                             <label for="name" class="col-2 col-form-label">Tên</label>
                                             <div class="col-10">
                                                 <validation-provider rules="required|length:0,255" v-slot="{ errors }">
-                                                    <input v-model="name" class="form-control" type="text" placeholder="Tên từ khóa" />
+                                                    <input v-model="name" class="form-control" type="text" placeholder="Tên Chuyên mục" />
                                                     <div v-if="errors[0]" class="invalid-feedback d-block" v-text="errors[0]"></div>
                                                 </validation-provider>
                                             </div>
@@ -124,7 +124,7 @@
                                             <label for="name" class="col-2 col-form-label">Tên</label>
                                             <div class="col-10">
                                                 <validation-provider rules="required|length:0,255" v-slot="{ errors }">
-                                                    <input v-model="nameUpdate" class="form-control" type="text" placeholder="Tên từ khóa" />
+                                                    <input v-model="nameUpdate" class="form-control" type="text" placeholder="Tên Chuyên mục" />
                                                     <div v-if="errors[0]" class="invalid-feedback d-block" v-text="errors[0]"></div>
                                                 </validation-provider>
                                             </div>
@@ -168,8 +168,12 @@ export default {
             subHeader: {
                 links: [
                     {
-                        name: 'Từ khóa',
-                        url: '/tu-khoa/danh-sach',
+                        name: 'Bài viết',
+                        url: '/admin/bai-viet/danh-sach',
+                    },
+                    {
+                        name: 'Chuyên mục',
+                        url: '/admin/bai-viet/chuyen-muc',
                     },
                 ],
                 action: {
@@ -211,7 +215,7 @@ export default {
                         params.id = res.data._id
                         this.tags.push(params)
                         this.$refs['errors'].reset();
-                        toastr.success("Tạo từ khóa thành công!")
+                        toastr.success("Tạo Chuyên mục thành công!")
                         $('#exampleModalLong').modal('hide')
                     }
                     else {
@@ -252,7 +256,7 @@ export default {
             axios.delete('/api/tags/' + id).then(res => {
                 Swal.fire(
                     "Thành Công!",
-                    "Từ khóa đã bị xóa hoàn toàn.",
+                    "Chuyên mục đã bị xóa hoàn toàn.",
                     "success"
                 )
                 this.tags = this.tags.filter(item => item.id !== id)

@@ -48,6 +48,14 @@
                                         </select>
                                     </div>
                                 </div>
+                                    <div class="form-group row">
+                                    <label for="keyword" class="col-2 col-form-label">Chuyên mục</label>
+                                    <div class="col-10">
+                                        <select class="form-control" id="keyword" multiple="multiple" style="height: 35px">
+                                            <option v-for="item in tags" :key="item.id" v-text="item.name" :value="item.id"></option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <label for="categories" class="col-2 col-form-label">Loại bài viết</label>
                                     <div class="col-10">
@@ -145,7 +153,6 @@ export default {
             avatar: '',
             description: '',
             content: '',
-            keyword: '',
             type: "post",
             categories: [],
             category: '',
@@ -206,7 +213,7 @@ export default {
             this.tags = res.data.data
             KTUtil.ready(function () {
                 $('#keyword').select2({
-                    placeholder: "Chọn từ khóa",
+                    placeholder: "Chọn chuyên mục",
                 });
             });
         })
@@ -235,7 +242,7 @@ export default {
                 image: this.avatar,
                 category_id: this.category,
                 description: this.description,
-                keyword: this.keyword,
+                keyword: $('#keyword').select2("val"),
                 content: $('.summernote').summernote('code'),
                 status: String(status),
             }

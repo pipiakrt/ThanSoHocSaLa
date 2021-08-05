@@ -81,7 +81,7 @@
     }
     .thongtingoi .item .hd1 {
         font-family: "Open Sans", sans-serif;
-        color: rgb(238, 118, 17);
+        color: #097364;
         font-size: 23px;
         font-weight: bold;
         text-align: center;
@@ -117,7 +117,7 @@
 
     .thongtingoi ul li::before {
         content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-        color: rgb(238, 118, 17); /* Change the color */
+        color: #03402f; /* Change the color */
         font-weight: bold; /* If you want it to be bold */
         display: inline-block; /* Needed to add space between the bullet and the text */
         width: 1em; /* Also needed for space (tweak if needed) */
@@ -248,7 +248,7 @@
         }
         .thongtingoi .item .titlea .gr-tl {
             font-family: "Open Sans", sans-serif;
-            color: rgb(238, 122, 21);
+            color: #03402f;
             font-size: 17px;
             text-align: center;
             line-height: 1.6;

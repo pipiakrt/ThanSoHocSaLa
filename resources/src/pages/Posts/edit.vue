@@ -43,6 +43,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="keyword" class="col-2 col-form-label">Chuyên mục</label>
+                                    <div class="col-10">
+                                        <select class="form-control" id="keyword" multiple="multiple" style="height: 35px">
+                                            <option v-for="item in tags" :key="item.id" v-text="item.name" :value="item.id" style="display: none"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="slug" class="col-2 col-form-label">Tác giả</label>
                                     <div class="col-10">
                                         <input v-model="author" class="form-control" type="search" placeholder="Tác giả" />
@@ -149,6 +157,7 @@ export default {
             type: "",
             categories: [],
             category: '',
+            tags: [],
         }
     },
     watch: {
@@ -160,6 +169,14 @@ export default {
         await axios('/api/categories').then(res => {
             this.categories = res.data.data
         })
+        await axios('/api/tags').then(res => {
+            this.tags = res.data.data
+            KTUtil.ready(function () {
+                $('#keyword').select2({
+                    placeholder: "Chọn chuyên mục",
+                });
+            });
+        })
         await axios('/api/posts/' + this.$route.params.id).then(res => {
             this.id = res.data.data.id
             this.name = res.data.data.name
@@ -169,6 +186,13 @@ export default {
             this.author = res.data.data.author
             this.description = res.data.data.description
             this.type = res.data.data.type
+
+            let tagId = [];
+            res.data.data.tags.forEach(item => {
+                tagId.push(item.id)
+            });
+            $('#keyword').val(tagId);
+            $('#keyword').trigger('change');
 
             KTApp.unblockPage();
             KTUtil.ready(function () {
@@ -238,6 +262,7 @@ export default {
                 type: this.type,
                 image: this.avatar,
                 category_id: this.category,
+                keyword: $('#keyword').select2("val"),
                 description: this.description,
                 content: $('.summernote').summernote('code'),
                 status: String(status),
