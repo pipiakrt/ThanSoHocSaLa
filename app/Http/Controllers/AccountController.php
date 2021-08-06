@@ -53,22 +53,6 @@ class AccountController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function ketqualichsutracuu(Request $request, $id)
-    {
-        $dulieu = $request->user()->TraCuu()->where('created_at', $id)->first();
-        $data = $dulieu->data;
-        $user = [
-            'name' => $dulieu->name,
-            'birthdate' => $dulieu->birthdate,
-        ];
-        return view('ketquatracuunangcao', compact(['data', 'user']));
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function donhang(Request $request)
     {
         $user = $request->user();

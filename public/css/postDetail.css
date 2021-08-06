@@ -31,6 +31,7 @@
     letter-spacing: 0.4px;
     margin-bottom: 25px;
     line-height: 20px;
+    text-align: start;
 }
 .nguon_goc .titleNG {
     letter-spacing: 2.5px;

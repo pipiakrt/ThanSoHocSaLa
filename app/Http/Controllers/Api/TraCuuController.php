@@ -26,7 +26,7 @@ class TraCuuController extends Controller
      */
     public function index()
     {
-        //
+        return Resources::collection(Model::paginate());
     }
 
     /**

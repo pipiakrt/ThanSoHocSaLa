@@ -27,6 +27,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('/gioi-thieu')->group(function () {
     Route::get('/', [HomeController::class, 'gioithieu']);
+    Route::get('/ve-sala', [HomeController::class, 'thansohocsala']);
     Route::get('/chuyen-gia', [HomeController::class, 'chuyengia']);
     Route::get('/su-menh', [HomeController::class, 'sumenh']);
     Route::get('/duong-doi', [HomeController::class, 'duongdoi']);
@@ -44,13 +45,16 @@ Route::prefix('/san-pham')->group(function () {
     });
 });
 
-Route::get('/gioi-thieu-sala', function () {
-    return view('/gioi-thieu-sala');
-});
 Route::get('/cau-chuyen', [PostController::class, 'cauchuyen']);
 Route::prefix('/tin-tuc')->group(function () {
     Route::get('/', [PostController::class, 'index']);
     Route::get('/{slug}', [PostController::class, 'show']);
+});
+
+Route::prefix('/tai-khoan')->group(function () {
+    Route::post('/quyen-mat-khau', [AccountController::class, 'sendMail']);
+    Route::get('/doi-mat-khau', [AccountController::class, 'formreset']);
+    Route::post('/quyen-mat-khau/{token}', [AccountController::class, 'reset']);
 });
 
 Route::group(['middleware' => 'login'], function(){
@@ -59,17 +63,12 @@ Route::group(['middleware' => 'login'], function(){
         Route::post('/cap-nhap', [AccountController::class, 'update']);
         Route::get('/gio-hang', [AccountController::class, 'giohang']);
         Route::get('/lich-su-tra-cuu', [AccountController::class, 'lichsutracuu']);
-        Route::get('/lich-su-tra-cuu/{id}', [AccountController::class, 'ketqualichsutracuu']);
+        Route::get('/lich-su-tra-cuu/{id}', [ExportController::class, 'ketqualichsutracuu']);
         Route::get('/gia-han/{id}', [AccountController::class, 'giahan']);
         Route::get('/gio-hang/{slug}', [ProductController::class, 'dathang']);
         Route::get('/dich-vu', [AccountController::class, 'donhang']);
         Route::get('/tra-cuu-nang-cao', [ThanSoController::class, 'formnangcao']);
-        Route::post('/tra-cuu-nang-cao', [ThanSoController::class, 'ketquanangcao']);
-        Route::get('/export', [ExportController::class, 'index']);
-
-        Route::post('/quyen-mat-khau', [AccountController::class, 'sendMail']);
-        Route::get('/doi-mat-khau', [AccountController::class, 'formreset']);
-        Route::post('/quyen-mat-khau/{token}', [AccountController::class, 'reset']);
+        Route::post('/tra-cuu-nang-cao', [ExportController::class, 'index']);
     });
 });
 

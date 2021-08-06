@@ -7,240 +7,368 @@
 </div>
 
 <main>
-    <div class="sliders">
-        <div id="sliders" class="owl-carousel owl-theme">
-            <div class="item">
-                <img class="header-logo" alt="Thần Số Học" src="/img/banner/duong-doi.png">
-            </div>
-            <div class="item">
-                <img class="header-logo" alt="Thần Số Học" src="/img/banner/duong-doi.png">
-            </div>
-            <div class="item">
-                <img class="header-logo" alt="Thần Số Học" src="/img/banner/duong-doi.png">
-            </div>
+
+    <div id="sliders" class="owl-carousel owl-theme">
+        <div class="item">
+            <img class="header-logo" alt="Thần Số Học" src="/img/banner/ynsm.jpg">
+        </div>
+        <div class="item">
+            <img class="header-logo" alt="Thần Số Học" src="/img/banner/ynsm.jpg">
+        </div>
+        <div class="item">
+            <img class="header-logo" alt="Thần Số Học" src="/img/banner/ynsm.jpg">
         </div>
     </div>
+</div>
 
-    <div class="session__mo-ta text-center">
-        <div class="desc">
-            <span>“Trong Thần số học, chỉ số Đường đời là chỉ số cung cấp thông tin chi tiết về cuộc sống của nhiều </span>
-        </div>
-        <div class="desc">
-            <span>hơn bất kỳ số nào khác trong Thần số học biểu đồ ngày sinh của bạn.”</span>
-        </div>
+<div class="session__mo-ta text-center">
+    <div class="desc">
+        <span>Chỉ Số Sứ Mệnh là chỉ số quan trọng trong bản đồ Thần Số Học của mỗi người. Nó cho ta biết “Mục </span>
     </div>
-
-    <div class="main_ung-dung text-center">
-        <div class="container container-header2">
-            <div class="header_ung-dung">
-                <h2><b>1.</b> Chỉ số đường đời là gì?</h2>
-            </div>
-            <ul class="list-item">
-                <li>
-                    <div class="desc">
-                        <span>Mỗi cá nhân khi sinh ra trên cuộc đời đều đã được trao một bản thiết kế giống như ngôi nhà, đường phố, ô tô, vũ trụ đều có bản thiết kế cho riêng </span>
-                    </div>
-                    <div class="desc">
-                        <span>mình. Chỉ số Đường đời sẽ tiết lộ điểm mạnh, điểm yếu, những cơ hội và thách thức mà mỗi cá nhân sẽ gặp được trong cuộc sống. </span>
-                    </div>
-                </li>
-                <li>
-                    <div class="desc">
-                        <span>Số Đường đời chính là thần số học ngày sinh được tính từ ngày tháng năm sinh đầy đủ của một người, và được coi là một trong những con số </span>
-                    </div>
-                    <div class="desc">
-                        <span>quan trọng, có ảnh hưởng nhất trong toàn bộ biểu đồ Thần số học (Numerology) của người đó. Thời khắc mà mỗi cá nhân sinh ra chính là thời </span>
-                    </div>
-                    <div class="desc">
-                        <span>khắc quyết định xem cuộc đời sẽ ban tặng cho họ tài năng và tiềm năng gì. Chính vì vậy, thần số học dựa vào ngày sinh chính là chủ mệnh, là chỉ </span>
-                    </div>
-                    <div class="desc">
-                        <span>số quan trọng nhất mà mỗi cá nhân đều phải đi theo thì mới có được cuộc sống thành công, hạnh phúc.</span>
-                    </div>
-                </li>
-            </ul>
-            <div class="row g-0 mt-5">
-                <div class="col-md-6">
-                    <img class="mw-100" src="/img/banner/1.jpg" alt="">
-                </div>
-                <div class="col-md-6">
-                    <img class="mw-100" src="/img/banner/2.jpg" alt="">
-                </div>
-            </div>
-            <div class="header_ung-dung mt-5">
-                <h2><b>2.</b> cách tính chỉ số đường đời</h2>
-            </div>
-            <ul class="list-item">
-                <li>
-                    <div class="desc">
-                        <span>Để tìm ra được thần số học ngày sinh của bạn trong Thần số học, bạn chỉ cần cộng từng số trong ngày tháng năm sinh của mình lại và quy về </span>
-                    </div>
-                    <div class="desc">
-                        <span>một chữ số.</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="desc">
-                        <span>Ví dụ, <b>nếu bạn sinh vào ngày 3/4/1986, bạn sẽ tính như sau: 3 + 4 + 1 + 9 + 8 + 6 = 31. Tiếp theo bạn quy số 31 về một chữ số bằng cách</b> </span>
-                    </div>
-                    <div class="desc">
-                        <b>lấy: 3 + 1 = 4.</b>
-                    </div>
-                </li>
-                <li>
-                    <div class="desc">
-                        <span>Như vậy, con số Đường đời hay còn gọi là thần số học dựa vào ngày sinh của bạn sẽ là 4.</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="desc">
-                        <span>Mỗi con số sẽ có một ý nghĩa khác nhau, con số Đường đời của bạn sẽ cho bạn biết bạn là người như thế nào, điểm mạnh, điểm yếu là gì để </span>
-                    </div>
-                    <div class="desc">
-                        <span>bạn có thể dễ dàng đạt được thành công trong cuộc sống.</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
+    <div class="desc">
+        <span>đích sống của ta là gì?” để ta có thể theo đuổi sứ mệnh đó và đạt được thành công, đóng góp được </span>
     </div>
+    <div class="desc">
+        <span>nhiều lợi ích cho xã hội.</span>
+    </div>
+</div>
 
-    <style>
-        .bo-vien2 {
-            margin-top: 50px;
-            position: relative;
-            width: 100%;
-            max-width: 570px;
-            border: 1px solid #e3a352;
-            min-height: 130px;
-        }
-        .fake-bovien2 {
-            position: absolute;
-            border: 1px solid #e3a352;
-            left: 7px;
-            right: -8px;
-            bottom: -8px;
-            top: 7px;
-        }
-        .bo-vien2 b {
-            font-size: 18px;
-            font-weight: 500;
-        }
-    </style>
-
-    <div class="main_su-menh bg-grray">
-        <div class="container container-header2">
-            <div class="header_ung-dung text-center mt-5">
-                <h2><b>3.</b> Ý nghĩa của từng con số Đường đời trong Thần số học</h2>
-            </div>
-            <ul class="list-item text-center">
-                <li>
-                    <div class="desc">
-                        <span>Mỗi số Đường đời trong chín con số có thể được xếp vào một trong ba nhóm: tư duy, sáng tạo, hoặc thực hiện. </span>
-                    </div>
-                    <div class="desc">
-                        <span>Các nhóm này được gọi là các số “phù hợp tự nhiên” (tự nhiên chúng phù hợp với nhau).</span>
-                    </div>
-                </li>
-            </ul>
-            <div class="bo-vien2 mx-auto">
-                <div class="text-center">
-                    <div class="mt-4"><b>1-5-7 : là các số Tư duy, luôn suy nghĩ</b></div>
-                    <div><b>3-6-9 : là các số Sáng tạo, luôn sáng tạo</b></div>
-                    <div><b>2-4-8 : là các số Thực tiễn, luôn quan tâm đến việc phải làm.</b></div>
+<div class="main_ung-dung text-center">
+    <div class="container container-header2">
+        <div class="header_ung-dung">
+            <h2><b>1.</b> Chỉ số sứ mệnh là gì?</h2>
+        </div>
+        <ul class="list-item">
+            <li>
+                <div class="desc">
+                    <span>Sứ mệnh chính là lý do để con người thực sự tồn tại theo cách có ý nghĩa nhất đối với cuộc đời, để có thể sống hết mình với đam mê và không </span>
                 </div>
-                <div class="fake-bovien2"></div>
-            </div>
-            <div class="row g-0 mt-4 g-xl-5">
-                <div class="col-md-6">
-                    <div class="row g-0">
-                        <div class="col-12">
-                            <div class="item">
-                                <div class="item-title"><h3>số đường đời “1” - THủ lĩnh</h3></div>
-                                <div class="item-desc"><span>Người số 1 là người năng động, tự lập và cần mẫn. Họ muốn hoàn thành mọi việc một cách tốt nhất, và hầu như luôn thành công.</span></div>
-                                <div class="item-desc"><span>Người số 1 không thích nhờ sự trợ giúp, bởi họ luôn muốn tự mình thực hiện công việc. Khi họ đã quyết định thì rất khó có thể làm họ thay đổi.</span></div>
-                                <div class="item-desc"><span>Họ có thể trở thành doanh nhân hay nhà cải cách xuất sắc nhờ vào lòng đam mê của mình. Họ cũng có thể là bác sĩ, nhân viên chăm sóc người bệnh hay nhà văn, chủ nhà hàng…</span></div>
-                                <div class="item-desc"><span>VD: Đường đời số 1 – Thủ lĩnh : Phạm Nhật Vượng – Chủ tịch tập đoàn Vingroup, Nguyễn Xuân Phúc – Thủ tướng Việt Nam, Hoài Linh – Nghệ sĩ hài ưu tú, Messi – Cầu thủ bóng đá nổi tiếng, Steve Jobs – Cố Chủ tịch tập đoàn Apple,..</span></div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="item">
-                                <div class="item-title"><h3>số đường đời “2” - người hòa giải</h3></div>
-                                <div class="item-desc"><span>Số Đường đời “2” ứng với những người đang tìm kiếm sự tổng hòa trong cuộc sống. Họ có mặt ở đây để yêu và được yêu. Như âm nhạc mang đến hiệu ứng nhẹ nhàng, họ là người khoan dung. Nếu bạn cần ai đó đồng cảm, hãy tìm đến số “2”, vì họ thích những cái ôm và những nụ hôn. Họ cần và sẵn lòng trao cho nhau tình yêu và cảm xúc. Đến với họ khi ngã lòng, vì yêu thương trọn vẹn là lẽ sống tự nhiên của họ.</span></div>
-                                <div class="item-desc"><span>Số’ “2” là người hòa giải, họ giỏi giải quyết các xung đột và họ sẽ làm hết sức để tránh chúng.</span></div>
-                                <div class="item-desc"><b>VD: Đường đời số 2 – Người hoà giải: Obama – Cựu Tổng thống Mỹ</b></div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="item">
-                                <div class="item-title"><h3>SỐ ĐƯỜNG ĐỜI “3” - NGƯỜI TRUYỀN ĐẠT</h3></div>
-                                <div class="item-desc"><span>Khi Shakespeare viết rằng, “Thế giới là tấn trò đời”, tức là ông đang miêu tả về số “3”, người luôn luôn thể hiện mình trên sân khấu chính. Số “3” thích sự sáng tạo, giao thiệp, và kết nối mọi người. Họ là nghệ sĩ bẩm sinh. Họ thích được lắng nghe, vì thế bạn sẽ thường kiếm được họ trên danh bạ!</span></div>
-                                <div class="item-desc"><span>Trong các mối quan hệ cá nhân, số “3” thuộc tuýp người lãng mạn. Họ rất chung thủy và khó lòng quên được những hình bóng cũ. Thậm chí khi mọi chuyện đã kết thúc, họ vẫn không thể từ bỏ.</span></div>
-                                <div class="item-desc"><b>VD: Đường đời 3 – Người truyền đạt: Jack Ma – Chủ tịch tập đoàn Alibaba, Đặng Lê Nguyên Vũ – Chủ tịch tập đoàn Trung Nguyên</b></div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="item">
-                                <div class="item-title"><h3>số đường đời “4” - người thầy</h3></div>
-                                <div class="item-desc"><span>Số “4” là con số của trí tuệ. Họ thích tìm tòi và sinh ra đã là người thầy. Họ thường đeo cặp kính tri thức mà tôi gọi họ là “cỗ máy con người” – tỷ như Bill Gates có là số “4” thì cũng không lạ gì. Cuộc sống của họ là một phương trình logic: A cộng B phải bằng C.</span></div>
-                                <div class="item-desc"><b>VD: Đường đời 4 – Người thầy: Bill Gates – Chủ tịch tập đoàn Microsoft, Trump – cựu Tổng thống Mỹ</b></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="desc">
+                    <span>phải hối tiếc bất cứ điều gì khi không còn tồn tại.</span>
                 </div>
-                <div class="col-md-6">
-                    <div class="row g-0">
-                        <div class="col-12">
-                            <div class="item">
-                                <div class="item-title"><h3>số đường đời “5” - lữ khách</h3></div>
-                                <div class="item-desc"><span>Số Đường đời “5” yêu tự do, vui vẻ và phiêu lưu. Họ thích sự đa dạng; họ có thể thay đổi lề thói làm việc hàng ngày vì họ rất mau chán. Loại rung động này cần sự kích thích bền vững. Họ sống trong đam mê. “Vui quên sầu” là trò chơi của số “5”.</span></div>
-                                <div class="item-desc"><span>Số “5” của chúng ta cũng là những thám tử bẩm sinh. Họ thích tìm hiểu chuyện gì thực sự đã xảy ra. Nếu họ nghĩ ai đó thiếu trung thực, họ sẽ tìm kiếm manh mối để vạch trần. Họ không thích cảm giác bị qua mặt.</span></div>
-                                <div class="item-desc"><b>VD: Đường đời 5 – Lữ khách: Mark Zuckerberg – Chủ tịch tập đoàn Facebook, Trấn Thành – MC, diễn viên, Quang Masan – Chủ tịch tập đoàn Masan</b></div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="item">
-                                <div class="item-title"><h3>số đường đời “6” - người mẹ</h3></div>
-                                <div class="item-desc"><span>Số Đường đời 6 là những phụ huynh bẩm sinh, người luôn quan tâm đến người khác dưới cái nhìn của bậc làm cha làm mẹ. Số “6” quan niệm rằng: Tình yêu và hôn nhân là không thể tách rời.</span></div>
-                                <div class="item-desc"><b>VD: Đường đời 6 – Người mẹ: Vũ Đức Đam – Phó Thủ tướng Chính phủ Việt Nam, Jeff Bezos – Chủ tịch tập đoàn Amazon, Warren Buffett – Nhà đầu tư tài ba, Chủ tịch Hồ Chí Minh</b></div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="item">
-                                <div class="item-title"><h3>số đường đời “7” - người tìm kiếm đức tin</h3></div>
-                                <div class="item-desc"><span>Số Đường đời “7” có đức tin từ nhỏ. Nếu số “7” không có đức tin, họ thấy cuộc đời mình không thật sự hạnh phúc. Điều này không có nghĩa là họ sẽ đặt niềm tin vào một tôn giáo nào đã định sẵn – mà niềm tin đến từ những thứ khác. Nhưng không thể phủ nhận có một nguồn năng lượng tâm linh toát ra từ họ. Nếu như con bạn thuộc số “7”, khi thằng bé (hay con bé) ngủ, trông nó như một thiên thần vậy. Thật là may mắn cho chúng ta nếu được như thế, vì lũ trẻ, thậm chí khi lớn, vẫn giữ mãi thứ tâm hồn tuyệt vời này.</span></div>
-                                <div class="item-desc"><b>VD: Đường đời 7 – Người tìm kiếm đức tin : Putin – Tổng thống Nga, Elon Musk – Giám đốc điều hành tập đoàn Tesla  </b></div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="item">
-                                <div class="item-title"><h3>số đường đời “8” - người điều hành</h3></div>
-                                <div class="item-desc"><span>Số 8 xuất sắc với khả năng điều hành, và cũng là con số của những chính khách. Nó là con số quyền lực, điều này cũng có nghĩa là, khi số 8 muốn kiểm soát, họ sẽ làm mọi thứ với hy vọng tạo ra sự khác biệt tích cực đến toàn thế giới.</span></div>
-                                <div class="item-desc"><b>VD: Đường đời 8 – Người điều hành: Sơn Tùng MTP – Chủ tịch tập đoàn MTP Entertainment</b></div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="item">
-                                <div class="item-title"><h3 style="inline-size: max-content;">số đường đời “9” - người theo chủ nghĩa nhân đạo</h3></div>
-                                <div class="item-desc"><span>Số “9” là số tiến hóa cao nhất trong Thần số học, và được coi như là một trong những rung động mạnh mẽ nhất, bởi vì nó chứa đựng những tinh túy của tất cả các con số khác. Khi số “9” có được nền tảng tinh thần mạnh mẽ, họ trở thành nguồn sáng của cả thế giới. Thật vậy, số “9” là người có lòng vị tha. Đây cũng là những rung động đơn có sự quyết tâm cao nhất. Loại Đường đời này có ý chí mạnh mẽ để theo đuổi đến cùng, bằng tham vọng và nghị lực phi thường, những gì mình tin tưởng.</span></div>
-                                <div class="item-desc"><b>VD: Đường đời 9 – Người theo chủ nghĩa nhân đạo: Phan Thị Bích Hằng – Nhà ngoại cảm, Mỹ Tâm – Ca sĩ, Đại Tướng Võ Nguyên Giáp</b></div>
-                            </div>
-                        </div>
+            </li>
+            <li>
+                <div class="desc">
+                    <span>Mỗi người sinh ra đều được Thượng đế hoặc đấng toàn năng nào đó khác ban cho sứ mệnh của cuộc đời. Nhiệm vụ của chúng ta là tìm ra nó và </span>
+                </div>
+                <div class="desc">
+                    <span>thực hiện với tất cả cố gắng của mình.</span>
+                </div>
+            </li>
+            <li>
+                <div class="desc">
+                    <span>Messi sinh ra với sứ mệnh là cầu thủ bóng đá, Lady Gaga sinh ra với sứ mệnh là ca sĩ. Hay như trong bài diễn văn nổi tiếng ở ĐH Stanford, Steve </span>
+                </div>
+                <div class="desc">
+                    <span>Jobs đã từng nói rằng chúng ta phải kiên trì đi tìm đam mê của mình, đừng bao giờ bỏ cuộc. Khi đã tìm được đam mê, việc chúng ta cần làm là </span>
+                </div>
+                <div class="desc">
+                    <span>thực hiện nó một cách nhiệt huyết nhất có thể và sẽ không còn cảm giác “phải” làm việc nữa.</span>
+                </div>
+            </li>
+            <li>
+                <div class="desc">
+                    <span>Nếu chúng ta không thực sự tìm được sứ mệnh trong con người, cuộc sống và công việc của bạn sẽ chẳng bao giờ có được thành công. Mỗi ngày </span>
+                </div>
+                <div class="desc">
+                    <span>phải đi làm trong sự bắt buộc, không có hứng khởi, niềm vui và dẫn đến điều tất yếu là hiệu quả công việc cực thấp. Giống như khi Messi đi hát, </span>
+                </div>
+                <div class="desc">
+                    <span>Lady Gaga đi đá bóng vậy.</span>
+                </div>
+            </li>
+            <li>
+                <div class="desc">
+                    <span>Sứ mệnh là điều bạn cần phải biết để theo đuổi nó, đạt được nó và trở nên thành công trong cuộc sống, đóng góp cho nhân loại. Trong Thần Số </span>
+                </div>
+                <div class="desc">
+                    <span>Học, Pythagore nghiên cứu ra mối liên hệ mật thiết giữa những con số và sứ mệnh của mỗi con người, ông gọi đó là Chỉ Số Sứ Mệnh.</span>
+                </div>
+            </li>
+        </ul>
+        <div class="row g-0 mt-5">
+            <div class="col-md-6">
+                <img class="mw-100" src="/img/banner/1.jpg" alt="">
+            </div>
+            <div class="col-md-6">
+                <img class="mw-100" src="/img/banner/2.jpg" alt="">
+            </div>
+        </div>
+        <div class="header_ung-dung mt-5">
+            <h2><b>2.</b> Tại sao cần biết Chỉ Số Sứ Mệnh?</h2>
+        </div>
+        <ul class="list-item">
+            <li>
+                <div class="desc">
+                    <span>Chỉ Số Sứ Mệnh cho bạn biết sức mạnh của bạn là gì, trước khi chết bạn muốn để lại cái gì cho cuộc đời này hay nói cách khác, Chỉ Số Sứ </span>
+                </div>
+            </li>
+            <li>
+                <div class="desc">
+                    <span>Mệnh cho bạn biết vũ trụ ban cái gì cho bạn khi đến thế giới này.</span>
+                </div>
+            </li>
+            <li>
+                <div class="desc">
+                    <span>Chỉ Số Sứ Mệnh vô cùng quan trọng đối với cuộc đời một con người. Chỉ Số Sứ Mệnh trong Thần số học trả lời cho các câu hỏi Tại sao bạn ở </span>
+                </div>
+            </li>
+            <li>
+                <div class="desc">
+                    <span>đây? Lý do bạn tồn tại là gì? Mục tiêu bạn hướng đến là gì? Nó đại diện cho sức mạnh gì của bạn? Vũ trụ gửi bạn đến thế giới này và bạn </span>
+                </div>
+            </li>
+            <li>
+                <div class="desc">
+                    <span>phải để lại điều gì?</span>
+                </div>
+            </li>
+            <li>
+                <div class="desc">
+                    <span>Theo nghiên cứu khoa học dựa trên cuộc đời của những tỉ phú giàu nhất thế giới: “Sống, đam mê và làm việc theo sứ mệnh thì tiền bạc sẽ chạy </span>
+                </div>
+                <div class="desc">
+                    <span>theo bạn. Còn những người sống và làm việc vì tiền bạc thì sẽ có lúc bạn lạc lối”.</span>
+                </div>
+            </li>
+            <li>
+                <div class="desc">
+                    <span>Để giúp các bạn nhanh chóng tìm ra được sứ mệnh của mình là gì, SALA bật mí cách tính Chỉ Số Sứ Mệnh cực đơn giản ngay dưới đây.</span>
+                </div>
+            </li>
+        </ul>
+        <div class="mt-5 p-1"></div>
+        <div class="header_ung-dung mt-5">
+            <h2><b>3.</b> Cách tính Chỉ Số Sứ Mệnh trong Thần Số Học</h2>
+        </div>
+        <ul class="list-item">
+            <li>
+                <div class="desc">
+                    <span>Chỉ Số Sứ Mệnh được tính bằng tên đầy đủ của bạn, là tổng của Chỉ Số Tâm Hồn và Chỉ Số Nhân Cách.</span>
+                </div>
+            </li>
+        </ul>
+        <div class="row g-0 g-xl-4 mt-3 justify-content-center">
+            <div class="col-md-5 col-cus-5">
+                <div class="bo-vien px-4 h-100 py-5">
+                    <div class="item-title"><span>Cách tính 1: Tính tổng các chữ số được quy đổi từ tên đầy đủ</span></div>
+                    <div class="item-title"><span>(bao gồm cả nguyên âm và phụ âm), cộng cho tới khi Chỉ Số </span></div>
+                    <div class="item-title"><span>Sứ Mệnh là số có một chữ số.</span></div>
+                    <ul class="item-desc mt-4">
+                        <li>
+                            <div><span>VD: HO NGOC HA</span></div>
+                        </li>
+                        <li>
+                            <div><span>86 5763 81</span></div>
+                        </li>
+                        <li>
+                            <div><span>=> (8 + 6) + (5 + 7 + 6 + 3) + (8 + 1)</span></div>
+                        </li>
+                        <li>
+                            <div><span>= (1 + 4) + (2 + 1) + 9</span></div>
+                        </li>
+                        <li>
+                            <div><span>= 5 + 3 + 9</span></div>
+                        </li>
+                        <li>
+                            <div><span>= 17 = (1 + 7) = 8</span></div>
+                        </li>
+                        <li>
+                            <div><span>Vậy Chỉ Số Sứ Mệnh của Hồ Ngọc Hà là số 8.</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-cus-5">
+                <div class="bo-vien px-4 h-100 py-5">
+                    <div class="item-title"><span>Cách tính 2: Tính tổng Chỉ Số Tâm Hồn và Chỉ Số Nhân Cách:</span></div>
+                    <ul class="item-desc mt-4">
+                        <li>
+                            <div><span>Nếu bạn đã biết được Chỉ Số Tâm Hồn và Chỉ Số Nhân Cách, bạn có </span></div>
+                            <div><span>thể dễ dàng tính tổng hai số đó để ra được Chỉ Số Sứ Mệnh.</span></div>
+                        </li>
+                        <li>
+                            <div><span>VD: HO NGOC HA</span></div>
+                        </li>
+                        <li>
+                            <div><span>Chỉ Số Tâm Hồn (các chữ nguyên âm): 6 + 6 + 1 = 13 => 1 + 3 = 4 => </span></div>
+                            <div><span>Chỉ Số Tâm Hồn là số 4</span></div>
+                        </li>
+                        <li>
+                            <div><span>Chỉ Số Nhân Cách (các chữ phụ âm): 8 + 5 + 7 + 3 + 8 = 31 => 3 + 1 </span></div>
+                            <div><span>= 4 => Chỉ Số Nhân Cách là số 4</span></div>
+                        </li>
+                        <li>
+                            <div><span>=> Chỉ Số Sứ Mệnh = Chỉ Số Tâm Hồn + Chỉ Số Nhân Cách = 4 + 4 = 8</span></div>
+                        </li>
+                        <li>
+                            <div><span>Vậy Chỉ Số Sứ Mệnh của Hồ Ngọc Hà là số 8, khớp với kết quả của cách 1.</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="mt-5 pt-4">
+                    <div class="mb-3">
+                        <h5>Bảng quy đổi tên trong Thần Số Học</h5>
                     </div>
+                    <img class="mw-100" src="/img/banner/bcc.png" alt="">
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="main_dang-ky text-center">
-        <div class="mota text-white">
-            <div class="desc"><span>Mỗi con số đường đời lại thể hiện một kiểu người với những điểm mạnh và điểm yếu khác nhau. Dưới đây, Thần Số Học </span></div>
-            <div class="desc"><span>Sala sẽ nêu vài ví dụ về chỉ số Đường đời của những người nổi tiếng, thành công trong cuộc sống để giúp bạn xác thực </span></div>
-            <div class="desc"><span>được độ tin cậy của chỉ số Đường đời</span></div>
+<div class="main_su-menh bg-grray">
+    <div class="container container-header2">
+        <div class="header_ung-dung text-center">
+            <h2><b>4.</b> Ý nghĩa Chỉ Số Sứ Mệnh trong Thần Số Học</h2>
         </div>
-        <div class="btn-dangky">
-            <button class="btn">ĐĂNG KÍ</button>
+        <ul class="list-item text-center">
+            <li>
+                <div class="desc">
+                    <span>Dựa vào tên đầy đủ, mỗi người sẽ có một con số sứ mệnh riêng, con số đó đại diện cho kiểu sứ mệnh mà họ phải </span>
+                </div>
+                <div class="desc">
+                    <span>theo đuổi trong cuộc đời này. chỉ số sứ mệnh </span>
+                </div>
+            </li>
+        </ul>
+        <div class="row g-0 mt-4 g-xl-5">
+            <div class="col-md-6">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <div class="item">
+                            <div class="item-title"><h3>Sứ Mệnh 1</h3></div>
+                            <div class="item-desc"><span>Khi bạn có sứ mệnh 1, bạn mong muốn mãnh liệt trở thành người giỏi nhất, bạn đặt cho mình tiêu chí cao nhất và kỳ vọng người khác cũng như vậy. Hậu quả là nhiều người sẽ có cảm giác xét nét hay bị áp lực. Điều bạn cần làm là cần cho họ biết sự thiện chí của mình, rằng bạn thật sự chỉ muốn làm cho cuộc sống của họ tốt đẹp hơn mà thôi.</span></div>
+                            <div class="item-desc"><span>Sứ mệnh của bạn là trở thành một nhà lãnh đạo tài ba, một thủ lĩnh, người làm chủ, người tiên phong. Bạn vận dụng tối đa tài năng và sự sáng tạo, bạn đến với cuộc đời này để cho người khác dựa vào bạn và đối đầu với những khó khăn thử thách. Bạn gây dựng được một sự nghiệp vững chắc, ổn định.</span></div>
+                            <div class="item-desc"><span>Sứ mệnh của bạn là gây ấn tượng tốt cho mọi người xung quanh và chinh phục được đám đông. Bạn luôn luôn sẵn sàng giúp đỡ người thân, đồng nghiệp, cấp dưới và những người xung quanh.</span></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="item">
+                            <div class="item-title"><h3>sứ mệnh 2</h3></div>
+                            <div class="item-desc"><span>Sứ mệnh của bạn sinh ra để cổ vũ người khác tốt đẹp hơn, dùng ngôn từ để nâng đỡ người khác. Bạn được sắp đặt sẽ trở thành một người truyền cảm hứng cho người khác thông qua sự sáng tạo và năng lượng tích cực.</span></div>
+                            <div class="item-desc"><span>Bạn đến cuộc đời này để hy sinh vì người thân, vì bạn bè, gặp kẻ khó khăn bạn không bao giờ làm ngơ. Sứ mệnh của bạn giúp cho người khác trở nên đẹp hơn, hoàn hảo hơn như: nhà thiết kế thời trang, thiết kế nội thất.</span></div>
+                            <div class="item-desc"><span>Bạn cũng có sứ mệnh chăm sóc cho gia đình, dù có trải qua bao gian khổ khó khăn họ nguyện cùng người bạn đời vượt qua gian khổ.</span></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="item">
+                            <div class="item-title"><h3>sứ mệnh 3</h3></div>
+                            <div class="item-desc"><span>Sắp đặt sẽ trở thành một người truyền cảm hứng cho người khác thông qua sự sáng tạo và năng lượng tích cực.</span></div>
+                            <div class="item-desc"><span></span>Con số Sứ mệnh 3 hướng sự phát triển của cuộc sống theo con đường của sự sáng tạo và cảm hứng. Sự lạc quan, truyền cảm, thân mật và sống động của bạn là thứ ma lực có thể lan truyền sang những người xung quanh một cách tự nhiên. Số Sứ mệnh 3 bao hàm niềm vui sống và nỗ lực để làm cuộc sống trở nên tốt đẹp hơn.</div>
+                            <div class="item-desc"><span>Bạn có sức sáng tạo cao với trí tưởng tượng phong phú và khả năng nắm bắt các vấn đề trừu tượng tốt. Bạn có khả năng về ngôn ngữ, và có cơ hội thành công cao trong lĩnh vực viết lách, âm nhạc, hài kịch, điện ảnh và giáo dục. Một số người có xu hướng thiên về hội họa, nhưng đây không phải là điểm mạnh của số Sứ mệnh 3. Con số này còn mang tới khả năng về kinh doanh hay các ngành liên quan tới quan hệ công chúng khác vì biết áp dụng tốt tính sáng tạo của mình vào diễn thuyết và đàm phán. Phát triển kỹ năng tập trung và thực sự chăm chỉ là chìa khóa để thành công.</span></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="item">
+                            <div class="item-title"><h3>sứ mệnh 4</h3></div>
+                            <div class="item-desc"><span>Bạn sinh ra với sứ mệnh tạo chỗ dựa vững chắc cho người thân, với bạn gia đình là quan trọng nhất. Bạn là người muốn hàn gắn, giúp sửa chữa mối quan hệ.</span></div>
+                            <div class="item-desc"><span>Bạn là người ham học hỏi, thích thu thập kiến thức, thích tập trung nghiên cứu và hiểu rất rõ về lĩnh vực mình đang làm. Khi người số 4 học một kỹ năng gì đó, họ có xu hướng trở thành chuyên gia, họ muốn chia sẻ kiến thức.</span></div>
+                            <div class="item-desc"><span>Sứ mệnh của bạn được sắp đặt sẽ phát triển như một “bậc thầy xây dựng” trên con đường đạt được ước mơ và những mục tiêu dài hạn.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <div class="item">
+                            <div class="item-title"><h3>Sứ Mệnh 5</h3></div>
+                            <div class="item-desc"><span>Sứ mệnh của bạn đến với cuộc sống là ca tụng cuộc sống, bạn truyền đi sự mê say đến cả những điều đơn giản nhất. Bạn có xu hướng hưởng thụ cuộc sống: thích tiệc tùng, tụ tập vui chơi.</span></div>
+                            <div class="item-desc"><span>Bạn là người độc đáo, nhiều ý tưởng và là người tiên phong, mở đường, dẫn dắt những điều mới mẻ, vì vậy hãy dám thay đổi, bỏ ngoài tai những lời cản trở của người khác.</span></div>
+                            <div class="item-desc"><span>Sứ mệnh của bạn được sắp đặt sẽ thúc đẩy được sự thay đổi thông qua hành động cụ thể mang tính cấp tiến.</span></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="item">
+                            <div class="item-title"><h3>Sứ Mệnh 6</h3></div>
+                            <div class="item-desc"><span>Sứ mệnh của bạn tạo dựng nên mái ấm an lành cho bạn và cho những người yêu thương. Bạn là người cha, người mẹ tuyệt vời, là người chăm lo cho nhân viên, cho mọi người. Dùng sự yêu thương của mình chăm lo cho người khác.</span></div>
+                            <div class="item-desc"><span>Bạn có óc tổ chức mạnh mẽ, có vai trò không thể thiếu trong việc tạo dựng một môi trường tuyệt vời. Ai may mắn được bạn chăm sóc sẽ cảm thấy mình được yêu thương và an toàn trọn vẹn.</span></div>
+                            <div class="item-desc"><span>Sứ mệnh của bạn sẽ thành công trong việc giúp đỡ, đóng góp hỗ trợ các hoạt động cộng đồng, tình yêu và lòng trách nhiệm cao.</span></div>
+                            <div class="item-desc"><span>Sứ mệnh 6 thường gây ấn tượng theo cách vượt ra ngoài quy luật thông thường, bạn giỏi bộc lộ mình.</span></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="item">
+                            <div class="item-title"><h3>Sứ Mệnh 7</h3></div>
+                            <div class="item-desc"><span>Sứ mệnh của bạn cần tìm kiếm một đức tin mạnh mẽ và ý nghĩa của cuộc sống, bạn là người truyền bá nó. Nếu bạn không có tâm linh, bạn sẽ không cảm thấy an bình thực sự.</span></div>
+                            <div class="item-desc"><span>Thiên nhiên, sự tĩnh lặng là điều cần thiết cho số 7. Bạn nên đi du lịch nơi biển, rừng núi để khám phá thế giới là điều điều tốt cho bạn.</span></div>
+                            <div class="item-desc"><span>Sứ mệnh sắp đặt sẽ thúc đẩy ranh giới của tri thức ngày càng rộng ra thông qua khả năng tư duy vượt bậc.</span></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="item">
+                            <div class="item-title"><h3>Sứ Mệnh 8</h3></div>
+                            <div class="item-desc"><span>Bạn đến cuộc đời này vũ trụ cho đáp ứng mọi điều bạn cần, với số 8 quan trọng nhất là chất lượng sống và tích lũy tài sản</span></div>
+                            <div class="item-desc"><span>Số 8 có thể phải trải qua những gian nan khó gây tổn thương đến tinh thần, bạn hãy giữ khiếu hài hước và tập trung vào mục tiêu thì bạn sẽ đạt được mọi điều bạn muốn.</span></div>
+                            <div class="item-desc"><span>Bạn nên mở lòng đón nhận lời khuyên từ người khác, bày tỏ tình cảm của mình vì bạn thường dễ bị hiểu lầm.</span></div>
+                            <div class="item-desc"><span>Sứ mệnh của bạn được sắp đặt sẽ leo được lên tới đỉnh cao của thế giới vật chất, trở thành người kinh doanh, đầu tư, hợp tác, xây dựng được sự nghiệp lớn và tạo dựng thành công.</span></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="item">
+                            <div class="item-title"><h3>Sứ Mệnh 9</h3></div>
+                            <div class="item-desc"><span>Là con số cực kỳ mạnh mẽ. Bạn đến với cuộc đời này để nâng tầm và thay đổi suy nghĩ của người khác, hợp làm trong lĩnh vực giáo dục.</span></div>
+                            <div class="item-desc"><span>Bạn phải học cách tha thứ lỗi lầm trong quá khứ của người khác.</span></div>
+                            <div class="item-desc"><span>Bạn mạnh mẽ và điềm tĩnh và là người lãnh đạo được mọi người tin tưởng.</span></div>
+                            <div class="item-desc"><span>Khi bạn học được cách cân bằng và làm chủ cuộc sống thì sứ mệnh của bạn là truyền thụ nó cho những người khác.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+<div class="main_dang-ky text-center">
+    <div class="mota text-white">
+        <div class="desc"><span>Trên đây là sơ lược về ý nghĩa Chỉ Số Sứ Mệnh trong Thần Số Học, để hiểu rõ hơn về các con số gắn liền với cuộc đời mình cũng như mục đích sống</span></div>
+        <div class="desc"><span>Sứ mệnh trong cuộc đời này hãy gặp gỡ chuyên gia tại HỌC VIỆN CỔ HỌC SALA bằng cách bấm vào nút đăng kí dưới đây để được hướng dẫn tận tình</span></div>
+        <div class="desc"><span>Giúp bạn có thể hiểu được ý nghĩa những con số của cuộc đời mình và người thân, bạn bè, đối tác,…</span></div>
+    </div>
+    <div class="btn-dangky">
+        <button class="btn">ĐĂNG KÍ</button>
+    </div>
+</div>
+
+<div class="form-tracuu" id="form-tracuu">
+    <div class="container container-header text-lights">
+
+        <form class="main-tracuu d-flex align-items-center justify-content-center" action="?">
+            <div class="w-100">
+                <div class="row g-0">
+                    <div class="col-lg-12 col-xl-4 ct-col-4">
+                        <h1 class="text-white mb-0 mb-md-4">ĐĂNG KÍ TRA CỨU THẦN SỐ HỌC</h1>
+                    </div>
+                    <div class="col-lg-4 col-xl-3 ct-col-3">
+                        <div class="mb-2">
+                            <input class="custom-form-input mb-4" type="text" placeholder="Họ và tên:">
+                        </div>
+                        <div class="mb-2 mb-lg-0">
+                            <input class="custom-form-input mb-4 mb-lg-0" type="text" placeholder="Số điện thoại:">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3 ct-col-3">
+                        <div class="mb-2">
+                            <input class="custom-form-input mb-4" type="email" placeholder="Email:">
+                        </div>
+                        <div class="mb-2 mb-lg-0">
+                            <input id="ngaygio" class="custom-form-input mb-4 mb-lg-0"  type="date">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-2 ct-col-2">
+                        <div class="d-flex align-items-center h-100 w-100">
+                            <button type="submit" class="btn-tracuu w-100">GIẢI MÃ NGAY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
 
     <x-form-tra-cuu />
 

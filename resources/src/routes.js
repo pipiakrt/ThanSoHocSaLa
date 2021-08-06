@@ -35,6 +35,8 @@ import Newsletters from './pages/Newsletters/index'
 import Products from './pages/Products/index'
 import CreateProduct from './pages/Products/create'
 import EditProduct from './pages/Products/edit'
+// TraCuu
+import TraCuu from './pages/TraCuu/index'
 // ThanSo
 import ThanSo from './pages/ThanSo/index'
 import EditThanSo from './pages/ThanSo/edit'
@@ -200,6 +202,12 @@ const routes = [
         path: '/admin/seo/:id/chinh-sua',
         component: EditSeo,
         name: 'Seo',
+    },
+    // TraCuu
+    {
+        path: '/admin/tra-cuu/danh-sach',
+        component: TraCuu,
+        name: 'TraCuu',
     },
     // ThanSo
     {

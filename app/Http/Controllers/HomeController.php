@@ -83,6 +83,6 @@ class HomeController extends Controller
      */
     public function thansohocsala()
     {
-        return view('gioi-thieu');
+        return view('/gioi-thieu-sala');
     }
 }

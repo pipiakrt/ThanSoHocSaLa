@@ -135,13 +135,7 @@
                                                                 <span>Cá nhân: Phát triển bản thân một cách toàn diện, có lối sống rõ ràng, hiểu rõ điểm mạnh, điểm hạn chế để phát huy và khắc phục, xác định mục tiêu từ đó lên kế hoạch ngắn, trung và dài hạn, hiểu thêm về những người xung quanh, biết cách giao tiếp phù hợp với từng đối tượng.</span>
                                                             </div>
                                                             <div>
-                                                                <span>mạnh, điểm hạn chế để phát huy và khắc phục, xác định mục tiêu -> lên kế hoạch </span>
-                                                            </div>
-                                                            <div>
-                                                                <span>ngắn, trung và dài hạn, hiểu thêm về những người xung quanh, biết cách giao tiếp phù </span>
-                                                            </div>
-                                                            <div>
-                                                                <span>hợp với từng đối tượng.</span>
+                                                                <span>Biết điểm mạnh, điểm hạn chế để phát huy và khắc phục, xác định mục tiêu -> lên kế hoạch ngắn, trung và dài hạn, hiểu thêm về những người xung quanh, biết cách giao tiếp phù hợp với từng đối tượng.</span>
                                                             </div>
                                                         </div>
                                                     </div>

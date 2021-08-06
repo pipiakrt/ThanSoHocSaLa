@@ -23,10 +23,10 @@
 
     <div class="session__mo-ta text-center">
         <div class="desc">
-            <span>“Trong Thần số học, chỉ số Đường đời là chỉ số cung cấp thông tin chi tiết về cuộc sống của nhiều </span>
+            <span>Con Số Đường Đời là chỉ số được tính từ ngày sinh đầy đủ của bạn và được gọi là Con Số Life Path</span>
         </div>
         <div class="desc">
-            <span>hơn bất kỳ số nào khác trong Thần số học biểu đồ ngày sinh của bạn.”</span>
+            <span>Đây là một trong những con số cốt yếu của Thần Số Học</span>
         </div>
     </div>
 
@@ -38,10 +38,16 @@
             <ul class="list-item">
                 <li>
                     <div class="desc">
-                        <span>Mỗi cá nhân khi sinh ra trên cuộc đời đều đã được trao một bản thiết kế giống như ngôi nhà, đường phố, ô tô, vũ trụ đều có bản thiết kế cho riêng </span>
+                        <span>Con Số Đường Đời mô tả những tính chất vốn dĩ tự nhiên ở bạn cũng như những tính chất ẩn sâu bên trong con người bạn Nó tiết lộ cho bạn biết bạn là ai</span>
                     </div>
                     <div class="desc">
-                        <span>mình. Chỉ số Đường đời sẽ tiết lộ điểm mạnh, điểm yếu, những cơ hội và thách thức mà mỗi cá nhân sẽ gặp được trong cuộc sống. </span>
+                        <span>ngay thời điểm vừa mới chào đời cũng như những đặc điểm mà bạn sẽ mang theo trong suốt hành trình cuộc đời của mình.</span>
+                    </div>
+                    <div class="desc">
+                        <span>Và con số này tiết lộ cho bạn biết con đường bạn sẽ đi trong kiếp sống này. Tính chất của con số này có thể biểu hiện bằng cơ hội, thách thức</span>
+                    </div>
+                    <div class="desc">
+                        <span>bài học trên suốt quãng đường. Và tất nhiên, phản ứng của bạn với chúng cũng sẽ thay đổi theo thời gian.</span>
                     </div>
                 </li>
                 <li>
@@ -81,15 +87,15 @@
                 </li>
                 <li>
                     <div class="desc">
-                        <span>Ví dụ, <b>nếu bạn sinh vào ngày 3/4/1986, bạn sẽ tính như sau: 3 + 4 + 1 + 9 + 8 + 6 = 31. Tiếp theo bạn quy số 31 về một chữ số bằng cách</b> </span>
+                        <span>Ví dụ, <b>nếu bạn sinh vào ngày 21/11/1996, bạn sẽ tính như sau: 21/03/1995 = (2+1) + (0+3) + (1+9+9+5) = 3 + 3 + 6 = 12. Tiếp theo bạn quy số 12 về một chữ số bằng cách</b> </span>
                     </div>
                     <div class="desc">
-                        <b>lấy: 3 + 1 = 4.</b>
+                        <b>lấy: 1 + 2 = 3.</b>
                     </div>
                 </li>
                 <li>
                     <div class="desc">
-                        <span>Như vậy, con số Đường đời hay còn gọi là thần số học dựa vào ngày sinh của bạn sẽ là 4.</span>
+                        <span>Như vậy, con số Đường đời hay còn gọi là thần số học dựa vào ngày sinh của bạn sẽ là 3.</span>
                     </div>
                 </li>
                 <li>

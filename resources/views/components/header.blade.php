@@ -136,9 +136,15 @@
                         </a>
                     </div>
                     <div class="menu-mb-item">
-                        <a href="/lien-he/" class="{{ request()->segment(1) == 'lien-he' ? 'active' : '' }}">
-                            <span>Liên hệ</span>
-                        </a>
+                        @auth
+                            <a href="/tai-khoan" class="{{ request()->segment(1) == 'tai-khoan' ? 'active' : '' }}">
+                                <span>Tài khoản</span>
+                            </a>
+                        @else
+                            <a href="/login" class="{{ request()->segment(1) == 'login' ? 'active' : '' }}">
+                                <span>Đăng nhập</span>
+                            </a>
+                        @endauth
                     </div>
                 </div>
             </div>

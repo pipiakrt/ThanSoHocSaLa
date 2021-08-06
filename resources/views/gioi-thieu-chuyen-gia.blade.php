@@ -19,8 +19,15 @@
 </nav>
 
 <main>
-    <div>
-        <img class="w-100" alt="Thần Số Học" src="/img/gioithieu/cg.png">
+    <div class="sliders cts position-relative">
+        <div id="sliders" class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="header-logo" alt="Thần Số Học" src="/img/gioithieu/cn.png">
+            </div>
+            <div class="item">
+                <img class="header-logo" alt="Thần Số Học" src="/img/gioithieu/cn.png">
+            </div>
+        </div>
     </div>
     <style>
         .slider-logo {
@@ -134,10 +141,8 @@
                         <div style="width: fit-content;" class="descs1 mx-auto px-0 my-5">
                             <img class="mw-100" src="/img/gioithieu/tuhao.png" alt="">
                         </div>
-                        <div class="descs1 px-0">
-                            <span class="text-white">Và tất cả những điều này đều được giải quyết chỉ bằng một cuốn sách</span>
-                        </div>
-                        <iframe class="w-100 mt-5 youtube-responsive" height="450" src="https://www.youtube.com/embed/rwEfiiqJJK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        <iframe class="w-100 mt-4 youtube-responsive" height="450" src="https://www.youtube.com/embed/rwEfiiqJJK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

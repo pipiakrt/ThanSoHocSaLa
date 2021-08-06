@@ -17,24 +17,18 @@
             <span class="{{ request()->segment(2) == 'dich-vu' ? 'text-success' : '' }}">Dịch vụ</span>
         </a>
     </li>
-    <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'license' ? 'bg-light' : 'lh-condensed' }}">
+    <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'tra-cuu-nang-cao' ? 'bg-light' : 'lh-condensed' }}">
         <a href="/tai-khoan/tra-cuu-nang-cao">
-            <div class="{{ request()->segment(2) == 'license' ? 'text-success' : '' }}">
+            <div class="{{ request()->segment(2) == 'tra-cuu-nang-cao' ? 'text-success' : '' }}">
                 <h6 class="my-0">Tra cứu nâng cao</h6>
-                <small class="{{ request()->segment(2) == 'license' ? '' : 'text-muted' }}">bạn có {{ request()->user()->License->number }} lượt tra cứu</small>
+                <small class="{{ request()->segment(2) == 'tra-cuu-nang-cao' ? '' : 'text-muted' }}">bạn có {{ request()->user()->License->number }} lượt tra cứu</small>
             </div>
         </a>
     </li>
-    <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'san-pham-yeu-thich' ? 'bg-light' : 'lh-condensed' }}">
+    <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'lich-su-tra-cuu' ? 'bg-light' : 'lh-condensed' }}">
         <a href="/tai-khoan/lich-su-tra-cuu">
-            <span>Lịch sử tra cứu</span>
+            <span class="{{ request()->segment(2) == 'lich-su-tra-cuu' ? 'text-success' : '' }}">Lịch sử tra cứu</span>
         </a>
-    </li>
-    <li class="list-group-item d-flex justify-content-between">
-        <a href="/tai-khoan/export">
-            <span>Tải file luận giải</span>
-        </a>
-        {{-- <strong>$20</strong> --}}
     </li>
     <li class="list-group-item d-flex justify-content-between">
         <form method="POST" action="/logout">
