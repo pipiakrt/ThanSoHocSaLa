@@ -33,7 +33,7 @@ class HomeController extends Controller
      */
     public function chuyengia()
     {
-        return view('gioi-thieu');
+        return view('gioi-thieu-chuyen-gia');
     }
 
     /**

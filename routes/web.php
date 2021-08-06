@@ -44,6 +44,9 @@ Route::prefix('/san-pham')->group(function () {
     });
 });
 
+Route::get('/gioi-thieu-sala', function () {
+    return view('/gioi-thieu-sala');
+});
 Route::get('/cau-chuyen', [PostController::class, 'cauchuyen']);
 Route::prefix('/tin-tuc')->group(function () {
     Route::get('/', [PostController::class, 'index']);

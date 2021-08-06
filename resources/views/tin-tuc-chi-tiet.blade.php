@@ -20,6 +20,12 @@
             border: 1px solid silver;
             padding: 10px 15px;
         }
+        .post-content {
+            overflow: hidden;
+        }
+        .post-content * img {
+            max-width: 100%;
+        }
     </style>
 @endpush
 
