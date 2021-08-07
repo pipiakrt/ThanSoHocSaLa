@@ -54,7 +54,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="image" class="col-2 col-form-label">Ảnh bài viết</label>
+                                    <label for="image" class="col-2 col-form-label">Ảnh sản phẩm</label>
                                     <div class="col-10">
                                         <div class="image-input image-input-empty image-input-outline background-position-center" :style="`background-image: url('${image ? image : '/img/avatar.png'}')`">
                                             <div class="image-input-wrapper"></div>

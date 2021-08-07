@@ -34,6 +34,8 @@
                                     </th>
                                     <th style="min-width: 100px">Ngay Sinh</th>
                                     <th style="min-width: 120px">Ngày Tra Cứu</th>
+                                    <th style="min-width: 120px">Loại</th>
+                                    <th style="min-width: 100px">Link chia sẻ</th>
                                     <th class="text-center">EXT</th>
                                 </tr>
                             </thead>
@@ -57,6 +59,12 @@
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.created_at)"></span>
+                                    </td>
+                                    <td>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.type == 1 ? 'Tính phí' : 'Miễn phí'"></span>
+                                    </td>
+                                    <td>
+                                        <a :href="`/tra-cuu/${item.code}`" target="_blank">Click</a>
                                     </td>
                                     <td class="text-center">
                                         <div class="dropdown dropdown-inline">

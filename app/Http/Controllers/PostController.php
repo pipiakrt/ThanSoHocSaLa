@@ -52,7 +52,7 @@ class PostController extends Controller
             $category = Category::where('slug', $slug)->first();
             if ($category) {
                 $posts = Post::where('category_id', $category->id)->paginate(5);
-                return view('tin-tuc', compact('posts'));
+                return view('tin-tuc', compact(['posts', 'category']));
             }
         }
         return view('errors.404');

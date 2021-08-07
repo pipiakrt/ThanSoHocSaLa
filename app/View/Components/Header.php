@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\Category;
 
 class Header extends Component
 {
@@ -23,6 +24,7 @@ class Header extends Component
      */
     public function render()
     {
-        return view('components.header');
+        $categories = Category::all();
+        return view('components.header', compact('categories'));
     }
 }

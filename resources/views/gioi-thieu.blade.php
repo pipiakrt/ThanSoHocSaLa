@@ -83,6 +83,11 @@
             </div>
         </div>
     </div>
+
+    <div>
+        <img class="mw-100" src="/img/gioithieu/ct1.png" alt="">
+    </div>
+
 </div>
 
 @endsection

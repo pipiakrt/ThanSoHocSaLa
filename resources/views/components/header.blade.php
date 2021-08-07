@@ -1,3 +1,22 @@
+<style>
+    .dropdown-item:hover {
+        background-color: #097364;
+        color: white;
+    }
+    .dropdown-toggle::after {
+        transition: .2s !important;
+    }
+    .dropdown-toggle.show::after {
+        transform: rotate(-90deg) !important;
+    }
+    .dropdown-item {
+        padding: 10px 1rem;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .dropdown-menu li:last-child .dropdown-item {
+        border-bottom: none;
+    }
+</style>
 <header class="d-none d-lg-block">
     <nav class="container container-header2">
         <div class="row align-items-center">
@@ -8,15 +27,63 @@
                             <span>Trang chủ</span>
                         </a>
                     </div>
-                    <div class="col-4 menu-item left text-center">
-                        <a href="/gioi-thieu/" class="{{ request()->segment(1) == 'gioi-thieu' ? 'active' : '' }}">
-                            <span>Giới thiệu</span>
-                        </a>
+                    <div class="col-4 menu-item d-flex justify-content-center">
+                        <div class="nav-item dropdown">
+                            <a href="/gioi-thieu" class="dropdown-toggle {{ request()->segment(1) == 'gioi-thieu' ? 'active' : '' }}" data-bs-toggle1="dropdown">
+                                <span>Giới thiệu</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="/gioi-thieu/ve-sala">
+                                        <span>Học viện cổ học sala</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/gioi-thieu/than-so-hoc-la-gi">
+                                        <span>Thần số học sala là gì</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/gioi-thieu/ung-dung-than-so-hoc-sala">
+                                        <span>Ứng dụng thần số học</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-4 menu-item left text-center">
-                        <a href="/san-pham/" class="{{ request()->segment(1) == 'san-pham' ? 'active' : '' }}">
-                            <span>Sản phẩm</span>
-                        </a>
+                    <div class="col-4 menu-item d-flex justify-content-center">
+                        <div class="nav-item dropdown">
+                            <a href="/san-pham" class="dropdown-toggle {{ request()->segment(1) == 'san-pham' ? 'active' : '' }}" data-bs-toggle1="dropdown">
+                                <span>Sản phẩm</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="/san-pham/ca-nhan">
+                                        <span>Gói cá nhân</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/san-pham/gia-dinh">
+                                        <span>Gói gia đình</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/san-pham/doanh-nghiep">
+                                        <span>Gói doanh nghiệp</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/san-pham/doanh-nghiep#list-p2">
+                                        <span>Gói (chủ doanh nghiệp)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/san-pham/doanh-nghiep#list-p2">
+                                        <span>Gói (nhân sự doanh nghiệp)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -27,31 +94,42 @@
             </div>
             <div class="col-4">
                 <div class="row">
-                    <div class="col-4 menu-item right text-center">
-                        <a href="/tin-tuc/" class="{{ request()->segment(1) == 'tin-tuc' ? 'active' : '' }}">
-                            <span>Tin tức</span>
-                        </a>
+                    <div class="col-4 menu-item d-flex justify-content-center">
+                        <div class="nav-item dropdown">
+                            <a href="/tin-tuc" class="dropdown-toggle {{ request()->segment(1) == 'tin-tuc' ? 'active' : '' }}" data-bs-toggle1="dropdown">
+                                <span>Sản phẩm</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @foreach ($categories as $item)
+                                    <li>
+                                        <a class="dropdown-item" href="/tin-tuc/{{ $item->slug }}">
+                                            <span>{{ $item->name }}</span>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-4 menu-item right text-end">
-                        <a href="/cau-chuyen/" class="{{ request()->segment(1) == 'cau-chuyen' ? 'active' : '' }}">
+                        <a href="/cau-chuyen" class="{{ request()->segment(1) == 'cau-chuyen' ? 'active' : '' }}">
                             <span>Câu chuyện</span>
                         </a>
                     </div>
-                    <div class="col-4 menu-item right">
+                    <div class="col-4 menu-item d-flex justify-content-end">
                         @auth
-                            <div class="dropdown">
-                                <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="true">
+                            <div class="nav-item dropdown">
+                                <a class="dropdown-toggle" data-bs-toggle1="dropdown">
                                     Tài khoản
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a class="dropdown-item" href="/tai-khoan">
-                                            <span>Thông tin</span>
+                                            <span>{{ request()->user()->email }}</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="/tai-khoan/gio-hang">
-                                            <span>Giỏ hàng</span>
+                                            <span>Đơn hàng chờ xử lý</span>
                                         </a>
                                     </li>
                                     <li>
@@ -69,7 +147,6 @@
                                     </li>
                                 </ul>
                             </div>
-
                         @else
                             <a href="/login/" class="{{ request()->segment(1) == 'login' ? 'active' : '' }}">
                                 <span>Đăng nhập</span>

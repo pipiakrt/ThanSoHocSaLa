@@ -79,7 +79,7 @@
             <ul class="list-item">
                 <li>
                     <div class="desc">
-                        <span>Để tìm ra được thần số học ngày sinh của bạn trong Thần số học, bạn chỉ cần cộng từng số trong ngày tháng năm sinh của mình lại và quy về </span>
+                        <span>Để tìm ra được chỉ số Đường đời của bạn trong Thần số học, bạn chỉ cần cộng từng số trong ngày tháng năm sinh của mình lại và quy về </span>
                     </div>
                     <div class="desc">
                         <span>một chữ số.</span>
@@ -87,7 +87,7 @@
                 </li>
                 <li>
                     <div class="desc">
-                        <span>Ví dụ, <b>nếu bạn sinh vào ngày 21/11/1996, bạn sẽ tính như sau: 21/03/1995 = (2+1) + (0+3) + (1+9+9+5) = 3 + 3 + 6 = 12. Tiếp theo bạn quy số 12 về một chữ số bằng cách</b> </span>
+                        <span>Ví dụ: <b>nếu bạn sinh vào ngày 21/03/1995, bạn sẽ tính như sau: 21/03/1995 = (2+1) + (0+3) + (1+9+9+5) = 3 + 3 + 6 = 12. Tiếp theo bạn quy số 12 về một chữ số bằng cách</b> </span>
                     </div>
                     <div class="desc">
                         <b>lấy: 1 + 2 = 3.</b>
@@ -96,6 +96,16 @@
                 <li>
                     <div class="desc">
                         <span>Như vậy, con số Đường đời hay còn gọi là thần số học dựa vào ngày sinh của bạn sẽ là 3.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="desc">
+                        <span>Ví dụ: <b>"trường hợp đặc biệt" nếu bạn sinh vào ngày 21/03/1995 sẽ là (2+1) + (0+2) + (1+9+9+5) = 3 + 2 + 6 = 11.</b> </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="desc">
+                        <span>Như vậy, con số Đường đời hay còn gọi là thần số học dựa vào ngày sinh của bạn sẽ là 11.</span>
                     </div>
                 </li>
                 <li>

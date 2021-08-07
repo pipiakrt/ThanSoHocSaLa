@@ -34,11 +34,14 @@
     <nav class="breadcrumb-cus" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <div class="container container-header2">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
                 @if (request()->segment(1) == 'gioi-thieu')
-                    <li class="breadcrumb-item"><a href="/gioi-thieu/">Giơi thiệu</a></li>
+                    <li class="breadcrumb-item"><a href="/gioi-thieu/" class="active">Giơi thiệu</a></li>
                 @else
-                    <li class="breadcrumb-item"><a href="/tin-tuc">{{ $post->type == 'post' ? 'Tin tức' : 'Câu chuyện' }}</a></li>
+                    <li class="breadcrumb-item"><a href="/tin-tuc" class="active">{{ $post->type == 'post' ? 'Tin tức' : 'Câu chuyện' }}</a></li>
+                @endif
+                @if ($post->Category)
+                    <li class="breadcrumb-item"><a href="/tin-tuc/{{ $post->Category->slug }}" class="active">{{ $post->Category->name }}</a></li>
                 @endif
                 <li class="breadcrumb-item"><a href="#">{{ $post->name }}</a></li>
             </ol>

@@ -11,6 +11,8 @@ class TraCuu extends Model
 
     protected $fillable = [
         'user_id',
+        'code',
+        'type',
         'data',
         'birthdate',
         'name'
@@ -18,5 +20,6 @@ class TraCuu extends Model
 
     protected $casts = [
         'data' => 'array',
+        'type' => 'boolean',
     ];
 }

@@ -1,3 +1,16 @@
+@push('styles')
+    <link rel="stylesheet" href="/plugins/dtsel-master/dtsel.css">
+@endpush
+
+@push('scripts')
+<script src="/plugins/dtsel-master/dtsel.js"></script>
+<script>
+    $('#birthday').datepicker({
+        format: 'dd-mm-yyyy'
+    });
+</script>
+@endpush
+
 <div class="form-tracuu" id="form-tracuu">
     <div class="container container-header text-lights">
         <div class="_mb-8">
@@ -16,15 +29,15 @@
                             <input class="custom-form-input mb-4" name="name" type="text" placeholder="Họ và tên:" required>
                         </div>
                         <div class="mb-2 mb-lg-0">
-                            <input class="custom-form-input mb-4 mb-lg-0" name="phone" type="text" placeholder="Số điện thoại:">
+                            <input class="custom-form-input mb-4 mb-lg-0" name="phone" type="number" placeholder="Số điện thoại:" required>
                         </div>
                     </div>
                     <div class="col-lg-3 col-xl-3 ct-col-3">
                         <div class="mb-2">
-                            <input class="custom-form-input mb-4" name="email" type="email" placeholder="Email:">
+                            <input class="custom-form-input mb-4" name="email" type="email" placeholder="Email:" required>
                         </div>
                         <div class="mb-2 mb-lg-0">
-                            <input id="birthday" class="custom-form-input mb-4 mb-lg-0" name="birthday" type="date" required>
+                            <input id="birthday" placeholder="Ngày/Tháng/Năm" class="custom-form-input mb-4 mb-lg-0" name="birthday" type="text" required>
                         </div>
                     </div>
                     <div class="col-lg-4 col-xl-2 ct-col-2">

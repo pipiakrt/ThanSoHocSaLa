@@ -571,13 +571,16 @@ button.btn-show-tt {
 }
 
 .form-tracuu input[type="date"]::-webkit-calendar-picker-indicator {
-    background-image: url("https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/calendar-icon.png");
+    background-image: unset;
+    display: none;
 }
 
 input[type="date"]::before{
+    display: none;
     content: attr(placeholder) "";
 }
 input[type="date"]:focus::before {
+    display: none;
     content: "" !important;
 }
 
@@ -1152,9 +1155,15 @@ input[type="date"]:focus::before {
     padding-top: 18px;
     padding-bottom: 1px;
 }
+.breadcrumb-cus a.active {
+    text-decoration: revert;
+}
 .breadcrumb-cus a {
     font-size: 18px;
     letter-spacing: 0.5px;
     color: #999999 !important;
     font-weight: 300;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    margin-top: 2px;
 }

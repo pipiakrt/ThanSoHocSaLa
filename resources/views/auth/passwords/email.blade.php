@@ -30,7 +30,7 @@
                 </div>
             @endif
             <div class="card">
-                <div class="card-header">Quyên mật khẩu</div>
+                <div class="card-header">Quên mật khẩu</div>
 
                 <div class="card-body">
 

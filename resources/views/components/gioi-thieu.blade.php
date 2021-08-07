@@ -72,7 +72,7 @@
                                                 <div class="desc fw-light mt-3"><span>HỌC VIỆN CỔ HỌC SALA tự hào là cầu nối đưa Thần Số Học đến gần hơn với mỗi cá nhân, mỗi gia đình và mỗi doanh nghiệp. Tại đây chúng tôi cung cấp các kiến thức giúp hỗ trợ phát triển toàn diện bản thân cho từng cá nhân, gia đình hay doanh nghiệp có thể hiểu và ứng dụng được Thần Số Học trong việc xây dựng bản đồ kế hoạch cuộc đời, có
                                                         định hướng tương lai rõ ràng để gặt hái thành công toàn diện.</span></div>
                                             </div>
-                                            <div class="btn-dangky my-3 mt-md-0">
+                                            <div class="btn-dangky my-3 mt-md-4">
                                                 <a href="{{ $data['baiviet1'] }}">
                                                     <button type="submit" class="text-white">XEM THÊM</button>
                                                 </a>
@@ -108,7 +108,7 @@
                                                 <div class="desc fw-light mt-3"><span>Thần số học là một môn khoa học tiên đoán về cuộc sống con người thông qua những con số đã xuất hiện cách đây 2500 năm, được nghiên cứu và phát triển bởi nhà toán học, triết học vĩ đại Hy Lạp – Pythagoras - người đầu tiên thấy được sức mạnh của các con số nền tảng của vũ trụ và mang chúng đến gần hơn với nhân loại.
                                                         Hiện nay bộ môn Thần Số Học được phát triển nhằm ứng dụng đa dạng trong các lĩnh vực khác nhau và phù hợp với mọi đối tượng, độ tuổi, ngành nghề,… của các cá nhân hoặc doanh nghiệp. Giúp nuôi dưỡng tâm hồn, biết cảm thông, chia sẻ, cởi mở với gia đình, để vợ chồng, con cái hòa thuận, hạnh phúc ấm êm, trở thành bến đỗ bình an trong cuộc đời bạn.</span></div>
                                             </div>
-                                            <div class="btn-dangky my-3 mt-md-0">
+                                            <div class="btn-dangky my-3 mt-md-4">
                                                 <a href="{{ $data['baiviet2'] }}">
                                                     <button type="submit" class="text-white">XEM THÊM</button>
                                                 </a>
@@ -125,7 +125,7 @@
                                                 <div class="cr-title1">
                                                     <h4 class="fw-bold text-uppercase">ỨNG DỤNG THẦN SỐ HỌC</h4>
                                                 </div>
-                                                <div class="desc fw-light mt-3">
+                                                <div class="desc fw-light mt-3 mt-md-4">
                                                     <div class="row g-0">
                                                         <div class="col-2 col-sm-1">
                                                             <img src="/img/icon/sv-1.png" alt="thansohocsala">
@@ -174,7 +174,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="btn-dangky my-3 mt-md-0">
+                                            <div class="btn-dangky my-3 mt-md-4">
                                                 <a href="{{ $data['baiviet3'] }}">
                                                     <button type="submit" class="text-white">XEM THÊM</button>
                                                 </a>

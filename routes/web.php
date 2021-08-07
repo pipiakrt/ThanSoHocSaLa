@@ -89,6 +89,7 @@ Route::get('/chinh-sach', function () {
 });
 
 Route::get('/tra-cuu', [ThanSoController::class, 'index']);
+Route::get('/tra-cuu/{code}', [ThanSoController::class, 'show']);
 Route::post('/tra-cuu', [ThanSoController::class, 'ketqua']);
 
 Auth::routes();

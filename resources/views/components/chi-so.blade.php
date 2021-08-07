@@ -1,3 +1,25 @@
+<div class="modal" id="exampleModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Thông báo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="fw-light mb-1">Để xem những chỉ số này hãy đăng ký một gói sản phẩm của chúng tôi.</p>
+                <p class="fw-light mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lobortis nulla. Nunc dictum purus sapien, lacinia scelerisque turpis maximus sed. Curabitur sem nunc, viverra vitae odio id, lobortis consequat nisl. Quisque varius enim non elit sodales, quis venenatis eros fringilla. Mauris efficitur rutrum tellus eget egestas. Mauris scelerisque lorem a turpis ornare consectetur. Vestibulum risus lacus, scelerisque id placerat a, dapibus ut sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in diam suscipit diam vulputate pellentesque quis sed orci. Donec pellentesque, augue sit amet tempus consectetur, ipsum dui varius risus, a fringilla tortor quam eget diam. In et efficitur tellus. Nullam nisl metus, lacinia ac rutrum sit amet, imperdiet et dui. Aenean metus lacus, convallis eu urna non, commodo convallis ante.</a></p>
+                <p class="fw-light mb-1">Những gói sản phẩm, dịch vụ của chúng tôi <a class="link-primary" href="/san-pham">Click</a></p>
+                <p class="fw-light mb-1">Trải nghiệm tra cứu thần số miến phí <a class="link-primary" href="/tra-cuu">Click</a></p>
+                <p class="fw-light">Hướng đẫn đăng ký gói sản phẩm tại đây <a class="link-primary" href="/">Click</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <a href="/san-pham" class="btn btn-sm btn-primary">Mùa hàng</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="block-1 text-center text-white">
     <div class="container container-block-1 mh-1150 ">
         <div class="row justify-content-center">
@@ -49,7 +71,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-xl-4 col-lg-6">
-                <a href="{{ $data['ynghia3'] }}">
+                <a href="{{ $data['ynghia3'] }}" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="item" style="background-image: url('/img/vt/2.png');">
                         <div class="link-to"></div>
                         <div class="box-group">
@@ -71,7 +93,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-xl-4 col-lg-6">
-                <a href="{{ $data['ynghia4'] }}">
+                <a href="{{ $data['ynghia4'] }}" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="item" style="background-image: url('/img/vt/2.png');">
                         <div class="link-to"></div>
                         <div class="box-group">
@@ -93,7 +115,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-xl-4 col-lg-6">
-                <a href="{{ $data['ynghia5'] }}">
+                <a href="{{ $data['ynghia5'] }}" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="item" style="background-image: url('/img/vt/2.png');">
                         <div class="link-to"></div>
                         <div class="box-group">

@@ -16,6 +16,8 @@ class TraCuu extends JsonResource
     {
         return [
             'id' => $this->id,
+            'code' => $this->code,
+            'type' => $this->type,
             'name' => $this->name,
             'birthdate' => $this->birthdate,
             'created_at' => $this->created_at,

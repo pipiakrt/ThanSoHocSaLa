@@ -1,5 +1,17 @@
 @extends('layouts.app')
 
+@push('styles')
+    <link rel="stylesheet" href="/plugins/dtsel-master/dtsel.css">
+@endpush
+
+@push('scripts')
+<script src="/plugins/dtsel-master/dtsel.js"></script>
+<script>
+    $('#birthday').datepicker({
+        format: 'dd-mm-yyyy'
+    });
+</script>
+@endpush
 
 @section('content')
 
@@ -48,8 +60,8 @@
                         <input type="text" name="name" class="form-control" id="name" required />
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="lastName">Ngày sinh</label>
-                        <input type="date" name="birthday" class="form-control" id="lastName" required />
+                        <label for="birthday">Ngày sinh</label>
+                        <input type="text" id="birthday" name="birthday" class="form-control" required />
                     </div>
                 </div>
 

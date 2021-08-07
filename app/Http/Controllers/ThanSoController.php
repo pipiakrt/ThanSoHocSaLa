@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Str;
 use Carbon\Carbon;
+use App\Models\TraCuu;
 use App\Models\ThanSo as Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -29,6 +31,22 @@ class ThanSoController extends Controller
     public function formnangcao()
     {
         return view('formnangcao');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show($code)
+    {
+        $ketqua = TraCuu::where('code', $code)->first();
+        $data = $ketqua->data;
+        $params = [
+            'name' => $ketqua->name,
+            'birthday' => $ketqua->birthdate
+        ];
+        return view('ketquatracuu', compact(['data', 'params']));
     }
 
     /**
@@ -64,6 +82,14 @@ class ThanSoController extends Controller
         }
         $data = $aryReturn;
         $params = $dataPost;
+
+        TraCuu::create([
+            'code' => Str::random(60),
+            'data' => $data,
+            'birthdate' => $dataPost['birthday'],
+            'name' => $dataPost['name']
+        ]);
+
         return view('ketquatracuu', compact(['data', 'params']));
     }
 
@@ -177,6 +203,8 @@ class ThanSoController extends Controller
         $aryReturn['TRUONG_THANH'] = $this->getContentCS('TRT', $aryThanSo['truongThanh']);
         $data = $aryReturn;
         $user->TraCuu()->create([
+            'type' => 1,
+            'code' => Str::random(60),
             'name' => $dataPost['name'],
             'birthdate' => $dataPost['birthday'],
             'data' => $data,

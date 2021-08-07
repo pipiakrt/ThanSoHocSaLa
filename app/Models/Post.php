@@ -28,6 +28,11 @@ class Post extends Model
         'created_at' => 'date',
     ];
 
+    public function Category()
+    {
+        return $this->HasOne(Category::class, 'id', 'category_id');
+    }
+
     public function Tags()
     {
         return $this->belongsToMany(Tag::class);

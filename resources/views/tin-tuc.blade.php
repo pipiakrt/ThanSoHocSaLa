@@ -11,8 +11,13 @@
     <nav class="breadcrumb-cus" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <div class="container container-header2">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                <li class="breadcrumb-item"><a href="#">Tin tức</a></li>
+                <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
+                <li class="breadcrumb-item">
+                    <a href="{{ isset($category) ? '/tin-tuc' : '#' }}" class="{{ isset($category) ? 'active' : '' }}">Tin tức</a>
+                </li>
+                @isset($category)
+                    <li class="breadcrumb-item"><a href="#">{{ $category->name }}</a></li>
+                @endisset
             </ol>
         </div>
     </nav>

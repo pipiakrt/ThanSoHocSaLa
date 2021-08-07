@@ -72,7 +72,7 @@
                                     Đăng ký,
                                 </a>
                                 <a class="btn-link" href="{{ route('password.request') }}">
-                                    Quyên mật khẩu
+                                    Quên mật khẩu
                                 </a>
                             </div>
                         </div>

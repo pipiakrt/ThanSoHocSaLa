@@ -87,3 +87,32 @@ $('.eventItem3').click(function () {
         location.href = "#carouselExampleCaptions";
     }
 })
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('header .dropdown').forEach(function(everyitem){
+
+        everyitem.addEventListener('mouseover', function(e){
+
+            let el_link = this.querySelector('a[data-bs-toggle1]');
+
+            if(el_link != null){
+                let nextEl = el_link.nextElementSibling;
+                el_link.classList.add('show');
+                    nextEl.classList.add('show');
+            }
+
+        });
+        everyitem.addEventListener('mouseleave', function(e){
+                let el_link = this.querySelector('a[data-bs-toggle1]');
+
+            if(el_link != null){
+                let nextEl = el_link.nextElementSibling;
+                el_link.classList.remove('show');
+                    nextEl.classList.remove('show');
+            }
+
+
+        })
+    });
+});
