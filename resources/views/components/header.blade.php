@@ -97,7 +97,7 @@
                     <div class="col-4 menu-item d-flex justify-content-center">
                         <div class="nav-item dropdown">
                             <a href="/tin-tuc" class="dropdown-toggle {{ request()->segment(1) == 'tin-tuc' ? 'active' : '' }}" data-bs-toggle1="dropdown">
-                                <span>Sản phẩm</span>
+                                <span>Tin tức</span>
                             </a>
                             <ul class="dropdown-menu">
                                 @foreach ($categories as $item)

@@ -25,10 +25,18 @@
     margin: 0;
     font-weight: 200;
     font-size: 24px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 .post-main .post-item .item-desc {
     margin-top: 15px;
     font-weight: 100;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
 }
 .post-main .post-item .icon-click {
     position: absolute;

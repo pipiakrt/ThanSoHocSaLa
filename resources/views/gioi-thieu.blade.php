@@ -3,12 +3,13 @@
 @section('content')
 @push('styles')
     <link rel="stylesheet" href="/css/postDetail.css">
+    <link rel="stylesheet" href="/css/post.css">
 @endpush
 
 <x-slogan />
 
 <div class="main-postDetail py-5">
-    <div class="container container-postDetail">
+    <div class="container container-postDetail px-0">
         <div class="sliders">
             <div id="sliders" class="owl-carousel owl-theme">
                 <div class="item">
@@ -32,7 +33,7 @@
                         <div class="info_title">
                             <h2 class="text-uppercase">Thần Số Học</h2>
                         </div>
-                        <div class="info_desc fw-lighter text-start">
+                        <div class="info_desc px-3 fw-lighter text-start">
                             <span>Từ xa xưa, con người đã biết ứng dụng Thần Số Học - một công trình nghiên cứu vĩ đại của nhà Toán học, triết học, thần học Pythagoras vào cuộc sống để thấu hiểu bản thân và tìm ra con đường tốt nhất cho chính mình. Ngày nay Thần Số Học được áp dụng rộng rãi tại các nước phương Tây và vài năm gần đây, bộ môn này bắt đầu được tiếp nhận tại đất nước Việt Nam. Vậy Thần Số Học là gì? Và tại sao con người lại tin vào Thần Số Học đến thế?</span>
                         </div>
                     </div>
@@ -45,7 +46,7 @@
 
         <div class="khai_niem bg-white">
             <div class="row g-0 justify-content-center text-center">
-                <div class="col-md-7">
+                <div class="col-md-7 px-3">
                     <div class="titleKN"><h2>KHÁI NIỆM THẦN SỐ HỌC</h2></div>
                     <div class="descKN"><span>Thần Số Học từ lâu đã được biết đến là một bộ môn khoa học, nghiên cứu về mối tương quan giữa các con số và sự rung động của chúng. Chúng giúp bạn hiểu được ý nghĩa của các con số xuất hiện trong cuộc sống và được coi là chìa khoá để giúp chúng ta giải mã Vũ trụ cũng như tìm ra mục đích sống, khả năng thiên bẩm của bản thân và linh hồn.</span></div>
                     <div class="descKN"><span>Thần Số Học sẽ giúp bạn giải thích việc bạn liên tục nhìn thấy sự lặp lại của các con số, như: 11 hoặc 22 hay 33,... Hay chúng cũng sẽ giúp bạn biết ý nghĩa về ngày sinh của mình cùng những thành viên trong gia đình bạn. Từ đó bạn thấy rằng, các con số không phải ngẫu nhiên xuất hiện trong cuộc sống của bạn và chúng chính là thông điệp mà vũ trụ muốn gửi đến bạn.</span></div>
@@ -86,6 +87,135 @@
 
     <div>
         <img class="mw-100" src="/img/gioithieu/ct1.png" alt="">
+    </div>
+
+    <style>
+        .gt-footer {
+            background-color: #0d6256;
+        }
+        .gt-footer .gt-fake-bg {
+            min-height: 322px;
+            background-repeat: no-repeat;
+            background-image: url('/img/gioithieu/g51.png');
+        }
+        .gt-footer .gt-fake-bg.right {
+            background-position-x: right;
+        }
+        .gt-footer .desc {
+            margin: 15px 0;
+        }
+        .gt-footer .title {
+            text-transform: uppercase;
+            font-size: 38px;
+        }
+        .gt-footer .group-hr {
+            width: 100%;
+            max-width: 300px;
+            height: 2px;
+            background-color: #41bcab;
+            margin: 40px auto;
+        }
+
+    </style>
+
+    <div class="gt-footer text-white py-0 py-md-5">
+        <div class="row g-0 align-items-center">
+            <div class="col-12">
+                <div class="text-center">
+                    <h1 class="fw-light title mt-3">Ý nghĩa của các con số chủ đạo theo ngày sinh và cách tính</h1>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="gt-fake-bg d-none d-md-block"></div>
+            </div>
+            <div class="col-md-6 text-center fw-lighter">
+                <div class="group-hr"></div>
+                <div class="group-desc">
+                    <div class="desc">
+                        <span>Theo Thần Số Học Pythagoras, con số chủ đạo là con số ảnh hưởng đến toàn bộ cuộc sống của bạn, từ khi bạn sinh ra cho đến khi bạn lìa xa cuộc đời này. Chúng sẽ tiết lộ cho bạn rất nhiều điều như: cuộc sống, tính cách, ngành nghề phù hợp với bạn. Chúng cũng giúp bạn tính toán được những năm đỉnh cao, thuận lợi cho cuộc đời bạn sau này.</span>
+                    </div>
+                    <div class="desc">
+                        <span>Đối với mỗi cá nhân, con số chủ đạo trong Thần Số Học Pythagoras sẽ giúp bạn tìm được hướng đi dễ dàng hơn, phù hợp hơn và gặt hái được nhiều thành tựu hơn. Chúng sẽ chỉ cho bạn cách tới được công việc phù hợp, hay hướng học tập, phát triển bản thân để phù hợp với thiên chất của bạn mà bạn không phải mất công đi tìm kiếm các loại hình nghề nghiệp trên thị trường hiện nay rồi miễn cưỡng chấp nhận chúng rồi mất đi phương hướng của bạn thân</span>
+                    </div>
+                    <div class="desc">
+                        <span>Việc không biết về con số chủ đạo, là nguyên nhân khiến hàng ngàn người thất nghiệp hoặc làm việc không hiệu quả và luôn thất bại trong nghề nghiệp. Vì vậy, hãy biết đến Thần Số Học càng sớm càng tốt để giúp bạn định hình được con số chủ đạo của bạn thân, từ đó tìm được hướng đi phù hợp, công việc yêu thích. Để mỗi ngày bạn vui vẻ đi làm, công việc hiệu quả và thành công trong sự nghiệp.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="gt-fake-bg d-none d-md-block right"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="mt-4">
+    <div class="post-main mb-5">
+        <div class="container container-post">
+            <div class="row g-0 g-sm-4">
+                <div class="col-lg-4 cmt-5">
+                    <a href="/gioi-thieu/ve-sala">
+                        <div class="row g-0">
+                            <div class="col-md-12">
+                                <img class="w-100" src="/img/banner/tt.png" alt="than so hoc">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="post-item text-white">
+                                    <div class="item-title">
+                                        <h5>Giới Thiệu Học Viện Cổ Học Sala</h5>
+                                    </div>
+                                    <div class="item-desc"><span>Thần Số Học - Numerology (tên tiếng Anh của Thần Số Học) dựa vào việc nghiên cứu ý nghĩa của các sóng rung và trường năng lượng của vũ trụ để tạo ra các con số và ảnh hưởng của nó tới cuộc sống con người.</span></div>
+                                    <div class="icon-click">
+                                        <img src="/img/icon/right-3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 cmt-5">
+                    <a href="/gioi-thieu/than-so-hoc-la-gi">
+                        <div class="row g-0">
+                            <div class="col-md-12">
+                                <img class="w-100" src="/img/banner/tt.png" alt="than so hoc">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="post-item text-white">
+                                    <div class="item-title">
+                                        <h5>Giới Thần Số Học Sala</h5>
+                                    </div>
+                                    <div class="item-desc"><span>Thần Số Học - Numerology (tên tiếng Anh của Thần Số Học) được khi ghi nhận trong suốt lịch sử của các nước cổ đại: Ai Cập, Babylon, Châu Á và Ấn Độ, và cũng xuất hiện nhiều trong Kinh Thánh.</span></div>
+                                    <div class="icon-click">
+                                        <img src="/img/icon/right-3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 cmt-5">
+                    <a href="/gioi-thieu/ung-dung-than-so-hoc-sala">
+                        <div class="row g-0">
+                            <div class="col-md-12">
+                                <img class="w-100" src="/img/banner/tt.png" alt="than so hoc">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="post-item text-white">
+                                    <div class="item-title">
+                                        <h5>Ứng Dụng Thần Số Học Sala</h5>
+                                    </div>
+                                    <div class="item-desc"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500</span></div>
+                                    <div class="icon-click">
+                                        <img src="/img/icon/right-3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

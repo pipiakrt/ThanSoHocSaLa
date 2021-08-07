@@ -275,6 +275,16 @@
 
 /* sm */
 @media (max-width: 768px) {
+    .gt-footer .title {
+        font-size: 20px !important;
+    }
+    .gt-footer .group-hr {
+        margin: 10px auto !important;
+    }
+    .gt-footer .group-desc {
+        padding: 0 10px;
+        text-align: initial;
+    }
     .chuyen-gia .info-chuyengia .btn-view .btn {
         margin-top: 10px;
     }

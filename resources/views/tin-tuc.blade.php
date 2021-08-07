@@ -54,9 +54,9 @@
                                             <div class="post-name">
                                                 <h2>{{ $item->name }}</h2>
                                             </div>
-                                            <div class="post-tilte">
+                                            {{-- <div class="post-tilte">
                                                 <h4>{{ $item->author }} - {{ $item->created_at->format('d/m/Y') }}</h4>
-                                            </div>
+                                            </div> --}}
                                             <div class="post-desc"><span>{{ $item->description }}</span></div>
                                             <div class="submit-post">
                                                 <a href="/tin-tuc/{{ $item->slug }}">Xem thêm</a>
