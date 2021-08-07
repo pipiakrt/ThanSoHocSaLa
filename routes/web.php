@@ -62,6 +62,7 @@ Route::group(['middleware' => 'login'], function(){
         Route::get('/', [AccountController::class, 'index']);
         Route::post('/cap-nhap', [AccountController::class, 'update']);
         Route::get('/gio-hang', [AccountController::class, 'giohang']);
+        Route::get('/thanh-toan', [AccountController::class, 'thanhtoan']);
         Route::get('/lich-su-tra-cuu', [AccountController::class, 'lichsutracuu']);
         Route::get('/lich-su-tra-cuu/{id}', [ExportController::class, 'ketqualichsutracuu']);
         Route::get('/gia-han/{id}', [AccountController::class, 'giahan']);

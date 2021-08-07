@@ -20,6 +20,7 @@ class Order extends Model
         'email',
         'price',
         'status',
+        'note',
         'bat_dau',
         'ket_thuc',
         'licenses'

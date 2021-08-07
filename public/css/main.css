@@ -110,6 +110,13 @@ a:hover {
 .block-1 .item:hover .box-group, .block-1 .item.active .box-group {
     opacity: 0;
 }
+.block-1 .item:hover .item-drop, .block-1 .item.active .item-drop {
+    opacity: 1;
+}
+.block-1 .item:hover .link-to, .block-1 .item.active .link-to {
+    background-image: url("/img/icon/right-1.png");
+    background-color: white;
+}
 .block-1 .item .link-to {
     background-image: url("/img/icon/right-2.png");
     background-repeat: no-repeat;
@@ -121,15 +128,6 @@ a:hover {
     border-radius: 50%;
     height: 35px;
     width: 35px;
-}
-
-.block-1 .item:hover .item-drop, .block-1 .item.active .item-drop {
-    opacity: 1;
-}
-
-.block-1 .item:hover .link-to, .block-1 .item.active .link-to {
-    background-image: url("/img/icon/right-1.png");
-    background-color: white;
 }
 .block-1 .item .box-group {
     position: absolute;
@@ -661,8 +659,8 @@ input[type="date"]:focus::before {
     background-color: #097364;
 }
 
-.gioi-thieu .item:hover  {
-    background-color: #094773;
+.gioi-thieu .item.active  {
+    background-color: #097364 !important;
 }
 
 .gioi-thieu .item .title h4 {
@@ -718,7 +716,7 @@ input[type="date"]:focus::before {
     margin-top: 40px;
 }
 .gioi-thieu .block-content .cr-title1 h4 {
-    font-size: 25px;
+    font-size: 24px;
     color: #097364;
     letter-spacing: 3px;
 }
@@ -951,22 +949,36 @@ input[type="date"]:focus::before {
 }
 .service2 .anhsp {
     position: relative;
-    position: relative;
     background-size: cover;
+}
+.btn-sanpham {
+    border: none;
+    background: #dab066;
+    color: white;
+    padding: 10px 0;
+    font-size: 20px;
+    padding-bottom: 7px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    width: 90%;
+    bottom: 25px;
+    margin: auto;
 }
 .service2 .anhsp button {
     border: none;
     background: #dab066;
     color: white;
-    padding: 10px 60px;
+    padding: 10px 0;
     font-size: 20px;
     padding-bottom: 7px;
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 7px;
     position: absolute;
+    width: 90%;
     right: 0;
-    left: 104px;
+    left: 0;
     bottom: 25px;
     margin: auto;
 }
@@ -1130,10 +1142,10 @@ input[type="date"]:focus::before {
 }
 .cam-nhan-kh .owl-nav button.owl-prev {
    transform: rotate(180deg);
-   left: -42px;
+   left: 0px;
 }
 .cam-nhan-kh .owl-nav button.owl-next {
-    right: -42px;
+    right: 0px;
 }
 .breadcrumb-cus {
     background-color: #f2f2f2;

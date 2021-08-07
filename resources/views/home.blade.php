@@ -117,8 +117,8 @@
         <div class="titleheader text-dark text-center">
             <h2 class="title-h1">Gía trị chỉ có khi làm Thần Số Học tại Thần số học Sala</h2>
         </div>
-        <div class="main-tasao mt-4">
-            <div class="row g-5 mt-1">
+        <div class="main-tasao mt-3 mt-md-4">
+            <div class="row g-4 g-md-5">
                 <div class="col-md-6">
                     <div class="block">
                         <div class="stt">1</div>

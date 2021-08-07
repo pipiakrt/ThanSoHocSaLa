@@ -21,7 +21,9 @@
                 </div>
             </div>
             <div class="col-4 text-center">
-                <img class="logo-desktop" src="/img/header/logo.png" alt="Logo Thần Số Học">
+                <a href="/">
+                    <img class="logo-desktop" src="/img/header/logo.png" alt="Logo Thần Số Học">
+                </a>
             </div>
             <div class="col-4">
                 <div class="row">
@@ -86,12 +88,19 @@
     <div class="d-block d-lg-none">
         <div class="layout-mb py-3 bg-white g-0">
             <div class="row g-0">
-                <div class="col-9">
+                <div class="col-4">
                     <div class="text-center">
-                        <img src="/img/header/logo.png" alt="Logo Thần Số Học">
+                        <a href="/">
+                            <img style="width: 100px;" class="mw-100" src="/img/header/logo.png" alt="Logo Thần Số Học">
+                        </a>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6">
+                    <div class="text-center d-flex align-items-center mt-1 h-100" style="line-height: 17px; color: #398a6b; font-size: 14px;">
+                        <span>KIẾN TẠO CUỘC ĐỜI HẠNH PHÚC TỰ NHỮNG CON SỐ</span>
+                    </div>
+                </div>
+                <div class="col-2">
                     <div class="d-flex align-items-center h-100 justify-content-center">
                         <div id="menu-icon">
                             <div class="m_nav_ham button_closed" id="m_ham_1"></div>
@@ -106,7 +115,9 @@
             <div class="block-menu">
                 <div class="logo">
                     <div class="text-center py-3">
-                        <img src="/img/header/logo.png" alt="Logo Thần Số Học">
+                        <a href="/">
+                            <img class="mw-100" src="/img/header/logo.png" alt="Logo Thần Số Học">
+                        </a>
                     </div>
                 </div>
                 <div class="block">

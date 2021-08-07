@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Cart;
 use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
+use App\Jobs\Order as sendMail;
 
 class ProductController extends Controller
 {
@@ -42,9 +43,11 @@ class ProductController extends Controller
     {
         $product = Product::where('slug', $slug)->first();
         $user = $request->user();
+        return view('thanh-toan', compact(['user', 'product']));
+
         $check = $user->Order->where('product_id', $product->id)->first();
         if (!$check) {
-            Order::create([
+            $order = Order::create([
                 'user_id' => $user->id,
                 'product_id' => $product->id,
                 'avatar' => $product->image,
@@ -54,7 +57,8 @@ class ProductController extends Controller
                 'email' => $user->email,
                 'price' => $product->price,
             ]);
-            return redirect('/tai-khoan/gio-hang/')->with('msg', 'Thêm gói sản phẩm thành công, thanh toán để kích hoạt gói!');
+            sendMail::dispatch($order);
+            return redirect('/tai-khoan/gio-hang/')->with('msg', 'Thêm gói sản phẩm thành công, vui lòng check mail để thanh toán gói sản phẩm!');
         }
         else if ($check->status == 1) {
             return redirect('/tai-khoan/dich-vu/')->with('msg', 'Gói sản phẩm đang hoạt động, liên hệ 0987654321 để nâng cấp gói');

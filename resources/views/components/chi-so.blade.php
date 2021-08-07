@@ -77,7 +77,7 @@
                         <div class="box-group">
                             <div class="box">
                                 <div class="title">
-                                    Tâm hồn
+                                    TÂM HỒN
                                     <div class="desc"><span>Ý nghĩa chỉ số tâm hồn</span></div>
                                 </div>
                             </div>
