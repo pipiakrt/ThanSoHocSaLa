@@ -31,10 +31,10 @@
         text-transform: none;
     }
     .chi-so-bd {
-        color: #c1bc0e;
+        color: #f5ee0d;
     }
     .chi-so-name {
-        color: #ea3c07;
+        color: #ffffff;
     }
     .nang-luc {
         font-size: 16px;
@@ -77,6 +77,19 @@
         left: 175px;
     }
 </style>
+@endpush
+@push('scripts')
+<script>
+    $('#laylink').click(() => {
+        var tempInput = document.createElement("input");
+        tempInput.value = "{{ $params['link'] }}"
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        $('.toast').toast('show')
+    })
+</script>
 @endpush
 
 @section('content')
@@ -269,7 +282,7 @@
                                                                 </div>
                                                                 <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
                                                             </div>
-                                                            <div class="title2 mt-5"><h4 class="text-center text-md-start">BIỂU ĐỒ NĂNG LỰC</h4></div>
+                                                            <div class="title2 mt-5"><h4 class="text-center">BIỂU ĐỒ NĂNG LỰC</h4></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -286,7 +299,7 @@
                                                                 </div>
                                                                 <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
                                                             </div>
-                                                            <div class="title2 mt-5"><h4 class="text-center text-md-start">BIỂU ĐỒ BIRTH CHART</h4></div>
+                                                            <div class="title2 mt-5"><h4 class="text-center">BIỂU ĐỒ BIRTH CHART</h4></div>
                                                         </div>
                                                         </div>
                                                     </div>
@@ -303,7 +316,7 @@
                                                                 </div>
                                                                 <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
                                                             </div>
-                                                            <div class="title2 mt-5"><h4 class="text-center text-md-start">BIỂU ĐỒ TỔNG HỢP</h4></div>
+                                                            <div class="title2 mt-5"><h4 class="text-center">BIỂU ĐỒ TỔNG HỢP</h4></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -313,11 +326,74 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="custom-next-right start" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <div class="text-nr">Chỉ Số Trước</div>
+                        </div>
+                        <div class="custom-next-right end" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <div class="text-nr">Chỉ Số Sau</div>
+                        </div>
+                        <div class="custom-top">
+                            <a href="#carouselExampleCaptions">
+                                <img src="/img/ket-qua-tra-cuu/top.png" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xl-2"></div>
+                <style>
+                    .custom-next-right {
+                        width: 50px;
+                        height: 50px;
+                        position: absolute;
+                        bottom: 135px;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        text-align: center;
+                        width: 30%;
+                    }
+                    .custom-next-right.start {
+                        left: 7%;
+                        background-image: url("/img/ket-qua-tra-cuu/left.png");
+                    }
+                    .custom-next-right.end {
+                        right: 7%;
+                        background-image: url("/img/ket-qua-tra-cuu/right.png");
+                        background-position-x: right;
+                    }
+                    .custom-next-right .text-nr {
+                        font-weight: 200;
+                        font-family: 'iCiel DIN Pro Condensed';
+                        text-transform: uppercase;
+                        color: white;
+                        min-inline-size: max-content;
+                        font-size: 40px;
+                    }
+                    .custom-top {
+                        position: absolute;
+                        right: 0;
+                        left: 0;
+                        text-align: center;
+                        bottom: 25px;
+                        width: fit-content;
+                        margin: auto;
+                    }
+                </style>
                 <div class="col-xl-10">
                     <div class="share-ketqua text-white">
+                        <div class="d-flex justify-content-end">
+                            <div class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-header">
+                                    <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+                                    <strong class="me-auto">Thông báo</strong>
+                                    <small>1 giây trước</small>
+                                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                                <div class="toast-body" style="background-color: white; color: darkblue;">
+                                    Coppy Đường Đẫn Thành Công
+                                </div>
+                            </div>
+                        </div>
                         <div class="titlecs text-center fw-light"><h4>CHIA SẺ NGAY</h4></div>
                         <div class="row g-0 justify-content-center mt-5">
                             <div class="col-sm-4 col-md-3 col-xl-2 text-center">
@@ -341,7 +417,7 @@
                                 </div>
                             </div>
                             <div class="mt-4 mt-sm-0 col-sm-4 col-md-3 col-xl-2 text-center">
-                                <div class="d-flex align-items-center">
+                                <div id="laylink" class="d-flex align-items-center">
                                     <div>
                                         <img src="/img/ket-qua-tra-cuu/link.png" alt="">
                                     </div>

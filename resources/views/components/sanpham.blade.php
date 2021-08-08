@@ -96,7 +96,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-md-6 position-relative">
-                                                    <a href="/tai-khoan/gio-hang/ca-nhan">
+                                                    <a href="/san-pham/ca-nhan">
                                                         <button style="background-color: #097364;">Chi tiết</button>
                                                     </a>
                                                 </div>
@@ -155,7 +155,7 @@
                                         <div class="anhsp h-100 text-center" style="background-image: url('/img/kh/1.jpg');">
                                             <div class="row g-0 position-absolute end-0 start-0 bottom-0">
                                                 <div class="col-md-6 position-relative">
-                                                    <a href="/san-pham/doanh-nghiep">
+                                                    <a href="/tai-khoan/gio-hang/doanh-nghiep">
                                                         <button>Đặt Hàng</button>
                                                     </a>
                                                 </div>
@@ -226,72 +226,12 @@
                                             </div>
                                             <div class="row g-0">
                                                 <div class="col-6 position-relative">
-                                                    <a href="/san-pham/doanh-nghiep">
+                                                    <a href="/tai-khoan/gio-hang/ca-nhan">
                                                         <button class="btn-sanpham">Đặt Hàng</button>
                                                     </a>
                                                 </div>
                                                 <div class="col-6 position-relative">
-                                                    <a href="/san-pham/doanh-nghiep">
-                                                        <button class="btn-sanpham bg-white" style="color: #097364">Chi tiết</button>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item h-100">
-                                <div class="row g-0 text-white text-center h-100">
-                                    <div class="col-xl-7 h-100">
-                                        <div class="box-item">
-                                            <div class="block-item">
-                                                <div class="giamgia">
-                                                    <div class="giamgia-g">
-                                                        <div class="title-1 gc">
-                                                            <span>5.000.000 vnđ</span>
-                                                        </div>
-                                                        <div class="title-1">
-                                                            <span>Giảm còn</span>
-                                                        </div>
-                                                        <div class="title-2">
-                                                            <h3>1.900k</h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="khuyenmsi"></div>
-                                                <div class="quatang">
-                                                    <div class="title-3"><h2>Tặng ngay</h2></div>
-                                                    <div class="fix-mgauto text-start">
-                                                        <div class="group-qt">
-                                                            <img src="/img/icon/tick.png" alt="Quà tặng">
-                                                            <div class="desc-1"><span>01 cuốn sách cuộc đời của chủ doanh nghiệp</span></div>
-                                                            <div class="price-1"><span>150.000vnđ</span></div>
-                                                        </div>
-                                                        <div class="group-qt">
-                                                            <img src="/img/icon/tick.png" alt="Quà tặng">
-                                                            <div class="desc-1"><span>01 cuốn sách cuộc đời cho doanh nghiệp</span></div>
-                                                            <div class="price-1"><span>150.000vnđ</span></div>
-                                                        </div>
-                                                        <div class="group-qt">
-                                                            <img src="/img/icon/tick.png" alt="Quà tặng">
-                                                            <div class="desc-1"><span>02 buổi tư vấn ứng dụng Thần Số Học cùng chuyên gia</span></div>
-                                                            <div class="price-1"><span>1.000.000vnđ</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="total">
-                                                        <div class="total-text"><span>Tổng giá trị quà tặng</span></div>
-                                                        <div class="total-price"><h2>1.300.000vnđ</h2></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row g-0">
-                                                <div class="col-6 position-relative">
-                                                    <a href="/san-pham/doanh-nghiep">
-                                                        <button class="btn-sanpham">Đặt Hàng</button>
-                                                    </a>
-                                                </div>
-                                                <div class="col-6 position-relative">
-                                                    <a href="/san-pham/doanh-nghiep">
+                                                    <a href="/san-pham/ca-nhan">
                                                         <button class="btn-sanpham bg-white" style="color: #097364">Chi tiết</button>
                                                     </a>
                                                 </div>
@@ -362,7 +302,7 @@
                                             </div>
                                             <div class="row g-0">
                                                 <div class="col-6 position-relative">
-                                                    <a href="/san-pham/doanh-nghiep">
+                                                    <a href="/tai-khoan/gio-hang/doanh-nghiep">
                                                         <button class="btn-sanpham">Đặt Hàng</button>
                                                     </a>
                                                 </div>

@@ -36,7 +36,7 @@ class Order
     {
         $mail = new sendMail($this->order);
         $mail->subject('Thần Số Học Sala đã nhận đơn hàng: #' . $this->order['code']);
-        $mail->from($this->order['email'], 'Thần Số Học Sala');
+        $mail->from(env('MAIL_USERNAME'), 'Thần Số Học Sala');
         Mail::to($this->order['email'])->send($mail);
     }
 }

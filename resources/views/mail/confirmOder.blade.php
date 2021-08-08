@@ -170,14 +170,14 @@ $phivanchuyen = 0;
 
         <table class="camon dichvu">
             <tr>
-                <td><a href="/">Tảo xoắn đại việt</a></td>
-                <td><a href="/">Sơn đại việt</a></td>
+                <td><a href="/">Tư Vấn Thần Số Học</a></td>
+                <td><a href="/">Sinh Trắc Vân Tay</a></td>
                 <td><a href="/">Khuyến mại lớn</a></td>
                 <td><a href="/">Hỗ trợ khách hàng</a></td>
             </tr>
         </table>
 
-        <p class="camon">Cảm ơn bạn đã đặt hàng tại Davichat</p>
+        <p class="camon">Cảm ơn bạn đã đặt hàng tại Thần Số Học Sala</p>
 
         <div class="chaohoi">
             <p class="p1">Xin chào {{ $order['name'] }}</p>
@@ -239,7 +239,7 @@ $phivanchuyen = 0;
 
             <p style="margin-bottom: 0;"><b>Phí vận chuyển:</b> 0.00 VND</p>
             <p style="margin: 0;"><b>Thời gian giao hàng:</b> từ 08/08/2021, đến 10/02/2021</p>
-            <p style="margin-top: 0;"><b>Ghi chú: </b> {{ $shop['note'] }}</p>
+            <p style="margin-top: 0;"><b>Ghi chú: </b> {{ $order['note'] }}</p>
 
             <div class="clear"></div>
 

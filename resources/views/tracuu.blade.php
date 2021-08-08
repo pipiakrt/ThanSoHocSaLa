@@ -2,6 +2,16 @@
 
 @push('styles')
     <link rel="stylesheet" href="/css/tra-cuu.css">
+    <link rel="stylesheet" href="/plugins/dtsel-master/dtsel.css">
+@endpush
+
+@push('scripts')
+<script src="/plugins/dtsel-master/dtsel.js"></script>
+<script>
+    $('#birthday').datepicker({
+        format: 'dd-mm-yyyy'
+    });
+</script>
 @endpush
 
 @section('content')
@@ -30,11 +40,11 @@
                                         </div>
                                         <div class="form-input">
                                             <label for="birthday">Ngày sinh</label>
-                                            <input name="birthday" id="birthday" type="date" required >
+                                            <input name="birthday" id="birthday" type="text" required >
                                         </div>
                                         <div class="form-input">
                                             <label for="sdt">Số điện thoại</label>
-                                            <input id="sdt" name="sdt" type="text">
+                                            <input id="sdt" name="sdt" type="text" required>
                                         </div>
                                     </div>
                                 </div>
@@ -64,11 +74,11 @@
                                         </div>
                                         <div class="form-input">
                                             <label for="diachi">Địa chỉ</label>
-                                            <input name="diachi" id="diachi" type="text">
+                                            <input name="diachi" id="diachi" type="text" required>
                                         </div>
                                         <div class="form-input">
                                             <label class="w-100" for="email">Email</label>
-                                            <input id="email" name="email" type="email">
+                                            <input id="email" name="email" type="email" required>
                                         </div>
                                     </div>
                                 </div>

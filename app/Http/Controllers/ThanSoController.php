@@ -43,6 +43,7 @@ class ThanSoController extends Controller
         $ketqua = TraCuu::where('code', $code)->first();
         $data = $ketqua->data;
         $params = [
+            'link' => env('APP_URL') . "/tra-cuu/$ketqua->code",
             'name' => $ketqua->name,
             'birthday' => $ketqua->birthdate
         ];
@@ -83,14 +84,16 @@ class ThanSoController extends Controller
         $data = $aryReturn;
         $params = $dataPost;
 
-        TraCuu::create([
+        $tracuu = TraCuu::create([
             'code' => Str::random(60),
             'data' => $data,
             'birthdate' => $dataPost['birthday'],
             'name' => $dataPost['name']
         ]);
 
-        return view('ketquatracuu', compact(['data', 'params']));
+        return redirect("/tra-cuu/$tracuu->code");
+
+        // return view('ketquatracuu', compact(['data', 'params']));
     }
 
     /**

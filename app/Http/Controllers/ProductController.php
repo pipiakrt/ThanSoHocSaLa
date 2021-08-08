@@ -8,6 +8,9 @@ use App\Models\Cart;
 use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 use App\Jobs\Order as sendMail;
+use App\Models\Province;
+use App\Models\District;
+use App\Models\Ward;
 
 class ProductController extends Controller
 {
@@ -47,6 +50,22 @@ class ProductController extends Controller
         $product = Product::where('slug', $slug)->first();
         $user = $request->user();
         return view('thanh-toan', compact(['user', 'product']));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function thanhtoan(Request $request, $slug)
+    {
+        $address = Province::find($request->province);
+        $province = $address->name;
+        $district = $address->districts->find($request->district)->name;
+        $ward = $address->districts->find($request->district)->wards->find($request->ward)->name;
+
+        $product = Product::where('slug', $slug)->first();
+        $user = $request->user();
 
         $check = $user->Order->where('product_id', $product->id)->first();
         if (!$check) {
@@ -55,8 +74,10 @@ class ProductController extends Controller
                 'product_id' => $product->id,
                 'avatar' => $product->image,
                 'code' => $user->id . mt_rand(1000000000, 9999999999),
-                'name' => $product->name,
-                'phone' => $user->phone,
+                'name' => $request->name,
+                'address' => $province . ' - ' . $district . ' - ' . $ward . $request->address,
+                'note' => $request->note,
+                'phone' => $request->phone,
                 'email' => $user->email,
                 'price' => $product->price,
             ]);

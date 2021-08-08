@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SocialAuthController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\AddressController;
 use Illuminate\Support\Str;
 
 /*
@@ -67,6 +68,7 @@ Route::group(['middleware' => 'login'], function(){
         Route::get('/lich-su-tra-cuu/{id}', [ExportController::class, 'ketqualichsutracuu']);
         Route::get('/gia-han/{id}', [AccountController::class, 'giahan']);
         Route::get('/gio-hang/{slug}', [ProductController::class, 'dathang']);
+        Route::post('/gio-hang/{slug}', [ProductController::class, 'thanhtoan']);
         Route::get('/dich-vu', [AccountController::class, 'donhang']);
         Route::get('/tra-cuu-nang-cao', [ThanSoController::class, 'formnangcao']);
         Route::post('/tra-cuu-nang-cao', [ExportController::class, 'index']);
@@ -100,4 +102,10 @@ Route::view('/admin/{any}', 'admin.index')->where('any', '.*');
 Route::prefix('socialite')->group(function () {
     Route::get('login/{social}', [SocialAuthController::class, 'redirectToProvider']);
     Route::get('/{social}/callback', [SocialAuthController::class, 'handleProviderCallback']);
+});
+
+Route::prefix('address')->group(function () {
+    Route::get('/province', [AddressController::class, 'province']);
+    Route::get('/district/{id}', [AddressController::class, 'district']);
+    Route::get('/ward/{id}', [AddressController::class, 'ward']);
 });

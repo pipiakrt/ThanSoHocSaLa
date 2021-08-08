@@ -26,6 +26,7 @@ class CreateOrdersTable extends Migration
             $table->string('ket_thuc')->nullable();
             $table->string('price')->nullable();
             $table->mediumText('note')->nullable();
+            $table->string('address')->nullable();
             $table->integer('licenses')->default(0)->index();
             $table->boolean('status')->default(0)->index();
             $table->timestamps();
