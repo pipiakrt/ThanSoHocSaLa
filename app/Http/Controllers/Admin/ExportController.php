@@ -9,6 +9,7 @@ use App\Services\ThanSoHoc\UtilsComponent;
 use App\Services\ThanSoHoc\MYPDF;
 use App\Models\ThanSo as Model;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 
 class ExportController extends Controller
@@ -31,8 +32,8 @@ class ExportController extends Controller
         $name = $dataPost['name'];
         $buildName = $dataDefineComponent->convertAccentedCharacters($name);
         $buildNameFile = str_replace(' ', '-', $buildName);
-        $birthday = Carbon::parse($dataPost['birthday'])->format('m/d/Y');
-        $dayBirth = Carbon::parse($dataPost['birthday'])->format('m');
+        $birthday = Carbon::parse($dataPost['birthday'])->format('d/m/Y');
+        $dayBirth = Carbon::parse($dataPost['birthday'])->format('d');
 
         $utilsComponent = new UtilsComponent();
         $aryThanSo = $utilsComponent->getThanSo($name, $birthday, false);
@@ -104,9 +105,13 @@ class ExportController extends Controller
         $aryReturn['TRUONG_THANH'] = $this->getContents('TRT', $aryThanSo['truongThanh']);
 
         $user->TraCuu()->create([
+            'code' => Str::random(60),
             'name' => $dataPost['name'],
             'birthdate' => $dataPost['birthday'],
             'data' => $aryReturn,
+            'email' => $user->email,
+            'phone' => $user->phone,
+            'type' => 1,
         ]);
         $user->License()->decrement('number');
 

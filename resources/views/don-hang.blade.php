@@ -107,11 +107,15 @@
                         <div class="col-md-3 col-lg-2">
                             <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
                                 @if ($item->status == 0)
-                                    <h5 class="mb-0 mt-2 fw-light bg-primary text-white chips">Chờ Xử Lý</h5>
+                                    <h6 class="mb-0 mt-2 bg-primary text-white chips">Chờ xử lý</h6>
+                                    <a href="tel:0987654321">
+                                        <h6 class="mb-0 mt-2 bg-danger text-white chips">Liên hệ</h6>
+                                    </a>
+                                    <h6 class="mb-0 mt-2 bg-success text-white chips">Xuất hóa đơn</h6>
                                 @elseif ($item->status == 1)
-                                    <h5 class="mb-0 mt-2 fw-light bg-success text-white chips">Kích Hoạt</h5>
+                                    <h6 class="mb-0 mt-2 bg-success text-white chips">Kích Hoạt</h6>
                                 @else
-                                    <h5 class="mb-0 mt-2 fw-light bg-danger text-white chips">Hết hạn</h5>
+                                    <h6 class="mb-0 mt-2 bg-danger text-white chips">Hết hạn</h6>
                                 @endif
                             </div>
                         </div>

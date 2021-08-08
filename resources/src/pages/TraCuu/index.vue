@@ -32,6 +32,8 @@
                                     <th style="max-width: 600px" class="pl-0">
                                         <span class="text-dark-75">Họ Tên</span>
                                     </th>
+                                    <th style="min-width: 100px">Email</th>
+                                    <th style="min-width: 100px">Điện Thoại</th>
                                     <th style="min-width: 100px">Ngay Sinh</th>
                                     <th style="min-width: 120px">Ngày Tra Cứu</th>
                                     <th style="min-width: 120px">Loại</th>
@@ -57,6 +59,12 @@
                                     <td style="max-width: 600px">
                                         <div class="text-dark-75 font-weight-bolder d-block font-size-lg" v-html="Text(item.birthdate, 300)"></div>
                                     </td>
+                                    <td style="max-width: 600px">
+                                        <div class="text-dark-75 font-weight-bolder d-block font-size-lg" v-html="item.email"></div>
+                                    </td>
+                                    <td style="max-width: 600px">
+                                        <div class="text-dark-75 font-weight-bolder d-block font-size-lg" v-html="item.phone"></div>
+                                    </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.created_at)"></span>
                                     </td>
@@ -64,7 +72,7 @@
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.type == 1 ? 'Tính phí' : 'Miễn phí'"></span>
                                     </td>
                                     <td>
-                                        <a :href="`/tra-cuu/${item.code}`" target="_blank">Click</a>
+                                        <a :href="`/tra-cuu/${item.code}`" target="_blank">Click link</a>
                                     </td>
                                     <td class="text-center">
                                         <div class="dropdown dropdown-inline">

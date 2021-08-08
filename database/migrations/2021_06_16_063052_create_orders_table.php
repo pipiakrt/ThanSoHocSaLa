@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->integer('user_id')->index();
             $table->integer('product_id')->index();
             $table->string('name')->nullable();
+            $table->string('product_name')->nullable();
             $table->string('code')->nullable();
             $table->string('avatar')->nullable();
             $table->string('phone')->nullable();
@@ -26,6 +27,7 @@ class CreateOrdersTable extends Migration
             $table->string('ket_thuc')->nullable();
             $table->string('price')->nullable();
             $table->mediumText('note')->nullable();
+            $table->string('payment')->nullable();
             $table->string('address')->nullable();
             $table->integer('licenses')->default(0)->index();
             $table->boolean('status')->default(0)->index();

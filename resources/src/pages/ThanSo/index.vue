@@ -19,6 +19,25 @@
                     </div>
                 </div>
                 <div class="card-body pt-0 pb-3">
+                    <div class="row mb-5">
+                        <div class="col-6">
+                            <div class="row g-0">
+                                <div class="col-5">
+                                    <input v-model="filterName" type="text" placeholder="Tên tìm kiếm" class="form-control form-control-sm form-filter datatable-input"/>
+                                </div>
+                                <div class="col-4">
+                                    <select v-model="filterType" class="form-control form-control-sm form-filter datatable-input" title="Chọn" data-col-index="7">
+                                        <option value="">Loại</option>
+                                        <option value="MP">Miễn Phí</option>
+                                        <option value="CS">Chuyên Sâu</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <button @click="getApi()" class="btn btn-block btn-primary kt-btn btn-sm kt-btn--icon d-block">Lọc Luận Giải</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-head-custom table-head-bg table-borderless table-vertical-center">
                             <thead>
@@ -32,9 +51,9 @@
                                     <th style="max-width: 600px" class="pl-0">
                                         <span class="text-dark-75">Tên luận giải</span>
                                     </th>
-                                    <th style="min-width: 100px">Nội dung</th>
                                     <th style="min-width: 120px">Mã</th>
                                     <th style="min-width: 120px">Loại</th>
+                                    <th style="min-width: 120px">Cập nhật</th>
                                     <th class="text-center">EXT</th>
                                 </tr>
                             </thead>
@@ -54,16 +73,15 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td style="max-width: 600px">
-                                        <div class="text-dark-75 font-weight-bolder d-block font-size-lg" v-html="Text(item.content, 300)"></div>
-                                    </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="Text(item.code, 250)"></span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="Text(item.type, 250)"></span>
                                     </td>
-
+                                    <td>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.updated_at)"></span>
+                                    </td>
                                     <td class="text-center">
                                         <div class="dropdown dropdown-inline">
                                             <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -118,6 +136,7 @@
 import Extends from '../../extend';
 import Paginate from 'vuejs-paginate'
 import Breadcrumb from '../../components/breadcrumb/index'
+import moment from 'moment'
 export default {
     components: {
         Breadcrumb,
@@ -141,6 +160,8 @@ export default {
                     text: 'Thêm Mới',
                 },
             },
+            filterName: '',
+            filterType: '',
             page: 0,
             thansohoc: []
         }
@@ -157,6 +178,8 @@ export default {
         async getApi() {
             Extends.LoadPage()
             let query = {
+                name: this.filterName,
+                type: this.filterType,
                 page: this.page,
             }
             let thansohoc = await axios("/api/thanso", { params: query });
@@ -168,7 +191,10 @@ export default {
         },
         Text(text, length) {
             return Extends.FormatText(text, length)
-        }
+        },
+        formatTime(time) {
+            return moment(time).format('DD/MM/YYYY');
+        },
     },
 
 }

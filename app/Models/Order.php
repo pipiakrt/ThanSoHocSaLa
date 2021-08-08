@@ -21,9 +21,12 @@ class Order extends Model
         'price',
         'status',
         'note',
+        'address',
         'bat_dau',
         'ket_thuc',
-        'licenses'
+        'licenses',
+        'payment',
+        'product_name'
     ];
 
     public function Product() {

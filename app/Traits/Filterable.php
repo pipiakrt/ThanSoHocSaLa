@@ -53,6 +53,6 @@ trait Filterable
     public function scopePaginateFilter(EloquentBuilder $query, Request $request, $perPage = 15)
     {
         $param = $request->all();
-        return $this->scopeFilter($query, $param)->simplePaginate($perPage)->withQueryString();
+        return $this->scopeFilter($query, $param)->paginate($perPage)->withQueryString();
     }
 }

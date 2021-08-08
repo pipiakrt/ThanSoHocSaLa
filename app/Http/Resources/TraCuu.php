@@ -21,6 +21,8 @@ class TraCuu extends JsonResource
             'name' => $this->name,
             'birthdate' => $this->birthdate,
             'created_at' => $this->created_at,
+            'email' => $this->email,
+            'phone' => $this->phone,
         ];
     }
 }

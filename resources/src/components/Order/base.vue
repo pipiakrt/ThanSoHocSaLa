@@ -76,6 +76,8 @@
                                         <span class="text-dark-75">đơn hàng</span>
                                     </th>
                                     <th>Khách Hàng</th>
+                                    <th style="max-width: 320px;">Địa Chỉ</th>
+                                    <th>Thanh Toán</th>
                                     <th>Gói</th>
                                     <th style="max-width: 80px">Giá</th>
                                     <th style="max-width: 80px">Ngày tạo</th>
@@ -95,11 +97,17 @@
                                             <router-link :to="'/admin/don-hang/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="`#${item.code}`"></router-link>
                                         </td>
                                         <td>
-                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="`${item.user.name} - ${item.user.phone}`"></span>
-                                            <span class="text-muted font-weight-bold" v-text="item.user.email"></span>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="`${item.name} - ${item.phone}`"></span>
+                                            <span class="text-muted font-weight-bold" v-text="item.email"></span>
+                                        </td>
+                                        <td style="max-width: 320px;">
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="Text(item.address, 80)"></span>
                                         </td>
                                         <td>
-                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.name"></span>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.payment"></span>
+                                        </td>
+                                        <td>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.product_name"></span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.price"></span>

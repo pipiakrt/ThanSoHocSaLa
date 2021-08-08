@@ -24,6 +24,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="name" class="col-2 col-form-label">Hình Thức Thanh Toán</label>
+                                    <div class="col-10">
+                                        <input :value="payment" class="form-control" type="text" disabled />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="name" class="col-2 col-form-label">Điện Thoại</label>
                                     <div class="col-10">
                                         <input :value="phone" class="form-control" type="text" disabled />
@@ -42,9 +48,27 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="name" class="col-2 col-form-label">Lượt tra cứu</label>
+                                    <label for="address" class="col-2 col-form-label">Địa Chỉ</label>
+                                    <div class="col-10">
+                                        <textarea v-model="address" class="form-control" placeholder="Địa Chỉ" rows="5" id="address" disabled></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="note" class="col-2 col-form-label">Ghi chú</label>
+                                    <div class="col-10">
+                                        <textarea v-model="note" class="form-control" placeholder="Ghi chú" rows="5" id="note" disabled></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="name" class="col-2 col-form-label">Lượt tra cứu gốc</label>
                                     <div class="col-10">
                                         <input v-model="licenses" class="form-control" type="number" :disabled="status != 1" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="name" class="col-2 col-form-label">Lượt tra cứu cộng từ gói</label>
+                                    <div class="col-10">
+                                        <input v-model="licenses_goi" class="form-control" type="number" :disabled="status != 1" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -125,11 +149,21 @@ export default {
             name: '',
             phone: '',
             email: '',
+            payment: '',
             price: '',
             status: '',
             bat_dau: '',
             ket_thuc: '',
             licenses: '',
+            licenses_goc: '',
+            licenses_goi: 0,
+            address: '',
+            note: '',
+        }
+    },
+    watch: {
+        licenses_goi() {
+            this.licenses = Number(this.licenses_goi) + Number(this.licenses_goc)
         }
     },
     async created() {
@@ -143,8 +177,11 @@ export default {
             this.price = res.data.data.price
             this.status = res.data.data.status
             this.bat_dau = res.data.data.bat_dau
+            this.payment = res.data.data.payment
             this.ket_thuc = res.data.data.ket_thuc
-            this.licenses = res.data.data.licenses
+            this.licenses_goc = this.licenses = res.data.data.licenses
+            this.address = res.data.data.address
+            this.note = res.data.data.note
             KTUtil.ready(function () {
                 $('#kt_datetimepicker_1').datetimepicker();
                 $('#kt_datetimepicker_2').datetimepicker();

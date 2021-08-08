@@ -21,7 +21,7 @@
                                 <div class="form-group row">
                                     <label for="name" class="col-2 col-form-label">Tên</label>
                                     <div class="col-10">
-                                        <input v-model="page_description" class="form-control" type="text" placeholder="Tên bài viết" />
+                                        <input v-model="page_description" class="form-control" type="text" placeholder="Tên luận giải" />
                                     </div>
                                 </div>
                                 <div class="form-group row">

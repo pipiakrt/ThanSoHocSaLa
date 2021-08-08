@@ -11,6 +11,8 @@ class TraCuu extends Model
 
     protected $fillable = [
         'user_id',
+        'email',
+        'phone',
         'code',
         'type',
         'data',

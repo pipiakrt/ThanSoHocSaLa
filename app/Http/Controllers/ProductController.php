@@ -49,7 +49,20 @@ class ProductController extends Controller
     {
         $product = Product::where('slug', $slug)->first();
         $user = $request->user();
-        return view('thanh-toan', compact(['user', 'product']));
+
+        $check = $user->Order->where('product_id', $product->id)->first();
+        if (!$check) {
+            return view('thanh-toan', compact(['user', 'product']));
+        }
+        else if ($check->status == 1) {
+            return redirect('/tai-khoan/dich-vu/')->with('msg', 'Gói sản phẩm đang hoạt động, liên hệ 0987654321 để nâng cấp gói');
+        }
+        else if ($check->status == 0) {
+            return redirect('/tai-khoan/gio-hang/')->with('msg', 'Gói sản phẩm đã có trong giỏ hàng, thanh toán để kích hoạt gói!');
+        }
+        else {
+            return redirect('/tai-khoan/gio-hang/')->with('msg', 'Gói sản phẩm đã hết hạn, nhấn gia hạn hoạc liên hệ 0987654321 để gia hạn gói!');
+        }
     }
 
     /**
@@ -59,10 +72,15 @@ class ProductController extends Controller
      */
     public function thanhtoan(Request $request, $slug)
     {
-        $address = Province::find($request->province);
-        $province = $address->name;
-        $district = $address->districts->find($request->district)->name;
-        $ward = $address->districts->find($request->district)->wards->find($request->ward)->name;
+        $diachi = '';
+
+        if($request->payment == "Ship COD") {
+            $address = Province::find($request->province);
+            $province = $address->name;
+            $district = $address->districts->find($request->district)->name;
+            $ward = $address->districts->find($request->district)->wards->find($request->ward)->name;
+            $diachi = $province . ' - ' . $district . ' - ' . $ward . '. Chi Tiết: ' . $request->address;
+        }
 
         $product = Product::where('slug', $slug)->first();
         $user = $request->user();
@@ -75,14 +93,16 @@ class ProductController extends Controller
                 'avatar' => $product->image,
                 'code' => $user->id . mt_rand(1000000000, 9999999999),
                 'name' => $request->name,
-                'address' => $province . ' - ' . $district . ' - ' . $ward . $request->address,
+                'product_name' => $product->name,
+                'address' => $diachi,
                 'note' => $request->note,
                 'phone' => $request->phone,
-                'email' => $user->email,
+                'email' => $request->email,
                 'price' => $product->price,
+                'payment' => $request->payment
             ]);
             sendMail::dispatch($order);
-            return redirect('/tai-khoan/gio-hang/')->with('msg', 'Thêm gói sản phẩm thành công, vui lòng check mail để thanh toán gói sản phẩm!');
+            return redirect('/tai-khoan/gio-hang/')->with('msg', 'Đặt hàng hoàn tất, hệ thống đã gửi email xác nhận. vui lòng check mail để thanh toán gói sản phẩm!');
         }
         else if ($check->status == 1) {
             return redirect('/tai-khoan/dich-vu/')->with('msg', 'Gói sản phẩm đang hoạt động, liên hệ 0987654321 để nâng cấp gói');

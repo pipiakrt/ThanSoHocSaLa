@@ -2656,6 +2656,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -6286,6 +6294,30 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -6310,12 +6342,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       name: '',
       phone: '',
       email: '',
+      payment: '',
       price: '',
       status: '',
       bat_dau: '',
       ket_thuc: '',
-      licenses: ''
+      licenses: '',
+      licenses_goc: '',
+      licenses_goi: 0,
+      address: '',
+      note: ''
     };
+  },
+  watch: {
+    licenses_goi: function licenses_goi() {
+      this.licenses = Number(this.licenses_goi) + Number(this.licenses_goc);
+    }
   },
   created: function created() {
     var _this = this;
@@ -6336,8 +6378,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this.price = res.data.data.price;
                 _this.status = res.data.data.status;
                 _this.bat_dau = res.data.data.bat_dau;
+                _this.payment = res.data.data.payment;
                 _this.ket_thuc = res.data.data.ket_thuc;
-                _this.licenses = res.data.data.licenses;
+                _this.licenses_goc = _this.licenses = res.data.data.licenses;
+                _this.address = res.data.data.address;
+                _this.note = res.data.data.note;
                 KTUtil.ready(function () {
                   $('#kt_datetimepicker_1').datetimepicker();
                   $('#kt_datetimepicker_2').datetimepicker();
@@ -10556,6 +10601,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuejs-paginate */ "./node_modules/vuejs-paginate/dist/index.js");
 /* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vuejs_paginate__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_breadcrumb_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/breadcrumb/index */ "./resources/src/components/breadcrumb/index.vue");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -10678,6 +10725,25 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -10702,6 +10768,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           text: 'Thêm Mới'
         }
       },
+      filterName: '',
+      filterType: '',
       page: 0,
       thansohoc: []
     };
@@ -10726,6 +10794,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _extend__WEBPACK_IMPORTED_MODULE_1__.LoadPage();
                 query = {
+                  name: _this.filterName,
+                  type: _this.filterType,
                   page: _this.page
                 };
                 _context.next = 4;
@@ -10769,6 +10839,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     Text: function Text(text, length) {
       return _extend__WEBPACK_IMPORTED_MODULE_1__.FormatText(text, length);
+    },
+    formatTime: function formatTime(time) {
+      return moment__WEBPACK_IMPORTED_MODULE_4___default()(time).format('DD/MM/YYYY');
     }
   }
 });
@@ -10800,6 +10873,14 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -41746,15 +41827,39 @@ var render = function() {
                                     "text-dark-75 font-weight-bolder d-block font-size-lg",
                                   domProps: {
                                     textContent: _vm._s(
-                                      item.user.name + " - " + item.user.phone
+                                      item.name + " - " + item.phone
                                     )
                                   }
                                 }),
                                 _vm._v(" "),
                                 _c("span", {
                                   staticClass: "text-muted font-weight-bold",
+                                  domProps: { textContent: _vm._s(item.email) }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "td",
+                                { staticStyle: { "max-width": "320px" } },
+                                [
+                                  _c("span", {
+                                    staticClass:
+                                      "text-dark-75 font-weight-bolder d-block font-size-lg",
+                                    domProps: {
+                                      textContent: _vm._s(
+                                        _vm.Text(item.address, 80)
+                                      )
+                                    }
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("td", [
+                                _c("span", {
+                                  staticClass:
+                                    "text-dark-75 font-weight-bolder d-block font-size-lg",
                                   domProps: {
-                                    textContent: _vm._s(item.user.email)
+                                    textContent: _vm._s(item.payment)
                                   }
                                 })
                               ]),
@@ -41763,7 +41868,9 @@ var render = function() {
                                 _c("span", {
                                   staticClass:
                                     "text-dark-75 font-weight-bolder d-block font-size-lg",
-                                  domProps: { textContent: _vm._s(item.name) }
+                                  domProps: {
+                                    textContent: _vm._s(item.product_name)
+                                  }
                                 })
                               ]),
                               _vm._v(" "),
@@ -41917,6 +42024,12 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("th", [_vm._v("Khách Hàng")]),
+        _vm._v(" "),
+        _c("th", { staticStyle: { "max-width": "320px" } }, [
+          _vm._v("Địa Chỉ")
+        ]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Thanh Toán")]),
         _vm._v(" "),
         _c("th", [_vm._v("Gói")]),
         _vm._v(" "),
@@ -49911,6 +50024,25 @@ var render = function() {
                             staticClass: "col-2 col-form-label",
                             attrs: { for: "name" }
                           },
+                          [_vm._v("Hình Thức Thanh Toán")]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-10" }, [
+                          _c("input", {
+                            staticClass: "form-control",
+                            attrs: { type: "text", disabled: "" },
+                            domProps: { value: _vm.payment }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group row" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "col-2 col-form-label",
+                            attrs: { for: "name" }
+                          },
                           [_vm._v("Điện Thoại")]
                         ),
                         _vm._v(" "),
@@ -49966,9 +50098,89 @@ var render = function() {
                           "label",
                           {
                             staticClass: "col-2 col-form-label",
+                            attrs: { for: "address" }
+                          },
+                          [_vm._v("Địa Chỉ")]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-10" }, [
+                          _c("textarea", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.address,
+                                expression: "address"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              placeholder: "Địa Chỉ",
+                              rows: "5",
+                              id: "address",
+                              disabled: ""
+                            },
+                            domProps: { value: _vm.address },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.address = $event.target.value
+                              }
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group row" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "col-2 col-form-label",
+                            attrs: { for: "note" }
+                          },
+                          [_vm._v("Ghi chú")]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-10" }, [
+                          _c("textarea", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.note,
+                                expression: "note"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              placeholder: "Ghi chú",
+                              rows: "5",
+                              id: "note",
+                              disabled: ""
+                            },
+                            domProps: { value: _vm.note },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.note = $event.target.value
+                              }
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group row" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "col-2 col-form-label",
                             attrs: { for: "name" }
                           },
-                          [_vm._v("Lượt tra cứu")]
+                          [_vm._v("Lượt tra cứu gốc")]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-10" }, [
@@ -49993,6 +50205,44 @@ var render = function() {
                                   return
                                 }
                                 _vm.licenses = $event.target.value
+                              }
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group row" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "col-2 col-form-label",
+                            attrs: { for: "name" }
+                          },
+                          [_vm._v("Lượt tra cứu cộng từ gói")]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-10" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.licenses_goi,
+                                expression: "licenses_goi"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              type: "number",
+                              disabled: _vm.status != 1
+                            },
+                            domProps: { value: _vm.licenses_goi },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.licenses_goi = $event.target.value
                               }
                             }
                           })
@@ -57551,7 +57801,7 @@ var render = function() {
                           }
                         ],
                         staticClass: "form-control",
-                        attrs: { type: "text", placeholder: "Tên bài viết" },
+                        attrs: { type: "text", placeholder: "Tên luận giải" },
                         domProps: { value: _vm.page_description },
                         on: {
                           input: function($event) {
@@ -57707,6 +57957,100 @@ var render = function() {
             _vm._m(0),
             _vm._v(" "),
             _c("div", { staticClass: "card-body pt-0 pb-3" }, [
+              _c("div", { staticClass: "row mb-5" }, [
+                _c("div", { staticClass: "col-6" }, [
+                  _c("div", { staticClass: "row g-0" }, [
+                    _c("div", { staticClass: "col-5" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.filterName,
+                            expression: "filterName"
+                          }
+                        ],
+                        staticClass:
+                          "form-control form-control-sm form-filter datatable-input",
+                        attrs: { type: "text", placeholder: "Tên tìm kiếm" },
+                        domProps: { value: _vm.filterName },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.filterName = $event.target.value
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-4" }, [
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.filterType,
+                              expression: "filterType"
+                            }
+                          ],
+                          staticClass:
+                            "form-control form-control-sm form-filter datatable-input",
+                          attrs: { title: "Chọn", "data-col-index": "7" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.filterType = $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("Loại")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "MP" } }, [
+                            _vm._v("Miễn Phí")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "CS" } }, [
+                            _vm._v("Chuyên Sâu")
+                          ])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-3" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-block btn-primary kt-btn btn-sm kt-btn--icon d-block",
+                          on: {
+                            click: function($event) {
+                              return _vm.getApi()
+                            }
+                          }
+                        },
+                        [_vm._v("Lọc Luận Giải")]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
               _c("div", { staticClass: "table-responsive" }, [
                 _c(
                   "table",
@@ -57771,16 +58115,6 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("td", { staticStyle: { "max-width": "600px" } }, [
-                            _c("div", {
-                              staticClass:
-                                "text-dark-75 font-weight-bolder d-block font-size-lg",
-                              domProps: {
-                                innerHTML: _vm._s(_vm.Text(item.content, 300))
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
                           _c("td", [
                             _c("span", {
                               staticClass:
@@ -57797,6 +58131,18 @@ var render = function() {
                                 "text-dark-75 font-weight-bolder d-block font-size-lg",
                               domProps: {
                                 textContent: _vm._s(_vm.Text(item.type, 250))
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("span", {
+                              staticClass:
+                                "text-dark-75 font-weight-bolder d-block font-size-lg",
+                              domProps: {
+                                textContent: _vm._s(
+                                  _vm.formatTime(item.updated_at)
+                                )
                               }
                             })
                           ]),
@@ -57970,13 +58316,13 @@ var staticRenderFns = [
           ]
         ),
         _vm._v(" "),
-        _c("th", { staticStyle: { "min-width": "100px" } }, [
-          _vm._v("Nội dung")
-        ]),
-        _vm._v(" "),
         _c("th", { staticStyle: { "min-width": "120px" } }, [_vm._v("Mã")]),
         _vm._v(" "),
         _c("th", { staticStyle: { "min-width": "120px" } }, [_vm._v("Loại")]),
+        _vm._v(" "),
+        _c("th", { staticStyle: { "min-width": "120px" } }, [
+          _vm._v("Cập nhật")
+        ]),
         _vm._v(" "),
         _c("th", { staticClass: "text-center" }, [_vm._v("EXT")])
       ])
@@ -58093,6 +58439,22 @@ var render = function() {
                             })
                           ]),
                           _vm._v(" "),
+                          _c("td", { staticStyle: { "max-width": "600px" } }, [
+                            _c("div", {
+                              staticClass:
+                                "text-dark-75 font-weight-bolder d-block font-size-lg",
+                              domProps: { innerHTML: _vm._s(item.email) }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("td", { staticStyle: { "max-width": "600px" } }, [
+                            _c("div", {
+                              staticClass:
+                                "text-dark-75 font-weight-bolder d-block font-size-lg",
+                              domProps: { innerHTML: _vm._s(item.phone) }
+                            })
+                          ]),
+                          _vm._v(" "),
                           _c("td", [
                             _c("span", {
                               staticClass:
@@ -58126,7 +58488,7 @@ var render = function() {
                                   target: "_blank"
                                 }
                               },
-                              [_vm._v("Click")]
+                              [_vm._v("Click link")]
                             )
                           ]),
                           _vm._v(" "),
@@ -58233,6 +58595,12 @@ var staticRenderFns = [
           { staticClass: "pl-0", staticStyle: { "max-width": "600px" } },
           [_c("span", { staticClass: "text-dark-75" }, [_vm._v("Họ Tên")])]
         ),
+        _vm._v(" "),
+        _c("th", { staticStyle: { "min-width": "100px" } }, [_vm._v("Email")]),
+        _vm._v(" "),
+        _c("th", { staticStyle: { "min-width": "100px" } }, [
+          _vm._v("Điện Thoại")
+        ]),
         _vm._v(" "),
         _c("th", { staticStyle: { "min-width": "100px" } }, [
           _vm._v("Ngay Sinh")
