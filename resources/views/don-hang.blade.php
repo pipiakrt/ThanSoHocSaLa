@@ -30,10 +30,6 @@
             background-color: #26a69a
         }
 
-        a {
-            text-decoration: none !important
-        }
-
         .fa {
             color: red
         }
@@ -77,7 +73,7 @@
             @if (request()->segment(2) == 'gio-hang')
                 <div class="alert alert-secondary" role="alert">
                     <div class="row g-0">
-                        <div class="col-md-11">Chi tiết điều khoản dịch vụ, hình thức thanh toán của Thần Số Học Sala</div>
+                        <div class="col-md-11">Chi tiết quy trình mua hàng, hình thức thanh toán của Thần Số Học Sala</div>
                         <div class="col-md-1">
                             <a href="/" class="link-secondary decoration-revert">Xem bài viết</a>
                         </div>
@@ -86,7 +82,7 @@
             @else
                 <div class="alert alert-secondary" role="alert">
                     <div class="row g-0">
-                        <div class="col-md-11">Xem các dịch vụ thần số học sala</div>
+                        <div class="col-md-11">Xem Chi tiết các điều khoản dịch vụ thần số học sala</div>
                         <div class="col-md-1">
                             <a href="/" class="link-secondary decoration-revert">Xem bài viết</a>
                         </div>

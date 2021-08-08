@@ -12,7 +12,7 @@
 <nav class="breadcrumb-cus" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <div class="container">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
             <li class="breadcrumb-item"><a href="#">Hỏi đáp</a></li>
         </ol>
     </div>

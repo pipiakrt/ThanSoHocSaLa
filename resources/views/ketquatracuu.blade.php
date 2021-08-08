@@ -101,7 +101,7 @@
 <nav class="breadcrumb-cus" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <div class="container container-header2">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
             <li class="breadcrumb-item"><a href="#">Tra cứu</a></li>
         </ol>
     </div>
@@ -402,7 +402,7 @@
                                         <img src="/img/ket-qua-tra-cuu/FB.png" alt="">
                                     </div>
                                     <div>
-                                        <span class="chiasetitle">Facebook</span>
+                                        <iframe style="margin-left: 10px; margin-top: 20px" src="https://www.facebook.com/plugins/share_button.php?href={{ $params['link'] }}&layout=button&size=large&appId=293925195838543&width=87&height=28" width="100" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                                     </div>
                                 </div>
                             </div>

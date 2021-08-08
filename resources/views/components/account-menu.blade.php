@@ -27,7 +27,7 @@
         <a href="/tai-khoan/tra-cuu-nang-cao">
             <div class="{{ request()->segment(2) == 'tra-cuu-nang-cao' ? 'text-success' : '' }}">
                 <h6 class="my-0">Tra cứu nâng cao</h6>
-                <small class="{{ request()->segment(2) == 'tra-cuu-nang-cao' ? '' : 'text-muted' }}">bạn còn {{ request()->user()->License->number }} lượt tra cứu</small>
+                <small class="{{ request()->segment(2) == 'tra-cuu-nang-cao' ? '' : 'text-muted' }}">bạn còn {{ request()->user()->License->number }} lần tra cứu</small>
             </div>
         </a>
     </li>
@@ -35,7 +35,7 @@
         <a href="/tai-khoan/lich-su-tra-cuu">
             <div class="{{ request()->segment(2) == 'lich-su-tra-cuu' ? 'text-success' : '' }}">
                 <h6 class="my-0">Lịch sử tra cứu</h6>
-                <small class="{{ request()->segment(2) == 'lich-su-tra-cuu' ? '' : 'text-muted' }}">bạn đã tra cứu {{ request()->user()->TraCuu->count() }}/{{ request()->user()->License->number }} lượt</small>
+                <small class="{{ request()->segment(2) == 'lich-su-tra-cuu' ? '' : 'text-muted' }}">bạn đã tra cứu {{ request()->user()->TraCuu->count() }} lần</small>
             </div>
         </a>
     </li>
