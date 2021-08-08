@@ -8,9 +8,11 @@ use App\Services\ThanSoHoc\DefinedDataComponent;
 use App\Services\ThanSoHoc\UtilsComponent;
 use App\Services\ThanSoHoc\MYPDF;
 use App\Models\ThanSo as Model;
+use App\Mail\guiLuanGiaiPDF;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
+use Mail;
 
 class ExportController extends Controller
 {
@@ -206,8 +208,6 @@ class ExportController extends Controller
         $pdf->Output("Giai-ma-cuoc-doi-$buildNameFile.pdf", 'I');
     }
 
-
-
     /**
      * Display a listing of the resource.
      *
@@ -215,7 +215,10 @@ class ExportController extends Controller
      */
     public function ketqualichsutracuu(Request $request, $id)
     {
-        $dulieu = $request->user()->TraCuu()->where('created_at', $id)->first();
+        $dulieu = $request->user()->TraCuu()->where('code', $id)->first();
+        if (!$dulieu) {
+            return view('errors.404');
+        }
         $aryReturn = $dulieu->data;
         $user = [
             'name' => $dulieu->name,
@@ -314,7 +317,21 @@ class ExportController extends Controller
 
         // Close and output PDF document
         // This method has several options, check the source code documentation for more information.
-        $pdf->Output("Giai-ma-cuoc-doi-$buildNameFile.pdf", 'I');
+        if ($request->type == "sendmail") {
+            $path = storage_path('/app/public') . "/Giai-ma-cuoc-doi-$buildNameFile-$dulieu->id-.pdf";
+            $pdf->Output("$path", 'F');
+            $mail = new guiLuanGiaiPDF($path);
+            $mail->subject('Thần Số Học Sala đã gửi file luận giải');
+            $mail->from(env('MAIL_USERNAME'), 'Thần Số Học Sala');
+            Mail::to($dulieu->email)->send($mail);
+            return redirect('/tai-khoan/lich-su-tra-cuu')->with('msg', "Hệ thống đã gửi file luận giải vào email $dulieu->email. cảm ơn bạn đã sử dụng dụng vụ của Thần Số Học Sala.");
+        }
+        else if ($request->type == "download") {
+            $pdf->Output("Giai-ma-cuoc-doi-$buildNameFile.pdf", 'D');
+        }
+        else {
+            $pdf->Output("Giai-ma-cuoc-doi-$buildNameFile.pdf", 'I');
+        }
     }
 
     /**

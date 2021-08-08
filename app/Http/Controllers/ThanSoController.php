@@ -41,13 +41,16 @@ class ThanSoController extends Controller
     public function show($code)
     {
         $ketqua = TraCuu::where(['code' => $code, 'type' => 0])->first();
-        $data = $ketqua->data;
-        $params = [
-            'link' => env('APP_URL') . "/tra-cuu/$ketqua->code",
-            'name' => $ketqua->name,
-            'birthday' => $ketqua->birthdate
-        ];
-        return view('ketquatracuu', compact(['data', 'params']));
+        if ($ketqua) {
+            $data = $ketqua->data;
+            $params = [
+                'link' => env('APP_URL') . "/tra-cuu/$ketqua->code",
+                'name' => $ketqua->name,
+                'birthday' => $ketqua->birthdate
+            ];
+            return view('ketquatracuu', compact(['data', 'params']));
+        }
+        return view('errors.404');
     }
 
     /**

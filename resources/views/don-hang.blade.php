@@ -74,6 +74,25 @@
         </div>
         <div class="col-md-9 order-md-1 form-111">
             <h4 class="mb-3">Đơn hàng</h4>
+            @if (request()->segment(2) == 'gio-hang')
+                <div class="alert alert-secondary" role="alert">
+                    <div class="row g-0">
+                        <div class="col-md-11">Chi tiết điều khoản dịch vụ, hình thức thanh toán của Thần Số Học Sala</div>
+                        <div class="col-md-1">
+                            <a href="/" class="link-secondary decoration-revert">Xem bài viết</a>
+                        </div>
+                    </div>
+                </div>
+            @else
+                <div class="alert alert-secondary" role="alert">
+                    <div class="row g-0">
+                        <div class="col-md-11">Xem các dịch vụ thần số học sala</div>
+                        <div class="col-md-1">
+                            <a href="/" class="link-secondary decoration-revert">Xem bài viết</a>
+                        </div>
+                    </div>
+                </div>
+            @endif
             @forelse ($orders as $item)
                 <div class="card card-body my-3">
                     <div class="media text-lg-left row g-0 g-md-4">

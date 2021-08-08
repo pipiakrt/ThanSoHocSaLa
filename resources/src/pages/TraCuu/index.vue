@@ -32,9 +32,9 @@
                                     <th style="max-width: 600px" class="pl-0">
                                         <span class="text-dark-75">Họ Tên</span>
                                     </th>
+                                    <th style="min-width: 100px">Ngay Sinh</th>
                                     <th style="min-width: 100px">Email</th>
                                     <th style="min-width: 100px">Điện Thoại</th>
-                                    <th style="min-width: 100px">Ngay Sinh</th>
                                     <th style="min-width: 120px">Ngày Tra Cứu</th>
                                     <th style="min-width: 120px">Loại</th>
                                     <th style="min-width: 100px">Link chia sẻ</th>
