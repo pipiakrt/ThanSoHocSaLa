@@ -178,7 +178,7 @@
 
     <div class="container container-header2 h-100 px-2 d-block d-xl-none">
         <div class="titleheader text-dark text-center">
-            <h2 class="title-h1">GÓI SẢN PHẨM 1</h2>
+            <h2 class="title-h1">GÓI 1 CÁ NHÂN</h2>
         </div>
         <div class="block-main-crsv">
             <div class="row g-0 text-white">
@@ -249,7 +249,7 @@
 
     <div class="container container-header2 h-100 px-2 mt-4 d-block d-xl-none">
         <div class="titleheader text-dark text-center">
-            <h2 class="title-h1">GÓI SẢN PHẨM 2</h2>
+            <h2 class="title-h1">GÓI 2 DOANH NGHIỆP</h2>
         </div>
         <div class="block-main-crsv">
             <div class="row g-0 text-white">

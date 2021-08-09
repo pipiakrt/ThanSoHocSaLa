@@ -36,14 +36,14 @@
                 <div class="col-md-6">
                     <div class="eventItem2 active item" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0">
                         <div class="tengoi">
-                            <h3>GÓI CÁ NHÂN</h3>
+                            <h3>GÓI 1 CÁ NHÂN</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="eventItem2 item" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2">
                         <div class="tengoi">
-                            <h3>GÓI DOANH NGHIỆP</h3>
+                            <h3>GÓI 2 DOANH NGHIỆP</h3>
                         </div>
                     </div>
                 </div>

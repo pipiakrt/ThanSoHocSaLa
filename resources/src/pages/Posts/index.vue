@@ -1,3 +1,23 @@
+<style>
+    .title-post {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+    .url-post {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+    .desc-post {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+    }
+</style>
 <template>
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <Breadcrumb :data="subHeader" />
@@ -98,13 +118,19 @@
                                                 <div class="symbol-label" :style="`background-image: url('${item.image}')`"></div>
                                             </div>
                                             <div>
-                                                <router-link :to="'/admin/bai-viet/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.name, 50)"></router-link>
-                                                <span class="text-muted d-block" v-text="Text(item.slug, 50)"></span>
+                                                <div class="title-post">
+                                                    <router-link :to="'/admin/bai-viet/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.name"></router-link>
+                                                </div>
+                                                <div class="url-post">
+                                                    <span class="text-muted d-block" v-text="item.slug"></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="Text(item.description, 250)"></span>
+                                        <div class="desc-post">
+                                            <span class="font-weight-bolder" v-text="item.description"></span>
+                                        </div>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.type == 'post' ? 'Tin tức' : 'Câu chuyện'"></span>
@@ -305,9 +331,6 @@ export default {
         },
         formatHuors(time) {
             return moment(time).format('hh:mm:ss');
-        },
-        Text(text, length) {
-            return Extends.FormatText(text, length)
         }
     },
 

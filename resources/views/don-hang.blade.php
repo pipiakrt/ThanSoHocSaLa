@@ -39,7 +39,8 @@
             padding-bottom: 3px;
         }
         .price--cus {
-            /* price--cus */
+            font-size: 30px;
+            color: #388a6b !important;
         }
     </style>
 @endpush

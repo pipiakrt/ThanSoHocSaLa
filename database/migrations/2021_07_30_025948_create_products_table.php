@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->string('price_origin')->nullable();
             $table->string('price')->nullable();
             $table->json('promotion')->nullable();
+            $table->json('options')->nullable();
             $table->mediumText('description')->nullable();
             $table->longText('content')->nullable();
             $table->boolean('status')->index();

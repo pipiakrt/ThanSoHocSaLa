@@ -29,11 +29,7 @@ class CategoryObserver
      */
     public function updated(Category $category)
     {
-        SeoPage::where('url', "/tin-tuc/$category->slug")->get()->delete();
-        SeoPage::create([
-            'url' => "/tin-tuc/$category->slug",
-            'title' => $category->name,
-        ]);
+        //
     }
 
     /**

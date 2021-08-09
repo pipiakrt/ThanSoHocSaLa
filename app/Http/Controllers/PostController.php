@@ -16,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderby('id', 'desc')->where(['type' => 'post', 'status' => 1])->paginate(5);
+        $posts = Post::orderby('id', 'desc')->where(['type' => 'post', 'status' => 1])->paginate(7);
         return view('tin-tuc', compact('posts'));
     }
 
@@ -27,7 +27,7 @@ class PostController extends Controller
      */
     public function hoidap()
     {
-        $posts = Post::orderby('id', 'desc')->where(['type' => 'qa', 'status' => 1])->paginate(5);
+        $posts = Post::orderby('id', 'desc')->where(['type' => 'qa', 'status' => 1])->paginate(7);
         return view('hoi-dap', compact('posts'));
     }
 

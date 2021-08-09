@@ -23,6 +23,7 @@ class Product extends Model
 
     protected $casts = [
         'status' => 'boolean',
+        'options' => 'array',
         'promotion' => 'array',
     ];
 }

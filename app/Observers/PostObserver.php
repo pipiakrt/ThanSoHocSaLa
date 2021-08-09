@@ -40,22 +40,7 @@ class PostObserver
      */
     public function updated(Post $post)
     {
-        $type = "";
-        switch ($post->type) {
-            case 'post':
-                $type = "tin-tuc";
-                break;
-            case 'qa':
-                $type = "hoi-dap";
-                break;
-        }
-
-        SeoPage::where('url', "/$type/$post->slug")->get()->delete();
-        SeoPage::create([
-            'url' => "/$type/$post->slug",
-            'title' => $post->name,
-            'description' => $post->description
-        ]);
+        //
     }
 
     /**

@@ -33,6 +33,34 @@ class ProductController extends Controller
      */
     public function show($slug)
     {
+        $groupProduct = [
+            [
+                [
+                    "name" => "GÓI 1 CÁ NHÂN",
+                    "title" => [
+                        "MỘT LẦN MẤT KIỂM SOÁT",
+                        "ĐÁNH MẤT HẠNH PHÚC CẢ CUỘC ĐỜI",
+                        "Nóng giận - Đổ lỗi - Phán xét - Chê bai",
+                    ],
+                    "description" => [
+                        [
+                            "avatar" => "https://w.ladicdn.com/s650x900/60bf1c0b1a02f2001216e7d5/landingpage-level10-2-20210715120101.png",
+                            "title" => [
+                                "ĐÁNH MẤT SỰ PHÁT TRIỂN DOANH",
+                                "NGHIỆP VÌ KHÔNG BIẾT CÁCH",
+                                "ĐIỀU PHỐI NHÂN SỰ",
+                            ],
+                            "description" => [
+                                "Bảo thủ, chỉ trích, xu nịnh, sếp nói sao nghe vậy",
+                                "Đánh giá thấp người có năng lực, không thường xuyên trao đổi",
+                                "Đề cao chủ nghĩa cá nhân và lan truyền cảm xúc tiêu cưc"
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ];
+
         $product = Product::where('slug', $slug)->first();
         if ($product) {
             return view('chi-tiet-san-pham', compact('product'));
