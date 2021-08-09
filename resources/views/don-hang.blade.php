@@ -38,13 +38,14 @@
             padding-top: 7px;
             padding-bottom: 3px;
         }
+        .price--cus {
+            /* price--cus */
+        }
     </style>
 @endpush
 
 @section('content')
-<div class="slogan bg-xanh-nhat text-white text-center">
-    <h1>"KIẾN TẠO CUỘC ĐỜI HẠNH PHÚC TỪ NHỮNG CON SỐ"</h1>
-</div>
+<x-slogan />
 
 <nav class="breadcrumb-cus" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <div class="container">
@@ -75,7 +76,7 @@
                     <div class="row g-0">
                         <div class="col-md-11">Chi tiết quy trình mua hàng, hình thức thanh toán của Thần Số Học Sala</div>
                         <div class="col-md-1">
-                            <a href="/" class="link-secondary decoration-revert">Xem bài viết</a>
+                            <a href="/hoi-dap/huong-dan-cach-mua-hang-tiet-kiem-va-nhanh-chong" class="link-secondary decoration-revert">Xem bài viết</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +85,7 @@
                     <div class="row g-0">
                         <div class="col-md-11">Xem Chi tiết các điều khoản dịch vụ thần số học sala</div>
                         <div class="col-md-1">
-                            <a href="/" class="link-secondary decoration-revert">Xem bài viết</a>
+                            <a href="/hoi-dap/huong-dan-cach-mua-hang-tiet-kiem-va-nhanh-chong" class="link-secondary decoration-revert">Xem bài viết</a>
                         </div>
                     </div>
                 </div>
@@ -102,7 +103,7 @@
                                     @if ($item->status == 1)
                                         <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Bàn còn {{ request()->user()->License->number }} lượt tra cứu</a></li>
                                     @else
-                                        <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Giá {{ $item->Product->price }}</a></li>
+                                        <li class="list-inline-item"><a href="#" class="text-muted price--cus" data-abc="true">Giá {{ $item->Product->price }}</a></li>
                                     @endif
                                 </ul>
                                 <p class="mb-3">{{ $item->Product->description }}</p>

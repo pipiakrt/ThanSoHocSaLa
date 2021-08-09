@@ -46,6 +46,8 @@ Route::prefix('/san-pham')->group(function () {
     });
 });
 
+Route::get('/hoi-dap', [PostController::class, 'hoidap']);
+Route::get('/hoi-dap/{slug}', [PostController::class, 'show']);
 Route::get('/cau-chuyen', [PostController::class, 'cauchuyen']);
 Route::prefix('/tin-tuc')->group(function () {
     Route::get('/', [PostController::class, 'index']);
@@ -76,8 +78,6 @@ Route::group(['middleware' => 'login'], function(){
 });
 
 Route::get('/dich-vu', [HomeController::class, 'dichvu']);
-Route::get('/hoi-dap', [HomeController::class, 'hoidap']);
-
 Route::get('/lien-he', [ReportController::class, 'index']);
 Route::post('/lien-he', [ReportController::class, 'create']);
 Route::post('/dang-ky', [ReportController::class, 'newsletter']);

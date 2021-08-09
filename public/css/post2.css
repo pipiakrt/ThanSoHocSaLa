@@ -1,5 +1,5 @@
 .post-slogan {
-    padding-top: 23px;
+    padding-top: 15px;
     padding-bottom: 7px;
 }
 .post-slogan .title {
@@ -8,16 +8,16 @@
 .post-slogan .br-cs1 {
     position: absolute;
     height: 1px;
-    width: 26.5%;
-    top: 10px;
+    width: 42%;
+    top: 14px;
     background: #097364;
 }
 .post-slogan .br-cs2 {
     position: absolute;
     height: 1px;
-    width: 26.5%;
+    width: 42%;
     right: 0;
-    top: 10px;
+    top: 14px;
     background: #097364;
 }
 .post-slogan .title h1 {
@@ -38,26 +38,33 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    text-transform: uppercase;
 }
 .post-main .post-tilte h4 {
     color: #555555;
     font-size: 24px;
+}
+.post-main .post-item:hover .submit-post {
+    height: 27px;
+    padding-top: 3px;
 }
 .post-main .post-desc span {
     font-weight: 200;
     color: #555555;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     overflow: hidden;
 }
 .post-main .submit-post {
-    padding: 0px 17px;
     color: white;
     background-color: #dab066;
     font-weight: 500;
     border-radius: 3px;
-    padding-top: 3px;
     margin-top: 5px;
     width: fit-content;
+    height: 0;
+    overflow: hidden;
+    padding: 0px 17px;
+    transition: .3s;
 }

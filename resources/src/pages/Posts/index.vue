@@ -53,8 +53,9 @@
                                 <div class="col-4">
                                     <select v-model="filterType" class="form-control form-control-sm form-filter datatable-input" title="Chọn" data-col-index="7">
                                         <option value="">Loại</option>
-                                        <option value="1">Bài viết</option>
-                                        <option value="0">Câu chuyện</option>
+                                        <option value="post">Bài viết</option>
+                                        <option value="qa">Hỏi đáp</option>
+                                        <option value="introduce">Giới thiệu</option>
                                     </select>
                                 </div>
                             </div>

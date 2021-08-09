@@ -49,9 +49,7 @@
 @endpush
 
 @section('content')
-<div class="slogan bg-xanh-nhat text-white text-center">
-    <h1>"KIẾN TẠO CUỘC ĐỜI HẠNH PHÚC TỪ NHỮNG CON SỐ"</h1>
-</div>
+<x-slogan />
 
 <nav class="breadcrumb-cus" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <div class="container">

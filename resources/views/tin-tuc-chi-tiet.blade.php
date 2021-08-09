@@ -23,8 +23,11 @@
         .post-content {
             overflow: hidden;
         }
-        .post-content * img {
+        .post-content img {
             max-width: 100%;
+        }
+        .post-content p {
+            font-weight: 200;
         }
     </style>
 @endpush
@@ -38,7 +41,7 @@
                 @if (request()->segment(1) == 'gioi-thieu')
                     <li class="breadcrumb-item"><a href="/gioi-thieu/" class="active">Giơi thiệu</a></li>
                 @else
-                    <li class="breadcrumb-item"><a href="/tin-tuc" class="active">{{ $post->type == 'post' ? 'Tin tức' : 'Câu chuyện' }}</a></li>
+                    <li class="breadcrumb-item"><a href="/tin-tuc" class="active">{{ $post->type == 'post' ? 'Tin tức' : 'Hỏi đáp' }}</a></li>
                 @endif
                 @if ($post->Category)
                     <li class="breadcrumb-item"><a href="/tin-tuc/{{ $post->Category->slug }}" class="active">{{ $post->Category->name }}</a></li>

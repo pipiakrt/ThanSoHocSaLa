@@ -25,10 +25,20 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function hoidap()
+    {
+        $posts = Post::orderby('id', 'desc')->where(['type' => 'qa', 'status' => 1])->paginate(5);
+        return view('hoi-dap', compact('posts'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function cauchuyen()
     {
-        $posts = Post::orderby('id', 'desc')->where(['type' => 'story', 'status' => 1])->paginate(5);
-        return view('cau-chuyen', compact('posts'));
+        return view('cau-chuyen');
     }
 
     /**

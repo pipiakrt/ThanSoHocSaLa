@@ -1,5 +1,8 @@
 @push('styles')
     <link rel="stylesheet" href="/plugins/dtsel-master/dtsel.css">
+    <style>
+
+    </style>
 @endpush
 
 @push('scripts')
@@ -12,7 +15,7 @@
 @endpush
 
 <div class="form-tracuu" id="form-tracuu">
-    <div class="container container-header text-lights">
+    <div class="container container-header text-lights px-0">
         <div class="_mb-8">
             <iframe class="w-100 m-0 youtube-responsive" height="750" src="https://www.youtube.com/embed/rwEfiiqJJK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
