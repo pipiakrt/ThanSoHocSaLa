@@ -55,3 +55,29 @@
     min-height: 270px;
     background-position: center;
 }
+
+.title-lienquan {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.desc-lienquan {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.tags{
+    border: 1px solid silver;
+    padding: 10px 15px;
+}
+.post-content {
+    overflow: hidden;
+}
+.post-content img {
+    max-width: 100%;
+}
+.post-content p {
+    font-weight: 200;
+}

@@ -91,12 +91,12 @@
                                         <div class="anhsp h-100 text-center" style="background-image: url('/img/kh/2.jpg');">
                                             <div class="row g-0 position-absolute end-0 start-0 bottom-0">
                                                 <div class="col-md-6 position-relative">
-                                                    <a href="/tai-khoan/gio-hang/ca-nhan">
+                                                    <a href="/tai-khoan/gio-hang/goi-1-ca-nhan">
                                                         <button>Đặt Hàng</button>
                                                     </a>
                                                 </div>
                                                 <div class="col-md-6 position-relative">
-                                                    <a href="/san-pham/ca-nhan">
+                                                    <a href="/san-pham/goi-1-ca-nhan">
                                                         <button style="background-color: #097364;">Chi tiết</button>
                                                     </a>
                                                 </div>
@@ -155,12 +155,12 @@
                                         <div class="anhsp h-100 text-center" style="background-image: url('/img/kh/1.jpg');">
                                             <div class="row g-0 position-absolute end-0 start-0 bottom-0">
                                                 <div class="col-md-6 position-relative">
-                                                    <a href="/tai-khoan/gio-hang/doanh-nghiep">
+                                                    <a href="/tai-khoan/gio-hang/goi-2-doanh-nghiep">
                                                         <button>Đặt Hàng</button>
                                                     </a>
                                                 </div>
                                                 <div class="col-md-6 position-relative">
-                                                    <a href="/san-pham/doanh-nghiep">
+                                                    <a href="/san-pham/goi-2-doanh-nghiep">
                                                         <button style="background-color: #097364;">Chi tiết</button>
                                                     </a>
                                                 </div>
@@ -226,12 +226,12 @@
                                             </div>
                                             <div class="row g-0">
                                                 <div class="col-6 position-relative">
-                                                    <a href="/tai-khoan/gio-hang/ca-nhan">
+                                                    <a href="/tai-khoan/gio-hang/goi-1-ca-nhan">
                                                         <button class="btn-sanpham">Đặt Hàng</button>
                                                     </a>
                                                 </div>
                                                 <div class="col-6 position-relative">
-                                                    <a href="/san-pham/ca-nhan">
+                                                    <a href="/san-pham/goi-1-ca-nhan">
                                                         <button class="btn-sanpham bg-white" style="color: #097364">Chi tiết</button>
                                                     </a>
                                                 </div>
@@ -302,12 +302,12 @@
                                             </div>
                                             <div class="row g-0">
                                                 <div class="col-6 position-relative">
-                                                    <a href="/tai-khoan/gio-hang/doanh-nghiep">
+                                                    <a href="/tai-khoan/gio-hang/goi-2-doanh-nghiep">
                                                         <button class="btn-sanpham">Đặt Hàng</button>
                                                     </a>
                                                 </div>
                                                 <div class="col-6 position-relative">
-                                                    <a href="/san-pham/doanh-nghiep">
+                                                    <a href="/san-pham/goi-2-doanh-nghiep">
                                                         <button class="btn-sanpham bg-white" style="color: #097364">Chi tiết</button>
                                                     </a>
                                                 </div>

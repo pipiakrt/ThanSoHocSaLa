@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>

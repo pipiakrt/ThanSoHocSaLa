@@ -3,7 +3,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
             @foreach ($items as $item)
-
+                <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
             @endforeach
         </ol>
     </div>

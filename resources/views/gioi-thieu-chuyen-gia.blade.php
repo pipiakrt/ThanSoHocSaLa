@@ -4,6 +4,7 @@
 @section('content')
 @push('styles')
     <link rel="stylesheet" href="/css/ket-qua-tra-cuu.css">
+    <link rel="stylesheet" href="/css/gioi-thieu-cg.css">
 @endpush
 
 <x-slogan />
@@ -29,80 +30,6 @@
             </div>
         </div>
     </div>
-    <style>
-        .slider-logo {
-            left: 0;
-            right: 0;
-            z-index: 1;
-            bottom: -180px;
-            background-color: #05574b;
-            width: 370px;
-            margin: auto;
-            border-radius: 50%;
-            height: 370px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 100%;
-        }
-        .main-cauchuyen {
-            background-color: #05574b;
-        }
-        .main-cauchuyen .main-1 {
-            /* padding-bottom: 200px !important; */
-            background-image: url("/img/gioithieu/bg-1.png");
-            background-repeat: no-repeat;
-            background-position-y: bottom;
-            background-position-x: right;
-        }
-        .descs1 {
-            padding: 0 24px;
-            font-weight: 100;
-            font-size: 23px;
-            color: #e6dcd5;
-            line-height: 28px;
-        }
-        .bg-cangiua {
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: fit-content;
-            top: -190px;
-        }
-        .bd-img {
-            margin-top: 50px;
-            text-align: center;
-        }
-        .main-1 ul {
-            padding: 0;
-            list-style: none;
-            padding: none;
-        }
-        .main-1 ul li {
-            margin: 10px 0;
-            font-size: 19px;
-            font-weight: 200;
-            display: flex;
-        }
-        .main-1 ul li span {
-            margin-left: 13px;
-        }
-        .main-1 ul li::before {
-            content: "\2022";
-            color: #749e7e;
-            font-weight: bold;
-            display: inline-block;
-            width: 1.5em;
-        }
-        .descs1.px-0 {
-            color: #c0e2ca !important;
-            margin-left: 10px;
-            font-size: 22px;
-        }
-        .bia {
-            background-color: #03402f;
-        }
-    </style>
 
     <div class="bia text-center">
         <img class="mw-100" src="/img/gioithieu/sach1.png" alt="">
@@ -173,29 +100,6 @@
             <img class="mw-100" src="/img/gioithieu/cn.png" alt="">
         </div>
     </div>
-
-    <style>
-        .sanpham.ct {
-            background-color: #05574b;
-            min-height: unset;
-            padding: unset;
-            background-image: unset;
-        }
-        .sanpham .content-ketqua .titlecs.text-center h4 {
-            margin-right: 0%;
-        }
-        .sanpham .content-ketqua .desccs {
-            margin-left: 0%;
-            margin: auto;
-            font-size: 18px;
-            font-weight: 200 !important;
-            margin-top: 30px;
-        }
-        .sanpham .btn-ketqua {
-            margin-top: 50px;
-            margin-right: 0%;
-        }
-    </style>
 
 </main>
 

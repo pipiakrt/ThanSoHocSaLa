@@ -3,18 +3,18 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use App\Models\Product;
 
-class sanpham extends Component
+class PostItem extends Component
 {
+    public $item;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($item)
     {
-        //
+        $this->item = $item;
     }
 
     /**
@@ -24,7 +24,7 @@ class sanpham extends Component
      */
     public function render()
     {
-        $products = Product::take(2)->get();
-        return view('components.sanpham', compact('products'));
+        $item = $this->item;
+        return view('components.post-item', compact('item'));
     }
 }

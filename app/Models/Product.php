@@ -16,9 +16,11 @@ class Product extends Model
         'price_origin',
         'price',
         'promotion',
+        'options',
         'description',
         'content',
         'status',
+        'sort'
     ];
 
     protected $casts = [

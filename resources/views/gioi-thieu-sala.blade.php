@@ -4,6 +4,7 @@
 @section('content')
 @push('styles')
     <link rel="stylesheet" href="/css/ket-qua-tra-cuu.css">
+    <link rel="stylesheet" href="/css/gioi-thieu-sla.css">
 @endpush
 
 <x-slogan />
@@ -31,52 +32,6 @@
             <img src="/img/gioithieu/b3.png" alt="">
         </div>
     </div>
-    <style>
-        .slider-logo {
-            left: 0;
-            right: 0;
-            z-index: 1;
-            bottom: -180px;
-            background-color: #05574b;
-            width: 370px;
-            margin: auto;
-            border-radius: 50%;
-            height: 370px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 100%;
-        }
-        .main-cauchuyen {
-            background-color: #05574b;
-        }
-        .main-cauchuyen .main-1 {
-            padding-bottom: 200px !important;
-            background-image: url("/img/gioithieu/bg-1.png");
-            background-repeat: no-repeat;
-            background-position-y: bottom;
-            background-position-x: right;
-        }
-        .descs1 {
-            padding: 0 24px;
-            font-weight: 100;
-            font-size: 23px;
-            color: #e6dcd5;
-            line-height: 28px;
-        }
-        .bg-cangiua {
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: fit-content;
-            top: -190px;
-        }
-        .bd-img {
-            margin-top: 50px;
-            text-align: center;
-        }
-    </style>
-
     <div class="main-cauchuyen py-5">
         <div class="main-1">
             <div class="container my-5 py-5 pb-0 pb-md-5 mb-0 mb-md-5">
@@ -132,30 +87,6 @@
         </div>
 
     </div>
-
-    <style>
-        .sanpham.ct {
-            background-color: #05574b;
-            min-height: unset;
-            padding: unset;
-            background-image: unset;
-        }
-        .sanpham .content-ketqua .titlecs.text-center h4 {
-            margin-right: 0%;
-        }
-        .sanpham .content-ketqua .desccs {
-            margin-left: 0%;
-            margin: auto;
-            font-size: 18px;
-            font-weight: 200 !important;
-            margin-top: 30px;
-        }
-        .sanpham .btn-ketqua {
-            margin-top: 50px;
-            margin-right: 0%;
-        }
-    </style>
-
 </main>
 
 @endsection

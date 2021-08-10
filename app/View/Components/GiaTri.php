@@ -3,9 +3,8 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use App\Models\Product;
 
-class sanpham extends Component
+class GiaTri extends Component
 {
     /**
      * Create a new component instance.
@@ -24,7 +23,6 @@ class sanpham extends Component
      */
     public function render()
     {
-        $products = Product::take(2)->get();
-        return view('components.sanpham', compact('products'));
+        return view('components.gia-tri');
     }
 }

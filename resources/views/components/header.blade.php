@@ -1,22 +1,3 @@
-<style>
-    .dropdown-item:hover {
-        background-color: #097364;
-        color: white;
-    }
-    .dropdown-toggle::after {
-        transition: .2s !important;
-    }
-    .dropdown-toggle.show::after {
-        transform: rotate(-90deg) !important;
-    }
-    .dropdown-item {
-        padding: 10px 1rem;
-        border-bottom: 1px solid #e0e0e0;
-    }
-    .dropdown-menu li:last-child .dropdown-item {
-        border-bottom: none;
-    }
-</style>
 <header class="d-none d-lg-block">
     <nav class="container container-header2">
         <div class="row align-items-center">
@@ -46,6 +27,11 @@
                                 <li>
                                     <a class="dropdown-item" href="/gioi-thieu/ung-dung-than-so-hoc-sala">
                                         <span>Ứng dụng thần số học</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/gioi-thieu/chuyen-gia">
+                                        <span>Giới thiệu chuyên gia</span>
                                     </a>
                                 </li>
                             </ul>

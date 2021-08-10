@@ -3,33 +3,6 @@
 @push('styles')
     <link rel="stylesheet" href="/css/post2.css">
     <link rel="stylesheet" href="/css/postDetail2.css">
-    <style>
-        .title-lienquan {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 1;
-            overflow: hidden;
-        }
-        .desc-lienquan {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-        }
-        .tags{
-            border: 1px solid silver;
-            padding: 10px 15px;
-        }
-        .post-content {
-            overflow: hidden;
-        }
-        .post-content img {
-            max-width: 100%;
-        }
-        .post-content p {
-            font-weight: 200;
-        }
-    </style>
 @endpush
 
 @section('content')
@@ -39,7 +12,9 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
                 @if (request()->segment(1) == 'gioi-thieu')
-                    <li class="breadcrumb-item"><a href="/gioi-thieu/" class="active">Giơi thiệu</a></li>
+                    <li class="breadcrumb-item"><a href="/gioi-thieu" class="active">Giơi thiệu</a></li>
+                @elseif (request()->segment(1) == 'hoi-dap')
+                    <li class="breadcrumb-item"><a href="/hoi-dap" class="active">Hỏi đáp</a></li>
                 @else
                     <li class="breadcrumb-item"><a href="/tin-tuc" class="active">{{ $post->type == 'post' ? 'Tin tức' : 'Hỏi đáp' }}</a></li>
                 @endif
@@ -50,6 +25,7 @@
             </ol>
         </div>
     </nav>
+
     <main>
         <div class="post-slogan post-sloganDetail">
             <div class="container container-header2 mb-4">
@@ -73,7 +49,6 @@
                             </fieldset>
                         @endforeach
 
-
                         @if ($post->type == 'story')
                             <div class="title">
                                 <h1>{{ $post->author }}</h1>
@@ -83,7 +58,7 @@
                             <div class="desc-1">
                                 <h3>{{ $post->name }}</h3>
                             </div>
-                            <div class="desc fw-lighter mb-5">
+                            <div class="desc fw-bould mb-4">
                                 <span>{{ $post->description }}</span>
                             </div>
                         </div>
@@ -95,21 +70,19 @@
                         <x-danh-muc />
                         <div class="list-group list-group-flush border-bottom scrollarea">
                             @foreach ($posts as $item)
-                                @if ($item->id != $post->id)
-                                    <a href="/tin-tuc/{{ $item->slug }}" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-                                        <div class="row g-0">
-                                            <div class="col-9">
-                                                <div class="col-11">
-                                                    <strong class="mb-1 title-lienquan">{{ $item->name }}</strong>
-                                                </div>
-                                                <div class="col-11 small desc-lienquan">{{ $item->description }}</div>
+                                <a href="/tin-tuc/{{ $item->slug }}" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                                    <div class="row g-0">
+                                        <div class="col-9">
+                                            <div class="col-11">
+                                                <strong class="mb-1 title-lienquan">{{ $item->name }}</strong>
                                             </div>
-                                            <div class="col-3">
-                                                <img style="max-width: 100px" src="{{ $item->image ? $item->image : '/img/post/1.png' }}" alt="">
-                                            </div>
+                                            <div class="col-11 small desc-lienquan">{{ $item->description }}</div>
                                         </div>
-                                    </a>
-                                @endif
+                                        <div class="col-3">
+                                            <img style="max-width: 100px" src="https://stage.thansohocsala.com/{{ $item->image ? $item->image : '/img/post/1.png' }}" alt="">
+                                        </div>
+                                    </div>
+                                </a>
                             @endforeach
                         </div>
                     </div>

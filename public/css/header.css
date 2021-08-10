@@ -101,3 +101,20 @@ header .logo-desktop {
     color: #0d7464;
     text-decoration: 1px underline;
 }
+.dropdown-item:hover {
+    background-color: #097364;
+    color: white;
+}
+.dropdown-toggle::after {
+    transition: .2s !important;
+}
+.dropdown-toggle.show::after {
+    transform: rotate(-90deg) !important;
+}
+.dropdown-item {
+    padding: 10px 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.dropdown-menu li:last-child .dropdown-item {
+    border-bottom: none;
+}

@@ -89,35 +89,6 @@
         <img class="mw-100" src="/img/gioithieu/ct1.png" alt="">
     </div>
 
-    <style>
-        .gt-footer {
-            background-color: #0d6256;
-        }
-        .gt-footer .gt-fake-bg {
-            min-height: 322px;
-            background-repeat: no-repeat;
-            background-image: url('/img/gioithieu/g51.png');
-        }
-        .gt-footer .gt-fake-bg.right {
-            background-position-x: right;
-        }
-        .gt-footer .desc {
-            margin: 15px 0;
-        }
-        .gt-footer .title {
-            text-transform: uppercase;
-            font-size: 38px;
-        }
-        .gt-footer .group-hr {
-            width: 100%;
-            max-width: 300px;
-            height: 2px;
-            background-color: #41bcab;
-            margin: 40px auto;
-        }
-
-    </style>
-
     <div class="gt-footer text-white py-0 py-md-5">
         <div class="row g-0 align-items-center">
             <div class="col-12">

@@ -23,10 +23,12 @@ class Product extends JsonResource
             'price' => $this->price,
             'description' => $this->description,
             'promotion' => $this->promotion,
+            'options' => $this->options,
             'content' => $this->content,
             'status' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'sort' => $this->sort,
         ];
     }
 }

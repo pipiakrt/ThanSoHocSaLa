@@ -459,89 +459,9 @@
         </div>
     </div>
 
-    <div class="service2 ketqua-service" id="san-pham">
-        <div class="container">
-            <div class="gia-tri-cot-loi bds-lg-initial">
-                <div class="titlecotloi text-dark text-center">
-                    <h2 class="title-h1"><span class="h1">10</span> GIÁ TRỊ CHỈ CÓ TẠI</h2>
-                    <h2 class="title-h1">BẢN ĐỒ CUỘC ĐỜI THẦN SỐ HỌC SALA</h2>
-                </div>
-                <div class="row g-0 px-0 px-lg-5">
-                    <div class="col-lg-6">
-                        <div class="block">
-                            <div class="d-flex">
-                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
-                                <div class="w-75"><span>Cung cấp đầy đủ 19 chỉ số quan trọng toàn diện nhất dành cho bạn.</span></div>
-                            </div>
-                            <div class="d-flex">
-                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
-                                <div class="w-75"><span>Góc nhìn tích cực, xác định bản chất, tư vấn theo quan điểm xây dựng và phát triển bản thân.</span></div>
-                            </div>
-                            <div class="d-flex">
-                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
-                                <div class="w-75"><span>Cho bạn lời khuyên 3 năm sắp tới để đạt được đỉnh thành công.</span></div>
-                            </div>
-                            <div class="d-flex">
-                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
-                                <div class="w-75"><span>Hiểu sâu sắc bản thân, nhận biết điểm mạnh, điểm yếu để phát triển sức mạnh, năng lực nội tại bên trong bản thân bạn.</span></div>
-                            </div>
-                            <div class="d-flex">
-                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
-                                <div class="w-75"><span>Nhận thức năng lực thiên bẩm của bản thân làm chỗ dựa cho đam mê để lựa chọn công việc phù hợp với bạn.</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="block">
-                            <div class="d-flex justify-content-center">
-                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
-                                <div class="w-75"><span>Thấu hiểu con cái, vợ chồng của mình để đạt được hạnh phúc gia đình.</span></div>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
-                                <div class="w-75"><span>Được chuyên gia hỗ trợ luận giải và định hướng giải pháp, phát triển đột phá. </span></div>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
-                                <div class="w-75"><span>Hiểu rõ và điều phối nhân sự một cách hiệu quả nhất.</span></div>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
-                                <div class="w-75"><span>Phát triển tối đa năng lực cá nhân, tạo ra giá trị lớn cho bản thân và xã hội.</span></div>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
-                                <div class="w-75"><span>Có được điểm tựa để đi đúng định hướng bạn thân.</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ketqua sanpham">
-        <div class="content-ketqua">
-            <div class="container container-ketqua">
-                <div class="row g-0">
-                    <div class="col-xl-12">
-                        <div class="share-ketqua text-white">
-                            <div class="titlecs text-center"><h4>nhận giải mã trực tiếp</h4></div>
-                            <div class="desccs fw-lighter">
-                                <div><span>Nếu bạn muốn biết chi tiết hơn về những lời khuyên phù hợp nhất, giải mã vận mệnh, thăng trầm và ý nghĩa từng năm. Khám phá Giải mã chi tiết chuyên sâu ngay.</span></div>
-                            </div>
-                            <div class="btn-ketqua text-center">
-                                <a href="/tai-khoan/tra-cuu-nang-cao">
-                                    <button>TRA CỨU CHUYÊN SÂU</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <x-gia-tri />
 
-    </div>
-
+    <x-lien-ket-tra-cuu />
 
 </main>
 

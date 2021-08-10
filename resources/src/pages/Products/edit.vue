@@ -42,6 +42,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="sort" class="col-2 col-form-label">Thứ Tự</label>
+                                    <div class="col-10">
+                                        <input v-model="sort" class="form-control" type="number" placeholder="Thứ tự sản phẩm" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="price" class="col-2 col-form-label">Giá Gốc</label>
                                     <div class="col-10">
                                         <input v-model="price_origin" class="form-control" type="text" placeholder="Giá bán" />
@@ -58,7 +64,7 @@
                                     <div class="col-10">
                                         <div class="image-input image-input-empty image-input-outline background-position-center" :style="`background-image: url('${image ? image : '/img/avatar.png'}')`">
                                             <div class="image-input-wrapper"></div>
-                                            <label @click="modal = true" data-toggle="modal" data-target="#filemanager" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change">
+                                            <label @click="setTypeImage('avatar')" data-toggle="modal" data-target="#filemanager" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change">
                                                 <i class="fa fa-pen icon-sm text-muted"></i>
                                             </label>
                                             <span v-if="image" @click="image = ''" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow d-flex" data-action="remove">
@@ -98,6 +104,149 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="form-group row pb-5">
+                                    <label for="video" class="col-2 col-form-label">Tiêu đề chi tiết gói</label>
+                                    <div class="col-10">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <template v-for="(item, key) in options.title">
+                                                    <div class="row mt-5" :key="key">
+                                                        <div class="col-10">
+                                                            <input v-model="item.name" placeholder="Tiêu đề" class="form-control" type="text" />
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <button type="button" v-if="options.title.length > 1" @click="options.title.length == 1 ? false : options.title.splice(key, 1)" class="btn btn-block btn-warning">Loại bỏ</button>
+                                                        </div>
+                                                    </div>
+                                                </template>
+                                            </div>
+                                            <div class="col-10 mt-5">
+                                                <button @click="options.title.push({ name: '' })" type="button" class="btn btn-block btn-outline-secondary">Thêm</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row pb-5">
+                                    <label for="video" class="col-2 col-form-label">Tiêu đề phụ</label>
+                                    <div class="col-10">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <template v-for="(item, key) in options.title2">
+                                                    <div class="row mt-5" :key="key">
+                                                        <div class="col-10">
+                                                            <input v-model="item.name" placeholder="Tiêu đề" class="form-control" type="text" />
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <button type="button" v-if="options.title2.length > 1" @click="options.title2.length == 1 ? false : options.title2.splice(key, 1)" class="btn btn-block btn-warning">Loại bỏ</button>
+                                                        </div>
+                                                    </div>
+                                                </template>
+                                            </div>
+                                            <div class="col-10 mt-5">
+                                                <button @click="options.title2.push({ name: '' })" type="button" class="btn btn-block btn-outline-secondary">Thêm</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row pb-5">
+                                    <label for="video" class="col-2 col-form-label">Chức năng gói sản phẩm</label>
+                                    <div class="col-10">
+                                        <template v-for="(items, id) in options.desc">
+                                            <div class="row" :key="id">
+                                                <div class="col-8 mt-5">
+                                                    <div class="image-input image-input-empty image-input-outline background-position-center" :style="`background-image: url('${items.avatar ? items.avatar : '/img/avatar.png'}')`">
+                                                        <div class="image-input-wrapper"></div>
+                                                        <label @click="setTypeImage('option_avatar_1'), option_avatar_key = id" data-toggle="modal" data-target="#filemanager" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change">
+                                                            <i class="fa fa-pen icon-sm text-muted"></i>
+                                                        </label>
+                                                        <span v-if="items.avatar" @click="items.avatar = ''" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow d-flex" data-action="remove">
+                                                            <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="mt-5">
+                                                        <button type="button" v-if="options.desc.length > 1" @click="options.desc.length == 1 ? false : options.desc.splice(id, 1)" class="btn btn-block btn-danger">Loại bỏ</button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <template v-for="(item, key) in items.name">
+                                                        <div class="row mt-5" :key="key">
+                                                            <div class="col-10">
+                                                                <input v-model="item.name" placeholder="Tiêu đề" class="form-control" type="text" />
+                                                            </div>
+                                                            <div class="col-2">
+                                                                <button type="button" v-if="items.name.length > 1" @click="items.name.length == 1 ? false : items.name.splice(key, 1)" class="btn btn-block btn-warning">Loại bỏ</button>
+                                                            </div>
+                                                        </div>
+                                                    </template>
+                                                </div>
+                                                <div class="col-10 mt-5">
+                                                    <button @click="items.name.push({ name: '' })" type="button" class="btn btn-block btn-outline-secondary">Thêm</button>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <template v-for="(item, key) in items.desc">
+                                                        <div class="row mt-5" :key="key">
+                                                            <div class="col-10">
+                                                                <input v-model="item.name" placeholder="Mô tả" class="form-control" type="text" />
+                                                            </div>
+                                                            <div class="col-2">
+                                                                <button type="button" v-if="items.desc.length > 1" @click="items.desc.length == 1 ? false : items.desc.splice(key, 1)" class="btn btn-block btn-warning">Loại bỏ</button>
+                                                            </div>
+                                                        </div>
+                                                    </template>
+                                                </div>
+                                                <div class="col-10 mt-5">
+                                                    <button @click="items.desc.push({ name: '' })" type="button" class="btn btn-block btn-outline-secondary">Thêm</button>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="form-group row pb-5">
+                                    <div class="col-2"></div>
+                                    <div class="col-8">
+                                        <button @click="options.desc.push({ avatar: '', name: [{ name: '' }], desc: [{ name: '' }] })" type="button" class="btn btn-block btn-secondary">Thêm</button>
+                                    </div>
+                                </div>
+                                <div class="form-group row pb-5">
+                                    <label for="video" class="col-2 col-form-label">Ứng dụng gói sản phẩm</label>
+                                    <div class="col-10">
+                                        <div class="row">
+                                            <div class="col-12 mt-5">
+                                                <input v-model="options.desc2.name" placeholder="Tiêu đề" class="form-control" type="text" />
+                                            </div>
+                                            <div class="col-12">
+                                                <template v-for="(item, key) in options.desc2.items">
+                                                    <div class="row mt-5" :key="key">
+                                                        <div class="col-2">
+                                                            <div class="image-input image-input-empty image-input-outline background-position-center" :style="`background-image: url('${item.avatar ? item.avatar : '/img/avatar.png'}')`">
+                                                                <div class="image-input-wrapper"></div>
+                                                                <label @click="setTypeImage('option_avatar'), option_avatar_key = key" data-toggle="modal" data-target="#filemanager" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change">
+                                                                    <i class="fa fa-pen icon-sm text-muted"></i>
+                                                                </label>
+                                                                <span v-if="item.avatar" @click="item.avatar = ''" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow d-flex" data-action="remove">
+                                                                    <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input v-model="item.name" placeholder="Mô tả" class="form-control" type="text" />
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <button type="button" v-if="options.desc2.items.length > 1" @click="options.desc2.items.length == 1 ? false : options.desc2.items.splice(key, 1)" class="btn btn-block btn-warning">Loại bỏ</button>
+                                                        </div>
+                                                    </div>
+                                                </template>
+                                            </div>
+                                            <div class="col-10 mt-5">
+                                                <button @click="options.desc2.items.push({ name: '', avatar: '' })" type="button" class="btn btn-block btn-outline-secondary">Thêm</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <label for="description" class="col-2 col-form-label">Mô tả</label>
                                     <div class="col-10">
@@ -122,7 +271,7 @@
             </div>
         </div>
     </div>
-    <div v-if="modal" class="modal fade" id="filemanager">
+    <div class="modal fade" id="filemanager">
         <div class="modal-dialog modal-full min-vh-100">
             <div class="modal-content min-vh-100">
                 <div class="modal-body">
@@ -140,7 +289,7 @@ import Extends from '../../extend';
 import Breadcrumb from '../../components/breadcrumb/index'
 import FileManage from '../../components/FileManager/index'
 
-var typeimage = 'image';
+localStorage.setItem('typeimage', 'image');
 export default {
     components: { FileManage, Breadcrumb },
     data() {
@@ -161,6 +310,42 @@ export default {
                     text: 'Danh Sách',
                 }
             },
+            options: {
+                title: [
+                    {
+                        name: ""
+                    }
+                ],
+                title2: [
+                    {
+                        name: ""
+                    }
+                ],
+                desc2: {
+                    name: "",
+                    items: [
+                        {
+                            avatar: "",
+                            name: ""
+                        }
+                    ]
+                },
+                desc: [
+                    {
+                        avatar: "",
+                        name: [
+                            {
+                                name: ""
+                            }
+                        ],
+                        desc: [
+                            {
+                                name: ""
+                            }
+                        ]
+                    }
+                ]
+            },
             promotion: [
                 {
                     title: '',
@@ -173,7 +358,6 @@ export default {
                     ]
                 }
             ],
-            modal: false,
             id: '',
             image: '',
             name: '',
@@ -182,6 +366,7 @@ export default {
             price: '',
             description: '',
             content: '',
+            sort: 0,
         }
     },
     watch: {
@@ -200,6 +385,11 @@ export default {
             this.description = res.data.data.description
             this.promotion = res.data.data.promotion
             this.content = res.data.data.content
+            this.sort = res.data.data.sort
+
+            if (res.data.data.options) {
+                this.options = res.data.data.options
+            }
 
             KTUtil.ready(function () {
                 var HelloButton = function (context) {
@@ -208,7 +398,7 @@ export default {
                         contents: '<i class="fa far fa-folder"/>',
                         tooltip: 'Folder',
                         click: function () {
-                            typeimage = 'summernote';
+                            localStorage.setItem('typeimage', 'summernote');
                             $('#filemanager').modal('show');
                         }
                     });
@@ -246,15 +436,21 @@ export default {
         });
     },
     methods: {
-        setTypeGetImg() {
-            typeimage = 'image'
+        setTypeImage(type) {
+            localStorage.setItem('typeimage', type);
         },
         setUrl(path) {
-            console.log(path)
+            let typeimage = localStorage.getItem("typeimage");
             $('#filemanager').modal('hide');
             if (typeimage == 'summernote') {
                 var image = $('<img>').attr('src', path);
                 $('.summernote').summernote("insertNode", image[0]);
+            }
+            else if (typeimage == 'option_avatar') {
+                this.options.desc2.items[this.option_avatar_key].avatar = path
+            }
+            else if (typeimage == 'option_avatar_1') {
+                this.options.desc[this.option_avatar_key].avatar = path
             }
             else {
                 this.image = path
@@ -262,12 +458,14 @@ export default {
         },
         async submit(status) {
             let params = {
+                sort: this.sort,
                 name: this.name,
                 slug: this.slug,
                 price_origin: this.price_origin,
                 price: this.price,
                 image: this.image,
                 promotion: this.promotion,
+                options: this.options,
                 description: this.description,
                 content: $('.summernote').summernote('code'),
                 status: String(status)

@@ -51,7 +51,7 @@ class PostController extends Controller
     {
         $post = Post::where('slug', $slug)->first();
         if ($post) {
-            $posts = Post::orderby('id', 'desc')->where(['category_id' => $post->category_id, 'status' => 1])->take(7)->get();
+            $posts = Post::orderby('id', 'desc')->where([['id', '<', $post->id], 'type' => $post->type, 'category_id' => $post->category_id, 'status' => 1])->take(7)->get();
             $chuyenmuc = [];
             foreach ($post->Tags as $value) {
                 array_push($chuyenmuc, $value);

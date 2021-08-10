@@ -265,3 +265,112 @@
     font-size: 27px;
     letter-spacing: 1px;
 }
+.slide-ketqua .desc {
+    line-height: 35px;
+}
+.content-ketqua .bang-so .cs1 {
+    font-size: 16px;
+    font-weight: 300;
+    min-height: 85px;
+    line-height: normal;
+}
+.kimtuthap, .main-chart, .main-chart-2, .main-chart-3 {
+    margin-bottom: 55px;
+    position: relative;
+    float: left;
+}
+.kimtuthap{
+    margin-top: 234px;
+    width: 100%;
+    margin-left: -412px;
+}
+.data-number, .nang-luc {
+    position: absolute;
+    text-align: center;
+    letter-spacing: .583333px;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: none;
+}
+.chi-so-bd {
+    color: #f5ee0d;
+}
+.chi-so-name {
+    color: #ffffff;
+}
+.nang-luc {
+    font-size: 16px;
+}
+
+.nang-luc-1 {
+    top: 205px;
+    left: 5px;
+}
+.nang-luc-2 {
+    top: 120px;
+    left: 5px;
+}
+.nang-luc-3 {
+    top: 45px;
+    left: 5px;
+}
+.nang-luc-4 {
+    top: 205px;
+    left: 90px;
+}
+.nang-luc-5 {
+    top: 120px;
+    left: 90px;
+}
+.nang-luc-6 {
+    top: 45px;
+    left: 90px;
+}
+.nang-luc-7 {
+    top: 205px;
+    left: 175px;
+}
+.nang-luc-8 {
+    top: 120px;
+    left: 175px;
+}
+.nang-luc-9 {
+    top: 45px;
+    left: 175px;
+}
+.custom-next-right {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 135px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 30%;
+}
+.custom-next-right.start {
+    left: 7%;
+    background-image: url("/img/ket-qua-tra-cuu/left.png");
+}
+.custom-next-right.end {
+    right: 7%;
+    background-image: url("/img/ket-qua-tra-cuu/right.png");
+    background-position-x: right;
+}
+.custom-next-right .text-nr {
+    font-weight: 200;
+    font-family: 'iCiel DIN Pro Condensed';
+    text-transform: uppercase;
+    color: white;
+    min-inline-size: max-content;
+    font-size: 40px;
+}
+.custom-top {
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    bottom: 25px;
+    width: fit-content;
+    margin: auto;
+}
