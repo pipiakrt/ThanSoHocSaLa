@@ -32,11 +32,11 @@
     </div>
 
     <div class="tieudegoi">
-        <div class="container px-0 px-lg-4 pt-5">
-            <div class="row g-0 h-100">
+        <div class="container px-0 px-lg-4 pt-0 pt-md-5">
+            <div class="row g-0 h-100 justify-content-center">
                 @foreach ($products as $key => $item)
                     @if ($key < 3)
-                        <div class="col-md-4">
+                        <div class="col-4">
                             <div class="eventItem2 item {{ $key == 0 ? 'active' : '' }}" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="{{ $key }}">
                                 <div class="tengoi">
                                     <h3>{{ $item->name }}</h3>

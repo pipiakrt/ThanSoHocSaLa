@@ -26,7 +26,7 @@ class ThanSoHocController extends Controller
      */
     public function index(Request $request)
     {
-        return Resources::collection(Model::paginateFilter($request));
+        return Resources::collection(Model::paginateFilter($request, 300));
     }
 
     /**

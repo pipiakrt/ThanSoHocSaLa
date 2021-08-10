@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@php
-$giatien = 0;
-$phivanchuyen = 0;
-@endphp
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Word</title>
+    <title>Thần Số Học Sala</title>
 
     <style>
         body {
@@ -181,8 +176,7 @@ $phivanchuyen = 0;
 
         <div class="chaohoi">
             <p class="p1">Xin chào {{ $order['name'] }}</p>
-            <p style="margin-top: 0px;">Chúng tôi đã nhận được yêu cầu đặt hàng của bạn và đang tiền hành xử lý. Bạn sẽ
-                nhận được thông báo tiếp theo khi đơn hàng đã sẵn sàng được giao.</p>
+            <p style="margin-top: 0px;">Chúng tôi đã nhận được yêu cầu đặt hàng của bạn và đang tiền hành xử lý. Bạn sẽ nhận được thông báo tiếp theo khi đơn hàng đã sẵn sàng được giao.</p>
         </div>
 
         <div class="diachi">
@@ -191,7 +185,7 @@ $phivanchuyen = 0;
 
             <table width="100%">
                 <tr>
-                    <td class="title_address">Tên:</td>
+                    <td class="title_address">Người nhận hàng:</td>
                     <td colspan="2">{{ $order['name'] }}</td>
                 </tr>
                 <tr>
@@ -223,12 +217,12 @@ $phivanchuyen = 0;
                 <table style="margin: 20px 0;">
                     <tr>
                         <td>
-                            <img width="100" src="{{ $order['avatar']}} ">
+                            <img width="100" src="{{ env('APP_URL') . $order['avatar']}} ">
                         </td>
                         <td style="padding: 0 30px;"></td>
                         <td class="noidung__sanpham">
                             <div>
-                                <p class="title__product">{{ $order['name'] }}</p>
+                                <p class="title__product">{{ $order['product_name'] }}</p>
                                 <p>Gia: {{ $order['price'] }} </p>
                             </div>
                         </td>

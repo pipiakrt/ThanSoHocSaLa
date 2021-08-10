@@ -275,6 +275,16 @@
 
 /* sm */
 @media (max-width: 768px) {
+    .tieudegoi .tengoi {
+        padding: 30px 0;
+        min-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tieudegoi .tengoi h3 {
+        font-size: 16px;
+    }
     .gt-footer .title {
         font-size: 20px !important;
     }
@@ -425,19 +435,43 @@
         background-image: url("/img/icon/right-1.png");
         background-color: white;
     }
+    .thongtingoi .item .title h3 {
+        font-size: 22px;
+    }
     .thongtingoi .item .title {
         background: white;
         padding: 10px 0;
         padding-top: 15px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
     }
     .thongtingoi .item .desc {
         background: white;
         margin-top: 0px;
-        height: 215px;
+        height: 280px;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+    .sanpham .content-ketqua .share-ketqua {
+        padding: 20px 0;
+    }
+    .sanpham .content-ketqua .desccs {
+        margin-top: 20px;
+    }
+    .sanpham .btn-ketqua {
+        margin-top: 20px;
+    }
+    .thongtingoi .item .titlea {
+        height: 210px;
+        padding: 0 15px;
+    }
+    .thongtingoi .item .hd1 {
+        font-size: 18px;
     }
     .thongtingoi .item .bg-ctm {
         overflow: hidden;
-        background: #ededed;
+        background: #dadada;
+        padding-bottom: 30px;
     }
     .coppyright .content-c span {
         font-size: 10px;

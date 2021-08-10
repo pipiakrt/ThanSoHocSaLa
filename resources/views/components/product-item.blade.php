@@ -1,5 +1,5 @@
 <div class="carousel-item h-100 {{ $key == 0 ? 'active' : '' }}">
-    <div class="item px-0 px-md-4 py-4">
+    <div class="item px-0 px-md-4 pt-0 pt-md-4 py-4">
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="title text-center py-4">
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <div class="title text-center py-5 mt-4">
+                <div class="title text-center py-0 py-md-5 mb-3 mb-md-0 mt-4">
                     <h3>{{ $item["options"]["desc2"]["name"] }}</h3>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                 <div class="w-100">
                     <div class="row g-0 justify-content-center g-lg-4">
                         @foreach ($item["options"]["desc2"]["items"] as $items)
-                            <div class="col-md-3">
+                            <div class="col-md-6 col-lg-3">
                                 <div class="row g-0 text-white">
                                     <div class="col-12">
                                         <img class="w-100" src="{{ $items["avatar"] }}" alt="">
@@ -69,7 +69,7 @@
             </div>
             <div class="col-12 text-center mb-4">
                 <div class="btn-ketqua text-center mr-0">
-                    <a href="/tai-khoan/gio-hang/ca-nhan">
+                    <a href="/tai-khoan/gio-hang/{{ $item->slug }}">
                         <button>Mua Ngay</button>
                     </a>
                 </div>

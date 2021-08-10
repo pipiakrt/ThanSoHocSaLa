@@ -31,6 +31,10 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
 }
+.post-main .post-name a:hover {
+    text-decoration: revert;
+    text-decoration-color: #097364;
+}
 .post-main .post-name h2 {
     color: #097364;
     font-size: 26px;

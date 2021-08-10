@@ -21,7 +21,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = Product::take(2)->get();
         return view('san-pham', compact('products'));
     }
 

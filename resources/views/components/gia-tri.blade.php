@@ -32,23 +32,23 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="block">
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-lg-center">
                             <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
                             <div class="w-75"><span>Thấu hiểu con cái, vợ chồng của mình để đạt được hạnh phúc gia đình.</span></div>
                         </div>
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-lg-center">
                             <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
                             <div class="w-75"><span>Được chuyên gia hỗ trợ luận giải và định hướng giải pháp, phát triển đột phá. </span></div>
                         </div>
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-lg-center">
                             <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
                             <div class="w-75"><span>Hiểu rõ và điều phối nhân sự một cách hiệu quả nhất.</span></div>
                         </div>
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-lg-center">
                             <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
                             <div class="w-75"><span>Phát triển tối đa năng lực cá nhân, tạo ra giá trị lớn cho bản thân và xã hội.</span></div>
                         </div>
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-lg-center">
                             <img height="34" width="34" src="/img/icon/list.png" alt="Thần số học">
                             <div class="w-75"><span>Có được điểm tựa để đi đúng định hướng bạn thân.</span></div>
                         </div>

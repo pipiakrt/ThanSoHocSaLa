@@ -37,10 +37,10 @@
         <div class="post-main mb-0 mb-md-5">
             <div class="container container-header2">
                 <div class="row g-0 g-md-5">
-                    <div class="col-md-3">
+                    <div class="col-lg-3">
                         <x-danh-muc />
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-lg-9">
                         @foreach ($posts as $item)
                             <x-post-item :item="$item" />
                         @endforeach

@@ -27,6 +27,9 @@ body * {
 .decoration-revert {
     text-decoration: revert !important;
 }
+.decoration-revert-hover:hover {
+    text-decoration: revert !important;
+}
 a {
     text-decoration: none;
     color: unset;

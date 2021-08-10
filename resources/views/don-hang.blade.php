@@ -77,7 +77,7 @@
                     <div class="row g-0">
                         <div class="col-md-11">Chi tiết quy trình mua hàng, hình thức thanh toán của Thần Số Học Sala</div>
                         <div class="col-md-1">
-                            <a href="/hoi-dap/huong-dan-cach-mua-hang-tiet-kiem-va-nhanh-chong" class="link-secondary decoration-revert">Xem bài viết</a>
+                            <a href="/hoi-dap/huong-dan-cach-mua-hang-tren-thansohocsalacom" class="link-secondary decoration-revert">Xem bài viết</a>
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                     <div class="row g-0">
                         <div class="col-md-11">Xem Chi tiết các điều khoản dịch vụ thần số học sala</div>
                         <div class="col-md-1">
-                            <a href="/hoi-dap/huong-dan-cach-mua-hang-tiet-kiem-va-nhanh-chong" class="link-secondary decoration-revert">Xem bài viết</a>
+                            <a href="/hoi-dap/huong-dan-cach-mua-hang-tren-thansohocsalacom" class="link-secondary decoration-revert">Xem bài viết</a>
                         </div>
                     </div>
                 </div>
