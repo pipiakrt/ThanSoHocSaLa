@@ -28,13 +28,15 @@
                 <img class="header-logo" alt="Thần Số Học" src="/img/gioithieu/t1.png">
             </div>
         </div>
-        <div class="slider-logo text-center position-absolute">
-            <img src="/img/gioithieu/b3.png" alt="">
+        <div class="d-none d-md-block">
+            <div class="slider-logo text-center position-absolute">
+                <img src="/img/gioithieu/b3.png" alt="">
+            </div>
         </div>
     </div>
-    <div class="main-cauchuyen py-5">
+    <div class="main-cauchuyen pt-0 pt-md-5 py-5">
         <div class="main-1">
-            <div class="container my-5 py-5 pb-0 pb-md-5 mb-0 mb-md-5">
+            <div class="container my-5 mt-0 mt-md-5 py-5 pb-0 pb-md-5 mb-0 mb-md-5">
                 <div class="row justify-content-center g-0 my-4">
                     <div class="col-sm-12 col-md-10 col-lg-7">
                         <img class="mw-100" src="/img/gioithieu/t2.png" alt="">

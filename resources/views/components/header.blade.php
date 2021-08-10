@@ -190,22 +190,101 @@
                         </a>
                     </div>
                     <div class="menu-mb-item">
-                        <a href="/gioi-thieu/" class="{{ request()->segment(1) == 'gioi-thieu' ? 'active' : '' }}">
+                        <a class="{{ request()->segment(1) == 'gioi-thieu' ? 'active' : '' }}" data-bs-toggle="collapse" href="#collapseExample" aria-controls="collapseExample">
                             <span>Giới thiệu</span>
                         </a>
+                        <div class="collapse mt-2" id="collapseExample">
+                            <ul class="mb-0">
+                                <li>
+                                    <a class="dropdown-mobile" href="/gioi-thieu">
+                                        <span>Giới thiệu</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-mobile" href="/gioi-thieu/ve-sala">
+                                        <span>Học viện cổ học sala</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-mobile" href="/gioi-thieu/than-so-hoc-la-gi">
+                                        <span>Thần số học sala là gì</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-mobile" href="/gioi-thieu/ung-dung-than-so-hoc-sala">
+                                        <span>Ứng dụng thần số học</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-mobile" href="/gioi-thieu/chuyen-gia">
+                                        <span>Giới thiệu chuyên gia</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="menu-mb-item">
-                        <a href="/san-pham/" class="{{ request()->segment(1) == 'san-pham' ? 'active' : '' }}">
+                        <a class="{{ request()->segment(1) == 'san-pham' ? 'active' : '' }}" data-bs-toggle="collapse" href="#collapseExample2" aria-controls="collapseExample2">
                             <span>Sản phẩm</span>
                         </a>
+                        <div class="collapse mt-2" id="collapseExample2">
+                            <ul class="mb-0">
+                                <li>
+                                    <a class="dropdown-mobile" href="/san-pham">
+                                        <span>Sản phẩm</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-mobile" href="/san-pham/ca-nhan">
+                                        <span>Gói cá nhân</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-mobile" href="/san-pham/gia-dinh">
+                                        <span>Gói gia đình</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-mobile" href="/san-pham/doanh-nghiep">
+                                        <span>Gói doanh nghiệp</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-mobile" href="/san-pham/doanh-nghiep#list-p2">
+                                        <span>Gói (chủ doanh nghiệp)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-mobile" href="/san-pham/doanh-nghiep#list-p2">
+                                        <span>Gói (nhân sự doanh nghiệp)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="menu-mb-item">
-                        <a href="/tin-tuc/" class="{{ request()->segment(1) == 'tin-tuc' ? 'active' : '' }}">
+                        <a data-bs-toggle="collapse" href="#collapseExample3" aria-controls="collapseExample3 class="{{ request()->segment(1) == 'tin-tuc' ? 'active' : '' }}">
                             <span>Tin tức</span>
                         </a>
+                        <div class="collapse mt-2" id="collapseExample3">
+                            <ul class="mb-0">
+                                <li>
+                                    <a class="dropdown-mobile" href="/tin-tuc">
+                                        <span>Sản phẩm</span>
+                                    </a>
+                                </li>
+                                @foreach ($categories as $item)
+                                    <li>
+                                        <a class="dropdown-mobile" href="/tin-tuc/{{ $item->slug }}">
+                                            <span>{{ $item->name }}</span>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
                     <div class="menu-mb-item">
-                        <a href="/cau-chuyen/" class="{{ request()->segment(1) == 'cau-chuyen' ? 'active' : '' }}">
+                        <a href="/cau-chuyen" class="{{ request()->segment(1) == 'cau-chuyen' ? 'active' : '' }}">
                             <span>Câu chuyện</span>
                         </a>
                     </div>

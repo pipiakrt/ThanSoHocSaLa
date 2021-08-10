@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <div class="tieudegoi">
+    <div class="tieudegoi" id="list-p2">
         <div class="container px-0 px-lg-4 pt-5">
             <div class="row g-0 h-100">
                 @foreach ($product_dn as $key => $item)

@@ -118,3 +118,7 @@ header .logo-desktop {
 .dropdown-menu li:last-child .dropdown-item {
     border-bottom: none;
 }
+
+a.dropdown-mobile {
+    font-size: 13px;
+}
