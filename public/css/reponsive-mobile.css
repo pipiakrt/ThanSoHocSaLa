@@ -275,6 +275,49 @@
 
 /* sm */
 @media (max-width: 768px) {
+    .ketqua .number-8 {
+        bottom: 7%;
+        right: 16%;
+    }
+    .ketqua .number-7 {
+        bottom: 7%;
+        left: 17%;
+    }
+    .block-1 {
+        padding-bottom: 25px;
+    }
+    .gia-tri {
+        overflow: hidden;
+    }
+    .gia-tri .content-main .timeline.right {
+        position: relative;
+        padding-left: 0;
+    }
+    img.co-dinh.chinh-giua {
+        width: 185px;
+    }
+    img.co-dinh.quay-trai {
+        z-index: 1;
+        width: 300px;
+    }
+    img.co-dinh.quay-phai {
+        z-index: 1;
+        width: 320px;
+    }
+    .gia-tri .main-item {
+        min-height: 375px;
+    }
+    .gia-tri .content-main img {
+        display: block;
+    }
+    .gia-tri .content-main .timeline .counter.right {
+        left: unset;
+        right: -35px;
+    }
+    .gia-tri .lime-height.right {
+        left: unset;
+        right: 7px;
+    }
     .tieudegoi .tengoi {
         padding: 30px 0;
         min-height: 100px;
@@ -419,7 +462,7 @@
         display: none;
     }
     .gioi-thieu .item {
-        min-height: 120px;
+        /* min-height: 120px; */
     }
     .block-1 .item:hover, .block-1 .item {
         background-image: unset !important;

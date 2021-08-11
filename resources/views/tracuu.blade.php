@@ -43,8 +43,8 @@
                                             <input name="birthday" id="birthday" type="text" required >
                                         </div>
                                         <div class="form-input">
-                                            <label for="sdt">Số điện thoại</label>
-                                            <input id="sdt" name="sdt" type="text" required>
+                                            <label for="phone">Số điện thoại</label>
+                                            <input id="phone" name="phone" type="text" required>
                                         </div>
                                     </div>
                                 </div>

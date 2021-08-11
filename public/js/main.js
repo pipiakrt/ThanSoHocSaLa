@@ -14,6 +14,14 @@ $('#khachhang').owlCarousel({
     items:1
 })
 
+$('#chiso').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: false,
+    dots: false,
+    items:1
+})
+
 $('#ketqua').owlCarousel({
     loop: true,
     margin: 0,

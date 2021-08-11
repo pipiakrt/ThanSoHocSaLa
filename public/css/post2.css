@@ -38,10 +38,10 @@
 .post-main .post-name h2 {
     color: #097364;
     font-size: 26px;
-    display: -webkit-box;
+    /* display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    overflow: hidden;
+    overflow: hidden; */
     text-transform: uppercase;
 }
 .post-main .post-tilte h4 {

@@ -22,6 +22,7 @@ use Illuminate\Support\Str;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/test', [ExportController::class, 'index']);
 
 
 Route::get('/', [HomeController::class, 'index']);
