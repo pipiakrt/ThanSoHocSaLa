@@ -7,19 +7,21 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class guiLuanGiaiPDF extends Mailable implements ShouldQueue
+class guiLuanGiaiPDF extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $path;
+    protected $user;
+    protected $path;
 
     /**
-     * Create a new message instance.
+     * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($path)
+    public function __construct($user, $path)
     {
+        $this->user = $user;
         $this->path = $path;
     }
 
@@ -30,6 +32,7 @@ class guiLuanGiaiPDF extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->view('mail.guiPDF')->attach($this->path);
+        $user = $this->user;
+        return $this->view('mail.guiPDF', compact('user'))->attach($this->path);
     }
 }

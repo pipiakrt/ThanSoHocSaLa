@@ -8,11 +8,10 @@ use App\Services\ThanSoHoc\DefinedDataComponent;
 use App\Services\ThanSoHoc\UtilsComponent;
 use App\Services\ThanSoHoc\MYPDF;
 use App\Models\ThanSo as Model;
-use App\Mail\guiLuanGiaiPDF;
+use App\Jobs\guiLuanGiaiPDF as Job;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
-use Mail;
 
 class ExportController extends Controller
 {
@@ -328,10 +327,7 @@ class ExportController extends Controller
         if ($request->type == "sendmail") {
             $path = storage_path('/app/public') . "/Giai-ma-cuoc-doi-$buildNameFile-$dulieu->id-.pdf";
             $pdf->Output("$path", 'F');
-            $mail = new guiLuanGiaiPDF($path);
-            $mail->subject('Thần Số Học Sala đã gửi file luận giải');
-            $mail->from(env('MAIL_USERNAME'), 'Thần Số Học Sala');
-            Mail::to($dulieu->email)->send($mail);
+            Job::dispatch($dulieu, $path);
             return redirect('/tai-khoan/lich-su-tra-cuu')->with('msg', "Hệ thống đã gửi file luận giải vào email $dulieu->email. cảm ơn bạn đã sử dụng dụng vụ của Thần Số Học Sala.");
         }
         else if ($request->type == "download") {

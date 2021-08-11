@@ -44,6 +44,36 @@ return [
             'visibility' => 'public',
         ],
 
+        'ftp_storage' => [
+            'driver' => 'ftp',
+            'host' => env('FTP_HOST'),
+            'username' => env('FTP_USERNAME'),
+            'password' => env('FTP_PASSWORD'),
+            'url' => env('FTP_DOMAIN'),
+
+            // Optional FTP Settings...
+            'port' => 21,
+            'root' => 'public_html/storage/app/public',
+            'passive' => true,
+            'ssl' => true,
+            'timeout' => 60,
+        ],
+
+        'ftp' => [
+            'driver' => 'ftp',
+            'host' => env('FTP_HOST'),
+            'username' => env('FTP_USERNAME'),
+            'password' => env('FTP_PASSWORD'),
+            'url' => env('FTP_DOMAIN'),
+
+            // Optional FTP Settings...
+            'port' => 21,
+            'root' => 'public_html/public/uploads',
+            'passive' => true,
+            'ssl' => true,
+            'timeout' => 60,
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
