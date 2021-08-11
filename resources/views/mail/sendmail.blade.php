@@ -106,7 +106,7 @@
                                                                                     <br />
                                                                                     Hệ thống nhận được yêu cầu đổi lại mật khẩu với tài khoản: {{ $user['email'] }}
                                                                                     <br /><br />
-                                                                                    Click vào <a href="https://stage.thansohocsala.com/tai-khoan/doi-mat-khau?token={{ $user['token'] }}" target="_blank">link này</a> để thay đổi lại mật khẩu của bạn bạn!
+                                                                                    Click vào <a href="https://stage.thansohocsala.com/tai-khoan/doi-mat-khau?token={{ $token }}" target="_blank">link này</a> để thay đổi lại mật khẩu của bạn bạn!
                                                                                     <br /><br />
                                                                                     Trân trọng,
                                                                                     <br />

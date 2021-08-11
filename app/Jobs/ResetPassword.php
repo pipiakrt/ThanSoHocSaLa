@@ -16,6 +16,7 @@ class ResetPassword
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     protected $user;
+    protected $token;
 
     /**
      * Create a new notification instance.
@@ -25,7 +26,7 @@ class ResetPassword
     public function __construct($user, $token)
     {
         $this->user = $user;
-        $this->user["token"] = $token;
+        $this->token = $token;
     }
 
     /**
@@ -35,7 +36,7 @@ class ResetPassword
      */
     public function handle()
     {
-        $mail = new sendMail($this->user);
+        $mail = new sendMail($this->user, $this->token);
         $mail->subject('Quên Mật Khẩu - Thần Số Học Sala');
         $mail->from(env('MAIL_USERNAME'), 'Thần Số Học Sala');
         Mail::to($this->user['email'])->send($mail);
