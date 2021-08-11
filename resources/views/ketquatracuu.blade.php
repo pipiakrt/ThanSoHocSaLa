@@ -15,6 +15,12 @@
             document.body.removeChild(tempInput);
             $('.toast').toast('show')
         })
+        $('.custom-next-right').click(() => {
+            location.href = "#carouselExampleCaptions";
+        })
+        $('#sendmail').click(() => {
+            $('#box-email').show();
+        })
     </script>
 @endpush
 
@@ -116,7 +122,7 @@
                                     <div class="icon"></div>
                                 </div>
                                 <div class="title-item">
-                                    <h3>CHỈ SỐ SƯ MỆNH</h3>
+                                    <h3>CHỈ SỐ SỨ MỆNH</h3>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +202,7 @@
                                         <div class="row g-0 justify-content-center">
                                             <div class="col-md-6">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-md-12 col-lg-6">
+                                                    <div class="col-md-12 col-lg-6 d-flex justify-content-center">
                                                         <div class="main-chart">
                                                             <div>
                                                                 <div class="g-0">
@@ -213,7 +219,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-md-12 col-lg-6">
+                                                    <div class="col-md-12 col-lg-6 d-flex justify-content-center">
                                                         <div class="main-chart-2">
                                                             <div>
                                                                 <div class="g-0">
@@ -225,12 +231,12 @@
                                                             </div>
                                                             <div class="title2 mt-5"><h4 class="text-center">BIỂU ĐỒ BIRTH CHART</h4></div>
                                                         </div>
-                                                        </div>
                                                     </div>
+                                                </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-md-12 col-lg-6">
+                                                    <div class="col-md-12 col-lg-6 d-flex justify-content-center">
                                                         <div class="main-chart-3">
                                                             <div>
                                                                 <div class="g-0">
@@ -298,7 +304,7 @@
                                     <div>
                                         <img src="/img/ket-qua-tra-cuu/mail.png" alt="">
                                     </div>
-                                    <div>
+                                    <div id="sendmail">
                                         <span class="chiasetitle">Gửi mail</span>
                                     </div>
                                 </div>
@@ -313,6 +319,22 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-12 mt-4" id="box-email" style="display: none">
+                                <form method="POST"action="/gui-mail-ket-qua">
+                                    @csrf
+                                    <div class="row g-0 justify-content-center">
+                                        <div class="col-md-3">
+                                            <div class="form-input">
+                                                <label class="w-100" for="email">Email</label>
+                                                <input id="email" name="email" type="email" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 text-center">
+                                            <button class="mail-sm">Gửi</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                         <div class="clear-hr"></div>
                         <div class="titlecs text-center"><h4>nhận giải mã trực tiếp</h4></div>
@@ -321,7 +343,7 @@
                             <div><span>trầm và ý nghĩa từng năm. Khám phá Giải mã chi tiết chuyên sâu ngay.</span></div>
                         </div>
                         <div class="btn-ketqua text-center">
-                            <a href="/tra-cuu-nang-cao">
+                            <a href="/tai-khoan/tra-cuu-nang-cao">
                                 <button>TRA CỨU CHUYÊN SÂU</button>
                             </a>
                         </div>

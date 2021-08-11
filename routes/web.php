@@ -11,6 +11,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\AddressController;
 use Illuminate\Support\Str;
+use App\Jobs\Register as sendMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,14 +23,13 @@ use Illuminate\Support\Str;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/test', [ExportController::class, 'index']);
 
 
 Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('/gioi-thieu')->group(function () {
     Route::get('/', [HomeController::class, 'gioithieu']);
-    Route::get('/ve-sala', [HomeController::class, 'thansohocsala']);
+    Route::get('/than-so-hoc', [HomeController::class, 'thansohocsala']);
     Route::get('/chuyen-gia', [HomeController::class, 'chuyengia']);
     Route::get('/su-menh', [HomeController::class, 'sumenh']);
     Route::get('/duong-doi', [HomeController::class, 'duongdoi']);
@@ -94,6 +94,7 @@ Route::get('/chinh-sach', function () {
 Route::get('/tra-cuu', [ThanSoController::class, 'index']);
 Route::get('/tra-cuu/{code}', [ThanSoController::class, 'show']);
 Route::post('/tra-cuu', [ThanSoController::class, 'ketqua']);
+Route::post('/gui-mail-ket-qua', [ThanSoController::class, 'guimail']);
 
 Auth::routes();
 

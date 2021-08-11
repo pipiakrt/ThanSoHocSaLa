@@ -157,6 +157,9 @@
 
 /* md */
 @media (max-width: 992px) {
+    .custom-next-right .text-nr {
+        display: none;
+    }
     .main-tracuu .form-input input, .main-tracuu .form-input textarea {
         width: 100% !important;
     }
@@ -275,14 +278,6 @@
 
 /* sm */
 @media (max-width: 768px) {
-    .ketqua .number-8 {
-        bottom: 7%;
-        right: 16%;
-    }
-    .ketqua .number-7 {
-        bottom: 7%;
-        left: 17%;
-    }
     .block-1 {
         padding-bottom: 25px;
     }
@@ -545,10 +540,46 @@
     .breadcrumb-cus a {
         font-size: 16px;
     }
+    .ketqua .number-6 {
+        right: 25%;
+        top: 62%;
+    }
+    .ketqua .number-5 {
+        left: 22.85%;
+        top: 62%;
+    }
+    .ketqua .number-9 {
+        left: 0%;
+    }
+    .ketqua .number-10 {
+        right: 0%;
+    }
+    .ketqua .number-8 {
+        bottom: 7%;
+        right: 16%;
+    }
+    .ketqua .number-7 {
+        bottom: 7%;
+        left: 17%;
+    }
 }
 @media (max-width: 400px) {
     .ketqua .conso .nb {
         left: 30%;
+    }
+}
+@media (max-width: 320px) {
+    .ketqua .number-7 {
+        left: 11%;
+    }
+    .ketqua .number-8 {
+        right: 10%;
+    }
+    .ketqua .number-6 {
+        right: 20%;
+    }
+    .ketqua .number-5 {
+        left: 19.85%;
     }
 }
 

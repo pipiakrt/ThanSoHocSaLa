@@ -858,6 +858,12 @@ input[type="date"]:focus::before {
     height: 100%;
     display: flow-root;
 }
+.service2 .giamgia-g {
+    overflow: hidden;
+}
+.service2 .carousel-item {
+    transition: transform .3s ease-in-out;
+}
 .service2 .giamgia {
     width: 210px;
     background: #4fa283;
@@ -903,11 +909,13 @@ input[type="date"]:focus::before {
 
 .service2 .giamgia-g .title-1.gc {
     text-decoration: line-through 1px;
+    font-size: 22px;
+    margin-top: 25px;
 }
 
-.service2 .giamgia-g .title-2  h3 {
+.service2 .giamgia-g .title-2 h3 {
     margin-bottom: 0;
-    font-size: 60px;
+    font-size: 40px;
 }
 .service2 .block-item .fix-mgauto {
     width: 63%;

@@ -9,9 +9,9 @@
                                 <div class="box text-center">
                                     <div class="stt"><span>01</span></div>
                                     <div class="title">
-                                        <h4>THẦN SỐ HỌC SALA</h4>
+                                        <h4>THẦN SỐ HỌC LÀ GÌ?</h4>
                                     </div>
-                                    <div class="desc"><span>Tầm nhìn - Sứ mệnh</span></div>
+                                    <div class="desc"><span>Numerology</span></div>
                                     <div class="toLink">
                                         <img src="/img/icon/link.png" alt="Thần số học">
                                     </div>
@@ -23,9 +23,9 @@
                                 <div class="box text-center">
                                     <div class="stt"><span>02</span></div>
                                     <div class="title">
-                                        <h4>THẦN SỐ HỌC LÀ GÌ?</h4>
+                                        <h4>THẦN SỐ HỌC SALA</h4>
                                     </div>
-                                    <div class="desc"><span>Numerology</span></div>
+                                    <div class="desc"><span>Tầm nhìn - Sứ mệnh</span></div>
                                     <div class="toLink">
                                         <img src="/img/icon/link.png" alt="Thần số học">
                                     </div>
@@ -56,36 +56,6 @@
                                     <div class="d-flex">
                                         <div class="block-content w-100">
                                             <div class="cr-title">
-                                                <h1>THẦN SỐ HỌC SALA</h1>
-                                            </div>
-                                            <div class="pytago">
-                                                <div class="row g-0 align-items-center">
-                                                    <div class="col-md-6">
-                                                        <img src="/img/icon/logo.png" alt="pitago">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="info">
-                                                <div class="cr-title1">
-                                                    <h4 class="fw-bold text-uppercase">Thần Số Học Sala</h4>
-                                                </div>
-                                                <div class="desc fw-light mt-3"><span>HỌC VIỆN CỔ HỌC SALA tự hào là cầu nối đưa Thần Số Học đến gần hơn với mỗi cá nhân, mỗi gia đình và mỗi doanh nghiệp. Tại đây chúng tôi cung cấp các kiến thức giúp hỗ trợ phát triển toàn diện bản thân cho từng cá nhân, gia đình hay doanh nghiệp có thể hiểu và ứng dụng được Thần Số Học trong việc xây dựng bản đồ kế hoạch cuộc đời, có
-                                                        định hướng tương lai rõ ràng để gặt hái thành công toàn diện.</span></div>
-                                            </div>
-                                            <div class="btn-dangky my-3 mt-md-4">
-                                                <a href="{{ $data['baiviet1'] }}">
-                                                    <button type="submit" class="text-white">XEM THÊM</button>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item active h-100">
-                                <div class="block-main d-flex align-items-center h-100">
-                                    <div class="d-flex">
-                                        <div class="block-content w-100">
-                                            <div class="cr-title">
                                                 <h1>THẦN SỐ HỌC LÀ GÌ?</h1>
                                             </div>
                                             <div class="pytago">
@@ -110,6 +80,36 @@
                                             </div>
                                             <div class="btn-dangky my-3 mt-md-4">
                                                 <a href="{{ $data['baiviet2'] }}">
+                                                    <button type="submit" class="text-white">XEM THÊM</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item active h-100">
+                                <div class="block-main d-flex align-items-center h-100">
+                                    <div class="d-flex">
+                                        <div class="block-content w-100">
+                                            <div class="cr-title">
+                                                <h1>THẦN SỐ HỌC SALA</h1>
+                                            </div>
+                                            <div class="pytago">
+                                                <div class="row g-0 align-items-center">
+                                                    <div class="col-md-6">
+                                                        <img src="/img/icon/logo.png" alt="pitago">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="cr-title1">
+                                                    <h4 class="fw-bold text-uppercase">Thần Số Học Sala</h4>
+                                                </div>
+                                                <div class="desc fw-light mt-3"><span>HỌC VIỆN CỔ HỌC SALA tự hào là cầu nối đưa Thần Số Học đến gần hơn với mỗi cá nhân, mỗi gia đình và mỗi doanh nghiệp. Tại đây chúng tôi cung cấp các kiến thức giúp hỗ trợ phát triển toàn diện bản thân cho từng cá nhân, gia đình hay doanh nghiệp có thể hiểu và ứng dụng được Thần Số Học trong việc xây dựng bản đồ kế hoạch cuộc đời, có
+                                                        định hướng tương lai rõ ràng để gặt hái thành công toàn diện.</span></div>
+                                            </div>
+                                            <div class="btn-dangky my-3 mt-md-4">
+                                                <a href="{{ $data['baiviet1'] }}">
                                                     <button type="submit" class="text-white">XEM THÊM</button>
                                                 </a>
                                             </div>

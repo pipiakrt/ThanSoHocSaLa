@@ -54,13 +54,13 @@
                                                 <div class="giamgia">
                                                     <div class="giamgia-g">
                                                         <div class="title-1 gc">
-                                                            <span>2.000.000 vnđ</span>
+                                                            <span>2.000.000 VNĐ</span>
                                                         </div>
                                                         <div class="title-1">
                                                             <span>Giảm còn</span>
                                                         </div>
                                                         <div class="title-2">
-                                                            <h3>950k</h3>
+                                                            <h3>950.000 VNĐ</h3>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -71,17 +71,17 @@
                                                         <div class="group-qt">
                                                             <img src="/img/icon/tick.png" alt="Quà tặng">
                                                             <div class="desc-1"><span>01 cuốn sách cuộc đời của riêng bạn</span></div>
-                                                            <div class="price-1"><span>150.000 vnđ</span></div>
+                                                            <div class="price-1"><span>150.000 VNĐ</span></div>
                                                         </div>
                                                         <div class="group-qt">
                                                             <img src="/img/icon/tick.png" alt="Quà tặng">
                                                             <div class="desc-1"><span>01 buổi tư vấn ứng dụng Thần Số Học cùng chuyên gia</span></div>
-                                                            <div class="price-1"><span>500.000 vnđ</span></div>
+                                                            <div class="price-1"><span>500.000 VNĐ</span></div>
                                                         </div>
                                                     </div>
                                                     <div class="total">
                                                         <div class="total-text"><span>Tổng giá trị quà tặng</span></div>
-                                                        <div class="total-price"><h2>650.000vnđ</h2></div>
+                                                        <div class="total-price"><h2>650.000VNĐ</h2></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -113,13 +113,13 @@
                                                 <div class="giamgia">
                                                     <div class="giamgia-g">
                                                         <div class="title-1 gc">
-                                                            <span>5.000.000 vnđ</span>
+                                                            <span>5.000.000 VNĐ</span>
                                                         </div>
                                                         <div class="title-1">
                                                             <span>Giảm còn</span>
                                                         </div>
                                                         <div class="title-2">
-                                                            <h3>1.900k</h3>
+                                                            <h3>1.900.000 VNĐ</h3>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -130,22 +130,22 @@
                                                         <div class="group-qt">
                                                             <img src="/img/icon/tick.png" alt="Quà tặng">
                                                             <div class="desc-1"><span>01 cuốn sách cuộc đời của chủ doanh nghiệp</span></div>
-                                                            <div class="price-1"><span>150.000vnđ</span></div>
+                                                            <div class="price-1"><span>150.000 VNĐ</span></div>
                                                         </div>
                                                         <div class="group-qt">
                                                             <img src="/img/icon/tick.png" alt="Quà tặng">
                                                             <div class="desc-1"><span>01 cuốn sách cuộc đời cho doanh nghiệp</span></div>
-                                                            <div class="price-1"><span>150.000vnđ</span></div>
+                                                            <div class="price-1"><span>150.000 VNĐ</span></div>
                                                         </div>
                                                         <div class="group-qt">
                                                             <img src="/img/icon/tick.png" alt="Quà tặng">
                                                             <div class="desc-1"><span>02 buổi tư vấn ứng dụng Thần Số Học cùng chuyên gia</span></div>
-                                                            <div class="price-1"><span>1.000.000vnđ</span></div>
+                                                            <div class="price-1"><span>1.000.000VNĐ</span></div>
                                                         </div>
                                                     </div>
                                                     <div class="total">
                                                         <div class="total-text"><span>Tổng giá trị quà tặng</span></div>
-                                                        <div class="total-price"><h2>1.300.000vnđ</h2></div>
+                                                        <div class="total-price"><h2>1.300.000VNĐ</h2></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -193,13 +193,13 @@
                                                 <div class="giamgia">
                                                     <div class="giamgia-g">
                                                         <div class="title-1 gc">
-                                                            <span>2.000.000 vnđ</span>
+                                                            <span>2.000.000 VNĐ</span>
                                                         </div>
                                                         <div class="title-1">
                                                             <span>Giảm còn</span>
                                                         </div>
                                                         <div class="title-2">
-                                                            <h3>950k</h3>
+                                                            <h3>950.000 VNĐ</h3>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -210,17 +210,17 @@
                                                         <div class="group-qt">
                                                             <img src="/img/icon/tick.png" alt="Quà tặng">
                                                             <div class="desc-1"><span>01 cuốn sách cuộc đời của riêng bạn</span></div>
-                                                            <div class="price-1"><span>150.000 vnđ</span></div>
+                                                            <div class="price-1"><span>150.000 VNĐ</span></div>
                                                         </div>
                                                         <div class="group-qt">
                                                             <img src="/img/icon/tick.png" alt="Quà tặng">
                                                             <div class="desc-1"><span>01 buổi tư vấn ứng dụng Thần Số Học cùng chuyên gia</span></div>
-                                                            <div class="price-1"><span>500.000 vnđ</span></div>
+                                                            <div class="price-1"><span>500.000 VNĐ</span></div>
                                                         </div>
                                                     </div>
                                                     <div class="total">
                                                         <div class="total-text"><span>Tổng giá trị quà tặng</span></div>
-                                                        <div class="total-price"><h2>650.000vnđ</h2></div>
+                                                        <div class="total-price"><h2>650.000VNĐ</h2></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -264,13 +264,13 @@
                                                 <div class="giamgia">
                                                     <div class="giamgia-g">
                                                         <div class="title-1 gc">
-                                                            <span>5.000.000 vnđ</span>
+                                                            <span>5.000.000 VNĐ</span>
                                                         </div>
                                                         <div class="title-1">
                                                             <span>Giảm còn</span>
                                                         </div>
                                                         <div class="title-2">
-                                                            <h3>1.900k</h3>
+                                                            <h3>1.900.000 VNĐ</h3>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -281,22 +281,22 @@
                                                         <div class="group-qt">
                                                             <img src="/img/icon/tick.png" alt="Quà tặng">
                                                             <div class="desc-1"><span>01 cuốn sách cuộc đời của chủ doanh nghiệp</span></div>
-                                                            <div class="price-1"><span>150.000vnđ</span></div>
+                                                            <div class="price-1"><span>150.000 VNĐ</span></div>
                                                         </div>
                                                         <div class="group-qt">
                                                             <img src="/img/icon/tick.png" alt="Quà tặng">
                                                             <div class="desc-1"><span>01 cuốn sách cuộc đời cho doanh nghiệp</span></div>
-                                                            <div class="price-1"><span>150.000vnđ</span></div>
+                                                            <div class="price-1"><span>150.000 VNĐ</span></div>
                                                         </div>
                                                         <div class="group-qt">
                                                             <img src="/img/icon/tick.png" alt="Quà tặng">
                                                             <div class="desc-1"><span>02 buổi tư vấn ứng dụng Thần Số Học cùng chuyên gia</span></div>
-                                                            <div class="price-1"><span>1.000.000vnđ</span></div>
+                                                            <div class="price-1"><span>1.000.000VNĐ</span></div>
                                                         </div>
                                                     </div>
                                                     <div class="total">
                                                         <div class="total-text"><span>Tổng giá trị quà tặng</span></div>
-                                                        <div class="total-price"><h2>1.300.000vnđ</h2></div>
+                                                        <div class="total-price"><h2>1.300.000VNĐ</h2></div>
                                                     </div>
                                                 </div>
                                             </div>

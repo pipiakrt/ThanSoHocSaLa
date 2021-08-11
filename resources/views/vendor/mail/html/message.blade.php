@@ -1,9 +1,9 @@
 @component('mail::layout')
 {{-- Header --}}
 @slot('header')
-@component('mail::header', ['url' => config('app.url')])
-{{ config('app.name') }}
-@endcomponent
+    @component('mail::header', ['url' => config('app.url')])
+        Thần Số Học Sala
+    @endcomponent
 @endslot
 
 {{-- Body --}}
@@ -11,17 +11,17 @@
 
 {{-- Subcopy --}}
 @isset($subcopy)
-@slot('subcopy')
-@component('mail::subcopy')
-{{ $subcopy }}
-@endcomponent
-@endslot
+    @slot('subcopy')
+        @component('mail::subcopy')
+            {{ $subcopy }}
+        @endcomponent
+    @endslot
 @endisset
 
 {{-- Footer --}}
 @slot('footer')
 @component('mail::footer')
-© {{ date('Y') }} {{ config('app.name') }}. @lang('All rights reserved.')
+© {{ date('Y') }} Thần Số Học Sala. Kiến Tạo Cuộc Đời Hạnh Phúc Từ Những Con Số
 @endcomponent
 @endslot
 @endcomponent

@@ -3,7 +3,7 @@
 <div class="taisao">
     <div class="container">
         <div class="titleheader text-dark text-center mb-0 mb-md-5">
-            <h2 class="title-h1">Gía trị chỉ có khi làm Thần Số Học tại Thần số học Sala</h2>
+            <h2 class="title-h1">Giá trị chỉ có khi làm Thần Số Học tại Thần số học Sala</h2>
         </div>
         <div class="main-tasao mt-3 mt-md-4 d-none d-md-block">
             <div class="row g-4 g-md-5">

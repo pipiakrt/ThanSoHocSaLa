@@ -7,20 +7,20 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class Order extends Mailable
+class Register extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $order;
+    protected $user;
 
     /**
-     * Create a new message instance.
+     * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($order)
+    public function __construct($user)
     {
-        $this->order = $order;
+        $this->user = $user;
     }
 
     /**
@@ -30,6 +30,7 @@ class Order extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.confirmOder');
+        $user = $this->user;
+        return $this->view('mail.register', compact('user'));
     }
 }

@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Models\User;
-use App\Notifications\NotificationEmail;
+use App\Jobs\Register as Job;
 
 class UserObserver
 {
@@ -16,7 +16,7 @@ class UserObserver
     public function created(User $user)
     {
         if (strpos($user->email, '@')) {
-            $user->notify(new NotificationEmail($user));
+            Job::dispatch($user);
         }
         $user->License()->create();
     }

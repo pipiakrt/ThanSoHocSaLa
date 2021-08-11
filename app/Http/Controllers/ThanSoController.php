@@ -58,6 +58,16 @@ class ThanSoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function guimail(Request $request)
+    {
+        return redirect()->back();
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function ketqua(Request $request)
     {
         $dataPost = $request->only('name', 'birthday', 'email', 'phone');

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Notifications\ResetPassWord;
+use App\Jobs\ResetPassWord as Job;
 use App\Models\User;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
@@ -102,7 +102,7 @@ class AccountController extends Controller
             'token' => Str::random(60),
         ]);
         if ($passwordReset) {
-            $user->notify(new ResetPassWord($passwordReset->token));
+            Job::dispatch($user, $passwordReset->token);
         }
 
         return redirect()->back()->with('success', 'Chúng tôi đã gửi qua e-mail liên kết đặt lại mật khẩu của bạn!');

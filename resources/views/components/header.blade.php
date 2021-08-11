@@ -15,7 +15,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="/gioi-thieu/ve-sala">
+                                    <a class="dropdown-item" href="/gioi-thieu/than-so-hoc">
                                         <span>Thần Số Học Pythagoras</span>
                                     </a>
                                 </li>
@@ -201,7 +201,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-mobile" href="/gioi-thieu/ve-sala">
+                                    <a class="dropdown-mobile" href="/gioi-thieu/than-so-hoc">
                                         <span>Thần Số Học Pythagoras</span>
                                     </a>
                                 </li>

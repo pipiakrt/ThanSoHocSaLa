@@ -374,3 +374,32 @@
     width: fit-content;
     margin: auto;
 }
+
+.content-ketqua .form-input {
+    margin-top: 20px;
+}
+.content-ketqua .form-input label {
+    font-weight: 200;
+    margin-bottom: 7px;
+}
+.content-ketqua .form-input input {
+    height: 50px;
+    padding: 0 15px;
+    width: 100%;
+    outline: none;
+    color: #333333;
+}
+.content-ketqua button.mail-sm {
+    padding: 8px 0px;
+    padding-bottom: 7px;
+    background-color: #dab066;
+    border: none;
+    border-radius: 5px;
+    min-width: 175px;
+    font-size: 23px;
+    letter-spacing: 1px;
+    margin-top: 52px;
+    font-weight: 200;
+    color: white;
+    text-transform: uppercase;
+}
