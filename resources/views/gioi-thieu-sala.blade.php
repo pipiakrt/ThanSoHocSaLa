@@ -41,7 +41,10 @@
                     <div class="col-sm-12 col-md-10 col-lg-7">
                         <img class="mw-100" src="/img/gioithieu/t2.png" alt="">
                         <div class="descs1">
-                            <span>Thần Số Học - Numerology (tên tiếng Anh của Thần Số Học) dựa vào việc nghiên cứu ý nghĩa của các sóng rung và trường năng lượng của vũ trụ để tạo ra các con số và ảnh hưởng của nó tới cuộc sống con người.</span>
+                            <span>Thần Số Học (Numerology) là một hệ thống cổ xưa đã được sử dụng hàng ngàn năm, trải dài trên toàn cầu. Các ghi chép số học đã được tìm thấy ở Babylon và Ai Cập, và có bằng chứng sự tồn tại của nó cách đây hàng nghìn năm ở Hy Lạp, La Mã, Nhật Bản và Trung Quốc.</span>
+                        </div>
+                        <div class="descs1 mt-3">
+                            <span>Người Chaldean hay được gọi là người Babylon đã nghiên cứu sâu về cả chiêm tinh học, số học và thực sự là những người đầu tiên xác định mối tương quan giữa các con số với dao động của vũ trụ nên còn được gọi là Chaldean Numerology. Qua nhiều thời đại, số học đã phát triển và được biết đến với tên tuổi của Pythagoras.</span>
                         </div>
                     </div>
                 </div>
@@ -59,10 +62,10 @@
             <div class="row justify-content-center g-0">
                 <div class="col-sm-12 col-md-10 col-lg-7">
                     <div class="descs1">
-                        <span>Từ xa xưa, con người đã biết ứng dụng Thần Số Học vào cuộc sống để thấu hiểu bản thân và tìm ra con đường tốt nhất cho chính mình. Ngày nay Thần Số Học được áp dụng rộng rãi tại các nước phương Tây và vài năm gần đây, bộ môn này bắt đầu được tiếp nhận tại đất nước Việt Nam</span>
+                        <span>Vào đầu những năm 1900, tiến sĩ Julian Stenton đã ghi lại các yếu tố khác nhau của số học và phổ biến nó, đặt ra thuật ngữ "Numerology". Từ những năm 1970 số học đã được mọi người ở mọi tầng lớp xã hội sử dụng như một công cụ tự trợ giúp được cá nhân hóa. "Các con số không nói dối" là một tuyên bố sâu sắc của các nhà nghiên cứu, khẳng định con số biểu lộ tính cách và các sự kiện mà con người trải qua với độ chính xác đáng kinh ngạc.</span>
                     </div>
                     <div class="descs1 mt-2">
-                        <span>Thần Số Học là KHOA HỌC, chúng giúp bạn tìm ra con đường NGẮN NHẤT đi đến ĐỈNH CAO của sự nghiệp, tìm ra được công việc phù hợp và những thứ xã hội cần mà bạn có thể làm tốt nhất.</span>
+                        <span>Ngày nay, Numerology được thực hành trên khắp thế giới và được hàng triệu người sử dụng để giúp cho cuộc sống trở nên tốt đẹp hơn.</span>
                     </div>
                 </div>
             </div>

@@ -102,7 +102,7 @@
                 </div>
             </div>
 
-            @forelse (request()->user()->TraCuu as $key => $item)
+            @forelse (request()->user()->TraCuu()->orderBy('id', 'DESC')->get() as $key => $item)
                 <div class="card card-body my-3">
                     <div class="media text-lg-left row g-0 g-md-4">
                         <div class="col-md-12 col-lg-12">

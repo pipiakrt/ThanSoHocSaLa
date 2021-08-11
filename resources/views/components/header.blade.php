@@ -16,17 +16,17 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="/gioi-thieu/ve-sala">
-                                        <span>Học viện cổ học sala</span>
+                                        <span>Thần Số Học Pythagoras</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="/gioi-thieu/than-so-hoc-la-gi">
-                                        <span>Thần số học sala là gì</span>
+                                        <span>Học viện cổ học Sala</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="/gioi-thieu/ung-dung-than-so-hoc-sala">
-                                        <span>Ứng dụng thần số học</span>
+                                        <span>Ứng dụng Thần Số Học</span>
                                     </a>
                                 </li>
                                 <li>
@@ -202,17 +202,17 @@
                                 </li>
                                 <li>
                                     <a class="dropdown-mobile" href="/gioi-thieu/ve-sala">
-                                        <span>Học viện cổ học sala</span>
+                                        <span>Thần Số Học Pythagoras</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-mobile" href="/gioi-thieu/than-so-hoc-la-gi">
-                                        <span>Thần số học sala là gì</span>
+                                        <span>Học viện cổ học Sala</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-mobile" href="/gioi-thieu/ung-dung-than-so-hoc-sala">
-                                        <span>Ứng dụng thần số học</span>
+                                        <span>Ứng dụng Thần Số Học</span>
                                     </a>
                                 </li>
                                 <li>

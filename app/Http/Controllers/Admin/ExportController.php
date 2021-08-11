@@ -157,13 +157,14 @@ class ExportController extends Controller
             <h2 style="text-align: center;">THƯ NGỎ</h2>
         EOD;
                 $html .= <<<EOD
-                    <p>Chào bạn $name,<br/> <br/>
-                        Bạn đang cầm trên tay bài “báo cáo Thần Số Học” của riêng mình. Trước khi khám phá bản thân, hãy chắc rằng bạn đã nắm vững những thông tin cơ bản dưới đây.<br/> <br/>
-                        Thứ nhất, bài báo cáo Thần Số Học được chia làm 19 chỉ số, các chỉ số đại diện cho: tính cách, năng lực cùng những ưu điểm và hạn chế,... trong mỗi con người chúng ta. Từ đó giúp bạn phác họa được “bức tranh” của cuộc đời mình để định hướng và phát huy năng lực vượt trội của chính bản thân mình.<br/> <br/>
-                        Thứ 2, Thần Số Học là một bộ môn khoa học, không phải là duy tâm và chúng không dự đoán được tương lai. Thần Số Học chỉ là dự đoán tiềm năng của bạn và phần còn lại là phụ thuộc vào chính bản thân bạn. Chúng cung cấp cho bạn một khuôn khổ, tuy nhiên còn phải phụ thuộc vào nhiều yếu tố: ý chí, sự lựa chọn hay các yếu tố môi trường nằm ngoài tầm kiểm soát của bạn.<br/><br/>
-                        Thứ ba, bạn hoàn hảo theo các của mình nên không cần so sánh các chỉ số của mình với người khác, mỗi người có một ưu điểm vượt trội riêng và bạn cũng thế. Tích cực và tiêu cực  là do sự nhận thức và cân bằng liên tục của bạn trong đời sống. Chuyên gia của chúng tôi sẽ giúp bạn thấy rõ những chuyển đối thủ vị đó trong tính cách của mình. <br/> <br/>
-                        Cuối cùng, xin hãy nhớ rằng sức mạnh và tiềm năng của bạn tuyệt vời hơn bạn nghĩ rất nhiều. Và đích đến cuối cùng của mỗi chúng ta đều là sự HẠNH PHÚC và BÌNH AN.<br/> <br/>
-                        “Tôi cũng vậy! Bạn cũng thế! Hãy bắt đầu hành trình “THẤU HIỂU bản thân, KHAI PHÁ năng lực và ĐÁNH THỨC khả năng TIỀM ẨN trong con người bạn” nào !!!
+                    <p>Bạn Thân Mến!<br/> <br/>
+                        Bạn đang cầm trên tay “Cuốn Sách Cuộc Đời” của riêng bạn. Trước khi khám phá bản thân, hãy chắc rằng bạn đã nắm vững những thông tin cơ bản dưới đây:<br/> <br/>
+                        Thứ nhất, bài báo cáo Thần Số Học được chia làm 3 phần với 19 chỉ số, các chỉ số đại diện cho: Tính cách, Năng lực cùng những Ưu điểm và Hạn chế bên trong con người bạn. Từ đó, bạn có thể hình dung được “bức tranh” cuộc đời mình một cách toàn diện, để định hướng và phát huy năng lực vượt trội của chính bản thân mình.<br/> <br/>
+                        Thứ hai, Thần Số Học là một bộ môn khoa học, không phải là duy tâm và chúng không dự đoán được tương lai. Thần Số Học chỉ cho bạn thấy tiềm năng có trong con người bạn để phát huy, còn việc có phát huy được nó hay không phụ thuộc vào sự nỗ lực và rèn luyện của chính bạn. Thần Số Học cung cấp cho bạn một cái nhìn tổng quan, tuy nhiên còn phụ thuộc vào nhiều yếu tố: ý chí, sự lựa chọn hay các yếu tố môi trường nằm ngoài tầm kiểm soát của bạn.<br/><br/>
+                        Thứ ba, bạn hoàn hảo theo cách của mình nên không cần so sánh các chỉ số của mình với người khác, mỗi người có một ưu điểm vượt trội riêng và bạn cũng thế. Tích cực hay tiêu cực là do sự nhận thức và cân bằng liên tục của bạn trong đời sống. Chuyên gia của Sala Group sẽ giúp bạn thấy rõ những chuyển đổi thú vị đó.<br/> <br/>
+                        Cuối cùng, xin hãy nhớ rằng Sức mạnh và Tiềm năng của bạn tuyệt vời hơn bạn nghĩ rất nhiều. Hành trình khám phá và phát triển bản thân chính là đích đến và lẽ sống của mỗi người.<br/> <br/>
+                        Chúc cho tất cả chúng ta đều có một cuộc sống Hạnh Phúc và Bình An!.<br/> <br/>
+                        Thân ái!
                     </p>
         EOD;
                 $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
@@ -172,10 +173,12 @@ class ExportController extends Controller
                     <h2 style="text-align: center;">Đôi nét về lịch sử Thần Số Học</h2>
         EOD;
                 $html .= <<<EOD
-                    <p>Thần Số Học - Numerology (tên tiếng Anh của Thần Số Học) được khi ghi nhận trong suốt lịch sử của các nước cổ đại: Ai Cập, Babylon, Châu Á và Ấn Độ, và cũng xuất hiện nhiều trong Kinh Thánh. Cách đây hơn 2500 năm các nước cổ đại trong lịch sử đã tạo ra các con số và áp dụng ý nghĩa của các con số. Thần Số Học lập ra dựa theo nhân sinh quan của Thần Tam Giác (Divine Triangle). Thần số học dựa vào việc nghiên cứu ý nghĩa của các sóng rung và trường năng lượng của vũ trụ để tạo ra các con số và ảnh hưởng của nó tới cuộc sống con người.<br/> <br/>
-                        Pythagoras được biết đến một nhà triết học, toán học, thần học người Hy Lạp. Ông là người đặt nền tảng cho toán học, chiêm tinh học, thiên văn học và vật lý học. Chúng bao gồm siêu hình học của các con số – phương pháp xem các con số không chỉ là số lượng và thước đo mà còn là tốc độ rung động. Từ những lời dạy của Pythagoras, chúng ta biết rằng: âm nhạc, thiên nhiên trên thực tế chính là toán học, là sự rung động của các con số. Tại các tài liệu lịch sử, người ta biết đến Pythagoras là một người đã khám phá ra khoa học về giai điệu âm nhạc, hòa âm, tất nhiên là thần số học nữa.<br/> <br/>
-                        Pythagoras đã nói rằng: “Các con số, bất kể lớn nhỏ, tất cả luôn được rút gọn trong dãy số từ 1 đến 9 và mỗi con số sẽ có một sự dao động vũ trụ kỳ dị". Từ những phát hiện trên, Pythagoras đã áp dụng vào các giai đoạn trong vòng đời của mỗi con người chính xác một cách kỳ lạ.<br/><br/>
-                        Chính vì sự chính xác kỳ lạ ấy mà Thần Số Học Pythagoras đã thống trị phương Tây. Mặc dù trước đó, tại Babylon cũng đã nhận ra và dựa vào các con số từ 1 đến 8. Con số 9 được coi là con số linh thiêng, thánh thiện nên đã được tách biệt với các con số khác. Hay như Kabbalah ở Do Thái cũng đã tập trung vào tên và dựa trên 22 ý nghĩa rung động khác nhau của bảng chữ cái tiếng Do Thái từ đó điều chỉnh cho phù hợp với bảng chữ cái La Mã gồm 26 chữ cái và sử dụng biểu đồ số Pythagore. Hệ thống này không xem xét ngày sinh, đó có thể là lý do tại sao nó chưa bao giờ trở nên phổ biến đối với các nhà Thần số học phương Tây, vì ngày sinh là cốt lõi của Thần số học phương Tây.<br/> <br/>
+                    <p>
+                        Thần Số Học (Numerology) là một hệ thống cổ xưa đã được sử dụng hàng ngàn năm, trải dài trên toàn cầu. Các ghi chép số học đã được tìm thấy ở Babylon và Ai Cập, và có bằng chứng sự tồn tại của nó cách đây hàng nghìn năm ở Hy Lạp, La Mã, Nhật Bản và Trung Quốc.<br/> <br/>
+                        Người Chaldean hay được gọi là người Babylon đã nghiên cứu sâu về cả chiêm tinh học, số học và thực sự là những người đầu tiên xác định mối tương quan giữa các con số với dao động của vũ trụ nên còn được gọi là Chaldean Numerology. Qua nhiều thời đại, số học đã phát triển và được biết đến với tên tuổi của Pythagoras.<br/> <br/>
+                        Ông là một triết gia, nhà toán học người Hy Lạp sống trong thời đại 590 trước công nguyên đã biết đến Chaldean và xây dựng trên nó, bổ xung các triết lý và toán học của riêng mình do đó hình thành hệ số Pythagoras. Theo thuyết học Pythagoras, mọi con số, bất kể lớn hay nhỏ luôn có thể rút gọn được thành 1 chữ số từ 1 đến 9, và mỗi chữ số rút gọn đó mang rung động vũ trụ riêng.<br/><br/>
+                        Vào đầu những năm 1900, tiến sĩ Julian Stenton đã ghi lại các yếu tố khác nhau của số học và phổ biến nó, đặt ra thuật ngữ "Numerology". Từ những năm 1970 số học đã được mọi người ở mọi tầng lớp xã hội sử dụng như một công cụ tự trợ giúp được cá nhân hóa. "Các con số không nói dối" là một tuyên bố sâu sắc của các nhà nghiên cứu, khẳng định con số biểu lộ tính cách và các sự kiện mà con người trải qua với độ chính xác đáng kinh ngạc.<br/> <br/>
+                        Ngày nay, Numerology được thực hành trên khắp thế giới và được hàng triệu người sử dụng để giúp cho cuộc sống trở nên tốt đẹp hơn.
                     </p>
         EOD;
                 $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
@@ -184,7 +187,8 @@ class ExportController extends Controller
                     <h2 style="text-align: center;">Học viện cổ hoc Sala</h2>
         EOD;
                 $html .= <<<EOD
-                    <p>Dựa trên ý nghĩa cao đẹp của Sala - loài hoa linh thiêng biểu tượng của Phật giáo. HỌC VIỆN CỔ HỌC SALA mang trong mình sứ mệnh tạo niềm vui, sự an lạc và thịnh vượng. Chúng tôi mong muốn mang ứng dụng tinh hoa của cổ học vào cuộc sống một cách đơn giản và hiệu quả nhất.<br/> <br/>
+                    <p>
+                        Dựa trên ý nghĩa cao đẹp của Sala - loài hoa linh thiêng biểu tượng của Phật giáo. HỌC VIỆN CỔ HỌC SALA mang trong mình sứ mệnh tạo niềm vui, sự an lạc và thịnh vượng. Chúng tôi mong muốn mang ứng dụng tinh hoa của cổ học vào cuộc sống một cách đơn giản và hiệu quả nhất.<br/> <br/>
                         HỌC VIỆN CỔ HỌC SALA tự hào là cầu nối đưa Thần Số Học đến gần hơn với mỗi cá nhân, mỗi gia đình và mỗi doanh nghiệp. Tại đây chúng tôi cung cấp các kiến thức giúp hỗ trợ phát triển toàn diện bản thân cho từng cá nhân, gia đình hay doanh nghiệp có thể hiểu và ứng dụng được Thần Số Học trong việc xây dựng bản đồ kế hoạch cuộc đời, có định hướng tương lai rõ ràng để gặt hái thành công toàn diện.<br/> <br/>
                         Với Đội ngũ chuyên gia tư vấn chuyên nghiệp, nhiệt tình với nhiều năng kinh nghiệm trong việc tham vấn và ứng dụng Thần Số Học vào đời sống. HỌC VIỆN CỔ HỌC SALA mong muốn lan tỏa giá trị của Thần Số Học đến với cộng đồng từ đó xây dựng một Việt Nam Thịnh Vượng và Phát Triển.<br/> <br/>
                     </p>
@@ -269,13 +273,14 @@ class ExportController extends Controller
             <h2 style="text-align: center;">THƯ NGỎ</h2>
         EOD;
                 $html .= <<<EOD
-                    <p>Chào bạn $name,<br/> <br/>
-                        Bạn đang cầm trên tay bài “báo cáo Thần Số Học” của riêng mình. Trước khi khám phá bản thân, hãy chắc rằng bạn đã nắm vững những thông tin cơ bản dưới đây.<br/> <br/>
-                        Thứ nhất, bài báo cáo Thần Số Học được chia làm 19 chỉ số, các chỉ số đại diện cho: tính cách, năng lực cùng những ưu điểm và hạn chế,... trong mỗi con người chúng ta. Từ đó giúp bạn phác họa được “bức tranh” của cuộc đời mình để định hướng và phát huy năng lực vượt trội của chính bản thân mình.<br/> <br/>
-                        Thứ 2, Thần Số Học là một bộ môn khoa học, không phải là duy tâm và chúng không dự đoán được tương lai. Thần Số Học chỉ là dự đoán tiềm năng của bạn và phần còn lại là phụ thuộc vào chính bản thân bạn. Chúng cung cấp cho bạn một khuôn khổ, tuy nhiên còn phải phụ thuộc vào nhiều yếu tố: ý chí, sự lựa chọn hay các yếu tố môi trường nằm ngoài tầm kiểm soát của bạn.<br/><br/>
-                        Thứ ba, bạn hoàn hảo theo các của mình nên không cần so sánh các chỉ số của mình với người khác, mỗi người có một ưu điểm vượt trội riêng và bạn cũng thế. Tích cực và tiêu cực  là do sự nhận thức và cân bằng liên tục của bạn trong đời sống. Chuyên gia của chúng tôi sẽ giúp bạn thấy rõ những chuyển đối thủ vị đó trong tính cách của mình. <br/> <br/>
-                        Cuối cùng, xin hãy nhớ rằng sức mạnh và tiềm năng của bạn tuyệt vời hơn bạn nghĩ rất nhiều. Và đích đến cuối cùng của mỗi chúng ta đều là sự HẠNH PHÚC và BÌNH AN.<br/> <br/>
-                        “Tôi cũng vậy! Bạn cũng thế! Hãy bắt đầu hành trình “THẤU HIỂU bản thân, KHAI PHÁ năng lực và ĐÁNH THỨC khả năng TIỀM ẨN trong con người bạn” nào !!!
+                    <p>Bạn Thân Mến!<br/> <br/>
+                        Bạn đang cầm trên tay “Cuốn Sách Cuộc Đời” của riêng bạn. Trước khi khám phá bản thân, hãy chắc rằng bạn đã nắm vững những thông tin cơ bản dưới đây:<br/> <br/>
+                        Thứ nhất, bài báo cáo Thần Số Học được chia làm 3 phần với 19 chỉ số, các chỉ số đại diện cho: Tính cách, Năng lực cùng những Ưu điểm và Hạn chế bên trong con người bạn. Từ đó, bạn có thể hình dung được “bức tranh” cuộc đời mình một cách toàn diện, để định hướng và phát huy năng lực vượt trội của chính bản thân mình.<br/> <br/>
+                        Thứ hai, Thần Số Học là một bộ môn khoa học, không phải là duy tâm và chúng không dự đoán được tương lai. Thần Số Học chỉ cho bạn thấy tiềm năng có trong con người bạn để phát huy, còn việc có phát huy được nó hay không phụ thuộc vào sự nỗ lực và rèn luyện của chính bạn. Thần Số Học cung cấp cho bạn một cái nhìn tổng quan, tuy nhiên còn phụ thuộc vào nhiều yếu tố: ý chí, sự lựa chọn hay các yếu tố môi trường nằm ngoài tầm kiểm soát của bạn.<br/><br/>
+                        Thứ ba, bạn hoàn hảo theo cách của mình nên không cần so sánh các chỉ số của mình với người khác, mỗi người có một ưu điểm vượt trội riêng và bạn cũng thế. Tích cực hay tiêu cực là do sự nhận thức và cân bằng liên tục của bạn trong đời sống. Chuyên gia của Sala Group sẽ giúp bạn thấy rõ những chuyển đổi thú vị đó.<br/> <br/>
+                        Cuối cùng, xin hãy nhớ rằng Sức mạnh và Tiềm năng của bạn tuyệt vời hơn bạn nghĩ rất nhiều. Hành trình khám phá và phát triển bản thân chính là đích đến và lẽ sống của mỗi người.<br/> <br/>
+                        Chúc cho tất cả chúng ta đều có một cuộc sống Hạnh Phúc và Bình An!.<br/> <br/>
+                        Thân ái!
                     </p>
         EOD;
                 $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
@@ -284,10 +289,12 @@ class ExportController extends Controller
                     <h2 style="text-align: center;">Đôi nét về lịch sử Thần Số Học</h2>
         EOD;
                 $html .= <<<EOD
-                    <p>Thần Số Học - Numerology (tên tiếng Anh của Thần Số Học) được khi ghi nhận trong suốt lịch sử của các nước cổ đại: Ai Cập, Babylon, Châu Á và Ấn Độ, và cũng xuất hiện nhiều trong Kinh Thánh. Cách đây hơn 2500 năm các nước cổ đại trong lịch sử đã tạo ra các con số và áp dụng ý nghĩa của các con số. Thần Số Học lập ra dựa theo nhân sinh quan của Thần Tam Giác (Divine Triangle). Thần số học dựa vào việc nghiên cứu ý nghĩa của các sóng rung và trường năng lượng của vũ trụ để tạo ra các con số và ảnh hưởng của nó tới cuộc sống con người.<br/> <br/>
-                        Pythagoras được biết đến một nhà triết học, toán học, thần học người Hy Lạp. Ông là người đặt nền tảng cho toán học, chiêm tinh học, thiên văn học và vật lý học. Chúng bao gồm siêu hình học của các con số – phương pháp xem các con số không chỉ là số lượng và thước đo mà còn là tốc độ rung động. Từ những lời dạy của Pythagoras, chúng ta biết rằng: âm nhạc, thiên nhiên trên thực tế chính là toán học, là sự rung động của các con số. Tại các tài liệu lịch sử, người ta biết đến Pythagoras là một người đã khám phá ra khoa học về giai điệu âm nhạc, hòa âm, tất nhiên là thần số học nữa.<br/> <br/>
-                        Pythagoras đã nói rằng: “Các con số, bất kể lớn nhỏ, tất cả luôn được rút gọn trong dãy số từ 1 đến 9 và mỗi con số sẽ có một sự dao động vũ trụ kỳ dị". Từ những phát hiện trên, Pythagoras đã áp dụng vào các giai đoạn trong vòng đời của mỗi con người chính xác một cách kỳ lạ.<br/><br/>
-                        Chính vì sự chính xác kỳ lạ ấy mà Thần Số Học Pythagoras đã thống trị phương Tây. Mặc dù trước đó, tại Babylon cũng đã nhận ra và dựa vào các con số từ 1 đến 8. Con số 9 được coi là con số linh thiêng, thánh thiện nên đã được tách biệt với các con số khác. Hay như Kabbalah ở Do Thái cũng đã tập trung vào tên và dựa trên 22 ý nghĩa rung động khác nhau của bảng chữ cái tiếng Do Thái từ đó điều chỉnh cho phù hợp với bảng chữ cái La Mã gồm 26 chữ cái và sử dụng biểu đồ số Pythagore. Hệ thống này không xem xét ngày sinh, đó có thể là lý do tại sao nó chưa bao giờ trở nên phổ biến đối với các nhà Thần số học phương Tây, vì ngày sinh là cốt lõi của Thần số học phương Tây.<br/> <br/>
+                    <p>
+                        Thần Số Học (Numerology) là một hệ thống cổ xưa đã được sử dụng hàng ngàn năm, trải dài trên toàn cầu. Các ghi chép số học đã được tìm thấy ở Babylon và Ai Cập, và có bằng chứng sự tồn tại của nó cách đây hàng nghìn năm ở Hy Lạp, La Mã, Nhật Bản và Trung Quốc.<br/> <br/>
+                        Người Chaldean hay được gọi là người Babylon đã nghiên cứu sâu về cả chiêm tinh học, số học và thực sự là những người đầu tiên xác định mối tương quan giữa các con số với dao động của vũ trụ nên còn được gọi là Chaldean Numerology. Qua nhiều thời đại, số học đã phát triển và được biết đến với tên tuổi của Pythagoras.<br/> <br/>
+                        Ông là một triết gia, nhà toán học người Hy Lạp sống trong thời đại 590 trước công nguyên đã biết đến Chaldean và xây dựng trên nó, bổ xung các triết lý và toán học của riêng mình do đó hình thành hệ số Pythagoras. Theo thuyết học Pythagoras, mọi con số, bất kể lớn hay nhỏ luôn có thể rút gọn được thành 1 chữ số từ 1 đến 9, và mỗi chữ số rút gọn đó mang rung động vũ trụ riêng.<br/><br/>
+                        Vào đầu những năm 1900, tiến sĩ Julian Stenton đã ghi lại các yếu tố khác nhau của số học và phổ biến nó, đặt ra thuật ngữ "Numerology". Từ những năm 1970 số học đã được mọi người ở mọi tầng lớp xã hội sử dụng như một công cụ tự trợ giúp được cá nhân hóa. "Các con số không nói dối" là một tuyên bố sâu sắc của các nhà nghiên cứu, khẳng định con số biểu lộ tính cách và các sự kiện mà con người trải qua với độ chính xác đáng kinh ngạc.<br/> <br/>
+                        Ngày nay, Numerology được thực hành trên khắp thế giới và được hàng triệu người sử dụng để giúp cho cuộc sống trở nên tốt đẹp hơn.
                     </p>
         EOD;
                 $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
@@ -296,7 +303,8 @@ class ExportController extends Controller
                     <h2 style="text-align: center;">Học viện cổ hoc Sala</h2>
         EOD;
                 $html .= <<<EOD
-                    <p>Dựa trên ý nghĩa cao đẹp của Sala - loài hoa linh thiêng biểu tượng của Phật giáo. HỌC VIỆN CỔ HỌC SALA mang trong mình sứ mệnh tạo niềm vui, sự an lạc và thịnh vượng. Chúng tôi mong muốn mang ứng dụng tinh hoa của cổ học vào cuộc sống một cách đơn giản và hiệu quả nhất.<br/> <br/>
+                    <p>
+                        Dựa trên ý nghĩa cao đẹp của Sala - loài hoa linh thiêng biểu tượng của Phật giáo. HỌC VIỆN CỔ HỌC SALA mang trong mình sứ mệnh tạo niềm vui, sự an lạc và thịnh vượng. Chúng tôi mong muốn mang ứng dụng tinh hoa của cổ học vào cuộc sống một cách đơn giản và hiệu quả nhất.<br/> <br/>
                         HỌC VIỆN CỔ HỌC SALA tự hào là cầu nối đưa Thần Số Học đến gần hơn với mỗi cá nhân, mỗi gia đình và mỗi doanh nghiệp. Tại đây chúng tôi cung cấp các kiến thức giúp hỗ trợ phát triển toàn diện bản thân cho từng cá nhân, gia đình hay doanh nghiệp có thể hiểu và ứng dụng được Thần Số Học trong việc xây dựng bản đồ kế hoạch cuộc đời, có định hướng tương lai rõ ràng để gặt hái thành công toàn diện.<br/> <br/>
                         Với Đội ngũ chuyên gia tư vấn chuyên nghiệp, nhiệt tình với nhiều năng kinh nghiệm trong việc tham vấn và ứng dụng Thần Số Học vào đời sống. HỌC VIỆN CỔ HỌC SALA mong muốn lan tỏa giá trị của Thần Số Học đến với cộng đồng từ đó xây dựng một Việt Nam Thịnh Vượng và Phát Triển.<br/> <br/>
                     </p>
@@ -442,92 +450,92 @@ class ExportController extends Controller
         $aryReturn['CHI_SO_LAP'] = null;
         return [
             [
-                'Phần I: Khám phá & rèn luyện bản thân',
+                'PHẦN I: KHÁM PHÁ & RÈN LUYỆN BẢN THÂN',
                 1,
                 'Ở phần này, chúng tôi sẽ giúp bạn tìm ra nguyên nhân khiến bạn có những suy nghĩ tiêu cực, cũng như lý do tại sao bạn chưa đạt được kết quả như bạn mong muốn. Từ đó đưa ra  phương pháp nuôi dưỡng nội lực bên trong để giúp bạn có một suy nghĩ tích cực và ý chí mạnh mẽ.'
             ],
             [
-                'Tâm hồn',
+                'Chỉ Số Tâm Hồn (Lõi bên trong)',
                 2,
                 $aryReturn['TAM_HON']
             ],
             [
-                'Nhân cách',
+                'Chỉ Số Nhân Cách (Thái độ bên ngoài)',
                 2,
                 $aryReturn['NHAN_CACH']
             ],
             [
-                'Chỉ số cân bằng tâm hồn và nhân cách',
+                'Chỉ Số Cân Bằng Tâm Hồn & Nhân Cách',
                 2,
                 $aryReturn['CAN_BANG_TH_NC']
             ],
             [
-                'Chỉ số phản ứng (Thái độ)',
+                'Chỉ Số Phản Ứng',
                 2,
                 $aryReturn['PHAN_UNG']
             ],
             [
-                'Ngày sinh',
+                'Chỉ Số Ngày Sinh',
                 2,
                 $aryReturn['NGAY_SINH']
             ],
             [
-                'Cân bằng',
+                'Chỉ Số Cân Bằng',
                 2,
                 $aryReturn['CAN_BANG']
             ],
             [
-                'Chỉ số khuyết thiếu (Nợ bài học)',
+                'Chỉ Số Khuyết Thiếu (Nợ bài học)',
                 2,
                 $aryReturn['KHUYET_THIEU']
             ],
             [
-                'Chỉ số thách thức (Nợ nghiệp)',
+                'Chỉ Số Thách Thức',
                 2,
                 $aryReturn['THACH_THUC']
             ],
             [
-                'Chỉ số lặp',
+                'Chỉ Số Lặp',
                 2,
                 $aryReturn['CHI_SO_LAP']
             ],
             [
-                'Biểu đồ năng lực và biểu đồ Birth chart',
+                'Biểu Đồ Năng Lực & Biểu Đồ Birth Chart',
                 3,
                 $aryReturn['BIEU_DO']['NANG_LUC']
             ],
             [
-                'Biểu đồ tổng hợp',
+                'Biểu Đồ Tổng Hợp',
                 11,
                 $aryReturn['BIEU_DO']['NANG_LUC']
             ],
             [
-                'Phần II: Sứ mệnh cuộc đời và con đường phát triển',
+                'PHẦN II. SỨ MỆNH CUỘC ĐỜI & CON ĐƯỜNG PHÁT TRIỂN',
                 1,
                 'Sau khi bạn đã hiểu và rèn luyện được bản thân, thì tại đây chúng tôi sẽ giúp bạn có tìm ra con đường ngắn nhất đi đến đỉnh cao của sự nghiệp, tìm ra được công việc bạn làm tốt nhất và những thứ xã hội cần mà bạn có thể làm tốt nhất.'
             ],
             [
-                'Đường đời',
+                'Chỉ Số Đường Đời',
                 2,
                 $aryReturn['DUONG_DOI']
             ],
             [
-                'Sứ mệnh',
+                'Chỉ Số Sứ Mệnh',
                 2,
                 $aryReturn['SU_MENH']
             ],
             [
-                'Chỉ số cân bằng đường đời và sứ mệnh',
+                'Chỉ Số Cân Bằng Đường Đời & Sứ Mệnh',
                 2,
                 $aryReturn['CAN_BANG_DD_SM']
             ],
             [
-                'Trưởng thành',
+                'Chỉ Số Trưởng Thành',
                 2,
                 $aryReturn['TRUONG_THANH']
             ],
             [
-                'Tháp đỉnh cao',
+                'Tháp Đỉnh Cao Cuộc Đời',
                 5,
                 $aryReturn['BIEU_DO']['DINH_CAO']
             ],
@@ -538,7 +546,7 @@ class ExportController extends Controller
                 $aryReturn['LUAN_GIAI']['DINH_CAO']
             ],
             [
-                'Tháp thách thức',
+                'Tháp Thử Thách Cuộc Đời',
                 6,
                 $aryReturn['BIEU_DO']['THACH_THUC']
             ],
@@ -549,7 +557,7 @@ class ExportController extends Controller
                 $aryReturn['LUAN_GIAI']['THACH_THUC']
             ],
             [
-                'Chu kỳ rèn luyện đường đời',
+                'Chu Kỳ Rèn Luyện Đường Đời',
                 7,
                 $aryReturn['BIEU_DO']['CHU_KY_REN_LUYEN']
             ],
@@ -560,7 +568,7 @@ class ExportController extends Controller
                 $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN']
             ],
             [
-                'Biểu đồ năm thần số',
+                'Biểu Đồ Năm Thần Số',
                 8,
                 $aryReturn['BIEU_DO']['NAM_THAN_SO']
             ],
@@ -571,32 +579,32 @@ class ExportController extends Controller
                 $aryReturn['LUAN_GIAI']['NAM_THAN_SO']
             ],
             [
-                'Phần III: Lời khuyên cho bạn',
+                'PHẦN III. LỜI KHUYÊN CHO BẠN',
                 1,
                 'Cuối cùng, chúng tôi sẽ đưa ra những lời khuyên để giúp bạn DUY TRÌ năng lượng TÍCH CỰC và BÌNH AN trong cuộc sống'
             ],
             [
-                'Phát triển bản thân',
+                'Lời Khuyên Phát Triển Bản Thân',
                 2,
                 ''
             ],
             [
-                'Xây dựng sự nghiệp',
+                'Lời Khuyên Xây Dựng Sự Nghiệp',
                 2,
                 ''
             ],
             [
-                'Lựa chọn đối tác và người đồng hành',
+                'Lời Khuyên Lựa Chọn Đối Tác - Người Đồng Hành',
                 2,
                 ''
             ],
             [
-                'Sứ mệnh cuộc đời của bản thân và xã hội',
+                'Lời Khuyên về Sứ Mệnh Cuộc Đời - Phục Vụ Xã Hội',
                 2,
                 ''
             ],
             [
-                'Cuộc đời bình an, hạnh phúc, viên mãn',
+                'Hướng Đến Cuộc Đời Bình An - Hạnh Phúc - Viên Mãn',
                 2,
                 ''
             ]
