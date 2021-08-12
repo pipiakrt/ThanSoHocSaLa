@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class guiLuanGiaiPDF extends Mailable
+class guiLuanGiaiPDF extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -33,6 +33,6 @@ class guiLuanGiaiPDF extends Mailable
     public function build()
     {
         $user = $this->user;
-        return $this->view('mail.guiPDF', compact('user'))->attach($this->path);
+        return $this->view('mail.guiPDF', compact('user'))->attachData($this->path,'file_pdf.pdf');
     }
 }

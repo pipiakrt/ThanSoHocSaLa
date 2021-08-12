@@ -37,9 +37,9 @@
                                 <div class="box text-center">
                                     <div class="stt"><span>03</span></div>
                                     <div class="title">
-                                        <h4>ỨNG DỤNG</h4>
+                                        <h4>CUỐN SÁCH CUỘC ĐỜI</h4>
                                     </div>
-                                    <div class="desc"><span>THẦN SỐ HỌC SALA</span></div>
+                                    <div class="desc"><span>(Bản báo cáo Thần Số Học của riêng bạn)</span></div>
                                     <div class="toLink">
                                         <img src="/img/icon/link.png" alt="Thần số học">
                                     </div>
@@ -123,7 +123,7 @@
                                         <div class="block-content w-100">
                                             <div class="info">
                                                 <div class="cr-title1">
-                                                    <h4 class="fw-bold text-uppercase">ỨNG DỤNG THẦN SỐ HỌC</h4>
+                                                    <h4 class="fw-bold text-uppercase">CUỐN SÁCH CUỘC ĐỜI</h4>
                                                 </div>
                                                 <div class="desc fw-light mt-3 mt-md-4">
                                                     <div class="row g-0">

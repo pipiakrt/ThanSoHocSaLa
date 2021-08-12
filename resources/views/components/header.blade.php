@@ -30,8 +30,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/gioi-thieu/chuyen-gia">
-                                        <span>Giới thiệu chuyên gia</span>
+                                    <a class="dropdown-item" href="/gioi-thieu/cuon-sach-cuoc-doi">
+                                        <span>Cuốn sách cuộc đời</span>
                                     </a>
                                 </li>
                             </ul>
@@ -216,8 +216,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-mobile" href="/gioi-thieu/chuyen-gia">
-                                        <span>Giới thiệu chuyên gia</span>
+                                    <a class="dropdown-mobile" href="/gioi-thieu/cuon-sach-cuoc-doi">
+                                        <span>Cuốn sách cuộc đời</span>
                                     </a>
                                 </li>
                             </ul>

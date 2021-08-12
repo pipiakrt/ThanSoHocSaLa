@@ -325,9 +325,8 @@ class ExportController extends Controller
         // Close and output PDF document
         // This method has several options, check the source code documentation for more information.
         if ($request->type == "sendmail") {
-            $path = storage_path('/app/public') . "/Giai-ma-cuoc-doi-$buildNameFile-$dulieu->id-.pdf";
-            $pdf->Output("$path", 'F');
-            Job::dispatch($dulieu, $path);
+            $data = $pdf->output();
+            Job::dispatch($dulieu, $data);
             return redirect('/tai-khoan/lich-su-tra-cuu')->with('msg', "Hệ thống đã gửi file luận giải vào email $dulieu->email. cảm ơn bạn đã sử dụng dụng vụ của Thần Số Học Sala.");
         }
         else if ($request->type == "download") {
