@@ -1,5 +1,9 @@
 /* lg */
 @media (max-width: 1200px) {
+
+    .thongtingoi.ct .bg-ctm:last-child {
+        margin-top: 125px;
+    }
     .service2 .anhsp {
         background-position: center;
         min-height: 550px;
@@ -278,6 +282,21 @@
 
 /* sm */
 @media (max-width: 768px) {
+    .hd-ct .main-ct h1 {
+        font-size: 50px !important;
+    }
+    .hd-ct {
+        min-height: 445px !important;
+    }
+    .hd-ct .main-ct .desc1 {
+        margin-left: 0 !important;
+    }
+    .thongtingoi.ct .title-ct {
+        margin-bottom: 0 !important;
+    }
+    .thongtingoi.ct .bg-ctm {
+        margin-top: 125px !important;
+    }
     .block-1 {
         padding-bottom: 25px;
     }
@@ -477,16 +496,16 @@
         font-size: 22px;
     }
     .thongtingoi .item .title {
-        background: white;
+        /* background: white; */
         padding: 10px 0;
         padding-top: 15px;
         border-top-left-radius: 7px;
         border-top-right-radius: 7px;
     }
     .thongtingoi .item .desc {
-        background: white;
+        /* background: white; */
         margin-top: 0px;
-        height: 280px;
+        height: 185px;
         border-bottom-left-radius: 7px;
         border-bottom-right-radius: 7px;
     }
@@ -507,8 +526,8 @@
         font-size: 18px;
     }
     .thongtingoi .item .bg-ctm {
-        overflow: hidden;
-        background: #dadada;
+        /* overflow: hidden; */
+        /* background: #dadada; */
         padding-bottom: 30px;
     }
     .coppyright .content-c span {
@@ -531,6 +550,18 @@
 
 /* xs */
 @media (max-width: 576px) {
+    .hd-ct .main-ct .btn-trcu {
+        font-size: 18px !important;
+    }
+    .hd-ct .main-ct h1 {
+        font-size: 35px !important;
+    }
+    .hd-ct .main-ct .desc1 {
+        font-size: 30px !important;
+    }
+    .hd-ct {
+        min-height: 400px !important;
+    }
     .youtube-responsive {
         height: 200px;
     }
@@ -562,13 +593,26 @@
         bottom: 7%;
         left: 17%;
     }
+
+    .thongtingoi .item .desc {
+        height: 235px !important;
+    }
 }
 @media (max-width: 400px) {
+    /* .thongtingoi .item .desc {
+        padding: 8px 15px !important;
+    } */
     .ketqua .conso .nb {
         left: 30%;
     }
+    /* .thongtingoi .item .desc {
+        height: 275px !important;
+    } */
 }
 @media (max-width: 320px) {
+    .thongtingoi .item .desc {
+        height: 325px !important;
+    }
     .ketqua .number-7 {
         left: 11%;
     }

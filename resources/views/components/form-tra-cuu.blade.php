@@ -1,8 +1,5 @@
 @push('styles')
     <link rel="stylesheet" href="/plugins/dtsel-master/dtsel.css">
-    <style>
-
-    </style>
 @endpush
 
 @push('scripts')

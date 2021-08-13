@@ -21,7 +21,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::take(2)->get();
+        $products = Product::where('status', 1)->take(2)->get();
         return view('san-pham', compact('products'));
     }
 
@@ -33,9 +33,8 @@ class ProductController extends Controller
      */
     public function show($slug)
     {
-        $products = Product::take(3)->get();
-        $product_dn = Product::skip(3)->take(3)->get();
-        return view('chi-tiet-san-pham', compact(['products', 'product_dn']));
+        $product = Product::where(['status' => 1, 'slug' => $slug])->first();
+        return view('chi-tiet-san-pham', compact(['product']));
     }
 
     /**

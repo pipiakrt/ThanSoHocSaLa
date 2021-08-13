@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 use App\Models\Category;
+use App\Models\Product;
 
 class Header extends Component
 {
@@ -25,6 +26,7 @@ class Header extends Component
     public function render()
     {
         $categories = Category::all();
-        return view('components.header', compact('categories'));
+        $products = Product::where('status', 1)->get();
+        return view('components.header', compact(['categories', 'products']));
     }
 }

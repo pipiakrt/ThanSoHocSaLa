@@ -48,6 +48,7 @@
                                     <th style="min-width: 100px">Khuyễn mãi</th>
                                     <th style="min-width: 120px">Giá</th>
                                     <th style="min-width: 120px">Ngày tạo</th>
+                                    <th style="min-width: 100px">Trạng thái</th>
                                     <th class="text-center">EXT</th>
                                 </tr>
                             </thead>
@@ -82,6 +83,14 @@
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.created_at)"></span>
                                         <span class="text-muted font-weight-bold" v-text="formatHuors(item.created_at)"></span>
+                                    </td>
+                                    <td>
+                                        <span class="switch switch-primary justify-content-center">
+                                            <label>
+                                                <input @change="changeStatus(item.id, item.status = !item.status)" type="checkbox" :checked="item.status" />
+                                                <span></span>
+                                            </label>
+                                        </span>
                                     </td>
                                     <td class="text-center">
                                         <div class="dropdown dropdown-inline">
@@ -176,6 +185,11 @@ export default {
             let products = await axios("/api/products");
             this.products = products.data
             KTApp.unblockPage();
+        },
+        changeStatus(id, status) {
+            axios.put('/api/products/' + id + '?status=' + ~~status).then(res => {
+                toastr.success("Thay đổi trạng thái thành công!")
+            })
         },
         destroy(id = this.checkbox) {
             if (id != '') {

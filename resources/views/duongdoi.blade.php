@@ -236,9 +236,9 @@
                         </div>
                         <div class="col-12">
                             <div class="item">
-                                <div class="item-title"><h3 style="inline-size: max-content;">số đường đời “9” - người theo chủ nghĩa nhân đạo</h3></div>
+                                <div class="item-title"><h3 style="inline-size: max-content;">số đường đời “9” - NGƯỜI NHÂN ĐẠO</h3></div>
                                 <div class="item-desc"><span>Số “9” là số tiến hóa cao nhất trong Thần số học, và được coi như là một trong những rung động mạnh mẽ nhất, bởi vì nó chứa đựng những tinh túy của tất cả các con số khác. Khi số “9” có được nền tảng tinh thần mạnh mẽ, họ trở thành nguồn sáng của cả thế giới. Thật vậy, số “9” là người có lòng vị tha. Đây cũng là những rung động đơn có sự quyết tâm cao nhất. Loại Đường đời này có ý chí mạnh mẽ để theo đuổi đến cùng, bằng tham vọng và nghị lực phi thường, những gì mình tin tưởng.</span></div>
-                                <div class="item-desc"><b>VD: Đường đời 9 – Người theo chủ nghĩa nhân đạo: Phan Thị Bích Hằng – Nhà ngoại cảm, Mỹ Tâm – Ca sĩ, Đại Tướng Võ Nguyên Giáp</b></div>
+                                <div class="item-desc"><b>VD: Đường đời 9 – Người nhân đạo: Phan Thị Bích Hằng – Nhà ngoại cảm, Mỹ Tâm – Ca sĩ, Đại Tướng Võ Nguyên Giáp</b></div>
                             </div>
                         </div>
                     </div>

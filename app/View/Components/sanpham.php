@@ -24,7 +24,7 @@ class sanpham extends Component
      */
     public function render()
     {
-        $products = Product::take(2)->get();
+        $products = Product::where('status', 1)->take(2)->get();
         return view('components.sanpham', compact('products'));
     }
 }

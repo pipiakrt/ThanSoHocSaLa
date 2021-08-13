@@ -21,6 +21,9 @@
 body {
     margin: 0;
 }
+main {
+    overflow: hidden;
+}
 body * {
     font-family: Futura Std;
 }
