@@ -19,6 +19,7 @@
         <!--  -->
         <form class="main-tracuu d-flex align-items-center justify-content-center" method="POST" action="/tra-cuu">
             @csrf
+            <input name="address" type="text" value="" hidden>
             <div class="w-100">
                 <div class="row g-0">
                     <div class="col-lg-12 col-xl-4 ct-col-4">

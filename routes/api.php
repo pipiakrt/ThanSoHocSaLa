@@ -20,6 +20,7 @@ use App\Http\Controllers\Api\TagController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\ThanSoHocController;
 use App\Http\Controllers\Api\TraCuuController;
+use App\Http\Controllers\Api\TuVanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,4 +52,5 @@ Route::resources([
     'orders' => OrderController::class,
     'thanso' => ThanSoHocController::class,
     'tracuu' => TraCuuController::class,
+    'tuvan' => TuVanController::class,
 ]);

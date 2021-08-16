@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTraCuusTable extends Migration
+class CreateTuVansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,12 @@ class CreateTraCuusTable extends Migration
      */
     public function up()
     {
-        Schema::create('tra_cuus', function (Blueprint $table) {
+        Schema::create('tu_vans', function (Blueprint $table) {
             $table->id();
-            $table->string('code')->nullable()->index();
-            $table->integer('user_id')->nullable();
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->string('birthdate')->nullable();
-            $table->string('address')->nullable();
-            $table->boolean('type')->default(0)->index();
-            $table->json('data')->nullable();
             $table->timestamps();
         });
     }
@@ -35,6 +30,6 @@ class CreateTraCuusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tra_cuus');
+        Schema::dropIfExists('tu_vans');
     }
 }

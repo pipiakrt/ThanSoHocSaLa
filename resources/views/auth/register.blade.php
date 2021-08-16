@@ -1,5 +1,18 @@
 @extends('layouts.app')
 
+@push('styles')
+    <link rel="stylesheet" href="/plugins/dtsel-master/dtsel.css">
+@endpush
+
+@push('scripts')
+    <script src="/plugins/dtsel-master/dtsel.js"></script>
+    <script>
+        $('#birthday').datepicker({
+            format: 'dd-mm-yyyy'
+        });
+    </script>
+@endpush
+
 @section('content')
 <div class="slogan bg-xanh-nhat text-white text-center">
     <h1>"KIẾN TẠO CUỘC ĐỜI HẠNH PHÚC TỪ NHỮNG CON SỐ"</h1>
@@ -52,9 +65,9 @@
                         </div>
 
                         <div class="form-group row mt-4">
-                            <label for="birthdate" class="col-md-4 col-form-label text-md-right">Ngày sinh</label>
+                            <label for="birthday" class="col-md-4 col-form-label text-md-right">Ngày sinh</label>
                             <div class="col-md-6">
-                                <input id="birthdate" name="birthdate" value="{{ old('birthdate') }}" type="date" class="form-control">
+                                <input id="birthday" name="birthdate" value="{{ old('birthdate') }}" type="text" class="form-control">
                             </div>
                         </div>
 

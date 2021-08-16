@@ -46,6 +46,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-4 col-md-12">
+                            <div class="eventItem item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3">
+                                <div class="box text-center">
+                                    <div class="stt"><span>04</span></div>
+                                    <div class="title">
+                                        <h4>NGUYÊN HỒNG</h4>
+                                    </div>
+                                    <div class="desc"><span>Chuyên gia thần số học SALA</span></div>
+                                    <div class="toLink">
+                                        <img src="/img/icon/link.png" alt="Thần số học">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xl-8 px-3 px-sm-0">
@@ -176,6 +190,53 @@
                                             </div>
                                             <div class="btn-dangky my-3 mt-md-4">
                                                 <a href="{{ $data['baiviet3'] }}">
+                                                    <button type="submit" class="text-white">XEM THÊM</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="block-main d-flex align-items-center h-100">
+                                    <div class="d-flex">
+                                        <div class="block-content w-100">
+                                            <div class="pytago">
+                                                <div class="row g-0 align-items-center">
+                                                    <div class="col-md-6">
+                                                        {{-- <img src="https://stage.thansohocsala.com/img/chade/anh_chuyen_gia.png" alt="pitago"> --}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="cr-title1">
+                                                    <h4 class="fw-bold text-uppercase">CHUYÊN GIA THẦN SỐ HỌC SALA</h4>
+                                                </div>
+                                                <div class="desc fw-light mt-3">
+                                                    <span>Xin chào tôi là Nguyên Hồng Với nhiều năm nghiên cứu khả năng tiềm ẩn và năng lực bẩm sinh của con người tại “Viện Nghiên Cứu Và Ứng Dụng Tiềm Năng Con Người” tôi nhận thấy khả năng khai phá và phát triển những tiềm ẩn bẩm sinh ở thần số học đối với con người là vô cùng lớn, đáp ứng được nguyện vọng mang lại giá trị cho cộng đồng và xã hội</span>
+                                                </div>
+                                                <div class="desc fw-light mt-3">
+                                                    <span>Nhận thấy được lợi ích từ việc ứng dụng Thần Số Học vào cuộc đời mỗi người nên tôi đã giành riêng 5 năm để nghiên cứu và ứng dụng thực tế môn khoa học cổ này vào cuộc sống, khoảng thời gian đó, tôi đã có cơ duyên gặp gỡ, giúp đỡ và tham vấn cho:</span>
+                                                </div>
+                                                <div class="desc fw-light mt-3">
+                                                    <ul class="m-0">
+                                                        <li>
+                                                            <span>Trên 2000 cá nhân thấu hiểu và phát triển bản thân. Giúp họ xác định được nghề nghiệp, hướng đi và mục tiêu trên con đường sự nghiệp.</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Trên 300 gia đình yêu thương, gắn kết với nhau. Giúp cha mẹ hiểu con cái mình hơn và làm cách nào để định hướng đường đời cho con mình một cách đúng đắn</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Trên 50 doanh nghiệp tại Hà Nội và các tỉnh phía Bắc định hình được hướng đi, thấu hiểu và điều phối nhân sự hợp lý để phát triển khả năng của nhân viên, từ đó hình thành sự phát triển của doanh nghiệp.</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="desc fw-light mt-3">
+                                                    <span>Với mong muốn mang lại và cho đi những giá trị hữu ích và thiết thực giúp mọi người có thể sớm phát triển bản thân để đạt được đỉnh cao hạnh phúc, thành công và hướng tới sự an lạc sớm hơn tôi và HỌC VIỆN CỔ HỌC SALA đã hợp tác để cùng nhau lan tỏa những thông điệp tốt đẹp và truyền bá môn học này một cách rộng rãi và giúp cho mỗi cá nhân đều có thể tự làm chủ cuộc đời mình và đem lại nhiều lợi ích tốt đẹp cho cộng đồng.</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn-dangky my-3 mt-md-4">
+                                                <a href="{{ $data['chuyengia1'] }}">
                                                     <button type="submit" class="text-white">XEM THÊM</button>
                                                 </a>
                                             </div>

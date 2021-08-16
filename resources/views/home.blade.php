@@ -18,8 +18,6 @@
 
 </div>
 
-<x-chuyengia />
-
 <x-tai-sao />
 
 <x-khach-hang-phan-hoi />

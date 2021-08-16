@@ -80,7 +80,7 @@
             </div>
             <div class="col-md-9 order-md-1">
                 <h4 class="mb-3">Thông tin thanh toán</h4>
-                <form class="needs-validation" action="/tai-khoan/gio-hang/{{ request()->segment(3) }}" method="POST">
+                <form class="needs-validation" action="/tai-khoan/thanh-toan" method="POST">
                     @csrf
                     <div class="row">
                         <div class="col-md-3 mb-3">

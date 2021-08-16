@@ -11,6 +11,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\TuVanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,7 @@ Route::prefix('/san-pham')->group(function () {
     });
 });
 
+Route::post('/tu-van', [TuVanController::class, 'store']);
 Route::get('/hoi-dap', [PostController::class, 'hoidap']);
 Route::get('/hoi-dap/{slug}', [PostController::class, 'show']);
 Route::get('/cau-chuyen', [PostController::class, 'cauchuyen']);
@@ -60,8 +62,8 @@ Route::prefix('/tai-khoan')->group(function () {
     Route::post('/quyen-mat-khau/{token}', [AccountController::class, 'reset']);
 });
 
-
 Route::get('/gio-hang', [CartController::class, 'index']);
+Route::get('/gio-hang/trang-thai/{slug}', [CartController::class, 'update']);
 Route::get('/gio-hang/{slug}', [CartController::class, 'store']);
 Route::get('/gio-hang/xoa/{slug}', [CartController::class, 'destroy']);
 
@@ -70,8 +72,8 @@ Route::group(['middleware' => 'login'], function(){
         Route::get('/', [AccountController::class, 'index']);
         Route::post('/cap-nhap', [AccountController::class, 'update']);
         Route::get('/don-hang', [AccountController::class, 'donhang']);
-        Route::get('/don-hang/{slug}', [ProductController::class, 'dathang']);
-        Route::post('/don-hang/{slug}', [ProductController::class, 'thanhtoan']);
+        Route::get('/dat-hang', [CartController::class, 'dathang']);
+        Route::post('/thanh-toan', [ProductController::class, 'thanhtoan']);
         Route::get('/thanh-toan', [AccountController::class, 'thanhtoan']);
         Route::get('/lich-su-tra-cuu', [AccountController::class, 'lichsutracuu']);
         Route::get('/lich-su-tra-cuu/{id}', [ExportController::class, 'ketqualichsutracuu']);

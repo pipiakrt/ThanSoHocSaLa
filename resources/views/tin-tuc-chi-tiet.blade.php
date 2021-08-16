@@ -21,7 +21,6 @@
                 @if ($post->Category)
                     <li class="breadcrumb-item"><a href="/tin-tuc/{{ $post->Category->slug }}" class="active">{{ $post->Category->name }}</a></li>
                 @endif
-                <li class="breadcrumb-item"><a href="#">{{ $post->name }}</a></li>
             </ol>
         </div>
     </nav>
@@ -62,7 +61,7 @@
                                 <span>{{ $post->description }}</span>
                             </div>
                         </div>
-                        <div class="post-content">
+                        <div class="post-content pb-5">
                             {!! $post->content !!}
                         </div>
                     </div>

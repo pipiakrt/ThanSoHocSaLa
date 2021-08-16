@@ -20,7 +20,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/gioi-thieu/than-so-hoc-la-gi">
+                                    <a class="dropdown-item" href="/gioi-thieu/ve-hoc-vien-co-hoc-sala">
                                         <span>Học viện cổ học Sala</span>
                                     </a>
                                 </li>
@@ -38,6 +38,11 @@
                                 <span>Sản phẩm</span>
                             </a>
                             <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="/tra-cuu">
+                                        <span>Tra Cứu Miễn Phí</span>
+                                    </a>
+                                </li>
                                 @foreach ($products as $item)
                                     <li>
                                         <a class="dropdown-item" href="/san-pham/{{ $item->slug }}">
@@ -188,7 +193,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-mobile" href="/gioi-thieu/than-so-hoc-la-gi">
+                                    <a class="dropdown-mobile" href="/gioi-thieu/ve-hoc-vien-co-hoc-sala">
                                         <span>Học viện cổ học Sala</span>
                                     </a>
                                 </li>

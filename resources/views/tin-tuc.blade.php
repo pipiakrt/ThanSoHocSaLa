@@ -15,9 +15,6 @@
                 <li class="breadcrumb-item">
                     <a href="{{ isset($category) ? '/tin-tuc' : '#' }}" class="{{ isset($category) ? 'active' : '' }}">Tin tức</a>
                 </li>
-                @isset($category)
-                    <li class="breadcrumb-item"><a href="#">{{ $category->name }}</a></li>
-                @endisset
             </ol>
         </div>
     </nav>
@@ -27,9 +24,13 @@
         <div class="post-slogan">
             <div class="container container-header2">
                 <div class="title text-center mt-2 mb-4">
-                    <h1>TIN TỨC</h1>
-                    <div class="br-cs1"></div>
-                    <div class="br-cs2"></div>
+                    @isset($category)
+                        <h1 style="border-bottom: 1px solid; padding-bottom: 5px;">{{ $category->name }}</h1>
+                    @else
+                        <h1>TIN TỨC</h1>
+                        <div class="br-cs1"></div>
+                        <div class="br-cs2"></div>
+                    @endisset
                 </div>
             </div>
         </div>

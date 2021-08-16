@@ -675,6 +675,14 @@ input[type="date"]:focus::before {
     background-color: #097364 !important;
 }
 
+.fake-image111 {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
 .gioi-thieu .item .title h4 {
     font-weight: 200;
     font-size: 24px;

@@ -49,9 +49,25 @@ class PostController extends Controller
      */
     public function show($slug)
     {
-        $post = Post::where('slug', $slug)->first();
+        $type = "";
+        if (request()->segment(1) == 'tin-tuc') {
+            $type = "post";
+        }
+        else if (request()->segment(1) == 'gioi-thieu') {
+            $type = "introduce";
+        }
+        else if (request()->segment(1) == 'dich-vu') {
+            $type = "service";
+        }
+        else if (request()->segment(1) == 'hoi-dap') {
+            $type = "qa";
+        }
+        $post = Post::where(['slug' => $slug, 'type' => $type])->first();
         if ($post) {
-            $posts = Post::orderby('id', 'desc')->where([['id', '<', $post->id], 'type' => $post->type, 'category_id' => $post->category_id, 'status' => 1])->take(7)->get();
+            $posts = Post::orderby('id', 'desc')->where([['id', '<', $post->id], 'type' => $type, 'category_id' => $post->category_id, 'status' => 1])->take(7)->get();
+            if ($posts->count() < 3) {
+                $posts = Post::orderby('id', 'desc')->where([['id', '>', $post->id], 'type' => $type, 'category_id' => $post->category_id, 'status' => 1])->take(7)->get();
+            }
             $chuyenmuc = [];
             foreach ($post->Tags as $value) {
                 array_push($chuyenmuc, $value);
@@ -61,7 +77,7 @@ class PostController extends Controller
         else {
             $category = Category::where('slug', $slug)->first();
             if ($category) {
-                $posts = Post::where('category_id', $category->id)->paginate(5);
+                $posts = Post::orderby('id', 'desc')->where('category_id', $category->id)->paginate(5);
                 return view('tin-tuc', compact(['posts', 'category']));
             }
         }

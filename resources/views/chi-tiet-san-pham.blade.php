@@ -219,7 +219,7 @@
                                                     <div class="box-item">
                                                         <div class="image">
                                                             <div class="dot-item"></div>
-                                                            <img width="170" src="https://stage.thansohocsala.com/{{ $desc["avatar"] }}" alt="">
+                                                            <div class="fake-image111" style="background-image: url('https://stage.thansohocsala.com/{{ $desc["avatar"] }}')"></div>
                                                         </div>
                                                         <div class="title position-relative">
                                                             @foreach ($desc['name'] as $name)
@@ -449,7 +449,7 @@
                         </ul>
                     </div>
                     <div class="col-md-4">
-                        <form method="post" action="/tra-cuu">
+                        <form method="post" action="/tu-van">
                             @csrf
                             <div class="form-input">
                                 <input name="name" type="text" placeholder="Họ và tên" required>
@@ -460,7 +460,7 @@
                             </div>
 
                             <div class="form-input">
-                                <input id="birthday" name="birthday" type="text" placeholder="Ngày tháng năm sinh" required>
+                                <input id="birthday" name="birthdate" type="text" placeholder="Ngày tháng năm sinh" required>
                             </div>
 
                             <div class="form-input">

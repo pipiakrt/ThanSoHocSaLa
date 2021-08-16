@@ -230,7 +230,7 @@
                                     </tr>
                                     <tr>
                                         <td valign="top" style="color: #0f146d; font-weight: bold;">Điện thoại:</td>
-                                        <td valign="top">{{ $order["address"] }}</td>
+                                        <td valign="top">{{ $order["phone"] }}</td>
                                     </tr>
                                     <tr>
                                         <td valign="top" style="color: #0f146d; font-weight: bold;">Email:</td>

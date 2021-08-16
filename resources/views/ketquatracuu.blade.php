@@ -2,6 +2,11 @@
 
 @push('styles')
     <link rel="stylesheet" href="/css/ket-qua-tra-cuu.css">
+    <style>
+        .ketqua .conso .nb.db {
+            left: 25%;
+        }
+    </style>
 @endpush
 
 @push('scripts')
@@ -21,6 +26,13 @@
         $('#sendmail').click(() => {
             $('#box-email').show();
         })
+
+        $('#carouselExampleCaptions').on('slid.bs.carousel', function (e) {
+            var ele = $('#carouselExampleCaptions .carousel-item.active');
+            $('.eventItem3').removeClass("active")[ele.data('number')];
+            $('#carousel-item-' + ele.data('number')).addClass('active');
+        })
+
     </script>
 @endpush
 
@@ -43,7 +55,7 @@
             <div class="row g-0">
                 <div class="col-xl-6">
                     <div class="conso">
-                        <span class="nb">{{ $data['soDuongDoi'] }}</span>
+                        <span class="nb {{ $data['soDuongDoi'] > 10 ? "db" : "" }}">{{ $data['soDuongDoi'] }}</span>
                     </div>
                 </div>
                 <div class="col-xl-6">
@@ -63,7 +75,7 @@
                                 </tr>
                                 <tr>
                                     <td class="header"><span>ĐỊA CHỈ</span></td>
-                                    <td class="text-center"><span></span></td>
+                                    <td class="text-center"><span style="text-transform: uppercase;">{{ $params['address'] }}</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -105,7 +117,7 @@
                 <div class="cus col-12 col-xl-2">
                     <div class="row g-0 text-white">
                         <div class="col-12">
-                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0">
+                            <div id="carousel-item-0" class="eventItem3 item active" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0">
                                 <div class="fake-line"></div>
                                 <div class="fake-icon">
                                     <div class="icon"></div>
@@ -116,7 +128,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="eventItem3 item active" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1">
+                            <div id="carousel-item-1" class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1">
                                 <div class="fake-line"></div>
                                 <div class="fake-icon">
                                     <div class="icon"></div>
@@ -127,7 +139,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2">
+                            <div id="carousel-item-2" class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2">
                                 <div class="fake-line"></div>
                                 <div class="fake-icon">
                                     <div class="icon"></div>
@@ -138,7 +150,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3">
+                            <div id="carousel-item-3" class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3">
                                 <div class="fake-line"></div>
                                 <div class="fake-icon">
                                     <div class="icon"></div>
@@ -149,35 +161,52 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-12">
+                            <div id="carousel-item-4" class="eventItem3 item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4">
+                                <div class="fake-line"></div>
+                                <div class="fake-icon">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="title-item">
+                                    <h3>THÁP ĐỈNH CAO</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="cus col-12 col-xl-10">
                     <div id="carouselExampleCaptions" class="carousel slide text-dark h-100" data-bs-interval="false" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item h-100">
+                            <div class="carousel-item active h-100" data-number="0">
                                 <div class="slide-ketqua bg text-white fw-lighter">
                                     <div class="desc">
                                         {!! $data['DUONG_DOI'] !!}
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item active h-100">
+                            <div class="carousel-item h-100" data-number="1">
                                 <div class="slide-ketqua bg text-white fw-lighter">
                                     <div class="desc">
                                         {!! $data['SU_MENH'] !!}
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item h-100">
+                            <div class="carousel-item h-100" data-number="2">
                                 <div class="slide-ketqua bg text-white fw-lighter">
-                                    @foreach ($data['KHUYET_THIEU'] as $line)
+                                    @isset($data['KHUYET_THIEU'])
+                                        @foreach ($data['KHUYET_THIEU'] as $line)
+                                            <div class="desc">
+                                                {!! $line !!}
+                                            </div>
+                                        @endforeach
+                                    @else
                                         <div class="desc">
-                                            {!! $line !!}
+                                            {!! DB::table('contents')->where('page_code', 'MP-KT-0')->first()->page_content !!}
                                         </div>
-                                    @endforeach
+                                    @endisset
                                 </div>
                             </div>
-                            <div class="carousel-item h-100">
+                            <div class="carousel-item h-100" data-number="3">
                                 <div class="desc">
                                     <?php
                                         $aryTong = [];
@@ -187,7 +216,7 @@
                                         }
                                     ?>
                                 </div>
-                                <div class="desc">
+                                <div class="desc" data-number="4">
                                     <?php
                                         foreach ($data['BIEU_DO_NANG_LUC'][1] AS $item1) {
                                             if ($item1 != 0) {
@@ -252,6 +281,26 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100" data-number="4">
+                                <div class="position-relative" style="min-height: 900px; background-color: #097364; padding-top: 50px;">
+                                    <div class="conso-qk text-white">
+                                        <div class="number number-11"><?= $data['DINH_CAO'][0][1]; ?></div>
+                                        <div class="number number-10"><?= $data['DINH_CAO'][0][2]; ?></div>
+                                        <div class="number number-9"><?= $data['DINH_CAO'][0][0]; ?></div>
+                                        <div class="number number-8"><?= $data['DINH_CAO'][0][4]; ?></div>
+                                        <div class="number number-7"><?= $data['DINH_CAO'][0][3]; ?></div>
+
+                                        <div class="number number-6"><?= $data['DINH_CAO'][1][1]; ?></div>
+                                        <div class="number number-5"><?= $data['DINH_CAO'][1][0]; ?></div>
+                                        <div class="number number-4 text-center"><?= $data['DINH_CAO'][1][2]; ?></div>
+
+                                        <div class="number number-3 text-center"><?= $data['DINH_CAO'][2][0]; ?></div>
+                                        <div class="number number-2 text-center"><?= $data['DINH_CAO'][2][1]; ?></div>
+
+                                        <div class="number number-1 text-center"><?= $data['DINH_CAO'][3][0]; ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -337,10 +386,10 @@
                             </div>
                         </div>
                         <div class="clear-hr"></div>
-                        <div class="titlecs text-center"><h4>nhận giải mã trực tiếp</h4></div>
+                        <div class="titlecs text-center"><h4>THẦN SỐ HỌC CHO MỘT NGƯỜI LÀ GÌ</h4></div>
                         <div class="desccs fw-lighter">
-                            <div><span>Nếu bạn muốn biết chi tiết hơn về những lời khuyên phù hợp nhất, giải mã vận mệnh, thăng </span></div>
-                            <div><span>trầm và ý nghĩa từng năm. Khám phá Giải mã chi tiết chuyên sâu ngay.</span></div>
+                            <div><span>Thần số học cho một người là một TẬP SỐ, gồm các chỉ số khác nhau, không chỉ có chỉ số đường đời, hay sứ mệnh mà còn rất nhiều các chỉ số khác nữa. Những chỉ số khi tập hợp với nhau sẽ phản ánh tính cách, suy nghĩ, nội tâm, những sự kiện, sự việc sẽ xảy đến trong cuộc đời của mỗi người.</span></div>
+                            <div class="mt-2"><span>Một bản Thần Số Học hoàn chỉnh bao gồm các con số từ 1 đến 9 và mỗi con số ở mỗi vị trí khác nhau phản ánh một vai trò nhất định. Trong đó đường đời hay sứ mệnh chỉ là một vị trí mà thôi. Sẽ rất phiến diện nếu nói bản thân mình là số này hay số kia. Do vậy, nếu mọi người muốn tìm hiểu về thần số học hãy tìm hiểu một cách CỤ THỂ và CHÍNH XÁC.</span></div>
                         </div>
                         <div class="btn-ketqua text-center">
                             <a href="/tai-khoan/tra-cuu-nang-cao">

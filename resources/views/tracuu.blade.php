@@ -73,8 +73,8 @@
                                             </div>
                                         </div>
                                         <div class="form-input">
-                                            <label for="diachi">Địa chỉ</label>
-                                            <input name="diachi" id="diachi" type="text" required>
+                                            <label for="address">Địa chỉ</label>
+                                            <input name="address" id="address" type="text" required>
                                         </div>
                                         <div class="form-input">
                                             <label class="w-100" for="email">Email</label>

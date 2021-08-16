@@ -38,7 +38,7 @@ class ExportController extends Controller
 
         $utilsComponent = new UtilsComponent();
         $aryThanSo = $utilsComponent->getThanSo($name, $birthday, false);
-        // $this->contentModel = new ContentsTable();
+
         $aryReturn['BIEU_DO'] = [
             'NANG_LUC'  =>  $aryThanSo['bieuDoNangLuc'],
             'DINH_CAO'  =>  $aryThanSo['thapDinhCao'],
@@ -442,7 +442,6 @@ class ExportController extends Controller
      */
     private function definePDFLayout($aryReturn)
     {
-        $aryReturn['CHI_SO_LAP'] = null;
         return [
             [
                 'PHẦN I: KHÁM PHÁ & RÈN LUYỆN BẢN THÂN',
@@ -482,7 +481,7 @@ class ExportController extends Controller
             [
                 'Chỉ Số Khuyết Thiếu (Nợ bài học)',
                 2,
-                $aryReturn['KHUYET_THIEU']
+                isset($aryReturn['KHUYET_THIEU']) ? $aryReturn['KHUYET_THIEU'] : ''
             ],
             [
                 'Chỉ Số Thách Thức',
@@ -492,7 +491,7 @@ class ExportController extends Controller
             [
                 'Chỉ Số Lặp',
                 2,
-                $aryReturn['CHI_SO_LAP']
+                isset($aryReturn['CHI_SO_LAP']) ? "" : $aryReturn['CHI_SO_LAP'] =  null
             ],
             [
                 'Biểu Đồ Năng Lực & Biểu Đồ Birth Chart',

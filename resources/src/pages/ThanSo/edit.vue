@@ -75,7 +75,20 @@ export default {
             this.id = res.data.data.id
             this.page_description = res.data.data.title
             KTUtil.ready(function () {
-                $('.summernote').summernote({ height: 500 });
+                $('.summernote').summernote({
+                    height: 500,
+                    toolbar: [
+                        ['style', ['style']],
+                        ['font', ['bold', 'underline', 'clear', 'italic', 'strikethrough', 'superscript', 'subscript']],
+                        ['fontname', ['fontname']],
+                        ['fontsize', ['fontsize']],
+                        ['fontsizeunit', ['fontsizeunit']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['table', ['table']],
+                        ['view', ['fullscreen', 'codeview', 'help']],
+                    ]
+                });
                 $('.summernote').summernote('code', res.data.data.content)
             });
         })

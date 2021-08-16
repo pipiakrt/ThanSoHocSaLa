@@ -202,7 +202,9 @@ class UtilsComponent
         $canBangTamHonNhanCach = $this->convertNumberNegative($tamHon - $nhanCach);
         $phanUng = $this->convertNumber($this->convertNumber($NgayS) + $this->convertNumber($ThangS));
         $ngaySinh = $this->convertNumber($NgayS);
-        $canBang = $this->convertNumber($this->getFirstKeyWordInName($name));
+        // $canBang = $this->convertNumber($this->getFirstKeyWordInName($name));
+        $canBang = $this->convertNumber(collect($this->getFirstKeyWordInName($name))->sum());
+
         $thapThachThuc = $this->getThapThachThuc($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS), $duongDoi);
         $chuKyRenLuyenDuongDoi = $this->getChuKyRenLuyenDuongDoi($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS),$duongDoi);
         $bieuDoNamThanSo = $this->getNamThanSo($this->convertNumber($NgayS), $this->convertNumber($ThangS));
@@ -292,19 +294,18 @@ class UtilsComponent
     {
         $aryThachThucDefine = ['13-4', '14-5', '16-7', '19-1'];
         $aryThachThuc = [];
-        if (in_array($duongDoiNoCompact.'-'.$this->convertNumber($duongDoiNoCompact), $aryThachThucDefine)) {
-            $aryThachThuc[] = $duongDoiNoCompact.'-'.$this->convertNumber($duongDoiNoCompact);
+        if (in_array($this->convertThachThuc($duongDoiNoCompact).'-'.$this->convertNumber($duongDoiNoCompact), $aryThachThucDefine)) {
+            $aryThachThuc[] = $this->convertThachThuc($duongDoiNoCompact).'-'.$this->convertNumber($duongDoiNoCompact);
         }
-        if (in_array($suMenhNoCompact.'-'.$this->convertNumber($suMenhNoCompact), $aryThachThucDefine)) {
-            $aryThachThuc[] = $suMenhNoCompact.'-'.$this->convertNumber($suMenhNoCompact);
+        if (in_array($this->convertThachThuc($suMenhNoCompact).'-'.$this->convertNumber($suMenhNoCompact), $aryThachThucDefine)) {
+            $aryThachThuc[] = $this->convertThachThuc($suMenhNoCompact).'-'.$this->convertNumber($suMenhNoCompact);
         }
-        if (in_array($tamHonNoCompact.'-'.$this->convertNumber($tamHonNoCompact), $aryThachThucDefine)) {
-            $aryThachThuc[] = $tamHonNoCompact.'-'.$this->convertNumber($tamHonNoCompact);
+        if (in_array($this->convertThachThuc($tamHonNoCompact).'-'.$this->convertNumber($tamHonNoCompact), $aryThachThucDefine)) {
+            $aryThachThuc[] = $this->convertThachThuc($tamHonNoCompact).'-'.$this->convertNumber($tamHonNoCompact);
         }
-        if (in_array($nhanCachNoCompact.'-'.$this->convertNumber($nhanCachNoCompact), $aryThachThucDefine)) {
-            $aryThachThuc[] = $nhanCachNoCompact.'-'.$this->convertNumber($nhanCachNoCompact);
+        if (in_array($this->convertThachThuc($nhanCachNoCompact).'-'.$this->convertNumber($nhanCachNoCompact), $aryThachThucDefine)) {
+            $aryThachThuc[] = $this->convertThachThuc($nhanCachNoCompact).'-'.$this->convertNumber($nhanCachNoCompact);
         }
-
         return $aryThachThuc;
     }
     /**
@@ -551,6 +552,21 @@ class UtilsComponent
         }
         if ($isCompact)
             return $this->convertNumber($total, $isCompact, $isSpecial);
+        return $total;
+    }
+
+    public function convertThachThuc($number, $isCompact = true, $isSpecial = false)
+    {
+        $number = (int)$number;
+        if ($number < 10 || $number == 13 || $number == 14 || $number == 16 || $number == 19) {
+            return $number;
+        }
+
+        $aryNumber = str_split($number);
+        $total = array_sum($aryNumber);
+
+        if ($isCompact)
+            return $this->convertThachThuc($total, $isCompact, $isSpecial);
         return $total;
     }
 

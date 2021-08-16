@@ -16,7 +16,7 @@
                             <div class="box-item">
                                 <div class="image">
                                     <div class="dot-item"></div>
-                                    <img width="170" src="https://stage.thansohocsala.com/{{ $desc["avatar"] }}" alt="">
+                                    <div class="fake-image111" style="background-image: url('https://stage.thansohocsala.com/{{ $desc["avatar"] }}')"></div>
                                 </div>
                                 <div class="title position-relative">
                                     @foreach ($desc['name'] as $name)

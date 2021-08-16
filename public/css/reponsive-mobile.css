@@ -1,6 +1,8 @@
 /* lg */
 @media (max-width: 1200px) {
-
+    .thongtingoi .bg-ctm:last-child {
+        margin-top: 125px;
+    }
     .thongtingoi.ct .bg-ctm:last-child {
         margin-top: 125px;
     }
@@ -161,6 +163,15 @@
 
 /* md */
 @media (max-width: 992px) {
+    .thongtingoi .bg-ctm {
+        margin-top: 125px;
+    }
+    .thongtingoi .title-ct {
+        margin-bottom: 30px;
+    }
+    .thongtingoi .box-item {
+        padding-top: 20px;
+    }
     .custom-next-right .text-nr {
         display: none;
     }
@@ -282,6 +293,9 @@
 
 /* sm */
 @media (max-width: 768px) {
+    .thongtingoi .box-item {
+        padding-top: 110px;
+    }
     .hd-ct .main-ct h1 {
         font-size: 50px !important;
     }
@@ -630,9 +644,6 @@
 @media (min-width: 768px) and (max-width: 992px) {
     .thongtingoi .item .image {
         position: unset;
-    }
-    .thongtingoi .item .image {
-        height: 220px !important;
     }
     .thongtingoi .item .desc {
         padding-right: 10px;

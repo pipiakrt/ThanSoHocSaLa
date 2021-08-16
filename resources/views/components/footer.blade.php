@@ -12,7 +12,9 @@
                         <div class="group mt-1 mt-md-0">
                             <div class="footer-title"><h2>HỖ TRỢ KHÁCH HÀNG</h2></div>
                             <div class="footer-item">
-                                <span>Hotline: 0942 384 382</span>
+                                <a href="tel://0942384382">
+                                    <span>Hotline: 0942 384 382</span>
+                                </a>
                             </div>
                             <div class="footer-item">
                                 <span>Email: hotro@thansohocsala.com</span>
@@ -29,10 +31,19 @@
                         <div class="group mt-4 mt-md-0">
                             <div class="footer-title"><h2>VỀ THẦN SỐ HỌC SALA</h2></div>
                             <div class="footer-item">
-                                <span>Giới thiệu thần số học SaLa</span>
+                                <a href="/gioi-thieu/ve-hoc-vien-co-hoc-sala" class="decoration-revert-hover">
+                                    <span>Giới thiệu học viện cổ học</span>
+                                </a>
                             </div>
                             <div class="footer-item">
-                                <span>Tuyển dụng</span>
+                                <a href="/gioi-thieu/than-so-hoc" class="decoration-revert-hover">
+                                    <span>Giới thiệu thần số học</span>
+                                </a>
+                            </div>
+                            <div class="footer-item">
+                                <a href="/san-pham" class="decoration-revert-hover">
+                                    <span>Sản phẩm</span>
+                                </a>
                             </div>
                             <div class="footer-item">
                                 <span>Chính sách giải quyết khiếu nại</span>

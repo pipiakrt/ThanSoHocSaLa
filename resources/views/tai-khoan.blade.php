@@ -1,6 +1,19 @@
 @extends('layouts.app')
 
 
+@push('styles')
+    <link rel="stylesheet" href="/plugins/dtsel-master/dtsel.css">
+@endpush
+
+@push('scripts')
+    <script src="/plugins/dtsel-master/dtsel.js"></script>
+    <script>
+        $('#birthday').datepicker({
+            format: 'dd-mm-yyyy'
+        });
+    </script>
+@endpush
+
 @section('content')
 
 <x-slogan />
@@ -46,8 +59,8 @@
                         <input type="text" name="name" class="form-control" id="name" value="{{ $user->name }}" required />
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="lastName">Ngày sinh</label>
-                        <input type="date" name="birthdate" class="form-control" id="lastName" value="{{ $user->birthdate }}" required />
+                        <label for="birthday">Ngày sinh</label>
+                        <input type="text" id="birthday" name="birthdate" class="form-control" value="{{ $user->birthdate }}" required />
                     </div>
                 </div>
 

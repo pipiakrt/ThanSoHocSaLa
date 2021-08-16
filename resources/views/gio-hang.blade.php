@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 @endpush
 
+@push('scripts')
+    <script>
+        $(".form-check-input.product").click(function() {
+            location.href = "/gio-hang/trang-thai/" + $(this).data("slug");
+        });
+    </script>
+@endpush
+
 @section('content')
 
     <nav class="breadcrumb-cus" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -55,7 +63,7 @@
                                         @foreach ($products as $item)
                                             <tr>
                                                 <th class="border-0">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <input class="form-check-input product" type="checkbox" data-slug="{{ $item["slug"] }}" {{ $item["status"] == true ? "checked" : "" }}>
                                                 </th>
                                                 <th scope="row" class="border-0">
                                                     <div class="p-2">
@@ -70,11 +78,11 @@
                                                     </div>
                                                 </th>
                                                 <td class="border-0 align-middle">
-                                                    @foreach ($item["promotion"][0]["options"] as $options)
-                                                        <ul class="list-inline list-inline-dotted mb-0">
-                                                            <li class="list-inline-item">{{ $options['key'] . ' - ' . $options['val'] }}</li>
-                                                        </ul>
-                                                    @endforeach
+                                                    <ul class="p-3">
+                                                        @foreach ($item["promotion"][0]["options"] as $options)
+                                                            <li>{{ $options['key'] . ' - ' . $options['val'] }}</li>
+                                                        @endforeach
+                                                    </ul>
                                                 </td>
                                                 <td class="border-0 align-middle"><strong>{{ $item["price"] }}</strong></td>
                                                 <td class="border-0 align-middle text-center"><a href="/gio-hang/xoa/{{ $item["id"] }}" class="text-dark"><i class="fa fa-trash"></i></a></td>
@@ -97,13 +105,13 @@
                         <div class="p-4">
                             <p class="font-italic mb-4">Chi phí vận chuyển và chi phí bổ sung được tính thêm sau khi tính phí.</p>
                             <ul class="list-unstyled mb-4">
-                                <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Giá</strong><strong>390.000.00 VNĐ</strong></li>
+                                <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Giá</strong><strong>{{ number_format($total) }} VNĐ</strong></li>
                                 <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Thuế</strong><strong>0.00 VNĐ</strong></li>
                                 <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Phí Ship</strong><strong>0.00 VNĐ</strong></li>
                                 <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Tổng</strong>
-                                    <h5 class="font-weight-bold">390.000.00 VNĐ</h5>
+                                    <h5 class="font-weight-bold">{{ number_format($total) }} VNĐ</h5>
                                 </li>
-                                <li class="d-flex justify-content-between py-3 border-top"><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Tiến hành thanh toán đơn hàng</a></li>
+                                <li class="d-flex justify-content-between py-3 border-top"><a href="/tai-khoan/dat-hang" class="btn btn-dark rounded-pill py-2 btn-block">Tiến hành thanh toán đơn hàng</a></li>
                             </ul>
                         </div>
                     </div>

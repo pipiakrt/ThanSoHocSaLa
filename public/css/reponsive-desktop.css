@@ -38,8 +38,8 @@
     .thongtingoi .item .image {
         position: unset;
     }
-    .thongtingoi .item .image {
-        height: 220px !important;
+    .thongtingoi .box-item {
+        padding-top: 25px;
     }
     .thongtingoi .item .desc {
         padding-right: 0;

@@ -96,7 +96,6 @@ $('.eventItem3').click(function () {
     }
 })
 
-
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('header .dropdown').forEach(function(everyitem){
 

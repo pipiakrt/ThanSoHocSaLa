@@ -46,6 +46,7 @@
                                     <label for="keyword" class="col-2 col-form-label">Chuyên mục</label>
                                     <div class="col-10">
                                         <select class="form-control" id="keyword" multiple="multiple" style="height: 35px">
+                                            <option value="" selected>Chọn chuyên mục</option>
                                             <option v-for="item in tags" :key="item.id" v-text="item.name" :value="item.id" style="display: none"></option>
                                         </select>
                                     </div>

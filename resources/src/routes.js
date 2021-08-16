@@ -35,6 +35,8 @@ import Newsletters from './pages/Newsletters/index'
 import Products from './pages/Products/index'
 import CreateProduct from './pages/Products/create'
 import EditProduct from './pages/Products/edit'
+// TuVan
+import TuVan from './pages/TuVan/index'
 // TraCuu
 import TraCuu from './pages/TraCuu/index'
 // ThanSo
@@ -208,6 +210,12 @@ const routes = [
         path: '/admin/tra-cuu/danh-sach',
         component: TraCuu,
         name: 'TraCuu',
+    },
+    // TuVan
+    {
+        path: '/admin/tu-van/danh-sach',
+        component: TuVan,
+        name: 'TuVan',
     },
     // ThanSo
     {

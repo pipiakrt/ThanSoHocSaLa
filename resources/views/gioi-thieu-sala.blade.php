@@ -13,7 +13,7 @@
     <div class="container container-header2">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
-            <li class="breadcrumb-item"><a href="#">Giới thiệu về sala</a></li>
+            <li class="breadcrumb-item"><a href="#">Thần Số Học</a></li>
         </ol>
     </div>
 </nav>

@@ -46,6 +46,7 @@ class ThanSoController extends Controller
             $params = [
                 'link' => env('APP_URL') . "/tra-cuu/$ketqua->code",
                 'name' => $ketqua->name,
+                'address' => $ketqua->address,
                 'birthday' => $ketqua->birthdate
             ];
             return view('ketquatracuu', compact(['data', 'params']));
@@ -70,10 +71,11 @@ class ThanSoController extends Controller
      */
     public function ketqua(Request $request)
     {
-        $dataPost = $request->only('name', 'birthday', 'email', 'phone');
+        $dataPost = $request->only('name', 'birthday', 'email', 'phone', 'address');
 
         $name = $dataPost['name'];
         $birthday = $dataPost['birthday'];
+
         if ($birthday != '') {
             $strToTime = strtotime(str_replace('/','-', $birthday));
             $birthday = date('d/m/Y', $strToTime);
@@ -104,11 +106,10 @@ class ThanSoController extends Controller
             'name' => $dataPost['name'],
             'email' => $dataPost['email'],
             'phone' => $dataPost['phone'],
+            'address' => $dataPost['address'],
         ]);
 
         return redirect("/tra-cuu/$tracuu->code");
-
-        // return view('ketquatracuu', compact(['data', 'params']));
     }
 
     /**
