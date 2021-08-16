@@ -31,7 +31,7 @@ class AccountController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function giohang(Request $request)
+    public function donhang(Request $request)
     {
         $user = $request->user();
         $orders = $user->Order->whereIn('status', [0, 2]);
@@ -53,7 +53,7 @@ class AccountController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function donhang(Request $request)
+    public function dichvu(Request $request)
     {
         $user = $request->user();
         $orders = $user->Order->whereIn('status', 1);
@@ -68,7 +68,7 @@ class AccountController extends Controller
     public function giahan(Request $request, $id)
     {
         $request->user()->Order->find($id)->update(['status' => 0]);
-        return redirect('/tai-khoan/gio-hang/')->with('msg', 'Gói sản phẩm gia hạn thành công, thanh toán để kích hoạt gói!');
+        return redirect('/tai-khoan/don-hang/')->with('msg', 'Gói sản phẩm gia hạn thành công, thanh toán để kích hoạt gói!');
     }
 
     /**

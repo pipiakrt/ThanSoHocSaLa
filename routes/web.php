@@ -10,8 +10,7 @@ use App\Http\Controllers\SocialAuthController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\AddressController;
-use Illuminate\Support\Str;
-use App\Jobs\Register as sendMail;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,18 +60,23 @@ Route::prefix('/tai-khoan')->group(function () {
     Route::post('/quyen-mat-khau/{token}', [AccountController::class, 'reset']);
 });
 
+
+Route::get('/gio-hang', [CartController::class, 'index']);
+Route::get('/gio-hang/{slug}', [CartController::class, 'store']);
+Route::get('/gio-hang/xoa/{slug}', [CartController::class, 'destroy']);
+
 Route::group(['middleware' => 'login'], function(){
     Route::prefix('/tai-khoan')->group(function () {
         Route::get('/', [AccountController::class, 'index']);
         Route::post('/cap-nhap', [AccountController::class, 'update']);
-        Route::get('/gio-hang', [AccountController::class, 'giohang']);
+        Route::get('/don-hang', [AccountController::class, 'donhang']);
+        Route::get('/don-hang/{slug}', [ProductController::class, 'dathang']);
+        Route::post('/don-hang/{slug}', [ProductController::class, 'thanhtoan']);
         Route::get('/thanh-toan', [AccountController::class, 'thanhtoan']);
         Route::get('/lich-su-tra-cuu', [AccountController::class, 'lichsutracuu']);
         Route::get('/lich-su-tra-cuu/{id}', [ExportController::class, 'ketqualichsutracuu']);
         Route::get('/gia-han/{id}', [AccountController::class, 'giahan']);
-        Route::get('/gio-hang/{slug}', [ProductController::class, 'dathang']);
-        Route::post('/gio-hang/{slug}', [ProductController::class, 'thanhtoan']);
-        Route::get('/dich-vu', [AccountController::class, 'donhang']);
+        Route::get('/dich-vu', [AccountController::class, 'dichvu']);
         Route::get('/tra-cuu-nang-cao', [ThanSoController::class, 'formnangcao']);
         Route::post('/tra-cuu-nang-cao', [ExportController::class, 'index']);
     });

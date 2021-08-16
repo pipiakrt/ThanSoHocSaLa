@@ -267,7 +267,7 @@
                                                         <span style="font-size: 14px;">{{ $order["product_name"] }}</span>
                                                     </a>
                                                 </div>
-                                                <div class="m_-2871974352908585746product-productInfo-price"><span style="font-size: 14px;">VND 50.000</span></div>
+                                                <div class="m_-2871974352908585746product-productInfo-price"><span style="font-size: 14px;">{{ $order["price"] }}</span></div>
                                                 <div class="m_-2871974352908585746product-productInfo-subInfo"><span style="font-size: 14px;">Số lượng: 1</span></div>
                                             </td>
                                         </tr>

@@ -25,11 +25,6 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/gioi-thieu/ung-dung-than-so-hoc-sala">
-                                        <span>Ứng dụng Thần Số Học</span>
-                                    </a>
-                                </li>
-                                <li>
                                     <a class="dropdown-item" href="/gioi-thieu/cuon-sach-cuoc-doi">
                                         <span>Cuốn sách cuộc đời</span>
                                     </a>
@@ -93,6 +88,11 @@
                                     <li>
                                         <a class="dropdown-item" href="/tai-khoan">
                                             <span>{{ request()->user()->email }}</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/gio-hang">
+                                            <span>Giỏ hàng</span>
                                         </a>
                                     </li>
                                     <li>
@@ -193,11 +193,6 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-mobile" href="/gioi-thieu/ung-dung-than-so-hoc-sala">
-                                        <span>Ứng dụng Thần Số Học</span>
-                                    </a>
-                                </li>
-                                <li>
                                     <a class="dropdown-mobile" href="/gioi-thieu/cuon-sach-cuoc-doi">
                                         <span>Cuốn sách cuộc đời</span>
                                     </a>
@@ -216,31 +211,13 @@
                                         <span>Sản phẩm</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-mobile" href="/san-pham/ca-nhan">
-                                        <span>Gói cá nhân</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-mobile" href="/san-pham/gia-dinh">
-                                        <span>Gói gia đình</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-mobile" href="/san-pham/doanh-nghiep">
-                                        <span>Gói doanh nghiệp</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-mobile" href="/san-pham/doanh-nghiep#list-p2">
-                                        <span>Gói (chủ doanh nghiệp)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-mobile" href="/san-pham/doanh-nghiep#list-p2">
-                                        <span>Gói (nhân sự doanh nghiệp)</span>
-                                    </a>
-                                </li>
+                                @foreach ($products as $item)
+                                    <li>
+                                        <a class="dropdown-mobile" href="/san-pham/{{ $item->slug }}">
+                                            <span>{{ Str::title($item->name) }}</span>
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -250,11 +227,6 @@
                         </a>
                         <div class="collapse mt-2" id="collapseExample3">
                             <ul class="mb-0">
-                                <li>
-                                    <a class="dropdown-mobile" href="/tin-tuc">
-                                        <span>Sản phẩm</span>
-                                    </a>
-                                </li>
                                 @foreach ($categories as $item)
                                     <li>
                                         <a class="dropdown-mobile" href="/tin-tuc/{{ $item->slug }}">

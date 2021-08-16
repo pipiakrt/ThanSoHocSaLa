@@ -3,6 +3,47 @@
 @push('styles')
     <link rel="stylesheet" href="/css/ket-qua-tra-cuu.css">
     <link rel="stylesheet" href="/css/san-pham.css">
+    <style>
+        .thongtingoi .dot-item {
+            width: 15px;
+            height: 15px;
+            background-color: #097364;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -7px;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .thongtingoi .box-item {
+            background-color: #ededed;
+            padding: 25px 0;
+            padding-top: 100px;
+            border-radius: 15px;
+            height: 100%;
+        }
+
+        .thongtingoi .title-ct {
+            margin-bottom: 100px;
+        }
+
+        .thongtingoi .item .image {
+            border: 1px solid #03402f;
+            height: fit-content !important;
+            width: fit-content;
+            margin: auto;
+            border-radius: 50%;
+            text-align: center;
+            position: absolute;
+            top: -100px;
+            right: 0;
+            left: 0;
+            padding: 8px;
+            background-color: white;
+        }
+
+    </style>
 @endpush
 
 @section('content')

@@ -75,7 +75,7 @@
                                             <div class="anhsp h-100 text-center" style="background-image: url('/img/kh/2.jpg');">
                                                 <div class="row g-0 position-absolute end-0 start-0 bottom-0">
                                                     <div class="col-md-6 position-relative">
-                                                        <a href="/tai-khoan/gio-hang/{{ $item->slug }}">
+                                                        <a href="/gio-hang/{{ $item->slug }}">
                                                             <button>Đặt Hàng</button>
                                                         </a>
                                                     </div>
@@ -145,7 +145,7 @@
                                                 </div>
                                                 <div class="row g-0">
                                                     <div class="col-6 position-relative">
-                                                        <a href="/tai-khoan/gio-hang/{{ $item->slug }}">
+                                                        <a href="/gio-hang/{{ $item->slug }}">
                                                             <button class="btn-sanpham">Đặt Hàng</button>
                                                         </a>
                                                     </div>

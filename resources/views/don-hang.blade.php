@@ -72,7 +72,7 @@
         </div>
         <div class="col-md-9 order-md-1 form-111">
             <h4 class="mb-3">Đơn hàng</h4>
-            @if (request()->segment(2) == 'gio-hang')
+            @if (request()->segment(2) == 'don-hang')
                 <div class="alert alert-secondary" role="alert">
                     <div class="row g-0">
                         <div class="col-md-11">Chi tiết quy trình mua hàng, hình thức thanh toán của Thần Số Học Sala</div>

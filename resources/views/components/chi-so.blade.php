@@ -188,7 +188,7 @@ $ynghia = [
         }
 
         .fixfdaf .button-primary {
-            background-color: #0060f6;
+            background-color: #388a6b;
             color: #fff;
         }
 
@@ -330,7 +330,7 @@ $ynghia = [
                     </div>
                     <div class="buttons">
                         <div class="button" data-bs-dismiss="modal">Đóng</div>
-                        <div class="button button-primary"><a href="/login">Đăng ký</a></div>
+                        <a href="/login" class="button button-primary">Đăng ký</a>
                     </div>
                 </div>
             </div>

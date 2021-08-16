@@ -183,11 +183,13 @@
                                     <div><span class="fw-light">LUẬN GIẢI “Đường đời, vận mệnh, sự nghiệp,…” của chính bạn và người thân của bạn.</span></div>
                                     <div><span class="fw-light">(Bí quyết để có được sự GIÀU CÓ, HẠNH PHÚC & BÌNH AN bền vững)</span></div>
                                     <div>
-                                        <button class="btn-trcu">TRA CỨU CÁC CHỈ SỐ CỦA BẠN NGAY
-                                            <svg style="margin-bottom: 5px; margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="20.0533px" height="24.7543px" preserveAspectRatio="none" viewBox="0 0 1536 1896.0833" class="" fill="rgba(246, 237, 230, 1)">
-                                                <path d="M1472 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H117q-52 0-84.5-37.5T0 1024V896q0-53 32.5-90.5T117 768h704L528 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z"></path>
-                                            </svg>
-                                        </button>
+                                        <a href="/tra-cuu">
+                                            <button class="btn-trcu">TRA CỨU CÁC CHỈ SỐ CỦA BẠN NGAY
+                                                <svg style="margin-bottom: 5px; margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="20.0533px" height="24.7543px" preserveAspectRatio="none" viewBox="0 0 1536 1896.0833" class="" fill="rgba(246, 237, 230, 1)">
+                                                    <path d="M1472 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H117q-52 0-84.5-37.5T0 1024V896q0-53 32.5-90.5T117 768h704L528 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z"></path>
+                                                </svg>
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +219,7 @@
                                                     <div class="box-item">
                                                         <div class="image">
                                                             <div class="dot-item"></div>
-                                                            <img width="170" src="https://stage.thansohocsala.com/uploads/avatar.png" alt="">
+                                                            <img width="170" src="https://stage.thansohocsala.com/{{ $desc["avatar"] }}" alt="">
                                                         </div>
                                                         <div class="title position-relative">
                                                             @foreach ($desc['name'] as $name)
@@ -276,14 +278,14 @@
                             </div>
                             <div class="col-md-6 text-center mb-4">
                                 <div class="btn-ketqua text-center mr-0">
-                                    <a href="/tai-khoan/gio-hang/{{ $product->slug }}">
+                                    <a href="/gio-hang/{{ $product->slug }}">
                                         <button>ĐĂNG KÝ GÓI CƠ BẢN</button>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-6 text-center mb-4">
                                 <div class="btn-ketqua text-center mr-0">
-                                    <a href="/tai-khoan/gio-hang/{{ $product->slug }}">
+                                    <a href="/gio-hang/{{ $product->slug }}">
                                         <button>ĐĂNG KÝ GÓI NÂNG CAO</button>
                                     </a>
                                 </div>
@@ -412,17 +414,19 @@
                     </div>
                     <div class="col-md-12">
                         <div class="text-center mb-3">
-                            <button class="btn-trcu">TRA CỨU CÁC CHỈ SỐ CỦA BẠN NGAY
-                                <svg style="margin-bottom: 5px; margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="20.0533px" height="24.7543px" preserveAspectRatio="none" viewBox="0 0 1536 1896.0833" class="" fill="rgba(246, 237, 230, 1)">
-                                    <path d="M1472 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H117q-52 0-84.5-37.5T0 1024V896q0-53 32.5-90.5T117 768h704L528 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z"></path>
-                                </svg>
-                            </button>
+                            <a href="/tra-cuu">
+                                <button class="btn-trcu">TRA CỨU CÁC CHỈ SỐ CỦA BẠN NGAY
+                                    <svg style="margin-bottom: 5px; margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="20.0533px" height="24.7543px" preserveAspectRatio="none" viewBox="0 0 1536 1896.0833" class="" fill="rgba(246, 237, 230, 1)">
+                                        <path d="M1472 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H117q-52 0-84.5-37.5T0 1024V896q0-53 32.5-90.5T117 768h704L528 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z"></path>
+                                    </svg>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="dangkytth text-white py-5">
+        <div class="dangkytth text-white py-5 mb-3 mb-md-5">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 text-center">
@@ -466,19 +470,6 @@
                                 <button type="submit" class="dangkyngay w-100">ĐĂNG KÝ NGAY !</button>
                             </div>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tieudekhc mt-5 mb-4">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-8">
-                        <h2 style="color: #dab066;">Cảm Nhận Của Khách Hàng Về</h2>
-                    </div>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-8">
-                        <h1 class="fw-bold">THẦN SỐ HỌC HỌC SALA</h1>
                     </div>
                 </div>
             </div>

@@ -155,6 +155,12 @@ class UtilsComponent
         $NgayS = $this->convertNumber($aryBirthDay[0], false);
         $ThangS = $this->convertNumber($aryBirthDay[1], false);
         $NamS = $this->convertNumber($aryBirthDay[2], false);
+
+        //
+        if($NamS == 22) {
+            $NamS = 4;
+        }
+
         $aryBirthDayNumber = $this->getNumberFromBirthday($newBirthDay);
         // convert name
         list($aryVowel, $aryNoVowel, $aryNameToNumber) = $this->convertName($name);
@@ -176,7 +182,7 @@ class UtilsComponent
         $nhanCachNoCompact = $this->convertNumber(array_sum($aryNoVowel), false);
         $nhanCach = $this->convertNumber(array_sum($aryNoVowel));
         //
-        $khuyetThieu = $this->getKhuyetThieu($aryVowel, $aryNoVowel);
+        $khuyetThieu = $this->getKhuyetThieu($aryVowel, $aryNoVowel, $duongDoi, $suMenh, $tamHon, $nhanCach);
         $thapDinhCao = $this->getKimTuThap($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS), $duongDoi);
         if ($isFree) {
             return [
@@ -306,7 +312,7 @@ class UtilsComponent
      * @param $aryNoVowel
      * @return array|null
      */
-    private function getKhuyetThieu($aryVowel, $aryNoVowel)
+    private function getKhuyetThieu($aryVowel, $aryNoVowel, $duongDoi, $sumenh, $tamHon, $nhanCach)
     {
         $aryReturn = array_flip([1, 2, 3, 4, 5, 6, 7, 8, 9]);
         foreach ($aryVowel AS $item) {
@@ -319,6 +325,10 @@ class UtilsComponent
                 unset($aryReturn[$item]);
             }
         }
+        unset($aryReturn[$duongDoi]);
+        unset($aryReturn[$sumenh]);
+        unset($aryReturn[$tamHon]);
+        unset($aryReturn[$nhanCach]);
         return array_keys($aryReturn);
     }
 
@@ -424,6 +434,18 @@ class UtilsComponent
      */
     private function getKimTuThap($NgaySinh, $ThangSinh, $NamSinh, $duongDoi)
     {
+        if ($NgaySinh == 11) {
+            $NgaySinh = 2;
+        }
+        if ($NgaySinh == 22) {
+            $NgaySinh = 4;
+        }
+        if ($ThangSinh == 11) {
+            $ThangSinh = 2;
+        }
+        if ($ThangSinh == 22) {
+            $ThangSinh = 4;
+        }
         list($gd_tuoi_1, $gd_tuoi_2, $gd_tuoi_3, $gd_tuoi_4) = $this->getGiaiDoanTuoi($duongDoi);
 
         $level_1 = array($ThangSinh, $NgaySinh, $NamSinh, $gd_tuoi_1, $gd_tuoi_2);
@@ -452,7 +474,7 @@ class UtilsComponent
         $gd_tuoi_1 = 36 - $duongDoi;
         $gd_tuoi_2 = $gd_tuoi_1 + 9;
         $gd_tuoi_3 = $gd_tuoi_2 + 9;
-        $gd_tuoi_4 = $gd_tuoi_3 + 1;
+        $gd_tuoi_4 = $gd_tuoi_3 + 9;
         return [$gd_tuoi_1, $gd_tuoi_2, $gd_tuoi_3, $gd_tuoi_4];
     }
 
@@ -511,6 +533,12 @@ class UtilsComponent
     {
         $number = (int)$number;
         if ($number < 10) {
+            return $number;
+        }
+        if ($number == 11) {
+            return $number;
+        }
+        if ($number == 22) {
             return $number;
         }
         $aryNumber = str_split($number);

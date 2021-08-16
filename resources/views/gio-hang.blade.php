@@ -2,98 +2,114 @@
 
 @push('styles')
     <style>
-        .card-pricing.popular {
-            z-index: 1;
-            border: 3px solid #007bff;
-        }
-        .card-pricing .list-unstyled li {
-            padding: .5rem 0;
-            color: #6c757d;
-        }
-        .form-111 {
-            font-size: .8125rem;
-            font-weight: 400;
-            line-height: 1.5385;
-            color: #333;
-            text-align: left;
-        }
-
-        .mt-50 {
-            margin-top: 50px
-        }
-
-        .mb-50 {
-            margin-bottom: 50px
-        }
-
-        .bg-teal-400 {
-            background-color: #26a69a
-        }
-
-        a {
-            text-decoration: none !important
-        }
-
-        .fa {
-            color: red
+        body {
+            background: #eee;
         }
     </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 @endpush
 
 @section('content')
-<x-slogan />
 
-<nav class="breadcrumb-cus" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-    <div class="container">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
-            <li class="breadcrumb-item"><a href="#">Tài khoản</a></li>
-        </ol>
-    </div>
-</nav>
-
-<div class="container">
-
-    <div class="row my-5">
-        <div class="col-md-3 mb-4">
-            <x-account-menu />
+    <nav class="breadcrumb-cus" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="#">Giỏ hàng</a></li>
+            </ol>
         </div>
-        <div class="col-md-9 order-md-1 form-111">
-            <h4 class="mb-3">Giỏ hàng</h4>
+    </nav>
 
-            @foreach ($carts as $item)
-                <div class="card card-body my-3">
-                    <div class="media text-lg-left row g-0 g-md-4">
-                        <div class="col-md-3 col-lg-2 text-center">
-                            <div class="mr-2 mb-3 mb-lg-0"> <img class="mw-100" src="{{ $item->Product->image ? $item->Product->image : '/img/kh/1.jpg' }}" alt=""> </div>
+    <div class="px-4 px-lg-0">
+        <div class="pb-5 mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+                        <!-- Shopping cart table -->
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="border-0 bg-light">
+                                            <input style="margin-bottom: 13px;" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </th>
+                                        <th scope="col" class="border-0 bg-light">
+                                            <div class="p-2 px-3 text-uppercase">Gói</div>
+                                        </th>
+                                        <th scope="col" class="border-0 bg-light">
+                                            <div class="py-2 text-uppercase">Tặng kèm</div>
+                                        </th>
+                                        <th scope="col" class="border-0 bg-light">
+                                            <div class="py-2 text-uppercase">Giá</div>
+                                        </th>
+                                        <th scope="col" class="border-0 bg-light text-center">
+                                            <div class="py-2 text-uppercase">Xóa</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th class="border-0" colspan="4"></th>
+                                    </tr>
+                                    @isset ($products)
+                                        @foreach ($products as $item)
+                                            <tr>
+                                                <th class="border-0">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                </th>
+                                                <th scope="row" class="border-0">
+                                                    <div class="p-2">
+                                                        <img style="margin-right: 10px;" src="{{ $item["image"] }}" alt="" width="70" class="img-fluid rounded shadow-sm">
+                                                        <div class="d-inline-block align-middle">
+                                                            <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{ $item["name"] }}</a></h5>
+                                                            <span class="d-block" style="font-size: 14px; color: #333333">text lorem ipsum dolor sit amet</span>
+                                                            <span class="d-block" style="font-size: 14px; color: #333333">text lorem ipsum dolor sit amet</span>
+                                                            <span class="d-block" style="font-size: 14px; color: #333333">text lorem ipsum dolor sit amet</span>
+                                                            <span class="d-block" style="font-size: 14px; color: #333333">text lorem ipsum dolor sit amet</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <td class="border-0 align-middle">
+                                                    @foreach ($item["promotion"][0]["options"] as $options)
+                                                        <ul class="list-inline list-inline-dotted mb-0">
+                                                            <li class="list-inline-item">{{ $options['key'] . ' - ' . $options['val'] }}</li>
+                                                        </ul>
+                                                    @endforeach
+                                                </td>
+                                                <td class="border-0 align-middle"><strong>{{ $item["price"] }}</strong></td>
+                                                <td class="border-0 align-middle text-center"><a href="/gio-hang/xoa/{{ $item["id"] }}" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                                            </tr>
+                                        @endforeach
+                                    @else
+                                        <tr>
+                                            <th class="border-0" colspan="4">
+                                                <h3>Giỏ Hàng Trống</h3>
+                                            </th>
+                                        </tr>
+                                    @endisset
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="col-md-6 col-lg-8">
-                            <div class="media-body">
-                                <h6 class="media-title font-weight-semibold"> <a href="#" data-abc="true">{{ $item->Product->name }}</a> </h6>
-                                <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
-                                    <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Giá {{ $item->Product->price }}</a></li>
-                                </ul>
-                                <p class="mb-3">{{ $item->Product->description }}</p>
-                                @foreach ($item->Product->promotion[0]['options'] as $options)
-                                    <ul class="list-inline list-inline-dotted mb-0">
-                                        <li class="list-inline-item">{{ $options['key'] . ' - ' . $options['val'] }}</li>
-                                    </ul>
-                                @endforeach
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-lg-2">
-                            <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
-                                <h3 class="mb-0 mt-2 font-weight-semibold">{{ $item->Product->price }}</h3>
-                                <div class="text-muted">121 đánh giá</div>
-                                <a href="/tai-khoan/gio-hang/{{ $item->id }}/dat-hang" class="btn btn-warning mt-2 text-white"><i class="icon-cart-add mr-2"></i> Thanh toán</a>
-                                <a href="/tai-khoan/gio-hang/{{ $item->id }}/xoa" class="btn btn-outline-danger mt-2"><i class="icon-cart-add mr-2"></i> Loại bỏ</a>
-                            </div>
+                        <!-- End -->
+                    </div>
+                    <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+                        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Hóa Đơn Tạm Tính </div>
+                        <div class="p-4">
+                            <p class="font-italic mb-4">Chi phí vận chuyển và chi phí bổ sung được tính thêm sau khi tính phí.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Giá</strong><strong>390.000.00 VNĐ</strong></li>
+                                <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Thuế</strong><strong>0.00 VNĐ</strong></li>
+                                <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Phí Ship</strong><strong>0.00 VNĐ</strong></li>
+                                <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Tổng</strong>
+                                    <h5 class="font-weight-bold">390.000.00 VNĐ</h5>
+                                </li>
+                                <li class="d-flex justify-content-between py-3 border-top"><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Tiến hành thanh toán đơn hàng</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            @endforeach
+            </div>
         </div>
     </div>
-</div>
 
 @endsection

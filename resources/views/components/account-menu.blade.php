@@ -7,11 +7,11 @@
             <span class="{{ request()->segment(2) == '' ? 'text-success' : '' }}">Thông tin tài khoản</span>
         </a>
     </li>
-    <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'gio-hang' ? 'bg-light' : 'lh-condensed' }}">
-        <a href="/tai-khoan/gio-hang">
-            <div class="{{ request()->segment(2) == 'gio-hang' ? 'text-success' : '' }}">
+    <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'don-hang' ? 'bg-light' : 'lh-condensed' }}">
+        <a href="/tai-khoan/don-hang">
+            <div class="{{ request()->segment(2) == 'don-hang' ? 'text-success' : '' }}">
                 <h6 class="my-0">Đơn hàng chờ xử lý</h6>
-                <small class="{{ request()->segment(2) == 'gio-hang' ? '' : 'text-muted' }}">bạn đang có {{ request()->user()->Order()->where('status', 0)->count() }} đơn hàng chờ xử lý</small>
+                <small class="{{ request()->segment(2) == 'don-hang' ? '' : 'text-muted' }}">bạn đang có {{ request()->user()->Order()->where('status', 0)->count() }} đơn hàng chờ xử lý</small>
             </div>
         </a>
     </li>

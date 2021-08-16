@@ -2,7 +2,7 @@
     <div class="item px-0 px-md-4 pt-0 pt-md-4 py-4">
         <div class="row justify-content-center">
             <div class="col-12">
-                <div class="title text-center py-4">
+                <div class="title title-ct text-center py-4">
                     @foreach ($item["options"]["title"] as $val)
                         <h5 class="hd1">{{ $val["name"] }}</h5>
                     @endforeach
@@ -10,22 +10,26 @@
             </div>
             <div class="col-md-12 position-relative">
                 <div class="row g-0 justify-content-center g-lg-4">
-                    @foreach ($item["options"]["desc"] as $desc)
+
+                    @foreach ($item['options']['desc'] as $desc)
                         <div class="col-sm-12 col-md-6 col-xl-4 px-4 position-relative bg-ctm">
-                            <div class="image">
-                                <div class="avatar" style="background-image: url('{{ $desc["avatar"] }}');"></div>
-                            </div>
-                            <div class="title position-relative">
-                                @foreach ($desc["name"] as $name)
-                                    <h4>{{ $name["name"] }}</h4>
-                                @endforeach
-                            </div>
-                            <div class="desc">
-                                <ul class="list-group">
-                                    @foreach ($desc["desc"] as $desc)
-                                        <li><span>{{ $desc["name"] }}</span></li>
+                            <div class="box-item">
+                                <div class="image">
+                                    <div class="dot-item"></div>
+                                    <img width="170" src="https://stage.thansohocsala.com/{{ $desc["avatar"] }}" alt="">
+                                </div>
+                                <div class="title position-relative">
+                                    @foreach ($desc['name'] as $name)
+                                        <h4>{{ $name['name'] }}</h4>
                                     @endforeach
-                                </ul>
+                                </div>
+                                <div class="desc">
+                                    <ul class="list-group">
+                                        @foreach ($desc['desc'] as $desc)
+                                            <li><span>{{ $desc['name'] }}</span></li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     @endforeach
@@ -69,7 +73,7 @@
             </div>
             <div class="col-12 text-center mb-4">
                 <div class="btn-ketqua text-center mr-0">
-                    <a href="/tai-khoan/gio-hang/{{ $item->slug }}">
+                    <a href="/gio-hang/{{ $item->slug }}">
                         <button>Mua Ngay</button>
                     </a>
                 </div>

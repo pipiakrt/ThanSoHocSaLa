@@ -14,7 +14,7 @@
 
     <x-chi-so />
 
-    <x-sanpham />
+    <x-san-pham />
 
 </div>
 
