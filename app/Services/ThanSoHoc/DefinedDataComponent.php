@@ -28,7 +28,7 @@ class DefinedDataComponent
                 break;
             case 4:
             case 22:
-                $aryNumber = [0, 34, 61];
+                $aryNumber = [0, 33, 60];
                 break;
             case 5:
                 $aryNumber = [0, 32, 59];

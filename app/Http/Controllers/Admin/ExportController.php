@@ -52,14 +52,20 @@ class ExportController extends Controller
             'CHU_KY_REN_LUYEN'  =>  [],
             'NAM_THAN_SO'  =>  []
         ];
-        foreach ($aryThanSo['thapDinhCao'][4] as $dinhCao) {
-            $aryReturn['LUAN_GIAI']['DINH_CAO'][] = $this->getContents('TDC', $dinhCao);
+        $giaiDoan = [
+            "<b>Giai đoạn 1: từ 0 đến " . $aryThanSo['thapDinhCao'][0][3] . " tuổi.</b>",
+            "<b>Giai đoạn 2: từ " . ($aryThanSo['thapDinhCao'][0][3] + 1) . " đến " . $aryThanSo['thapDinhCao'][0][4] . " tuổi.</b>",
+            "<b>Giai đoạn 3: từ " . ($aryThanSo['thapDinhCao'][0][4] + 1) . " đến " . $aryThanSo['thapDinhCao'][1][2] . " tuổi.</b>",
+            "<b>Giai đoạn 4: từ " . ($aryThanSo['thapDinhCao'][1][2] + 1) . " đến " . $aryThanSo['thapDinhCao'][2][1] . " tuổi.</b>",
+        ];
+        foreach ($aryThanSo['thapDinhCao'][4] as $key => $dinhCao) {
+            $aryReturn['LUAN_GIAI']['DINH_CAO'][] = $giaiDoan[$key] . $this->getContents('TDC', $dinhCao);
         }
-        foreach ($aryThanSo['thapThachThuc'][4] as $tThachThuc) {
-            $aryReturn['LUAN_GIAI']['THACH_THUC'][] = $this->getContents('TTT', $tThachThuc);
+        foreach ($aryThanSo['thapThachThuc'][4] as $key => $tThachThuc) {
+            $aryReturn['LUAN_GIAI']['THACH_THUC'][] = $giaiDoan[$key] . $this->getContents('TTT', $tThachThuc);
         }
-        $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = '- Chu kỳ 1: 0-' . $aryThanSo['chuKyRenLuyen'][3][1] . ' tuổi: ' . $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][0]);
-        $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = '- Chu kỳ 2: ' . ($aryThanSo['chuKyRenLuyen'][3][1] + 1) . '-' . $aryThanSo['chuKyRenLuyen'][3][2] . ' tuổi: ' . $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][1]);
+        $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = '- Chu kỳ 1: 0-' . ($aryThanSo['chuKyRenLuyen'][3][1] - 1) . ' tuổi: ' . $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][0]);
+        $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = '- Chu kỳ 2: ' . $aryThanSo['chuKyRenLuyen'][3][1] . '-' . ($aryThanSo['chuKyRenLuyen'][3][2] - 1) . ' tuổi: ' . $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][1]);
         $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = '- Chu kỳ 3: ' . $aryThanSo['chuKyRenLuyen'][3][2] . '++ tuổi: ' . $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][2]);
 
         $flipNamThanSo = array_flip($aryThanSo['bieuDoNamThanSo']);
@@ -491,7 +497,7 @@ class ExportController extends Controller
             [
                 'Chỉ Số Lặp',
                 2,
-                isset($aryReturn['CHI_SO_LAP']) ? "" : $aryReturn['CHI_SO_LAP'] =  null
+                isset($aryReturn['CHI_SO_LAP']) ? $aryReturn['CHI_SO_LAP'] : $aryReturn['CHI_SO_LAP'] =  null
             ],
             [
                 'Biểu Đồ Năng Lực & Biểu Đồ Birth Chart',
@@ -952,14 +958,14 @@ class ExportController extends Controller
         $pdf->Circle(100,90,30, 230, 320, null, $style6);
         $pdf->SetTextColor(0, 0, 255);
         $pdf->Text(88, 55, 'Chu kỳ 1');
-        $pdf->Text(87, 60, '('.$chiSoRenluyen[0].'-'.$chiSoRenluyen[1].' tuổi)');
-        $pdf->Text(87, 65, $aryData[1].' - Tháng Sinh');
+        $pdf->Text(87, 60, '('.$chiSoRenluyen[0].'-'. ($chiSoRenluyen[1] - 1) .' tuổi)');
+        $pdf->Text(87, 65, "     số " . $aryData[1]);
         $pdf->Text(120, 91, 'Chu kỳ 2');
-        $pdf->Text(118, 96, '('.($chiSoRenluyen[1] + 1).'-'.$chiSoRenluyen[2].' tuổi)');
-        $pdf->Text(118, 101, $aryData[0].' - Ngày Sinh');
+        $pdf->Text(118, 96, '('.$chiSoRenluyen[1].'-'. ($chiSoRenluyen[2] - 1) .' tuổi)');
+        $pdf->Text(118, 101, "     số " . $aryData[0]);
         $pdf->Text(65, 95, 'Chu kỳ 3');
         $pdf->Text(65, 100, '('.$chiSoRenluyen[2].'++ tuổi)');
-        $pdf->Text(65, 105, $aryData[2].' - Năm Sinh');
+        $pdf->Text(65, 105, "     số " . $aryData[2]);
         $pdf->SetTextColor(0, 0, 0, 100);
     }
 

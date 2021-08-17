@@ -60,7 +60,8 @@ class ProductController extends Controller
         $user = $request->user();
 
         foreach ($products as $item) {
-            if ($item["status"] == true) {
+            $check = $user->Order->where('product_id', $item["id"])->first();
+            if ($item["status"] == true && !$check) {
                 $order = Order::create([
                     'user_id' => $user->id,
                     'product_id' => $item["id"],

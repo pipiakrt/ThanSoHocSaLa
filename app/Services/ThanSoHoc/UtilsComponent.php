@@ -156,11 +156,6 @@ class UtilsComponent
         $ThangS = $this->convertNumber($aryBirthDay[1], false);
         $NamS = $this->convertNumber($aryBirthDay[2], false);
 
-        //
-        if($NamS == 22) {
-            $NamS = 4;
-        }
-
         $aryBirthDayNumber = $this->getNumberFromBirthday($newBirthDay);
         // convert name
         list($aryVowel, $aryNoVowel, $aryNameToNumber) = $this->convertName($name);
@@ -420,6 +415,11 @@ class UtilsComponent
         $dinh_2 = $this->convertNumber($this->convertNumberNegative($NgaySinh - $NamSinh));
         $dinh_3 = $this->convertNumber($this->convertNumberNegative($dinh_1 - $dinh_2), true, true);
         $dinh_4 = $this->convertNumber($this->convertNumberNegative($ThangSinh - $NamSinh), true, true);
+        $ThangSinh = $this->convertNumberThapTT($ThangSinh);
+        $NgaySinh = $this->convertNumberThapTT($NgaySinh);
+        $NamSinh = $this->convertNumberThapTT($NamSinh);
+        $dinh_1 = $this->convertNumberThapTT($dinh_1);
+        $dinh_2 = $this->convertNumberThapTT($dinh_2);
         return [
             [$ThangSinh, $NgaySinh, $NamSinh, $gd_tuoi_1, $gd_tuoi_2],
             [$dinh_1, $dinh_2, $gd_tuoi_3],
@@ -446,6 +446,12 @@ class UtilsComponent
         }
         if ($ThangSinh == 22) {
             $ThangSinh = 4;
+        }
+        if ($NamSinh == 11) {
+            $NamSinh = 2;
+        }
+        if ($NamSinh == 22) {
+            $NamSinh = 4;
         }
         list($gd_tuoi_1, $gd_tuoi_2, $gd_tuoi_3, $gd_tuoi_4) = $this->getGiaiDoanTuoi($duongDoi);
 
@@ -567,6 +573,22 @@ class UtilsComponent
 
         if ($isCompact)
             return $this->convertThachThuc($total, $isCompact, $isSpecial);
+        return $total;
+    }
+
+
+    public function convertNumberThapTT($number, $isCompact = true, $isSpecial = false)
+    {
+        $number = (int)$number;
+        if ($number < 10) {
+            return $number;
+        }
+
+        $aryNumber = str_split($number);
+        $total = array_sum($aryNumber);
+
+        if ($isCompact)
+            return $this->convertNumberThapTT($total, $isCompact);
         return $total;
     }
 
