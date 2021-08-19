@@ -23,6 +23,7 @@ class CreateTraCuusTable extends Migration
             $table->string('birthdate')->nullable();
             $table->string('address')->nullable();
             $table->boolean('type')->default(0)->index();
+            $table->string('path')->nullable();
             $table->json('data')->nullable();
             $table->timestamps();
         });

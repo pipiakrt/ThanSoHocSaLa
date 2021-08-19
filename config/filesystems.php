@@ -44,21 +44,6 @@ return [
             'visibility' => 'public',
         ],
 
-        'ftp_storage' => [
-            'driver' => 'ftp',
-            'host' => env('FTP_HOST'),
-            'username' => env('FTP_USERNAME'),
-            'password' => env('FTP_PASSWORD'),
-            'url' => env('FTP_DOMAIN'),
-
-            // Optional FTP Settings...
-            'port' => 21,
-            'root' => 'public_html/storage/app/public',
-            'passive' => true,
-            'ssl' => true,
-            'timeout' => 60,
-        ],
-
         'ftp' => [
             'driver' => 'ftp',
             'host' => env('FTP_HOST'),
@@ -66,9 +51,8 @@ return [
             'password' => env('FTP_PASSWORD'),
             'url' => env('FTP_DOMAIN'),
 
-            // Optional FTP Settings...
             'port' => 21,
-            'root' => 'public_html/public/uploads',
+            'root' => 'public_html/storage/PDF',
             'passive' => true,
             'ssl' => true,
             'timeout' => 60,

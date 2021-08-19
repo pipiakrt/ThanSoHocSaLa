@@ -40,13 +40,26 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="filemanager">
+        <div class="modal-dialog modal-full min-vh-100">
+            <div class="modal-content min-vh-100">
+                <div class="modal-body">
+                    <FileManage :getUrl="true" @url="setUrl($event)"/>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </template>
 <script>
 import Breadcrumb from '../../components/breadcrumb/index'
+import FileManage from '../../components/FileManager/index'
+var typeimage = 'avatar';
 
 export default {
-    components: { Breadcrumb },
+    components: {
+        Breadcrumb, FileManage
+    },
     data() {
         return {
             subHeader: {
@@ -75,6 +88,18 @@ export default {
             this.id = res.data.data.id
             this.page_description = res.data.data.title
             KTUtil.ready(function () {
+                var HelloButton = function (context) {
+                    var ui = $.summernote.ui;
+                    var button = ui.button({
+                        contents: '<i class="fa far fa-folder"/>',
+                        tooltip: 'Folder',
+                        click: function () {
+                            typeimage = 'summernote';
+                            $('#filemanager').modal('show');
+                        }
+                    });
+                    return button.render();
+                }
                 $('.summernote').summernote({
                     height: 500,
                     toolbar: [
@@ -86,14 +111,44 @@ export default {
                         ['color', ['color']],
                         ['para', ['ul', 'ol', 'paragraph']],
                         ['table', ['table']],
+                        ['insert', ['link', 'picture', 'video']],
+                        ['mybutton', ['hello']],
                         ['view', ['fullscreen', 'codeview', 'help']],
-                    ]
+                    ],
+                    buttons: {
+                        hello: HelloButton
+                    },
+                    callbacks: {
+                        onImageUpload: function(files) {
+                            let formdata = new FormData();
+                            formdata.append("file", files[0]);
+                            formdata.append("summernote", true);
+                            axios.post('/api/images', formdata).then(res => {
+                                var image = $('<img>').attr('src', res.data);
+                                $('.summernote').summernote("insertNode", image[0]);
+                            })
+                        },
+                    },
                 });
                 $('.summernote').summernote('code', res.data.data.content)
             });
         })
     },
     methods: {
+        setTypeGetImg() {
+            typeimage = 'avatar'
+        },
+        setUrl(path) {
+            console.log(path)
+            $('#filemanager').modal('hide');
+            if (typeimage == 'summernote') {
+                var image = $('<img>').attr('src', path);
+                $('.summernote').summernote("insertNode", image[0]);
+            }
+            else {
+                this.avatar = path
+            }
+        },
         async submit() {
             let params = {
                 page_description: this.page_description,

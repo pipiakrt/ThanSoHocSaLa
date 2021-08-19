@@ -15,6 +15,7 @@ class TraCuu extends Model
         'phone',
         'code',
         'type',
+        'path',
         'data',
         'birthdate',
         'address',

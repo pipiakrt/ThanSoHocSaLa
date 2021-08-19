@@ -173,7 +173,7 @@ class UtilsComponent
         }
         $suMenh = $this->convertNumber($suMenhNoCompact);
         $tamHonNoCompact = $this->convertNumber(array_sum($aryVowel), false);
-        $tamHon = $this->convertNumber(array_sum($aryVowel));
+        $tamHon = $this->convertThachThuc(array_sum($aryVowel));
         $nhanCachNoCompact = $this->convertNumber(array_sum($aryNoVowel), false);
         $nhanCach = $this->convertNumber(array_sum($aryNoVowel));
         //
@@ -191,7 +191,7 @@ class UtilsComponent
                 'thapDinhCao' => $thapDinhCao
             ];
         }
-        $thachThuc = $this->getThachThuc($duongDoiNoCompact, $suMenhNoCompact, $tamHonNoCompact, $nhanCachNoCompact);
+        $thachThuc = $this->getThachThuc($totalBirthday, $suMenhNoCompact, $tamHonNoCompact, $nhanCachNoCompact);
         $canBangDuongDoiSuMenh = $this->convertNumberNegative($duongDoi - $suMenh);
         $truongThanh = $this->convertNumber($duongDoi + $suMenh);
         $canBangTamHonNhanCach = $this->convertNumberNegative($tamHon - $nhanCach);
@@ -411,10 +411,10 @@ class UtilsComponent
     private function getThapThachThuc ($NgaySinh, $ThangSinh, $NamSinh, $duongDoi)
     {
         list($gd_tuoi_1, $gd_tuoi_2, $gd_tuoi_3, $gd_tuoi_4) = $this->getGiaiDoanTuoi($duongDoi);
-        $dinh_1 = $this->convertNumber($this->convertNumberNegative($ThangSinh - $NgaySinh));
-        $dinh_2 = $this->convertNumber($this->convertNumberNegative($NgaySinh - $NamSinh));
-        $dinh_3 = $this->convertNumber($this->convertNumberNegative($dinh_1 - $dinh_2), true, true);
-        $dinh_4 = $this->convertNumber($this->convertNumberNegative($ThangSinh - $NamSinh), true, true);
+        $dinh_1 = $this->convertNumberNegative($this->convertNumberThapTT($ThangSinh) - $this->convertNumberThapTT($NgaySinh));
+        $dinh_2 = $this->convertNumberNegative($this->convertNumberThapTT($NgaySinh) - $this->convertNumberThapTT($NamSinh));
+        $dinh_3 = $this->convertNumberNegative($dinh_1 - $dinh_2);
+        $dinh_4 = $this->convertNumberNegative($this->convertNumberThapTT($ThangSinh) - $this->convertNumberThapTT($NamSinh));
         $ThangSinh = $this->convertNumberThapTT($ThangSinh);
         $NgaySinh = $this->convertNumberThapTT($NgaySinh);
         $NamSinh = $this->convertNumberThapTT($NamSinh);

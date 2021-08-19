@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-use PDF;
 use App\Services\ThanSoHoc\DefinedDataComponent;
 use App\Services\ThanSoHoc\UtilsComponent;
+use Illuminate\Support\Facades\Http;
+use App\Http\Controllers\Controller;
+use App\Jobs\guiLuanGiaiPDF as Job;
 use App\Services\ThanSoHoc\MYPDF;
 use App\Models\ThanSo as Model;
-use App\Jobs\guiLuanGiaiPDF as Job;
-use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
+use PDF;
+use Response;
+
 
 class ExportController extends Controller
 {
@@ -20,14 +24,74 @@ class ExportController extends Controller
         $user = $request->user();
         $dataPost = $request->only('name', 'birthday');
 
-        $count = $user->Order->where('status', 1)->count();
-        if ($count == 0) {
-            return redirect('/tai-khoan')->with('error', 'Yêu cầu mua tối thiểu một gói sản phẩm!');
-        }
         if ($user->License->number == 0) {
             return redirect('/tai-khoan')->with('error', 'Số lượt tra cứu nâng cao của bạn đã hết, nâng cấp hoạc mua thêm gói để được tiếp tục tra cứu!');
         }
 
+        $check = $request->user()->TraCuu()->where([
+            'name' => $dataPost['name'],
+            'birthdate' => $dataPost['birthday'],
+        ])->first();
+
+        if ($check) {
+            return view('PDF.index')->with('result', $check);
+            return response()->download(public_path("uploads$check->path"), 'Test File', ['Content-Type' => 'application/pdf'], 'inline');
+        }
+
+        $data = $user->TraCuu()->create([
+            'code' => Str::random(60),
+            'name' => $dataPost['name'],
+            'birthdate' => $dataPost['birthday'],
+            'data' => $this->tinhtoan($dataPost),
+            'email' => $user->email,
+            'phone' => $user->phone,
+            'path' => '/' . $user->id . '/' . time() . '.pdf',
+            'type' => 1,
+        ]);
+        $user->License()->decrement('number');
+        return view('PDF.index')->with('result', $data);
+
+        Http::post("http://localhost:3000", [
+            "name" => $data->name,
+            "birthdate" => $data->birthdate,
+            "email" => $data->email,
+            "phone" => $data->phone,
+            "path" => $data->path,
+            "data" => $data->data,
+        ]);
+        $file = Http::get("http://localhost:5000/view");
+
+        Storage::put($data->path, $file->body());
+
+        return response()->download(public_path("uploads$data->path"), 'Test File', ['Content-Type' => 'application/pdf'], 'inline');
+    }
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function ketqualichsutracuu(Request $request, $id)
+    {
+        $ketqua = $request->user()->TraCuu()->where('code', $id)->first();
+        if (!$ketqua) {
+            return view('errors.404');
+        }
+        else if ($request->type == "sendmail") {
+            // Job::dispatch($dulieu, $data);
+            return redirect('/tai-khoan/lich-su-tra-cuu')->with('msg', "Hệ thống đã gửi file luận giải vào email $ketqua->email. cảm ơn bạn đã sử dụng dụng vụ của Thần Số Học Sala.");
+        }
+        else if ($request->type == "download") {
+            return Storage::download($ketqua->path);
+        }
+        else {
+            return view('PDF.index')->with('result', $ketqua);
+            return response()->download(public_path("uploads$ketqua->path"), 'Test File', ['Content-Type' => 'application/pdf'], 'inline');
+        }
+    }
+
+    public function tinhtoan($dataPost) {
         // get thanso
         $dataDefineComponent = new DefinedDataComponent();
         $name = $dataPost['name'];
@@ -110,237 +174,7 @@ class ExportController extends Controller
         $aryReturn['SU_MENH'] = $this->getContents('SM', $aryThanSo['suMenh']);
         $aryReturn['CAN_BANG_DD_SM'] = $this->getContents('CDS', $aryThanSo['canBangDuongDoiSuMenh']);
         $aryReturn['TRUONG_THANH'] = $this->getContents('TRT', $aryThanSo['truongThanh']);
-
-        $user->TraCuu()->create([
-            'code' => Str::random(60),
-            'name' => $dataPost['name'],
-            'birthdate' => $dataPost['birthday'],
-            'data' => $aryReturn,
-            'email' => $user->email,
-            'phone' => $user->phone,
-            'type' => 1,
-        ]);
-        $user->License()->decrement('number');
-
-        // end
-        $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
-        $this->addFont($pdf, 12);
-        // set document information
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('thansohocsala.com');
-        $pdf->SetTitle($buildName . ' - Giải mã chuyên sâu');
-        $pdf->SetSubject($buildName . ' - Giải mã chuyên sâu');
-
-        $pdf->setFooterData(array(0, 64, 0), array(0, 64, 128));
-        // set header and footer fonts
-        $pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
-        $pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
-
-        // set default monospaced font
-        $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
-
-        // set margins
-        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
-        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
-
-        // set auto page breaks
-        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-
-        // set image scale factor
-        $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-
-        // ---------------------------------------------------------
-
-        // set default font subsetting mode
-        $pdf->setFontSubsetting(true);
-        $this->addFont($pdf, 13);
-        $pdf->setCellHeightRatio(2);
-        $pdf->AddPage();
-        $this->addFont($pdf, 9);
-        $html = <<<EOD
-            <h2 style="text-align: center;">THƯ NGỎ</h2>
-        EOD;
-                $html .= <<<EOD
-                    <p>Bạn Thân Mến!<br/> <br/>
-                        Bạn đang cầm trên tay “Cuốn Sách Cuộc Đời” của riêng bạn. Trước khi khám phá bản thân, hãy chắc rằng bạn đã nắm vững những thông tin cơ bản dưới đây:<br/> <br/>
-                        Thứ nhất, bài báo cáo Thần Số Học được chia làm 3 phần với 19 chỉ số, các chỉ số đại diện cho: Tính cách, Năng lực cùng những Ưu điểm và Hạn chế bên trong con người bạn. Từ đó, bạn có thể hình dung được “bức tranh” cuộc đời mình một cách toàn diện, để định hướng và phát huy năng lực vượt trội của chính bản thân mình.<br/> <br/>
-                        Thứ hai, Thần Số Học là một bộ môn khoa học, không phải là duy tâm và chúng không dự đoán được tương lai. Thần Số Học chỉ cho bạn thấy tiềm năng có trong con người bạn để phát huy, còn việc có phát huy được nó hay không phụ thuộc vào sự nỗ lực và rèn luyện của chính bạn. Thần Số Học cung cấp cho bạn một cái nhìn tổng quan, tuy nhiên còn phụ thuộc vào nhiều yếu tố: ý chí, sự lựa chọn hay các yếu tố môi trường nằm ngoài tầm kiểm soát của bạn.<br/><br/>
-                        Thứ ba, bạn hoàn hảo theo cách của mình nên không cần so sánh các chỉ số của mình với người khác, mỗi người có một ưu điểm vượt trội riêng và bạn cũng thế. Tích cực hay tiêu cực là do sự nhận thức và cân bằng liên tục của bạn trong đời sống. Chuyên gia của Sala Group sẽ giúp bạn thấy rõ những chuyển đổi thú vị đó.<br/> <br/>
-                        Cuối cùng, xin hãy nhớ rằng Sức mạnh và Tiềm năng của bạn tuyệt vời hơn bạn nghĩ rất nhiều. Hành trình khám phá và phát triển bản thân chính là đích đến và lẽ sống của mỗi người.<br/> <br/>
-                        Chúc cho tất cả chúng ta đều có một cuộc sống Hạnh Phúc và Bình An!.<br/> <br/>
-                        Thân ái!
-                    </p>
-        EOD;
-                $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
-                $pdf->AddPage();
-                $html = <<<EOD
-                    <h2 style="text-align: center;">Đôi nét về lịch sử Thần Số Học</h2>
-        EOD;
-                $html .= <<<EOD
-                    <p>
-                        Thần Số Học (Numerology) là một hệ thống cổ xưa đã được sử dụng hàng ngàn năm, trải dài trên toàn cầu. Các ghi chép số học đã được tìm thấy ở Babylon và Ai Cập, và có bằng chứng sự tồn tại của nó cách đây hàng nghìn năm ở Hy Lạp, La Mã, Nhật Bản và Trung Quốc.<br/> <br/>
-                        Người Chaldean hay được gọi là người Babylon đã nghiên cứu sâu về cả chiêm tinh học, số học và thực sự là những người đầu tiên xác định mối tương quan giữa các con số với dao động của vũ trụ nên còn được gọi là Chaldean Numerology. Qua nhiều thời đại, số học đã phát triển và được biết đến với tên tuổi của Pythagoras.<br/> <br/>
-                        Ông là một triết gia, nhà toán học người Hy Lạp sống trong thời đại 590 trước công nguyên đã biết đến Chaldean và xây dựng trên nó, bổ xung các triết lý và toán học của riêng mình do đó hình thành hệ số Pythagoras. Theo thuyết học Pythagoras, mọi con số, bất kể lớn hay nhỏ luôn có thể rút gọn được thành 1 chữ số từ 1 đến 9, và mỗi chữ số rút gọn đó mang rung động vũ trụ riêng.<br/><br/>
-                        Vào đầu những năm 1900, tiến sĩ Julian Stenton đã ghi lại các yếu tố khác nhau của số học và phổ biến nó, đặt ra thuật ngữ "Numerology". Từ những năm 1970 số học đã được mọi người ở mọi tầng lớp xã hội sử dụng như một công cụ tự trợ giúp được cá nhân hóa. "Các con số không nói dối" là một tuyên bố sâu sắc của các nhà nghiên cứu, khẳng định con số biểu lộ tính cách và các sự kiện mà con người trải qua với độ chính xác đáng kinh ngạc.<br/> <br/>
-                        Ngày nay, Numerology được thực hành trên khắp thế giới và được hàng triệu người sử dụng để giúp cho cuộc sống trở nên tốt đẹp hơn.
-                    </p>
-        EOD;
-                $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
-                $pdf->AddPage();
-                $html = <<<EOD
-                    <h2 style="text-align: center;">Học viện cổ hoc Sala</h2>
-        EOD;
-                $html .= <<<EOD
-                    <p>
-                        Dựa trên ý nghĩa cao đẹp của Sala - loài hoa linh thiêng biểu tượng của Phật giáo. HỌC VIỆN CỔ HỌC SALA mang trong mình sứ mệnh tạo niềm vui, sự an lạc và thịnh vượng. Chúng tôi mong muốn mang ứng dụng tinh hoa của cổ học vào cuộc sống một cách đơn giản và hiệu quả nhất.<br/> <br/>
-                        HỌC VIỆN CỔ HỌC SALA tự hào là cầu nối đưa Thần Số Học đến gần hơn với mỗi cá nhân, mỗi gia đình và mỗi doanh nghiệp. Tại đây chúng tôi cung cấp các kiến thức giúp hỗ trợ phát triển toàn diện bản thân cho từng cá nhân, gia đình hay doanh nghiệp có thể hiểu và ứng dụng được Thần Số Học trong việc xây dựng bản đồ kế hoạch cuộc đời, có định hướng tương lai rõ ràng để gặt hái thành công toàn diện.<br/> <br/>
-                        Với Đội ngũ chuyên gia tư vấn chuyên nghiệp, nhiệt tình với nhiều năng kinh nghiệm trong việc tham vấn và ứng dụng Thần Số Học vào đời sống. HỌC VIỆN CỔ HỌC SALA mong muốn lan tỏa giá trị của Thần Số Học đến với cộng đồng từ đó xây dựng một Việt Nam Thịnh Vượng và Phát Triển.<br/> <br/>
-                    </p>
-        EOD;
-                $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
-                $pdf->AddPage();
-                // set bookmark
-                $this->setPageBookmark($pdf, $aryReturn);
-                $this->setTOCPage($pdf);
-                // build data
-                $html = <<<EOD
-        EOD;
-
-        // Print text using writeHTMLCell()
-        $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
-
-        // ---------------------------------------------------------
-
-        // Close and output PDF document
-        // This method has several options, check the source code documentation for more information.
-        $pdf->Output("Giai-ma-cuoc-doi-$buildNameFile.pdf", 'I');
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function ketqualichsutracuu(Request $request, $id)
-    {
-        $dulieu = $request->user()->TraCuu()->where('code', $id)->first();
-        if (!$dulieu) {
-            return view('errors.404');
-        }
-        $aryReturn = $dulieu->data;
-        $user = [
-            'name' => $dulieu->name,
-            'birthdate' => $dulieu->birthdate,
-        ];
-        $dataDefineComponent = new DefinedDataComponent();
-        $name = $dulieu['name'];
-        $buildName = $dataDefineComponent->convertAccentedCharacters($name);
-        $buildNameFile = str_replace(' ', '-', $buildName);
-
-        // end
-        $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
-        $this->addFont($pdf, 12);
-        // set document information
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('thansohocsala.com');
-        $pdf->SetTitle($buildName . ' - Giải mã chuyên sâu');
-        $pdf->SetSubject($buildName . ' - Giải mã chuyên sâu');
-
-        $pdf->setFooterData(array(0, 64, 0), array(0, 64, 128));
-        // set header and footer fonts
-        $pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
-        $pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
-
-        // set default monospaced font
-        $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
-
-        // set margins
-        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
-        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
-
-        // set auto page breaks
-        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-
-        // set image scale factor
-        $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-
-        // ---------------------------------------------------------
-
-        // set default font subsetting mode
-        $pdf->setFontSubsetting(true);
-        $this->addFont($pdf, 13);
-        $pdf->setCellHeightRatio(2);
-        $pdf->AddPage();
-        $this->addFont($pdf, 9);
-        $html = <<<EOD
-            <h2 style="text-align: center;">THƯ NGỎ</h2>
-        EOD;
-                $html .= <<<EOD
-                    <p>Bạn Thân Mến!<br/> <br/>
-                        Bạn đang cầm trên tay “Cuốn Sách Cuộc Đời” của riêng bạn. Trước khi khám phá bản thân, hãy chắc rằng bạn đã nắm vững những thông tin cơ bản dưới đây:<br/> <br/>
-                        Thứ nhất, bài báo cáo Thần Số Học được chia làm 3 phần với 19 chỉ số, các chỉ số đại diện cho: Tính cách, Năng lực cùng những Ưu điểm và Hạn chế bên trong con người bạn. Từ đó, bạn có thể hình dung được “bức tranh” cuộc đời mình một cách toàn diện, để định hướng và phát huy năng lực vượt trội của chính bản thân mình.<br/> <br/>
-                        Thứ hai, Thần Số Học là một bộ môn khoa học, không phải là duy tâm và chúng không dự đoán được tương lai. Thần Số Học chỉ cho bạn thấy tiềm năng có trong con người bạn để phát huy, còn việc có phát huy được nó hay không phụ thuộc vào sự nỗ lực và rèn luyện của chính bạn. Thần Số Học cung cấp cho bạn một cái nhìn tổng quan, tuy nhiên còn phụ thuộc vào nhiều yếu tố: ý chí, sự lựa chọn hay các yếu tố môi trường nằm ngoài tầm kiểm soát của bạn.<br/><br/>
-                        Thứ ba, bạn hoàn hảo theo cách của mình nên không cần so sánh các chỉ số của mình với người khác, mỗi người có một ưu điểm vượt trội riêng và bạn cũng thế. Tích cực hay tiêu cực là do sự nhận thức và cân bằng liên tục của bạn trong đời sống. Chuyên gia của Sala Group sẽ giúp bạn thấy rõ những chuyển đổi thú vị đó.<br/> <br/>
-                        Cuối cùng, xin hãy nhớ rằng Sức mạnh và Tiềm năng của bạn tuyệt vời hơn bạn nghĩ rất nhiều. Hành trình khám phá và phát triển bản thân chính là đích đến và lẽ sống của mỗi người.<br/> <br/>
-                        Chúc cho tất cả chúng ta đều có một cuộc sống Hạnh Phúc và Bình An!.<br/> <br/>
-                        Thân ái!
-                    </p>
-        EOD;
-                $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
-                $pdf->AddPage();
-                $html = <<<EOD
-                    <h2 style="text-align: center;">Đôi nét về lịch sử Thần Số Học</h2>
-        EOD;
-                $html .= <<<EOD
-                    <p>
-                        Thần Số Học (Numerology) là một hệ thống cổ xưa đã được sử dụng hàng ngàn năm, trải dài trên toàn cầu. Các ghi chép số học đã được tìm thấy ở Babylon và Ai Cập, và có bằng chứng sự tồn tại của nó cách đây hàng nghìn năm ở Hy Lạp, La Mã, Nhật Bản và Trung Quốc.<br/> <br/>
-                        Người Chaldean hay được gọi là người Babylon đã nghiên cứu sâu về cả chiêm tinh học, số học và thực sự là những người đầu tiên xác định mối tương quan giữa các con số với dao động của vũ trụ nên còn được gọi là Chaldean Numerology. Qua nhiều thời đại, số học đã phát triển và được biết đến với tên tuổi của Pythagoras.<br/> <br/>
-                        Ông là một triết gia, nhà toán học người Hy Lạp sống trong thời đại 590 trước công nguyên đã biết đến Chaldean và xây dựng trên nó, bổ xung các triết lý và toán học của riêng mình do đó hình thành hệ số Pythagoras. Theo thuyết học Pythagoras, mọi con số, bất kể lớn hay nhỏ luôn có thể rút gọn được thành 1 chữ số từ 1 đến 9, và mỗi chữ số rút gọn đó mang rung động vũ trụ riêng.<br/><br/>
-                        Vào đầu những năm 1900, tiến sĩ Julian Stenton đã ghi lại các yếu tố khác nhau của số học và phổ biến nó, đặt ra thuật ngữ "Numerology". Từ những năm 1970 số học đã được mọi người ở mọi tầng lớp xã hội sử dụng như một công cụ tự trợ giúp được cá nhân hóa. "Các con số không nói dối" là một tuyên bố sâu sắc của các nhà nghiên cứu, khẳng định con số biểu lộ tính cách và các sự kiện mà con người trải qua với độ chính xác đáng kinh ngạc.<br/> <br/>
-                        Ngày nay, Numerology được thực hành trên khắp thế giới và được hàng triệu người sử dụng để giúp cho cuộc sống trở nên tốt đẹp hơn.
-                    </p>
-        EOD;
-                $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
-                $pdf->AddPage();
-                $html = <<<EOD
-                    <h2 style="text-align: center;">Học viện cổ hoc Sala</h2>
-        EOD;
-                $html .= <<<EOD
-                    <p>
-                        Dựa trên ý nghĩa cao đẹp của Sala - loài hoa linh thiêng biểu tượng của Phật giáo. HỌC VIỆN CỔ HỌC SALA mang trong mình sứ mệnh tạo niềm vui, sự an lạc và thịnh vượng. Chúng tôi mong muốn mang ứng dụng tinh hoa của cổ học vào cuộc sống một cách đơn giản và hiệu quả nhất.<br/> <br/>
-                        HỌC VIỆN CỔ HỌC SALA tự hào là cầu nối đưa Thần Số Học đến gần hơn với mỗi cá nhân, mỗi gia đình và mỗi doanh nghiệp. Tại đây chúng tôi cung cấp các kiến thức giúp hỗ trợ phát triển toàn diện bản thân cho từng cá nhân, gia đình hay doanh nghiệp có thể hiểu và ứng dụng được Thần Số Học trong việc xây dựng bản đồ kế hoạch cuộc đời, có định hướng tương lai rõ ràng để gặt hái thành công toàn diện.<br/> <br/>
-                        Với Đội ngũ chuyên gia tư vấn chuyên nghiệp, nhiệt tình với nhiều năng kinh nghiệm trong việc tham vấn và ứng dụng Thần Số Học vào đời sống. HỌC VIỆN CỔ HỌC SALA mong muốn lan tỏa giá trị của Thần Số Học đến với cộng đồng từ đó xây dựng một Việt Nam Thịnh Vượng và Phát Triển.<br/> <br/>
-                    </p>
-        EOD;
-                $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
-                $pdf->AddPage();
-                // set bookmark
-                $this->setPageBookmark($pdf, $aryReturn);
-                $this->setTOCPage($pdf);
-                // build data
-                $html = <<<EOD
-        EOD;
-
-        // Print text using writeHTMLCell()
-        $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
-
-        // ---------------------------------------------------------
-
-        // Close and output PDF document
-        // This method has several options, check the source code documentation for more information.
-        if ($request->type == "sendmail") {
-            $data = $pdf->output();
-            Job::dispatch($dulieu, $data);
-            return redirect('/tai-khoan/lich-su-tra-cuu')->with('msg', "Hệ thống đã gửi file luận giải vào email $dulieu->email. cảm ơn bạn đã sử dụng dụng vụ của Thần Số Học Sala.");
-        }
-        else if ($request->type == "download") {
-            $pdf->Output("Giai-ma-cuoc-doi-$buildNameFile.pdf", 'D');
-        }
-        else {
-            $pdf->Output("Giai-ma-cuoc-doi-$buildNameFile.pdf", 'I');
-        }
+        return $aryReturn;
     }
 
     /**

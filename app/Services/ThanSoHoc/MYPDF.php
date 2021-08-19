@@ -26,11 +26,11 @@ class MYPDF extends \TCPDF {
 
     public function Footer() {
 
-        $this->SetY(-15);
+        // $this->SetY(-15);
 
-        $this->SetFont('dejavusans', 'I', 8);
+        // $this->SetFont('dejavusans', 'I', 8);
 
-        $this->Cell(0, 10, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, false, 'C', 0, '', 0, false, 'T', 'M');
+        // $this->Cell(0, 10, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, false, 'C', 0, '', 0, false, 'T', 'M');
 
     }
 
