@@ -160,7 +160,7 @@ class UtilsComponent
         // convert name
         list($aryVowel, $aryNoVowel, $aryNameToNumber) = $this->convertName($name);
         // run compact
-        $totalBirthday = $this->convertNumber($NgayS) + $this->convertNumber($ThangS) + $this->convertNumber($NamS);
+        $totalBirthday = $this->convertNumberGoc($NgayS) + $this->convertNumberGoc($ThangS) + $this->convertNumberGoc($NamS);
         $duongDoiNoCompact = $this->convertNumber($totalBirthday, false);
         $duongDoi = $this->convertNumber($totalBirthday, true, true);
         $suMenhNoCompact = 0;
@@ -535,6 +535,17 @@ class UtilsComponent
         return $this->convertNumberLuanGiai($total, 0);
     }
 
+
+    public function convertNumberGoc($number)
+    {
+        $number = (int) $number;
+        if ($number < 10) {
+            return $number;
+        }
+        $aryNumber = str_split($number);
+        $total = array_sum($aryNumber);
+        return $this->convertNumberGoc($total);
+    }
 
     public function convertNumber($number, $isCompact = true, $isSpecial = false)
     {

@@ -66,14 +66,13 @@
                                                     <input class="form-check-input product" type="checkbox" data-slug="{{ $item["slug"] }}" {{ $item["status"] == true ? "checked" : "" }}>
                                                 </th>
                                                 <th scope="row" class="border-0">
-                                                    <div class="p-2">
+                                                    <div class="p-2 d-flex">
                                                         <img style="margin-right: 10px;" src="{{ $item["image"] }}" alt="" width="70" class="img-fluid rounded shadow-sm">
                                                         <div class="d-inline-block align-middle">
                                                             <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{ $item["name"] }}</a></h5>
-                                                            <span class="d-block" style="font-size: 14px; color: #333333">text lorem ipsum dolor sit amet</span>
-                                                            <span class="d-block" style="font-size: 14px; color: #333333">text lorem ipsum dolor sit amet</span>
-                                                            <span class="d-block" style="font-size: 14px; color: #333333">text lorem ipsum dolor sit amet</span>
-                                                            <span class="d-block" style="font-size: 14px; color: #333333">text lorem ipsum dolor sit amet</span>
+                                                            @foreach ($item["options"]["desc2"]["items"] as $value)
+                                                                <span class="d-block" style="font-size: 14px; color: #333333">{{ $value["name"] }}</span>
+                                                            @endforeach
                                                         </div>
                                                     </div>
                                                 </th>

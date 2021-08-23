@@ -41,12 +41,19 @@
                                 </a>
                             </div>
                             <div class="footer-item">
-                                <a href="/san-pham" class="decoration-revert-hover">
-                                    <span>Sản phẩm</span>
+                                <a href="/tin-tuc/chinh-sach" class="decoration-revert-hover">
+                                    <span>Chính sách</span>
                                 </a>
                             </div>
                             <div class="footer-item">
-                                <span>Chính sách giải quyết khiếu nại</span>
+                                <a href="/tin-tuc/dieu-khoan" class="decoration-revert-hover">
+                                    <span>Điều khoản</span>
+                                </a>
+                            </div>
+                            <div class="footer-item">
+                                <a href="/tin-tuc/huong-dan-mua-hang" class="decoration-revert-hover">
+                                    <span>Hướng dẫn mua hàng</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -110,7 +117,7 @@
         </div>
         <div class="container container-service">
             <div class="content-c">
-                <span>Copyright @ Sala Media Group 2021. All Rights Reserved.</span>
+                <span>@ Sala  Group</span>
             </div>
         </div>
     </div>

@@ -15,13 +15,13 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="/gioi-thieu/than-so-hoc">
-                                        <span>Thần Số Học Pythagoras</span>
+                                    <a class="dropdown-item" href="/gioi-thieu/hoc-vien-co-hoc-sala">
+                                        <span>Về học viện cổ học Sala   </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/gioi-thieu/ve-hoc-vien-co-hoc-sala">
-                                        <span>Học viện cổ học Sala</span>
+                                    <a class="dropdown-item" href="/gioi-thieu/chuyen-gia">
+                                        <span>Về chuyển gia</span>
                                     </a>
                                 </li>
                                 <li>
@@ -193,8 +193,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-mobile" href="/gioi-thieu/ve-hoc-vien-co-hoc-sala">
-                                        <span>Học viện cổ học Sala</span>
+                                    <a class="dropdown-mobile" href="/gioi-thieu/hoc-vien-co-hoc-sala">
+                                        <span>Về học viện cổ học Sala</span>
                                     </a>
                                 </li>
                                 <li>

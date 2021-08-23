@@ -175,7 +175,7 @@
                                 <div class="item-desc"><span>Người số 1 là người năng động, tự lập và cần mẫn. Họ muốn hoàn thành mọi việc một cách tốt nhất, và hầu như luôn thành công.</span></div>
                                 <div class="item-desc"><span>Người số 1 không thích nhờ sự trợ giúp, bởi họ luôn muốn tự mình thực hiện công việc. Khi họ đã quyết định thì rất khó có thể làm họ thay đổi.</span></div>
                                 <div class="item-desc"><span>Họ có thể trở thành doanh nhân hay nhà cải cách xuất sắc nhờ vào lòng đam mê của mình. Họ cũng có thể là bác sĩ, nhân viên chăm sóc người bệnh hay nhà văn, chủ nhà hàng…</span></div>
-                                <div class="item-desc"><span>VD: Đường đời số 1 – Thủ lĩnh : Phạm Nhật Vượng – Chủ tịch tập đoàn Vingroup, Nguyễn Xuân Phúc – Thủ tướng Việt Nam, Hoài Linh – Nghệ sĩ hài ưu tú, Messi – Cầu thủ bóng đá nổi tiếng, Steve Jobs – Cố Chủ tịch tập đoàn Apple,..</span></div>
+                                <div class="item-desc"><span>VD: Đường đời số 1 – Thủ lĩnh : Phạm Nhật Vượng – Chủ tịch tập đoàn Vingroup, Nguyễn Xuân Phúc – Thủ tướng Việt Nam, Messi – Cầu thủ bóng đá nổi tiếng, Steve Jobs – Cố Chủ tịch tập đoàn Apple,..</span></div>
                             </div>
                         </div>
                         <div class="col-12">

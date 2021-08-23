@@ -28,15 +28,15 @@ class ExportController extends Controller
             return redirect('/tai-khoan')->with('error', 'Số lượt tra cứu nâng cao của bạn đã hết, nâng cấp hoạc mua thêm gói để được tiếp tục tra cứu!');
         }
 
-        $check = $request->user()->TraCuu()->where([
-            'name' => $dataPost['name'],
-            'birthdate' => $dataPost['birthday'],
-        ])->first();
+        // $check = $request->user()->TraCuu()->where([
+        //     'name' => $dataPost['name'],
+        //     'birthdate' => $dataPost['birthday'],
+        // ])->first();
 
-        if ($check) {
-            return view('PDF.index')->with('result', $check);
-            return response()->download(public_path("uploads$check->path"), 'Test File', ['Content-Type' => 'application/pdf'], 'inline');
-        }
+        // if ($check) {
+        //     return view('PDF.index')->with('result', $check);
+        //     return response()->download(public_path("uploads$check->path"), 'Test File', ['Content-Type' => 'application/pdf'], 'inline');
+        // }
 
         $data = $user->TraCuu()->create([
             'code' => Str::random(60),
@@ -63,7 +63,7 @@ class ExportController extends Controller
 
         Storage::put($data->path, $file->body());
 
-        return response()->download(public_path("uploads$data->path"), 'Test File', ['Content-Type' => 'application/pdf'], 'inline');
+        return response()->download(public_path("uploads$data->path"), $data->name, ['Content-Type' => 'application/pdf'], 'inline');
     }
 
 
@@ -83,6 +83,7 @@ class ExportController extends Controller
             return redirect('/tai-khoan/lich-su-tra-cuu')->with('msg', "Hệ thống đã gửi file luận giải vào email $ketqua->email. cảm ơn bạn đã sử dụng dụng vụ của Thần Số Học Sala.");
         }
         else if ($request->type == "download") {
+            // return redirect()->back();
             return Storage::download($ketqua->path);
         }
         else {
@@ -159,16 +160,25 @@ class ExportController extends Controller
                 $aryReturn['KHUYET_THIEU'][] = $this->getContents('KT', $khuyetThieu);
             }
         }
+        else {
+            $aryReturn['KHUYET_THIEU'][] = $this->getContents('KT', 0);
+        }
         if (!empty($aryThanSo['chiSoLap'])) {
             foreach ($aryThanSo['chiSoLap'] as $chiSoLap) {
                 $aryReturn['CHI_SO_LAP'][] = $this->getContents('CL', $chiSoLap);
             }
+        }
+        else {
+            $aryReturn['CHI_SO_LAP'][] = $this->getContents('CL', 0);
         }
         $aryReturn['THACH_THUC'] = [];
         if (!empty($aryThanSo['thachThuc'])) {
             foreach ($aryThanSo['thachThuc'] as $thachThuc) {
                 $aryReturn['THACH_THUC'][] = $this->getContents('TT', $thachThuc);
             }
+        }
+        else {
+            $aryReturn['THACH_THUC'][] = $this->getContents('TT', 0);
         }
         $aryReturn['DUONG_DOI'] = $this->getContents('DD', $aryThanSo['duongDoi']);
         $aryReturn['SU_MENH'] = $this->getContents('SM', $aryThanSo['suMenh']);
