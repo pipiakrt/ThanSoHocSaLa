@@ -49,7 +49,7 @@ class ExportController extends Controller
             'type' => 1,
         ]);
         $user->License()->decrement('number');
-        return view('PDF.index')->with('result', $data);
+        // return view('PDF.index')->with('result', $data);
 
         Http::post("http://localhost:3000", [
             "name" => $data->name,
@@ -83,11 +83,9 @@ class ExportController extends Controller
             return redirect('/tai-khoan/lich-su-tra-cuu')->with('msg', "Hệ thống đã gửi file luận giải vào email $ketqua->email. cảm ơn bạn đã sử dụng dụng vụ của Thần Số Học Sala.");
         }
         else if ($request->type == "download") {
-            // return redirect()->back();
             return Storage::download($ketqua->path);
         }
         else {
-            return view('PDF.index')->with('result', $ketqua);
             return response()->download(public_path("uploads$ketqua->path"), 'Test File', ['Content-Type' => 'application/pdf'], 'inline');
         }
     }
