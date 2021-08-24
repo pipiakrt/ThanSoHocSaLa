@@ -115,15 +115,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Tài khoản',
-                        url: '/admin/tai-khoan',
+                        url: '/sala-backend/tai-khoan',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/admin/tai-khoan',
+                        url: '/sala-backend/tai-khoan',
                     },
                 ],
                 action: {
-                    url: '/admin/tai-khoan/thong-tin',
+                    url: '/sala-backend/tai-khoan/thong-tin',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Thông tin',
                 },

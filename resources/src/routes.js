@@ -75,269 +75,269 @@ import Error from './pages/Error'
 const routes = [
     // Home
     {
-        path: '/admin/',
+        path: '/sala-backend/',
         component: Home,
         name: 'Home',
     },
     // Langding Page
     // {
-    //     path: '/admin/langdingpage',
+    //     path: '/sala-backend/langdingpage',
     //     component: LangdingPage,
     //     name: 'LangdingPage',
     // },
     // // Categories
     // {
-    //     path: '/admin/danh-muc/danh-sach',
+    //     path: '/sala-backend/danh-muc/danh-sach',
     //     component: Categories,
     //     name: 'Categories',
     // },
     // {
-    //     path: '/admin/danh-muc/danh-muc-noi-bat',
+    //     path: '/sala-backend/danh-muc/danh-muc-noi-bat',
     //     component: CategoryHightLight,
     //     name: 'Categories',
     // },
     // // Promotions
     // {
-    //     path: '/admin/khuyen-mai/danh-sach',
+    //     path: '/sala-backend/khuyen-mai/danh-sach',
     //     component: Promotions,
     //     name: 'Promotions',
     // },
     // {
-    //     path: '/admin/khuyen-mai/them-moi',
+    //     path: '/sala-backend/khuyen-mai/them-moi',
     //     component: CreatePromotion,
     //     name: 'Promotions',
     // },
     // {
-    //     path: '/admin/khuyen-mai/:id/chinh-sua',
+    //     path: '/sala-backend/khuyen-mai/:id/chinh-sua',
     //     component: EditPromotion,
     //     name: 'Promotions',
     // },
     // Orders
     {
-        path: '/admin/don-hang/cho-xac-nhan',
+        path: '/sala-backend/don-hang/cho-xac-nhan',
         component: OrderPending,
         name: 'Orders',
     },
     // {
-    //     path: '/admin/don-hang/dang-giao',
+    //     path: '/sala-backend/don-hang/dang-giao',
     //     component: OrderProcess,
     //     name: 'Orders',
     // },
     {
-        path: '/admin/don-hang/:id/chinh-sua',
+        path: '/sala-backend/don-hang/:id/chinh-sua',
         component: EditOrder,
         name: 'Orders',
     },
     {
-        path: '/admin/don-hang/hoat-dong',
+        path: '/sala-backend/don-hang/hoat-dong',
         component: OrderSuccess,
         name: 'Orders',
     },
     {
-        path: '/admin/don-hang/don-huy',
+        path: '/sala-backend/don-hang/don-huy',
         component: OrderCancel,
         name: 'Orders',
     },
     // Users
     {
-        path: '/admin/nguoi-dung/danh-sach',
+        path: '/sala-backend/nguoi-dung/danh-sach',
         component: Users,
         name: 'Users',
     },
     // Newsletters
     {
-        path: '/admin/nguoi-dung/newsletters',
+        path: '/sala-backend/nguoi-dung/newsletters',
         component: Newsletters,
         name: 'Users',
     },
     // // Notifications
     // {
-    //     path: '/admin/thong-bao/danh-sach',
+    //     path: '/sala-backend/thong-bao/danh-sach',
     //     component: Notifications,
     //     name: 'Notifications',
     // },
     // {
-    //     path: '/admin/thong-bao/them-moi',
+    //     path: '/sala-backend/thong-bao/them-moi',
     //     component: CreateNotification,
     //     name: 'Notifications',
     // },
     // Reports
     {
-        path: '/admin/nguoi-dung/phan-hoi',
+        path: '/sala-backend/nguoi-dung/phan-hoi',
         component: Reports,
         name: 'Users',
     },
     // // Reports
     // {
-    //     path: '/admin/checking',
+    //     path: '/sala-backend/checking',
     //     component: Checking,
     //     name: 'Checking',
     // },
     // Products
     {
-        path: '/admin/san-pham/danh-sach',
+        path: '/sala-backend/san-pham/danh-sach',
         component: Products,
         name: 'Products',
     },
     {
-        path: '/admin/san-pham/them-moi',
+        path: '/sala-backend/san-pham/them-moi',
         component: CreateProduct,
         name: 'Products',
     },
     {
-        path: '/admin/san-pham/:id/chinh-sua',
+        path: '/sala-backend/san-pham/:id/chinh-sua',
         component: EditProduct,
         name: 'Products',
     },
     // Seo
     {
-        path: '/admin/seo/danh-sach',
+        path: '/sala-backend/seo/danh-sach',
         component: Seo,
         name: 'Seo',
     },
     {
-        path: '/admin/seo/them-moi',
+        path: '/sala-backend/seo/them-moi',
         component: CreateSeo,
         name: 'Seo',
     },
     {
-        path: '/admin/seo/:id/chinh-sua',
+        path: '/sala-backend/seo/:id/chinh-sua',
         component: EditSeo,
         name: 'Seo',
     },
     // TraCuu
     {
-        path: '/admin/tra-cuu/danh-sach',
+        path: '/sala-backend/tra-cuu/danh-sach',
         component: TraCuu,
         name: 'TraCuu',
     },
     // TuVan
     {
-        path: '/admin/tu-van/danh-sach',
+        path: '/sala-backend/tu-van/danh-sach',
         component: TuVan,
         name: 'TuVan',
     },
     // ThanSo
     {
-        path: '/admin/luan-giai/danh-sach',
+        path: '/sala-backend/luan-giai/danh-sach',
         component: ThanSo,
         name: 'ThanSo',
     },
     {
-        path: '/admin/luan-giai/:id/chinh-sua',
+        path: '/sala-backend/luan-giai/:id/chinh-sua',
         component: EditThanSo,
         name: 'ThanSo',
     },
     // Posts
     {
-        path: '/admin/bai-viet/danh-sach',
+        path: '/sala-backend/bai-viet/danh-sach',
         component: Posts,
         name: 'Posts',
     },
     {
-        path: '/admin/bai-viet/them-moi',
+        path: '/sala-backend/bai-viet/them-moi',
         component: CreatePost,
         name: 'Posts',
     },
     {
-        path: '/admin/bai-viet/:id/chinh-sua',
+        path: '/sala-backend/bai-viet/:id/chinh-sua',
         component: EditPost,
         name: 'Posts',
     },
     {
-        path: '/admin/bai-viet/danh-muc',
+        path: '/sala-backend/bai-viet/danh-muc',
         component: CategoryPost,
         name: 'Posts',
     },
     {
-        path: '/admin/bai-viet/chuyen-muc',
+        path: '/sala-backend/bai-viet/chuyen-muc',
         component: Tags,
         name: 'Posts',
     },
     // {
-    //     path: '/admin/than-so/danh-sach',
+    //     path: '/sala-backend/than-so/danh-sach',
     //     component: ThanSo,
     //     name: 'ThanSo',
     // },
     // {
-    //     path: '/admin/than-so/:id/chinh-sua',
+    //     path: '/sala-backend/than-so/:id/chinh-sua',
     //     component: EditThanSo,
     //     name: 'ThanSo',
     // },
     // {
-    //     path: '/admin/bai-viet/danh-muc',
+    //     path: '/sala-backend/bai-viet/danh-muc',
     //     component: CategoryPost,
     //     name: 'Posts',
     // },
     // {
-    //     path: '/admin/bai-viet/bai-viet-new',
+    //     path: '/sala-backend/bai-viet/bai-viet-new',
     //     component: PostNew,
     //     name: 'Posts',
     // },
     // {
-    //     path: '/admin/bai-viet/bai-viet-hot',
+    //     path: '/sala-backend/bai-viet/bai-viet-hot',
     //     component: PostHot,
     //     name: 'Posts',
     // },
     // Menu
     // {
-    //     path: '/admin/menu/tim-kiem',
+    //     path: '/sala-backend/menu/tim-kiem',
     //     component: MenuSearch,
     //     name: 'Menu',
     // },
     // {
-    //     path: '/admin/menu/danh-muc',
+    //     path: '/sala-backend/menu/danh-muc',
     //     component: MenuCategory,
     //     name: 'Menu',
     // },
     // // Banner
     // {
-    //     path: '/admin/anh-bia/danh-sach',
+    //     path: '/sala-backend/anh-bia/danh-sach',
     //     component: Banner,
     //     name: 'Banner',
     // },
     // Slider
     {
-        path: '/admin/thanh-truot/danh-sach',
+        path: '/sala-backend/thanh-truot/danh-sach',
         component: Slider,
         name: 'Slider',
     },
     // Account
     {
-        path: '/admin/tai-khoan',
+        path: '/sala-backend/tai-khoan',
         component: Account,
         name: 'Account',
     },
     {
-        path: '/admin/tai-khoan/thong-tin',
+        path: '/sala-backend/tai-khoan/thong-tin',
         component: Profile,
         name: 'Account',
     },
     {
-        path: '/admin/tai-khoan/them-tai-khoan',
+        path: '/sala-backend/tai-khoan/them-tai-khoan',
         component: CreateUser,
         name: 'Account',
     },
     {
-        path: '/admin/tai-khoan/mat-khau',
+        path: '/sala-backend/tai-khoan/mat-khau',
         component: Password,
         name: 'Account',
     },
     // HomePage
     {
-        path: '/admin/homepage',
+        path: '/sala-backend/homepage',
         component: HomePage,
         name: 'HomePage',
     },
     // FileManager
     {
-        path: '/admin/tep-tin',
+        path: '/sala-backend/tep-tin',
         component: FileManager,
         name: 'FileManager',
     },
     // error
     {
-        path: '/admin/:pathMatch(.*)*',
+        path: '/sala-backend/:pathMatch(.*)*',
         component: Error,
         name: '404',
     },

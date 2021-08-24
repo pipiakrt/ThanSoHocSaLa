@@ -1433,10 +1433,10 @@ export default {
             subHeader: {
                 links: [{
                     name: 'Trang Chủ',
-                    url: '/admin/',
+                    url: '/sala-backend/',
                 }, ],
                 action: {
-                    url: '/admin/',
+                    url: '/sala-backend/',
                     icon: '',
                     text: 'Trang chủ',
                 },

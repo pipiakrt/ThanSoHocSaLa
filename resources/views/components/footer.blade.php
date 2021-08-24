@@ -41,17 +41,17 @@
                                 </a>
                             </div>
                             <div class="footer-item">
-                                <a href="/tin-tuc/chinh-sach" class="decoration-revert-hover">
+                                <a href="/hoi-dap/chinh-sach" class="decoration-revert-hover">
                                     <span>Chính sách</span>
                                 </a>
                             </div>
                             <div class="footer-item">
-                                <a href="/tin-tuc/dieu-khoan" class="decoration-revert-hover">
+                                <a href="/hoi-dap/dieu-khoan" class="decoration-revert-hover">
                                     <span>Điều khoản</span>
                                 </a>
                             </div>
                             <div class="footer-item">
-                                <a href="/tin-tuc/huong-dan-mua-hang" class="decoration-revert-hover">
+                                <a href="/hoi-dap/huong-dan-mua-hang" class="decoration-revert-hover">
                                     <span>Hướng dẫn mua hàng</span>
                                 </a>
                             </div>

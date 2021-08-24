@@ -160,15 +160,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'thông báo',
-                        url: '/admin/thong-bao/danh-sach',
+                        url: '/sala-backend/thong-bao/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/admin/thong-bao/danh-sach',
+                        url: '/sala-backend/thong-bao/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/admin/thong-bao/them-moi',
+                    url: '/sala-backend/thong-bao/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },

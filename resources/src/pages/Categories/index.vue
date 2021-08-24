@@ -259,10 +259,10 @@ export default {
             subHeader: {
                 links: [{
                     name: 'Danh mục',
-                    url: '/admin/tin-tuc/danh-muc',
+                    url: '/sala-backend/tin-tuc/danh-muc',
                 }, ],
                 action: {
-                    url: '/admin/',
+                    url: '/sala-backend/',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Dashboard',
                 }

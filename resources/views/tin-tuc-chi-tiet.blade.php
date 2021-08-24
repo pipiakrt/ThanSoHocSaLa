@@ -12,7 +12,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
                 @if (request()->segment(1) == 'gioi-thieu')
-                    <li class="breadcrumb-item"><a href="/gioi-thieu" class="active">Giơi thiệu</a></li>
+                    <li class="breadcrumb-item"><a href="/gioi-thieu" class="active">Giới thiệu</a></li>
                 @elseif (request()->segment(1) == 'hoi-dap')
                     <li class="breadcrumb-item"><a href="/hoi-dap" class="active">Hỏi đáp</a></li>
                 @else
@@ -26,8 +26,8 @@
     </nav>
 
     <main>
-        <div class="post-slogan post-sloganDetail">
-            <div class="container container-header2 mb-4">
+        <div class="post-slogan post-sloganDetail pt-0">
+            <div class="container container-header2 mb-4 px-0">
                 <div class="row g-0 g-md-5">
                     <div class="col-md-6 bg-white">
 
@@ -53,7 +53,7 @@
                                 <h1>{{ $post->author }}</h1>
                             </div>
                         @endif
-                        <div class="post-content pb-0 pt-2">
+                        <div class="post-content pb-0 pt-2 mx-2">
                             <div class="desc-1">
                                 <h3>{{ $post->name }}</h3>
                             </div>
@@ -61,7 +61,7 @@
                                 <span>{{ $post->description }}</span>
                             </div>
                         </div>
-                        <div class="post-content pb-5">
+                        <div class="post-content pb-5 mx-2">
                             {!! $post->content !!}
                         </div>
                     </div>

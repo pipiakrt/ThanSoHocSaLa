@@ -66,7 +66,7 @@
                                                 <div class="symbol-label" :style="`background-image: url('${item.image}')`"></div>
                                             </div>
                                             <div>
-                                                <router-link :to="'/admin/san-pham/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.name, 50)"></router-link>
+                                                <router-link :to="'/sala-backend/san-pham/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.name, 50)"></router-link>
                                                 <span class="text-muted d-block" v-text="Text(item.slug, 50)"></span>
                                             </div>
                                         </div>
@@ -106,7 +106,7 @@
                                                             </span>
                                                             <span class="navi-text">Tiến tới trang</span>
                                                         </a>
-                                                        <router-link :to="'/admin/san-pham/' + item.id + '/chinh-sua'" class="navi-link">
+                                                        <router-link :to="'/sala-backend/san-pham/' + item.id + '/chinh-sua'" class="navi-link">
                                                             <span class="navi-icon">
                                                                 <i class="fa fas fa-edit"></i>
                                                             </span>
@@ -147,15 +147,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Sản phẩm',
-                        url: '/admin/san-pham/danh-sach',
+                        url: '/sala-backend/san-pham/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/admin/san-pham/danh-sach',
+                        url: '/sala-backend/san-pham/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/admin/san-pham/them-moi',
+                    url: '/sala-backend/san-pham/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },

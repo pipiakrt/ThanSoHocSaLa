@@ -68,7 +68,7 @@
                                     <td class="pl-0 py-8">
                                         <div class="d-flex align-items-center">
                                             <div>
-                                                <router-link :to="'/admin/luan-giai/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.title, 50)"></router-link>
+                                                <router-link :to="'/sala-backend/luan-giai/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.title, 50)"></router-link>
                                                 <span class="text-muted d-block" v-text="Text(item.slug, 50)"></span>
                                             </div>
                                         </div>
@@ -90,7 +90,7 @@
                                             <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
                                                 <ul class="navi navi-hover">
                                                     <li class="navi-item">
-                                                        <router-link :to="'/admin/luan-giai/' + item.id + '/chinh-sua'" class="navi-link">
+                                                        <router-link :to="'/sala-backend/luan-giai/' + item.id + '/chinh-sua'" class="navi-link">
                                                             <span class="navi-icon">
                                                                 <i class="fa fas fa-edit"></i>
                                                             </span>
@@ -147,15 +147,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'luận giải',
-                        url: '/admin/luan-giai/danh-sach',
+                        url: '/sala-backend/luan-giai/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/admin/luan-giai/danh-sach',
+                        url: '/sala-backend/luan-giai/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/admin/luan-giai/them-moi',
+                    url: '/sala-backend/luan-giai/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },

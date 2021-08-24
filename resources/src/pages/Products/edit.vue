@@ -262,7 +262,7 @@
                             </div>
                         </form>
                         <div class="card-footer text-center">
-                            <router-link to="/admin/san-pham/danh-sach" type="reset" class="btn btn-light-primary mr-1 font-weight-bolder"><i class="icon-sm ki ki-long-arrow-back"></i> Quay Lại</router-link>
+                            <router-link to="/sala-backend/san-pham/danh-sach" type="reset" class="btn btn-light-primary mr-1 font-weight-bolder"><i class="icon-sm ki ki-long-arrow-back"></i> Quay Lại</router-link>
                             <button type="reset" @click="submit(1)" class="btn btn-primary mr-1"><i class="icon-sm ki ki-bold-check-1   "></i> Lưu sản phẩm</button>
                             <button type="reset" @click="submit(0)" class="btn btn-primary mr-1"><i class="icon-sm ki ki-info"></i> Lưu Ẩn</button>
                         </div>
@@ -297,15 +297,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Sản phẩm',
-                        url: '/admin/san-pham/danh-sach',
+                        url: '/sala-backend/san-pham/danh-sach',
                     },
                     {
                         name: 'Thêm mới',
-                        url: '/admin/san-pham/them-moi',
+                        url: '/sala-backend/san-pham/them-moi',
                     },
                 ],
                 action: {
-                    url: '/admin/san-pham/danh-sach',
+                    url: '/sala-backend/san-pham/danh-sach',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Danh Sách',
                 }
@@ -478,7 +478,7 @@ export default {
             axios.put('/api/products/' + this.id, params).then((res) => {
                 KTApp.unblockPage();
                 toastr.success("Tạo Sản phẩm thành công!")
-                this.$router.push('/admin/san-pham/danh-sach');
+                this.$router.push('/sala-backend/san-pham/danh-sach');
             })
         }
     }

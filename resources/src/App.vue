@@ -92,7 +92,7 @@ export default {
     methods: {
         AuthEmit(status) {
             this.auth = 2
-            this.$router.push('/admin')
+            this.$router.push('/sala-backend')
         }
     },
 }

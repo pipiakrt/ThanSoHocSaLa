@@ -140,15 +140,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Bài viết',
-                        url: '/admin/bai-viet/danh-sach',
+                        url: '/sala-backend/bai-viet/danh-sach',
                     },
                     {
                         name: 'Thêm mới',
-                        url: '/admin/bai-viet/them-moi',
+                        url: '/sala-backend/bai-viet/them-moi',
                     },
                 ],
                 action: {
-                    url: '/admin/bai-viet/danh-sach',
+                    url: '/sala-backend/bai-viet/danh-sach',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Danh Sách',
                 }

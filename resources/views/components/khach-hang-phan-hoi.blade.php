@@ -72,8 +72,8 @@
                             <div class="avatar-customer">
                                 <img src="/img/kh/thanhuyen.jpg" alt="Khách hàng">
                             </div>
-                            <div class="name-account"><h3>Chị Thanh Huyền</h3></div>
-                            <div class="desc-account"><span>26 tuổi - Hải Dương</span></div>
+                            <div class="name-account text-center"><h3>Chị Thanh Huyền</h3></div>
+                            <div class="desc-account text-center"><span>26 tuổi - Hải Dương</span></div>
                         </div>
                     </div>
                 </div>
@@ -84,8 +84,8 @@
                             <div class="avatar-customer">
                                 <img src="/img/kh/ngocanh.jpg" alt="Khách hàng">
                             </div>
-                            <div class="name-account"><h3>Chị Ngọc Ánh</h3></div>
-                            <div class="desc-account"><span>40 tuổi - Hồ Chí Minh</span></div>
+                            <div class="name-account text-center"><h3>Chị Ngọc Ánh</h3></div>
+                            <div class="desc-account text-center"><span>40 tuổi - Hồ Chí Minh</span></div>
                         </div>
                     </div>
                 </div>
@@ -96,8 +96,8 @@
                             <div class="avatar-customer">
                                 <img src="/img/kh/hongquang.jpg" alt="Khách hàng">
                             </div>
-                            <div class="name-account"><h3>Anh Hồng Quang</h3></div>
-                            <div class="desc-account"><span>35 tuổi - Đà Nẵng</span></div>
+                            <div class="name-account text-center"><h3>Anh Hồng Quang</h3></div>
+                            <div class="desc-account text-center"><span>35 tuổi - Đà Nẵng</span></div>
                         </div>
                     </div>
                 </div>
@@ -108,8 +108,8 @@
                             <div class="avatar-customer">
                                 <img src="/img/kh/tuanduong.jpg" alt="Khách hàng">
                             </div>
-                            <div class="name-account"><h3>Anh Tuấn Dương</h3></div>
-                            <div class="desc-account"><span>26 tuổi - Hà Nội</span></div>
+                            <div class="name-account text-center"><h3>Anh Tuấn Dương</h3></div>
+                            <div class="desc-account text-center"><span>26 tuổi - Hà Nội</span></div>
                         </div>
                     </div>
                 </div>

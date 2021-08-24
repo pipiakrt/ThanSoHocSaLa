@@ -68,7 +68,7 @@
                     </form>
                 </div>
                 <div class="card-footer text-center">
-                    <router-link to="/admin/san-pham/danh-sach" type="reset" class="btn btn-light-primary mr-1 font-weight-bolder"><i class="icon-sm ki ki-long-arrow-back"></i> Quay Lại</router-link>
+                    <router-link to="/sala-backend/san-pham/danh-sach" type="reset" class="btn btn-light-primary mr-1 font-weight-bolder"><i class="icon-sm ki ki-long-arrow-back"></i> Quay Lại</router-link>
                     <button type="reset" @click="submit()" class="btn btn-primary mr-1"><i class="icon-sm ki ki-bold-check-1"></i> Lưu thông báo</button>
                 </div>
             </div>
@@ -111,15 +111,15 @@ export default {
                 links: [
                     {
                         name: 'thông báo',
-                        url: '/admin/thong-bao/danh-sach',
+                        url: '/sala-backend/thong-bao/danh-sach',
                     },
                     {
                         name: 'Thêm mới',
-                        url: '/admin/thong-bao/them-moi',
+                        url: '/sala-backend/thong-bao/them-moi',
                     },
                 ],
                 action: {
-                    url: '/admin/thong-bao/danh-sach',
+                    url: '/sala-backend/thong-bao/danh-sach',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Danh Sách',
                 }
@@ -163,7 +163,7 @@ export default {
                 axios.post('/api/notifications', params).then((res) => {
                     KTApp.unblockPage();
                     toastr.success("Tạo thông báo thành công!")
-                    this.$router.push('/admin/thong-bao/danh-sach');
+                    this.$router.push('/sala-backend/thong-bao/danh-sach');
                 })
             }
             else {

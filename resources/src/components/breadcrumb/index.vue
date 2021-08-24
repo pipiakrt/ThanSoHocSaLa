@@ -5,7 +5,7 @@
             <div class="d-flex align-items-baseline flex-wrap mr-5">
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item text-muted">
-                        <router-link to="/admin/" class="text-muted">Dashboard</router-link>
+                        <router-link to="/sala-backend/" class="text-muted">Dashboard</router-link>
                     </li>
                     <li v-for="(link, i) in data.links" :key="i" class="breadcrumb-item text-muted">
                         <router-link :to="link.url" class="text-muted" v-text="link.name"></router-link>

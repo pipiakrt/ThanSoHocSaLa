@@ -104,8 +104,8 @@ Route::post('/gui-mail-ket-qua', [ThanSoController::class, 'guimail']);
 
 Auth::routes();
 
-Route::view('/admin', 'admin.index')->where('any', '.*');
-Route::view('/admin/{any}', 'admin.index')->where('any', '.*');
+Route::view('/sala-backend', 'admin.index')->where('any', '.*');
+Route::view('/sala-backend/{any}', 'admin.index')->where('any', '.*');
 
 Route::prefix('socialite')->group(function () {
     Route::get('login/{social}', [SocialAuthController::class, 'redirectToProvider']);

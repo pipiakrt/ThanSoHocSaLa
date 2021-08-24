@@ -163,6 +163,15 @@
 
 /* md */
 @media (max-width: 992px) {
+    .taisao .stt {
+        top: 6px !important;
+    }
+    .taisao .main-tasao .title {
+        justify-content: center;
+    }
+    .taisao .main-tasao .title h2 {
+        text-align: center;
+    }
     .thongtingoi .bg-ctm {
         margin-top: 125px;
     }
@@ -400,15 +409,17 @@
         padding: 20px 22px;
     }
     .cam-nhan-kh #khachhang .owl-nav button {
-        display: none;
+        /* display: none; */
         height: 50px;
         width: 50px;
         top: unset;
-        bottom: 150px;
+        bottom: 33px;
         background-size: contain !important;
     }
     .cam-nhan-kh #khachhang .avatar-customer {
-        left: 12px;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
     .cam-nhan-kh #khachhang  .info-customer {
         background: white;

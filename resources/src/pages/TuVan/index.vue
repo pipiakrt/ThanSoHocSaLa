@@ -115,15 +115,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Tra cứu',
-                        url: '/admin/tra-cuu/danh-sach',
+                        url: '/sala-backend/tra-cuu/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/admin/tra-cuu/danh-sach',
+                        url: '/sala-backend/tra-cuu/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/admin/tra-cuu/them-moi',
+                    url: '/sala-backend/tra-cuu/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },

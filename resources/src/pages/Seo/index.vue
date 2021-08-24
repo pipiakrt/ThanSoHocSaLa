@@ -61,7 +61,7 @@
                                     <td class="pl-0 py-8">
                                         <div class="d-flex align-items-center">
                                             <div>
-                                                <router-link :to="'/admin/seo/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.url, 50)"></router-link>
+                                                <router-link :to="'/sala-backend/seo/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="Text(item.url, 50)"></router-link>
                                             </div>
                                         </div>
                                     </td>
@@ -88,7 +88,7 @@
                                                             </span>
                                                             <span class="navi-text">Tiến tới trang</span>
                                                         </a>
-                                                        <router-link :to="'/admin/seo/' + item.id + '/chinh-sua'" class="navi-link">
+                                                        <router-link :to="'/sala-backend/seo/' + item.id + '/chinh-sua'" class="navi-link">
                                                             <span class="navi-icon">
                                                                 <i class="fa fas fa-edit"></i>
                                                             </span>
@@ -151,15 +151,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'seo page',
-                        url: '/admin/seo/danh-sach',
+                        url: '/sala-backend/seo/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/admin/seo/danh-sach',
+                        url: '/sala-backend/seo/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/admin/seo/them-moi',
+                    url: '/sala-backend/seo/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },

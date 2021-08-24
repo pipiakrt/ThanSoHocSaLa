@@ -169,11 +169,11 @@ export default {
                 links: [
                     {
                         name: 'Bài viết',
-                        url: '/admin/bai-viet/danh-sach',
+                        url: '/sala-backend/bai-viet/danh-sach',
                     },
                     {
                         name: 'Chuyên mục',
-                        url: '/admin/bai-viet/chuyen-muc',
+                        url: '/sala-backend/bai-viet/chuyen-muc',
                     },
                 ],
                 action: {

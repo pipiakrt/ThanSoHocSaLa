@@ -97,11 +97,11 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Phản hồi',
-                        url: '/admin/phan-hoi',
+                        url: '/sala-backend/phan-hoi',
                     },
                 ],
                 action: {
-                    url: '/admin/',
+                    url: '/sala-backend/',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Dashboard',
                 },

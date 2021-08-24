@@ -35,7 +35,7 @@ class ExportController extends Controller
 
         // if ($check) {
         //     return view('PDF.index')->with('result', $check);
-        //     return response()->download(public_path("uploads$check->path"), 'Test File', ['Content-Type' => 'application/pdf'], 'inline');
+        //     return response()->download(storage_path("uploads$check->path"), 'Test File', ['Content-Type' => 'application/pdf'], 'inline');
         // }
 
         $data = $user->TraCuu()->create([
@@ -61,9 +61,9 @@ class ExportController extends Controller
         ]);
         $file = Http::get("http://localhost:5000/view");
 
-        Storage::put($data->path, $file->body());
+        Storage::disk("public")->put($data->path, $file->body());
 
-        return response()->download(public_path("uploads$data->path"), $data->name, ['Content-Type' => 'application/pdf'], 'inline');
+        return response()->download(storage_path("/app/public/$data->path"), $data->name, ['Content-Type' => 'application/pdf'], 'inline');
     }
 
 
@@ -83,10 +83,10 @@ class ExportController extends Controller
             return redirect('/tai-khoan/lich-su-tra-cuu')->with('msg', "Hệ thống đã gửi file luận giải vào email $ketqua->email. cảm ơn bạn đã sử dụng dụng vụ của Thần Số Học Sala.");
         }
         else if ($request->type == "download") {
-            return Storage::download($ketqua->path);
+            return Storage::disk("public")->download($ketqua->path);
         }
         else {
-            return response()->download(public_path("uploads$ketqua->path"), 'Test File', ['Content-Type' => 'application/pdf'], 'inline');
+            return response()->file(storage_path("/app/public/$ketqua->path"), ['Content-Type' => 'application/pdf'], 'inline; filename="fasd afsd f "');
         }
     }
 

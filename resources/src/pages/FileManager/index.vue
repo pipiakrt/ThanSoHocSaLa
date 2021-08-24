@@ -24,11 +24,11 @@ export default {
                 links: [
                     {
                         name: 'Tệp tin',
-                        url: '/admin/tep-tin',
+                        url: '/sala-backend/tep-tin',
                     },
                 ],
                 action: {
-                    url: '/admin/',
+                    url: '/sala-backend/',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Dashboard',
                 }

@@ -94,7 +94,7 @@
                                             </label>
                                         </td>
                                         <td>
-                                            <router-link :to="'/admin/don-hang/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="`#${item.code}`"></router-link>
+                                            <router-link :to="'/sala-backend/don-hang/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="`#${item.code}`"></router-link>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="`${item.name} - ${item.phone}`"></span>
@@ -155,15 +155,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'đơn hàng',
-                        url: '/admin/don-hang/danh-sach',
+                        url: '/sala-backend/don-hang/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/admin/don-hang/danh-sach',
+                        url: '/sala-backend/don-hang/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/admin/don-hang/them-moi',
+                    url: '/sala-backend/don-hang/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },

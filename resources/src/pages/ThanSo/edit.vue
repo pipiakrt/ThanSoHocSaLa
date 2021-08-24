@@ -34,7 +34,7 @@
                         </form>
                 </div>
                 <div class="card-footer text-center">
-                    <router-link to="/admin/luan-giai/danh-sach" type="reset" class="btn btn-light-primary mr-1 font-weight-bolder"><i class="icon-sm ki ki-long-arrow-back"></i> Quay Lại</router-link>
+                    <router-link to="/sala-backend/luan-giai/danh-sach" type="reset" class="btn btn-light-primary mr-1 font-weight-bolder"><i class="icon-sm ki ki-long-arrow-back"></i> Quay Lại</router-link>
                     <button type="reset" @click="submit()" class="btn btn-primary mr-1"><i class="icon-sm ki ki-bold-check-1"></i> Lưu luận giải</button>
                 </div>
             </div>
@@ -66,15 +66,15 @@ export default {
                 links: [
                     {
                         name: 'luận giải',
-                        url: '/admin/luan-giai/danh-sach',
+                        url: '/sala-backend/luan-giai/danh-sach',
                     },
                     {
                         name: 'Thêm mới',
-                        url: '/admin/luan-giai/them-moi',
+                        url: '/sala-backend/luan-giai/them-moi',
                     },
                 ],
                 action: {
-                    url: '/admin/luan-giai/danh-sach',
+                    url: '/sala-backend/luan-giai/danh-sach',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Danh Sách',
                 }
@@ -162,7 +162,7 @@ export default {
             axios.put('/api/thanso/' + this.id, params).then((res) => {
                 KTApp.unblockPage();
                 toastr.success("Tạo luận giải thành công!")
-                this.$router.push('/admin/luan-giai/danh-sach');
+                this.$router.push('/sala-backend/luan-giai/danh-sach');
             })
         },
     },

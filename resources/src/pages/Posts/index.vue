@@ -119,7 +119,7 @@
                                             </div>
                                             <div>
                                                 <div class="title-post">
-                                                    <router-link :to="'/admin/bai-viet/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.name"></router-link>
+                                                    <router-link :to="'/sala-backend/bai-viet/' + item.id + '/chinh-sua'" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.name"></router-link>
                                                 </div>
                                                 <div class="url-post">
                                                     <span class="text-muted d-block" v-text="item.slug"></span>
@@ -161,7 +161,7 @@
                                                             </span>
                                                             <span class="navi-text">Tiến tới trang</span>
                                                         </a>
-                                                        <router-link :to="'/admin/bai-viet/' + item.id + '/chinh-sua'" class="navi-link">
+                                                        <router-link :to="'/sala-backend/bai-viet/' + item.id + '/chinh-sua'" class="navi-link">
                                                             <span class="navi-icon">
                                                                 <i class="fa fas fa-edit"></i>
                                                             </span>
@@ -224,15 +224,15 @@ export default {
             subHeader: {
                 links: [{
                         name: 'Bài viết',
-                        url: '/admin/bai-viet/danh-sach',
+                        url: '/sala-backend/bai-viet/danh-sach',
                     },
                     {
                         name: 'Danh sách',
-                        url: '/admin/bai-viet/danh-sach',
+                        url: '/sala-backend/bai-viet/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/admin/bai-viet/them-moi',
+                    url: '/sala-backend/bai-viet/them-moi',
                     icon: 'icon-sm ki ki-plus',
                     text: 'Thêm Mới',
                 },

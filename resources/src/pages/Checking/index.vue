@@ -128,11 +128,11 @@ export default {
             subHeader: {
                 links: [{
                         name: 'checking',
-                        url: '/admin/checking',
+                        url: '/sala-backend/checking',
                     },
                 ],
                 action: {
-                    url: '/admin/',
+                    url: '/sala-backend/',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Dashboard',
                 },

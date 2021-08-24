@@ -126,7 +126,7 @@
         <div class="container container-post">
             <div class="row g-0 g-sm-4">
                 <div class="col-lg-4 cmt-5">
-                    <a href="/gioi-thieu/ve-sala">
+                    <a href="/gioi-thieu/hoc-vien-co-hoc-sala">
                         <div class="row g-0">
                             <div class="col-md-12">
                                 <img class="w-100" src="/img/banner/tt.png" alt="than so hoc">
@@ -134,9 +134,9 @@
                             <div class="col-md-12">
                                 <div class="post-item text-white">
                                     <div class="item-title">
-                                        <h5>Giới Thiệu Học Viện Cổ Học Sala</h5>
+                                        <h5>Giới thiệu học viện cổ học Sala</h5>
                                     </div>
-                                    <div class="item-desc"><span>Thần Số Học - Numerology (tên tiếng Anh của Thần Số Học) dựa vào việc nghiên cứu ý nghĩa của các sóng rung và trường năng lượng của vũ trụ để tạo ra các con số và ảnh hưởng của nó tới cuộc sống con người.</span></div>
+                                    <div class="item-desc"><span>Thần Số Học - Numerology (tên tiếng Anh của Thần Số Học) được khi ghi nhận trong suốt lịch sử của các nước cổ đại: Ai Cập, Babylon, Châu Á và Ấn Độ, và cũng xuất hiện nhiều trong Kinh Thánh. Cách đây hơn 2500 năm các nước cổ đại trong lịch sử đã tạo ra các con số và áp dụng ý nghĩa của các con số. Thần Số Học lập ra dựa theo nhân sinh quan của Thần Tam Giác (Divine Triangle).</span></div>
                                     <div class="icon-click">
                                         <img src="/img/icon/right-3.png" alt="">
                                     </div>
@@ -146,7 +146,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 cmt-5">
-                    <a href="/gioi-thieu/than-so-hoc-la-gi">
+                    <a href="/gioi-thieu/chuyen-gia">
                         <div class="row g-0">
                             <div class="col-md-12">
                                 <img class="w-100" src="/img/banner/tt.png" alt="than so hoc">
@@ -154,9 +154,9 @@
                             <div class="col-md-12">
                                 <div class="post-item text-white">
                                     <div class="item-title">
-                                        <h5>Giới Thần Số Học Sala</h5>
+                                        <h5>Giới thiệu Chuyên Gia Thần Số Học Sala</h5>
                                     </div>
-                                    <div class="item-desc"><span>Thần Số Học - Numerology (tên tiếng Anh của Thần Số Học) được khi ghi nhận trong suốt lịch sử của các nước cổ đại: Ai Cập, Babylon, Châu Á và Ấn Độ, và cũng xuất hiện nhiều trong Kinh Thánh.</span></div>
+                                    <div class="item-desc"><span>Với nhiều năm nghiên cứu khả năng tiềm ẩn và năng lực bẩm sinh của con người tại “Viện Nghiên Cứu Và Ứng Dụng Tiềm Năng Con Người” tôi nhận thấy khả năng khai phá và phát triển những tiềm ẩn bẩm sinh ở thần số học đối với con người là vô cùng lớn, đáp ứng được nguyện vọng mang lại giá trị cho cộng đồng và xã hội.</span></div>
                                     <div class="icon-click">
                                         <img src="/img/icon/right-3.png" alt="">
                                     </div>
@@ -166,7 +166,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 cmt-5">
-                    <a href="/gioi-thieu/ung-dung-than-so-hoc-sala">
+                    <a href="/gioi-thieu/cuon-sach-cuoc-doi">
                         <div class="row g-0">
                             <div class="col-md-12">
                                 <img class="w-100" src="/img/banner/tt.png" alt="than so hoc">
@@ -174,9 +174,9 @@
                             <div class="col-md-12">
                                 <div class="post-item text-white">
                                     <div class="item-title">
-                                        <h5>Ứng Dụng Thần Số Học Sala</h5>
+                                        <h5>Giới thiệu Cuốn sách cuộc đời</h5>
                                     </div>
-                                    <div class="item-desc"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500</span></div>
+                                    <div class="item-desc"><span>"CUỐN SÁCH CUỘC ĐỜI" là bài báo cáo Thần Số Học của riêng bạn được chia làm 3 phần với 19 chỉ số, các chỉ số đại diện cho: Tính cách, Năng lực cùng những Ưu điểm và Hạn chế bên trong con người bạn.</span></div>
                                     <div class="icon-click">
                                         <img src="/img/icon/right-3.png" alt="">
                                     </div>

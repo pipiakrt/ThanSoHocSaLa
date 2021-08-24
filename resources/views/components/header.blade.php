@@ -21,7 +21,7 @@
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="/gioi-thieu/chuyen-gia">
-                                        <span>Về chuyển gia</span>
+                                        <span>Về chuyên gia</span>
                                     </a>
                                 </li>
                                 <li>
@@ -101,7 +101,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="/tai-khoan/gio-hang">
+                                        <a class="dropdown-item" href="/tai-khoan/don-hang">
                                             <span>Đơn hàng chờ xử lý</span>
                                         </a>
                                     </li>
@@ -188,17 +188,17 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-mobile" href="/gioi-thieu/than-so-hoc">
-                                        <span>Thần Số Học Pythagoras</span>
+                                    <a class="dropdown-item" href="/gioi-thieu/hoc-vien-co-hoc-sala">
+                                        <span>Về học viện cổ học Sala   </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-mobile" href="/gioi-thieu/hoc-vien-co-hoc-sala">
-                                        <span>Về học viện cổ học Sala</span>
+                                    <a class="dropdown-item" href="/gioi-thieu/chuyen-gia">
+                                        <span>Về chuyên gia</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-mobile" href="/gioi-thieu/cuon-sach-cuoc-doi">
+                                    <a class="dropdown-item" href="/gioi-thieu/cuon-sach-cuoc-doi">
                                         <span>Cuốn sách cuộc đời</span>
                                     </a>
                                 </li>

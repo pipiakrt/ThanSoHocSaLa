@@ -7,7 +7,7 @@
 <template>
 <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
     <div class="brand flex-column-auto" id="kt_brand">
-        <router-link to="/admin/" class="brand-logo">
+        <router-link to="/sala-backend/" class="brand-logo">
             <img alt="Logo" class="logo" src="/img/logo/a1.png" />
         </router-link>
         <button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
@@ -154,11 +154,11 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Danh sách',
-                //             url: '/admin/thong-bao/danh-sach'
+                //             url: '/sala-backend/thong-bao/danh-sach'
                 //         },
                 //         {
                 //             name: 'Thêm mới',
-                //             url: '/admin/thong-bao/them-moi'
+                //             url: '/sala-backend/thong-bao/them-moi'
                 //         }
                 //     ]
                 // },
@@ -188,11 +188,11 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Danh sách',
-                //             url: '/admin/danh-muc/danh-sach'
+                //             url: '/sala-backend/danh-muc/danh-sach'
                 //         },
                 //         {
                 //             name: 'Danh mục nổi bật',
-                //             url: '/admin/danh-muc/danh-muc-noi-bat'
+                //             url: '/sala-backend/danh-muc/danh-muc-noi-bat'
                 //         },
                 //     ]
                 // },
@@ -214,11 +214,11 @@ export default {
                     sub: [
                         {
                             name: 'Danh sách',
-                            url: '/admin/san-pham/danh-sach'
+                            url: '/sala-backend/san-pham/danh-sach'
                         },
                         {
                             name: 'Thêm mới',
-                            url: '/admin/san-pham/them-moi'
+                            url: '/sala-backend/san-pham/them-moi'
                         }
                     ]
                 },
@@ -261,11 +261,11 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Danh sách',
-                //             url: '/admin/khuyen-mai/danh-sach'
+                //             url: '/sala-backend/khuyen-mai/danh-sach'
                 //         },
                 //         {
                 //             name: 'Thêm mới',
-                //             url: '/admin/khuyen-mai/them-moi'
+                //             url: '/sala-backend/khuyen-mai/them-moi'
                 //         }
                 //     ]
                 // },
@@ -287,19 +287,19 @@ export default {
                     sub: [
                         {
                             name: 'Danh sách',
-                            url: '/admin/bai-viet/danh-sach'
+                            url: '/sala-backend/bai-viet/danh-sach'
                         },
                         {
                             name: 'Thêm mới',
-                            url: '/admin/bai-viet/them-moi'
+                            url: '/sala-backend/bai-viet/them-moi'
                         },
                         {
                             name: 'Danh mục',
-                            url: '/admin/bai-viet/danh-muc'
+                            url: '/sala-backend/bai-viet/danh-muc'
                         },
                         {
                             name: 'Chuyên mục',
-                            url: '/admin/bai-viet/chuyen-muc'
+                            url: '/sala-backend/bai-viet/chuyen-muc'
                         },
                     ]
                 },
@@ -325,11 +325,11 @@ export default {
                     sub: [
                         {
                             name: 'Danh sách',
-                            url: '/admin/seo/danh-sach'
+                            url: '/sala-backend/seo/danh-sach'
                         },
                         {
                             name: 'Thêm mới',
-                            url: '/admin/seo/them-moi'
+                            url: '/sala-backend/seo/them-moi'
                         },
                     ]
                 },
@@ -351,11 +351,11 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Danh sách',
-                //             url: '/admin/than-so/danh-sach'
+                //             url: '/sala-backend/than-so/danh-sach'
                 //         },
                 //         {
                 //             name: 'Thêm mới',
-                //             url: '/admin/than-so/them-moi'
+                //             url: '/sala-backend/than-so/them-moi'
                 //         },
                 //     ]
                 // },
@@ -388,19 +388,19 @@ export default {
                     sub: [
                         {
                             name: 'Chờ xác nhận',
-                            url: '/admin/don-hang/cho-xac-nhan'
+                            url: '/sala-backend/don-hang/cho-xac-nhan'
                         },
                         // {
                         //     name: 'Đang giao hàng',
-                        //     url: '/admin/don-hang/dang-giao'
+                        //     url: '/sala-backend/don-hang/dang-giao'
                         // },
                         {
                             name: 'Hoạt động',
-                            url: '/admin/don-hang/hoat-dong'
+                            url: '/sala-backend/don-hang/hoat-dong'
                         },
                         {
                             name: 'Đơn Hủy',
-                            url: '/admin/don-hang/don-huy'
+                            url: '/sala-backend/don-hang/don-huy'
                         },
                     ]
                 },
@@ -431,15 +431,15 @@ export default {
                     sub: [
                         {
                             name: 'Danh sách',
-                            url: '/admin/nguoi-dung/danh-sach'
+                            url: '/sala-backend/nguoi-dung/danh-sach'
                         },
                         {
                             name: 'Phản hồi',
-                            url: '/admin/nguoi-dung/phan-hoi'
+                            url: '/sala-backend/nguoi-dung/phan-hoi'
                         },
                         {
                             name: 'Newsletters',
-                            url: '/admin/nguoi-dung/newsletters'
+                            url: '/sala-backend/nguoi-dung/newsletters'
                         },
                     ]
                 },
@@ -465,11 +465,11 @@ export default {
                 //     sub: [
                 //         {
                 //             name: 'Menu Tìm kiếm',
-                //             url: '/admin/menu/tim-kiem'
+                //             url: '/sala-backend/menu/tim-kiem'
                 //         },
                 //         {
                 //             name: 'Menu Danh mục',
-                //             url: '/admin/menu/danh-muc'
+                //             url: '/sala-backend/menu/danh-muc'
                 //         }
                 //     ]
                 // },
@@ -629,19 +629,19 @@ export default {
                     sub: [
                         {
                             name: 'Thông tin',
-                            url: '/admin/tai-khoan/thong-tin'
+                            url: '/sala-backend/tai-khoan/thong-tin'
                         },
                         {
                             name: 'Danh sách',
-                            url: '/admin/tai-khoan'
+                            url: '/sala-backend/tai-khoan'
                         },
                         {
                             name: 'Thêm tài khoản',
-                            url: '/admin/tai-khoan/them-tai-khoan'
+                            url: '/sala-backend/tai-khoan/them-tai-khoan'
                         },
                         {
                             name: 'Mật khẩu',
-                            url: '/admin/tai-khoan/mat-khau'
+                            url: '/sala-backend/tai-khoan/mat-khau'
                         },
                     ]
                 },

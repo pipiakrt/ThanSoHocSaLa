@@ -111,7 +111,7 @@
                             </div>
                         </form>
                         <div class="card-footer text-center">
-                            <router-link to="/admin/don-hang/danh-sach" type="reset" class="btn btn-light-primary mr-1 font-weight-bolder"><i class="icon-sm ki ki-long-arrow-back"></i> Quay Lại</router-link>
+                            <router-link to="/sala-backend/don-hang/danh-sach" type="reset" class="btn btn-light-primary mr-1 font-weight-bolder"><i class="icon-sm ki ki-long-arrow-back"></i> Quay Lại</router-link>
                             <button type="reset" @click="submit(1)" class="btn btn-primary mr-1"><i class="icon-sm ki ki-bold-check-1   "></i> Lưu đơn hàng</button>
                         </div>
                     </div>
@@ -134,11 +134,11 @@ export default {
             subHeader: {
                 links: [{
                         name: 'đơn hàng',
-                        url: '/admin/don-hang/danh-sach',
+                        url: '/sala-backend/don-hang/danh-sach',
                     },
                 ],
                 action: {
-                    url: '/admin/don-hang/danh-sach',
+                    url: '/sala-backend/don-hang/danh-sach',
                     icon: 'icon-sm ki ki-long-arrow-back',
                     text: 'Danh Sách',
                 }
@@ -203,7 +203,7 @@ export default {
             axios.put('/api/orders/' + this.id, params).then((res) => {
                 KTApp.unblockPage();
                 toastr.success("Tạo đơn hàng thành công!")
-                this.$router.push('/admin/don-hang/cho-xac-nhan');
+                this.$router.push('/sala-backend/don-hang/cho-xac-nhan');
             })
             axios.put(`/api/users/${this.user_id}?number=${this.licenses}`)
         }
