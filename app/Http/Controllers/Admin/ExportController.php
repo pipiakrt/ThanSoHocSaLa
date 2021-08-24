@@ -42,14 +42,13 @@ class ExportController extends Controller
             'code' => Str::random(60),
             'name' => $dataPost['name'],
             'birthdate' => $dataPost['birthday'],
-            'data' => $this->tinhtoan($dataPost),
+            'data' => '',
             'email' => $user->email,
             'phone' => $user->phone,
             'path' => '/' . $user->id . '/' . time() . '.pdf',
             'type' => 1,
         ]);
         $user->License()->decrement('number');
-        // return view('PDF.index')->with('result', $data);
 
         Http::post("http://localhost:3000", [
             "name" => $data->name,
@@ -57,7 +56,7 @@ class ExportController extends Controller
             "email" => $data->email,
             "phone" => $data->phone,
             "path" => $data->path,
-            "data" => $data->data,
+            "data" => $this->tinhtoan($dataPost),
         ]);
         $file = Http::get("http://localhost:5000/view");
 
@@ -182,6 +181,23 @@ class ExportController extends Controller
         $aryReturn['SU_MENH'] = $this->getContents('SM', $aryThanSo['suMenh']);
         $aryReturn['CAN_BANG_DD_SM'] = $this->getContents('CDS', $aryThanSo['canBangDuongDoiSuMenh']);
         $aryReturn['TRUONG_THANH'] = $this->getContents('TRT', $aryThanSo['truongThanh']);
+
+        $aryReturn['CON_SO'] = [
+            "DUONG_DOI" => $aryThanSo['duongDoi'],
+            "SU_MENH" => $aryThanSo['suMenh'],
+            "CAN_BANG_DD_SM" => $aryThanSo['canBangDuongDoiSuMenh'],
+            "TRUONG_THANH" => $aryThanSo['truongThanh'],
+            "THACH_THUC" => $aryThanSo['thachThuc'],
+            "CHI_SO_LAP" => $aryThanSo['chiSoLap'],
+            "KHUYET_THIEU" => $aryThanSo['khuyetThieu'],
+            "CAN_BANG" => $aryThanSo['canBang'],
+            "NGAY_SINH" => $aryThanSo['ngaySinh'],
+            "PHAN_UNG" => $aryThanSo['phanUng'],
+            "CAN_BANG_TH_NC" => $aryThanSo['canBangTamHonNhanCach'],
+            "NHAN_CACH" => $aryThanSo['nhanCach'],
+            "TAM_HON" => $aryThanSo['tamHon'],
+        ];
+
         return $aryReturn;
     }
 
