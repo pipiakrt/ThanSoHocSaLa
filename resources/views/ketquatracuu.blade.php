@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@push('head')
+    <title>Kết Quản Tra Cứu - Thần Số Học Sala</title>
+@endpush
+
 @push('styles')
     <link rel="stylesheet" href="/css/ket-qua-tra-cuu.css">
     <style>
