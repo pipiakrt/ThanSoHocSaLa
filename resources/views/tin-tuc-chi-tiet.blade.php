@@ -78,7 +78,7 @@
                                             <div class="col-11 small desc-lienquan">{{ $item->description }}</div>
                                         </div>
                                         <div class="col-3">
-                                            <img style="max-width: 100px" src="https://stage.thansohocsala.com/{{ $item->image ? $item->image : '/img/post/1.png' }}" alt="">
+                                            <img style="max-width: 100px" src="{{ $item->image ? $item->image : '/img/post/1.png' }}" alt="">
                                         </div>
                                     </div>
                                 </a>

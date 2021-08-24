@@ -2,7 +2,7 @@
     <div class="row g-0 g-md-3">
         <div class="col-md-4">
             <div class="image">
-                <img class="mw-100" src="https://stage.thansohocsala.com/{{ $item->image ? $item->image : '/img/post/1.png' }}" alt="{{ $item->name }}">
+                <img class="mw-100" src="{{ $item->image ? $item->image : '/img/post/1.png' }}" alt="{{ $item->name }}">
             </div>
         </div>
         <div class="col-md-8 col-lg-7 d-flex align-items-center">
