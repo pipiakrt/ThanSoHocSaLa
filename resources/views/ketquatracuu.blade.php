@@ -114,7 +114,7 @@
                 <div class="col-xl-10">
                     <div class="desc title text-white"><h3>KHÁM PHÁ CÁC CHỈ SỐ CỦA BẠN</h3></div>
                 </div>
-                <div class="cus col-12 col-xl-2">
+                <div class="cus col-12 col-xl-2 d-none d-lg-block">
                     <div class="row g-0 text-white">
                         <div class="col-12">
                             <div id="carousel-item-0" class="eventItem3 item active" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0">
@@ -174,7 +174,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cus col-12 col-xl-10">
+                <div class="cus col-12 col-xl-10 d-none d-lg-block">
                     <div id="carouselExampleCaptions" class="carousel slide text-dark h-100" data-bs-interval="false" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active h-100" data-number="0">
@@ -321,6 +321,187 @@
                 </div>
                 <div class="col-xl-2"></div>
 
+                <div class="col-12 d-block d-lg-none">
+                    <div>
+                        <div class="item active">
+                            <div class="fake-line"></div>
+                            <div class="fake-icon">
+                                <div class="icon"></div>
+                            </div>
+                            <div class="title-item text-white">
+                                <h3>CHỈ SỐ ĐƯỜNG ĐỜI</h3>
+                            </div>
+                        </div>
+                        <div class="slide-ketqua bg text-white fw-lighter py-0 pt-3">
+                            <div class="desc">
+                                {!! $data['DUONG_DOI'] !!}
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item active">
+                            <div class="fake-line"></div>
+                            <div class="fake-icon">
+                                <div class="icon"></div>
+                            </div>
+                            <div class="title-item text-white">
+                                <h3>CHỈ SỐ SỨ MỆNH</h3>
+                            </div>
+                        </div>
+                        <div class="slide-ketqua bg text-white fw-lighter py-0 pt-3">
+                            <div class="desc">
+                                {!! $data['SU_MENH'] !!}
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item active">
+                            <div class="fake-line"></div>
+                            <div class="fake-icon">
+                                <div class="icon"></div>
+                            </div>
+                            <div class="title-item text-white">
+                                <h3>CHỈ SỐ KHUYẾT THIẾU</h3>
+                            </div>
+                        </div>
+                        <div class="slide-ketqua bg text-white fw-lighter py-0 pt-3">
+                            @isset($data['KHUYET_THIEU'])
+                                @foreach ($data['KHUYET_THIEU'] as $line)
+                                    <div class="desc">
+                                        {!! $line !!}
+                                    </div>
+                                @endforeach
+                            @else
+                                <div class="desc">
+                                    {!! DB::table('contents')->where('page_code', 'MP-KT-0')->first()->page_content !!}
+                                </div>
+                            @endisset
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item active">
+                            <div class="fake-line"></div>
+                            <div class="fake-icon">
+                                <div class="icon"></div>
+                            </div>
+                            <div class="title-item text-white">
+                                <h3>BIỂU ĐỒ NĂNG LỰC</h3>
+                                <h3>VÀ BIỂU ĐỒ BIRTH CHART</h3>
+                            </div>
+                        </div>
+                        <div class="slide-ketqua bg text-white fw-lighter py-0 pt-3">
+                            <div class="desc">
+                                <?php
+                                    $aryTong = [];
+                                    foreach ($data['BIEU_DO_NANG_LUC'][0] AS $item1) {
+                                        $aryNL_1[$item1][] = '<span class="chi-so-name">'.$item1.'</span>';
+                                        $aryTong[$item1][] = '<span class="chi-so-name">'.$item1.'</span>';
+                                    }
+                                ?>
+                            </div>
+                            <div class="desc" data-number="4">
+                                <?php
+                                    foreach ($data['BIEU_DO_NANG_LUC'][1] AS $item1) {
+                                        if ($item1 != 0) {
+                                            $aryNL_2[$item1][] = '<span class="chi-so-bd">'.$item1.'</span>';
+                                            $aryTong[$item1][] = '<span class="chi-so-bd">'.$item1.'</span>';
+                                        }
+                                    }
+                                ?>
+                            </div>
+                            <div class="slide-ketqua bg text-white fw-lighter" style="padding-bottom: 0 !important; padding-top: 0 !important;">
+                                <div class="conso2">
+                                    <div class="row g-0 justify-content-center">
+                                        <div class="col-md-6">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-12 col-lg-6 d-flex justify-content-center">
+                                                    <div class="main-chart">
+                                                        <div>
+                                                            <div class="g-0">
+                                                                <?php foreach ($aryNL_1 AS $item1 => $aryValue) {?>
+                                                                    <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
+                                                        </div>
+                                                        <div class="title2 mt-5"><h4 class="text-center">BIỂU ĐỒ NĂNG LỰC</h4></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-12 col-lg-6 d-flex justify-content-center">
+                                                    <div class="main-chart-2">
+                                                        <div>
+                                                            <div class="g-0">
+                                                                <?php foreach ($aryNL_2 AS $item1 => $aryValue) {?>
+                                                                    <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
+                                                        </div>
+                                                        <div class="title2 mt-5"><h4 class="text-center">BIỂU ĐỒ BIRTH CHART</h4></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-12 col-lg-6 d-flex justify-content-center">
+                                                    <div class="main-chart-3">
+                                                        <div>
+                                                            <div class="g-0">
+                                                                <?php foreach ($aryTong AS $item1 => $aryValue) {?>
+                                                                    <div class="cs1 nang-luc nang-luc-<?= $item1; ?> ng-star-inserted"><?= implode(' ', $aryValue); ?></div>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <img src="/img/ket-qua-tra-cuu/luoi.png" alt="">
+                                                        </div>
+                                                        <div class="title2 mt-5"><h4 class="text-center">BIỂU ĐỒ TỔNG HỢP</h4></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item active">
+                            <div class="fake-line"></div>
+                            <div class="fake-icon">
+                                <div class="icon"></div>
+                            </div>
+                            <div class="title-item text-white">
+                                <h3>THÁP ĐỈNH CAO</h3>
+                            </div>
+                        </div>
+                        <div class="slide-ketqua bg text-white fw-lighter py-0 pt-3">
+                            <div class="position-relative" style="min-height: 400px; background-color: #097364;">
+                                <div class="conso-qk text-white">
+                                    <div class="number number-11"><?= $data['DINH_CAO'][0][1]; ?></div>
+                                    <div class="number number-10"><?= $data['DINH_CAO'][0][2]; ?></div>
+                                    <div class="number number-9"><?= $data['DINH_CAO'][0][0]; ?></div>
+                                    <div class="number number-8"><?= $data['DINH_CAO'][0][4]; ?></div>
+                                    <div class="number number-7"><?= $data['DINH_CAO'][0][3]; ?></div>
+
+                                    <div class="number number-6"><?= $data['DINH_CAO'][1][1]; ?></div>
+                                    <div class="number number-5"><?= $data['DINH_CAO'][1][0]; ?></div>
+                                    <div class="number number-4 text-center"><?= $data['DINH_CAO'][1][2]; ?></div>
+
+                                    <div class="number number-3 text-center"><?= $data['DINH_CAO'][2][0]; ?></div>
+                                    <div class="number number-2 text-center"><?= $data['DINH_CAO'][2][1]; ?></div>
+
+                                    <div class="number number-1 text-center"><?= $data['DINH_CAO'][3][0]; ?></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-xl-10">
                     <div class="share-ketqua text-white">
                         <div class="d-flex justify-content-end">
@@ -339,7 +520,7 @@
                         <div class="titlecs text-center fw-light"><h4>CHIA SẺ NGAY</h4></div>
                         <div class="row g-0 justify-content-center mt-5">
                             <div class="col-sm-4 col-md-3 col-xl-2 text-center">
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center justify-content-center justify-content-md-start ms-2 ms-md-0">
                                     <div>
                                         <img src="/img/ket-qua-tra-cuu/FB.png" alt="">
                                     </div>
@@ -349,7 +530,7 @@
                                 </div>
                             </div>
                             <div class="mt-4 mt-sm-0 col-sm-4 col-md-3 col-xl-2 text-center">
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center justify-content-center justify-content-md-start me-4 me-md-0">
                                     <div>
                                         <img src="/img/ket-qua-tra-cuu/mail.png" alt="">
                                     </div>
@@ -359,7 +540,7 @@
                                 </div>
                             </div>
                             <div class="mt-4 mt-sm-0 col-sm-4 col-md-3 col-xl-2 text-center">
-                                <div id="laylink" class="d-flex align-items-center">
+                                <div id="laylink" class="d-flex align-items-center justify-content-center justify-content-md-start me-4 me-md-0">
                                     <div>
                                         <img src="/img/ket-qua-tra-cuu/link.png" alt="">
                                     </div>

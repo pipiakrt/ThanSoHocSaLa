@@ -634,6 +634,14 @@
         height: 275px !important;
     } */
 }
+@media (max-width: 380px) {
+    .ketqua .number-7 {
+        left: 12%;
+    }
+    .ketqua .number-8 {
+        right: 12%;
+    }
+}
 @media (max-width: 320px) {
     .thongtingoi .item .desc {
         height: 325px !important;

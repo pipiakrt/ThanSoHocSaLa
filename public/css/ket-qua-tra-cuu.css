@@ -290,7 +290,6 @@
 }
 .data-number, .nang-luc {
     position: absolute;
-    text-align: center;
     letter-spacing: .583333px;
     font-size: 14px;
     line-height: 18px;
@@ -304,7 +303,6 @@
 }
 .nang-luc {
     font-size: 23px;
-    text-align: center;
     width: 73px;
 }
 
