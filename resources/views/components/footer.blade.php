@@ -1,15 +1,21 @@
+<style>
+    .mx-align-center {
+        width: fit-content;
+        margin: auto;
+    }
+</style>
 <footer>
     <div class="container container-service">
         <div class="footer text-white d-flex align-items-center">
             <div class="w-100">
                 <div class="row g-0">
                     <div class="cus-col-2 col-md-6 col-xl-2">
-                        <div class="footer-logo text-center text-xl-start px-4">
+                        <div class="footer-logo text-center px-4">
                             <img class="mw-100" src="/img/footer/logo.png" alt="Thần số học" />
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3 mt-4 d-flex d-xl-block justify-content-center justify-content-xl-start">
-                        <div class="group mt-1 mt-md-0">
+                        <div class="group mt-1 mt-md-0 mx-align-center">
                             <div class="footer-title"><h2>HỖ TRỢ KHÁCH HÀNG</h2></div>
                             <div class="footer-item">
                                 <a href="tel://0942384382">
@@ -28,7 +34,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3 mt-4 d-flex d-xl-block justify-content-center justify-content-xl-start">
-                        <div class="group mt-4 mt-md-0">
+                        <div class="group mt-4 mt-md-0 mx-align-center">
                             <div class="footer-title"><h2>VỀ THẦN SỐ HỌC SALA</h2></div>
                             <div class="footer-item">
                                 <a href="/gioi-thieu/ve-hoc-vien-co-hoc-sala" class="decoration-revert-hover">
@@ -58,17 +64,13 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3 mt-4 d-flex d-xl-block justify-content-center justify-content-xl-start">
-                        <div class="group mt-4 mt-md-0">
+                        <div class="group mt-4 mt-md-0 mx-align-center">
                             <div class="footer-title"><h2>ĐĂNG KÝ NHẬN TIN</h2></div>
-                            <form action="/dang-ky" method="POST">
+                            <form class="footer-item" action="/dang-ky" method="POST">
                                 @csrf
-                                <div class="form-group">
-                                    <input class="form-contr-cus" name="name" placeholder="Họ và tên:" type="text" required>
-                                    <input class="form-contr-cus" name="email" placeholder="Email:" type="email" required>
-                                    <div>
-                                        <button type="submit" class="submit-cus">GỬI NGAY</button>
-                                    </div>
-                                </div>
+                                <input class="form-contr-cus d-block" name="name" placeholder="Họ và tên:" type="text" required>
+                                <input class="form-contr-cus d-block" name="email" placeholder="Email:" type="email" required>
+                                <button type="submit" class="submit-cus">GỬI NGAY</button>
                             </form>
                         </div>
                     </div>
