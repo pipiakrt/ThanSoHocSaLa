@@ -44,6 +44,7 @@ import ThanSo from './pages/ThanSo/index'
 import EditThanSo from './pages/ThanSo/edit'
 // posts
 import Posts from './pages/Posts/index'
+import ChuyenMuc from './pages/Posts/chuyenmuc'
 import Tags from './pages/Posts/tag'
 import CreatePost from './pages/Posts/create'
 import EditPost from './pages/Posts/edit'
@@ -251,6 +252,11 @@ const routes = [
     },
     {
         path: '/sala-backend/bai-viet/chuyen-muc',
+        component: ChuyenMuc,
+        name: 'Posts',
+    },
+    {
+        path: '/sala-backend/bai-viet/tag',
         component: Tags,
         name: 'Posts',
     },

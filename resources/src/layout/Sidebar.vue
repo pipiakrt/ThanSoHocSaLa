@@ -301,6 +301,10 @@ export default {
                             name: 'Chuyên mục',
                             url: '/sala-backend/bai-viet/chuyen-muc'
                         },
+                        {
+                            name: 'Tags',
+                            url: '/sala-backend/bai-viet/tag'
+                        },
                     ]
                 },
                 {

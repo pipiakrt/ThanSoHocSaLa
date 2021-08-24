@@ -21,6 +21,7 @@ use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\ThanSoHocController;
 use App\Http\Controllers\Api\TraCuuController;
 use App\Http\Controllers\Api\TuVanController;
+use App\Http\Controllers\Api\ChuyenMucController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,7 @@ use App\Http\Controllers\Api\TuVanController;
 
 Route::resources([
     'users' => UserController::class,
+    'chuyenmuc' => ChuyenMucController::class,
     'tags' => TagController::class,
     'auth' => AuthController::class,
     'accounts' => AccountController::class,

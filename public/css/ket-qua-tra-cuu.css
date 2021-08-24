@@ -187,6 +187,10 @@
     margin: auto;
     margin-bottom: 20px;
     line-height: 20px;
+    overflow: hidden;
+}
+.slide-ketqua .desc * {
+    max-width: 100% !important;
 }
 .content-ketqua .item .fake-icon .icon {
     width: 30px;

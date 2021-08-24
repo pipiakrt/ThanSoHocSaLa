@@ -43,10 +43,17 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="keyword" class="col-2 col-form-label">Chuyên mục</label>
+                                    <label for="chuyenmuc" class="col-2 col-form-label">Chuyên mục</label>
+                                    <div class="col-10">
+                                        <select class="form-control" id="chuyenmuc" multiple="multiple" style="height: 35px">
+                                            <option v-for="item in chuyenmuc" :key="item.id" v-text="item.name" :value="item.id" style="display: none"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="keyword" class="col-2 col-form-label">Tag</label>
                                     <div class="col-10">
                                         <select class="form-control" id="keyword" multiple="multiple" style="height: 35px">
-                                            <option value="" selected>Chọn chuyên mục</option>
                                             <option v-for="item in tags" :key="item.id" v-text="item.name" :value="item.id" style="display: none"></option>
                                         </select>
                                     </div>
@@ -159,6 +166,7 @@ export default {
             categories: [],
             category: '',
             tags: [],
+            chuyenmuc: [],
         }
     },
     watch: {
@@ -174,6 +182,14 @@ export default {
             this.tags = res.data.data
             KTUtil.ready(function () {
                 $('#keyword').select2({
+                    placeholder: "Chọn tag",
+                });
+            });
+        })
+        await axios('/api/chuyenmuc').then(res => {
+            this.chuyenmuc = res.data.data
+            KTUtil.ready(function () {
+                $('#chuyenmuc').select2({
                     placeholder: "Chọn chuyên mục",
                 });
             });
@@ -194,6 +210,13 @@ export default {
             });
             $('#keyword').val(tagId);
             $('#keyword').trigger('change');
+
+            let cmId = [];
+            res.data.data.chuyenmuc.forEach(item => {
+                cmId.push(item.id)
+            });
+            $('#chuyenmuc').val(cmId);
+            $('#chuyenmuc').trigger('change');
 
             KTApp.unblockPage();
             KTUtil.ready(function () {
@@ -264,6 +287,7 @@ export default {
                 image: this.avatar,
                 category_id: this.category,
                 keyword: $('#keyword').select2("val"),
+                chuyenmuc: $('#chuyenmuc').select2("val"),
                 description: this.description,
                 content: $('.summernote').summernote('code'),
                 status: String(status),

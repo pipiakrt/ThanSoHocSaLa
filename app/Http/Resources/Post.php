@@ -28,6 +28,7 @@ class Post extends JsonResource
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'tags' => Tag::collection($this->Tags),
+            'chuyenmuc' => ChuyenMuc::collection($this->ChuyenMuc),
         ];
     }
 }

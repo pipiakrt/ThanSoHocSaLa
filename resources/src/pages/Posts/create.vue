@@ -48,11 +48,18 @@
                                         </select>
                                     </div>
                                 </div>
-                                    <div class="form-group row">
-                                    <label for="keyword" class="col-2 col-form-label">Chuyên mục</label>
+                                <div class="form-group row">
+                                    <label for="chuyenmuc" class="col-2 col-form-label">Chuyên mục</label>
+                                    <div class="col-10">
+                                        <select class="form-control" id="chuyenmuc" multiple="multiple" style="height: 35px">
+                                            <option v-for="item in chuyenmuc" :key="item.id" v-text="item.name" :value="item.id"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="keyword" class="col-2 col-form-label">Tag</label>
                                     <div class="col-10">
                                         <select class="form-control" id="keyword" multiple="multiple" style="height: 35px">
-                                            <option value="" selected>Chọn chuyên mục</option>
                                             <option v-for="item in tags" :key="item.id" v-text="item.name" :value="item.id"></option>
                                         </select>
                                     </div>
@@ -158,6 +165,7 @@ export default {
             categories: [],
             category: '',
             tags: [],
+            chuyenmuc: [],
         }
     },
     watch: {
@@ -214,6 +222,14 @@ export default {
             this.tags = res.data.data
             KTUtil.ready(function () {
                 $('#keyword').select2({
+                    placeholder: "Chọn tag",
+                });
+            });
+        })
+        axios('/api/chuyenmuc').then(res => {
+            this.chuyenmuc = res.data.data
+            KTUtil.ready(function () {
+                $('#chuyenmuc').select2({
                     placeholder: "Chọn chuyên mục",
                 });
             });
@@ -244,6 +260,7 @@ export default {
                 category_id: this.category,
                 description: this.description,
                 keyword: $('#keyword').select2("val"),
+                chuyenmuc: $('#chuyenmuc').select2("val"),
                 content: $('.summernote').summernote('code'),
                 status: String(status),
             }

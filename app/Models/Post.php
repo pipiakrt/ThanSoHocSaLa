@@ -38,6 +38,11 @@ class Post extends Model
         return $this->belongsToMany(Tag::class);
     }
 
+    public function ChuyenMuc()
+    {
+        return $this->belongsToMany(Chuyenmuc::class);
+    }
+
     public function filterOrder(EloquentBuilder $query, $value)
     {
         $query->orderBy('id', $value);

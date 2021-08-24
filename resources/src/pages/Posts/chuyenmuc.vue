@@ -8,7 +8,7 @@
                     <div class="card card-custom">
                         <div class="card-header flex-wrap border-0 pb-0">
                             <div class="card-title">
-                                <h3 class="card-label">Tags</h3>
+                                <h3 class="card-label">Chuyên mục</h3>
                             </div>
                             <div class="symbol-group symbol-hover py-2">
                                 <div class="card-toolbar">
@@ -29,7 +29,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="item in tags" :key="'row' + item.id">
+                                    <tr v-for="item in chuyenmuc" :key="'row' + item.id">
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.name"></span>
                                         </td>
@@ -51,7 +51,7 @@
                                                                 <span class="navi-icon">
                                                                     <i class="flaticon2 flaticon2-trash"></i>
                                                                 </span>
-                                                                <span class="navi-text">Xóa Tags</span>
+                                                                <span class="navi-text">Xóa Chuyên mục</span>
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -87,7 +87,7 @@
                                             <label for="name" class="col-2 col-form-label">Tên</label>
                                             <div class="col-10">
                                                 <validation-provider rules="required|length:0,255" v-slot="{ errors }">
-                                                    <input v-model="name" class="form-control" type="text" placeholder="Tên Tags" />
+                                                    <input v-model="name" class="form-control" type="text" placeholder="Tên Chuyên mục" />
                                                     <div v-if="errors[0]" class="invalid-feedback d-block" v-text="errors[0]"></div>
                                                 </validation-provider>
                                             </div>
@@ -124,7 +124,7 @@
                                             <label for="name" class="col-2 col-form-label">Tên</label>
                                             <div class="col-10">
                                                 <validation-provider rules="required|length:0,255" v-slot="{ errors }">
-                                                    <input v-model="nameUpdate" class="form-control" type="text" placeholder="Tên Tags" />
+                                                    <input v-model="nameUpdate" class="form-control" type="text" placeholder="Tên Chuyên mục" />
                                                     <div v-if="errors[0]" class="invalid-feedback d-block" v-text="errors[0]"></div>
                                                 </validation-provider>
                                             </div>
@@ -172,8 +172,8 @@ export default {
                         url: '/sala-backend/bai-viet/danh-sach',
                     },
                     {
-                        name: 'Tags',
-                        url: '/sala-backend/bai-viet/tag',
+                        name: 'Chuyên mục',
+                        url: '/sala-backend/bai-viet/chuyen-muc',
                     },
                 ],
                 action: {
@@ -185,16 +185,16 @@ export default {
             name: '',
             idUpdate: '',
             nameUpdate: '',
-            tags: []
+            chuyenmuc: []
         }
     },
     mounted() {
         KTApp.block('#loadTag', {
             message: 'Đợi chút...'
         });
-        axios('/api/tags').then(res => {
+        axios('/api/chuyenmuc').then(res => {
             KTApp.unblock('#loadTag');
-            this.tags = res.data.data
+            this.chuyenmuc = res.data.data
         })
     },
     methods: {
@@ -208,14 +208,14 @@ export default {
                     state: "primary",
                     message: "Đợi Xíu...",
                 })
-                axios.post('/api/tags', params).then((res) => {
+                axios.post('/api/chuyenmuc', params).then((res) => {
                     KTApp.unblockPage();
                     if (res.status == 201) {
                         this.name = ''
                         params.id = res.data._id
-                        this.tags.push(params)
+                        this.chuyenmuc.push(params)
                         this.$refs['errors'].reset();
-                        toastr.success("Tạo Tags thành công!")
+                        toastr.success("Tạo Chuyên mục thành công!")
                         $('#exampleModalLong').modal('hide')
                     }
                     else {
@@ -236,10 +236,10 @@ export default {
                     state: "primary",
                     message: "Đợi Xíu...",
                 })
-                axios.patch('/api/tags/' + this.idUpdate, params).then((res) => {
+                axios.patch('/api/chuyenmuc/' + this.idUpdate, params).then((res) => {
                     KTApp.unblockPage();
-                    let key = this.tags.findIndex(item => item.id == this.idUpdate)
-                    this.tags[key].name = this.nameUpdate
+                    let key = this.chuyenmuc.findIndex(item => item.id == this.idUpdate)
+                    this.chuyenmuc[key].name = this.nameUpdate
                     $('#exampleModalLongUpdate').modal('hide')
                     toastr.success("Cập nhật thành công!")
                     this.$refs['errorupdate'].reset();
@@ -253,13 +253,13 @@ export default {
             return await this.$refs['errorUpdate'].validate();
         },
         destroy(id) {
-            axios.delete('/api/tags/' + id).then(res => {
+            axios.delete('/api/chuyenmuc/' + id).then(res => {
                 Swal.fire(
                     "Thành Công!",
-                    "Tags đã bị xóa hoàn toàn.",
+                    "Chuyên mục đã bị xóa hoàn toàn.",
                     "success"
                 )
-                this.tags = this.tags.filter(item => item.id !== id)
+                this.chuyenmuc = this.chuyenmuc.filter(item => item.id !== id)
             })
         },
     },

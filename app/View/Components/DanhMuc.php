@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 use App\Models\Category as Model;
+use App\Models\Tag;
 
 class DanhMuc extends Component
 {
@@ -25,6 +26,7 @@ class DanhMuc extends Component
     public function render()
     {
         $categories = Model::all();
-        return view('components.danh-muc', compact('categories'));
+        $tags = Tag::all();
+        return view('components.danh-muc', compact(['categories', 'tags']));
     }
 }

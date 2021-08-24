@@ -38,6 +38,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $post = Model::create($request->all());
+        $post->ChuyenMuc()->attach($request->chuyenmuc);
         return $post->Tags()->attach($request->keyword);
     }
 
@@ -62,6 +63,9 @@ class PostController extends Controller
     public function update(Request $request, Model $post)
     {
         $post->update($request->all());
+        if ($request->chuyenmuc) {
+            $post->ChuyenMuc()->sync($request->chuyenmuc);
+        }
         if ($request->keyword) {
             return $post->Tags()->sync($request->keyword);
         }

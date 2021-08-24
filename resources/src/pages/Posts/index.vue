@@ -133,7 +133,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.type == 'post' ? 'Tin tức' : 'Câu chuyện'"></span>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="getType(item.type)"></span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.updated_at)"></span>
@@ -265,6 +265,20 @@ export default {
         this.getApi()
     },
     methods: {
+        getType(type) {
+            if (type == 'post') {
+                return 'Tin tức';
+            }
+            else if (type == 'introduce') {
+                return 'Giới thiệu';
+            }
+            else if (type == 'qa') {
+                return 'Hỏi đáp';
+            }
+            else if (type == 'story') {
+                return 'Câu truyện';
+            }
+        },
         async getApi() {
             Extends.LoadPage()
             let query = {

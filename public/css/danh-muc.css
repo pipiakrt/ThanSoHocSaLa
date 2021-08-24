@@ -27,6 +27,11 @@ body {
     color: white;
     border-radius: 2px;
 }
+.tag-list li a.active {
+    background-color: #097364;
+    color: white;
+    border-radius: 2px;
+}
 .folder-list li a:hover {
     background-color: #097364;
     color: white;

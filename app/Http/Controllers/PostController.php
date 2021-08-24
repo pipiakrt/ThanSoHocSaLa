@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\Danhmuc;
 use App\Models\Tag;
 
 class PostController extends Controller
@@ -79,6 +80,11 @@ class PostController extends Controller
             if ($category) {
                 $posts = Post::orderby('id', 'desc')->where('category_id', $category->id)->paginate(5);
                 return view('tin-tuc', compact(['posts', 'category']));
+            }
+            else {
+                $tag = Tag::where('name', $slug)->first();
+                $posts = $tag->Posts()->paginate(5);
+                return view('tin-tuc', compact(['posts']));
             }
         }
         return view('errors.404');
