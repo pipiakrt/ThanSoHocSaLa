@@ -160,7 +160,7 @@ class UtilsComponent
         // convert name
         list($aryVowel, $aryNoVowel, $aryNameToNumber) = $this->convertName($name);
         // run compact
-        $totalBirthday = $this->convertNumberGoc($NgayS) + $this->convertNumberGoc($ThangS) + $this->convertNumberGoc($NamS);
+        $totalBirthday = $this->convertNumber($NgayS) + $this->convertNumber($ThangS) + $this->convertNumber($NamS);
         $duongDoiNoCompact = $this->convertNumber($totalBirthday, false);
         $duongDoi = $this->convertNumber($totalBirthday, true, true);
         $suMenhNoCompact = 0;
@@ -462,7 +462,7 @@ class UtilsComponent
         $Dinh_2 = $this->convertNumber($NgaySinh + $NamSinh);
         $level_2 = array($Dinh_1, $Dinh_2, $gd_tuoi_3);
         // build level 3
-        $Dinh_3 = $this->convertNumberByPyramid($Dinh_1 + $Dinh_2);
+        $Dinh_3 = $this->convertNumber($this->convertNumberByPyramid($Dinh_1 + $Dinh_2));
         $level_3 = array($Dinh_3, $gd_tuoi_4);
         // build level 4
         $Dinh_4 = $this->convertNumberByPyramid($ThangSinh + $NamSinh);
