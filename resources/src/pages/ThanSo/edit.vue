@@ -25,7 +25,7 @@
                                 </div>
                             </div>
 
-                            <div v-show="code.includes('CS-DD') || code.includes('CS-SM')">
+                            <div v-show="code.includes('CS-DD') || code.includes('CS-SM') || code.includes('CS-TDC') || code.includes('CS-TTT')">
                                 <div class="form-group row">
                                     <label for="name" class="col-2 col-form-label">Tiêu đề</label>
                                     <div class="col-10">

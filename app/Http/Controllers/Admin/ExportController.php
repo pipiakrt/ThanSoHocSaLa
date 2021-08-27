@@ -115,16 +115,24 @@ class ExportController extends Controller
             'NAM_THAN_SO'  =>  []
         ];
         $giaiDoan = [
-            "<b>Giai đoạn 1: từ 0 đến " . $aryThanSo['thapDinhCao'][0][3] . " tuổi.</b>",
-            "<b>Giai đoạn 2: từ " . ($aryThanSo['thapDinhCao'][0][3] + 1) . " đến " . $aryThanSo['thapDinhCao'][0][4] . " tuổi.</b>",
-            "<b>Giai đoạn 3: từ " . ($aryThanSo['thapDinhCao'][0][4] + 1) . " đến " . $aryThanSo['thapDinhCao'][1][2] . " tuổi.</b>",
-            "<b>Giai đoạn 4: từ " . ($aryThanSo['thapDinhCao'][1][2] + 1) . " đến " . $aryThanSo['thapDinhCao'][2][1] . " tuổi.</b>",
+            "0 - " . $aryThanSo['thapDinhCao'][0][3] . " tuổi",
+            ($aryThanSo['thapDinhCao'][0][3] + 1) . " - " . $aryThanSo['thapDinhCao'][0][4] . " tuổi",
+            ($aryThanSo['thapDinhCao'][0][4] + 1) . " - " . $aryThanSo['thapDinhCao'][1][2] . " tuổi",
+            ($aryThanSo['thapDinhCao'][1][2] + 1) . " - " . $aryThanSo['thapDinhCao'][2][1] . " tuổi",
         ];
         foreach ($aryThanSo['thapDinhCao'][4] as $key => $dinhCao) {
-            $aryReturn['LUAN_GIAI']['DINH_CAO'][] = $giaiDoan[$key] . $this->getContents('TDC', $dinhCao);
+            $aryReturn['LUAN_GIAI']['DINH_CAO'][] = [
+                "giaidoan" => $giaiDoan[$key],
+                "so" => $dinhCao,
+                "data" => $this->getContentBoSung('TDC', $dinhCao),
+            ];
         }
         foreach ($aryThanSo['thapThachThuc'][4] as $key => $tThachThuc) {
-            $aryReturn['LUAN_GIAI']['THACH_THUC'][] = $giaiDoan[$key] . $this->getContents('TTT', $tThachThuc);
+            $aryReturn['LUAN_GIAI']['THACH_THUC'][] = [
+                "giaidoan" => $giaiDoan[$key],
+                "so" => $tThachThuc,
+                "data" => $this->getContentBoSung('TTT', $tThachThuc),
+            ];
         }
         $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = '- Chu kỳ 1: 0-' . ($aryThanSo['chuKyRenLuyen'][3][1] - 1) . ' tuổi: ' . $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][0]);
         $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = '- Chu kỳ 2: ' . $aryThanSo['chuKyRenLuyen'][3][1] . '-' . ($aryThanSo['chuKyRenLuyen'][3][2] - 1) . ' tuổi: ' . $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][1]);
