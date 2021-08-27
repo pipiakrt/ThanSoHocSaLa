@@ -30,8 +30,8 @@ Route::get('/include', function () {
     foreach ([1,2,3,4,5,6,7,8,9] as $i) {
         \DB::table('contents')->insert([
             "image" => "",
-            "page_code" => "s",
-            "page_content" => "PTBT",
+            "page_code" => "CS-LCDH-$i",
+            "page_content" => "Số $i - Lựa chọn đối tác - Người đồng hành",
             "page_description" => "Số $i - Lựa chọn đối tác - Người đồng hành",
             "page_key" => "CS",
             "page_name" => "Chuyên sâu",
@@ -39,8 +39,8 @@ Route::get('/include', function () {
         ]);
         \DB::table('contents')->insert([
             "image" => "",
-            "page_code" => "s",
-            "page_content" => "PTBT",
+            "page_code" => "CS-SMCD-$i",
+            "page_content" => "Số $i - Sứ Mệnh Cuộc Đời Của Bản Thân & Xã Hội",
             "page_description" => "Số $i - Sứ Mệnh Cuộc Đời Của Bản Thân & Xã Hội",
             "page_key" => "CS",
             "page_name" => "Chuyên sâu",
