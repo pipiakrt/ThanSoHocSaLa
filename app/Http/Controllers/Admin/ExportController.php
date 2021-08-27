@@ -178,7 +178,7 @@ class ExportController extends Controller
             $aryReturn['THACH_THUC'][] = $this->getContents('TT', 0);
         }
         $aryReturn['DUONG_DOI'] = $this->getContentBoSung('DD', $aryThanSo['duongDoi']);
-        $aryReturn['SU_MENH'] = $this->getContents('SM', $aryThanSo['suMenh']);
+        $aryReturn['SU_MENH'] = $this->getContentBoSung('SM', $aryThanSo['suMenh']);
         $aryReturn['CAN_BANG_DD_SM'] = $this->getContents('CDS', $aryThanSo['canBangDuongDoiSuMenh']);
         $aryReturn['TRUONG_THANH'] = $this->getContents('TRT', $aryThanSo['truongThanh']);
         $aryReturn['LOI_KHUYEN'] = $this->getContents('LK', $aryThanSo['duongDoi']);
@@ -959,14 +959,7 @@ class ExportController extends Controller
      */
     private function getContentBoSung($key, $chiSo)
     {
-        $content = [
-            "custom" => [
-                "title" => "",
-                "desc" => "",
-                "content" => ""
-            ],
-            "content" => ""
-        ];
+        $content = [];
         $data = Model::where('page_code', 'CS-' . $key . '-' . $chiSo)->first();
         if ($data) {
             $content = [

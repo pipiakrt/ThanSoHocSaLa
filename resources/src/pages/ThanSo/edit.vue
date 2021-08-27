@@ -25,7 +25,7 @@
                                 </div>
                             </div>
 
-                            <div v-show="code.includes('CS-DD')">
+                            <div v-show="code.includes('CS-DD') || code.includes('CS-SM')">
                                 <div class="form-group row">
                                     <label for="name" class="col-2 col-form-label">Tiêu đề</label>
                                     <div class="col-10">
@@ -40,7 +40,82 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
+                                <div v-show="code.includes('CS-SM')">
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 1</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_diemmanh1" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 2</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_diemmanh2" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 3</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_diemmanh3" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 4</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_diemmanh4" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 5</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_diemmanh5" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 6</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_diemmanh6" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Thách thức 1</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_thachthuc1" class="form-control" type="text" placeholder="Thách thức" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Thách thức 2</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_thachthuc2" class="form-control" type="text" placeholder="Thách thức" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Thách thức 3</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_thachthuc3" class="form-control" type="text" placeholder="Thách thức" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Thách thức 4</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_thachthuc4" class="form-control" type="text" placeholder="Thách thức" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Thách thức 5</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_thachthuc5" class="form-control" type="text" placeholder="Thách thức" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Thách thức 6</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_thachthuc6" class="form-control" type="text" placeholder="Thách thức" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div v-show="code.includes('CS-DD')" class="form-group row">
                                     <label for="kt_summernote_2" class="col-2 col-form-label">Nội dung</label>
                                     <div class="col-10">
                                         <div class="summernote" id="kt_summernote_2"></div>
@@ -109,6 +184,18 @@ export default {
             code: '',
             custom_title: '',
             custom_desc: '',
+            custom_diemmanh1: '',
+            custom_diemmanh2: '',
+            custom_diemmanh3: '',
+            custom_diemmanh4: '',
+            custom_diemmanh5: '',
+            custom_diemmanh6: '',
+            custom_thachthuc1: '',
+            custom_thachthuc2: '',
+            custom_thachthuc3: '',
+            custom_thachthuc4: '',
+            custom_thachthuc5: '',
+            custom_thachthuc6: '',
         }
     },
     async created() {
@@ -119,6 +206,22 @@ export default {
             if (res.data.data.custom) {
                 this.custom_title = res.data.data.custom.title;
                 this.custom_desc = res.data.data.custom.desc;
+                if (res.data.data.custom.diemmanh) {
+                    this.custom_diemmanh1 = res.data.data.custom.diemmanh[0];
+                    this.custom_diemmanh2 = res.data.data.custom.diemmanh[1];
+                    this.custom_diemmanh3 = res.data.data.custom.diemmanh[2];
+                    this.custom_diemmanh4 = res.data.data.custom.diemmanh[3];
+                    this.custom_diemmanh5 = res.data.data.custom.diemmanh[4];
+                    this.custom_diemmanh6 = res.data.data.custom.diemmanh[5];
+                }
+                if (res.data.data.custom.thachthuc) {
+                    this.custom_thachthuc1 = res.data.data.custom.thachthuc[0];
+                    this.custom_thachthuc2 = res.data.data.custom.thachthuc[1];
+                    this.custom_thachthuc3 = res.data.data.custom.thachthuc[2];
+                    this.custom_thachthuc4 = res.data.data.custom.thachthuc[3];
+                    this.custom_thachthuc5 = res.data.data.custom.thachthuc[4];
+                    this.custom_thachthuc6 = res.data.data.custom.thachthuc[5];
+                }
             }
             KTUtil.ready(function () {
                 var HelloButton = function (context) {
@@ -225,6 +328,24 @@ export default {
                     content: $('#kt_summernote_2').summernote('code'),
                 },
                 page_content: $('#kt_summernote_1').summernote('code'),
+            }
+            if (this.code.includes('CS-SM')) {
+                params.custom.diemmanh = [
+                    this.custom_diemmanh1,
+                    this.custom_diemmanh2,
+                    this.custom_diemmanh3,
+                    this.custom_diemmanh4,
+                    this.custom_diemmanh5,
+                    this.custom_diemmanh6,
+                ]
+                params.custom.thachthuc = [
+                    this.custom_thachthuc1,
+                    this.custom_thachthuc2,
+                    this.custom_thachthuc3,
+                    this.custom_thachthuc4,
+                    this.custom_thachthuc5,
+                    this.custom_thachthuc6,
+                ]
             }
             KTApp.blockPage({
                 overlayColor: "#000000",
