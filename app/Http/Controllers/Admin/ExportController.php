@@ -134,9 +134,21 @@ class ExportController extends Controller
                 "data" => $this->getContentBoSung('TTT', $tThachThuc),
             ];
         }
-        $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = '- Chu kỳ 1: 0-' . ($aryThanSo['chuKyRenLuyen'][3][1] - 1) . ' tuổi: ' . $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][0]);
-        $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = '- Chu kỳ 2: ' . $aryThanSo['chuKyRenLuyen'][3][1] . '-' . ($aryThanSo['chuKyRenLuyen'][3][2] - 1) . ' tuổi: ' . $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][1]);
-        $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = '- Chu kỳ 3: ' . $aryThanSo['chuKyRenLuyen'][3][2] . '++ tuổi: ' . $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][2]);
+        $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = [
+            "giaidoan" => '0-' . ($aryThanSo['chuKyRenLuyen'][3][1] - 1) . ' tuổi',
+            "so" => $aryThanSo['chuKyRenLuyen'][0],
+            "content" => $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][0]),
+        ];
+        $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = [
+            "giaidoan" => $aryThanSo['chuKyRenLuyen'][3][1] . '-' . ($aryThanSo['chuKyRenLuyen'][3][2] - 1) . ' tuổi',
+            "so" => $aryThanSo['chuKyRenLuyen'][0],
+            "content" => $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][1]),
+        ];
+        $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = [
+            "giaidoan" => 'sau ' . $aryThanSo['chuKyRenLuyen'][3][2] . ' tuổi',
+            "so" => $aryThanSo['chuKyRenLuyen'][2],
+            "content" => $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][2]),
+        ];
 
         $flipNamThanSo = array_flip($aryThanSo['bieuDoNamThanSo']);
         $dinhNam_1 = $flipNamThanSo[date('Y')] + 1;
