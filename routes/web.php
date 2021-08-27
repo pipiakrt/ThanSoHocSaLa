@@ -25,6 +25,32 @@ use App\Http\Controllers\TuVanController;
 */
 
 
+
+Route::get('/include', function () {
+    foreach ([1,2,3,4,5,6,7,8,9] as $i) {
+        \DB::table('contents')->insert([
+            "image" => "",
+            "page_code" => "s",
+            "page_content" => "PTBT",
+            "page_description" => "Số $i - Lựa chọn đối tác - Người đồng hành",
+            "page_key" => "CS",
+            "page_name" => "Chuyên sâu",
+            "type" => 1,
+        ]);
+        \DB::table('contents')->insert([
+            "image" => "",
+            "page_code" => "s",
+            "page_content" => "PTBT",
+            "page_description" => "Số $i - Sứ Mệnh Cuộc Đời Của Bản Thân & Xã Hội",
+            "page_key" => "CS",
+            "page_name" => "Chuyên sâu",
+            "type" => 1,
+        ]);
+    }
+    return 'ok';
+});
+
+
 Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('/gioi-thieu')->group(function () {
