@@ -161,9 +161,22 @@ class ExportController extends Controller
             $dinhNam_3 = 1;
         }
         $firstYear = $aryThanSo['bieuDoNamThanSo'][$dinhNam_1 - 1];
-        $aryReturn['LUAN_GIAI']['NAM_THAN_SO'][] = '- Năm ' . $firstYear . ': ' . $this->getContents('NTS', $dinhNam_1);
-        $aryReturn['LUAN_GIAI']['NAM_THAN_SO'][] = '- Năm ' . ($firstYear + 1) . ': ' . $this->getContents('NTS', $dinhNam_2);
-        $aryReturn['LUAN_GIAI']['NAM_THAN_SO'][] = '- Năm ' . ($firstYear + 2) . ': ' . $this->getContents('NTS', $dinhNam_3);
+
+        $aryReturn['LUAN_GIAI']['NAM_THAN_SO'][] = [
+            "nam" => $firstYear,
+            "so" => $dinhNam_1,
+            "custom" => $this->getContentBoSung('NTS', $dinhNam_1),
+        ];
+        $aryReturn['LUAN_GIAI']['NAM_THAN_SO'][] = [
+            "nam" => ($firstYear + 1),
+            "so" => $dinhNam_2,
+            "custom" => $this->getContentBoSung('NTS', $dinhNam_2),
+        ];
+        $aryReturn['LUAN_GIAI']['NAM_THAN_SO'][] = [
+            "nam" => ($firstYear + 2),
+            "so" => $dinhNam_3,
+            "custom" => $this->getContentBoSung('NTS', $dinhNam_3),
+        ];
         // Tam hon
         $aryReturn['TAM_HON'] = $this->getContents('TH', $aryThanSo['tamHon']);
         // Nhan cach

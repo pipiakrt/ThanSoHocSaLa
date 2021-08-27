@@ -25,7 +25,7 @@
                                 </div>
                             </div>
 
-                            <div v-show="code.includes('CS-DD') || code.includes('CS-SM') || code.includes('CS-TDC') || code.includes('CS-TTT')">
+                            <div v-show="code.includes('CS-DD') || code.includes('CS-SM') || code.includes('CS-TDC') || code.includes('CS-TTT') || code.includes('CS-NTS')">
                                 <div class="form-group row">
                                     <label for="name" class="col-2 col-form-label">Tiêu đề</label>
                                     <div class="col-10">
@@ -40,77 +40,79 @@
                                     </div>
                                 </div>
 
-                                <div v-show="code.includes('CS-SM')">
+                                <div v-show="code.includes('CS-SM') || code.includes('CS-NTS')">
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 1</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 1</label>
                                         <div class="col-10">
-                                            <input v-model="custom_diemmanh1" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                            <input v-model="custom_diemmanh1" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 2</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 2</label>
                                         <div class="col-10">
-                                            <input v-model="custom_diemmanh2" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                            <input v-model="custom_diemmanh2" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 3</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 3</label>
                                         <div class="col-10">
-                                            <input v-model="custom_diemmanh3" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                            <input v-model="custom_diemmanh3" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 4</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 4</label>
                                         <div class="col-10">
-                                            <input v-model="custom_diemmanh4" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                            <input v-model="custom_diemmanh4" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 5</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 5</label>
                                         <div class="col-10">
-                                            <input v-model="custom_diemmanh5" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                            <input v-model="custom_diemmanh5" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Điểm mạnh 6</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 6</label>
                                         <div class="col-10">
-                                            <input v-model="custom_diemmanh6" class="form-control" type="text" placeholder="Điểm mạnh" />
+                                            <input v-model="custom_diemmanh6" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Thách thức 1</label>
-                                        <div class="col-10">
-                                            <input v-model="custom_thachthuc1" class="form-control" type="text" placeholder="Thách thức" />
+                                    <div v-show="code.includes('CS-SM')">
+                                        <div class="form-group row">
+                                            <label for="name" class="col-2 col-form-label">Thách thức 1</label>
+                                            <div class="col-10">
+                                                <input v-model="custom_thachthuc1" class="form-control" type="text" placeholder="Nội dung" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Thách thức 2</label>
-                                        <div class="col-10">
-                                            <input v-model="custom_thachthuc2" class="form-control" type="text" placeholder="Thách thức" />
+                                        <div class="form-group row">
+                                            <label for="name" class="col-2 col-form-label">Thách thức 2</label>
+                                            <div class="col-10">
+                                                <input v-model="custom_thachthuc2" class="form-control" type="text" placeholder="Nội dung" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Thách thức 3</label>
-                                        <div class="col-10">
-                                            <input v-model="custom_thachthuc3" class="form-control" type="text" placeholder="Thách thức" />
+                                        <div class="form-group row">
+                                            <label for="name" class="col-2 col-form-label">Thách thức 3</label>
+                                            <div class="col-10">
+                                                <input v-model="custom_thachthuc3" class="form-control" type="text" placeholder="Nội dung" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Thách thức 4</label>
-                                        <div class="col-10">
-                                            <input v-model="custom_thachthuc4" class="form-control" type="text" placeholder="Thách thức" />
+                                        <div class="form-group row">
+                                            <label for="name" class="col-2 col-form-label">Thách thức 4</label>
+                                            <div class="col-10">
+                                                <input v-model="custom_thachthuc4" class="form-control" type="text" placeholder="Nội dung" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Thách thức 5</label>
-                                        <div class="col-10">
-                                            <input v-model="custom_thachthuc5" class="form-control" type="text" placeholder="Thách thức" />
+                                        <div class="form-group row">
+                                            <label for="name" class="col-2 col-form-label">Thách thức 5</label>
+                                            <div class="col-10">
+                                                <input v-model="custom_thachthuc5" class="form-control" type="text" placeholder="Nội dung" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">Thách thức 6</label>
-                                        <div class="col-10">
-                                            <input v-model="custom_thachthuc6" class="form-control" type="text" placeholder="Thách thức" />
+                                        <div class="form-group row">
+                                            <label for="name" class="col-2 col-form-label">Thách thức 6</label>
+                                            <div class="col-10">
+                                                <input v-model="custom_thachthuc6" class="form-control" type="text" placeholder="Nội dung" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -328,6 +330,16 @@ export default {
                     content: $('#kt_summernote_2').summernote('code'),
                 },
                 page_content: $('#kt_summernote_1').summernote('code'),
+            }
+            if (this.code.includes('CS-NTS')) {
+                params.custom.diemmanh = [
+                    this.custom_diemmanh1,
+                    this.custom_diemmanh2,
+                    this.custom_diemmanh3,
+                    this.custom_diemmanh4,
+                    this.custom_diemmanh5,
+                    this.custom_diemmanh6,
+                ]
             }
             if (this.code.includes('CS-SM')) {
                 params.custom.diemmanh = [
