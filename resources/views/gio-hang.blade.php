@@ -121,33 +121,35 @@
 
     <div class="d-block d-lg-none bg-white rounded shadow-sm p-3">
         <div class="row g-0">
-            @foreach ($products as $item)
-                <div class="col-12">
-                    {{-- <input class="form-check-input product" type="checkbox" data-slug="{{ $item["slug"] }}" {{ $item["status"] == true ? "checked" : "" }}> --}}
+            @isset ($products)
+                @foreach ($products as $item)
+                    <div class="col-12">
+                        {{-- <input class="form-check-input product" type="checkbox" data-slug="{{ $item["slug"] }}" {{ $item["status"] == true ? "checked" : "" }}> --}}
 
-                    <div class="p-2 d-flex align-items-start">
-                        <img style="margin-right: 10px;" src="{{ $item["image"] }}" alt="" width="70" class="img-fluid rounded shadow-sm">
-                        <div class="d-inline-block align-middle">
-                            <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{ $item["name"] }}</a></h5>
-                            @foreach ($item["options"]["desc2"]["items"] as $value)
-                                <span class="d-block" style="font-size: 14px; color: #333333">{{ $value["name"] }}</span>
-                            @endforeach
+                        <div class="p-2 d-flex align-items-start">
+                            <img style="margin-right: 10px;" src="{{ $item["image"] }}" alt="" width="70" class="img-fluid rounded shadow-sm">
+                            <div class="d-inline-block align-middle">
+                                <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{ $item["name"] }}</a></h5>
+                                @foreach ($item["options"]["desc2"]["items"] as $value)
+                                    <span class="d-block" style="font-size: 14px; color: #333333">{{ $value["name"] }}</span>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12">
-                    <ul class="p-3">
-                        @foreach ($item["promotion"][0]["options"] as $options)
-                            <li>{{ $options['key'] . ' - ' . $options['val'] }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                <div class="col-12 position-relative">
-                    <div class="border-0 align-middle"><b>Giá: </b><strong>{{ $item["price"] }}</strong></div>
-                    <div class="border-0 align-middle text-end me-1 position-absolute bottom-0" style="right: 3px;"><a href="/gio-hang/xoa/{{ $item["id"] }}" class="text-dark"><i class="fa fa-trash"></i></a></div>
-                </div>
-                <hr class="mt-3" />
-            @endforeach
+                    <div class="col-12">
+                        <ul class="p-3">
+                            @foreach ($item["promotion"][0]["options"] as $options)
+                                <li>{{ $options['key'] . ' - ' . $options['val'] }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="col-12 position-relative">
+                        <div class="border-0 align-middle"><b>Giá: </b><strong>{{ $item["price"] }}</strong></div>
+                        <div class="border-0 align-middle text-end me-1 position-absolute bottom-0" style="right: 3px;"><a href="/gio-hang/xoa/{{ $item["id"] }}" class="text-dark"><i class="fa fa-trash"></i></a></div>
+                    </div>
+                    <hr class="mt-3" />
+                @endforeach
+            @endisset
 
             <div class="col-lg-12">
                 <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Hóa Đơn Tạm Tính </div>
