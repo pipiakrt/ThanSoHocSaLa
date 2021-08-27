@@ -25,7 +25,6 @@ use App\Http\Controllers\TuVanController;
 */
 
 
-
 Route::get('/include', function () {
     foreach ([1,2,3,4,5,6,7,8,9] as $i) {
         \DB::table('contents')->insert([
@@ -37,6 +36,8 @@ Route::get('/include', function () {
             "page_name" => "Chuyên sâu",
             "type" => 1,
         ]);
+    }
+    foreach ([1,2,3,4,5,6,7,8,9] as $i) {
         \DB::table('contents')->insert([
             "image" => "",
             "page_code" => "CS-SMCD-$i",
