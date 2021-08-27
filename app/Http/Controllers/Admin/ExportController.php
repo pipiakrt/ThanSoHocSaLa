@@ -177,7 +177,7 @@ class ExportController extends Controller
         else {
             $aryReturn['THACH_THUC'][] = $this->getContents('TT', 0);
         }
-        $aryReturn['DUONG_DOI'] = $this->getContents('DD', $aryThanSo['duongDoi']);
+        $aryReturn['DUONG_DOI'] = $this->getContentBoSung('DD', $aryThanSo['duongDoi']);
         $aryReturn['SU_MENH'] = $this->getContents('SM', $aryThanSo['suMenh']);
         $aryReturn['CAN_BANG_DD_SM'] = $this->getContents('CDS', $aryThanSo['canBangDuongDoiSuMenh']);
         $aryReturn['TRUONG_THANH'] = $this->getContents('TRT', $aryThanSo['truongThanh']);
@@ -948,6 +948,31 @@ class ExportController extends Controller
         $data = Model::where('page_code', 'CS-' . $key . '-' . $chiSo)->first();
         if ($data) {
             $content = $data->page_content;
+        }
+        return $content;
+    }
+
+    /**
+     * @param $key
+     * @param $chiSo
+     * @return string
+     */
+    private function getContentBoSung($key, $chiSo)
+    {
+        $content = [
+            "custom" => [
+                "title" => "",
+                "desc" => "",
+                "content" => ""
+            ],
+            "content" => ""
+        ];
+        $data = Model::where('page_code', 'CS-' . $key . '-' . $chiSo)->first();
+        if ($data) {
+            $content = [
+                "custom" => $data['custom'],
+                "content" => $data->page_content,
+            ];
         }
         return $content;
     }

@@ -22,6 +22,11 @@ class ThanSo extends Model
         'page_key',
         'page_name',
         'type',
+        'custom',
+    ];
+
+    protected $casts = [
+        'custom' => 'array',
     ];
 
     public function filterType(EloquentBuilder $query, $value)

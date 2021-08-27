@@ -21,6 +21,7 @@ class ThanSo extends JsonResource
             'title' => $this->page_description,
             'type' => $this->page_name,
             'updated_at' => $this->updated_at,
+            'custom' => $this->custom,
         ];
     }
 }
