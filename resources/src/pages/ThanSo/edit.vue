@@ -25,7 +25,7 @@
                                 </div>
                             </div>
 
-                            <div v-show="code.includes('CS-LCDH') || code.includes('CS-NGS') || code.includes('CS-DD') || code.includes('CS-SM') || code.includes('CS-TDC') || code.includes('CS-TTT') || code.includes('CS-NTS')">
+                            <div v-show="code.includes('CS-LK') || code.includes('CS-NGS') || code.includes('CS-DD') || code.includes('CS-SM') || code.includes('CS-TDC') || code.includes('CS-TTT') || code.includes('CS-NTS')">
 
                                 <div v-show="!code.includes('CS-NGS')">
                                     <div class="form-group row">
@@ -120,10 +120,16 @@
                                     </div>
                                 </div>
 
-                                <div v-show="code.includes('CS-LCDH') ||code.includes('CS-NGS') || code.includes('CS-DD')" class="form-group row">
+                                <div v-show="code.includes('CS-LK') ||code.includes('CS-NGS') || code.includes('CS-DD')" class="form-group row">
                                     <label for="kt_summernote_2" class="col-2 col-form-label">Nội dung</label>
                                     <div class="col-10">
                                         <div class="summernote" id="kt_summernote_2"></div>
+                                    </div>
+                                </div>
+                                <div v-show="code.includes('CS-LK')" class="form-group row">
+                                    <label for="kt_summernote_3" class="col-2 col-form-label">Nội dung</label>
+                                    <div class="col-10">
+                                        <div class="summernote" id="kt_summernote_3"></div>
                                     </div>
                                 </div>
                            </div>
@@ -302,9 +308,42 @@ export default {
                         },
                     },
                 });
+                $('#kt_summernote_3').summernote({
+                    height: 500,
+                    lineHeights: ['0.2', '0.3', '0.4', '0.5', '0.6', '0.8', '1.0', '1.2', '1.4', '1.5', '2.0', '3.0'],
+                    toolbar: [
+                        ['style', ['style']],
+                        ['font', ['bold', 'underline', 'italic', 'strikethrough', 'clear']],
+                        ['fontsize', ['fontsize']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['height', ['height']],
+                        ['table', ['table']],
+                        ['insert', ['link', 'picture', 'hr']],
+                        ['mybutton', ['hello']],
+                        ['view', ['fullscreen', 'codeview', 'help']],
+                    ],
+                    buttons: {
+                        hello: HelloButton
+                    },
+                    callbacks: {
+                        onImageUpload: function(files) {
+                            let formdata = new FormData();
+                            formdata.append("file", files[0]);
+                            formdata.append("summernote", true);
+                            axios.post('/api/images', formdata).then(res => {
+                                var image = $('<img>').attr('src', res.data);
+                                $('#kt_summernote_3').summernote("insertNode", image[0]);
+                            })
+                        },
+                    },
+                });
                 if (res.data.data.custom) {
                     if (res.data.data.custom.content) {
                         $('#kt_summernote_2').summernote('code', res.data.data.custom.content)
+                    }
+                    if (res.data.data.custom.content2) {
+                        $('#kt_summernote_3').summernote('code', res.data.data.custom.content2)
                     }
                 }
             });
@@ -331,6 +370,7 @@ export default {
                     title: this.custom_title,
                     desc: this.custom_desc,
                     content: $('#kt_summernote_2').summernote('code'),
+                    content2: $('#kt_summernote_3').summernote('code'),
                 },
                 page_content: $('#kt_summernote_1').summernote('code'),
             }

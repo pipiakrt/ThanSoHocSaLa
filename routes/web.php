@@ -25,22 +25,6 @@ use App\Http\Controllers\TuVanController;
 */
 
 
-Route::get('/test', function () {
-    foreach ([11,22] as $i) {
-        \DB::table('contents')->insert([
-            "image" => "",
-            "page_code" => "CS-SMCD-$i",
-            "page_content" => "Số $i - Sứ Mệnh Cuộc Đời Của Bản Thân & Xã Hội",
-            "page_description" => "Số $i - Sứ Mệnh Cuộc Đời Của Bản Thân & Xã Hội",
-            "page_key" => "CS",
-            "page_name" => "Chuyên sâu",
-            "type" => 1,
-        ]);
-    }
-    return 'ok';
-});
-
-
 Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('/gioi-thieu')->group(function () {
