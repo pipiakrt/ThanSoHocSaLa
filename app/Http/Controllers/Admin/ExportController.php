@@ -135,12 +135,12 @@ class ExportController extends Controller
             ];
         }
         $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = [
-            "giaidoan" => '0-' . ($aryThanSo['chuKyRenLuyen'][3][1] - 1) . ' tuổi',
+            "giaidoan" => '0 tuổi -' . ($aryThanSo['chuKyRenLuyen'][3][1] - 1) . ' tuổi',
             "so" => $aryThanSo['chuKyRenLuyen'][0],
             "content" => $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][0]),
         ];
         $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = [
-            "giaidoan" => $aryThanSo['chuKyRenLuyen'][3][1] . '-' . ($aryThanSo['chuKyRenLuyen'][3][2] - 1) . ' tuổi',
+            "giaidoan" => $aryThanSo['chuKyRenLuyen'][3][1] . ' tuổi -' . ($aryThanSo['chuKyRenLuyen'][3][2] - 1) . ' tuổi',
             "so" => $aryThanSo['chuKyRenLuyen'][0],
             "content" => $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][1]),
         ];
