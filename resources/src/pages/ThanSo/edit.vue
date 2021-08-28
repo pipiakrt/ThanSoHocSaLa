@@ -25,7 +25,7 @@
                                 </div>
                             </div>
 
-                            <div v-show="code.includes('CS-LK') || code.includes('CS-NGS') || code.includes('CS-DD') || code.includes('CS-SM') || code.includes('CS-TDC') || code.includes('CS-TTT') || code.includes('CS-NTS')">
+                            <div v-show="code.includes('CS-LK') || code.includes('CS-NGS') || code.includes('CS-DD') || code.includes('CS-SM-') || code.includes('CS-TDC') || code.includes('CS-TTT') || code.includes('CS-NTS')">
 
                                 <div v-show="!code.includes('CS-NGS')">
                                     <div class="form-group row">
@@ -43,44 +43,44 @@
                                     </div>
                                 </div>
 
-                                <div v-show="code.includes('CS-SM') || code.includes('CS-NTS')">
+                                <div v-show="code.includes('CS-SM-') || code.includes('CS-NTS')">
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 1</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM-') ? "Điểm mạnh" : "Nội dung" }} 1</label>
                                         <div class="col-10">
                                             <input v-model="custom_diemmanh1" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 2</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM-') ? "Điểm mạnh" : "Nội dung" }} 2</label>
                                         <div class="col-10">
                                             <input v-model="custom_diemmanh2" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 3</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM-') ? "Điểm mạnh" : "Nội dung" }} 3</label>
                                         <div class="col-10">
                                             <input v-model="custom_diemmanh3" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 4</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM-') ? "Điểm mạnh" : "Nội dung" }} 4</label>
                                         <div class="col-10">
                                             <input v-model="custom_diemmanh4" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 5</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM-') ? "Điểm mạnh" : "Nội dung" }} 5</label>
                                         <div class="col-10">
                                             <input v-model="custom_diemmanh5" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM') ? "Điểm mạnh" : "Nội dung" }} 6</label>
+                                        <label for="name" class="col-2 col-form-label">{{ code.includes('CS-SM-') ? "Điểm mạnh" : "Nội dung" }} 6</label>
                                         <div class="col-10">
                                             <input v-model="custom_diemmanh6" class="form-control" type="text" placeholder="Nội dung" />
                                         </div>
                                     </div>
-                                    <div v-show="code.includes('CS-SM')">
+                                    <div v-show="code.includes('CS-SM-')">
                                         <div class="form-group row">
                                             <label for="name" class="col-2 col-form-label">Thách thức 1</label>
                                             <div class="col-10">
@@ -384,7 +384,7 @@ export default {
                     this.custom_diemmanh6,
                 ]
             }
-            if (this.code.includes('CS-SM')) {
+            if (this.code.includes('CS-SM-')) {
                 params.custom.diemmanh = [
                     this.custom_diemmanh1,
                     this.custom_diemmanh2,
