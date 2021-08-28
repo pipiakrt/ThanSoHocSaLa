@@ -243,10 +243,10 @@ class UtilsComponent
     private function getNamThanSo($NgaySinh, $ThangSinh)
     {
         $currentYear = date('Y');
-        $namThanSo = $this->convertNumber($NgaySinh + $ThangSinh + $this->convertNumber($currentYear));
+        $namThanSo = $this->convertNumberGoc($NgaySinh + $ThangSinh + $this->convertNumberGoc($currentYear));
         $aryYear = array();
-        $startYear = $currentYear;
-        $endYear = $currentYear + 9;
+        $startYear = $currentYear - $namThanSo + 1;
+        $endYear = $currentYear - $namThanSo + 9;
         for($i = $startYear; $i <= $endYear; $i++){
             $aryYear[] = $i;
         }
