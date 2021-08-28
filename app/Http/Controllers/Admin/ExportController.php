@@ -183,7 +183,7 @@ class ExportController extends Controller
         $aryReturn['NHAN_CACH'] = $this->getContents('NC', $aryThanSo['nhanCach']);
         $aryReturn['CAN_BANG_TH_NC'] = $this->getContents('CTN', $aryThanSo['canBangTamHonNhanCach']);
         $aryReturn['PHAN_UNG'] = $this->getContents('PU', $aryThanSo['phanUng']);
-        $aryReturn['NGAY_SINH'] = $this->getContents('NGS', $aryThanSo['ngaySinh']);
+        $aryReturn['NGAY_SINH'] = $this->getContentBoSung('NGS', $aryThanSo['ngaySinh']);
         $aryReturn['CAN_BANG'] = $this->getContents('CB', $aryThanSo['canBang']);
         if (!empty($aryThanSo['khuyetThieu'])) {
             foreach ($aryThanSo['khuyetThieu'] as $khuyetThieu) {

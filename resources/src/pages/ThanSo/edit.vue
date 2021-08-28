@@ -25,18 +25,21 @@
                                 </div>
                             </div>
 
-                            <div v-show="code.includes('CS-DD') || code.includes('CS-SM') || code.includes('CS-TDC') || code.includes('CS-TTT') || code.includes('CS-NTS')">
-                                <div class="form-group row">
-                                    <label for="name" class="col-2 col-form-label">Tiêu đề</label>
-                                    <div class="col-10">
-                                        <input v-model="custom_title" class="form-control" type="text" placeholder="Tiêu đề" />
-                                    </div>
-                                </div>
+                            <div v-show="code.includes('CS-NGS') || code.includes('CS-DD') || code.includes('CS-SM') || code.includes('CS-TDC') || code.includes('CS-TTT') || code.includes('CS-NTS')">
 
-                                <div class="form-group row">
-                                    <label for="name" class="col-2 col-form-label">Mô tả</label>
-                                    <div class="col-10">
-                                        <input v-model="custom_desc" class="form-control" type="text" placeholder="Mô tả" />
+                                <div v-show="!code.includes('CS-NGS')">
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Tiêu đề</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_title" class="form-control" type="text" placeholder="Tiêu đề" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="name" class="col-2 col-form-label">Mô tả</label>
+                                        <div class="col-10">
+                                            <input v-model="custom_desc" class="form-control" type="text" placeholder="Mô tả" />
+                                        </div>
                                     </div>
                                 </div>
 
@@ -117,7 +120,7 @@
                                     </div>
                                 </div>
 
-                                <div v-show="code.includes('CS-DD')" class="form-group row">
+                                <div v-show="code.includes('CS-NGS') || code.includes('CS-DD')" class="form-group row">
                                     <label for="kt_summernote_2" class="col-2 col-form-label">Nội dung</label>
                                     <div class="col-10">
                                         <div class="summernote" id="kt_summernote_2"></div>
