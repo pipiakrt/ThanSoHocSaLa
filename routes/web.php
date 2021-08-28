@@ -25,19 +25,8 @@ use App\Http\Controllers\TuVanController;
 */
 
 
-Route::get('/include', function () {
-    foreach ([1,2,3,4,5,6,7,8,9] as $i) {
-        \DB::table('contents')->insert([
-            "image" => "",
-            "page_code" => "CS-LCDH-$i",
-            "page_content" => "Số $i - Lựa chọn đối tác - Người đồng hành",
-            "page_description" => "Số $i - Lựa chọn đối tác - Người đồng hành",
-            "page_key" => "CS",
-            "page_name" => "Chuyên sâu",
-            "type" => 1,
-        ]);
-    }
-    foreach ([1,2,3,4,5,6,7,8,9] as $i) {
+Route::get('/test', function () {
+    foreach ([11,22] as $i) {
         \DB::table('contents')->insert([
             "image" => "",
             "page_code" => "CS-SMCD-$i",

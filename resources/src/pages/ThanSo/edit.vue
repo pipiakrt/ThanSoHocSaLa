@@ -25,7 +25,7 @@
                                 </div>
                             </div>
 
-                            <div v-show="code.includes('CS-NGS') || code.includes('CS-DD') || code.includes('CS-SM') || code.includes('CS-TDC') || code.includes('CS-TTT') || code.includes('CS-NTS')">
+                            <div v-show="code.includes('CS-LCDH') || code.includes('CS-NGS') || code.includes('CS-DD') || code.includes('CS-SM') || code.includes('CS-TDC') || code.includes('CS-TTT') || code.includes('CS-NTS')">
 
                                 <div v-show="!code.includes('CS-NGS')">
                                     <div class="form-group row">
@@ -120,7 +120,7 @@
                                     </div>
                                 </div>
 
-                                <div v-show="code.includes('CS-NGS') || code.includes('CS-DD')" class="form-group row">
+                                <div v-show="code.includes('CS-LCDH') ||code.includes('CS-NGS') || code.includes('CS-DD')" class="form-group row">
                                     <label for="kt_summernote_2" class="col-2 col-form-label">Nội dung</label>
                                     <div class="col-10">
                                         <div class="summernote" id="kt_summernote_2"></div>
