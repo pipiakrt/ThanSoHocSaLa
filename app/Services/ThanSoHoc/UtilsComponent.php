@@ -245,8 +245,8 @@ class UtilsComponent
         $currentYear = date('Y');
         $namThanSo = $this->convertNumber($NgaySinh + $ThangSinh + $this->convertNumber($currentYear));
         $aryYear = array();
-        $startYear = $currentYear - $namThanSo + 1;
-        $endYear = $currentYear - $namThanSo + 9;
+        $startYear = $currentYear;
+        $endYear = $currentYear + 9;
         for($i = $startYear; $i <= $endYear; $i++){
             $aryYear[] = $i;
         }
