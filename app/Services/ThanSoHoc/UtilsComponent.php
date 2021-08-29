@@ -171,7 +171,7 @@ class UtilsComponent
             }
             $suMenhNoCompact += array_sum($aryNameVowel);
         }
-        $suMenh = $this->convertNumber($suMenhNoCompact);
+        $suMenh = $this->convertNumberSM($suMenhNoCompact);
         $tamHonNoCompact = $this->convertNumber(array_sum($aryVowel), false);
         $tamHon = $this->convertThachThuc(array_sum($aryVowel));
         $nhanCachNoCompact = $this->convertNumber(array_sum($aryNoVowel), false);
@@ -546,6 +546,20 @@ class UtilsComponent
         $aryNumber = str_split($number);
         $total = array_sum($aryNumber);
         return $this->convertNumberGoc($total);
+    }
+
+    public function convertNumberSM($number)
+    {
+        $number = (int) $number;
+        if ($number < 10) {
+            return $number;
+        }
+        if ($number == 11) {
+            return $number;
+        }
+        $aryNumber = str_split($number);
+        $total = array_sum($aryNumber);
+        return $this->convertNumberSM($total);
     }
 
     public function convertNumber($number, $isCompact = true, $isSpecial = false)
