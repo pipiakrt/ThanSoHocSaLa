@@ -216,7 +216,7 @@ class ExportController extends Controller
         $aryReturn['TRUONG_THANH'] = $this->getContents('TRT', $aryThanSo['truongThanh']);
         $aryReturn['LOI_KHUYEN'] = $this->getContentBoSung('LK', $aryThanSo['duongDoi']);
         $aryReturn['LUA_CHON_DTDH'] = $this->getContents('LCDH', $aryThanSo['suMenh']);
-        $aryReturn['SUMENH_CUOCDOI'] = $this->getContents('SMCD', $aryThanSo['tamHon']);
+        $aryReturn['SUMENH_CUOCDOI'] = $this->getContents('SMCD', "1");
         $aryReturn['BINHAN_HANHPHUC'] = $this->getContents('BAHP', "11");
 
         $aryReturn['CON_SO'] = [
