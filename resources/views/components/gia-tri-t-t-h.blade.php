@@ -86,7 +86,7 @@
                 </div>
                 <div class="text-center btn-dangky">
                     <a href="/tra-cuu/">
-                        <button class="text-white">ĐĂNG KÍ</button>
+                        <button class="text-white">TRA CỨU</button>
                     </a>
                 </div>
             </div>
@@ -182,7 +182,7 @@
                 </div>
                 <div class="text-center btn-dangky">
                     <a href="/tra-cuu/">
-                        <button class="text-white">ĐĂNG KÍ</button>
+                        <button class="text-white">TRA CỨU</button>
                     </a>
                 </div>
             </div>

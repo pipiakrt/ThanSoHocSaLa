@@ -10,7 +10,7 @@
     <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'don-hang' ? 'bg-light' : 'lh-condensed' }}">
         <a href="/tai-khoan/don-hang">
             <div class="{{ request()->segment(2) == 'don-hang' ? 'text-success' : '' }}">
-                <h6 class="my-0">Đơn hàng chờ xử lý</h6>
+                <h6 class="my-0">Đơn hàng chưa thanh toán</h6>
                 <small class="{{ request()->segment(2) == 'don-hang' ? '' : 'text-muted' }}">bạn đang có {{ request()->user()->Order()->where('status', 0)->count() }} đơn hàng chờ xử lý</small>
             </div>
         </a>
@@ -18,7 +18,7 @@
     <li class="list-group-item d-flex justify-content-between {{ request()->segment(2) == 'dich-vu' ? 'bg-light' : 'lh-condensed' }}">
         <a href="/tai-khoan/dich-vu">
             <div class="{{ request()->segment(2) == 'dich-vu' ? 'text-success' : '' }}">
-                <h6 class="my-0">Đơn hàng hoạt động</h6>
+                <h6 class="my-0">Đơn hàng đã kích hoạt</h6>
                 <small class="{{ request()->segment(2) == 'dich-vu' ? '' : 'text-muted' }}">bạn đang có {{ request()->user()->Order()->where('status', 1)->count() }} đơn hàng hoạt động</small>
             </div>
         </a>

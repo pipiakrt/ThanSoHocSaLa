@@ -192,16 +192,16 @@ class UtilsComponent
             ];
         }
         $thachThuc = $this->getThachThuc($totalBirthday, $suMenhNoCompact, $tamHonNoCompact, $nhanCachNoCompact);
-        $canBangDuongDoiSuMenh = $this->convertNumberNegative($duongDoi - $suMenh);
+        $canBangDuongDoiSuMenh = $this->convertNumberGoc($this->convertNumberNegative($this->convertNumberGoc($duongDoi) -  $this->convertNumberGoc($suMenh)));
         $truongThanh = $this->convertNumber($duongDoi + $suMenh);
-        $canBangTamHonNhanCach = $this->convertNumberNegative($tamHon - $nhanCach);
-        $phanUng = $this->convertNumber($this->convertNumber($NgayS) + $this->convertNumber($ThangS));
+        $canBangTamHonNhanCach = $this->convertNumberNegative($this->convertNumberGoc($tamHon) - $this->convertNumberGoc($nhanCach));
+        $phanUng = $this->convertNumberGoc($this->convertNumberGoc($NgayS) + $this->convertNumberGoc($ThangS));
         $ngaySinh = $this->convertNumber($NgayS);
         // $canBang = $this->convertNumber($this->getFirstKeyWordInName($name));
-        $canBang = $this->convertNumber(collect($this->getFirstKeyWordInName($name))->sum());
+        $canBang = $this->convertNumberGoc(collect($this->getFirstKeyWordInName($name))->sum());
 
         $thapThachThuc = $this->getThapThachThuc($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS), $duongDoi);
-        $chuKyRenLuyenDuongDoi = $this->getChuKyRenLuyenDuongDoi($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS),$duongDoi);
+        $chuKyRenLuyenDuongDoi = $this->getChuKyRenLuyenDuongDoi($this->convertNumber($ThangS), $this->convertNumber($NgayS), $this->convertNumber($NamS),$duongDoi);
         $bieuDoNamThanSo = $this->getNamThanSo($this->convertNumber($NgayS), $this->convertNumber($ThangS));
         $chiSoLap = $this->getChiSoLap($duongDoi, $suMenh, $tamHon, $nhanCach);
         $nhanCach = $this->convertNumberGoc(array_sum($aryNoVowel));
@@ -458,8 +458,8 @@ class UtilsComponent
 
         $level_1 = array($ThangSinh, $NgaySinh, $NamSinh, $gd_tuoi_1, $gd_tuoi_2);
         // build level 2
-        $Dinh_1 = $this->convertNumber($NgaySinh + $ThangSinh);
-        $Dinh_2 = $this->convertNumber($NgaySinh + $NamSinh);
+        $Dinh_1 = $this->convertNumberGoc($NgaySinh + $ThangSinh);
+        $Dinh_2 = $this->convertNumberGoc($NgaySinh + $NamSinh);
         $level_2 = array($Dinh_1, $Dinh_2, $gd_tuoi_3);
         // build level 3
         $Dinh_3 = $this->convertNumber($this->convertNumberByPyramid($Dinh_1 + $Dinh_2));

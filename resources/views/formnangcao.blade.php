@@ -66,6 +66,14 @@
                         <label for="birthday">Ngày sinh</label>
                         <input type="text" id="birthday" name="birthday" class="form-control" required />
                     </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="phone">Điện thoại</label>
+                        <input type="text" name="phone" class="form-control" id="phone" required />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required />
+                    </div>
                 </div>
 
                 <div class="mb-3">

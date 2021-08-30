@@ -22,7 +22,7 @@ class ExportController extends Controller
     public function index(Request $request)
     {
         $user = $request->user();
-        $dataPost = $request->only('name', 'birthday');
+        $dataPost = $request->only('name', 'birthday', 'phone', 'email');
 
         if ($user->License->number == 0) {
             return redirect('/tai-khoan')->with('error', 'Số lượt tra cứu nâng cao của bạn đã hết, nâng cấp hoạc mua thêm gói để được tiếp tục tra cứu!');
@@ -43,8 +43,8 @@ class ExportController extends Controller
             'name' => $dataPost['name'],
             'birthdate' => $dataPost['birthday'],
             'data' => '',
-            'email' => $user->email,
-            'phone' => $user->phone,
+            'email' => $dataPost['email'],
+            'phone' => $dataPost['phone'],
             'path' => '/' . $user->id . '/' . time() . '.pdf',
             'type' => 1,
         ]);
@@ -141,7 +141,7 @@ class ExportController extends Controller
         ];
         $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = [
             "giaidoan" => $aryThanSo['chuKyRenLuyen'][3][1] . ' tuổi -' . ($aryThanSo['chuKyRenLuyen'][3][2] - 1) . ' tuổi',
-            "so" => $aryThanSo['chuKyRenLuyen'][0],
+            "so" => $aryThanSo['chuKyRenLuyen'][1],
             "content" => $this->getContents('RLDD', $aryThanSo['chuKyRenLuyen'][1]),
         ];
         $aryReturn['LUAN_GIAI']['CHU_KY_REN_LUYEN'][] = [
@@ -217,6 +217,7 @@ class ExportController extends Controller
         $aryReturn['LOI_KHUYEN'] = $this->getContentBoSung('LK', $aryThanSo['duongDoi']);
         $aryReturn['LUA_CHON_DTDH'] = $this->getContents('LCDH', $aryThanSo['suMenh']);
         $aryReturn['SUMENH_CUOCDOI'] = $this->getContents('SMCD', $aryThanSo['tamHon']);
+        $aryReturn['BINHAN_HANHPHUC'] = $this->getContents('BAHP', 11);
 
         $aryReturn['CON_SO'] = [
             "DUONG_DOI" => $aryThanSo['duongDoi'],

@@ -37,7 +37,7 @@
                         <div class="group mt-4 mt-md-0 mx-align-center">
                             <div class="footer-title"><h2>VỀ THẦN SỐ HỌC SALA</h2></div>
                             <div class="footer-item">
-                                <a href="/gioi-thieu/ve-hoc-vien-co-hoc-sala" class="decoration-revert-hover">
+                                <a href="/gioi-thieu/hoc-vien-co-hoc-sala" class="decoration-revert-hover">
                                     <span>Giới thiệu học viện cổ học</span>
                                 </a>
                             </div>

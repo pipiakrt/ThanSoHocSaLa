@@ -115,7 +115,6 @@
                                 @endforeach
 
                                 @if ($item->status == 1)
-                                    <a class="btn btn-sm px-4 btn-warning text-white mt-2"><i class="icon-cart-add mr-2"></i> Nâng cấp</a>
                                 @elseif ($item->status == 2)
                                     <a href="/tai-khoan/gia-han/{{ $item->id }}" class="btn btn-sm px-4 btn-warning text-white mt-2"><i class="icon-cart-add mr-2"></i> Gia Hạn</a>
                                 @endif
@@ -124,11 +123,11 @@
                         <div class="col-md-3 col-lg-2">
                             <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
                                 @if ($item->status == 0)
-                                    <h6 class="mb-0 mt-2 bg-primary text-white chips">Chờ xử lý</h6>
-                                    <a href="tel:0987654321">
-                                        <h6 class="mb-0 mt-2 bg-danger text-white chips">Liên hệ</h6>
+                                    <h6 class="mb-0 mt-2 bg-primary text-white chips">Chưa thanh toán</h6>
+                                    <a href="tel:0942384382">
+                                        <h6 class="mb-0 mt-2 bg-danger text-white chips">Gọi Hotline</h6>
                                     </a>
-                                    <h6 class="mb-0 mt-2 bg-success text-white chips">Xuất hóa đơn</h6>
+                                    {{-- <h6 class="mb-0 mt-2 bg-success text-white chips">Xuất hóa đơn</h6> --}}
                                 @elseif ($item->status == 1)
                                     <h6 class="mb-0 mt-2 bg-success text-white chips">Kích Hoạt</h6>
                                 @else

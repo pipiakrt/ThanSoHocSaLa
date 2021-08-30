@@ -44,7 +44,7 @@ class ThanSoController extends Controller
         if ($ketqua) {
             $data = $ketqua->data;
             $params = [
-                'link' => env('APP_URL') . "/tra-cuu/$ketqua->code",
+                'link' => "https://thansohocsala.com/tra-cuu/$ketqua->code",
                 'name' => $ketqua->name,
                 'address' => $ketqua->address,
                 'birthday' => $ketqua->birthdate

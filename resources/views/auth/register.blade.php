@@ -23,6 +23,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
             <li class="breadcrumb-item"><a href="#">Tài khoản</a></li>
+            <li class="breadcrumb-item"><a href="#">Đăng ký</a></li>
         </ol>
     </div>
 </nav>
@@ -78,7 +79,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mt-4">
+                        <div class="form-group row mt-4 d-none">
                             <label for="address" class="col-md-4 col-form-label text-md-right">Đỉa chỉ</label>
                             <div class="col-md-6">
                                 <textarea class="w-100 form-control" id="address" name="address" rows="3">{{ old('address') }}</textarea>
@@ -112,9 +113,12 @@
                                 <button type="submit" class="btn btn-primary">
                                     Đăng Ký
                                 </button>
-                                <a class="btn btn-link" href="{{ route('login') }}">
-                                    Đăng Nhập,
-                                </a>
+                                <div class="mt-2">
+                                    <span>Nếu bạn đã có tài khoản?</span>
+                                    <a class="btn-link" href="{{ route('login') }}">
+                                        Đăng Nhập,
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </form>
