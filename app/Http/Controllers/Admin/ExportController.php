@@ -234,7 +234,7 @@ class ExportController extends Controller
             "NHAN_CACH" => $aryThanSo['nhanCach'],
             "TAM_HON" => $aryThanSo['tamHon'],
         ];
-
+dd($aryReturn);
         return $aryReturn;
     }
 
