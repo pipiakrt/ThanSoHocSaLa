@@ -173,7 +173,7 @@ class UtilsComponent
         }
         $suMenh = $this->convertNumberSM($suMenhNoCompact);
         $tamHonNoCompact = $this->convertNumber(array_sum($aryVowel), false);
-        $tamHon = $this->convertThachThuc(array_sum($aryVowel));
+        $tamHon = $this->convertNumberGoc(array_sum($aryVowel));
         $nhanCachNoCompact = $this->convertNumber(array_sum($aryNoVowel), false);
         $nhanCach = $this->convertNumber(array_sum($aryNoVowel));
         //
