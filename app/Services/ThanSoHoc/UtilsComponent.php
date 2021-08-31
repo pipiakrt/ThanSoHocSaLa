@@ -177,7 +177,7 @@ class UtilsComponent
         $nhanCachNoCompact = $this->convertNumber(array_sum($aryNoVowel), false);
         $nhanCach = $this->convertNumber(array_sum($aryNoVowel));
         //
-        $khuyetThieu = $this->convertNumberGoc($this->getKhuyetThieu($aryVowel, $aryNoVowel, $duongDoi, $suMenh, $tamHon, $nhanCach));
+        $khuyetThieu = $this->getKhuyetThieu($aryVowel, $aryNoVowel, $duongDoi, $suMenh, $tamHon, $nhanCach);
         $thapDinhCao = $this->getKimTuThap($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS), $duongDoi);
         if ($isFree) {
             return [
