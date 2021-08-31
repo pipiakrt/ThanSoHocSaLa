@@ -203,7 +203,7 @@ class UtilsComponent
         $thapThachThuc = $this->getThapThachThuc($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS), $duongDoi);
         $chuKyRenLuyenDuongDoi = $this->getChuKyRenLuyenDuongDoi($this->convertNumber($ThangS), $this->convertNumber($NgayS), $this->convertNumber($NamS),$duongDoi);
         $bieuDoNamThanSo = $this->getNamThanSo($this->convertNumber($NgayS), $this->convertNumber($ThangS));
-        $chiSoLap = $this->getChiSoLap($this->convertNumber($duongDoi), $this->convertNumber($suMenh), $this->convertNumber($tamHon), $this->convertNumber($nhanCach));
+        $chiSoLap = $this->getChiSoLap($duongDoi, $suMenh, $tamHon, $nhanCach);
         $nhanCach = $this->convertNumberGoc(array_sum($aryNoVowel));
         return [
             'tamHon'    =>  $tamHon,
@@ -275,9 +275,13 @@ class UtilsComponent
      */
     private function getChiSoLap ($duongDoi, $suMenh, $tamHon, $nhanCach)
     {
+        $arr = [];
         $array = [$duongDoi, $suMenh, $tamHon, $nhanCach];
         $aryChiSoLap = array_unique( array_diff_assoc( $array, array_unique( $array ) ) );
-        return array_values($aryChiSoLap);
+        foreach ($aryChiSoLap as $value) {
+            array_push($arr, $this->convertNumberGoc($value));
+        }
+        return array_values($arr);
     }
     /**
      * @param $duongDoiNoCompact
