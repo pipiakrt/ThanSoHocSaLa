@@ -83,8 +83,13 @@ class PostController extends Controller
             }
             else {
                 $tag = Tag::where('name', $slug)->first();
-                $posts = $tag->Posts()->paginate(5);
-                return view('tin-tuc', compact(['posts']));
+                if ($tag) {
+                    $posts = $tag->Posts()->paginate(5);
+                    return view('tin-tuc', compact(['posts']));
+                }
+                else {
+                    return view('errors.404');
+                }
             }
         }
         return view('errors.404');

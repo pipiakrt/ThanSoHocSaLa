@@ -162,7 +162,7 @@ class UtilsComponent
         // run compact
         $totalBirthday = $this->convertNumber($NgayS) + $this->convertNumber($ThangS) + $this->convertNumber($NamS);
         $duongDoiNoCompact = $this->convertNumber($totalBirthday, false);
-        $duongDoi = $this->convertNumberGoc($totalBirthday);
+        $duongDoi = $this->convertNumber($totalBirthday);
         $suMenhNoCompact = 0;
         $aryNameNumber = [];
         foreach ($aryNameToNumber AS $aryNameVowel) {
@@ -203,7 +203,7 @@ class UtilsComponent
         $thapThachThuc = $this->getThapThachThuc($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS), $duongDoi);
         $chuKyRenLuyenDuongDoi = $this->getChuKyRenLuyenDuongDoi($this->convertNumber($ThangS), $this->convertNumber($NgayS), $this->convertNumber($NamS),$duongDoi);
         $bieuDoNamThanSo = $this->getNamThanSo($this->convertNumber($NgayS), $this->convertNumber($ThangS));
-        $chiSoLap = $this->convertNumberGoc($this->getChiSoLap($duongDoi, $suMenh, $tamHon, $nhanCach));
+        $chiSoLap = $this->getChiSoLap($duongDoi, $suMenh, $tamHon, $nhanCach);
         $nhanCach = $this->convertNumberGoc(array_sum($aryNoVowel));
         return [
             'tamHon'    =>  $tamHon,

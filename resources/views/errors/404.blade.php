@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@push('head')
+    <title>404</title>
+@endpush
 @push('styles')
     <link rel="stylesheet" href="/css/tra-cuu.css">
     <style>

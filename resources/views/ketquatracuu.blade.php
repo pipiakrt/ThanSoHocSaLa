@@ -48,7 +48,8 @@
     <div class="container container-header2">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
-            <li class="breadcrumb-item"><a href="#">Tra cứu</a></li>
+            <li class="breadcrumb-item"><a href="/tra-cuu/">Tra cứu</a></li>
+            <li class="breadcrumb-item"><a href="#">{{ $params['name'] }}</a></li>
         </ol>
     </div>
 </nav>

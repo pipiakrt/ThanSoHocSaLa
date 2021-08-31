@@ -65,32 +65,7 @@ class CartController extends Controller
     {
         $products = Session::get('cart.products');
         $user = $request->user();
-
-        $check = 0;
-
-        foreach ($products as $item) {
-            if ($item["status"] == true) {
-                $product = $user->Order->where('product_id', $item["id"])->first();
-                if (!$product) {
-                    $check++;
-                }
-            }
-        }
-        if ($check > 0) {
-            return view('thanh-toan', compact(['user', 'product']));
-        }
-        else {
-            return redirect('/tai-khoan/don-hang');
-        }
-        // else if ($check->status == 1) {
-        //     return redirect('/tai-khoan/dich-vu/')->with('msg', 'Gói sản phẩm đang hoạt động, liên hệ 0987654321 để nâng cấp gói');
-        // }
-        // else if ($check->status == 0) {
-        //     return redirect('/tai-khoan/gio-hang/')->with('msg', 'Gói sản phẩm đã có trong giỏ hàng, thanh toán để kích hoạt gói!');
-        // }
-        // else {
-        //     return redirect('/tai-khoan/gio-hang/')->with('msg', 'Gói sản phẩm đã hết hạn, nhấn gia hạn hoạc liên hệ 0987654321 để gia hạn gói!');
-        // }
+        return view('thanh-toan', compact(['user']));
     }
 
     /**

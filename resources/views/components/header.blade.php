@@ -10,22 +10,22 @@
                     </div>
                     <div class="col-4 menu-item d-flex justify-content-center">
                         <div class="nav-item dropdown">
-                            <a href="/gioi-thieu" class="dropdown-toggle {{ request()->segment(1) == 'gioi-thieu' ? 'active' : '' }}" data-bs-toggle1="dropdown">
+                            <a href="/gioi-thieu/" class="dropdown-toggle {{ request()->segment(1) == 'gioi-thieu' ? 'active' : '' }}" data-bs-toggle1="dropdown">
                                 <span>Giới thiệu</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="/gioi-thieu/hoc-vien-co-hoc-sala">
+                                    <a class="dropdown-item" href="/gioi-thieu/hoc-vien-co-hoc-sala/">
                                         <span>Về học viện cổ học Sala   </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/gioi-thieu/chuyen-gia">
+                                    <a class="dropdown-item" href="/gioi-thieu/chuyen-gia/">
                                         <span>Về chuyên gia</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/gioi-thieu/cuon-sach-cuoc-doi">
+                                    <a class="dropdown-item" href="/gioi-thieu/cuon-sach-cuoc-doi/">
                                         <span>Cuốn sách cuộc đời</span>
                                     </a>
                                 </li>
@@ -34,18 +34,18 @@
                     </div>
                     <div class="col-4 menu-item d-flex justify-content-center">
                         <div class="nav-item dropdown">
-                            <a href="/san-pham" class="dropdown-toggle {{ request()->segment(1) == 'san-pham' ? 'active' : '' }}" data-bs-toggle1="dropdown">
+                            <a href="/san-pham/" class="dropdown-toggle {{ request()->segment(1) == 'san-pham' ? 'active' : '' }}" data-bs-toggle1="dropdown">
                                 <span>Sản phẩm</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="/tra-cuu">
+                                    <a class="dropdown-item" href="/tra-cuu/">
                                         <span>Tra Cứu Miễn Phí</span>
                                     </a>
                                 </li>
                                 @foreach ($products as $item)
                                     <li>
-                                        <a class="dropdown-item" href="/san-pham/{{ $item->slug }}">
+                                        <a class="dropdown-item" href="/san-pham/{{ $item->slug }}/">
                                             <span>{{ Str::title($item->name) }}</span>
                                         </a>
                                     </li>
@@ -64,13 +64,13 @@
                 <div class="row">
                     <div class="col-4 menu-item d-flex justify-content-center">
                         <div class="nav-item dropdown">
-                            <a href="/tin-tuc" class="dropdown-toggle {{ request()->segment(1) == 'tin-tuc' ? 'active' : '' }}" data-bs-toggle1="dropdown">
+                            <a href="/tin-tuc/" class="dropdown-toggle {{ request()->segment(1) == 'tin-tuc' ? 'active' : '' }}" data-bs-toggle1="dropdown">
                                 <span>Tin tức</span>
                             </a>
                             <ul class="dropdown-menu">
                                 @foreach ($categories as $item)
                                     <li>
-                                        <a class="dropdown-item" href="/tin-tuc/{{ $item->slug }}">
+                                        <a class="dropdown-item" href="/tin-tuc/{{ $item->slug }}/">
                                             <span>{{ $item->name }}</span>
                                         </a>
                                     </li>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="col-4 menu-item right text-end">
-                        <a href="/cau-chuyen" class="text-underline {{ request()->segment(1) == 'cau-chuyen' ? 'active' : '' }}">
+                        <a href="/cau-chuyen/" class="text-underline {{ request()->segment(1) == 'cau-chuyen' ? 'active' : '' }}">
                             <span>Câu chuyện</span>
                         </a>
                     </div>
@@ -91,22 +91,22 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="/tai-khoan">
+                                        <a class="dropdown-item" href="/tai-khoan/">
                                             <span>{{ request()->user()->email }}</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="/gio-hang">
+                                        <a class="dropdown-item" href="/gio-hang/">
                                             <span>Giỏ hàng</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="/tai-khoan/don-hang">
+                                        <a class="dropdown-item" href="/tai-khoan/don-hang/">
                                             <span>Đơn hàng chờ xử lý</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="/tai-khoan/tra-cuu-nang-cao">
+                                        <a class="dropdown-item" href="/tai-khoan/tra-cuu-nang-cao/">
                                             <span>Tra cứu nâng cao</span>
                                         </a>
                                     </li>

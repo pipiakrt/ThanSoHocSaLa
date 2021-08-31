@@ -191,6 +191,7 @@
 }
 .slide-ketqua .desc * {
     max-width: 100% !important;
+    font-size: 1.5rem;
 }
 .content-ketqua .item .fake-icon .icon {
     width: 30px;

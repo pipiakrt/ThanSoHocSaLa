@@ -39,12 +39,6 @@ Route::prefix('/gioi-thieu')->group(function () {
 Route::prefix('/san-pham')->group(function () {
     Route::get('/', [ProductController::class, 'index']);
     Route::get('/{slug}', [ProductController::class, 'show']);
-    Route::get('/gia-dinh', function () {
-        return 'Gói sản phẩm gia đình';
-    });
-    Route::get('/doanh-nghiep/', function () {
-        return 'Gói sản phẩm doanh nghiệp';
-    });
 });
 
 Route::post('/tu-van', [TuVanController::class, 'store']);
@@ -88,14 +82,6 @@ Route::get('/dich-vu', [HomeController::class, 'dichvu']);
 Route::get('/lien-he', [ReportController::class, 'index']);
 Route::post('/lien-he', [ReportController::class, 'create']);
 Route::post('/dang-ky', [ReportController::class, 'newsletter']);
-
-Route::get('/dieu-khoan', function () {
-    return 'điều khoản';
-});
-
-Route::get('/chinh-sach', function () {
-    return 'chính sách';
-});
 
 Route::get('/tra-cuu', [ThanSoController::class, 'index']);
 Route::get('/tra-cuu/{code}', [ThanSoController::class, 'show']);
