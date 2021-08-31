@@ -70,6 +70,7 @@ Route::group(['middleware' => 'login'], function(){
         Route::post('/thanh-toan', [ProductController::class, 'thanhtoan']);
         Route::get('/thanh-toan', [AccountController::class, 'thanhtoan']);
         Route::get('/lich-su-tra-cuu', [AccountController::class, 'lichsutracuu']);
+        Route::get('/export/{id}', [ExportController::class, 'export']);
         Route::get('/lich-su-tra-cuu/{id}', [ExportController::class, 'ketqualichsutracuu']);
         Route::get('/gia-han/{id}', [AccountController::class, 'giahan']);
         Route::get('/dich-vu', [AccountController::class, 'dichvu']);

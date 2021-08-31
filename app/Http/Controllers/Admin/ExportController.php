@@ -89,6 +89,16 @@ class ExportController extends Controller
         }
     }
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function export($id)
+    {
+        return view("export", compact("id"));
+    }
+
     public function tinhtoan($dataPost) {
         // get thanso
         $dataDefineComponent = new DefinedDataComponent();
