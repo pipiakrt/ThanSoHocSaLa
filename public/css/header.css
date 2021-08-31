@@ -3,6 +3,12 @@ header {
     padding: 14px 0;
     background-color: #ffffff;
 }
+header a.dropdown-toggle {
+    text-transform: uppercase;
+}
+header .text-underline {
+    text-transform: uppercase;
+}
 header .logo-desktop {
     height: 74px;
 }

@@ -4,7 +4,7 @@
             <div class="col-4">
                 <div class="row">
                     <div class="col-4 menu-item left">
-                        <a href="/">
+                        <a class="text-underline" href="/">
                             <span>Trang chủ</span>
                         </a>
                     </div>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="col-4 menu-item right text-end">
-                        <a href="/cau-chuyen" class="{{ request()->segment(1) == 'cau-chuyen' ? 'active' : '' }}">
+                        <a href="/cau-chuyen" class="text-underline {{ request()->segment(1) == 'cau-chuyen' ? 'active' : '' }}">
                             <span>Câu chuyện</span>
                         </a>
                     </div>
