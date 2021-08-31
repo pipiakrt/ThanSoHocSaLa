@@ -162,7 +162,7 @@ class UtilsComponent
         // run compact
         $totalBirthday = $this->convertNumber($NgayS) + $this->convertNumber($ThangS) + $this->convertNumber($NamS);
         $duongDoiNoCompact = $this->convertNumber($totalBirthday, false);
-        $duongDoi = $this->convertNumber($totalBirthday, true, true);
+        $duongDoi = $this->convertNumberGoc($totalBirthday);
         $suMenhNoCompact = 0;
         $aryNameNumber = [];
         foreach ($aryNameToNumber AS $aryNameVowel) {
@@ -177,7 +177,7 @@ class UtilsComponent
         $nhanCachNoCompact = $this->convertNumber(array_sum($aryNoVowel), false);
         $nhanCach = $this->convertNumber(array_sum($aryNoVowel));
         //
-        $khuyetThieu = $this->getKhuyetThieu($aryVowel, $aryNoVowel, $duongDoi, $suMenh, $tamHon, $nhanCach);
+        $khuyetThieu = $this->convertNumberGoc($this->getKhuyetThieu($aryVowel, $aryNoVowel, $duongDoi, $suMenh, $tamHon, $nhanCach));
         $thapDinhCao = $this->getKimTuThap($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS), $duongDoi);
         if ($isFree) {
             return [
@@ -193,8 +193,8 @@ class UtilsComponent
         }
         $thachThuc = $this->getThachThuc($totalBirthday, $suMenhNoCompact, $tamHonNoCompact, $nhanCachNoCompact);
         $canBangDuongDoiSuMenh = $this->convertNumberGoc($this->convertNumberNegative($this->convertNumberGoc($duongDoi) -  $this->convertNumberGoc($suMenh)));
-        $truongThanh = $this->convertNumber($duongDoi + $suMenh);
-        $canBangTamHonNhanCach = $this->convertNumberNegative($this->convertNumberGoc($tamHon) - $this->convertNumberGoc($nhanCach));
+        $truongThanh = $this->convertNumberGoc($duongDoi + $suMenh);
+        $canBangTamHonNhanCach = $this->convertNumberGoc($this->convertNumberNegative($this->convertNumberGoc($tamHon) - $this->convertNumberGoc($nhanCach)));
         $phanUng = $this->convertNumberGoc($this->convertNumberGoc($NgayS) + $this->convertNumberGoc($ThangS));
         $ngaySinh = $this->convertNumber($NgayS);
         // $canBang = $this->convertNumber($this->getFirstKeyWordInName($name));
