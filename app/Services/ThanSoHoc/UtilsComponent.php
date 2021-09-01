@@ -177,14 +177,14 @@ class UtilsComponent
         $tamHon = $this->convertNumberGoc(array_sum($aryVowel));
 
         $suMenhNoCompact2 = 0;
-        foreach ($chiaten as $name) {
-            list($arr, $arr2, $arr3) = $this->convertName2($name);
+        foreach ($chiaten as $namec) {
+            list($arr, $arr2, $arr3) = $this->convertName2($namec);
             $suMenhNoCompact2 += $this->convertNumberGoc(array_sum($arr3));
         }
 
         $nhanCachNoCompact = 0;
-        foreach ($chiaten as $name) {
-            list($arr, $arr2, $arr3) = $this->convertName($name);
+        foreach ($chiaten as $namec) {
+            list($arr, $arr2, $arr3) = $this->convertName($namec);
             $nhanCachNoCompact += $this->convertNumberGoc(array_sum($arr2));
         }
         $nhanCach = $this->convertNumberGoc(array_sum($aryNoVowel));
