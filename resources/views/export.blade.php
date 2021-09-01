@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@push('head')
+    <title>{{ $user["name"] }} - {{ $user["birthdate"] }}</title>
+@endpush
+
 @push('styles')
     <link href="/css/dflip.min.css" rel="stylesheet" type="text/css" />
     <link href="/css/themify-icons.min.css" rel="stylesheet" type="text/css" />
