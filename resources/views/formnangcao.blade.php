@@ -23,7 +23,7 @@
                 }
             }, 300);
         };
-        $("#form-data").submit(function(event) {
+        $("#form-datas").submit(function(event) {
             event.preventDefault();
             let mobileDevice = false;
             if (screen.width < 768) {
@@ -54,7 +54,7 @@
     <x-slogan />
 
     <!-- Modal -->
-    <div style="background: white;" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div style="background: white;" class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class='container-loader'>
                 <div class='loader'>

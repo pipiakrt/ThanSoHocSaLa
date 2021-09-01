@@ -34,7 +34,7 @@ class ExportController extends Controller
         ])->first();
 
         if ($check) {
-            return $check->code;
+            // return $check->code;
         }
 
         $data = $user->TraCuu()->create([
@@ -61,6 +61,7 @@ class ExportController extends Controller
 
         Storage::disk("public")->put($data->path, $file->body());
 
+        return response()->file(storage_path("/app/public/$data->path"), ['Content-Type' => 'application/pdf'], 'inline;');
         return $data->code;
     }
 
@@ -83,7 +84,7 @@ class ExportController extends Controller
             return Storage::disk("public")->download($ketqua->path);
         }
         else {
-            return response()->file(storage_path("/app/public/$ketqua->path"), ['Content-Type' => 'application/pdf'], 'inline; filename="fasd afsd f "');
+            return response()->file(storage_path("/app/public/$ketqua->path"), ['Content-Type' => 'application/pdf'], 'inline;');
         }
     }
 
