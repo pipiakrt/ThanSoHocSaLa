@@ -121,9 +121,9 @@
                                         <h6 class="media-title font-weight-semibold"> <span>{{ $item->created_at }}</span> </h6>
                                     </div>
                                     <div class="col-md-1">
-                                        <h6 class="media-title font-weight-semibold bg-success text-center py-1 px-2"> <a href="/tai-khoan/export/{{ $item->code }}?type=preview" target="_blank" class="link-primary text-white decoration-revert">Xem Lại</a> </h6>
-                                        <h6 class="media-title font-weight-semibold bg-success text-center py-1 px-2"> <a href="/tai-khoan/export/{{ $item->code }}?type=download" class="link-primary text-white decoration-revert">Tải Về</a> </h6>
-                                        <h6 class="media-title font-weight-semibold bg-success text-center py-1 px-2"> <a href="/tai-khoan/export/{{ $item->code }}?type=sendmail" class="link-primary text-white decoration-revert">Gửi Mail</a> </h6>
+                                        <h6 class="media-title font-weight-semibold bg-success text-center py-1 px-2"> <a href="/tai-khoan/export/{{ $item->code }}" target="_blank" class="link-primary text-white decoration-revert">Xem Lại</a> </h6>
+                                        <h6 class="media-title font-weight-semibold bg-success text-center py-1 px-2"> <a href="/tai-khoan/lich-su-tra-cuu/{{ $item->code }}?type=download" class="link-primary text-white decoration-revert">Tải Về</a> </h6>
+                                        <h6 class="media-title font-weight-semibold bg-success text-center py-1 px-2"> <a href="/tai-khoan/lich-su-tra-cuu/{{ $item->code }}?type=sendmail" class="link-primary text-white decoration-revert">Gửi Mail</a> </h6>
                                     </div>
                                 </div>
                             </div>
