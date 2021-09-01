@@ -62,6 +62,7 @@ class ExportController extends Controller
 
         Storage::disk("public")->put($data->path, $file->body());
 
+        return $data->code;
         return redirect("/tai-khoan/export/$data->code");
         return response()->download(storage_path("/app/public/$data->path"), $data->name, ['Content-Type' => 'application/pdf'], 'inline');
     }
