@@ -179,7 +179,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-5 col-cus-5">
+            <div class="col-md-5 col-cus-5 d-none">
                 <div class="bo-vien px-4 h-100 py-5">
                     <div class="item-title"><span>Cách tính 2: Tính tổng Chỉ Số Tâm Hồn và Chỉ Số Nhân Cách:</span></div>
                     <ul class="item-desc mt-4">

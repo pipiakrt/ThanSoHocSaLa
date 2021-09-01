@@ -28,15 +28,14 @@ class ExportController extends Controller
             return redirect('/tai-khoan')->with('error', 'Số lượt tra cứu nâng cao của bạn đã hết, nâng cấp hoạc mua thêm gói để được tiếp tục tra cứu!');
         }
 
-        // $check = $request->user()->TraCuu()->where([
-        //     'name' => $dataPost['name'],
-        //     'birthdate' => $dataPost['birthday'],
-        // ])->first();
+        $check = $request->user()->TraCuu()->where([
+            'name' => $dataPost['name'],
+            'birthdate' => $dataPost['birthday'],
+        ])->first();
 
-        // if ($check) {
-        //     return view('PDF.index')->with('result', $check);
-        //     return response()->download(storage_path("uploads$check->path"), 'Test File', ['Content-Type' => 'application/pdf'], 'inline');
-        // }
+        if ($check) {
+            return $check->code;
+        }
 
         $data = $user->TraCuu()->create([
             'code' => Str::random(60),
