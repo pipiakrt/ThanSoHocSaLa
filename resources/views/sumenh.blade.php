@@ -7,7 +7,6 @@
 </div>
 
 <main>
-
     <div id="sliders" class="owl-carousel owl-theme">
         <div class="item">
             <img class="header-logo" alt="Thần Số Học" src="/img/banner/ynsm.jpg">
@@ -151,7 +150,7 @@
         <div class="row g-0 g-xl-4 mt-3 justify-content-center">
             <div class="col-md-5 col-cus-5">
                 <div class="bo-vien px-4 h-100 py-5">
-                    <div class="item-title"><span>Cách tính 1: Tính tổng các chữ số được quy đổi từ tên đầy đủ</span></div>
+                    <div class="item-title"><span>Cách tính: Tính tổng các chữ số được quy đổi từ tên đầy đủ</span></div>
                     <div class="item-title"><span>(bao gồm cả nguyên âm và phụ âm), cộng cho tới khi Chỉ Số </span></div>
                     <div class="item-title"><span>Sứ Mệnh là số có một chữ số.</span></div>
                     <ul class="item-desc mt-4">

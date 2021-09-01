@@ -62,7 +62,6 @@ class ExportController extends Controller
         Storage::disk("public")->put($data->path, $file->body());
 
         return $data->code;
-        return response()->download(storage_path("/app/public/$data->path"), $data->name, ['Content-Type' => 'application/pdf'], 'inline');
     }
 
 
@@ -78,7 +77,6 @@ class ExportController extends Controller
             return view('errors.404');
         }
         else if ($request->type == "sendmail") {
-            // Job::dispatch($dulieu, $data);
             return redirect('/tai-khoan/lich-su-tra-cuu')->with('msg', "Hệ thống đã gửi file luận giải vào email $ketqua->email. cảm ơn bạn đã sử dụng dụng vụ của Thần Số Học Sala.");
         }
         else if ($request->type == "download") {

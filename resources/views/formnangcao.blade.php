@@ -25,12 +25,17 @@
         };
         $("#form-data").submit(function(event) {
             event.preventDefault();
+            let mobileDevice = false;
+            if (screen.width < 768) {
+                mobileDevice = true;
+            }
             $('#exampleModal').modal('show');
             loadding();
             $.ajax({
                 url : "/tai-khoan/tra-cuu-nang-cao",
                 type : "post",
                 data : {
+                    mobileDevice: mobileDevice,
                     name : $('#name').val(),
                     email : $('#email').val(),
                     phone : $('#phone').val(),
