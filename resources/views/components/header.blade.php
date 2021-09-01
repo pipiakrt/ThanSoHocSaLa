@@ -147,7 +147,7 @@
                 </div>
                 <div class="col-6">
                     <div class="text-center d-flex align-items-center mt-1 h-100" style="line-height: 17px; color: #398a6b; font-size: 14px;">
-                        <span>KIẾN TẠO CUỘC ĐỜI HẠNH PHÚC TỰ NHỮNG CON SỐ</span>
+                        <span>KIẾN TẠO CUỘC ĐỜI HẠNH PHÚC TỪ NHỮNG CON SỐ</span>
                     </div>
                 </div>
                 <div class="col-2">

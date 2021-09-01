@@ -19,6 +19,18 @@
         footer {
             display: none !important;
         }
+        .df-floating .df-ui-controls {
+            top: -52px;
+            right: -8%;
+            left: unset;
+        }
+        #flipbookPDFContainer {
+            overflow: unset !important;
+        }
+        .df-ui-more .more-container, .df-ui-search .search-container {
+            top: 110%;
+            bottom: unset !important;
+        }
     </style>
 @endpush
 
@@ -40,8 +52,8 @@
     <div class="container">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/" class="active">Trang chủ</a></li>
-            <li class="breadcrumb-item"><a href="/tai-khoan" class="active">Tài khoản</a></li>
-            <li class="breadcrumb-item"><a href="#">Export</a></li>
+            <li class="breadcrumb-item"><a href="/tai-khoan/tra-cuu-nang-cao" class="active">Tra cứu nâng cao</a></li>
+            <li class="breadcrumb-item"><a href="#">{{ $user["name"] }} ({{ $user["birthdate"] }})</a></li>
         </ol>
     </div>
 </nav>

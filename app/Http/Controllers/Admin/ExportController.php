@@ -63,7 +63,6 @@ class ExportController extends Controller
         Storage::disk("public")->put($data->path, $file->body());
 
         return $data->code;
-        return redirect("/tai-khoan/export/$data->code");
         return response()->download(storage_path("/app/public/$data->path"), $data->name, ['Content-Type' => 'application/pdf'], 'inline');
     }
 
@@ -96,9 +95,10 @@ class ExportController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function export($id)
+    public function export(Request $request, $id)
     {
-        return view("export", compact("id"));
+        $user = $request->user()->TraCuu()->where('code', $id)->first();
+        return view("export", compact(['id', 'user']));
     }
 
     public function tinhtoan($dataPost) {
