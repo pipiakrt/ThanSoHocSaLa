@@ -213,7 +213,7 @@ class UtilsComponent
         $canBang = $this->convertNumberGoc(collect($this->getFirstKeyWordInName($name))->sum());
 
         $thapThachThuc = $this->getThapThachThuc($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS), $duongDoi);
-        $chuKyRenLuyenDuongDoi = $this->getChuKyRenLuyenDuongDoi($this->convertNumber($ThangS), $this->convertNumber($NgayS), $this->convertNumber($NamS),$duongDoi);
+        $chuKyRenLuyenDuongDoi = $this->getChuKyRenLuyenDuongDoi($ThangS, $aryBirthDay[0], $this->convertNumber($NamS),$duongDoi);
         $bieuDoNamThanSo = $this->getNamThanSo($this->convertNumber($NgayS), $this->convertNumber($ThangS));
         $chiSoLap = $this->getChiSoLap($duongDoi, $suMenh, $tamHon, $nhanCach);
         return [
@@ -271,9 +271,9 @@ class UtilsComponent
     {
         $defineDataComponent = new DefinedDataComponent();
         return [
-            $NgaySinh,
-            $ThangSinh,
-            $NamSinh,
+            ((int) $NgaySinh == 11) ? 11 : $this->convertNumberGoc($NgaySinh),
+            ((int) $ThangSinh == 11) ? 11 : $this->convertNumberGoc($ThangSinh),
+            $this->convertNumberGoc($NamSinh),
             $defineDataComponent->definePyramidNumber($chiSoDuongDoi)
         ];
     }
@@ -505,7 +505,7 @@ class UtilsComponent
         $Dinh_3 = $this->convertNumber($this->convertNumberByPyramid($Dinh_1 + $Dinh_2));
         $level_3 = array($Dinh_3, $gd_tuoi_4);
         // build level 4
-        $Dinh_4 = $this->convertNumberByPyramid($ThangSinh + $NamSinh);
+        $Dinh_4 = $this->convertNumberGoc($this->convertNumberByPyramid($ThangSinh + $NamSinh));
         $level_4 = array($Dinh_4);
         return [
             $level_1,
