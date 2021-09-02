@@ -208,7 +208,7 @@ class UtilsComponent
         $truongThanh = $this->convertNumberGoc($duongDoi + $suMenh);
         $canBangTamHonNhanCach = $this->convertNumberGoc($this->convertNumberNegative($this->convertNumberGoc($tamHon) - $this->convertNumberGoc($nhanCach)));
         $phanUng = $this->convertNumberGoc($this->convertNumberGoc($NgayS) + $this->convertNumberGoc($ThangS));
-        $ngaySinh = $this->convertNumberGoc($NgayS);
+        $ngaySinh = in_array($aryBirthDay[0], [11, 22]) ? $aryBirthDay[0] : $this->convertNumberGoc($aryBirthDay[0]);
         // $canBang = $this->convertNumber($this->getFirstKeyWordInName($name));
         $canBang = $this->convertNumberGoc(collect($this->getFirstKeyWordInName($name))->sum());
 
