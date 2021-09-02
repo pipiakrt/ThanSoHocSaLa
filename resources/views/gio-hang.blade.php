@@ -28,6 +28,19 @@
         </div>
     </nav>
 
+    @if (\Session::has('success'))
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mt-4 bg-white rounded shadow-sm">
+                    <div class="alert alert-success mt-3">
+                        <ul class="mb-0">
+                            <li>{!! \Session::get('success') !!}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
     <div class="px-4 px-lg-0 d-none d-none d-lg-block">
         <div class="pb-5 mt-4">
             <div class="container">
@@ -110,7 +123,11 @@
                                 <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Tổng</strong>
                                     <h5 class="font-weight-bold">{{ number_format($total) }} VNĐ</h5>
                                 </li>
-                                <li class="d-flex justify-content-between py-3 border-top"><a href="/tai-khoan/dat-hang" class="btn btn-dark rounded-pill py-2 btn-block">Tiến hành thanh toán đơn hàng</a></li>
+                                @if (request()->user())
+                                    <li class="d-flex justify-content-between py-3 border-top"><a href="/tai-khoan/dat-hang" class="btn btn-dark rounded-pill py-2 btn-block">Tiến hành thanh toán đơn hàng</a></li>
+                                @else
+                                    <li class="d-flex justify-content-between py-3 border-top"><a href="/dat-hang" class="btn btn-dark rounded-pill py-2 btn-block">Tiến hành thanh toán đơn hàng</a></li>
+                                @endif
                             </ul>
                         </div>
                     </div>
@@ -162,7 +179,11 @@
                         <li class="d-flex justify-content-between py-3 border-top"><strong class="text-muted">Tổng</strong>
                             <h5 class="font-weight-bold">{{ number_format($total) }} VNĐ</h5>
                         </li>
-                        <li class="d-flex justify-content-between py-3 border-top"><a href="/tai-khoan/dat-hang" class="btn btn-dark rounded-pill py-2 btn-block">Tiến hành thanh toán đơn hàng</a></li>
+                        @if (request()->user())
+                            <li class="d-flex justify-content-between py-3 border-top"><a href="/tai-khoan/dat-hang" class="btn btn-dark rounded-pill py-2 btn-block">Tiến hành thanh toán đơn hàng</a></li>
+                        @else
+                            <li class="d-flex justify-content-between py-3 border-top"><a href="/dat-hang" class="btn btn-dark rounded-pill py-2 btn-block">Tiến hành thanh toán đơn hàng</a></li>
+                        @endif
                     </ul>
                 </div>
             </div>
