@@ -61,7 +61,7 @@ class ExportController extends Controller
 
         Storage::disk("public")->put($data->path, $file->body());
 
-        return response()->file(storage_path("/app/public/$data->path"), ['Content-Type' => 'application/pdf'], 'inline;');
+        // return response()->file(storage_path("/app/public/$data->path"), ['Content-Type' => 'application/pdf'], 'inline;');
         return $data->code;
     }
 

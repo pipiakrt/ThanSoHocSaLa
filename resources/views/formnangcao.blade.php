@@ -23,7 +23,7 @@
                 }
             }, 200);
         };
-        $("#form-datas").submit(function(event) {
+        $("#form-data").submit(function(event) {
             event.preventDefault();
             let mobileDevice = false;
             if (screen.width < 768) {
