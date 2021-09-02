@@ -21,7 +21,7 @@
                 if (counter == 101) {
                     clearInterval(i);
                 }
-            }, 300);
+            }, 200);
         };
         $("#form-datas").submit(function(event) {
             event.preventDefault();
