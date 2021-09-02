@@ -205,7 +205,7 @@ class UtilsComponent
         }
         $thachThuc = $this->getThachThuc($totalBirthday, $suMenhNoCompact2, $tamHonNoCompact, $nhanCachNoCompact);
         $canBangDuongDoiSuMenh = $this->convertNumberGoc($this->convertNumberNegative($this->convertNumberGoc($duongDoi) -  $this->convertNumberGoc($suMenh)));
-        $truongThanh = $this->convertNumberGoc($duongDoi + $suMenh);
+        $truongThanh = $this->convertNumberSM($duongDoi + $suMenh);
         $canBangTamHonNhanCach = $this->convertNumberGoc($this->convertNumberNegative($this->convertNumberGoc($tamHon) - $this->convertNumberGoc($nhanCach)));
         $phanUng = $this->convertNumberGoc($this->convertNumberGoc($NgayS) + $this->convertNumberGoc($ThangS));
         $ngaySinh = in_array($aryBirthDay[0], [11, 22]) ? $aryBirthDay[0] : $this->convertNumberGoc($aryBirthDay[0]);
