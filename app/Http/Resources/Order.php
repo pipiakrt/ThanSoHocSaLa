@@ -32,7 +32,7 @@ class Order extends JsonResource
             'bat_dau' => $this->bat_dau,
             'ket_thuc' => $this->ket_thuc,
             'licenses' => $this->User->License->number,
-            'user' => new Account($this->User),
+            'user' => $this->User ? new Account($this->User) : "",
         ];
     }
 }
