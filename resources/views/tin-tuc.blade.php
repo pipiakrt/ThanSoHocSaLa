@@ -23,7 +23,7 @@
 
         <div class="post-slogan">
             <div class="container container-header2">
-                <div class="title text-center mt-2 mb-4">
+                <div class="title text-center mb-0 mt-2 mb-md-4">
                     @isset($category)
                         <h1 style="border-bottom: 1px solid; padding-bottom: 5px;">{{ $category->name }}</h1>
                     @else
