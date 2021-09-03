@@ -125,11 +125,11 @@
             <div class="cFoEFO">
                 <div class="ekkfGn">
                     <picture class="webpimg-container">
-                        <img src="https://frontend.tikicdn.com/_mobile-next/static/img/home/navigation/active-home.png" alt="Thansohocsala" class="cFoyeO" />
+                        <img src="https://frontend.tikicdn.com/_mobile-next/static/img/home/navigation/home.png" alt="Thansohocsala" class="cFoyeO" />
                     </picture>
                 </div>
             </div>
-            <span style="color: #0d5cb6;">Trang Chủ</span>
+            <span style="color: #{{ request()->segment(1) == '' ? '0d5cb6' : '242424' }};">Trang Chủ</span>
         </a>
         <a href="/tin-tuc" class="lnKnmv">
             <div class="cFoEFO">
@@ -139,7 +139,7 @@
                     </picture>
                 </div>
             </div>
-            <span style="color: #242424;">Tin Tức</span>
+            <span style="color: #{{ request()->segment(1) == 'tin-tuc' ? '0d5cb6' : '242424' }};">Tin Tức</span>
         </a>
         <a href="/tra-cuu" class="lnKnmv">
             <div class="cFoEFO">
@@ -154,7 +154,7 @@
                     </picture>
                 </div>
             </div>
-            <span style="color: #242424;">Tra Cứu</span>
+            <span style="color: #{{ request()->segment(1) == 'tra-cuu' ? '0d5cb6' : '242424' }};">Tra Cứu</span>
         </a>
         <a href="/gio-hang" class="lnKnmv">
             <div class="cFoEFO">
@@ -173,7 +173,7 @@
                     </picture>
                 </div>
             </div>
-            <span style="color: #242424;">Giỏ Hàng</span>
+            <span style="color: #{{ request()->segment(1) == 'gio-hang' ? '0d5cb6' : '242424' }};">Giỏ Hàng</span>
         </a>
         <a href="/tai-khoan" class="lnKnmv">
             <div class="cFoEFO">
@@ -183,7 +183,7 @@
                     </picture>
                 </div>
             </div>
-            <span style="color: #242424;">Cá Nhân</span>
+            <span style="color: #{{ request()->segment(1) == 'tai-khoan' ? '0d5cb6' : '242424' }};">Cá Nhân</span>
         </a>
     </div>
 </div>
