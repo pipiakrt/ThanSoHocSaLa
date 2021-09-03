@@ -131,7 +131,7 @@
             </div>
             <span style="color: #{{ request()->segment(1) == '' ? '0d5cb6' : '242424' }};">Trang Chủ</span>
         </a>
-        <a href="/tin-tuc" class="lnKnmv">
+        <a href="/gioi-thieu" class="lnKnmv">
             <div class="cFoEFO">
                 <div class="ekkfGn">
                     <picture class="webpimg-container">
@@ -139,7 +139,7 @@
                     </picture>
                 </div>
             </div>
-            <span style="color: #{{ request()->segment(1) == 'tin-tuc' ? '0d5cb6' : '242424' }};">Tin Tức</span>
+            <span style="color: #{{ request()->segment(1) == 'gioi-thieu' ? '0d5cb6' : '242424' }};">Giới Thiệu</span>
         </a>
         <a href="/tra-cuu" class="lnKnmv">
             <div class="cFoEFO">
@@ -183,7 +183,7 @@
                     </picture>
                 </div>
             </div>
-            <span style="color: #{{ request()->segment(1) == 'tai-khoan' ? '0d5cb6' : '242424' }};">Cá Nhân</span>
+            <span style="color: #{{ request()->segment(1) == 'tai-khoan' ? '0d5cb6' : '242424' }};">{{ request()->user() ? "Cá Nhân" : "Đăng Nhập" }}</span>
         </a>
     </div>
 </div>
