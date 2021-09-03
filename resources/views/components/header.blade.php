@@ -50,6 +50,13 @@
                                         </a>
                                     </li>
                                 @endforeach
+                                @if (request()->user())
+                                    <li>
+                                        <a class="dropdown-item" href="/tai-khoan/tra-cuu-nang-cao">
+                                            <span>Tra Cứu Nâng Cao</span>
+                                        </a>
+                                    </li>
+                                @endif
                             </ul>
                         </div>
                     </div>

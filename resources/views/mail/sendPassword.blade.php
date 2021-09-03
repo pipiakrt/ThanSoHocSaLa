@@ -28,11 +28,13 @@
                                                 Chào bạn <b>{{ $user["name"] }}</b>, <br />
                                                 <br />
 
-                                                Bạn đã đăng kí tài khoản {{ $user['email'] }}, tại Thận Số Học Sala.
+                                                Hệ thống tạo cho bạn tài khoản sau:<br />
+                                                <br />
+                                                tài khoản: <b>{{ $user["email"] }}</b>
+                                                <br />
+                                                mật khẩu: <b>{{ $password }}</b>
                                                 <br /><br />
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus mi, convallis a leo sed, laoreet euismod ipsum.
-                                                <br /><br />
-                                                Proin euismod lectus non dolor aliquet aliquet.
+                                                <a href="https://thansohocsala.com/login" target="_blank">Click vào đây</a>, để đang nhập hệ thống chúng tôi.
                                                 <br /><br />
                                                 Trân trọng,
                                                 <br />

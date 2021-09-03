@@ -34,7 +34,7 @@
                 <div class="col-lg-12 mt-4 bg-white rounded shadow-sm">
                     <div class="alert alert-success mt-3">
                         <ul class="mb-0">
-                            <li>{!! \Session::get('success') !!}</li>
+                            <li style="font-size: 23px;">{!! \Session::get('success') !!}</li>
                         </ul>
                     </div>
                 </div>

@@ -41,8 +41,8 @@
                     phone : $('#phone').val(),
                     birthday : $('#birthday').val(),
                 },
-                success : function (url){
-                    window.location.href = "/tai-khoan/export/" + url;
+                success : function (data){
+                    window.location.href = `/tai-khoan/export_v2/${data.code}/${data.name} (${data.birthdate})`;
                 }
             });
         });

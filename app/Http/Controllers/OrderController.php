@@ -9,6 +9,12 @@ use App\Models\District;
 use App\Models\Ward;
 use Illuminate\Support\Facades\Session;
 use App\Models\Order;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use App\Models\User;
+use Illuminate\Support\Str;
+use App\Http\Requests\OrderCreateUser;
+use App\Jobs\sendPassword as NotificationUser;
 
 class OrderController extends Controller
 {
@@ -23,12 +29,35 @@ class OrderController extends Controller
     }
 
     /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array  $data
+     * @return \App\Models\User
+     */
+    protected function registerUser(array $data)
+    {
+        $password = Str::random(8);
+        $user = User::create([
+            'birthdate' => $data['birthdate'],
+            'address' => $data['address'],
+            'phone' => $data['phone'],
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($password),
+        ]);
+        NotificationUser::dispatch($user, $password);
+        return $user;
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function thanhtoan(Request $request)
+    public function thanhtoan(OrderCreateUser $request)
     {
+        $user = $this->registerUser($request->all());
+
         $diachi = '';
 
         if($request->payment == "Ship COD") {
@@ -46,9 +75,10 @@ class OrderController extends Controller
             foreach ($products as $item) {
                 if ($item["status"] == true) {
                     $order = Order::create([
+                        'user_id' => $user->id,
                         'product_id' => $item["id"],
                         'avatar' => $item["image"],
-                        'code' => mt_rand(1000000000, 9999999999),
+                        'code' => $user->id . mt_rand(1000000000, 9999999999),
                         'name' => $request->name,
                         'product_name' => $item["name"],
                         'address' => $diachi,

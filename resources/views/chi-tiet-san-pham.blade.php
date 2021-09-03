@@ -279,14 +279,7 @@
                             <div class="col-md-6 text-center mb-4">
                                 <div class="btn-ketqua text-center mr-0">
                                     <a href="/gio-hang/{{ $product->slug }}">
-                                        <button>ĐĂNG KÝ GÓI CƠ BẢN</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 text-center mb-4">
-                                <div class="btn-ketqua text-center mr-0">
-                                    <a href="/gio-hang/{{ $product->slug }}">
-                                        <button>ĐĂNG KÝ GÓI NÂNG CAO</button>
+                                        <button>ĐẶT HÀNG</button>
                                     </a>
                                 </div>
                             </div>

@@ -84,9 +84,9 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-3 mb-3">
-                            <label for="username">Họ Tên</label>
+                            <label for="name">Họ Tên</label>
                             <div class="input-group">
-                                <input type="text" name="name" class="form-control" id="username" value="{{ $user->name }}" />
+                                <input type="text" name="name" class="form-control" id="name" value="{{ $user->name }}" />
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
@@ -117,8 +117,8 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="name">Họ tên</label>
-                            <input type="text" name="name" class="form-control" id="name" value="{{ $user->name }}" required />
+                            <label for="birthdate">Ngày sinh</label>
+                            <input type="text" name="birthdate" class="form-control" id="birthdate" required />
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="phone">Điện thoại</label>

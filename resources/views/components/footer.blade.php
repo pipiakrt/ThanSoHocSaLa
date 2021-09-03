@@ -1,9 +1,3 @@
-<style>
-    .mx-align-center {
-        width: fit-content;
-        margin: auto;
-    }
-</style>
 <footer>
     <div class="container container-service">
         <div class="footer text-white d-flex align-items-center">
@@ -81,7 +75,7 @@
                         <div class="text-center mt-5">
                             <h4 class="fw-light">MỘT SẢN PHẨM CỦA SALAGROUP</h4>
                             <div class="my-4 mb-3 mb-md-5">
-                                <img class="mw-100" src="/img/footer/logosala.png" alt="">
+                                <img class="mw-100" src="/img/footer/logosala.png" alt="Thansohocsala">
                             </div>
                         </div>
                     </div>
@@ -124,3 +118,58 @@
         </div>
     </div>
 </footer>
+
+<div class="d-block d-md-none">
+    <div class="cHbtvT">
+        <a href="/" class="lnKnmv">
+            <div class="cFoEFO">
+                <div class="ekkfGn">
+                    <picture class="webpimg-container">
+                        <img src="https://frontend.tikicdn.com/_mobile-next/static/img/home/navigation/active-home.png" alt="Thansohocsala" class="cFoyeO" />
+                    </picture>
+                </div>
+            </div>
+            <span style="color: #0d5cb6;">Trang Chủ</span>
+        </a>
+        <a href="/gio-hang" class="lnKnmv">
+            <div class="cFoEFO">
+                <div class="ekkfGn">
+                    <picture class="webpimg-container">
+                        <img src="https://frontend.tikicdn.com/_mobile-next/static/img/home/navigation/cate.png" alt="Thansohocsala" class="cFoyeO" />
+                    </picture>
+                </div>
+            </div>
+            <span style="color: #242424;">Giỏ Hàng</span>
+        </a>
+        <a href="/tra-cuu" class="lnKnmv">
+            <div class="cFoEFO">
+                <div class="ekkfGn">
+                    <picture class="webpimg-container">
+                        <img src="https://salt.tikicdn.com/ts/upload/c3/9b/0e/1867ff54d9f4d07f3f7fe1a7f19a79ee.png" alt="Thansohocsala" class="cFoyeO" />
+                    </picture>
+                </div>
+            </div>
+            <span style="color: #242424;">Tra Cứu</span>
+        </a>
+        <a href="/tin-tuc" class="lnKnmv">
+            <div class="cFoEFO">
+                <div class="ekkfGn">
+                    <picture class="webpimg-container">
+                        <img src="https://frontend.tikicdn.com/_mobile-next/static/img/home/navigation/noti.png" alt="Thansohocsala" class="cFoyeO" />
+                    </picture>
+                </div>
+            </div>
+            <span style="color: #242424;">Tin Tức</span>
+        </a>
+        <a href="/tai-khoan" class="lnKnmv">
+            <div class="cFoEFO">
+                <div class="ekkfGn">
+                    <picture class="webpimg-container">
+                        <img src="https://frontend.tikicdn.com/_mobile-next/static/img/home/navigation/account.png" alt="Thansohocsala" class="cFoyeO" />
+                    </picture>
+                </div>
+            </div>
+            <span style="color: #242424;">Cá Nhân</span>
+        </a>
+    </div>
+</div>

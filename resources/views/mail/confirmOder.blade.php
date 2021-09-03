@@ -139,7 +139,7 @@
                                                         <td valign="middle" align="center">
                                                             <div style="font-size: 5px; line-height: 5px; height: 5px;">&nbsp;</div>
                                                             <a href="https://thansohocsala.com/" style="text-decoration: none;" target="_blank">
-                                                                <img src="https://stage.thansohocsala.com/img/logo/logo.png" width="209" style="display: block; max-width: 209px; border: none;" class="CToWUd" />
+                                                                <img src="https://thansohocsala.com/img/logo/logo.png" width="209" style="display: block; max-width: 209px; border: none;" class="CToWUd" />
                                                             </a>
                                                             <div style="font-size: 5px; line-height: 5px; height: 5px;">&nbsp;</div>
                                                         </td>
@@ -257,7 +257,7 @@
                                             <td style="width: 40%;">
                                                 <div style="padding-right: 10px;">
                                                     <a href="https://www.lazada.vn/products/i257044870-s353659683.html?urlFlag=true&amp;mp=1?" target="_blank">
-                                                        <img src="https://stage.thansohocsala.com/{{ $order["avatar"] }}" style="width: 100%; max-width: 160px;" class="CToWUd" />
+                                                        <img src="https://thansohocsala.com/{{ $order["avatar"] }}" style="width: 100%; max-width: 160px;" class="CToWUd" />
                                                     </a>
                                                 </div>
                                             </td>

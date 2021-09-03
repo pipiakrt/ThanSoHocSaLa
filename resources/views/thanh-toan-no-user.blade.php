@@ -57,18 +57,13 @@
 </nav>
 
 <div class="container">
-    @if (\Session::has('success'))
-        <div class="alert alert-success mt-4">
-            <ul class="mb-0">
-                <li>{!! \Session::get('success') !!}</li>
-            </ul>
-        </div>
-    @endif
 
-    @if (\Session::has('error'))
-        <div class="alert alert-danger mt-4">
-            <ul class="mb-0">
-                <li>{!! \Session::get('error') !!}</li>
+    @if ($errors->any())
+        <div class="alert alert-danger mb-0 mt-5">
+            <ul class="mb-0" style="list-style: none;">
+                @foreach ($errors->all() as $error)
+                    <li style="font-size: 23px;">{!! $error !!}</li>
+                @endforeach
             </ul>
         </div>
     @endif
@@ -81,9 +76,9 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-3 mb-3">
-                            <label for="username">Họ Tên</label>
+                            <label for="name">Họ Tên</label>
                             <div class="input-group">
-                                <input type="text" name="name" class="form-control" id="username" />
+                                <input type="text" name="name" class="form-control" id="name" />
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
@@ -114,8 +109,8 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="name">Ngày sinh</label>
-                            <input type="text" name="birthday" class="form-control" id="name" required />
+                            <label for="birthdate">Ngày sinh</label>
+                            <input type="text" name="birthdate" class="form-control" id="birthdate" required />
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="phone">Điện thoại</label>
