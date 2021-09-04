@@ -15,18 +15,16 @@ class successOrder
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected $user;
-    protected $code;
+    protected $order;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($user, $code)
+    public function __construct($order)
     {
-        $this->user = $user;
-        $this->code = $code;
+        $this->order = $order;
     }
 
     /**
@@ -36,9 +34,9 @@ class successOrder
      */
     public function handle()
     {
-        $mail = new sendMail($this->user, $this->code);
+        $mail = new sendMail($this->order);
         $mail->subject('Đã Kích Hoạt Đơn Hàng - Thần Số Học Sala');
         $mail->from(env('MAIL_USERNAME'), 'Thần Số Học Sala');
-        Mail::to($this->user['email'])->send($mail);
+        Mail::to($this->order['email'])->send($mail);
     }
 }

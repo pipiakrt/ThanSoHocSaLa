@@ -11,18 +11,16 @@ class successOrder extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    protected $user;
-    protected $code;
+    protected $order;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($user, $code)
+    public function __construct($order)
     {
-        $this->user = $user;
-        $this->code = $code;
+        $this->order = $order;
     }
 
     /**
@@ -32,8 +30,7 @@ class successOrder extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        $user = $this->user;
-        $code = $this->code;
-        return $this->view('mail.successOrder', compact(['user', 'code']));
+        $order = $this->order;
+        return $this->view('mail.successOrder', compact("order"));
     }
 }

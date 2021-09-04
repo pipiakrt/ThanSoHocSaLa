@@ -25,9 +25,9 @@
                                                     word-break: break-word;
                                                 "
                                             >
-                                                Chào bạn <b>{{ $user["name"] }}</b>, <br /><br />
+                                                Chào bạn <b>{{ $order["name"] }}</b>, <br /><br />
 
-                                                Chúng tôi đã kích hoạt đơn hàng #{{ $code }} của bạn:<br /><br />
+                                                Chúng tôi đã kích hoạt đơn hàng #{{ $order["code"] }} của bạn:<br /><br />
 
                                                 <a href="https://thansohocsala.com/login" target="_blank">Click vào đây</a>, để đang nhập và sửu dụng dịch vụ trên hệ thống của chúng tôi.
                                                 <br /><br />

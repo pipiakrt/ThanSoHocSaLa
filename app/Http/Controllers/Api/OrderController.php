@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order as Model;
 use App\Http\Resources\Order as Resources;
 use Illuminate\Http\Request;
+use App\Jobs\successOrder;
 
 class OrderController extends Controller
 {
@@ -49,6 +50,9 @@ class OrderController extends Controller
      */
     public function update(Request $request, Model $order)
     {
+        if ($order->status == 0 && $request->status == 1) {
+            successOrder::dispatch($order);
+        }
         return $order->update($request->all());
     }
 }

@@ -112,6 +112,7 @@ export default {
             email: '',
             payment: '',
             price: '',
+            status_origin: '',
             status: '',
             licenses: '',
             number: '',
@@ -128,7 +129,7 @@ export default {
             this.phone = res.data.data.phone
             this.email = res.data.data.email
             this.price = res.data.data.price
-            this.status = res.data.data.status
+            this.status_origin = this.status = res.data.data.status
             this.payment = res.data.data.payment
             this.licenses = res.data.data.licenses
             this.number = res.data.data.number
@@ -151,7 +152,7 @@ export default {
                 toastr.success("Tạo đơn hàng thành công!")
                 this.$router.push('/sala-backend/don-hang/cho-xac-nhan');
             })
-            if (this.status == 0) {
+            if (this.status_origin == 0) {
                 axios.put(`/api/users/${this.user_id}?number=${this.licenses + this.number}`)
             }
         }
