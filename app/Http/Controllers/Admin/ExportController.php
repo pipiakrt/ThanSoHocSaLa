@@ -34,7 +34,7 @@ class ExportController extends Controller
         ])->first();
 
         if ($check) {
-            // return $check->code;
+            return $check;
         }
 
         $data = $user->TraCuu()->create([
