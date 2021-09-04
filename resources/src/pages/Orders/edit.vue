@@ -60,52 +60,13 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="name" class="col-2 col-form-label">Lượt tra cứu gốc</label>
-                                    <div class="col-10">
-                                        <input v-model="licenses" class="form-control" type="number" :disabled="status != 1" />
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="name" class="col-2 col-form-label">Lượt tra cứu cộng từ gói</label>
-                                    <div class="col-10">
-                                        <input v-model="licenses_goi" class="form-control" type="number" :disabled="status != 1" />
-                                    </div>
-                                </div>
-                                <div class="form-group row">
                                     <label for="name" class="col-2 col-form-label">Trạng Thái Đơn Hàng</label>
                                     <div class="col-10">
                                         <select v-model="status" class="form-control" style="height: 35px">
-                                            <option value="0">Chờ Kích Hoạt</option>
+                                            <option v-if="status == 0" value="0">Chờ Kích Hoạt</option>
                                             <option value="1">Kích Hoạt</option>
-                                            <option value="2">Hết Hạn</option>
+                                            <option value="2">Hủy Đơn</option>
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row" v-show="status == 1">
-                                    <label for="description" class="col-2 col-form-label">Thời Hạn</label>
-                                    <div class="col-10">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="input-group date" id="kt_datetimepicker_1" data-target-input="nearest">
-                                                    <input :value="bat_dau" type="text" id="datetimepicker_1" class="form-control datetimepicker-input" placeholder="Thời gian bắt đầu" data-target="#kt_datetimepicker_1" />
-                                                    <div class="input-group-append" data-target="#kt_datetimepicker_1" data-toggle="datetimepicker">
-                                                        <span class="input-group-text">
-                                                            <i class="ki ki-calendar"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="input-group date" id="kt_datetimepicker_2" data-target-input="nearest">
-                                                    <input :value="ket_thuc" type="text" id="datetimepicker_2" class="form-control datetimepicker-input" placeholder="Thời gian kết thúc" data-target="#kt_datetimepicker_2" />
-                                                    <div class="input-group-append" data-target="#kt_datetimepicker_2" data-toggle="datetimepicker">
-                                                        <span class="input-group-text">
-                                                            <i class="ki ki-calendar"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -152,18 +113,10 @@ export default {
             payment: '',
             price: '',
             status: '',
-            bat_dau: '',
-            ket_thuc: '',
             licenses: '',
-            licenses_goc: '',
-            licenses_goi: 0,
+            number: '',
             address: '',
             note: '',
-        }
-    },
-    watch: {
-        licenses_goi() {
-            this.licenses = Number(this.licenses_goi) + Number(this.licenses_goc)
         }
     },
     async created() {
@@ -176,23 +129,16 @@ export default {
             this.email = res.data.data.email
             this.price = res.data.data.price
             this.status = res.data.data.status
-            this.bat_dau = res.data.data.bat_dau
             this.payment = res.data.data.payment
-            this.ket_thuc = res.data.data.ket_thuc
-            this.licenses_goc = this.licenses = res.data.data.licenses
+            this.licenses = res.data.data.licenses
+            this.number = res.data.data.number
             this.address = res.data.data.address
             this.note = res.data.data.note
-            KTUtil.ready(function () {
-                $('#kt_datetimepicker_1').datetimepicker();
-                $('#kt_datetimepicker_2').datetimepicker();
-            });
         })
     },
     methods: {
         async submit() {
             let params = {
-                bat_dau: $('#datetimepicker_1').val(),
-                ket_thuc: $('#datetimepicker_2').val(),
                 status: this.status,
             }
             KTApp.blockPage({
@@ -205,7 +151,9 @@ export default {
                 toastr.success("Tạo đơn hàng thành công!")
                 this.$router.push('/sala-backend/don-hang/cho-xac-nhan');
             })
-            axios.put(`/api/users/${this.user_id}?number=${this.licenses}`)
+            if (this.status == 0) {
+                axios.put(`/api/users/${this.user_id}?number=${this.licenses + this.number}`)
+            }
         }
     }
 }

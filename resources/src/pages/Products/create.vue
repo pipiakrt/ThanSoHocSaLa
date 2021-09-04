@@ -42,6 +42,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="number" class="col-2 col-form-label">Lượt Tra Cứu</label>
+                                    <div class="col-10">
+                                        <input v-model="number" class="form-control" type="number" placeholder="Lượt Tra Cứu" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="sort" class="col-2 col-form-label">Thứ Tự</label>
                                     <div class="col-10">
                                         <input v-model="sort" class="form-control" type="number" placeholder="Thứ tự sản phẩm" />
@@ -367,6 +373,7 @@ export default {
             description: '',
             content: '',
             sort: 0,
+            number: 0,
         }
     },
     watch: {
@@ -440,6 +447,7 @@ export default {
         },
         async submit(status) {
             let params = {
+                number: this.number,
                 sort: this.sort,
                 name: this.name,
                 slug: this.slug,

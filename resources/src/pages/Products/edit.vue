@@ -42,6 +42,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="number" class="col-2 col-form-label">Lượt Tra Cứu</label>
+                                    <div class="col-10">
+                                        <input v-model="number" class="form-control" type="number" placeholder="Lượt Tra Cứu" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="sort" class="col-2 col-form-label">Thứ Tự</label>
                                     <div class="col-10">
                                         <input v-model="sort" class="form-control" type="number" placeholder="Thứ tự sản phẩm" />
@@ -367,6 +373,7 @@ export default {
             description: '',
             content: '',
             sort: 0,
+            number: 0,
         }
     },
     watch: {
@@ -386,6 +393,7 @@ export default {
             this.promotion = res.data.data.promotion
             this.content = res.data.data.content
             this.sort = res.data.data.sort
+            this.number = res.data.data.number
 
             if (res.data.data.options) {
                 this.options = res.data.data.options
@@ -459,6 +467,7 @@ export default {
         async submit(status) {
             let params = {
                 sort: this.sort,
+                number: this.number,
                 name: this.name,
                 slug: this.slug,
                 price_origin: this.price_origin,
