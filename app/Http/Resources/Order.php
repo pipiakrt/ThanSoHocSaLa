@@ -29,6 +29,8 @@ class Order extends JsonResource
             'product_name' => $this->product_name,
             'payment' => $this->payment,
             'note' => $this->note,
+            'bat_dau' => $this->bat_dau,
+            'ket_thuc' => $this->ket_thuc,
             'number' => $this->Product->number,
             'licenses' => $this->User ? $this->User->License->number : "",
             'user' => $this->User ? new Account($this->User) : "",
