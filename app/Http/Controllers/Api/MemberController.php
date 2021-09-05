@@ -24,9 +24,9 @@ class MemberController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return Resources::collection(Model::paginate());
+        return Resources::collection(Model::paginateFilter($request));
     }
 
     /**

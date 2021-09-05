@@ -37,10 +37,12 @@
                                             <div class="symbol symbol-50 flex-shrink-0 mr-4">
                                                 <div class="symbol-label" :style="`background-image: url('${item.avatar ? item.avatar : '/img/avatar.png'}')`"></div>
                                             </div>
-                                            <div>
-                                                <a class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.name"></a>
-                                                <span class="text-muted d-block" v-text="item.email"></span>
-                                            </div>
+                                            <router-link :to="'/sala-backend/quan-ly/' + item.id + '/phan-quyen'" class="navi-link">
+                                                <div>
+                                                    <a class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg" v-text="item.name"></a>
+                                                    <span class="text-muted d-block" v-text="item.email"></span>
+                                                </div>
+                                            </router-link>
                                         </div>
                                     </td>
                                     <td style="max-width: 120px" class="text-center">
@@ -51,6 +53,18 @@
                                             <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="ki ki-bold-more-hor"></i>
                                             </a>
+                                            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                                <ul class="navi navi-hover">
+                                                    <li class="navi-item">
+                                                        <router-link :to="'/sala-backend/quan-ly/' + item.id + '/phan-quyen'" class="navi-link">
+                                                            <span class="navi-icon">
+                                                                <i class="fa fas fa-edit"></i>
+                                                            </span>
+                                                            <span class="navi-text">Phân Quyền</span>
+                                                        </router-link>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>

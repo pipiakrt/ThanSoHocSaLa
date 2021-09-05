@@ -70,6 +70,7 @@ export default {
             this.$Progress.finish();
             return response;
         }, error => {
+            KTApp.unblockPage();
             Swal.fire("Rất Tiếc!", "Đã có sự cố đã sảy ra, vui lòng thử lại sau!", "error");
             return error;
         });

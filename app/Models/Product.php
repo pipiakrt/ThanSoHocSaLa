@@ -9,6 +9,8 @@ class Product extends Model
 {
     use HasFactory;
 
+    public function tableName() { return "App\Models\Product"; }
+
     protected $fillable = [
         'name',
         'slug',

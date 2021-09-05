@@ -11,6 +11,8 @@ class ThanSo extends Model
 {
     use HasFactory, Filterable;
 
+    public function tableName() { return "App\Models\ThanSo"; }
+
     protected $table = 'contents';
     protected $primary = 'id';
 

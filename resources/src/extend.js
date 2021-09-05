@@ -1,6 +1,6 @@
 const { default: axios } = require("axios");
 
-module.exports.Auth = () => 
+module.exports.Auth = () =>
 {
     let token = window.localStorage.getItem('token');
 
@@ -12,7 +12,7 @@ module.exports.Auth = () =>
     return true
 }
 
-module.exports.SetToken = (token) => 
+module.exports.SetToken = (token) =>
 {
     token = window.localStorage.setItem('token', token);
     axios.defaults.headers.common = {
@@ -21,7 +21,7 @@ module.exports.SetToken = (token) =>
     };
 }
 
-module.exports.ChangeToSlug = (title) => 
+module.exports.ChangeToSlug = (title) =>
 {
     //Đổi chữ hoa thành chữ thường
     var slug = title.toLowerCase();
@@ -55,7 +55,7 @@ module.exports.ChangeToSlug = (title) =>
     return slug;
 }
 
-module.exports.AddScript = (scripts) => 
+module.exports.AddScript = (scripts) =>
 {
     scripts.forEach(script => {
         let tag = document.createElement("script");
@@ -64,14 +64,14 @@ module.exports.AddScript = (scripts) =>
     });
 }
 
-module.exports.AddStyle = (styles) => 
+module.exports.AddStyle = (styles) =>
 {
     styles.forEach(style => {
         document.querySelector('head').innerHTML += '<link rel="stylesheet" href="'+ style +'" type="text/css"/>'
     });
 }
 
-module.exports.TrueArray = (flat) => 
+module.exports.TrueArray = (flat) =>
 {
     const root = [];
     flat.forEach(node => {
@@ -85,7 +85,7 @@ module.exports.TrueArray = (flat) =>
     return root;
 }
 
-module.exports.LoadPage = () => 
+module.exports.LoadPage = () =>
 {
     KTApp.blockPage({
         overlayColor: "#000000",
@@ -94,7 +94,7 @@ module.exports.LoadPage = () =>
     })
 }
 
-module.exports.Clipboard_CopyTo = (value) => 
+module.exports.Clipboard_CopyTo = (value) =>
 {
     var tempInput = document.createElement("input");
     tempInput.value = value;
@@ -104,7 +104,7 @@ module.exports.Clipboard_CopyTo = (value) =>
     document.body.removeChild(tempInput);
 }
 
-module.exports.FormatText = (text, length) => 
+module.exports.FormatText = (text, length) =>
 {
     if (text == null) {
         return "";
@@ -118,7 +118,7 @@ module.exports.FormatText = (text, length) =>
     return text + "...";
 }
 
-module.exports.formartPrice = (amount, decimalCount = 0, decimal = ".", thousands = ".") => 
+module.exports.formartPrice = (amount, decimalCount = 0, decimal = ".", thousands = ".") =>
 {
     decimalCount = Math.abs(decimalCount);
     decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
@@ -128,7 +128,7 @@ module.exports.formartPrice = (amount, decimalCount = 0, decimal = ".", thousand
     return (negativeSign + (j ? i.substr(0, j) + thousands : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - Number(i)).toFixed(decimalCount).slice(2) : "")) + ' VNĐ';
 }
 
-module.exports.generate = () => 
+module.exports.generate = () =>
 {
     var length = 8,
         charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",

@@ -17,6 +17,7 @@ class OrderController extends Controller
      */
     public function __construct()
     {
+        $this->authorizeResource(Model::class);
         $this->middleware('auth:api');
     }
 

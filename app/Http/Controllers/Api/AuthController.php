@@ -77,13 +77,21 @@ class AuthController extends Controller
      */
     public function store(Register $data)
     {
-        User::create([
+        $user = User::create([
             'is_admin' => 1,
             'avatar' => $data->avatar,
             'name' => $data->name,
             'email' => $data->email,
             'password' => Hash::make($data->password),
         ]);
+        $user->Attribute()->create([
+            "code" => $user->id,
+            "type" => $data->type,
+            "name" => $data->vitri,
+        ]);
+        foreach ($data->permission as $name) {
+            $user->Permission()->create(["name" => $name]);
+        }
         return response()->json([
             'message' => 'Tạo tài khoản thành công!'
         ], 201);

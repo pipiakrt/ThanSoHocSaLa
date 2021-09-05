@@ -7,10 +7,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+use App\Traits\Filterable;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, HasApiTokens;
+    use HasFactory, Notifiable, HasApiTokens, Filterable;
+
+    public function tableName() { return "App\Models\User"; }
 
     /**
      * The attributes that are mass assignable.
@@ -59,7 +63,23 @@ class User extends Authenticatable
         return $this->hasMany(TraCuu::class, 'user_id');
     }
 
+    public function Attribute() {
+        return $this->hasOne(UserAttribute::class);
+    }
+
     public function License() {
         return $this->hasOne(License::class);
+    }
+
+    public function Permission() {
+        return $this->hasMany(Permission::class);
+    }
+
+    public function filterType(EloquentBuilder $query, $value)
+    {
+        if ($value) {
+            $query->where('is_admin', $value);
+            return $query;
+        }
     }
 }

@@ -133,7 +133,7 @@ export default {
     },
     created() {
         Extends.LoadPage()
-        axios('/api/members').then(res => {
+        axios('/api/members?type=false').then(res => {
             KTApp.unblockPage();
             this.members = res.data
         })
@@ -141,7 +141,7 @@ export default {
     methods: {
         async toPage(page = 1) {
             Extends.LoadPage()
-            let members = await axios("/api/members?page=" + page);
+            let members = await axios("/api/members?type=false&page=" + page);
             this.members = members.data
             this.allID = [];
             members.data.data.forEach(item => {

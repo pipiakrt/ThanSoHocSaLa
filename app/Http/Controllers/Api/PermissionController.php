@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Permission as Model;
+use App\Http\Resources\Permission as Resources;
+use App\Models\User;
 use Illuminate\Http\Request;
-use App\Models\ThanSo as Model;
-use App\Http\Resources\ThanSo as Resources;
 
-class ThanSoHocController extends Controller
+class PermissionController extends Controller
 {
     /**
      * Create a new AuthController instance.
@@ -16,40 +17,35 @@ class ThanSoHocController extends Controller
      */
     public function __construct()
     {
-        $this->authorizeResource(Model::class);
+        // $this->authorizeResource(Model::class);
         $this->middleware('auth:api');
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Request $request)
-    {
-        return Resources::collection(Model::paginateFilter($request, 300));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $permission)
     {
-        return new Resources(Model::find($id));
+        return new Resources($permission);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        return Model::find($id)->update($request->all());
+        $user = User::find($id);
+        $user->Permission()->delete();
+        foreach ($request->name as $name) {
+            $user->Permission()->create(["name" => $name]);
+        }
+        return "ok";
     }
 }

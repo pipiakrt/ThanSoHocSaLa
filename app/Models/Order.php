@@ -10,6 +10,8 @@ class Order extends Model
 {
     use Filterable;
 
+    public function tableName() { return "App\Models\Order"; }
+
     protected $fillable = [
         'user_id',
         'product_id',

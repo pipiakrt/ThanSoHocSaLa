@@ -22,6 +22,8 @@ use App\Http\Controllers\Api\ThanSoHocController;
 use App\Http\Controllers\Api\TraCuuController;
 use App\Http\Controllers\Api\TuVanController;
 use App\Http\Controllers\Api\ChuyenMucController;
+use App\Http\Controllers\Api\PermissionController;
+use App\Http\Controllers\Api\HomeAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,4 +57,6 @@ Route::resources([
     'thanso' => ThanSoHocController::class,
     'tracuu' => TraCuuController::class,
     'tuvan' => TuVanController::class,
+    'permissions' => PermissionController::class,
+    'home' => HomeAdminController::class,
 ]);

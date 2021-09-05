@@ -11,6 +11,8 @@ class Post extends Model
 {
     use HasFactory, Filterable;
 
+    public function tableName() { return "App\Models\Post"; }
+
     protected $fillable = [
         'name',
         'slug',
