@@ -85,7 +85,7 @@ class AuthController extends Controller
             'password' => Hash::make($data->password),
         ]);
         $user->Attribute()->create([
-            "code" => $user->id,
+            "code" => $user->id . time(),
             "type" => $data->type,
             "name" => $data->vitri,
         ]);
