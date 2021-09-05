@@ -118,8 +118,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 el_link.classList.remove('show');
                     nextEl.classList.remove('show');
             }
-
-
         })
+    });
+});
+
+
+$(window).on( "load", () => {
+    var result = detect.parse(navigator.userAgent);
+    $.ajax({
+        url : "/checking",
+        type : "post",
+        data : {
+            browser: `${result.browser.family} v${result.browser.version}`,
+            device: `${result.os.family} - ${result.device.type}`,
+            screen: `${screen.width}px - ${screen.height}px`,
+            url: window.location.href
+        }
     });
 });

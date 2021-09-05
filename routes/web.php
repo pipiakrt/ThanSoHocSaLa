@@ -13,6 +13,7 @@ use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\TuVanController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CheckingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +64,7 @@ Route::get('/gio-hang/{slug}', [CartController::class, 'store']);
 Route::get('/gio-hang/xoa/{slug}', [CartController::class, 'destroy']);
 Route::get('/dat-hang', [OrderController::class, 'nhapdiachi']);
 Route::post('/thanh-toan', [OrderController::class, 'thanhtoan']);
+Route::post('/checking', [CheckingController::class, 'store']);
 
 Route::group(['middleware' => 'login'], function(){
     Route::prefix('/tai-khoan')->group(function () {

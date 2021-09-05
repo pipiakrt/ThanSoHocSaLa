@@ -42,6 +42,8 @@ import CreateSeo from './pages/Seo/create'
 import EditSeo from './pages/Seo/edit'
 // Slider
 import Slider from './pages/Slider/index'
+// Checking
+import Checking from './pages/Checking/index'
 // Account
 import Profile from './pages/Account/profile'
 import Password from './pages/Account/password'
@@ -77,6 +79,12 @@ const routes = [
         path: '/sala-backend/don-hang/don-huy',
         component: OrderCancel,
         name: 'Orders',
+    },
+    // Checking
+    {
+        path: '/sala-backend/checking/danh-sach',
+        component: Checking,
+        name: 'Checking',
     },
     // Manage
     {

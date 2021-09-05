@@ -24,6 +24,7 @@ use App\Http\Controllers\Api\TuVanController;
 use App\Http\Controllers\Api\ChuyenMucController;
 use App\Http\Controllers\Api\PermissionController;
 use App\Http\Controllers\Api\HomeAdminController;
+use App\Http\Controllers\Api\CheckingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,4 +60,5 @@ Route::resources([
     'tuvan' => TuVanController::class,
     'permissions' => PermissionController::class,
     'home' => HomeAdminController::class,
+    'checking' => CheckingController::class,
 ]);

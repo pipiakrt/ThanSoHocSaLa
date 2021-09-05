@@ -23,38 +23,43 @@
                         <table class="table table-head-custom table-head-bg table-borderless table-vertical-center">
                             <thead>
                                 <tr class="text-uppercase">
-                                    <th style="min-width: 250px" class="pl-5">
-                                        <span class="text-dark-75">Họ tên</span>
+                                    <th style="min-width: 75px" class="pl-5">
+                                        <span class="text-dark-75">IP</span>
                                     </th>
-                                    <th style="min-width: 120px">Nội dung</th>
-                                    <th style="min-width: 100px">Số điện thoại</th>
-                                    <th style="min-width: 100px">Số lượng</th>
-                                    <th style="min-width: 100px">Ngày tạo</th>
+                                    <th style="min-width: 100px">Người dùng</th>
+                                    <th style="min-width: 100px">URl</th>
+                                    <th style="min-width: 100px">Thiết bị</th>
+                                    <th style="min-width: 100px">Màn hình</th>
+                                    <th style="min-width: 100px">Thời gian</th>
                                     <th class="text-center">EXT</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="item in posts.data" :key="'row' + item.id">
+                                <tr v-for="item in listData.data" :key="'row' + item.id">
                                     <td class="pl-0 py-8">
                                         <div class="d-flex align-items-center">
                                             <div class="symbol symbol-50 flex-shrink-0 mr-4">
-                                                {{ item.name }}
+                                                {{ item.ip }}
                                             </div>
                                         </div>
                                     </td>
                                     <td>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.user ? `${item.user.name} - ${item.user.phone}` : ''"></span>
+                                        <span class="text-muted font-weight-bold" v-text="item.user ? item.user.email : ''"></span>
+                                    </td>
+                                    <td>
                                         <div class="symbol symbol-50 flex-shrink-0 mr-4">
-                                            {{ item.content }}
+                                            {{ item.url }}
                                         </div>
                                     </td>
                                     <td>
                                         <div class="symbol symbol-50 flex-shrink-0 mr-4">
-                                            {{ item.phone }}
+                                            {{ item.device }}
                                         </div>
                                     </td>
                                     <td>
                                         <div class="symbol symbol-50 flex-shrink-0 mr-4">
-                                            {{ item.number }}
+                                            {{ item.screen }}
                                         </div>
                                     </td>
                                     <td>
@@ -68,18 +73,6 @@
                                             <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="ki ki-bold-more-hor"></i>
                                             </a>
-                                            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                                <ul class="navi navi-hover">
-                                                    <li class="navi-item">
-                                                        <a @click="destroy(item.id)" class="navi-link">
-                                                            <span class="navi-icon">
-                                                                <i class="flaticon2 flaticon2-trash"></i>
-                                                            </span>
-                                                            <span class="navi-text">Xóa</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -96,7 +89,7 @@
                         :first-button-text="`<i class='ki ki-bold-double-arrow-back icon-xs'></i>`"
                         :last-button-text="`<i class='ki ki-bold-double-arrow-next icon-xs'></i>`"
                         :no-li-surround="true"
-                        :page-count="posts.meta.last_page"
+                        :page-count="listData.last_page"
                         :page-range="3"
                         :click-handler="toPage"
                         :disabled-class="'disable'"
@@ -137,7 +130,7 @@ export default {
                     text: 'Dashboard',
                 },
             },
-            posts: []
+            listData: []
         }
     },
     created() {
@@ -146,17 +139,12 @@ export default {
     methods: {
         async toPage(page = 1) {
             Extends.LoadPage()
-            let posts = await axios("/api/checkings?page=" + page);
-            this.posts = posts.data
+            let listData = await axios("/api/checking?page=" + page);
+            this.listData = listData.data
             KTApp.unblockPage();
         },
         formatTime(time) {
             return moment(time).format('DD/MM/YYYY');
-        },
-        destroy(id) {
-            axios.delete('/api/checkings/' + id).then(res => {
-                this.posts.data = this.posts.data.filter(item => item.id !== id)
-            })
         },
     },
 

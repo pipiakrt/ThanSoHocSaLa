@@ -57,9 +57,9 @@
     <script src="/plugins/owl-carousel/dist/owl.carousel.js"></script>
     <script src="/plugins/particles/js/app.js"></script>
     <script src="/plugins/particles/js/particles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Detect.js/2.2.2/detect.min.js"></script>
     @stack('scripts')
     <script src="/js/main.js"></script>
-
     <x-script />
 
 </body>

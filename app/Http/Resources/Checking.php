@@ -16,10 +16,12 @@ class Checking extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
-            'content' => $this->content,
-            'phone' => $this->phone,
-            'number' => $this->number,
+            'ip' => $this->ip,
+            'url' => $this->url,
+            'device' => $this->device,
+            'screen' => $this->screen,
+            'browser' => $this->browser,
+            'user' => $this->User,
             'created_at' => $this->created_at,
         ];
     }
