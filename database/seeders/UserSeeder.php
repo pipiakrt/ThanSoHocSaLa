@@ -27,6 +27,7 @@ class UserSeeder extends Seeder
             "type" => "admin",
             "name" => "admin",
         ]);
+        $user->Permission()->create(["name" => "administrator"]);
         return 1;
     }
 }
