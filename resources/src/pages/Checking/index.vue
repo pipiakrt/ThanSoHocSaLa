@@ -63,9 +63,8 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="symbol symbol-50 flex-shrink-0 mr-4">
-                                            {{ formatTime(item.created_at) }}
-                                        </div>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.created_at)"></span>
+                                        <span class="text-muted font-weight-bold" v-text="formatHuors(item.created_at)"></span>
                                     </td>
 
                                     <td class="text-center">
@@ -145,6 +144,9 @@ export default {
         },
         formatTime(time) {
             return moment(time).format('DD/MM/YYYY');
+        },
+        formatHuors(time) {
+            return moment(time).format('hh:mm:ss');
         },
     },
 

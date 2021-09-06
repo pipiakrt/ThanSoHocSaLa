@@ -16,6 +16,6 @@ class CheckingController extends Controller
      */
     public function index()
     {
-        return Resources::collection(Model::simplePaginate());
+        return Resources::collection(Model::orderby("id", "DESC")->simplePaginate());
     }
 }
