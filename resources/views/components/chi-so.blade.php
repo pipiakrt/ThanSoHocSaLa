@@ -330,7 +330,7 @@ $ynghia = [
                     </div>
                     <div class="buttons">
                         <div class="button" data-bs-dismiss="modal">Đóng</div>
-                        <a href="/login" class="button button-primary">Đăng ký</a>
+                        <a href="{{ request()->user() ? "/tai-khoan/tra-cuu-nang-cao" : "/login" }}" class="button button-primary">Đăng ký</a>
                     </div>
                 </div>
             </div>
