@@ -7,6 +7,8 @@ import OrderPending from './pages/Orders/pending'
 // import OrderProcess from './pages/Orders/process'
 import OrderSuccess from './pages/Orders/success'
 import OrderCancel from './pages/Orders/cancel'
+import OrderActived from './pages/Orders/actived'
+import CreateOrder from './pages/Orders/create'
 import EditOrder from './pages/Orders/edit'
 // Manage
 import Manage from './pages/Manage/index'
@@ -63,6 +65,16 @@ const routes = [
     {
         path: '/sala-backend/don-hang/cho-xac-nhan',
         component: OrderPending,
+        name: 'Orders',
+    },
+    {
+        path: '/sala-backend/don-hang/cho-kich-hoat',
+        component: OrderActived,
+        name: 'Orders',
+    },
+    {
+        path: '/sala-backend/don-hang/len-don',
+        component: CreateOrder,
         name: 'Orders',
     },
     {

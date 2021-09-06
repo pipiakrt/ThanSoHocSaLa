@@ -211,11 +211,19 @@ export default {
                     type: 3,
                     sub: [
                         {
-                            name: 'Chờ xác nhận',
+                            name: 'Lên đơn hàng',
+                            url: '/sala-backend/don-hang/len-don'
+                        },
+                        {
+                            name: 'Đơn chờ xác nhận',
                             url: '/sala-backend/don-hang/cho-xac-nhan'
                         },
                         {
-                            name: 'Hoạt động',
+                            name: 'Đơn chờ kích hoạt',
+                            url: '/sala-backend/don-hang/cho-kich-hoat'
+                        },
+                        {
+                            name: 'Đơn hoạt động',
                             url: '/sala-backend/don-hang/hoat-dong'
                         },
                         {
