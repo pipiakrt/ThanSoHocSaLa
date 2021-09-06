@@ -19,6 +19,7 @@ class Permission extends JsonResource
             'name' => $this->name,
             'email' => $this->email,
             "permissions" => $this->Permission,
+            "attribute" => $this->Attribute,
         ];
     }
 }

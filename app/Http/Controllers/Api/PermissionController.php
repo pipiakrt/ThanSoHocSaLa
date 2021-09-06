@@ -39,13 +39,18 @@ class PermissionController extends Controller
      * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $permission)
     {
-        $user = User::find($id);
+        $user = $permission;
         $user->Permission()->delete();
         foreach ($request->name as $name) {
             $user->Permission()->create(["name" => $name]);
         }
+        $user->Attribute()->update([
+            "name" => $request->vitri,
+            "type" => $request->type,
+        ]);
+
         return "ok";
     }
 }

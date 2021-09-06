@@ -22,7 +22,7 @@ class HomeAdminController extends Controller
         $admin = User::orderby("id", "DESC")->where("is_admin", true)->get();
         $orders = Order::orderby("id", "DESC")->get();
         $tracuu = TraCuu::orderby("id", "DESC")->get();
-        $website = TraCuu::orderby("id", "DESC")->get();
+        $website = Checking::orderby("id", "DESC")->get();
 
         return [
             "GroupData_1" => [

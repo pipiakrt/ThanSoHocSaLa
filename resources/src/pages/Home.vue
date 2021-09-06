@@ -78,8 +78,8 @@
                                         </div>
                                         <!--begin::Text-->
                                         <div class="d-flex flex-column flex-grow-1 font-weight-bold">
-                                            <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Ricky Hunt</a>
-                                            <span class="text-muted">PHP, SQLite, Artisan CLI</span>
+                                            <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg" v-text="item.name"></a>
+                                            <span class="text-muted" v-text="item.email"></span>
                                         </div>
                                         <!--begin::Dropdown-->
                                         <div class="dropdown dropdown-inline ml-2" data-toggle="tooltip" title="Quick actions" data-placement="left">

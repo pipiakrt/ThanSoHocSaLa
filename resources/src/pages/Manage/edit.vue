@@ -217,6 +217,11 @@ export default {
             this.email = res.data.data.email
             this.name = res.data.data.name
 
+            if (res.data.data.attribute) {
+                this.type = res.data.data.attribute.type
+                this.vitri = res.data.data.attribute.name
+            }
+
             KTUtil.ready(function () {
                 $('#permission').select2({
                     placeholder: "Chọn quyền",
@@ -234,6 +239,8 @@ export default {
     methods: {
         async submit() {
             let params = {
+                type: this.type,
+                vitri: this.vitri,
                 name: $('#permission').select2("val"),
             }
             Extends.LoadPage()
