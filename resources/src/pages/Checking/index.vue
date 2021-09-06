@@ -36,12 +36,8 @@
                             </thead>
                             <tbody>
                                 <tr v-for="item in listData.data" :key="'row' + item.id">
-                                    <td class="pl-0 py-8">
-                                        <div class="d-flex align-items-center">
-                                            <div class="symbol symbol-50 flex-shrink-0 mr-4">
-                                                {{ item.ip }}
-                                            </div>
-                                        </div>
+                                    <td>
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.ip"></span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.user ? `${item.user.name} - ${item.user.phone}` : ''"></span>
