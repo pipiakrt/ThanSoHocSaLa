@@ -17,7 +17,7 @@ class PermissionController extends Controller
      */
     public function __construct()
     {
-        // $this->authorizeResource(Model::class);
+        $this->authorizeResource(Model::class);
         $this->middleware('auth:api');
     }
 

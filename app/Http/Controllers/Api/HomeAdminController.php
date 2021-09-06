@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\TraCuu;
+use App\Models\Checking;
 
 class HomeAdminController extends Controller
 {
@@ -20,7 +21,8 @@ class HomeAdminController extends Controller
         $users = User::orderby("id", "DESC")->where("is_admin", false)->get();
         $admin = User::orderby("id", "DESC")->where("is_admin", true)->get();
         $orders = Order::orderby("id", "DESC")->get();
-        $tracuu = TraCuu::orderby("id", "DESC")->take(10)->get();
+        $tracuu = TraCuu::orderby("id", "DESC")->get();
+        $website = TraCuu::orderby("id", "DESC")->get();
 
         return [
             "GroupData_1" => [
@@ -44,11 +46,11 @@ class HomeAdminController extends Controller
                     "count" => "Tổng cộng " . $tracuu->where("type", true)->count() . " lượt tra cứu Nâng cao",
                     "list" => $tracuu->where("type", true)->take(10),
                 ],
-                // "view_website" => [
-                //     "name" => "Thống kê lượt view website",
-                //     "count" => "Tổng cộng " . 0 . " lượt view website",
-                //     "list" => [],
-                // ],
+                "view_website" => [
+                    "name" => "Thống kê lượt view website",
+                    "count" => "Tổng cộng " . $website->count() . " lượt view website",
+                    "list" => $website->take(10),
+                ],
             ],
 
             "GroupData_2" => [
