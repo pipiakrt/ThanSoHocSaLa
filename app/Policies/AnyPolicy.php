@@ -12,7 +12,6 @@ class AnyPolicy
     /**
      * Determine whether the user can view any models.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function before(User $user, $ability, $model)
@@ -32,10 +31,9 @@ class AnyPolicy
     /**
      * Determine whether the user can view any models.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny()
     {
         //
     }
@@ -43,10 +41,9 @@ class AnyPolicy
     /**
      * Determine whether the user can view the model.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user)
+    public function view()
     {
         //
     }
@@ -54,10 +51,9 @@ class AnyPolicy
     /**
      * Determine whether the user can create models.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function create(User $user)
+    public function create()
     {
         //
     }
@@ -65,10 +61,9 @@ class AnyPolicy
     /**
      * Determine whether the user can update the model.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user)
+    public function update()
     {
         //
     }
@@ -76,10 +71,9 @@ class AnyPolicy
     /**
      * Determine whether the user can delete the model.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user)
+    public function delete()
     {
         //
     }
@@ -87,10 +81,9 @@ class AnyPolicy
     /**
      * Determine whether the user can restore the model.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user)
+    public function restore()
     {
         //
     }
@@ -98,10 +91,9 @@ class AnyPolicy
     /**
      * Determine whether the user can permanently delete the model.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user)
+    public function forceDelete()
     {
         //
     }

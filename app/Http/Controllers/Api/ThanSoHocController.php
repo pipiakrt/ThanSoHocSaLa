@@ -16,8 +16,8 @@ class ThanSoHocController extends Controller
      */
     public function __construct()
     {
-        // $this->authorizeResource(Model::class);
         $this->middleware('auth:api');
+        // $this->authorizeResource(Model::class);
     }
 
     /**
@@ -27,6 +27,7 @@ class ThanSoHocController extends Controller
      */
     public function index(Request $request)
     {
+        $this->authorize(Model::class);
         return Resources::collection(Model::paginateFilter($request, 300));
     }
 
@@ -38,6 +39,7 @@ class ThanSoHocController extends Controller
      */
     public function show(Model $thanso)
     {
+        $this->authorize(Model::class);
         return new Resources($thanso);
     }
 
@@ -48,8 +50,9 @@ class ThanSoHocController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Model $thanso)
     {
-        return Model::find($id)->update($request->all());
+        $this->authorize(Model::class);
+        return $thanso->update($request->all());
     }
 }
