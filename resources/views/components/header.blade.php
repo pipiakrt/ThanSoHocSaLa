@@ -128,7 +128,7 @@
                                 </ul>
                             </div>
                         @else
-                            <a href="/login/" class="{{ request()->segment(1) == 'login' ? 'active' : '' }}">
+                            <a href="/login/" class="text-underline {{ request()->segment(1) == 'login' ? 'active' : '' }}">
                                 <span>Đăng nhập</span>
                             </a>
                         @endauth
