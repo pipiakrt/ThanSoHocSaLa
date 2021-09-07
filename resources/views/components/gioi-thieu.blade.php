@@ -126,39 +126,18 @@
                                                     <h4 class="fw-bold text-uppercase">CUỐN SÁCH CUỘC ĐỜI</h4>
                                                 </div>
                                                 <div class="desc fw-light mt-3 mt-md-4">
-                                                    <div class="row g-0">
-                                                        <div class="col-2 col-sm-1">
-                                                            <img src="/img/icon/sv-1.png" alt="thansohocsala">
-                                                        </div>
-                                                        <div class="col-10 col-sm-11">
-                                                            <div>
-                                                                <span>"<b>Cuốn sách cuộc đời</b>" là bài báo cáo Thần Số Học của riêng bạn được chia làm 3 phần với 19 chỉ số, các chỉ số đại diện cho: Tính cách, Năng lực cùng những Ưu điểm và Hạn chế bên trong con người bạn. Từ đó, bạn có thể hình dung được “bức tranh” cuộc đời mình một cách toàn diện, để định hướng và phát huy năng lực vượt trội của chính bản thân mình.</span>
-                                                            </div>
-                                                        </div>
+                                                    <div>
+                                                        <span>"<b>CUỐN SÁCH CUỘC ĐỜI</b>" là bài báo cáo Thần Số Học của riêng bạn được chia làm 3 phần với 19 chỉ số, các chỉ số đại diện cho: Tính cách, Năng lực cùng những Ưu điểm và Hạn chế bên trong con người bạn. Từ đó, bạn có thể hình dung được “bức tranh” cuộc đời mình một cách toàn diện, để định hướng và phát huy năng lực vượt trội của chính bản thân mình.</span>
                                                     </div>
                                                 </div>
                                                 <div class="desc fw-light mt-3">
-                                                    <div class="row g-0">
-                                                        <div class="col-2 col-sm-1">
-                                                            <img src="/img/icon/sv-2.png" alt="thansohocsala">
-                                                        </div>
-                                                        <div class="col-10 col-sm-11">
-                                                            <div>
-                                                                <span>Hãy chịu trách nhiệm, thừa nhận rằng bạn <b>CÓ SỨC MẠNH CÁ NHÂN</b> để thay đổi và ảnh hưởng đến các sự kiện và hoàn cảnh trong cuộc sống của bạn. Khi có giá trị bản thân cao, bạn không còn dựa vào người khác để đưa ra quyết định cho mình. Bạn sẽ tự mình giữ trách nhiệm và một mình nắm giữ sức mạnh tạo ra những thay đổi tích cực trong cuộc sống của bạn. Không còn phàn nàn, đổ lỗi, phán xét, hoặc bào chữa. Bạn hoàn toàn <b>TIN TƯỞNG VÀO BẢN THÂN</b> và tin tưởng vào khả năng đưa ra quyết định cho cuộc sống của mình.</span>
-                                                            </div>
-                                                        </div>
+                                                    <div>
+                                                        <span>Hãy chịu trách nhiệm, thừa nhận rằng bạn <b>CÓ SỨC MẠNH CÁ NHÂN</b> để thay đổi và ảnh hưởng đến các sự kiện và hoàn cảnh trong cuộc sống của bạn. Khi có giá trị bản thân cao, bạn không còn dựa vào người khác để đưa ra quyết định cho mình. Bạn sẽ tự mình giữ trách nhiệm và một mình nắm giữ sức mạnh tạo ra những thay đổi tích cực trong cuộc sống của bạn. Không còn phàn nàn, đổ lỗi, phán xét, hoặc bào chữa. Bạn hoàn toàn <b>TIN TƯỞNG VÀO BẢN THÂN</b> và tin tưởng vào khả năng đưa ra quyết định cho cuộc sống của mình.</span>
                                                     </div>
                                                 </div>
                                                 <div class="desc fw-light mt-3">
-                                                    <div class="row g-0">
-                                                        <div class="col-2 col-sm-1">
-                                                            <img src="/img/icon/sv-3.png" alt="thansohocsala">
-                                                        </div>
-                                                        <div class="col-10 col-sm-11">
-                                                            <div>
-                                                                <span>Chúng tôi mong rằng bạn đã tìm được hạt giống ưu tú của mình để gieo trồng và nuôi dưỡng chúng. Hãy có <b>LÒNG TIN</b> vào <b>GIÁ TRỊ</b> mà bạn mang lại cho bản thân, gia đình và xã hội. Tuy nhiên cũng hãy không ngừng <b>HỌC TẬP</b>, <b>RÈN LUYỆN</b> và hướng tới <b>MỤC TIÊU</b> mà bạn đã tin chọn.</span>
-                                                            </div>
-                                                        </div>
+                                                    <div>
+                                                        <span>Chúng tôi mong rằng bạn đã tìm được hạt giống ưu tú của mình để gieo trồng và nuôi dưỡng chúng. Hãy có <b>LÒNG TIN</b> vào <b>GIÁ TRỊ</b> mà bạn mang lại cho bản thân, gia đình và xã hội. Tuy nhiên cũng hãy không ngừng <b>HỌC TẬP</b>, <b>RÈN LUYỆN</b> và hướng tới <b>MỤC TIÊU</b> mà bạn đã tin chọn.</span>
                                                     </div>
                                                 </div>
                                             </div>
