@@ -132,10 +132,7 @@
                                                         </div>
                                                         <div class="col-10 col-sm-11">
                                                             <div>
-                                                                <span>Cá nhân: Phát triển bản thân một cách toàn diện, có lối sống rõ ràng, hiểu rõ điểm mạnh, điểm hạn chế để phát huy và khắc phục, xác định mục tiêu từ đó lên kế hoạch ngắn, trung và dài hạn, hiểu thêm về những người xung quanh, biết cách giao tiếp phù hợp với từng đối tượng.</span>
-                                                            </div>
-                                                            <div>
-                                                                <span>Biết điểm mạnh, điểm hạn chế để phát huy và khắc phục, xác định mục tiêu -> lên kế hoạch ngắn, trung và dài hạn, hiểu thêm về những người xung quanh, biết cách giao tiếp phù hợp với từng đối tượng.</span>
+                                                                <span>"<b>Cuốn sách cuộc đời</b>" là bài báo cáo Thần Số Học của riêng bạn được chia làm 3 phần với 19 chỉ số, các chỉ số đại diện cho: Tính cách, Năng lực cùng những Ưu điểm và Hạn chế bên trong con người bạn. Từ đó, bạn có thể hình dung được “bức tranh” cuộc đời mình một cách toàn diện, để định hướng và phát huy năng lực vượt trội của chính bản thân mình.</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -147,10 +144,7 @@
                                                         </div>
                                                         <div class="col-10 col-sm-11">
                                                             <div>
-                                                                <span>Gia đình: hiểu rõ tính cách của từng thành viên trong gia đình để ứng xử phù hợp, </span>
-                                                            </div>
-                                                            <div>
-                                                                <span>thấu hiểu để có nhìn nhận đa chiều, cảm thông để kết nối yêu thương giúp gia đình luôn vui vẻ, hạnh phúc.</span>
+                                                                <span>Hãy chịu trách nhiệm, thừa nhận rằng bạn <b>CÓ SỨC MẠNH CÁ NHÂN</b> để thay đổi và ảnh hưởng đến các sự kiện và hoàn cảnh trong cuộc sống của bạn. Khi có giá trị bản thân cao, bạn không còn dựa vào người khác để đưa ra quyết định cho mình. Bạn sẽ tự mình giữ trách nhiệm và một mình nắm giữ sức mạnh tạo ra những thay đổi tích cực trong cuộc sống của bạn. Không còn phàn nàn, đổ lỗi, phán xét, hoặc bào chữa. Bạn hoàn toàn <b>TIN TƯỞNG VÀO BẢN THÂN</b> và tin tưởng vào khả năng đưa ra quyết định cho cuộc sống của mình.</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -162,13 +156,7 @@
                                                         </div>
                                                         <div class="col-10 col-sm-11">
                                                             <div>
-                                                                <span>Doanh nghiệp: Định hình rõ được hướng đi và những cột mốc phát triển, biết được </span>
-                                                            </div>
-                                                            <div>
-                                                                <span>thách thức cần thay đổi để tốt lên theo từng giai đoạn, biết cách sử dụng nhân sự phù </span>
-                                                            </div>
-                                                            <div>
-                                                                <span>hợp với khả năng và mong muốn.</span>
+                                                                <span>Chúng tôi mong rằng bạn đã tìm được hạt giống ưu tú của mình để gieo trồng và nuôi dưỡng chúng. Hãy có <b>LÒNG TIN</b> vào <b>GIÁ TRỊ</b> mà bạn mang lại cho bản thân, gia đình và xã hội. Tuy nhiên cũng hãy không ngừng <b>HỌC TẬP</b>, <b>RÈN LUYỆN</b> và hướng tới <b>MỤC TIÊU</b> mà bạn đã tin chọn.</span>
                                                             </div>
                                                         </div>
                                                     </div>

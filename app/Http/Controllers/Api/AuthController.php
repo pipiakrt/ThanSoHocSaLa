@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\Models\User;
+use App\Http\Resources\AuthUser;
 
 class AuthController extends Controller
 {
@@ -63,7 +64,8 @@ class AuthController extends Controller
      */
     public function show(Request $request)
     {
-        return response()->json($request->user());
+        return new AuthUser($request->user());
+        // return response()->json($request->user());
     }
 
     /**
