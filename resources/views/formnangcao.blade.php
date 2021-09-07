@@ -29,20 +29,31 @@
             if (screen.width < 768) {
                 mobileDevice = true;
             }
-            $('#exampleModal').modal('show');
             loadding();
+            $('#exampleModal').modal('show');
             $.ajax({
                 url : "/tai-khoan/tra-cuu-nang-cao",
                 type : "post",
                 data : {
-                    mobileDevice: mobileDevice,
                     name : $('#name').val(),
                     email : $('#email').val(),
                     phone : $('#phone').val(),
                     birthday : $('#birthday').val(),
                 },
-                success : function (data){
-                    window.location.href = `/tai-khoan/export_v2/${data.code}/${data.name} (${data.birthdate})`;
+                success : function (data) {
+                    if (data == "error") {
+                        $("#alert").show();
+                        setTimeout(() => {
+                            $('#exampleModal').modal('hide');
+                        }, 350);
+                        $('#exampleModal').modal('hide');
+                    }
+                    // else if (mobileDevice) {
+                    //     window.location.href = `/tai-khoan/lich-su-tra-cuu/${data.code}`;
+                    // }
+                    else {
+                        window.location.href = `/tai-khoan/export_v2/${data.code}/${data.name} (${data.birthdate})`;
+                    }
                 }
             });
         });
@@ -82,21 +93,11 @@
 
     <div class="container">
 
-        @if (\Session::has('success'))
-            <div class="alert alert-success mt-4">
-                <ul class="mb-0">
-                    <li>{!! \Session::get('success') !!}</li>
-                </ul>
-            </div>
-        @endif
-
-        @if (\Session::has('error'))
-            <div class="alert alert-danger mt-4">
-                <ul class="mb-0">
-                    <li>{!! \Session::get('error') !!}</li>
-                </ul>
-            </div>
-        @endif
+        <div id="alert" style="display: none" class="alert alert-danger mt-4">
+            <ul class="mb-0">
+                <li>Số lượt tra cứu nâng cao của bạn đã hết, nâng cấp hoạc mua thêm gói để được tiếp tục tra cứu!</li>
+            </ul>
+        </div>
 
         <div class="row my-5">
             <div class="col-md-3 mb-4">

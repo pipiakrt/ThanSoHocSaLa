@@ -25,7 +25,7 @@ class ExportController extends Controller
         $dataPost = $request->only('name', 'birthday', 'phone', 'email');
 
         if ($user->License->number == 0) {
-            return redirect('/tai-khoan')->with('error', 'Số lượt tra cứu nâng cao của bạn đã hết, nâng cấp hoạc mua thêm gói để được tiếp tục tra cứu!');
+            return "error";
         }
 
         $check = $request->user()->TraCuu()->where([
