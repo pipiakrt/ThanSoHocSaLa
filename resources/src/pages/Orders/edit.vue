@@ -62,7 +62,7 @@
                                 <div class="form-group row">
                                     <label for="name" class="col-2 col-form-label">Trạng Thái Đơn Hàng</label>
                                     <div class="col-10">
-                                        <select v-model="status" class="form-control" style="height: 35px">
+                                        <select v-model="status" class="form-control" style="height: 35px" disabled>
                                             <option v-if="status == 0" value="0">Chờ Kích Hoạt</option>
                                             <option value="1">Kích Hoạt</option>
                                             <option value="2">Hủy Đơn</option>
@@ -73,7 +73,7 @@
                         </form>
                         <div class="card-footer text-center">
                             <router-link to="/sala-backend/don-hang/danh-sach" type="reset" class="btn btn-light-primary mr-1 font-weight-bolder"><i class="icon-sm ki ki-long-arrow-back"></i> Quay Lại</router-link>
-                            <button type="reset" @click="submit(1)" class="btn btn-primary mr-1"><i class="icon-sm ki ki-bold-check-1   "></i> Lưu đơn hàng</button>
+                            <!-- <button type="reset" @click="submit(1)" class="btn btn-primary mr-1"><i class="icon-sm ki ki-bold-check-1   "></i> Lưu đơn hàng</button> -->
                         </div>
                     </div>
                 </div>

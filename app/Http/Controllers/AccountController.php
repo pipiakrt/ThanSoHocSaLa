@@ -34,7 +34,7 @@ class AccountController extends Controller
     public function donhang(Request $request)
     {
         $user = $request->user();
-        $orders = $user->Order->whereIn('status', [0, 2]);
+        $orders = $user->Order->whereIn('status', [0, 1]);
         return view('don-hang', compact('orders'));
     }
 
@@ -56,7 +56,7 @@ class AccountController extends Controller
     public function dichvu(Request $request)
     {
         $user = $request->user();
-        $orders = $user->Order->whereIn('status', 1);
+        $orders = $user->Order->whereIn('status', 2);
         return view('don-hang', compact('orders'));
     }
 

@@ -22,26 +22,6 @@
                                 <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon mr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="ki ki-bold-more-hor"></i>
                                 </a>
-                                <div v-if="filterStatus < 2" class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                    <ul class="navi navi-hover">
-                                        <li class="navi-item">
-                                            <a @click="confirm('confirm')" class="navi-link">
-                                                <span class="navi-icon">
-                                                    <i class="flaticon2 flaticon2-trash"></i>
-                                                </span>
-                                                <span class="navi-text">Xác nhận đơn</span>
-                                            </a>
-                                        </li>
-                                        <li class="navi-item">
-                                            <a @click="confirm('cancel')" class="navi-link">
-                                                <span class="navi-icon">
-                                                    <i class="flaticon2 flaticon2-trash"></i>
-                                                </span>
-                                                <span class="navi-text">Hủy đơn</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -121,6 +101,18 @@
                                                 <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="ki ki-bold-more-hor"></i>
                                                 </a>
+                                                <div v-if="item.status < 3" class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                                    <ul class="navi navi-hover">
+                                                        <li @click="confirm(item.id, item.status + 1)" class="navi-item">
+                                                            <a class="navi-link">
+                                                                <span class="navi-icon">
+                                                                    <i class="ki ki-check"></i>
+                                                                </span>
+                                                                <span class="navi-text">{{ item.status == 2 ? "Hủy đơn" : "Xác nhận" }}</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>
@@ -208,6 +200,19 @@ export default {
         },
         Text(text, length) {
             return Extends.FormatText(text, length)
+        },
+        confirm(id, status) {
+            let params = {
+                status: status
+            }
+            axios.put('/api/orders/' + id, params).then(res => {
+                this.orders.data = this.orders.data.filter(item => item.id !== id)
+                Swal.fire(
+                    "Thành Công!",
+                    "Xac nhận đơn hàng thành công",
+                    "success"
+                )
+            })
         },
     },
 
