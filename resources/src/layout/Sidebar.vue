@@ -29,7 +29,7 @@
                     <template v-if="menu.type == 1">
                         <h4 class="menu-text" v-text="menu.name"></h4>
                     </template>
-                    <template v-if="menu.type == 2">
+                    <template v-if="menu.type == 2 && menu.role">
                         <router-link :to="{ name: menu.routeName }" class="menu-link">
                             <span class="svg-icon menu-icon" v-html="menu.icon"></span>
                             <span class="menu-text" v-text="menu.name"></span>
@@ -44,12 +44,14 @@
                         <div class="menu-submenu">
                             <i class="menu-arrow"></i>
                             <ul class="menu-subnav">
-                                <li v-for="(item, i) in menu.sub" :key="'sub-' + i" :class="$route.path == item.url ? 'menu-item menu-item-active' : 'menu-item'" aria-haspopup="true">
-                                    <a @click="$router.push(item.url)" v-if="item.role" class="menu-link">
-                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>
-                                        <span class="menu-text" v-text="item.name"></span>
-                                    </a>
-                                </li>
+                                <template v-for="(item, i) in menu.sub">
+                                    <li v-if="item.role" :key="'sub-' + i" :class="$route.path == item.url ? 'menu-item menu-item-active' : 'menu-item'" aria-haspopup="true">
+                                        <a @click="$router.push(item.url)" class="menu-link">
+                                            <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                                            <span class="menu-text" v-text="item.name"></span>
+                                        </a>
+                                    </li>
+                                </template>
                             </ul>
                         </div>
                     </template>

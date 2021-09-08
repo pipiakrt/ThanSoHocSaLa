@@ -25,6 +25,11 @@ class AuthServiceProvider extends ServiceProvider
         'App\Models\SeoPage' => 'App\Policies\AnyPolicy',
         'App\Models\Slider' => 'App\Policies\AnyPolicy',
         'App\Models\Tag' => 'App\Policies\AnyPolicy',
+        'App\Models\TraCuu' => 'App\Policies\AnyPolicy',
+        'App\Models\TuVan' => 'App\Policies\AnyPolicy',
+        'App\Models\Image' => 'App\Policies\AnyPolicy',
+        'App\Models\HomePage' => 'App\Policies\AnyPolicy',
+        'App\Models\Checking' => 'App\Policies\AnyPolicy',
     ];
 
     /**

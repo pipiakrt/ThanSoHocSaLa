@@ -254,12 +254,14 @@ export default {
         },
         destroy(id) {
             axios.delete('/api/chuyenmuc/' + id).then(res => {
-                Swal.fire(
-                    "Thành Công!",
-                    "Chuyên mục đã bị xóa hoàn toàn.",
-                    "success"
-                )
-                this.chuyenmuc = this.chuyenmuc.filter(item => item.id !== id)
+                if (res.response.status != 403) {
+                    Swal.fire(
+                        "Thành Công!",
+                        "Danh mục đã bị xóa hoàn toàn.",
+                        "success"
+                    )
+                    this.chuyenmuc = this.chuyenmuc.filter(item => item.id !== id)
+                }
             })
         },
     },

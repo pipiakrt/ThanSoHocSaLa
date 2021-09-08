@@ -17,6 +17,7 @@ class SliderController extends Controller
      */
     public function __construct()
     {
+        $this->authorizeResource(Slider::class);
         $this->middleware('auth:api');
     }
 

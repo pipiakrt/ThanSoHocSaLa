@@ -112,7 +112,7 @@
                                                             </span>
                                                             <span class="navi-text">Chỉnh sửa</span>
                                                         </router-link>
-                                                        <a @click="destroy([item.id])" class="navi-link">
+                                                        <a @click="destroy(item.id)" class="navi-link">
                                                             <span class="navi-icon">
                                                                 <i class="flaticon2 flaticon2-trash"></i>
                                                             </span>
@@ -191,41 +191,17 @@ export default {
                 toastr.success("Thay đổi trạng thái thành công!")
             })
         },
-        destroy(id = this.checkbox) {
-            if (id != '') {
-                Swal.fire({
-                    title: "Chắc chăn chứ?",
-                    text: "Bạn sẽ xóa xóa "+ id.length +" Sản phẩm!",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonText: "Ok xóa!"
-                }).then((result) => {
-                    if (result.value) {
-                        axios.delete('/api/products/destroy', { params: { id: id } }).then(res => {
-                            id.forEach(i => {
-                                this.products.data = this.products.data.filter(item => item.id !== i)
-                            });
-                            Swal.fire(
-                                "Thành Công!",
-                                "Sản phẩm đã bị xóa hoàn toàn.",
-                                "success"
-                            )
-                        })
-                    }
-                });
-            }
-            else {
-                Swal.fire({
-                title: 'Chưa chọn Sản phẩm',
-                showClass: {
-                        popup: 'animate__animated animate__fadeInDown'
-                    },
-                    hideClass: {
-                        popup: 'animate__animated animate__fadeOutUp'
-                    }
-                });
-                return false
-            }
+        destroy(id) {
+            axios.delete('/api/products/' + id).then(res => {
+                if (res.status == 200) {
+                    this.products.data = this.products.data.filter(item => item.id !== id)
+                    Swal.fire(
+                        "Thành Công!",
+                        "Sản phẩm đã bị xóa hoàn toàn.",
+                        "success"
+                    )
+                }
+            })
         },
         formatTime(time) {
             return moment(time).format('DD/MM/YYYY');

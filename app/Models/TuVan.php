@@ -9,6 +9,8 @@ class TuVan extends Model
 {
     use HasFactory;
 
+    public function tableName() { return "App\Models\TuVan"; }
+
     protected $fillable = [
         'name',
         'email',

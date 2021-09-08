@@ -254,12 +254,14 @@ export default {
         },
         destroy(id) {
             axios.delete('/api/tags/' + id).then(res => {
-                Swal.fire(
-                    "Thành Công!",
-                    "Tags đã bị xóa hoàn toàn.",
-                    "success"
-                )
-                this.tags = this.tags.filter(item => item.id !== id)
+                if (res.status == 200 || res.response.status != 403) {
+                    Swal.fire(
+                        "Thành Công!",
+                        "Danh mục đã bị xóa hoàn toàn.",
+                        "success"
+                    )
+                    this.tags = this.tags.filter(item => item.id !== id)
+                }
             })
         },
     },

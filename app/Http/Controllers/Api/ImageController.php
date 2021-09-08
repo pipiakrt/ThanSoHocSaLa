@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use App\Models\Image as Model;
 
 class ImageController extends Controller
 {
@@ -17,6 +18,7 @@ class ImageController extends Controller
      */
     public function __construct()
     {
+        $this->authorizeResource(Model::class);
         $this->middleware('auth:api');
     }
 

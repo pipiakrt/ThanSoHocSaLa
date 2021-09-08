@@ -17,6 +17,7 @@ class TagController extends Controller
      */
     public function __construct()
     {
+        $this->authorizeResource(Model::class);
         $this->middleware('auth:api');
     }
 
@@ -48,9 +49,8 @@ class TagController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Model $tag)
     {
-        $tag = Model::find($id);
         return $tag->update($request->all());
     }
 
@@ -60,8 +60,8 @@ class TagController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, Model $tag)
     {
-        return Model::destroy($id);
+        return $tag->delete();
     }
 }

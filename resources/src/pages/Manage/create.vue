@@ -241,12 +241,32 @@ export default {
                     type: "App_Models_ThanSo",
                 },
                 {
+                    name: "Tra cứu",
+                    type: "App_Models_TraCuu",
+                },
+                {
+                    name: "Tư vấn",
+                    type: "App_Models_TuVan",
+                },
+                {
+                    name: "Image",
+                    type: "App_Models_Image",
+                },
+                {
+                    name: "Checking",
+                    type: "App_Models_Checking",
+                },
+                {
                     name: "Slider",
                     type: "App_Models_Slider",
                 },
                 {
                     name: "SeoPage",
                     type: "App_Models_SeoPage",
+                },
+                {
+                    name: "HomePage",
+                    type: "App_Models_HomePage",
                 },
                 {
                     name: "Tài khoản",

@@ -327,12 +327,14 @@ export default {
         },
         destroy(id) {
             axios.delete('/api/categories/' + id).then(res => {
-                Swal.fire(
-                    "Thành Công!",
-                    "Danh mục đã bị xóa hoàn toàn.",
-                    "success"
-                )
-                this.categories = this.categories.filter(item => item.id !== id)
+                if (res.response.status != 403) {
+                    Swal.fire(
+                        "Thành Công!",
+                        "Danh mục đã bị xóa hoàn toàn.",
+                        "success"
+                    )
+                    this.categories = this.categories.filter(item => item.id !== id)
+                }
             })
         },
     },

@@ -16,6 +16,7 @@ class CategoryController extends Controller
      */
     public function __construct()
     {
+        $this->authorizeResource(Model::class);
         $this->middleware('auth:api');
     }
 
@@ -47,9 +48,8 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Model $category)
     {
-        $category = Model::find($id);
         return $category->update($request->all());
     }
 
@@ -59,8 +59,8 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, Model $category)
     {
-        return Model::destroy($id);
+        return $category->delete();
     }
 }

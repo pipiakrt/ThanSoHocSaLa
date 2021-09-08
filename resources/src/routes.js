@@ -3,8 +3,8 @@ import Home from './pages/Home'
 // HomePage
 import HomePage from './pages/HomePage'
 // Orders
+import OrderAll from './pages/Orders/all'
 import OrderPending from './pages/Orders/pending'
-// import OrderProcess from './pages/Orders/process'
 import OrderSuccess from './pages/Orders/success'
 import OrderCancel from './pages/Orders/cancel'
 import OrderActived from './pages/Orders/actived'
@@ -65,6 +65,11 @@ const routes = [
     {
         path: '/sala-backend/don-hang/cho-xac-nhan',
         component: OrderPending,
+        name: 'Orders',
+    },
+    {
+        path: '/sala-backend/don-hang/tat-ca',
+        component: OrderAll,
         name: 'Orders',
     },
     {

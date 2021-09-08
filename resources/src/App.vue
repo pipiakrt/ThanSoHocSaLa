@@ -83,10 +83,12 @@ export default {
                             {
                                 name: 'Chức năng',
                                 type: 1,
+                                role: true,
                             },
                             {
                                 name: 'Sản phẩm',
                                 routeName: 'Products',
+                                role: true,
                                 icon:  `
                                         <span class="svg-icon svg-icon-primary svg-icon-2x">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -115,6 +117,7 @@ export default {
                             {
                                 name: 'Bài Viết',
                                 routeName: 'Posts',
+                                role: true,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -141,23 +144,24 @@ export default {
                                     {
                                         name: 'Danh mục',
                                         url: '/sala-backend/bai-viet/danh-muc',
-                                        role: findRole('Post-CreateCategory') ? true : false
+                                        role: findRole('Category-viewAny') ? true : false
                                     },
                                     {
                                         name: 'Chuyên mục',
                                         url: '/sala-backend/bai-viet/chuyen-muc',
-                                        role: findRole('Post-ChuyenMuc') ? true : false
+                                        role: findRole('Chuyenmuc-viewAny') ? true : false
                                     },
                                     {
                                         name: 'Tags',
                                         url: '/sala-backend/bai-viet/tag',
-                                        role: findRole('Post-Tag') ? true : false
+                                        role: findRole('Tag-viewAny') ? true : false
                                     },
                                 ]
                             },
                             {
                                 name: 'Seo Page',
                                 routeName: 'Seo',
+                                role: true,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -194,6 +198,7 @@ export default {
                             {
                                 name: 'Đơn hàng',
                                 routeName: 'Orders',
+                                role: true,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -220,30 +225,36 @@ export default {
                                         role: findRole('Order-create') ? true : false
                                     },
                                     {
+                                        name: 'Tất cả đơn hàng',
+                                        url: '/sala-backend/don-hang/tat-ca',
+                                        role: findRole('Order-viewAny') ? true : false
+                                    },
+                                    {
                                         name: 'Đơn chờ xác nhận',
                                         url: '/sala-backend/don-hang/cho-xac-nhan',
-                                        role: findRole('Order-update_1') ? true : false
+                                        role: findRole('Order-viewAny') ? true : false
                                     },
                                     {
                                         name: 'Đơn chờ kích hoạt',
                                         url: '/sala-backend/don-hang/cho-kich-hoat',
-                                        role: findRole('Order-update_2') ? true : false
+                                        role: findRole('Order-viewAny') ? true : false
                                     },
                                     {
                                         name: 'Đơn hoạt động',
                                         url: '/sala-backend/don-hang/hoat-dong',
-                                        role: findRole('Order-update_3') ? true : false
+                                        role: findRole('Order-viewAny') ? true : false
                                     },
                                     {
                                         name: 'Đơn Hủy',
                                         url: '/sala-backend/don-hang/don-huy',
-                                        role: findRole('Order-update_4') ? true : false
+                                        role: findRole('Order-viewAny') ? true : false
                                     },
                                 ]
                             },
                             {
                                 name: 'Khách Hàng',
                                 routeName: 'Users',
+                                role: true,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -286,6 +297,7 @@ export default {
                             {
                                 name: 'Quản Trị Viên',
                                 routeName: 'Manage',
+                                role: true,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -323,6 +335,7 @@ export default {
                             {
                                 routeName: 'Checking',
                                 name: 'Lượt Truy Cập Web',
+                                role: findRole('Checking-viewAny') ? true : false,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -345,6 +358,7 @@ export default {
                             },
                             {
                                 name: 'Lượt Yêu Cầu Tư Vấn',
+                                role: findRole('TuVan-viewAny') ? true : false,
                                 routeName: 'TuVan',
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
@@ -365,6 +379,7 @@ export default {
                             },
                             {
                                 name: 'Lượt Tra Cứu',
+                                role: findRole('TraCuu-viewAny') ? true : false,
                                 routeName: 'TraCuu',
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
@@ -382,6 +397,7 @@ export default {
                             {
                                 name: 'Luận Giải',
                                 routeName: 'ThanSo',
+                                role: findRole('ThanSo-viewAny') ? true : false,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -406,6 +422,7 @@ export default {
                             },
                             {
                                 routeName: 'HomePage',
+                                role: findRole('HomePage-viewAny') ? true : false,
                                 name: 'HomePage',
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
@@ -425,6 +442,7 @@ export default {
                             {
                                 name: 'Sliders',
                                 routeName: 'Slider',
+                                role: findRole('Slider-viewAny') ? true : false,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -449,6 +467,7 @@ export default {
                             {
                                 routeName: 'FileManager',
                                 name: 'Tệp Tin',
+                                role: findRole('Image-viewAny') ? true : false,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -465,6 +484,7 @@ export default {
                             {
                                 name: 'Tài Khoản',
                                 routeName: 'Account',
+                                role: true,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -484,11 +504,13 @@ export default {
                                 sub: [
                                     {
                                         name: 'Thông tin',
-                                        url: '/sala-backend/tai-khoan/thong-tin'
+                                        url: '/sala-backend/tai-khoan/thong-tin',
+                                        role: true,
                                     },
                                     {
                                         name: 'Mật khẩu',
-                                        url: '/sala-backend/tai-khoan/mat-khau'
+                                        url: '/sala-backend/tai-khoan/mat-khau',
+                                        role: true,
                                     },
                                 ]
                             },
@@ -514,7 +536,12 @@ export default {
             return response;
         }, error => {
             KTApp.unblockPage();
-            Swal.fire("Rất Tiếc!", "Đã có sự cố đã sảy ra, vui lòng thử lại sau!", "error");
+            if (error.response.status == 403) {
+                Swal.fire("Không có quyền truy cập!", "Quyền truy cập bị từ chối!", "error");
+            }
+            else {
+                Swal.fire("Rất Tiếc!", "Đã có sự cố đã sảy ra, vui lòng thử lại sau!", "error");
+            }
             return error;
         });
         this.$Progress.start()

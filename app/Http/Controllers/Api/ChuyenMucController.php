@@ -49,10 +49,9 @@ class ChuyenMucController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Model $chuyenmuc)
     {
-        $tag = Model::find($id);
-        return $tag->update($request->all());
+        return $chuyenmuc->update($request->all());
     }
 
     /**
@@ -61,8 +60,8 @@ class ChuyenMucController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, Model $chuyenmuc)
     {
-        return Model::destroy($id);
+        return $chuyenmuc->delete();
     }
 }

@@ -9,6 +9,8 @@ class TraCuu extends Model
 {
     use HasFactory;
 
+    public function tableName() { return "App\Models\TraCuu"; }
+
     protected $fillable = [
         'user_id',
         'email',

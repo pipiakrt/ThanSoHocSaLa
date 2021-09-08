@@ -9,6 +9,8 @@ class Checking extends Model
 {
     use HasFactory;
 
+    public function tableName() { return "App\Models\Checking"; }
+
     protected $fillable = [
         'user_id',
         'ip',
