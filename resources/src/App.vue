@@ -88,7 +88,7 @@ export default {
                             {
                                 name: 'Sản phẩm',
                                 routeName: 'Products',
-                                role: true,
+                                role: findRole('Product-viewAny') ? true : false,
                                 icon:  `
                                         <span class="svg-icon svg-icon-primary svg-icon-2x">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -117,7 +117,7 @@ export default {
                             {
                                 name: 'Bài Viết',
                                 routeName: 'Posts',
-                                role: true,
+                                role: findRole('Post-viewAny') ? true : false,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -161,7 +161,7 @@ export default {
                             {
                                 name: 'Seo Page',
                                 routeName: 'Seo',
-                                role: true,
+                                role: findRole('SeoPage-viewAny') ? true : false,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -198,7 +198,7 @@ export default {
                             {
                                 name: 'Đơn hàng',
                                 routeName: 'Orders',
-                                role: true,
+                                role: findRole('Order-viewAny') ? true : false,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -254,7 +254,7 @@ export default {
                             {
                                 name: 'Khách Hàng',
                                 routeName: 'Users',
-                                role: true,
+                                role: findRole('Account-viewAny') ? true : false,
                                 icon: `
                                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -280,17 +280,17 @@ export default {
                                     {
                                         name: 'Danh sách',
                                         url: '/sala-backend/nguoi-dung/danh-sach',
-                                        role: findRole('Account-viewAny') ? true : false
+                                        role: true
                                     },
                                     {
                                         name: 'Phản hồi',
                                         url: '/sala-backend/nguoi-dung/phan-hoi',
-                                        role: findRole('Account-update_4') ? true : false
+                                        role: true
                                     },
                                     {
                                         name: 'Newsletters',
                                         url: '/sala-backend/nguoi-dung/newsletters',
-                                        role: findRole('Account-update_4') ? true : false
+                                        role: true
                                     },
                                 ]
                             },
@@ -323,12 +323,12 @@ export default {
                                     {
                                         name: 'Danh sách',
                                         url: '/sala-backend/quan-ly/danh-sach',
-                                        role: findRole('Account-update_4') ? true : false
+                                        role: findRole('Permission-viewAny') ? true : false
                                     },
                                     {
                                         name: 'Thêm quản trị',
                                         url: '/sala-backend/quan-ly/them-tai-khoan',
-                                        role: findRole('Account-update_4') ? true : false
+                                        role: findRole('Permission-d') ? true : false
                                     },
                                 ]
                             },
