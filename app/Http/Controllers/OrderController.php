@@ -75,6 +75,9 @@ class OrderController extends Controller
             foreach ($products as $item) {
                 if ($item["status"] == true) {
                     $order = Order::create([
+                        'province_id' => $request->province,
+                        'district_id' => $request->district,
+                        'ward_id' => $request->ward,
                         'user_id' => $user->id,
                         'product_id' => $item["id"],
                         'avatar' => $item["image"],

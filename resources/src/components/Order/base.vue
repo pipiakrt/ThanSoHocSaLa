@@ -28,8 +28,8 @@
                 </div>
                 <div class="card-body pt-0 pb-3">
                     <div class="row mb-5">
-                        <div class="col-3">
-                            <input v-model="filterName" type="text" placeholder="Tên đơn hàng" class="form-control form-control-sm form-filter datatable-input" />
+                        <div class="col-2">
+                            <input v-model="filterName" type="text" placeholder="Tìm kiếm" class="form-control form-control-sm form-filter datatable-input" />
                         </div>
                         <div class="col-2">
                             <select v-model="filterOrder" class="form-control form-control-sm form-filter datatable-input" title="Select" data-col-index="6">
@@ -38,8 +38,39 @@
                                 <option value="ASC">Cũ nhất</option>
                             </select>
                         </div>
+                        <div class="col-2">
+                            <select v-model="filterPayment" class="form-control form-control-sm form-filter datatable-input" title="Select" data-col-index="6">
+                                <option value="">Hình thức thanh toán</option>
+                                <option value="Ship COD">Ship COD</option>
+                                <option value="Chuyển khoản ngân hàng">Chuyển khoản</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select @change="getDistrict" v-model="province_id" name="province" class="form-control" aria-label="Default select example" required>
+                                <option value="" selected>Tỉnh/Thành Phố</option>
+                                <template v-for="item in province">
+                                    <option :key="item.id" :value="item.id" v-text="item.name"></option>
+                                </template>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select @change="getWard" v-model="district_id" name="district" class="form-control" aria-label="Default select example" required>
+                                <option value="" selected>Quận/Huyện</option>
+                                <template v-for="item in district">
+                                    <option :key="item.id" :value="item.id" v-text="item.name"></option>
+                                </template>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select v-model="ward_id" class="form-control" name="ward" aria-label="Default select example" required>
+                                <option value="" selected>Phường/Xã</option>
+                                <template v-for="item in ward">
+                                    <option :key="item.id" :value="item.id" v-text="item.name"></option>
+                                </template>
+                            </select>
+                        </div>
                         <div class="col-1">
-                            <button @click="getApi()" class="btn btn-block btn-primary kt-btn btn-sm kt-btn--icon d-block">Lọc SP</button>
+                            <button @click="getApi()" class="btn btn-block btn-primary kt-btn btn-sm kt-btn--icon d-block">Lọc Đơn</button>
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -163,6 +194,13 @@ export default {
             filterName: '',
             filterOrder: 'DESC',
             page: 1,
+            filterPayment: '',
+            province: [],
+            province_id: '',
+            district: [],
+            district_id: '',
+            ward: [],
+            ward_id: '',
             orders: []
         }
     },
@@ -173,6 +211,7 @@ export default {
     },
     async created() {
         await this.getApi()
+        this.getProvinces()
     },
     methods: {
         toPage(page = 1) {
@@ -182,9 +221,23 @@ export default {
             Extends.LoadPage()
             let query = {
                 page: this.page,
-                name: this.filterName,
                 order: this.filterOrder,
                 status: this.filterStatus,
+            }
+            if (this.province_id) {
+                query.province = this.province_id
+            }
+            if (this.district_id) {
+                query.district = this.district_id
+            }
+            if (this.ward_id) {
+                query.ward = this.ward_id
+            }
+            if (this.filterName) {
+                query.name = this.filterName
+            }
+            if (this.filterPayment) {
+                query.payment = this.filterPayment
             }
             let orders = await axios("/api/orders", {
                 params: query
@@ -200,6 +253,21 @@ export default {
         },
         Text(text, length) {
             return Extends.FormatText(text, length)
+        },
+        getProvinces () {
+            axios.get('/address/province').then(response => {
+                this.province = response.data
+            })
+        },
+        getDistrict () {
+            axios.get('/address/district/' + this.province_id).then(response => {
+                this.district = response.data
+            })
+        },
+        getWard () {
+            axios.get('/address/ward/' + this.district_id).then(response => {
+                this.ward = response.data
+            })
         },
         confirm(id, status) {
             let params = {
