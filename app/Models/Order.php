@@ -56,6 +56,11 @@ class Order extends Model
         return $query->where('payment', $value);
     }
 
+    public function filterProduct(EloquentBuilder $query, $value)
+    {
+        return $query->where('product_id', $value);
+    }
+
     public function filterProvince(EloquentBuilder $query, $value)
     {
         return $query->where('province_id', $value);
@@ -74,6 +79,21 @@ class Order extends Model
     public function filterStatus(EloquentBuilder $query, $value)
     {
         $query->where('status', $value);
+        return $query;
+    }
+
+    public function filterDateStart(EloquentBuilder $query, $value)
+    {
+        $strToTime = strtotime(str_replace('/','-', $value));
+        $value = date('Y/m/d', $strToTime);
+        $query->whereDate('created_at', '>=', $value);
+        return $query;
+    }
+    public function filterDateEnd(EloquentBuilder $query, $value)
+    {
+        $strToTime = strtotime(str_replace('/','-', $value));
+        $value = date('Y/m/d', $strToTime);
+        $query->whereDate('created_at', '<=', $value);
         return $query;
     }
 

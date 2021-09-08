@@ -69,8 +69,19 @@
                                 </template>
                             </select>
                         </div>
+                        <div class="col-3">
+                            <input type='text' class="form-control" id="kt_daterangepicker_1" readonly placeholder="Select time" />
+                        </div>
+                        <div class="col-2">
+                            <select v-model="product_id" class="form-control" style="height: 35px">
+                                <option value="">Gói sản phẩm</option>
+                                <template v-for="product in products">
+                                    <option v-if="product.status" :key="product.id" :value="product.id" v-text="product.name"></option>
+                                </template>
+                            </select>
+                        </div>
                         <div class="col-1">
-                            <button @click="getApi()" class="btn btn-block btn-primary kt-btn btn-sm kt-btn--icon d-block">Lọc Đơn</button>
+                            <button @click="getApi()" class="btn h-100 btn-block btn-primary kt-btn btn-sm kt-btn--icon d-block">Lọc Đơn</button>
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -201,7 +212,9 @@ export default {
             district_id: '',
             ward: [],
             ward_id: '',
-            orders: []
+            orders: [],
+            products: [],
+            product_id: ''
         }
     },
     watch: {
@@ -210,8 +223,21 @@ export default {
         }
     },
     async created() {
+        await axios('/api/products').then(res => {
+            this.products = res.data.data
+        })
         await this.getApi()
         this.getProvinces()
+        setTimeout(() => {
+            $('#kt_daterangepicker_1').daterangepicker({
+                buttonClasses: ' btn',
+                applyClass: 'btn-primary',
+                cancelClass: 'btn-secondary',
+                locale: {
+                    format: 'DD/MM/YYYY'
+                }
+            });
+        }, 300);
     },
     methods: {
         toPage(page = 1) {
@@ -223,6 +249,14 @@ export default {
                 page: this.page,
                 order: this.filterOrder,
                 status: this.filterStatus,
+            }
+            if ($('#kt_daterangepicker_1').val()) {
+                let date = $('#kt_daterangepicker_1').val().split("-");
+                query.datestart = date[0].replace(" ", "");
+                query.dateend = date[1].replace(" ", "");
+            }
+            if (this.product_id) {
+                query.product = this.product_id
             }
             if (this.province_id) {
                 query.province = this.province_id
