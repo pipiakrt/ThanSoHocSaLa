@@ -127,12 +127,32 @@ export default {
                     type: "App_Models_Post",
                 },
                 {
+                    name: "Danh mục",
+                    type: "App_Models_Category",
+                },
+                {
+                    name: "Chuyên mục",
+                    type: "App_Models_Chuyenmuc",
+                },
+                {
+                    name: "Tag",
+                    type: "App_Models_Tag",
+                },
+                {
                     name: "Đơn hàng",
                     type: "App_Models_Order",
                 },
                 {
                     name: "Luận giải",
                     type: "App_Models_ThanSo",
+                },
+                {
+                    name: "Slider",
+                    type: "App_Models_Slider",
+                },
+                {
+                    name: "SeoPage",
+                    type: "App_Models_SeoPage",
                 },
                 {
                     name: "Tài khoản",
@@ -163,10 +183,6 @@ export default {
                 {
                     name: "Xóa",
                     type: "delete",
-                },
-                {
-                    name: "Xóa hàng loạt",
-                    type: "forceDelete",
                 },
             ],
             type: '',

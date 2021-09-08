@@ -20,6 +20,11 @@ class AuthServiceProvider extends ServiceProvider
         'App\Models\ThanSo' => 'App\Policies\AnyPolicy',
         'App\Models\User' => 'App\Policies\AnyPolicy',
         'App\Models\Permission' => 'App\Policies\AnyPolicy',
+        'App\Models\Chuyenmuc' => 'App\Policies\AnyPolicy',
+        'App\Models\Category' => 'App\Policies\AnyPolicy',
+        'App\Models\SeoPage' => 'App\Policies\AnyPolicy',
+        'App\Models\Slider' => 'App\Policies\AnyPolicy',
+        'App\Models\Tag' => 'App\Policies\AnyPolicy',
     ];
 
     /**

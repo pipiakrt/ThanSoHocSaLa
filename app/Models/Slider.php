@@ -9,6 +9,8 @@ class Slider extends MySQL
 {
     use HasFactory;
 
+    public function tableName() { return "App\Models\Slider"; }
+
     protected $fillable = [
         'path',
         'link',

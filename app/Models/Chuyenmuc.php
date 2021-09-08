@@ -11,6 +11,8 @@ class Chuyenmuc extends MySQL
 {
     use HasFactory;
 
+    public function tableName() { return "App\Models\Chuyenmuc"; }
+
     protected $fillable = [
         'name',
     ];

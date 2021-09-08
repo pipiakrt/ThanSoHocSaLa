@@ -11,6 +11,8 @@ class Category extends Model
 {
     use HasFactory, Filterable;
 
+    public function tableName() { return "App\Models\Category"; }
+
     public $timestamps = false;
 
     protected $fillable = [

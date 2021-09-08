@@ -11,6 +11,8 @@ class Tag extends MySQL
 {
     use HasFactory;
 
+    public function tableName() { return "App\Models\Tag"; }
+
     protected $fillable = [
         'name',
     ];
