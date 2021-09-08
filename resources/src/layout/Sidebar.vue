@@ -35,7 +35,7 @@
                             <span class="menu-text" v-text="menu.name"></span>
                         </router-link>
                     </template>
-                    <template v-if="menu.type == 3">
+                    <template v-if="menu.type == 3 && menu.role">
                         <a class="menu-link menu-toggle" @click="menu.active = true">
                             <span class="svg-icon menu-icon" v-html="menu.icon"></span>
                             <span class="menu-text" v-text="menu.name"></span>
