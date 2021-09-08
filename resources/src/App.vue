@@ -52,6 +52,9 @@ export default {
                     {
                         let permission = response.data.data.Permission
                         const findRole = (model) => {
+                            if (permission.find(role => role.name == 'administrator')) {
+                                return true;
+                            }
                             return permission.find(role => role.name == 'App\\Models\\' + model);
                         }
                         this.auth = 2
@@ -127,23 +130,28 @@ export default {
                                 sub: [
                                     {
                                         name: 'Danh sách',
-                                        url: '/sala-backend/bai-viet/danh-sach'
+                                        url: '/sala-backend/bai-viet/danh-sach',
+                                        role: findRole('Post-viewAny') ? true : false
                                     },
                                     {
                                         name: 'Thêm mới',
-                                        url: '/sala-backend/bai-viet/them-moi'
+                                        url: '/sala-backend/bai-viet/them-moi',
+                                        role: findRole('Post-create') ? true : false
                                     },
                                     {
                                         name: 'Danh mục',
-                                        url: '/sala-backend/bai-viet/danh-muc'
+                                        url: '/sala-backend/bai-viet/danh-muc',
+                                        role: findRole('Post-CreateCategory') ? true : false
                                     },
                                     {
                                         name: 'Chuyên mục',
-                                        url: '/sala-backend/bai-viet/chuyen-muc'
+                                        url: '/sala-backend/bai-viet/chuyen-muc',
+                                        role: findRole('Post-ChuyenMuc') ? true : false
                                     },
                                     {
                                         name: 'Tags',
-                                        url: '/sala-backend/bai-viet/tag'
+                                        url: '/sala-backend/bai-viet/tag',
+                                        role: findRole('Post-Tag') ? true : false
                                     },
                                 ]
                             },
@@ -169,11 +177,13 @@ export default {
                                 sub: [
                                     {
                                         name: 'Danh sách',
-                                        url: '/sala-backend/seo/danh-sach'
+                                        url: '/sala-backend/seo/danh-sach',
+                                        role: findRole('SeoPage-viewAny') ? true : false
                                     },
                                     {
                                         name: 'Thêm mới',
-                                        url: '/sala-backend/seo/them-moi'
+                                        url: '/sala-backend/seo/them-moi',
+                                        role: findRole('SeoPage-create') ? true : false
                                     },
                                 ]
                             },
@@ -206,23 +216,28 @@ export default {
                                 sub: [
                                     {
                                         name: 'Lên đơn hàng',
-                                        url: '/sala-backend/don-hang/len-don'
+                                        url: '/sala-backend/don-hang/len-don',
+                                        role: findRole('Order-create') ? true : false
                                     },
                                     {
                                         name: 'Đơn chờ xác nhận',
-                                        url: '/sala-backend/don-hang/cho-xac-nhan'
+                                        url: '/sala-backend/don-hang/cho-xac-nhan',
+                                        role: findRole('Order-update_1') ? true : false
                                     },
                                     {
                                         name: 'Đơn chờ kích hoạt',
-                                        url: '/sala-backend/don-hang/cho-kich-hoat'
+                                        url: '/sala-backend/don-hang/cho-kich-hoat',
+                                        role: findRole('Order-update_2') ? true : false
                                     },
                                     {
                                         name: 'Đơn hoạt động',
-                                        url: '/sala-backend/don-hang/hoat-dong'
+                                        url: '/sala-backend/don-hang/hoat-dong',
+                                        role: findRole('Order-update_3') ? true : false
                                     },
                                     {
                                         name: 'Đơn Hủy',
-                                        url: '/sala-backend/don-hang/don-huy'
+                                        url: '/sala-backend/don-hang/don-huy',
+                                        role: findRole('Order-update_4') ? true : false
                                     },
                                 ]
                             },
@@ -253,15 +268,18 @@ export default {
                                 sub: [
                                     {
                                         name: 'Danh sách',
-                                        url: '/sala-backend/nguoi-dung/danh-sach'
+                                        url: '/sala-backend/nguoi-dung/danh-sach',
+                                        role: findRole('Account-viewAny') ? true : false
                                     },
                                     {
                                         name: 'Phản hồi',
-                                        url: '/sala-backend/nguoi-dung/phan-hoi'
+                                        url: '/sala-backend/nguoi-dung/phan-hoi',
+                                        role: findRole('Account-update_4') ? true : false
                                     },
                                     {
                                         name: 'Newsletters',
-                                        url: '/sala-backend/nguoi-dung/newsletters'
+                                        url: '/sala-backend/nguoi-dung/newsletters',
+                                        role: findRole('Account-update_4') ? true : false
                                     },
                                 ]
                             },
@@ -292,11 +310,13 @@ export default {
                                 sub: [
                                     {
                                         name: 'Danh sách',
-                                        url: '/sala-backend/quan-ly/danh-sach'
+                                        url: '/sala-backend/quan-ly/danh-sach',
+                                        role: findRole('Account-update_4') ? true : false
                                     },
                                     {
                                         name: 'Thêm quản trị',
-                                        url: '/sala-backend/quan-ly/them-tai-khoan'
+                                        url: '/sala-backend/quan-ly/them-tai-khoan',
+                                        role: findRole('Account-update_4') ? true : false
                                     },
                                 ]
                             },

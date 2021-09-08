@@ -258,10 +258,6 @@ export default {
                     name: "Xóa",
                     type: "delete",
                 },
-                {
-                    name: "Xóa hàng loạt",
-                    type: "forceDelete",
-                },
             ],
             list_permissions: []
         }

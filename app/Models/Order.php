@@ -28,7 +28,10 @@ class Order extends Model
         'ket_thuc',
         'licenses',
         'payment',
-        'product_name'
+        'product_name',
+        'lendon_id',
+        'xacnhan_id',
+        'kichhoat_id',
     ];
 
     public function Product() {

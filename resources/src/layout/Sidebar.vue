@@ -45,7 +45,7 @@
                             <i class="menu-arrow"></i>
                             <ul class="menu-subnav">
                                 <li v-for="(item, i) in menu.sub" :key="'sub-' + i" :class="$route.path == item.url ? 'menu-item menu-item-active' : 'menu-item'" aria-haspopup="true">
-                                    <a @click="$router.push(item.url)" class="menu-link">
+                                    <a @click="$router.push(item.url)" v-if="item.role" class="menu-link">
                                         <i class="menu-bullet menu-bullet-dot"><span></span></i>
                                         <span class="menu-text" v-text="item.name"></span>
                                     </a>
