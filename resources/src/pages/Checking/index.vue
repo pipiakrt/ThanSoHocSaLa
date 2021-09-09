@@ -19,6 +19,14 @@
                     </div>
                 </div>
                 <div class="card-body pt-0 pb-3">
+                    <div class="row mb-5">
+                        <div class="col-3">
+                            <input v-model="filterIp" type="text" placeholder="Lọc IP" class="form-control form-control-sm form-filter datatable-input" />
+                        </div>
+                        <div class="col-1">
+                            <button @click="getApi()" class="btn btn-block btn-primary kt-btn btn-sm kt-btn--icon d-block">Lọc IP</button>
+                        </div>
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-head-custom table-head-bg table-borderless table-vertical-center">
                             <thead>
@@ -132,17 +140,33 @@ export default {
                 },
             },
             listData: [],
+            filterIp: '',
             page: 1
         }
     },
     created() {
-        this.toPage()
+        this.getApi()
+    },
+    watch: {
+        page() {
+            this.getApi()
+        }
     },
     methods: {
-        async toPage(page = 1) {
+        toPage(page = 1) {
             this.page = page
+        },
+        async getApi() {
             Extends.LoadPage()
-            let listData = await axios("/api/checking?page=" + page);
+            let query = {
+                page: this.page,
+            }
+            if (this.filterIp) {
+                query.ip = this.filterIp
+            }
+            let listData = await axios("/api/checking", {
+                params: query
+            });
             this.listData = listData.data
             KTApp.unblockPage();
         },

@@ -25,8 +25,11 @@ class CheckingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        if ($request->ip) {
+            return Resources::collection(Model::orderby("id", "DESC")->where('ip', $request->ip)->simplePaginate());
+        }
         return Resources::collection(Model::orderby("id", "DESC")->simplePaginate());
     }
 }
