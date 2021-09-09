@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User as Model;
 use App\Models\Account;
 use Illuminate\Http\Request;
-use App\Http\Resources\Account as Resources;
+use App\Http\Resources\Member as Resources;
 
 class MemberController extends Controller
 {
@@ -28,6 +28,6 @@ class MemberController extends Controller
      */
     public function index(Request $request)
     {
-        return Resources::collection(Model::paginateFilter($request));
+        return Resources::collection(Model::paginate());
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Admin;
 use App\Models\Order;
 use App\Models\TraCuu;
 use App\Models\Checking;
@@ -12,14 +13,24 @@ use App\Models\Checking;
 class HomeAdminController extends Controller
 {
     /**
+     * Create a new AuthController instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $users = User::orderby("id", "DESC")->where("is_admin", false)->get();
-        $admin = User::orderby("id", "DESC")->where("is_admin", true)->get();
+        $users = User::orderby("id", "DESC")->get();
+        $admin = Admin::orderby("id", "DESC")->get();
         $orders = Order::orderby("id", "DESC")->get();
         $tracuu = TraCuu::orderby("id", "DESC")->get();
         $website = Checking::orderby("id", "DESC")->get();
@@ -56,15 +67,15 @@ class HomeAdminController extends Controller
             "GroupData_2" => [
                 "top_sale" => [
                     "name" => "Top nhân viên Sale",
-                    "list" => $admin->filter(function($model) {
-                        return $model->Attribute->type == "sale";
-                    })
+                    // "list" => $admin->filter(function($model) {
+                    //     return $model->Attribute->type == "sale";
+                    // })
                 ],
                 "top_mkt" => [
                     "name" => "Top nhân viên Marketting",
-                    "list" => $admin->filter(function($model) {
-                        return $model->Attribute->type == "marketting";
-                    })
+                    // "list" => $admin->filter(function($model) {
+                    //     return $model->Attribute->type == "marketting";
+                    // })
                 ],
             ]
         ];

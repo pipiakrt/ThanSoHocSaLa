@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Resources\Account as Resources;
 use Illuminate\Support\Facades\Auth;
-use App\Models\User as Model;
+use App\Models\Admin as Model;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 
@@ -29,7 +29,7 @@ class AccountController extends Controller
      */
     public function index()
     {
-        return Resources::collection(Model::where('is_admin', 1)->paginate(10));
+        return Resources::collection(Model::paginate(10));
     }
 
     /**

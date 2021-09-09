@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\Models\User;
+use App\Models\Admin;
 use App\Http\Resources\AuthUser;
 
 class AuthController extends Controller
@@ -31,22 +32,14 @@ class AuthController extends Controller
      */
     public function index(Request $request)
     {
-        $credentials = request(['email', 'password']);
-        if (!Auth::attempt($credentials)) {
-            return response()->json([
-                'message' => 'Chưa được xác thực'
-            ], 202);
-        }
-        $user = $request->user();
-        if ($user->is_admin != 1) {
+        $user = Admin::where('email', $request->email)->first();
+        if(!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
                 'message' => 'Chưa được xác thực'
             ], 202);
         }
         $tokenResult = $user->createToken('Personal Access Token');
         $token = $tokenResult->token;
-        if ($request->remember_me)
-            $token->expires_at = Carbon::now()->addWeeks(1);
         $token->save();
         return response()->json([
             'access_token' => $tokenResult->accessToken,
@@ -65,7 +58,6 @@ class AuthController extends Controller
     public function show(Request $request)
     {
         return new AuthUser($request->user());
-        // return response()->json($request->user());
     }
 
     /**
@@ -79,17 +71,13 @@ class AuthController extends Controller
      */
     public function store(Register $data)
     {
-        $user = User::create([
-            'is_admin' => 1,
+        $user = Admin::create([
             'avatar' => $data->avatar,
             'name' => $data->name,
+            'phongban' => $data->type,
+            'vitri' => $data->vitri,
             'email' => $data->email,
             'password' => Hash::make($data->password),
-        ]);
-        $user->Attribute()->create([
-            "code" => $user->id . time(),
-            "type" => $data->type,
-            "name" => $data->vitri,
         ]);
         foreach ($data->permission as $name) {
             $user->Permission()->create(["name" => $name]);

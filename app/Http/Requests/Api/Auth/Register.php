@@ -26,7 +26,7 @@ class Register extends FormRequest
         return [
             'avatar' => 'max:255',
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|unique:users|max:255',
+            'email' => 'required|string|email|unique:admins|max:255',
             'password' => 'required|string|max:255'
         ];
     }

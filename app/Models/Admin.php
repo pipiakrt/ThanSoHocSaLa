@@ -2,15 +2,20 @@
 
 namespace App\Models;
 
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
+use App\Traits\Filterable;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasApiTokens, Filterable;
 
-    public function tableName() { return "App\Models\User"; }
+    public function tableName() { return "App\Models\Admin"; }
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +23,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        'is_admin',
         'name',
+        'phongban',
+        'vitri',
         'phone',
         'email',
         'password',
@@ -46,19 +54,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function Cart() {
-        return $this->hasMany(Cart::class, 'user_id');
+    public function Permission() {
+        return $this->hasMany(Permission::class);
     }
 
-    public function Order() {
-        return $this->hasMany(Order::class, 'user_id');
-    }
-
-    public function TraCuu() {
-        return $this->hasMany(TraCuu::class, 'user_id');
-    }
-
-    public function License() {
-        return $this->hasOne(License::class);
+    public function filterType(EloquentBuilder $query, $value)
+    {
+        if ($value) {
+            $query->where('is_admin', $value);
+            return $query;
+        }
     }
 }

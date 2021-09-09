@@ -82,7 +82,8 @@
                                         <span class="text-dark-75">đơn hàng</span>
                                     </th>
                                     <th>Khách Hàng</th>
-                                    <th style="max-width: 320px;">Địa Chỉ</th>
+                                    <th>MKT</th>
+                                    <th>SALE</th>
                                     <th>Thanh Toán</th>
                                     <th>Gói</th>
                                     <th style="max-width: 80px">Giá</th>
@@ -106,8 +107,11 @@
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="`${item.name} - ${item.phone}`"></span>
                                             <span class="text-muted font-weight-bold" v-text="item.email"></span>
                                         </td>
-                                        <td style="max-width: 320px;">
-                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="Text(item.address, 80)"></span>
+                                        <td>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.mkt"></span>
+                                        </td>
+                                        <td>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.sale"></span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.payment"></span>

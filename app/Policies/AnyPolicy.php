@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use App\Models\User;
+use App\Models\Admin;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class AnyPolicy
@@ -14,7 +14,7 @@ class AnyPolicy
      *
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function before(User $user, $ability, $model)
+    public function before(Admin $user, $ability, $model)
     {
         $model = is_string($model) ? $model : $model->tableName();
         if ($user->Permission()->where("name", "administrator")->first()) {

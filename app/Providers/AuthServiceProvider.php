@@ -31,6 +31,7 @@ class AuthServiceProvider extends ServiceProvider
         'App\Models\HomePage' => 'App\Policies\AnyPolicy',
         'App\Models\Checking' => 'App\Policies\AnyPolicy',
         'App\Models\Account' => 'App\Policies\AnyPolicy',
+        'App\Models\Admin' => 'App\Policies\AnyPolicy',
     ];
 
     /**

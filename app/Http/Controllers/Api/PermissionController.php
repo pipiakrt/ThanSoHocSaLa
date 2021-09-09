@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Permission as Model;
 use App\Http\Resources\Permission as Resources;
-use App\Models\User;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 
 class PermissionController extends Controller
@@ -27,7 +27,7 @@ class PermissionController extends Controller
      * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function show(User $permission)
+    public function show(Admin $permission)
     {
         return new Resources($permission);
     }
@@ -39,7 +39,7 @@ class PermissionController extends Controller
      * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $permission)
+    public function update(Request $request, Admin $permission)
     {
         $user = $permission;
         $user->Permission()->delete();

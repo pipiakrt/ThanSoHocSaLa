@@ -20,6 +20,8 @@ class CreateOrdersTable extends Migration
             $table->integer('ward_id')->nullable()->index();
             $table->integer('user_id')->nullable()->index();
             $table->integer('lendon_id')->nullable()->index();
+            $table->integer('sale_id')->nullable()->index();
+            $table->integer('mkt_id')->nullable()->index();
             $table->integer('xacnhan_id')->nullable()->index();
             $table->integer('kichhoat_id')->nullable()->index();
             $table->integer('product_id')->index();

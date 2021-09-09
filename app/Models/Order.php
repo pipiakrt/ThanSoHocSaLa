@@ -29,6 +29,8 @@ class Order extends Model
         'licenses',
         'payment',
         'product_name',
+        'mkt_id',
+        'sale_id',
         'lendon_id',
         'xacnhan_id',
         'kichhoat_id',
