@@ -27,8 +27,9 @@
                                         <span class="text-dark-75">IP</span>
                                     </th>
                                     <th style="min-width: 100px">Người dùng</th>
-                                    <th style="min-width: 100px">URl</th>
+                                    <th style="max-width: 250px">URl</th>
                                     <th style="min-width: 100px">Thiết bị</th>
+                                    <th style="min-width: 100px">Trình duyệt</th>
                                     <th style="min-width: 100px">Màn hình</th>
                                     <th style="min-width: 100px">Thời gian</th>
                                     <th class="text-center">EXT</th>
@@ -43,7 +44,7 @@
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.user ? `${item.user.name} - ${item.user.phone}` : ''"></span>
                                         <span class="text-muted font-weight-bold" v-text="item.user ? item.user.email : ''"></span>
                                     </td>
-                                    <td>
+                                    <td style="max-width: 300px">
                                         <div class="symbol symbol-50 flex-shrink-0 mr-4">
                                             {{ item.url }}
                                         </div>
@@ -51,6 +52,11 @@
                                     <td>
                                         <div class="symbol symbol-50 flex-shrink-0 mr-4">
                                             {{ item.device }}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="symbol symbol-50 flex-shrink-0 mr-4">
+                                            {{ item.browser }}
                                         </div>
                                     </td>
                                     <td>
@@ -84,7 +90,7 @@
                         :first-button-text="`<i class='ki ki-bold-double-arrow-back icon-xs'></i>`"
                         :last-button-text="`<i class='ki ki-bold-double-arrow-next icon-xs'></i>`"
                         :no-li-surround="true"
-                        :page-count="listData.last_page"
+                        :page-count="(page + 5)"
                         :page-range="3"
                         :click-handler="toPage"
                         :disabled-class="'disable'"
@@ -125,7 +131,8 @@ export default {
                     text: 'Dashboard',
                 },
             },
-            listData: []
+            listData: [],
+            page: 1
         }
     },
     created() {
@@ -133,6 +140,7 @@ export default {
     },
     methods: {
         async toPage(page = 1) {
+            this.page = page
             Extends.LoadPage()
             let listData = await axios("/api/checking?page=" + page);
             this.listData = listData.data
