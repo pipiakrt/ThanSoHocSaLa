@@ -33,8 +33,6 @@ class Order extends Model
         'xacnhan_id',
         'kichhoat_id',
         'province_id',
-        'district_id',
-        'ward_id',
     ];
 
     public function Product() {
@@ -64,16 +62,6 @@ class Order extends Model
     public function filterProvince(EloquentBuilder $query, $value)
     {
         return $query->where('province_id', $value);
-    }
-
-    public function filterDistrict(EloquentBuilder $query, $value)
-    {
-        return $query->where('district_id', $value);
-    }
-
-    public function filterWard(EloquentBuilder $query, $value)
-    {
-        return $query->where('ward_id', $value);
     }
 
     public function filterStatus(EloquentBuilder $query, $value)

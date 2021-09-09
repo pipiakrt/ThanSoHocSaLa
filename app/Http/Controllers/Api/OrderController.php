@@ -75,8 +75,6 @@ class OrderController extends Controller
 
         $order = Model::create([
             'province_id' => $request->province_id,
-            'district_id' => $request->district_id,
-            'ward_id' => $request->ward_id,
             'user_id' => $user->id,
             'lendon_id' => $request()->user->id,
             'product_id' => $product["id"],

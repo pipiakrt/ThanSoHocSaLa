@@ -46,7 +46,7 @@
                             </select>
                         </div>
                         <div class="col-2">
-                            <select @change="getDistrict" v-model="province_id" name="province" class="form-control" aria-label="Default select example" required>
+                            <select v-model="province_id" name="province" class="form-control" aria-label="Default select example" required>
                                 <option value="" selected>Tỉnh/Thành Phố</option>
                                 <template v-for="item in province">
                                     <option :key="item.id" :value="item.id" v-text="item.name"></option>
@@ -54,22 +54,6 @@
                             </select>
                         </div>
                         <div class="col-2">
-                            <select @change="getWard" v-model="district_id" name="district" class="form-control" aria-label="Default select example" required>
-                                <option value="" selected>Quận/Huyện</option>
-                                <template v-for="item in district">
-                                    <option :key="item.id" :value="item.id" v-text="item.name"></option>
-                                </template>
-                            </select>
-                        </div>
-                        <div class="col-2">
-                            <select v-model="ward_id" class="form-control" name="ward" aria-label="Default select example" required>
-                                <option value="" selected>Phường/Xã</option>
-                                <template v-for="item in ward">
-                                    <option :key="item.id" :value="item.id" v-text="item.name"></option>
-                                </template>
-                            </select>
-                        </div>
-                        <div class="col-3">
                             <input type='text' class="form-control" id="kt_daterangepicker_1" readonly placeholder="Select time" />
                         </div>
                         <div class="col-2">
@@ -208,10 +192,6 @@ export default {
             filterPayment: '',
             province: [],
             province_id: '',
-            district: [],
-            district_id: '',
-            ward: [],
-            ward_id: '',
             orders: [],
             products: [],
             product_id: ''
@@ -291,16 +271,6 @@ export default {
         getProvinces () {
             axios.get('/address/province').then(response => {
                 this.province = response.data
-            })
-        },
-        getDistrict () {
-            axios.get('/address/district/' + this.province_id).then(response => {
-                this.district = response.data
-            })
-        },
-        getWard () {
-            axios.get('/address/ward/' + this.district_id).then(response => {
-                this.ward = response.data
             })
         },
         confirm(id, status) {
