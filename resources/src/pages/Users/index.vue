@@ -19,6 +19,21 @@
                     </div>
                 </div>
                 <div class="card-body pt-0 pb-3">
+                    <div class="row mb-5">
+                        <div class="col-2">
+                            <input v-model="filterName" type="text" placeholder="Tìm kiếm" class="form-control form-control-sm form-filter datatable-input" />
+                        </div>
+                        <div class="col-2">
+                            <select v-model="filterOrder" class="form-control form-control-sm form-filter datatable-input" title="Select" data-col-index="6">
+                                <option value="">Sắp xếp</option>
+                                <option value="DESC">Mới nhất</option>
+                                <option value="ASC">Cũ nhất</option>
+                            </select>
+                        </div>
+                        <div class="col-1">
+                            <button @click="getApi()" class="btn btn-block btn-primary kt-btn btn-sm kt-btn--icon d-block">Lọc TK</button>
+                        </div>
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-head-custom table-head-bg table-borderless table-vertical-center">
                             <thead>
@@ -26,7 +41,6 @@
                                     <th class="pl-5">
                                         <span class="text-dark-75">Tài khoản</span>
                                     </th>
-                                    <th class="text-center">Địa chỉ</th>
                                     <th style="max-width: 120px" class="text-center">Điện thoại</th>
                                     <th style="max-width: 120px" class="text-center">Ngày sinh</th>
                                     <th class="text-center">Lượt tra cứu</th>
@@ -46,9 +60,6 @@
                                                 <span class="text-muted d-block" v-text="item.email"></span>
                                             </div>
                                         </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.address"></span>
                                     </td>
                                     <td style="max-width: 120px" class="text-center">
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.phone"></span>
@@ -128,25 +139,37 @@ export default {
                     text: 'Thông tin',
                 },
             },
+            page: 1,
+            filterName: '',
+            filterOrder: 'DESC',
             members: []
         }
     },
     created() {
-        Extends.LoadPage()
-        axios('/api/members?type=false').then(res => {
-            KTApp.unblockPage();
-            this.members = res.data
-        })
+        this.getApi()
+    },
+    watch: {
+        page() {
+            this.getApi()
+        }
     },
     methods: {
-        async toPage(page = 1) {
+        toPage(page = 1) {
+            this.page = page
+        },
+        async getApi() {
             Extends.LoadPage()
-            let members = await axios("/api/members?type=false&page=" + page);
-            this.members = members.data
-            this.allID = [];
-            members.data.data.forEach(item => {
-                this.allID.push(item.id)
+            let query = {
+                page: this.page,
+                order: this.filterOrder,
+            }
+            if (this.filterName) {
+                query.name = this.filterName
+            }
+            let members = await axios("/api/members", {
+                params: query
             });
+            this.members = members.data
             KTApp.unblockPage();
         },
         formatTime(time) {

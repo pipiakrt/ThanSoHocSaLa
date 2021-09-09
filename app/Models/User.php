@@ -5,10 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Traits\Filterable;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, Filterable;
 
     public function tableName() { return "App\Models\User"; }
 
@@ -60,5 +62,16 @@ class User extends Authenticatable
 
     public function License() {
         return $this->hasOne(License::class);
+    }
+
+    public function filterOrder(EloquentBuilder $query, $value)
+    {
+        $query->orderBy('id', $value);
+        return $query;
+    }
+
+    public function filterName(EloquentBuilder $query, $value)
+    {
+        return $query->where('name', 'like', '%' . $value . '%')->orWhere('phone', 'like', '%' . $value . '%')->orWhere('email', 'like', '%' . $value . '%');
     }
 }

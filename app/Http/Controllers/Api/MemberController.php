@@ -28,6 +28,6 @@ class MemberController extends Controller
      */
     public function index(Request $request)
     {
-        return Resources::collection(Model::paginate());
+        return Resources::collection(Model::paginateFilter($request));
     }
 }

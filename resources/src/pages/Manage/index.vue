@@ -195,11 +195,7 @@ export default {
         }
     },
     created() {
-        Extends.LoadPage()
-        axios('/api/accounts').then(res => {
-            KTApp.unblockPage();
-            this.accounts = res.data
-        })
+        this.getApi()
     },
     watch: {
         page() {
