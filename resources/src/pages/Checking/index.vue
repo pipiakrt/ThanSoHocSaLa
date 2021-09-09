@@ -40,11 +40,11 @@
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.ip"></span>
                                     </td>
-                                    <td>
+                                    <td style="max-width: 300px">
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.user ? `${item.user.name} - ${item.user.phone}` : ''"></span>
                                         <span class="text-muted font-weight-bold" v-text="item.user ? item.user.email : ''"></span>
                                     </td>
-                                    <td style="max-width: 300px">
+                                    <td style="max-width: 300px; overflow: hidden;">
                                         <div class="symbol symbol-50 flex-shrink-0 mr-4">
                                             {{ item.url }}
                                         </div>
@@ -54,12 +54,12 @@
                                             {{ item.device }}
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="max-width: 120px">
                                         <div class="symbol symbol-50 flex-shrink-0 mr-4">
                                             {{ item.browser }}
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="max-width: 150px">
                                         <div class="symbol symbol-50 flex-shrink-0 mr-4">
                                             {{ item.screen }}
                                         </div>
