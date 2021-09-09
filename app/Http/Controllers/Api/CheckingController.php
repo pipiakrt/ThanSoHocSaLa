@@ -28,8 +28,8 @@ class CheckingController extends Controller
     public function index(Request $request)
     {
         if ($request->ip) {
-            return Resources::collection(Model::orderby("id", "DESC")->where('ip', $request->ip)->simplePaginate(100));
+            return Resources::collection(Model::orderby("id", "DESC")->where('ip', $request->ip)->simplePaginate(50));
         }
-        return Resources::collection(Model::orderby("id", "DESC")->simplePaginate(100));
+        return Resources::collection(Model::orderby("id", "DESC")->simplePaginate(50));
     }
 }
