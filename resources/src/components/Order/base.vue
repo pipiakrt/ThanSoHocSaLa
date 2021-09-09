@@ -46,7 +46,7 @@
                             </select>
                         </div>
                         <div class="col-2">
-                            <select v-model="province_id" name="province" class="form-control" aria-label="Default select example" required>
+                            <select v-model="province_id" name="province" class="form-control form-control-sm form-filter datatable-input" aria-label="Default select example" required>
                                 <option value="" selected>Tỉnh/Thành Phố</option>
                                 <template v-for="item in province">
                                     <option :key="item.id" :value="item.id" v-text="item.name"></option>
@@ -54,18 +54,18 @@
                             </select>
                         </div>
                         <div class="col-2">
-                            <input type='text' class="form-control" id="kt_daterangepicker_1" value="01/01/2018 - 01/15/2018" readonly placeholder="Select time" />
+                            <input type='text' class="form-control form-control-sm form-filter datatable-input" id="kt_daterangepicker_1" readonly />
                         </div>
-                        <div class="col-2">
-                            <select v-model="product_id" class="form-control" style="height: 35px">
-                                <option value="">Gói sản phẩm</option>
+                        <div class="col-1">
+                            <select v-model="product_id" class="form-control form-control-sm form-filter datatable-input">
+                                <option value="">Gói</option>
                                 <template v-for="product in products">
                                     <option v-if="product.status" :key="product.id" :value="product.id" v-text="product.name"></option>
                                 </template>
                             </select>
                         </div>
                         <div class="col-1">
-                            <button @click="getApi()" class="btn h-100 btn-block btn-primary kt-btn btn-sm kt-btn--icon d-block">Lọc Đơn</button>
+                            <button @click="getApi()" class="btn btn-block btn-primary kt-btn btn-sm kt-btn--icon d-block">Lọc Đơn</button>
                         </div>
                     </div>
                     <div class="table-responsive">
