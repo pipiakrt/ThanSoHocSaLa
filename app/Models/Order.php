@@ -45,6 +45,14 @@ class Order extends Model
         return $this->hasOne(User::class, 'id', 'user_id');
     }
 
+    public function Marketing() {
+        return $this->hasOne(Admin::class, 'id', 'mkt_id');
+    }
+
+    public function Sale() {
+        return $this->hasOne(Admin::class, 'id', 'sale_id');
+    }
+
     public function filterOrder(EloquentBuilder $query, $value)
     {
         $query->orderBy('id', $value);

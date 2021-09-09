@@ -27,9 +27,9 @@ class AccountController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return Resources::collection(Model::paginate(10));
+        return Resources::collection(Model::paginateFilter($request));
     }
 
     /**

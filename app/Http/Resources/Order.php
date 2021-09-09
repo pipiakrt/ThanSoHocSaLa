@@ -36,6 +36,8 @@ class Order extends JsonResource
             'updated_at' => $this->updated_at,
             'licenses' => $this->User ? $this->User->License->number : "",
             'user' => $this->User ? new Account($this->User) : "",
+            'mkt' => $this->Marketing,
+            'sale' => $this->Sale,
         ];
     }
 }

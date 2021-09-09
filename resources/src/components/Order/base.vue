@@ -108,10 +108,10 @@
                                             <span class="text-muted font-weight-bold" v-text="item.email"></span>
                                         </td>
                                         <td>
-                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.mkt"></span>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.mkt ? item.mkt.name : ''"></span>
                                         </td>
                                         <td>
-                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.sale"></span>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.sale ? item.sale.name : ''"></span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.payment"></span>

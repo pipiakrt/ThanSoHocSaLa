@@ -19,6 +19,29 @@
                     </div>
                 </div>
                 <div class="card-body pt-0 pb-3">
+                    <div class="row mb-5">
+                        <div class="col-2">
+                            <input v-model="filterName" type="text" placeholder="Tìm kiếm" class="form-control form-control-sm form-filter datatable-input" />
+                        </div>
+                        <div class="col-2">
+                            <select v-model="filterOrder" class="form-control form-control-sm form-filter datatable-input" title="Select" data-col-index="6">
+                                <option value="">Sắp xếp</option>
+                                <option value="DESC">Mới nhất</option>
+                                <option value="ASC">Cũ nhất</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select v-model="filterPhongban" class="form-control form-control-sm form-filter datatable-input" title="Select" data-col-index="6">
+                                <option value="">Phòng ban</option>
+                                <template v-for="item in phongban">
+                                    <option :key="item.type" :value="item.type" v-text="item.name"></option>
+                                </template>
+                            </select>
+                        </div>
+                        <div class="col-1">
+                            <button @click="getApi()" class="btn btn-block btn-primary kt-btn btn-sm kt-btn--icon d-block">Lọc TK</button>
+                        </div>
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-head-custom table-head-bg table-borderless table-vertical-center">
                             <thead>
@@ -26,6 +49,9 @@
                                     <th class="pl-5">
                                         <span class="text-dark-75">Tài khoản</span>
                                     </th>
+                                    <th style="max-width: 120px" class="text-center">Điện thoại</th>
+                                    <th style="max-width: 120px" class="text-center">Phòng ban</th>
+                                    <th style="max-width: 120px" class="text-center">Vị trí</th>
                                     <th style="max-width: 120px" class="text-center">Ngày tạo</th>
                                     <th style="max-width: 80px" class="text-center">EXT</th>
                                 </tr>
@@ -44,6 +70,15 @@
                                                 </div>
                                             </router-link>
                                         </div>
+                                    </td>
+                                    <td style="max-width: 120px" class="text-center">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.phone"></span>
+                                    </td>
+                                    <td style="max-width: 120px" class="text-center">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="getPhongban(item.phongban)"></span>
+                                    </td>
+                                    <td style="max-width: 120px" class="text-center">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.vitri"></span>
                                     </td>
                                     <td style="max-width: 120px" class="text-center">
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.created_at)"></span>
@@ -126,7 +161,37 @@ export default {
                     text: 'Thông tin',
                 },
             },
-            accounts: []
+            accounts: [],
+            phongban: [
+                {
+                    name: "Giám Đốc",
+                    type: "giam-doc",
+                },
+                {
+                    name: "Marketting",
+                    type: "marketting",
+                },
+                {
+                    name: "Sale / Chốt đơn",
+                    type: "sale",
+                },
+                {
+                    name: "Kho Vận",
+                    type: "kho-van",
+                },
+                {
+                    name: "Hành chính - Nhân sự",
+                    type: "htns",
+                },
+                {
+                    name: "Kế toán",
+                    type: "ke-toan",
+                },
+            ],
+            filterName: '',
+            filterPhongban: '',
+            filterOrder: 'DESC',
+            page: 1,
         }
     },
     created() {
@@ -136,16 +201,38 @@ export default {
             this.accounts = res.data
         })
     },
+    watch: {
+        page() {
+            this.getApi()
+        }
+    },
     methods: {
-        async toPage(page = 1) {
+        toPage(page = 1) {
+            this.page = page
+        },
+        async getApi() {
             Extends.LoadPage()
-            let accounts = await axios("/api/accounts?page=" + page);
-            this.accounts = accounts.data
-            this.allID = [];
-            accounts.data.data.forEach(item => {
-                this.allID.push(item.id)
+            let query = {
+                page: this.page,
+                order: this.filterOrder,
+            }
+            if (this.filterPhongban) {
+                query.phongban = this.filterPhongban
+            }
+            if (this.filterName) {
+                query.name = this.filterName
+            }
+            let accounts = await axios("/api/accounts", {
+                params: query
             });
+            this.accounts = accounts.data
             KTApp.unblockPage();
+        },
+        getPhongban(id) {
+            let item = this.phongban.find(item => {
+                return item.type == id
+            })
+            return item ? item.name : ""
         },
         formatTime(time) {
             return moment(time).format('DD/MM/YYYY');

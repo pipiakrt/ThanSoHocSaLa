@@ -252,11 +252,8 @@ export default {
             KTApp.unblockPage();
             this.email = res.data.data.email
             this.name = res.data.data.name
-
-            if (res.data.data.attribute) {
-                this.type = res.data.data.attribute.type
-                this.vitri = res.data.data.attribute.name
-            }
+            this.type = res.data.data.phongban
+            this.vitri = res.data.data.vitri
 
             KTUtil.ready(function () {
                 $('#permission').select2({
@@ -275,9 +272,9 @@ export default {
     methods: {
         async submit() {
             let params = {
-                type: this.type,
+                phongban: this.type,
                 vitri: this.vitri,
-                name: $('#permission').select2("val"),
+                quyen: $('#permission').select2("val"),
             }
             Extends.LoadPage()
             axios.put('/api/permissions/' + this.$route.params.id, params).then((res) => {

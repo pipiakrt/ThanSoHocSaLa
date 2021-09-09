@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -58,11 +57,19 @@ class Admin extends Authenticatable
         return $this->hasMany(Permission::class);
     }
 
-    public function filterType(EloquentBuilder $query, $value)
+    public function filterOrder(EloquentBuilder $query, $value)
     {
-        if ($value) {
-            $query->where('is_admin', $value);
-            return $query;
-        }
+        $query->orderBy('id', $value);
+        return $query;
+    }
+
+    public function filterPhongban(EloquentBuilder $query, $value)
+    {
+        return $query->where('phongban', $value);
+    }
+
+    public function filterName(EloquentBuilder $query, $value)
+    {
+        return $query->where('phongban', 'like', '%' . $value . '%')->orWhere('vitri', 'like', '%' . $value . '%')->orWhere('name', 'like', '%' . $value . '%')->orWhere('phone', 'like', '%' . $value . '%')->orWhere('email', 'like', '%' . $value . '%');
     }
 }

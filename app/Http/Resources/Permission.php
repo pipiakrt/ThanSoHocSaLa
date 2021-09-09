@@ -17,6 +17,8 @@ class Permission extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'phongban' => $this->phongban,
+            'vitri' => $this->vitri,
             'email' => $this->email,
             "permissions" => $this->Permission,
             "attribute" => $this->Attribute,

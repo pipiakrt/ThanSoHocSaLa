@@ -76,7 +76,9 @@ class OrderController extends Controller
         $order = Model::create([
             'province_id' => $request->province_id,
             'user_id' => $user->id,
-            'lendon_id' => $request()->user->id,
+            'mkt_id' => $request->mkt_id,
+            'sale_id' => $request->sale_id,
+            'lendon_id' => request()->user()->id,
             'product_id' => $product["id"],
             'avatar' => $product["image"],
             'code' => $user->id . mt_rand(1000000000, 9999999999),

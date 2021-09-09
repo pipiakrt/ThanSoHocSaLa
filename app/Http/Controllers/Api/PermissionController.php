@@ -41,16 +41,11 @@ class PermissionController extends Controller
      */
     public function update(Request $request, Admin $permission)
     {
-        $user = $permission;
-        $user->Permission()->delete();
-        foreach ($request->name as $name) {
-            $user->Permission()->create(["name" => $name]);
+        $permission->update($request->all());
+        $permission->Permission()->delete();
+        foreach ($request->quyen as $name) {
+            $permission->Permission()->create(["name" => $name]);
         }
-        $user->Attribute()->update([
-            "name" => $request->vitri,
-            "type" => $request->type,
-        ]);
-
         return "ok";
     }
 }

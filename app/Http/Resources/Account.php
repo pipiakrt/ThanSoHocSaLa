@@ -17,6 +17,8 @@ class Account extends JsonResource
         return [
             'id' => $this->id,
             'birthdate' => $this->birthdate,
+            'phongban' => $this->phongban,
+            'vitri' => $this->vitri,
             'address' => $this->address,
             'phone' => $this->phone,
             'name' => $this->name,

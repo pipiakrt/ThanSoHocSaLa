@@ -225,6 +225,8 @@ export default {
                     ward_id: this.ward_id,
                     address: this.address,
                     note: this.note,
+                    mkt_id: this.mkt_id,
+                    sale_id: this.sale_id,
                 }
                 KTApp.blockPage({
                     overlayColor: "#000000",
