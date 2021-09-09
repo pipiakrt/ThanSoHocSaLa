@@ -52,7 +52,7 @@
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.user ? `${item.user.name} - ${item.user.phone}` : ''"></span>
                                         <span class="text-muted font-weight-bold" v-text="item.user ? item.user.email : ''"></span>
                                     </td>
-                                    <td style="max-width: 300px; overflow: hidden;">
+                                    <td style="max-width: 275px; overflow: hidden;">
                                         <div class="symbol symbol-50 flex-shrink-0 mr-4">
                                             {{ item.url }}
                                         </div>
