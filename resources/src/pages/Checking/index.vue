@@ -26,11 +26,11 @@
                                     <th style="min-width: 75px" class="pl-5">
                                         <span class="text-dark-75">IP</span>
                                     </th>
-                                    <th style="min-width: 100px">Người dùng</th>
-                                    <th style="max-width: 250px">URl</th>
-                                    <th style="min-width: 100px">Thiết bị</th>
-                                    <th style="min-width: 100px">Trình duyệt</th>
-                                    <th style="min-width: 100px">Màn hình</th>
+                                    <th style="min-width: 300px">Người dùng</th>
+                                    <th style="max-width: 300px">URl</th>
+                                    <th style="min-width: 200px">Thiết bị</th>
+                                    <th style="min-width: 120px">Trình duyệt</th>
+                                    <th style="min-width: 150px">Màn hình</th>
                                     <th style="min-width: 100px">Thời gian</th>
                                     <th class="text-center">EXT</th>
                                 </tr>
@@ -49,7 +49,7 @@
                                             {{ item.url }}
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="max-width: 200px">
                                         <div class="symbol symbol-50 flex-shrink-0 mr-4">
                                             {{ item.device }}
                                         </div>
@@ -64,7 +64,7 @@
                                             {{ item.screen }}
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="max-width: 100px">
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="formatTime(item.created_at)"></span>
                                         <span class="text-muted font-weight-bold" v-text="formatHuors(item.created_at)"></span>
                                     </td>
