@@ -54,7 +54,7 @@
                             </select>
                         </div>
                         <div class="col-2">
-                            <input type='text' class="form-control" id="kt_daterangepicker_1" readonly placeholder="Select time" />
+                            <input type='text' class="form-control" id="kt_daterangepicker_1" value="01/01/2018 - 01/15/2018" readonly placeholder="Select time" />
                         </div>
                         <div class="col-2">
                             <select v-model="product_id" class="form-control" style="height: 35px">
@@ -213,6 +213,8 @@ export default {
                 buttonClasses: ' btn',
                 applyClass: 'btn-primary',
                 cancelClass: 'btn-secondary',
+                startDate: moment().subtract(30, 'days').format('DD-MM-YYYY'),
+                endDate: moment().subtract('days').format('DD-MM-YYYY'),
                 locale: {
                     format: 'DD/MM/YYYY'
                 }
