@@ -26,7 +26,7 @@
                                     <th style="min-width: 75px" class="pl-5">
                                         <span class="text-dark-75">IP</span>
                                     </th>
-                                    <th style="min-width: 300px">Người dùng</th>
+                                    <th style="min-width: 200px">Người dùng</th>
                                     <th style="max-width: 300px">URl</th>
                                     <th style="min-width: 200px">Thiết bị</th>
                                     <th style="min-width: 120px">Trình duyệt</th>
@@ -40,7 +40,7 @@
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.ip"></span>
                                     </td>
-                                    <td style="max-width: 300px">
+                                    <td style="max-width: 200px">
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg" v-text="item.user ? `${item.user.name} - ${item.user.phone}` : ''"></span>
                                         <span class="text-muted font-weight-bold" v-text="item.user ? item.user.email : ''"></span>
                                     </td>
