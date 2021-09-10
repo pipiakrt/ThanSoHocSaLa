@@ -40,7 +40,7 @@
 
         .thongtingoi.ct .item .image {
             border: 1px solid #03402f;
-    height: fit-content !important;
+            height: fit-content !important;
             width: fit-content;
             margin: auto;
             border-radius: 50%;
@@ -213,25 +213,53 @@
                             <div class="col-md-12 position-relative">
                                 <div class="row justify-content-center">
                                     <div class="col-12 col-lg-11">
-                                        <div class="row g-0 justify-content-center">
-                                            @foreach ($product['options']['desc'] as $desc)
-                                                <div class="col-sm-12 col-md-6 col-xl-4 px-4 position-relative bg-ctm">
-                                                    <div class="box-item">
-                                                        <div class="image">
-                                                            <div class="dot-item"></div>
-                                                            <div class="fake-image111" style="background-image: url('{{ $desc["avatar"] }}')"></div>
-                                                        </div>
-                                                        <div class="title position-relative">
-                                                            @foreach ($desc['name'] as $name)
-                                                                <h4>{{ $name['name'] }}</h4>
-                                                            @endforeach
-                                                        </div>
-                                                        <div class="desc">
-                                                            <ul class="list-group">
-                                                                @foreach ($desc['desc'] as $desc)
-                                                                    <li><span>{{ $desc['name'] }}</span></li>
+                                        <div class="d-none d-md-block">
+                                            <div class="row g-0 justify-content-center">
+                                                @foreach ($product['options']['desc'] as $desc)
+                                                    <div class="col-sm-12 col-md-6 col-xl-4 px-4 position-relative bg-ctm">
+                                                        <div class="box-item">
+                                                            <div class="image">
+                                                                <div class="dot-item"></div>
+                                                                <div class="fake-image111" style="background-image: url('{{ $desc["avatar"] }}')"></div>
+                                                            </div>
+                                                            <div class="title position-relative">
+                                                                @foreach ($desc['name'] as $name)
+                                                                    <h4>{{ $name['name'] }}</h4>
                                                                 @endforeach
-                                                            </ul>
+                                                            </div>
+                                                            <div class="desc">
+                                                                <ul class="list-group">
+                                                                    @foreach ($desc['desc'] as $desc)
+                                                                        <li><span>{{ $desc['name'] }}</span></li>
+                                                                    @endforeach
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                        <div id="sanpham1" class="owl-carousel owl-theme d-block d-md-none">
+                                            @foreach ($product['options']['desc'] as $desc)
+                                                <div class="item">
+                                                    <div class="col-sm-12 col-md-6 col-xl-4 px-4 position-relative bg-ctm">
+                                                        <div class="box-item">
+                                                            <div class="image">
+                                                                <div class="dot-item"></div>
+                                                                <div class="fake-image111" style="background-image: url('{{ $desc["avatar"] }}')"></div>
+                                                            </div>
+                                                            <div class="title position-relative">
+                                                                @foreach ($desc['name'] as $name)
+                                                                    <h4>{{ $name['name'] }}</h4>
+                                                                @endforeach
+                                                            </div>
+                                                            <div class="desc">
+                                                                <ul class="list-group">
+                                                                    @foreach ($desc['desc'] as $desc)
+                                                                        <li><span>{{ $desc['name'] }}</span></li>
+                                                                    @endforeach
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -256,9 +284,29 @@
                             </div>
                             <div class="col-12">
                                 <div class="w-100">
-                                    <div class="row g-0 justify-content-center g-lg-4">
+                                    <div class="d-none d-md-block">
+                                        <div class="row g-0 justify-content-center g-lg-4">
+                                            @foreach ($product['options']['desc2']['items'] as $items)
+                                                <div class="col-md-6 col-lg-3">
+                                                    <div class="row g-0 text-white">
+                                                        <div class="col-12">
+                                                            <img class="w-100" src="{{ $items['avatar'] }}" alt="">
+                                                        </div>
+                                                        <div class="col-12 itembg">
+                                                            <div class="row justify-content-center g-0">
+                                                                <div class="col-10">
+                                                                    <div class="fw-lighter desc1"><span>{{ $items['name'] }}</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div id="sanpham2" class="owl-carousel owl-theme d-block d-md-none">
                                         @foreach ($product['options']['desc2']['items'] as $items)
-                                            <div class="col-md-6 col-lg-3">
+                                            <div class="item">
                                                 <div class="row g-0 text-white">
                                                     <div class="col-12">
                                                         <img class="w-100" src="{{ $items['avatar'] }}" alt="">
@@ -403,6 +451,134 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="text-center mb-3">
+                            <a href="/tra-cuu">
+                                <button class="btn-trcu">TRA CỨU CÁC CHỈ SỐ CỦA BẠN NGAY
+                                    <svg style="margin-bottom: 5px; margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="20.0533px" height="24.7543px" preserveAspectRatio="none" viewBox="0 0 1536 1896.0833" class="" fill="rgba(246, 237, 230, 1)">
+                                        <path d="M1472 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H117q-52 0-84.5-37.5T0 1024V896q0-53 32.5-90.5T117 768h704L528 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z"></path>
+                                    </svg>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .custom-main-goisp {
+                position: relative;
+                background-size: cover;
+                background-attachment: scroll;
+                background-origin: content-box;
+                background-image: url('https://afamilycdn.com/150157425591193600/2021/5/4/jf-us-zodiac-time-offplatform-06-16201179847801903995727.jpg');
+                background-position: center top;
+                background-repeat: repeat;
+                min-height: 1114.2px;
+            }
+            .custom-main-goisp .ladi-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                pointer-events: none;
+                background-color: rgba(11, 109, 94, 0.9);
+            }
+            .custom-main-goisp .color-green {
+                color: rgb(13, 98, 86);
+            }
+            .custom-main-goisp .bg-yll {
+                background-color: rgb(246, 237, 230);
+            }
+            .custom-main-goisp .bg-yll span {
+                font-family: 'iCiel DIN Pro Condensed';
+                color: rgb(232, 58, 48);
+            }
+            .custom-main-goisp .bg-yll h1 {
+                font-family: 'iCiel DIN Pro Condensed';
+                font-size: 50px;
+            }
+            .custom-main-goisp .bd-15 {
+                border-radius: 15px;
+            }
+            .bg-main-2 {
+                border-style: solid;
+                border-color: rgb(246, 237, 230);
+                border-width: 3px;
+                border-radius: 10px;
+            }
+            .custom-main-goisp .DGRfGDew {
+                font-size: 24px;
+                line-height: 35px;
+                font-weight: 200;
+            }
+            .custom-main-goisp .btn-trcu {
+                padding: 8px 40px;
+                padding-bottom: 2px;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                min-width: 280px;
+                font-family: 'iCiel DIN Pro Condensed';
+                letter-spacing: 1px;
+                font-size: 24px;
+                background-color: rgb(232 58 48);
+                font-weight: bold;
+                margin-top: 20px;
+            }
+        </style>
+        <div class="custom-main-goisp">
+            <div class="ladi-overlay"></div>
+            <div class="container p-4 position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-md-9">
+                        <div class="bd-15 text-center bg-yll py-2 pt-4">
+                            <h1 class="fw-bold color-green">SẢN PHẨM <span>DUY NHẤT</span> VỀ THẦN SỐ HỌC</h1>
+                            <h1 class="fw-bold color-green">TRÊN THỊ TRƯỜNG GIÚP BẠN</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="py-2 pt-4 text-white text-center">
+                            <h4 class="fw-light">HIỂU SÂU SẮC bản thân, phát huy tối đa điểm mạnh và phát triển năng lực nội tại bên trong bản thân bạn.</h4>
+                            <h4 class="fw-light">Sở hữu "CUỐN SÁCH CUỘC ĐỜI" với đầy đủ 19 chỉ số quan trọng toàn diện nhất dành cho bạn</h4>
+                            <h4 class="fw-light">Nắm rõ được ỨNG DỤNG THỰC SỰ của Thần Số Học và cuộc sống.</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="py-2 pt-4 text-white bg-main-2">
+                            <div class="header text-center">
+                                <h2>“CUỐN SÁCH CUỘC ĐỜI”</h2>
+                                <h2>LÀ SỰ KẾT TINH HOÀN HẢO TỪ</h2>
+                            </div>
+                            <div class="main mt-3">
+                                <ul>
+                                    <li class="DGRfGDew">Nền tảng công trình khoa học (Thần số học) của Nhà toán học vĩ đại Pythagoras.</li>
+                                    <li class="DGRfGDew">Tâm huyết của HỌC VIỆN CỔ HỌC SALA đã tổng hợp và chia sẻ toàn bộ kiến thức của bộ môn từ các chuyên gia đến toàn thể cộng đồng.</li>
+                                    <li class="DGRfGDew">Công nghệ 4.0 - từ Học viện Cổ Học Sala</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="py-2 mt-3 pt-4 text-white bg-main-2">
+                            <div class="header text-center">
+                                <h2>Trực tiếp hỏi đáp cùng chuyên gia.</h2>
+                            </div>
+                            <div class="main mt-3 text-center">
+                                <div class="DGRfGDew">Được chuyên gia hỗ trợ luận giải và định hướng giải pháp, phát triển đột phá.</div>
+                                <div class="DGRfGDew">Hướng dẫn Ứng dụng Thần số học vào :</div>
+                                <div class="DGRfGDew">+ Bản thân</div>
+                                <div class="DGRfGDew">+ Gia Đình</div>
+                                <div class="DGRfGDew">+ Công Việc</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="py-2 pt-4 text-white text-center">
+                            <h4 class="fw-light">Chúng tôi <b>CAM KẾT</b> khi bạn có trong tay "<b>CUỐN SÁCH CUỘC ĐỜI</b>" và đi theo đúng lộ trình mà <br> <b>HỌC VIỆN CỔ HỌC</b> chia sẻ Cuộc đời bạn sẽ thay đổi tích cực</h4>
                         </div>
                     </div>
                     <div class="col-md-12">

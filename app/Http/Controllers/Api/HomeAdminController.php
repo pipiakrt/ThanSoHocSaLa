@@ -8,7 +8,6 @@ use App\Models\User;
 use App\Models\Admin;
 use App\Models\Order;
 use App\Models\TraCuu;
-use App\Models\Checking;
 
 class HomeAdminController extends Controller
 {
@@ -33,7 +32,6 @@ class HomeAdminController extends Controller
         $admin = Admin::orderby("id", "DESC")->get();
         $orders = Order::orderby("id", "DESC")->get();
         $tracuu = TraCuu::orderby("id", "DESC")->get();
-        $website = Checking::orderby("id", "DESC")->get();
 
         return [
             "GroupData_1" => [
@@ -56,11 +54,6 @@ class HomeAdminController extends Controller
                     "name" => "Thống kê tra cứu Nâng cao",
                     "count" => "Tổng cộng " . $tracuu->where("type", true)->count() . " lượt tra cứu Nâng cao",
                     "list" => $tracuu->where("type", true)->take(10),
-                ],
-                "view_website" => [
-                    "name" => "Thống kê lượt view website",
-                    "count" => "Tổng cộng " . $website->count() . " lượt view website",
-                    "list" => $website->take(10),
                 ],
             ],
 
