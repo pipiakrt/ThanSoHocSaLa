@@ -60,15 +60,11 @@ class HomeAdminController extends Controller
             "GroupData_2" => [
                 "top_sale" => [
                     "name" => "Top nhân viên Sale",
-                    // "list" => $admin->filter(function($model) {
-                    //     return $model->Attribute->type == "sale";
-                    // })
+                    "list" => $admin->where("phongban", 'sale')->take(10),
                 ],
                 "top_mkt" => [
                     "name" => "Top nhân viên Marketting",
-                    // "list" => $admin->filter(function($model) {
-                    //     return $model->Attribute->type == "marketting";
-                    // })
+                    "list" => $admin->where("phongban", 'marketting')->take(10),
                 ],
             ]
         ];

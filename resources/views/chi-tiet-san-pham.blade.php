@@ -204,10 +204,10 @@
                     <div class="item px-0 px-md-4 pt-0 pt-md-4 py-4">
                         <div class="row justify-content-center">
                             <div class="col-12">
-                                <div class="title title-ct text-center py-4">
-                                    @foreach ($product['options']['title'] as $val)
+                                <div class="title title-ct text-center py-1">
+                                    {{-- @foreach ($product['options']['title'] as $val)
                                         <h5 class="hd1">{{ $val['name'] }}</h5>
-                                    @endforeach
+                                    @endforeach --}}
                                 </div>
                             </div>
                             <div class="col-md-12 position-relative">
