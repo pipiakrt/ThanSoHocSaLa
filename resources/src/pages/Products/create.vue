@@ -79,6 +79,55 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form-group row pb-5">
+                                    <label for="video" class="col-2 col-form-label">Ảnh background</label>
+                                    <div class="col-10">
+                                        <template v-for="(items, id) in options.bg">
+                                            <div class="row" :key="id">
+                                                <div class="col-8 mt-5">
+                                                    <div class="image-input image-input-empty image-input-outline background-position-center" :style="`background-image: url('${items.avatar ? items.avatar : '/img/avatar.png'}')`">
+                                                        <div class="image-input-wrapper"></div>
+                                                        <label @click="setTypeImage('option_avatar_2'), option_avatar_key = id" data-toggle="modal" data-target="#filemanager" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change">
+                                                            <i class="fa fa-pen icon-sm text-muted"></i>
+                                                        </label>
+                                                        <span v-if="items.avatar" @click="items.avatar = ''" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow d-flex" data-action="remove">
+                                                            <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <template v-for="(item, key) in items.name">
+                                                        <div class="row mt-5" :key="key">
+                                                            <div class="col-12">
+                                                                <input v-model="item.name" placeholder="Tiêu đề lớn" class="form-control" type="text" />
+                                                            </div>
+                                                        </div>
+                                                    </template>
+                                                    <div class="row mt-5">
+                                                        <div class="col-12">
+                                                            <input v-model="items.title_desc" placeholder="Tiêu đề mô tả" class="form-control" type="text" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <template v-for="(item, key) in items.desc">
+                                                        <div class="row mt-5" :key="key">
+                                                            <div class="col-10">
+                                                                <input v-model="item.name" placeholder="Mô tả" class="form-control" type="text" />
+                                                            </div>
+                                                            <div class="col-2">
+                                                                <button type="button" v-if="items.desc.length > 1" @click="items.desc.length == 1 ? false : items.desc.splice(key, 1)" class="btn btn-block btn-warning">Loại bỏ</button>
+                                                            </div>
+                                                        </div>
+                                                    </template>
+                                                </div>
+                                                <div class="col-10 mt-5">
+                                                    <button @click="items.desc.push({ name: '' })" type="button" class="btn btn-block btn-outline-secondary">Thêm</button>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
                                 <div class="form-group row pb-5" v-for="(items, i) in promotion" :key="i">
                                     <label for="video" class="col-2 col-form-label">Khuyễn mại</label>
                                     <div class="col-10">
@@ -351,6 +400,28 @@ export default {
                             }
                         ]
                     }
+                ],
+                bg: [
+                    {
+                        avatar: "",
+                        name: [
+                            {
+                                name: ""
+                            },
+                            {
+                                name: ""
+                            },
+                            {
+                                name: ""
+                            },
+                        ],
+                        title_desc: "",
+                        desc: [
+                            {
+                                name: ""
+                            }
+                        ],
+                    }
                 ]
             },
             promotion: [
@@ -440,6 +511,9 @@ export default {
             }
             else if (typeimage == 'option_avatar_1') {
                 this.options.desc[this.option_avatar_key].avatar = path
+            }
+            else if (typeimage == 'option_avatar_2') {
+                this.options.bg[this.option_avatar_key].avatar = path
             }
             else {
                 this.image = path

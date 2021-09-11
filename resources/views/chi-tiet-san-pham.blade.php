@@ -160,35 +160,37 @@
             margin-top: 20px;
         }
     </style>
-
     <main>
-        <div class="hd-ct">
-            <div class="bn-ct"></div>
-            <div class="container">
-                <div class="main-ct py-3 py-md-5 mt-0 mt-md-5">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-xl-7 text-center text-xl-start">
-                            <h1>HÀNH TRÌNH</h1>
-                            <h1><span class="desc1">Khai phá</span> BẢN THÂN</h1>
+        @isset($product['options']["bg"])
+            <div class="hd-ct">
+                <div class="bn-ct" style="background-image: url('{{ $product['options']["bg"][0]["avatar"] }}')"></div>
+                <div class="container">
+                    <div class="main-ct py-3 py-md-5 mt-0 mt-md-5">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-xl-7 text-center text-xl-start">
+                                <h1>{{ $product['options']["bg"][0]["name"][0]["name"] }}</h1>
+                                <h1><span class="desc1">{{ $product['options']["bg"][0]["name"][1]["name"] }}</span> {{ $product['options']["bg"][0]["name"][2]["name"] }}</h1>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="main-ct py-5 bottom-0">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-xl-7">
-                            <div class="row">
-                                <div class="col-lg-12 text-center">
-                                    <h3 style="color: rgb(13, 98, 86);">THẦN SỐ HỌC PITAGO</h3>
-                                    <div><span class="fw-light DGESGH1">LUẬN GIẢI “Đường đời, vận mệnh, sự nghiệp,…” của chính bạn và người thân của bạn.</span></div>
-                                    <div><span class="fw-light DGESGH1">(Bí quyết để có được sự GIÀU CÓ, HẠNH PHÚC & BÌNH AN bền vững)</span></div>
-                                    <div>
-                                        <a href="/tra-cuu">
-                                            <button class="btn-trcu">TRA CỨU CÁC CHỈ SỐ CỦA BẠN NGAY
-                                                <svg style="margin-bottom: 5px; margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="20.0533px" height="24.7543px" preserveAspectRatio="none" viewBox="0 0 1536 1896.0833" class="" fill="rgba(246, 237, 230, 1)">
-                                                    <path d="M1472 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H117q-52 0-84.5-37.5T0 1024V896q0-53 32.5-90.5T117 768h704L528 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z"></path>
-                                                </svg>
-                                            </button>
-                                        </a>
+                    <div class="main-ct py-5 bottom-0">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-xl-7">
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <h3 style="color: rgb(13, 98, 86);">{{ $product['options']["bg"][0]["title_desc"] }}</h3>
+                                        @foreach ($product['options']["bg"][0]["desc"] as $line)
+                                            <div><span class="fw-light DGESGH1">{{ $line["name"] }}</span></div>
+                                        @endforeach
+                                        <div>
+                                            <a href="/tra-cuu">
+                                                <button class="btn-trcu">TRA CỨU CÁC CHỈ SỐ CỦA BẠN NGAY
+                                                    <svg style="margin-bottom: 5px; margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="20.0533px" height="24.7543px" preserveAspectRatio="none" viewBox="0 0 1536 1896.0833" class="" fill="rgba(246, 237, 230, 1)">
+                                                        <path d="M1472 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H117q-52 0-84.5-37.5T0 1024V896q0-53 32.5-90.5T117 768h704L528 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z"></path>
+                                                    </svg>
+                                                </button>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -196,7 +198,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        @endisset
         <div class="thongtingoi ct">
             <div class="container container-chuyengia px-0 px-lg-4">
                 <div class="maingoi px-0">
