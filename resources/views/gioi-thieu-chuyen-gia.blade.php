@@ -41,13 +41,13 @@
                 <div class="row justify-content-center g-0 my-4">
                     <div class="col-sm-12 col-md-10 col-lg-11">
                         <div class="descs1 px-0">
-                            <span>Chuyên gia Nguyên Hồng.</span>
+                            <span style="font-style: italic;">Chuyên gia Nguyên Hồng.</span>
                         </div>
                         <div class="descs1 px-0 mt-4">
                             <span>Với nhiều năm nghiên cứu khả năng tiềm ẩn và năng lực bẩm sinh của con người tại “Viện Nghiên Cứu Và Ứng Dụng Tiềm Năng Con Người” thì cho tới năm 2016 sau khi được lĩnh hội Thần số học từ một người thầy của mình dựa trên cuốn sách The Complete Book of Numerology của Tiến sĩ David A. Phillips. Cô đã rất hứng thú với bộ môn này nên đã tự mình học hỏi và tìm hiểu sâu hơn nữa.</span>
                         </div>
                         <div class="descs1 px-0 mt-4">
-                            <span>Sau khoảng thời gian nghiên cứu và chiêm nghiệm về Thần số học, cô nhận thấy đây là một công cụ hỗ trợ cho con người phát triển toàn diện vô cùng hiệu quả. Khả năng ứng dụng Thần số học trong việc khai phá và tìm ra những tiềm năng cũng định hướng được đường đi cho mỗi người để tránh rơi vào cảm giác chông chênh là vô cùng lớn, nó có thể đáp ứng được nguyện vọng mang lại giá trị phát triển cho cộng đồng và xã hội.</span>
+                            <span>Sau khoảng thời gian nghiên cứu và chiêm nghiệm về Thần số học, cô nhận thấy đây là một công cụ hỗ trợ cho con người phát triển toàn diện vô cùng hiệu quả. Khả năng ứng dụng Thần số học trong việc khai phá và tìm ra những tiềm năng cũng như định hướng được đường đi cho mỗi người để tránh rơi vào cảm giác chông chênh là vô cùng lớn, nó có thể đáp ứng được nguyện vọng mang lại giá trị phát triển cho cộng đồng và xã hội.</span>
                         </div>
                         <div class="descs1 px-0 mt-4">
                             <span>Việc ứng dụng Thần số học vào trong đời sống sẽ giúp cho mỗi cá nhân có thể thấu hiểu được bản thân mình hơn, những bạn trẻ có thể tìm được điểm mạnh, hạn chế và trau dồi kiến thức để tạo cho mình giá trị bản thân từ sớm, sống có mục đích để cuộc đời trở nên thật ý nghĩa, giúp những thành viên trong gia đình thấu hiểu, đồng cảm và yêu thương lẫn nhau, doanh nghiệp có thể điều phối nhân sự mà không bỏ lỡ tài năng của từng cá nhân từ đó tạo nên nền móng vững chắc kéo theo sự phát triển doanh nghiệp lâu dài.</span>
