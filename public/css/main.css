@@ -760,7 +760,7 @@ input[type="date"]:focus::before {
 }
 .gia-tri .content-main .timeline .title h3 {
     color: #388a6b;
-    font-size: 20px;
+    font-size: 23px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
