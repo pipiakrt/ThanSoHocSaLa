@@ -86,7 +86,7 @@
                         <div class="share-ketqua text-white">
                             <div class="titlecs text-center"><h4>nhận giải mã trực tiếp</h4></div>
                             <div class="desccs fw-lighter">
-                                <div><span>Nếu bạn muốn biết chi tiết hơn về những lời khuyên phù hợp nhất, giải mã vận mệnh, thăng trầm và ý nghĩa từng năm. Khám phá Giải mã chi tiết chuyên sâu ngay.</span></div>
+                                <div><span>Bạn muốn biết chi tiết hơn về những LỜI KHUYÊN DÀNH CHO BẠN, GIẢI MÃ VẬN MỆNH, THĂNG TRẦM CUỘC SỐNG và LÊN KẾ HOẠCH CHO TỪNG NĂM. Hãy đăng ký TRA CỨU CHUYÊN SÂU NGAY BÂY GIỜ.</span></div>
                             </div>
                             <div class="btn-ketqua text-center">
                                 <a href="/tai-khoan/tra-cuu-nang-cao">
