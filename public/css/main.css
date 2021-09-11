@@ -316,6 +316,13 @@ a:hover {
 .chuyen-gia .title-h1 {
     color: #f6ede6 !important;
 }
+.chuyen-gia .content {
+    text-align: justify;
+    line-height: 31px;
+}
+.chuyen-gia .content span {
+    font-size: 22px;
+}
 .chuyen-gia .desc span {
     font-weight: 200;
     font-size: 17px;
