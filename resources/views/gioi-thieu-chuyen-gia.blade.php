@@ -62,7 +62,7 @@
                             <img class="mw-100" src="/img/gioithieu/tuhao.png" alt="">
                         </div>
 
-                        <iframe class="w-100 mt-4 youtube-responsive" height="450" src="https://www.youtube.com/embed/Q3ooMw9WsZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="w-100 mt-4 youtube-responsive" height=650" src="https://www.youtube.com/embed/Q3ooMw9WsZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
