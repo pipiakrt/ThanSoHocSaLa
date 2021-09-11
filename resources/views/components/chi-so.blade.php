@@ -347,7 +347,7 @@ $ynghia = [
             @foreach ($ynghia as $key => $item)
                 <div class="col-md-6 col-xl-4 col-lg-6">
                     <a href="{{ $item["url"] }}" data-bs-toggle="{{ $key >= 2 ? "modal" : "" }}" data-bs-target="#exampleModal-{{ $key }}">
-                        <div class="item {{ $key == 0 ? "active" : "" }}" style="background-image: url('/img/vt/2.png');">
+                        <div class="D0MFfU3 item {{ $key == 0 ? "active" : "" }}" style="background-image: url('/img/vt/2.png');">
                             <div class="link-to"></div>
                             <div class="box-group">
                                 <div class="box">

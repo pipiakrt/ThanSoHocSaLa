@@ -95,6 +95,11 @@ $('.eventItem').hover(function () {
     }
 })
 
+$('.D0MFfU3').hover(function () {
+    $('.D0MFfU3').removeClass("active")
+    $(this).addClass("active");
+})
+
 $('.eventItem2').hover(function () {
     $('.eventItem2').removeClass("active")
     $(this).addClass("active");
