@@ -30,8 +30,14 @@
     font-weight: 100;
     letter-spacing: 0.4px;
     margin-bottom: 25px;
-    line-height: 20px;
-    text-align: start;
+    line-height: 31px;
+    text-align: justify;
+    font-size: 24px;
+}
+.titleKNDRD {
+    line-height: 31px;
+    text-align: justify !important;
+    font-size: 22px;
 }
 .nguon_goc .titleNG {
     letter-spacing: 2.5px;
@@ -41,8 +47,9 @@
     font-weight: 100;
     margin-bottom: 25px;
     width: 100%;
-    max-width: 392px;
-    line-height: 20px;
+    line-height: 31px;
+    text-align: justify !important;
+    font-size: 22px;
 }
 .gt-footer {
     background-color: #0d6256;
@@ -57,6 +64,9 @@
 }
 .gt-footer .desc {
     margin: 15px 0;
+    line-height: 31px;
+    text-align: justify !important;
+    font-size: 22px;
 }
 .gt-footer .title {
     text-transform: uppercase;

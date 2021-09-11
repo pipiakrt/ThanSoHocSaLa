@@ -67,6 +67,8 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
+    font-size: 20px;
+    font-weight: 200;
 }
 .tags{
     border: 1px solid silver;

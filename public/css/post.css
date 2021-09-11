@@ -17,7 +17,7 @@
 }
 .post-main .post-item {
     background-color: #097364;
-    padding: 25px 50px;
+    padding: 25px 40px;
     position: relative;
     min-height: 250px;
 }
@@ -35,8 +35,9 @@
     font-weight: 100;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 5;
     overflow: hidden;
+    text-align: justify;
 }
 .post-main .post-item .icon-click {
     position: absolute;

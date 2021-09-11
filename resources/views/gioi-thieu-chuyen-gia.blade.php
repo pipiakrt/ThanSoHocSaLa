@@ -39,7 +39,7 @@
         <div class="main-1">
             <div class="container">
                 <div class="row justify-content-center g-0 my-4">
-                    <div class="col-sm-12 col-md-10 col-lg-7">
+                    <div class="col-sm-12 col-md-10 col-lg-11">
                         <div class="descs1 px-0">
                             <span>Xin chào tôi là Nguyên Hồng</span>
                         </div>
@@ -69,7 +69,7 @@
                             <img class="mw-100" src="/img/gioithieu/tuhao.png" alt="">
                         </div>
 
-                        <iframe class="w-100 mt-4 youtube-responsive" height="450" src="https://www.youtube.com/embed/rwEfiiqJJK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="w-100 mt-4 youtube-responsive" height="450" src="https://www.youtube.com/embed/Q3ooMw9WsZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

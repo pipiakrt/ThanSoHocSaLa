@@ -29,7 +29,7 @@
         <div class="post-slogan post-sloganDetail pt-0">
             <div class="container container-header2 mb-4 px-0">
                 <div class="row g-0 g-md-5">
-                    <div class="col-md-6 bg-white">
+                    <div class="col-md-8 bg-white">
 
                         @foreach ($chuyenmuc as $item)
                             <fieldset class="w-100 mt-4 tags">
@@ -58,7 +58,7 @@
                                 <h3>{{ $post->name }}</h3>
                             </div>
                             <div class="desc fw-bould mb-4">
-                                <span style="font-size: 21px;">{{ $post->description }}</span>
+                                <span style="font-size: 22px;">{{ $post->description }}</span>
                             </div>
                         </div>
                         <div class="post-content pb-5 mx-2">
