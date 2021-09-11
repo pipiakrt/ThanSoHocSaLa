@@ -234,15 +234,18 @@ export default {
                 }
                 $('.summernote').summernote({
                     height: 350,
+                    lineHeights: ['0.2', '0.3', '0.4', '0.5', '0.6', '0.8', '1.0', '1.2', '1.4', '1.5', '2.0', '3.0'],
                     toolbar: [
                         ['style', ['style']],
-                        ['font', ['bold', 'underline', 'clear']],
+                        ['font', ['bold', 'underline', 'italic', 'strikethrough', 'clear']],
+                        ['fontsize', ['fontsize']],
                         ['color', ['color']],
                         ['para', ['ul', 'ol', 'paragraph']],
+                        ['height', ['height']],
                         ['table', ['table']],
-                        ['insert', ['link', 'picture', 'video']],
+                        ['insert', ['link', 'picture', 'hr']],
                         ['mybutton', ['hello']],
-                        ['view', ['fullscreen', 'codeview', 'help']]
+                        ['view', ['fullscreen', 'codeview', 'help']],
                     ],
                     buttons: {
                         hello: HelloButton
