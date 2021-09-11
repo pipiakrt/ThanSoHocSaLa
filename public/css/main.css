@@ -762,6 +762,7 @@ input[type="date"]:focus::before {
     color: #388a6b;
     font-size: 20px;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 .gia-tri .content-main .timeline .desc span {
     font-weight: 200;
@@ -777,7 +778,8 @@ input[type="date"]:focus::before {
     margin-top: 40px;
 }
 .gia-tri .content-main .timeline .item-timeline .desc {
-    font-size: 18px;
+    font-size: 20px;
+    text-align: justify;
 }
 .gia-tri .content-main .timeline .counter.indam {
     background-color: #097364;
