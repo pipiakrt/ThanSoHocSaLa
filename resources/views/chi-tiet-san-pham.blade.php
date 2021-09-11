@@ -159,15 +159,6 @@
             font-weight: bold;
             margin-top: 20px;
         }
-        .DGESGH2 {
-            font-size: 25px !important;
-        }
-        .DGESGH1 {
-            font-size: 31px !important;
-        }
-        .DGESGH {
-            font-size: 21px !important;
-        }
     </style>
 
     <main>

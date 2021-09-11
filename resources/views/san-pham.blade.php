@@ -73,7 +73,7 @@
     </div>
 
     <div class="tieudegoi">
-        <div class="container px-0 px-lg-4 pt-0 pt-md-5">
+        <div class="container container-chuyengia px-0 px-lg-4 pt-0 pt-md-5">
             <div class="row g-0 h-100">
                 @foreach ($products as $key => $item)
                     <div class="col-6 col-md-6">
@@ -89,7 +89,7 @@
     </div>
 
     <div class="thongtingoi">
-        <div class="container px-0 px-lg-4">
+        <div class="container container-chuyengia px-0 px-lg-4">
             <div class="maingoi px-0 px-lg-5">
                 <div id="carouselExampleCaptions2" class="carousel slide text-dark h-100" data-bs-interval="false" data-bs-ride="carousel">
                     <div class="carousel-inner h-100">
@@ -104,7 +104,27 @@
 
     <x-gia-tri />
 
-    <x-lien-ket-tra-cuu />
+    <div class="ketqua sanpham">
+        <div class="content-ketqua">
+            <div class="container container-ketqua">
+                <div class="row g-0">
+                    <div class="col-xl-12">
+                        <div class="share-ketqua text-white">
+                            <div class="titlecs text-center"><h4 class="DGESGH1">nhận giải mã trực tiếp</h4></div>
+                            <div class="desccs fw-lighter">
+                                <div><span class="DGESGH2_1">Nếu bạn muốn biết chi tiết hơn về những lời khuyên phù hợp nhất, giải mã vận mệnh, thăng trầm và ý nghĩa từng năm. Khám phá Giải mã chi tiết chuyên sâu ngay.</span></div>
+                            </div>
+                            <div class="btn-ketqua text-center">
+                                <a href="/tai-khoan/tra-cuu-nang-cao">
+                                    <button>TRA CỨU CHUYÊN SÂU</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </main>
 

@@ -99,7 +99,6 @@
     margin-bottom: 0;
 }
 .thongtingoi .item .desc span {
-    font-family: "Open Sans", sans-serif;
     color: rgb(0, 0, 0);
     font-size: 15px;
     text-align: justify;
@@ -123,7 +122,7 @@
 .thongtingoi .item .desc {
     /* border: 2px dashed #608f6c; */
     /* color: #faefe3; */
-    padding: 0 50px;
+    padding: 0 45px;
     font-size: 18px;
     font-weight: 200;
     position: relative;
@@ -194,4 +193,17 @@
     text-align: center;
     line-height: 1.6;
     max-width: 1080px;
+}
+.DGESGH2_1 {
+    font-size: 25px !important;
+    line-height: 31px;
+}
+.DGESGH2 {
+    font-size: 25px !important;
+}
+.DGESGH1 {
+    font-size: 31px !important;
+}
+.DGESGH {
+    font-size: 21px !important;
 }

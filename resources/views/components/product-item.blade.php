@@ -12,7 +12,7 @@
                 <div class="row g-0 justify-content-center g-lg-4">
 
                     @foreach ($item['options']['desc'] as $desc)
-                        <div class="col-sm-12 col-md-6 col-xl-4 px-4 position-relative bg-ctm">
+                        <div class="col-sm-12 col-md-6 col-xl-4 px-3 position-relative bg-ctm">
                             <div class="box-item">
                                 <div class="image">
                                     <div class="dot-item"></div>
@@ -20,13 +20,13 @@
                                 </div>
                                 <div class="title position-relative">
                                     @foreach ($desc['name'] as $name)
-                                        <h4>{{ $name['name'] }}</h4>
+                                        <h4 style="font-size: 20px;">{{ $name['name'] }}</h4>
                                     @endforeach
                                 </div>
                                 <div class="desc">
                                     <ul class="list-group">
                                         @foreach ($desc['desc'] as $desc)
-                                            <li><span>{{ $desc['name'] }}</span></li>
+                                            <li><span class="DGESGH">{{ $desc['name'] }}</span></li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -61,7 +61,7 @@
                                     <div class="col-12 itembg">
                                         <div class="row justify-content-center g-0">
                                             <div class="col-10">
-                                                <div class="fw-lighter desc1"><span>{{ $items["name"] }}</span></div>
+                                                <div class="fw-lighter desc1"><span class="DGESGH2">{{ $items["name"] }}</span></div>
                                             </div>
                                         </div>
                                     </div>
