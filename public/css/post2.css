@@ -59,6 +59,8 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
+    font-size: 24px;
+    text-align: justify;
 }
 .post-main .submit-post {
     color: white;
