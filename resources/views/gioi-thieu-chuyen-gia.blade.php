@@ -41,29 +41,22 @@
                 <div class="row justify-content-center g-0 my-4">
                     <div class="col-sm-12 col-md-10 col-lg-11">
                         <div class="descs1 px-0">
-                            <span>Xin chào tôi là Nguyên Hồng</span>
+                            <span>Chuyên gia Nguyên Hồng.</span>
                         </div>
-                        <div class="descs1 px-0">
-                            <span>Với nhiều năm nghiên cứu khả năng tiềm ẩn và năng lực bẩm sinh của con người tại “Viện Nghiên Cứu Và Ứng Dụng Tiềm Năng Con Người” tôi nhận thấy khả năng khai phá và phát triển những tiềm ẩn bẩm sinh ở thần số học đối với con người là vô cùng lớn, đáp ứng được nguyện vọng mang lại giá trị cho cộng đồng và xã hội</span>
+                        <div class="descs1 px-0 mt-4">
+                            <span>Với nhiều năm nghiên cứu khả năng tiềm ẩn và năng lực bẩm sinh của con người tại “Viện Nghiên Cứu Và Ứng Dụng Tiềm Năng Con Người” thì cho tới năm 2016 sau khi được lĩnh hội Thần số học từ một người thầy của mình dựa trên cuốn sách The Complete Book of Numerology của Tiến sĩ David A. Phillips. Cô đã rất hứng thú với bộ môn này nên đã tự mình học hỏi và tìm hiểu sâu hơn nữa.</span>
                         </div>
-                        <div class="descs1 px-0">
-                            <span>Nhận thấy được lợi ích từ việc ứng dụng Thần Số Học vào cuộc đời mỗi người nên tôi đã giành riêng 5 năm để nghiên cứu và ứng dụng thực tế môn khoa học cổ này vào cuộc sống, khoảng thời gian đó, tôi đã có cơ duyên gặp gỡ, giúp đỡ và tham vấn cho:</span>
+                        <div class="descs1 px-0 mt-4">
+                            <span>Sau khoảng thời gian nghiên cứu và chiêm nghiệm về Thần số học, cô nhận thấy đây là một công cụ hỗ trợ cho con người phát triển toàn diện vô cùng hiệu quả. Khả năng ứng dụng Thần số học trong việc khai phá và tìm ra những tiềm năng cũng định hướng được đường đi cho mỗi người để tránh rơi vào cảm giác chông chênh là vô cùng lớn, nó có thể đáp ứng được nguyện vọng mang lại giá trị phát triển cho cộng đồng và xã hội.</span>
                         </div>
-                        <div class="descs1 px-0">
-                            <ul class="mt-4">
-                                <li>
-                                    <span>Trên 2000 cá nhân thấu hiểu và phát triển bản thân. Giúp họ xác định được nghề nghiệp, hướng đi và mục tiêu trên con đường sự nghiệp.</span>
-                                </li>
-                                <li>
-                                    <span>Trên 300 gia đình yêu thương, gắn kết với nhau. Giúp cha mẹ hiểu con cái mình hơn và làm cách nào để định hướng đường đời cho con mình một cách đúng đắn</span>
-                                </li>
-                                <li>
-                                    <span>Trên 50 doanh nghiệp tại Hà Nội và các tỉnh phía Bắc định hình được hướng đi, thấu hiểu và điều phối nhân sự hợp lý để phát triển khả năng của nhân viên, từ đó hình thành sự phát triển của doanh nghiệp.</span>
-                                </li>
-                            </ul>
+                        <div class="descs1 px-0 mt-4">
+                            <span>Việc ứng dụng Thần số học vào trong đời sống sẽ giúp cho mỗi cá nhân có thể thấu hiểu được bản thân mình hơn, những bạn trẻ có thể tìm được điểm mạnh, hạn chế và trau dồi kiến thức để tạo cho mình giá trị bản thân từ sớm, sống có mục đích để cuộc đời trở nên thật ý nghĩa, giúp những thành viên trong gia đình thấu hiểu, đồng cảm và yêu thương lẫn nhau, doanh nghiệp có thể điều phối nhân sự mà không bỏ lỡ tài năng của từng cá nhân từ đó tạo nên nền móng vững chắc kéo theo sự phát triển doanh nghiệp lâu dài.</span>
                         </div>
-                        <div class="descs1 px-0">
-                            <span>Với mong muốn mang lại và cho đi những giá trị hữu ích và thiết thực giúp mọi người có thể sớm phát triển bản thân để đạt được đỉnh cao hạnh phúc, thành công và hướng tới sự an lạc sớm hơn tôi và HỌC VIỆN CỔ HỌC SALA đã hợp tác để cùng nhau lan tỏa những thông điệp tốt đẹp và truyền bá môn học này một cách rộng rãi và giúp cho mỗi cá nhân đều có thể tự làm chủ cuộc đời mình và đem lại nhiều lợi ích tốt đẹp cho cộng đồng.</span>
+                        <div class="descs1 px-0 mt-4">
+                            <span>Với mong muốn mang lại và cho đi những giá trị hữu ích, thiết thực giúp mọi người có thể sớm phát triển bản thân để đạt được đỉnh cao hạnh phúc, thành công và chạm tới Bình An thật sớm. Chuyên gia NGUYÊN HỒNG và HỌC VIỆN CỔ HỌC SALA đã hợp tác cùng nhau để truyền bá bộ môn này một cách rộng rãi và lan tỏa những thông điệp tốt đẹp đến từng người.</span>
+                        </div>
+                        <div class="descs1 px-0 mt-4">
+                            <span>Càng nghiên cứu và thực hành cô càng say mê hơn, mỗi lần tham vấn cô luôn nhận được những phản hồi tích cực giúp cô có thêm cho mình niềm tin chắc chắn về việc ứng dụng Thần số học vào trong đời sống để lan tỏa giá trị nhân văn này đến cộng đồng. Và vào đầu năm 2021 Chuyên gia NGUYÊN HỒNG đã cùng HỌC VIỆN CỔ HỌC SALA bắt đầu cho ra đời cuốn sách với tên gọi “Cuốn Sách Cuộc Đời” để giúp mỗi người có thể hiểu và ứng dụng được Thần số học vào trong cuộc sống. Sự ra đời của cuốn sách này hướng đến mục đích mỗi cá nhân đều có thể tự thấu hiểu và trau dồi bản thân, xác định được mục đích cuộc đời đối với chính mình và xã hội cùng những lời khuyên từ chuyên gia của SALA GROUP với từng chỉ số của họ. Mỗi cá nhân hay doanh nghiệp đều sẽ có “Cuốn sách cuộc đời” của riêng mình sẽ mang lại sự thấu hiểu từ sâu bên trong để tạo ra nội lực phát triển lâu dài.</span>
                         </div>
                         <div style="width: fit-content;" class="descs1 mx-auto px-0 my-5">
                             <img class="mw-100" src="/img/gioithieu/tuhao.png" alt="">
