@@ -28,14 +28,14 @@ class ExportController extends Controller
             return "error";
         }
 
-        $check = $request->user()->TraCuu()->where([
-            'name' => $dataPost['name'],
-            'birthdate' => $dataPost['birthday'],
-        ])->first();
+        // $check = $request->user()->TraCuu()->where([
+        //     'name' => $dataPost['name'],
+        //     'birthdate' => $dataPost['birthday'],
+        // ])->first();
 
-        if ($check) {
-            return $check;
-        }
+        // if ($check) {
+        //     return $check;
+        // }
 
         $data = $user->TraCuu()->create([
             'code' => Str::random(60),

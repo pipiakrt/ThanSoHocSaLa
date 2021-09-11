@@ -190,7 +190,7 @@ class UtilsComponent
         $nhanCach = $this->convertNumberGoc(array_sum($aryNoVowel));
         //
         $khuyetThieu = $this->getKhuyetThieu($aryVowel, $aryNoVowel, $duongDoi, $suMenh, $tamHon, $nhanCach);
-        $thapDinhCao = $this->getKimTuThap($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS), $duongDoi);
+        $thapDinhCao = $this->getKimTuThap($this->convertNumber($NgayS), $this->convertNumber($ThangS), $this->convertNumber($NamS), $this->convertNumber($duongDoi));
         if ($isFree) {
             return [
                 'duongDoi'  =>  $duongDoi,
@@ -476,36 +476,17 @@ class UtilsComponent
      */
     private function getKimTuThap($NgaySinh, $ThangSinh, $NamSinh, $duongDoi)
     {
-        if ($NgaySinh == 11) {
-            $NgaySinh = 2;
-        }
-        if ($NgaySinh == 22) {
-            $NgaySinh = 4;
-        }
-        if ($ThangSinh == 11) {
-            $ThangSinh = 2;
-        }
-        if ($ThangSinh == 22) {
-            $ThangSinh = 4;
-        }
-        if ($NamSinh == 11) {
-            $NamSinh = 2;
-        }
-        if ($NamSinh == 22) {
-            $NamSinh = 4;
-        }
         list($gd_tuoi_1, $gd_tuoi_2, $gd_tuoi_3, $gd_tuoi_4) = $this->getGiaiDoanTuoi($duongDoi);
-
         $level_1 = array($ThangSinh, $NgaySinh, $NamSinh, $gd_tuoi_1, $gd_tuoi_2);
         // build level 2
-        $Dinh_1 = $this->convertNumberGoc($NgaySinh + $ThangSinh);
-        $Dinh_2 = $this->convertNumberGoc($NgaySinh + $NamSinh);
+        $Dinh_1 = $this->convertNumber($NgaySinh + $ThangSinh);
+        $Dinh_2 = $this->convertNumber($NgaySinh + $NamSinh);
         $level_2 = array($Dinh_1, $Dinh_2, $gd_tuoi_3);
         // build level 3
-        $Dinh_3 = $this->convertNumber($this->convertNumberByPyramid($Dinh_1 + $Dinh_2));
+        $Dinh_3 = $this->convertNumberGoc($Dinh_1 + $Dinh_2);
         $level_3 = array($Dinh_3, $gd_tuoi_4);
         // build level 4
-        $Dinh_4 = $this->convertNumberGoc($this->convertNumberByPyramid($ThangSinh + $NamSinh));
+        $Dinh_4 = $this->convertNumber($ThangSinh + $NamSinh);
         $level_4 = array($Dinh_4);
         return [
             $level_1,
