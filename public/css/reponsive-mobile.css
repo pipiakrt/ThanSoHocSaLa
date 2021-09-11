@@ -302,6 +302,9 @@
 
 /* sm */
 @media (max-width: 768px) {
+    .custom-main-goisp .bg-yll h1 {
+        font-size: 24px;
+    }
     .thongtingoi .box-item {
         padding-top: 110px;
     }
