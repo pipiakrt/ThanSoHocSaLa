@@ -25,7 +25,7 @@
             <div class="container container-header2">
                 <div class="title text-center mb-0 mt-2 mb-md-4">
                     @isset($category)
-                        <h1 style="border-bottom: 1px solid; padding-bottom: 5px;">{{ $category->name }}</h1>
+                        <h1 style="border-bottom: 1px solid; padding-bottom: 5px; padding-top: 5px;">{{ $category->name }}</h1>
                     @else
                         <h1>TIN TỨC</h1>
                         <div class="br-cs1"></div>

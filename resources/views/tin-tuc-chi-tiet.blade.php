@@ -58,7 +58,7 @@
                                 <h3>{{ $post->name }}</h3>
                             </div>
                             <div class="desc fw-bould mb-4">
-                                <span>{{ $post->description }}</span>
+                                <span style="font-size: 21px;">{{ $post->description }}</span>
                             </div>
                         </div>
                         <div class="post-content pb-5 mx-2">
