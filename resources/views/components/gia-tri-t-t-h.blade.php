@@ -4,7 +4,7 @@
         <h2 class="text-dark titleheader title-h1">GIÁ TRỊ THẦN SỐ HỌC</h2>
     </div>
     <div id="particles-js"></div>
-    <div class="container container-header2 px-4">
+    <div class="container container-service px-4">
         <div class="main-block">
             <div class="content-main">
                 <div class="row g-0 align-items-center">
