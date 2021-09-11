@@ -32,6 +32,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="slug" class="col-2 col-form-label">Thứ tự</label>
+                                    <div class="col-10">
+                                        <input v-model="sort" class="form-control" type="search" placeholder="Thứ tự" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="categories" class="col-2 col-form-label">Danh mục</label>
                                     <div class="col-10">
                                         <select v-model="category" class="form-control" style="height: 35px">
@@ -156,6 +162,7 @@ export default {
             },
             modal: false,
             id: '',
+            sort: '',
             name: '',
             slug: '',
             avatar: '',
@@ -196,6 +203,7 @@ export default {
         })
         await axios('/api/posts/' + this.$route.params.id).then(res => {
             this.id = res.data.data.id
+            this.sort = res.data.data.sort
             this.name = res.data.data.name
             this.slug = res.data.data.slug
             this.avatar = res.data.data.image
@@ -284,6 +292,7 @@ export default {
         async submit(status) {
             let params = {
                 name: this.name,
+                sort: this.sort,
                 slug: this.slug,
                 author: this.author,
                 type: this.type,

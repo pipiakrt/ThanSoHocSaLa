@@ -23,6 +23,7 @@ class Post extends Model
         'category_id',
         'content',
         'status',
+        'sort',
     ];
 
     protected $casts = [
@@ -47,7 +48,7 @@ class Post extends Model
 
     public function filterOrder(EloquentBuilder $query, $value)
     {
-        $query->orderBy('id', $value);
+        $query->orderBy('sort', $value);
         return $query;
     }
 

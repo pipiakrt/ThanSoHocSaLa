@@ -32,6 +32,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="slug" class="col-2 col-form-label">Thứ tự</label>
+                                    <div class="col-10">
+                                        <input v-model="sort" class="form-control" type="search" placeholder="Thứ tự" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="slug" class="col-2 col-form-label">Tác giả</label>
                                     <div class="col-10">
                                         <input v-model="author" class="form-control" type="search" placeholder="Tác giả" />
@@ -156,6 +162,7 @@ export default {
             },
             modal: false,
             name: '',
+            sort: '',
             author: '',
             slug: '',
             avatar: '',
@@ -257,6 +264,7 @@ export default {
             let params = {
                 name: this.name,
                 slug: this.slug,
+                sort: this.sort,
                 author: this.author,
                 type: this.type,
                 image: this.avatar,
