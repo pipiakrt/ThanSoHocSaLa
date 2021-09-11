@@ -733,7 +733,9 @@ input[type="date"]:focus::before {
     margin: 25px 0;
 }
 .gioi-thieu .block-content .info {
+    text-align: justify;
     margin-top: 40px;
+    font-size: 20px;
 }
 .gioi-thieu .block-content .cr-title1 h4 {
     font-size: 24px;
