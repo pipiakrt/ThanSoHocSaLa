@@ -105,6 +105,9 @@
     text-align: justify;
     line-height: 1.6;
 }
+.text-center-LFSAD {
+    text-align: justify;
+}
 .thongtingoi ul {
     list-style: none; /* Remove default bullets */
 }
@@ -135,7 +138,7 @@
 .thongtingoi .itembg {
     background-color: #03402f;
     padding: 25px 0;
-    height: 150px;
+    height: 250px;
 }
 .thongtingoi .itembg.c {
     height: 200px;
@@ -179,7 +182,7 @@
 .thongtingoi .item .titlea {
     background-color: rgb(239, 239, 239);
     border-radius: 13px;
-    height: 124px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,8 +190,8 @@
 .thongtingoi .item .titlea .gr-tl {
     font-family: "Open Sans", sans-serif;
     color: #03402f;
-    font-size: 17px;
+    font-size: 21px;
     text-align: center;
     line-height: 1.6;
-    max-width: 750px;
+    max-width: 1080px;
 }

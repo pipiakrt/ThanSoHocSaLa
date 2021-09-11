@@ -81,7 +81,7 @@
         .thongtingoi.ct .item .title h4 {
             font-family: unset;
             color: rgb(19 19 19 / 88%);
-            font-size: 16px;
+            font-size: 20px;
         }
 
         .thongtingoi.ct .item .desc span {
@@ -159,7 +159,15 @@
             font-weight: bold;
             margin-top: 20px;
         }
-
+        .DGESGH2 {
+            font-size: 25px !important;
+        }
+        .DGESGH1 {
+            font-size: 31px !important;
+        }
+        .DGESGH {
+            font-size: 21px !important;
+        }
     </style>
 
     <main>
@@ -178,10 +186,10 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-xl-7">
                             <div class="row">
-                                <div class="col-lg-12 col-xl-8 text-center">
+                                <div class="col-lg-12 text-center">
                                     <h3 style="color: rgb(13, 98, 86);">THẦN SỐ HỌC PITAGO</h3>
-                                    <div><span class="fw-light">LUẬN GIẢI “Đường đời, vận mệnh, sự nghiệp,…” của chính bạn và người thân của bạn.</span></div>
-                                    <div><span class="fw-light">(Bí quyết để có được sự GIÀU CÓ, HẠNH PHÚC & BÌNH AN bền vững)</span></div>
+                                    <div><span class="fw-light DGESGH1">LUẬN GIẢI “Đường đời, vận mệnh, sự nghiệp,…” của chính bạn và người thân của bạn.</span></div>
+                                    <div><span class="fw-light DGESGH1">(Bí quyết để có được sự GIÀU CÓ, HẠNH PHÚC & BÌNH AN bền vững)</span></div>
                                     <div>
                                         <a href="/tra-cuu">
                                             <button class="btn-trcu">TRA CỨU CÁC CHỈ SỐ CỦA BẠN NGAY
@@ -199,8 +207,8 @@
             </div>
         </div>
         <div class="thongtingoi ct">
-            <div class="container px-0 px-lg-4">
-                <div class="maingoi px-0 px-lg-5">
+            <div class="container container-chuyengia px-0 px-lg-4">
+                <div class="maingoi px-0">
                     <div class="item px-0 px-md-4 pt-0 pt-md-4 py-4">
                         <div class="row justify-content-center">
                             <div class="col-12">
@@ -216,7 +224,7 @@
                                         <div class="d-none d-md-block">
                                             <div class="row g-0 justify-content-center">
                                                 @foreach ($product['options']['desc'] as $desc)
-                                                    <div class="col-sm-12 col-md-6 col-xl-4 px-4 position-relative bg-ctm">
+                                                    <div class="col-sm-12 col-md-6 col-xl-4 px-3 position-relative bg-ctm">
                                                         <div class="box-item">
                                                             <div class="image">
                                                                 <div class="dot-item"></div>
@@ -228,9 +236,9 @@
                                                                 @endforeach
                                                             </div>
                                                             <div class="desc">
-                                                                <ul class="list-group">
+                                                                <ul class="list-group text-center-LFSAD">
                                                                     @foreach ($desc['desc'] as $desc)
-                                                                        <li><span>{{ $desc['name'] }}</span></li>
+                                                                        <li><span class="DGESGH">{{ $desc['name'] }}</span></li>
                                                                     @endforeach
                                                                 </ul>
                                                             </div>
@@ -295,7 +303,7 @@
                                                         <div class="col-12 itembg">
                                                             <div class="row justify-content-center g-0">
                                                                 <div class="col-10">
-                                                                    <div class="fw-lighter desc1"><span>{{ $items['name'] }}</span></div>
+                                                                    <div class="fw-lighter desc1"><span class="DGESGH2">{{ $items['name'] }}</span></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -417,10 +425,10 @@
             }
         </style>
         <div class="thongtingoisp">
-            <div class="container px-4">
+            <div class="container container-chuyengia px-4">
                 <div class="row g-0">
                     <div class="col-md-9">
-                        <div class="group-text px-4 py-5">
+                        <div class="group-text DGESGH text-center-LFSAD px-4 py-5">
                             <h5 class="text-center">BẮT ĐẦU HÀNH TRÌNH KHÁM PHÁ CÁC CHỈ SỐ CỦA BẠN</h5>
                             <div>
                                 <span>Mục tiêu số 1 của Thần Số Học SALA là giúp bạn <b>THẤU HIỂU</b> được cốt lõi của bản thân, <b>KHÁM PHÁ</b> ra những khả năng còn đang tiềm ẩn trong bạn mà có thể bấy lâu bạn chưa biết để <b>KIẾN TẠO</b> nên <b>GIÁ TRỊ</b> của bạn. Trên con đường phát triển giá trị bản thân, dù bạn có tạo nên những thành quả nhỏ nhất đó cũng là điều đáng trân trọng. </span>
@@ -433,7 +441,7 @@
                     <div class="col-md-3">
                         <div class="px-4 py-5 text-center">
                             <h1 class="fw-bold text-danger">10.000.000+</h1>
-                            <div class="mt-4">
+                            <div class="mt-4 DGESGH text-center-LFSAD">
                                 <span>NGƯỜI ĐÃ TÌM RA CON ĐƯỜNG DẪN TỚI THÀNH CÔNG, GIÀU CÓ & BÌNH AN THÔNG QUA THẦN SỐ HỌC PITAGO</span>
                             </div>
                         </div>
@@ -441,12 +449,12 @@
                     <div class="col-md-12">
                         <div class="px-4 py-5 group-text-2 text-white">
                             <div class="row g-0 justify-content-center">
-                                <div class="col-md-9">
+                                <div class="col-md-11">
                                     <h3 class="text-center">THẦN SỐ HỌC CHO MỘT NGƯỜI LÀ GÌ</h3>
-                                    <div class="mt-4">
+                                    <div class="mt-4 DGESGH text-center-LFSAD">
                                         <span>Thần số học cho một người là một TẬP SỐ, gồm các chỉ số khác nhau, không chỉ có chỉ số đường đời, hay sứ mệnh mà còn rất nhiều các chỉ số khác nữa. Những chỉ số khi tập hợp với nhau sẽ phản ánh tính cách, suy nghĩ, nội tâm, những sự kiện, sự việc sẽ xảy đến trong cuộc đời của mỗi người.</span>
                                     </div>
-                                    <div class="mt-4">
+                                    <div class="mt-4 DGESGH text-center-LFSAD">
                                         <span>Một bản Thần Số Học hoàn chỉnh bao gồm các con số từ 1 đến 9 và mỗi con số ở mỗi vị trí khác nhau phản ánh một vai trò nhất định. Trong đó đường đời hay sứ mệnh chỉ là một vị trí mà thôi. Sẽ rất phiến diện nếu nói bản thân mình là số này hay số kia. Do vậy, nếu mọi người muốn tìm hiểu về thần số học hãy tìm hiểu một cách CỤ THỂ và CHÍNH XÁC.</span>
                                     </div>
                                 </div>
