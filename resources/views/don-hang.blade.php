@@ -95,7 +95,7 @@
                 <div class="card card-body my-3">
                     <div class="media text-lg-left row g-0 g-md-4">
                         <div class="col-md-3 col-lg-2 text-center">
-                            <div class="mr-2 mb-3 mb-lg-0"> <img class="mw-100" src="{{ $item->Product->image ? $item->Product->image : '/img/kh/1.jpg' }}" alt=""> </div>
+                            <div class="mr-2 mb-3 mb-lg-0"> <img class="mw-100" src="{{ $item->Product ? $item->Product->image : '/img/kh/1.jpg' }}" alt=""> </div>
                         </div>
                         <div class="col-md-6 col-lg-8">
                             <div class="media-body">
