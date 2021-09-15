@@ -65,7 +65,7 @@ Route::get('/gio-hang/xoa/{slug}', [CartController::class, 'destroy']);
 Route::get('/dat-hang', [OrderController::class, 'nhapdiachi']);
 Route::post('/thanh-toan', [OrderController::class, 'thanhtoan']);
 Route::post('/checking', [CheckingController::class, 'store']);
-Route::get('/ket-qua-thanh-toan/{code}', [AccountController::class, 'ketquathanhtoan']);
+Route::get('/ket-qua-thanh-toan', [OrderController::class, 'ketquathanhtoan']);
 
 Route::group(['middleware' => 'login'], function(){
     Route::prefix('/tai-khoan')->group(function () {
@@ -75,6 +75,7 @@ Route::group(['middleware' => 'login'], function(){
         Route::get('/dat-hang', [CartController::class, 'dathang']);
         Route::post('/thanh-toan', [ProductController::class, 'thanhtoan']);
         Route::get('/thanh-toan', [AccountController::class, 'thanhtoan']);
+        Route::get('/ket-qua-thanh-toan/{code}', [AccountController::class, 'ketquathanhtoan']);
         Route::get('/lich-su-tra-cuu', [AccountController::class, 'lichsutracuu']);
         Route::get('/export/{id}', [ExportController::class, 'export']);
         Route::get('/export_v2/{id}/{name}', [ExportController::class, 'ketqualichsutracuu']);

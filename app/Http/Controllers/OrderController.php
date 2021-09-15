@@ -96,6 +96,10 @@ class OrderController extends Controller
                 }
             }
         }
-        return redirect("/gio-hang")->with("success", "Cảm ơn bạn đã đặt hàng tại Thần số học sala, chúng tôi sẽ liên hệ bạn sớm nhất để tiến hành xác minh và kích hoạt đơn hàng.");
+        return redirect("/ket-qua-thanh-toan");
+    }
+
+    public function ketquathanhtoan() {
+        return view('ket-qua-thanh-toan');
     }
 }

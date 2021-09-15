@@ -71,6 +71,10 @@ class AccountController extends Controller
         return redirect('/tai-khoan/don-hang/')->with('msg', 'Gói sản phẩm gia hạn thành công, thanh toán để kích hoạt gói!');
     }
 
+    public function ketquathanhtoan() {
+        return view('ket-qua-thanh-toan');
+    }
+
     /**
      * Display a listing of the resource.
      *
