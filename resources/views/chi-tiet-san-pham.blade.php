@@ -339,7 +339,7 @@
         </div>
         <style>
             .dangkytth {
-                background-color: #097364;
+                /* background-color: #097364; */
             }
 
             .dangkytth .form-input {
@@ -369,12 +369,20 @@
                 font-size: 40px;
                 letter-spacing: 2px;
                 font-family: 'iCiel DIN Pro Condensed';
+                color: rgb(13, 99, 87);
             }
 
             .dangkytth .title-2 {
                 font-family: 'iCiel DIN Pro Condensed';
                 font-size: 30px;
                 line-height: 1.5;
+                color: rgb(13, 99, 87);
+            }
+
+            .fsadfsd {
+                background: #0d6357;
+                padding-bottom: 13px;
+                border-radius: 15px;
             }
 
             .dangkytth .dangkyngay {
@@ -417,6 +425,14 @@
                 margin-top: 20px;
             }
         </style>
+        <div style="background-color: rgb(13, 99, 87);">
+            <div class="container text-center text-white py-4">
+                <h1 class="fw-bold mb-3">THẦN SỐ HỌC SALA</h1>
+                <h3>Khơi dậy ĐAM MÊ và KHÁT VỌNG cháy bỏng trong bạn</h3>
+                <h3>Xác định LẼ SỐNG, SỨ MỆNH, Ý NGHĨA cuộc đời để sống một đời trọn vẹn</h3>
+                <h4 class="mt-3">“Hãy thấu hiểu cốt lõi của bản thân để kiến tạo nên bản sắc cá nhân của riêng bạn”</h4>
+            </div>
+        </div>
         <div class="thongtingoisp">
             <div class="container container-chuyengia px-4">
                 <div class="row g-0">
@@ -596,7 +612,7 @@
                 </div>
             </div>
         </div>
-        <div class="dangkytth text-white py-5 mb-3 mb-md-5">
+        <div class="dangkytth text-white py-5 mb-3 pb-3">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 text-center">
@@ -618,7 +634,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 fsadfsd">
                         <form method="post" action="/tu-van">
                             @csrf
                             <div class="form-input">
@@ -640,6 +656,9 @@
                                 <button type="submit" class="dangkyngay w-100">ĐĂNG KÝ NGAY !</button>
                             </div>
                         </form>
+                    </div>
+                    <div class="col-12">
+                        <h3 class="text-dark mt-5 text-center">Chúng tôi CAM KẾT khi bạn có trong tay "CUỐN SÁCH CUỘC ĐỜI" và đi theo đúng lộ trình mà HỌC VIỆN CỔ HỌC chia sẻ Cuộc đời bạn sẽ thay đổi tích cực</h3>
                     </div>
                 </div>
             </div>

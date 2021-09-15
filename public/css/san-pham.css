@@ -71,7 +71,7 @@
     font-weight: 500;
 }
 .thongtingoi {
-    background-color: #e7f1e9;
+    /* background-color: #e7f1e9; */
 }
 .thongtingoi .item .hd1 {
     font-family: "Open Sans", sans-serif;
@@ -135,9 +135,9 @@
     right: 0;
 }
 .thongtingoi .itembg {
-    background-color: #03402f;
     padding: 25px 0;
     height: 250px;
+    background-color: rgb(13, 99, 87);
 }
 .thongtingoi .itembg.c {
     height: 200px;
