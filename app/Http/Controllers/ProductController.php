@@ -83,15 +83,6 @@ class ProductController extends Controller
             }
         }
 
-        return redirect('/tai-khoan/don-hang')->with('msg', 'Đặt hàng hoàn tất, hệ thống đã gửi email xác nhận. vui lòng check mail để thanh toán gói sản phẩm!');
-        // else if ($check->status == 1) {
-        //     return redirect('/tai-khoan/dich-vu/')->with('msg', 'Gói sản phẩm đang hoạt động, liên hệ 0987654321 để nâng cấp gói');
-        // }
-        // else if ($check->status == 0) {
-        //     return redirect('/tai-khoan/gio-hang/')->with('msg', 'Gói sản phẩm đã có trong giỏ hàng, thanh toán để kích hoạt gói!');
-        // }
-        // else {
-        //     return redirect('/tai-khoan/gio-hang/')->with('msg', 'Gói sản phẩm đã hết hạn, nhấn gia hạn hoạc liên hệ 0987654321 để gia hạn gói!');
-        // }
+        return redirect("/tai-khoan/ket-qua-thanh-toan/$order->code");
     }
 }

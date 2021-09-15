@@ -78,13 +78,13 @@
                         <div class="col-md-3 mb-3">
                             <label for="name">Họ Tên</label>
                             <div class="input-group">
-                                <input type="text" name="name" class="form-control" id="name" />
+                                <input type="text" name="name" value="{{ old('name') }}" class="form-control" id="name" />
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="username">Địa Chỉ Email</label>
                             <div class="input-group">
-                                <input type="text" name="email" class="form-control" id="username" />
+                                <input type="text" name="email" value="{{ old('email') }}" class="form-control" id="username" />
                             </div>
                         </div>
                         <div class="col-md-5 mb-3">
@@ -110,12 +110,12 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="birthdate">Ngày sinh</label>
-                            <input type="text" name="birthdate" class="form-control" id="birthdate" required />
+                            <input type="text" name="birthdate" value="{{ old('birthdate') }}" class="form-control" id="birthdate" required />
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="phone">Điện thoại</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" name="phone" id="phone" required />
+                                <input type="text" class="form-control" value="{{ old('phone') }}" name="phone" id="phone" required />
                             </div>
                         </div>
                     </div>
@@ -148,13 +148,13 @@
                         </div>
                         <div class="mb-3">
                             <label for="address">Địa chỉ cụ thể</label>
-                            <textarea class="form-control" id="address" name="address" rows="5" required></textarea>
+                            <textarea class="form-control" id="address" name="address" rows="5" required>{{ old('address') }}</textarea>
                         </div>
                     </template>
 
                     <div class="mb-3">
                         <label for="note">Ghi chú</label>
-                        <textarea class="form-control" id="note" name="note" rows="5"></textarea>
+                        <textarea class="form-control" id="note" name="note" rows="5">{{ old('note') }}</textarea>
                     </div>
 
                     <div class="mb-3">
