@@ -17,7 +17,6 @@
             background: rgb(255, 255, 255);
             padding: 10px 15px 0px;
             display: flex;
-            margin-right: 15px;
             flex-shrink: 0;
         }
 
@@ -26,7 +25,6 @@
         }
 
         .eXkgeq .order-info__content {
-            width: 550px;
             padding-left: 0px;
         }
 
@@ -87,7 +85,6 @@
         }
 
         .eXkgeq .right {
-            margin-left: 15px;
         }
 
         .eXkgeq .right .tikinow-banner {
@@ -98,12 +95,12 @@
     <div class="container">
         <div class="row eXkgeq py-4">
             <div class="col-md-9">
-                <div class="order-info py-4 row">
+                <div class="order-info py-4 row me-0 me-md-4">
                     <div class="col-md-3">
                         <img src="https://salt.tikicdn.com/ts/upload/63/fc/e8/50c078ea9bf9a4627176d3574db7a446.jpg" height="178" width="195" alt="Image" />
                     </div>
                     <div class="col-md-9">
-                        <div class="order-info__content">
+                        <div class="order-info__content w-100">
                             <h3 class="thanks-msg">Cảm ơn bạn đã mua hàng tại Thansohocsala!</h3>
                             <p>Mã số đơn hàng của bạn:</p>
                             <div class="order-number">#{{ $order["code"] }}</div>
@@ -125,7 +122,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="right">
+                <div class="right ms-0 ms-md-3">
                     <a target="_blank" class="tikinow-banner" href="#"><img src="https://pipe.tikicdn.com/media/upload/2018/10/05/32a68799a8a98cd8529e220db7edbbfa.png" alt="" /></a>
                 </div>
             </div>
