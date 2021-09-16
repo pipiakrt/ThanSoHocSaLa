@@ -169,15 +169,15 @@
                     <div class="col-md-3 d-none d-md-block"></div>
                     <div class="col-md-9 bg-white">
                         <div class="s-main h-100">
-                            <div class="pt-4">
+                            <div class="py-5">
                             </div>
-                            <div class="ms-0 ms-md-5 mt-5">
+                            <div class="ms-0 ms-md-5 mt-5 pt-4">
                                 <div>
                                     <h2><b>Cuốn sách cuộc đời</b></h2>
                                     <h2><b>khám phá 19 cái "chạm nhẹ" thần kỳ</b></h2>
                                 </div>
                                 <div class="mt-3 me-5">
-                                    <span class="fw-lighter fs-4 fst-italic">Cuốn sách cuộc đời Thật khó tin đúng không? Hãy để chúng tôi chứng minh cho bạn. Nếu “<b>Cuốn sách cuộc đời</b>” của chúng tôi thiết kế riêng cho bạn không giúp bạn cảm thấy tốt lên mỗi ngày, 100% tiền đặt hàng sẽ được hoàn lại ngay.</span>
+                                    <span class="fw-lighter fs-4 fst-italic">Thật khó tin đúng không? Hãy để chúng tôi chứng minh cho bạn. Nếu “<b>Cuốn sách cuộc đời</b>” của chúng tôi thiết kế riêng cho bạn không giúp bạn cảm thấy tốt lên mỗi ngày, 100% tiền đặt hàng sẽ được hoàn lại ngay.</span>
                                 </div>
                                 <div class="d-flex mt-5">
                                     <div class="btn-a1">
