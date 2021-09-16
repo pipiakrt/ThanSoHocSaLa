@@ -179,10 +179,13 @@
                                 <div class="mt-3 me-0 me-md-5">
                                     <span class="fw-lighter fs-4 fst-italic">Thật khó tin đúng không? Hãy để chúng tôi chứng minh cho bạn. Nếu “<b>Cuốn sách cuộc đời</b>” của chúng tôi thiết kế riêng cho bạn không giúp bạn cảm thấy tốt lên mỗi ngày, 100% tiền đặt hàng sẽ được hoàn lại ngay.</span>
                                 </div>
-                                <div class="row g-0 mb-3 mt-3 mt-md-5">
-                                    <div class="col-12 col-md-3">
+                                <div class="d-block d-md-none p-3 s-height fix-center">
+                                    <img class="mh-100 mw-100 drop-biasach" src="https://w.ladicdn.com/s750x900/5da96e02ecb4f20339f4c96d/z2716369956721_a17c2c0da89549aabce9938f801a7b26-20210914035702.jpg" alt="">
+                                </div>
+                                <div class="row g-3 g-md-0 mb-3 mt-3 mt-md-5">
+                                    <div class="col-6 col-md-3">
                                         <a href="#cacbuocdk">
-                                            <div class="btn-a1">
+                                            <div class="btn-a1 mw-100">
                                                 ĐĂNG KÝ NGAY
                                                 <svg style="margin-bottom: 5px; margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="20.0533px" height="24.7543px" preserveAspectRatio="none" viewBox="0 0 1536 1896.0833" class="" fill="#0d6256">
                                                     <path d="M1472 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H117q-52 0-84.5-37.5T0 1024V896q0-53 32.5-90.5T117 768h704L528 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z"></path>
@@ -190,9 +193,9 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-12 col-md-3">
+                                    <div class="col-6 col-md-3">
                                         <a href="#xemvideo">
-                                            <div class="btn-a2 ms-0 ms-md-3 mt-3 mt-md-0">XEM VIDEO &nbsp; &nbsp;
+                                            <div class="btn-a2 mw-100 ms-0 ms-md-3 mt-0">XEM VIDEO &nbsp; &nbsp;
                                                 <svg width="29" height="29" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 24 24" class="" fill="rgba(255, 255, 255, 1)"> <path d="M12,20.14C7.59,20.14 4,16.55 4,12.14C4,7.73 7.59,4.14 12,4.14C16.41,4.14 20,7.73 20,12.14C20,16.55 16.41,20.14 12,20.14M12,2.14A10,10 0 0,0 2,12.14A10,10 0 0,0 12,22.14A10,10 0 0,0 22,12.14C22,6.61 17.5,2.14 12,2.14M10,16.64L16,12.14L10,7.64V16.64Z"></path> </svg>
                                             </div>
                                         </a>
@@ -203,7 +206,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5 s-height">
+            <div class="col-md-5 s-height d-none d-md-block">
                 <div class="row g-0">
                     <div class="col-md-9">
                         <div class="bg-white p-3 s-height fix-center">
@@ -499,6 +502,9 @@
             }
             .fs-max-1 {
                 font-size: 35px;
+            }
+            .btn-a1, .btn-a2 {
+                font-size: 18px;
             }
         }
     </style>
