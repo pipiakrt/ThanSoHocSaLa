@@ -506,6 +506,9 @@
             .btn-a1, .btn-a2 {
                 font-size: 18px;
             }
+            .vong-tron {
+                opacity: 0.4;
+            }
         }
     </style>
     <div class="cs-gia-tri">
