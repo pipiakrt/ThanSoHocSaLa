@@ -169,30 +169,34 @@
                     <div class="col-md-3 d-none d-md-block"></div>
                     <div class="col-md-9 bg-white">
                         <div class="s-main h-100">
-                            <div class="py-5">
+                            <div class="py-5 d-none d-md-block">
                             </div>
-                            <div class="ms-0 ms-md-5 mt-5 pt-4 p-r">
+                            <div class="ms-0 ms-md-5 mt-5 pt-4 p-r px-3 px-md-0">
                                 <div>
                                     <h2><b>Cuốn sách cuộc đời</b></h2>
                                     <h2><b>khám phá 19 cái "chạm nhẹ" thần kỳ</b></h2>
                                 </div>
-                                <div class="mt-3 me-5">
+                                <div class="mt-3 me-0 me-md-5">
                                     <span class="fw-lighter fs-4 fst-italic">Thật khó tin đúng không? Hãy để chúng tôi chứng minh cho bạn. Nếu “<b>Cuốn sách cuộc đời</b>” của chúng tôi thiết kế riêng cho bạn không giúp bạn cảm thấy tốt lên mỗi ngày, 100% tiền đặt hàng sẽ được hoàn lại ngay.</span>
                                 </div>
-                                <div class="d-flex mt-5">
-                                    <a href="#cacbuocdk">
-                                        <div class="btn-a1">
-                                            ĐĂNG KÝ NGAY
-                                            <svg style="margin-bottom: 5px; margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="20.0533px" height="24.7543px" preserveAspectRatio="none" viewBox="0 0 1536 1896.0833" class="" fill="#0d6256">
-                                                <path d="M1472 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H117q-52 0-84.5-37.5T0 1024V896q0-53 32.5-90.5T117 768h704L528 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z"></path>
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a href="#xemvideo">
-                                        <div class="btn-a2 ms-3">XEM VIDEO &nbsp; &nbsp;
-                                            <svg width="29" height="29" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 24 24" class="" fill="rgba(255, 255, 255, 1)"> <path d="M12,20.14C7.59,20.14 4,16.55 4,12.14C4,7.73 7.59,4.14 12,4.14C16.41,4.14 20,7.73 20,12.14C20,16.55 16.41,20.14 12,20.14M12,2.14A10,10 0 0,0 2,12.14A10,10 0 0,0 12,22.14A10,10 0 0,0 22,12.14C22,6.61 17.5,2.14 12,2.14M10,16.64L16,12.14L10,7.64V16.64Z"></path> </svg>
-                                        </div>
-                                    </a>
+                                <div class="row g-0 mb-3 mt-3 mt-md-5">
+                                    <div class="col-12 col-md-3">
+                                        <a href="#cacbuocdk">
+                                            <div class="btn-a1">
+                                                ĐĂNG KÝ NGAY
+                                                <svg style="margin-bottom: 5px; margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="20.0533px" height="24.7543px" preserveAspectRatio="none" viewBox="0 0 1536 1896.0833" class="" fill="#0d6256">
+                                                    <path d="M1472 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H117q-52 0-84.5-37.5T0 1024V896q0-53 32.5-90.5T117 768h704L528 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z"></path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-12 col-md-3">
+                                        <a href="#xemvideo">
+                                            <div class="btn-a2 ms-0 ms-md-3 mt-3 mt-md-0">XEM VIDEO &nbsp; &nbsp;
+                                                <svg width="29" height="29" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 24 24" class="" fill="rgba(255, 255, 255, 1)"> <path d="M12,20.14C7.59,20.14 4,16.55 4,12.14C4,7.73 7.59,4.14 12,4.14C16.41,4.14 20,7.73 20,12.14C20,16.55 16.41,20.14 12,20.14M12,2.14A10,10 0 0,0 2,12.14A10,10 0 0,0 12,22.14A10,10 0 0,0 22,12.14C22,6.61 17.5,2.14 12,2.14M10,16.64L16,12.14L10,7.64V16.64Z"></path> </svg>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +219,11 @@
         <div class="text-center pt-5 pb-4" id="xemvideo">
             <h1>Cuốn sách cuộc đời  - “bức tranh”  toàn diện về cuộc đời của</h1>
             <h1 class="fs-max-1 mb-0 mt-4">CHÍNH BẠN</h1>
-            <iframe class="mt-4 youtube-responsive" width="730" height="411" src="https://www.youtube.com/embed/Q3ooMw9WsZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <iframe class="mt-4 youtube-responsive" width="100%" height="411" src="https://www.youtube.com/embed/Q3ooMw9WsZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </div>
     <div class="ss-2 py-5">
@@ -250,7 +258,7 @@
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <img class="mw-100 mh-100" src="https://w.ladicdn.com/s900x900/5da96e02ecb4f20339f4c96d/banner-problem-20210910104414.jpg" alt="">
+                        <img class="mw-100 mh-100 mt-4 mt-md-0" src="https://w.ladicdn.com/s900x900/5da96e02ecb4f20339f4c96d/banner-problem-20210910104414.jpg" alt="">
                     </div>
                 </div>
                 <div class="btn-b1 mx-auto mt-5">ĐĂNG KÝ NGAY&nbsp;
@@ -480,6 +488,18 @@
             background: white;
             border-radius: 55px;
             margin-top: 50px;
+        }
+        @media (max-width: 768px) {
+            .s-height {
+                max-height: 725.639px;
+                height: unset;
+            }
+            .s-main {
+                border-bottom-right-radius: 0;
+            }
+            .fs-max-1 {
+                font-size: 35px;
+            }
         }
     </style>
     <div class="cs-gia-tri">
