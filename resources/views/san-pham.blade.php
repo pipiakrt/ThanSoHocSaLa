@@ -366,6 +366,9 @@
             color: rgb(13, 99, 87);
         }
 
+        .dangkytth .title-2 span {
+            font-family: 'iCiel DIN Pro Condensed';
+        }
         .dangkytth .title-2 {
             font-family: 'iCiel DIN Pro Condensed';
             font-size: 30px;
@@ -430,6 +433,7 @@
             align-items: center;
             padding-top: 15px;
             flex-wrap: wrap;
+            margin: auto;
         }
         .group-item-ssx h3 {
             color: rgb(0, 0, 0);
@@ -553,7 +557,7 @@
                 </div>
                 <div class="col-md-9">
                     <div class="container">
-                        <div class="row text-center mb-4">
+                        <div class="row text-center justify-content-center mb-4">
                             <div class="col-md-6">
                                 <div class="group-item-ssx">
                                     <h3 class="text-dark">GÓI CÁ NHÂN</h3>
@@ -563,7 +567,7 @@
                             <div class="col-md-6">
                                 <div class="group-item-ssx">
                                     <h3 class="text-dark">GÓI DOANH NGHIỆP</h3>
-                                    <h2>950.000 VNĐ</h2>
+                                    <h2>1.300.000 VNĐ</h2>
                                 </div>
                             </div>
                         </div>
@@ -572,16 +576,16 @@
                 <div class="col-md-5">
                     <ul>
                         <li>
-                            <h4 class="title-2">Bước 1: Đăng ký thông tin theo form</h4>
+                            <h4 class="title-2"><span class="text-dark">Bước 1:</span> Đăng ký thông tin theo form</h4>
                         </li>
                         <li>
-                            <h4 class="title-2">Bước 2: Đặt lịch với nhân viên tư vấn</h4>
+                            <h4 class="title-2"><span class="text-dark">Bước 2:</span> Đặt lịch với nhân viên tư vấn</h4>
                         </li>
                         <li>
-                            <h4 class="title-2">Bước 3: Nhận "Cuốn sách cuộc đời" của riêng bạn</h4>
+                            <h4 class="title-2"><span class="text-dark">Bước 3:</span> Nhận "Cuốn sách cuộc đời" của riêng bạn</h4>
                         </li>
                         <li>
-                            <h4 class="title-2">Bước 4: Tham vấn cùng chuyên gia</h4>
+                            <h4 class="title-2"><span class="text-dark">Bước 4:</span> Tham vấn cùng chuyên gia</h4>
                         </li>
                     </ul>
                 </div>
