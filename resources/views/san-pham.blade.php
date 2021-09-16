@@ -171,7 +171,7 @@
                         <div class="s-main h-100">
                             <div class="py-5 d-none d-md-block">
                             </div>
-                            <div class="ms-0 ms-md-5 mt-5 pt-4 p-r px-3 px-md-0">
+                            <div class="ms-0 ms-md-5 pt-4 p-r px-3 px-md-0 mt-0 md-5">
                                 <div>
                                     <h2><b>Cuốn sách cuộc đời</b></h2>
                                     <h2><b>khám phá 19 cái "chạm nhẹ" thần kỳ</b></h2>
@@ -219,8 +219,8 @@
         </div>
     </div>
     <div class="container">
-        <div class="text-center pt-5 pb-4" id="xemvideo">
-            <h1>Cuốn sách cuộc đời  - “bức tranh”  toàn diện về cuộc đời của</h1>
+        <div class="text-center pt-4 pt-md-5 pb-4 mt-0 mt-md-4 mt-md-0" id="xemvideo">
+            <h1 class="rp-htss">Cuốn sách cuộc đời  - “bức tranh”  toàn diện về cuộc đời của</h1>
             <h1 class="fs-max-1 mb-0 mt-4">CHÍNH BẠN</h1>
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -230,7 +230,7 @@
         </div>
     </div>
     <div class="ss-2 py-5">
-        <h1 class="text-center">Bạn có đang Bạn đang gặp khó khăn ?</h1>
+        <h1 class="text-center">Bạn có đang gặp khó khăn ?</h1>
         <div class="mt-4">
             <div class="container">
                 <div class="row g-0">
@@ -276,15 +276,30 @@
         <div class="container">
             <div class="row justify-content-center mb-4">
                 <div class="col-md-9">
-                    <div id="spchung" class="owl-carousel owl-theme">
-                        <div class="item">
-                            <img class="w-100" src="https://w.ladicdn.com/s1300x650/5da96e02ecb4f20339f4c96d/2-20210914031711.png" alt="">
+                    <div class="d-none d-md-block">
+                        <div id="spchung" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img class="w-100" src="https://w.ladicdn.com/s1300x650/5da96e02ecb4f20339f4c96d/2-20210914031711.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="w-100" src="https://w.ladicdn.com/s1300x650/5da96e02ecb4f20339f4c96d/2-20210915031605.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="w-100" src="https://w.ladicdn.com/s1300x650/5da96e02ecb4f20339f4c96d/3-20210914031711.png" alt="">
+                            </div>
                         </div>
-                        <div class="item">
-                            <img class="w-100" src="https://w.ladicdn.com/s1300x650/5da96e02ecb4f20339f4c96d/2-20210915031605.png" alt="">
-                        </div>
-                        <div class="item">
-                            <img class="w-100" src="https://w.ladicdn.com/s1300x650/5da96e02ecb4f20339f4c96d/3-20210914031711.png" alt="">
+                    </div>
+                    <div class="d-block d-md-none">
+                        <div id="spchung_mb" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img class="w-100" src="https://w.ladicdn.com/s750x600/5da96e02ecb4f20339f4c96d/4-20210914031711.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="w-100" src="https://w.ladicdn.com/s750x600/5da96e02ecb4f20339f4c96d/6-20210914031711.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="w-100" src="https://w.ladicdn.com/s750x600/5da96e02ecb4f20339f4c96d/5-20210914031711.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -299,7 +314,7 @@
     </div>
     <div class="ss-3">
         <div class="container">
-            <h1 class="text-center mb-5 pt-4">“Cuốn sách cuộc đời” dành cho ai?</h1>
+            <h1 class="text-center mb-3 mb-md-5 pt-4 rp-text-11">“Cuốn sách cuộc đời” dành cho ai?</h1>
             <div class="row g-0">
                 <div class="col-md-4">
                     <div class="d-flex">
@@ -494,20 +509,54 @@
         }
         @media (max-width: 768px) {
             .s-height {
-                max-height: 725.639px;
+                max-height: unset;
                 height: unset;
             }
             .s-main {
                 border-bottom-right-radius: 0;
             }
             .fs-max-1 {
-                font-size: 35px;
+                font-size: 50px;
             }
             .btn-a1, .btn-a2 {
                 font-size: 18px;
             }
             .vong-tron {
                 opacity: 0.4;
+            }
+            .rp-htss {
+                margin: 0;
+                font-size: 27px;
+            }
+            .text-sar1 {
+                padding-right: 0;
+                font-size: 21px;
+            }
+            .rp-text-11 {
+                font-size: 33px;
+            }
+            .cs-gia-tri .row.g-0.px-0.px-lg-5 {
+                margin-top: 0;
+            }
+            .cs-gia-tri .gia-tri-cot-loi .block {
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+            .dangkytth h1 {
+                font-size: 40px;
+            }
+            .group-item-ssx h3 {
+                font-size: 28px;
+            }
+            .group-item-ssx h2 {
+                font-size: 33px;
+            }
+            .dangkytth .title-2 {
+                font-size: 22px;
+            }
+            .fdsf {
+                line-height: 1.6;
+                font-size: 20px;
             }
         }
     </style>
@@ -575,14 +624,14 @@
             <div class="py-3"></div>
         </div>
     </div>
-    <div class="dangkytth text-white py-5 mb-3 pb-3" id="cacbuocdk">
+    <div class="dangkytth text-white py-md-5 mb-3 pb-3" id="cacbuocdk">
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 text-center">
                     <h1 class="text-dark">CÁC BƯỚC ĐĂNG KÝ</h1>
                 </div>
                 <div class="col-md-9">
-                    <div class="container">
+                    <div class="container p-0">
                         <div class="row text-center justify-content-center mb-4">
                             <div class="col-md-6">
                                 <div class="group-item-ssx">
@@ -590,7 +639,7 @@
                                     <h2>950.000 VNĐ</h2>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mt-3 mt-md-0">
                                 <div class="group-item-ssx">
                                     <h3 class="text-dark">GÓI DOANH NGHIỆP</h3>
                                     <h2>1.300.000 VNĐ</h2>
@@ -639,7 +688,7 @@
                     </form>
                 </div>
                 <div class="col-12">
-                    <h3 class="text-dark mt-5 text-center">Chúng tôi <b>CAM KẾT</b> khi bạn có trong tay "<b>CUỐN SÁCH CUỘC ĐỜI</b>" và đi theo đúng lộ trình mà <b>HỌC VIỆN CỔ HỌC SALA</b> chia sẻ Cuộc đời bạn sẽ thay đổi tích cực</h3>
+                    <h3 class="text-dark mt-4 mt-md-5 text-center fdsf">Chúng tôi <b>CAM KẾT</b> khi bạn có trong tay "<b>CUỐN SÁCH CUỘC ĐỜI</b>" và đi theo đúng lộ trình mà <b>HỌC VIỆN CỔ HỌC SALA</b> chia sẻ Cuộc đời bạn sẽ thay đổi tích cực</h3>
                 </div>
             </div>
         </div>
