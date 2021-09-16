@@ -99,7 +99,10 @@
                         </div>
                         <div class="col-md-6 col-lg-8">
                             <div class="media-body">
+                                <h6 class="media-title font-weight-semibold"> Mã đơn hàng: #<a href="#" data-abc="true">{{ $item->code }}</a> </h6>
                                 <h6 class="media-title font-weight-semibold"> <a href="#" data-abc="true">{{ $item->Product->name }}</a> </h6>
+                                <h6 class="media-title font-weight-semibold"> Ngày đặt hàng: <a href="#" data-abc="true">{{ $item->created_at }}</a> </h6>
+                                <h6 class="media-title font-weight-semibold"> Loại hình đặt hàng: <a href="#" data-abc="true">{{ $item->payment }}</a> </h6>
                                 <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
                                     @if ($item->status == 1)
                                         <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">Bàn còn {{ request()->user()->License->number }} lượt tra cứu</a></li>
@@ -121,6 +124,11 @@
                                     <h6 class="mb-0 mt-2 bg-primary text-white chips">Chưa thanh toán</h6>
                                     <a href="tel:0942384382">
                                         <h6 class="mb-0 mt-2 bg-danger text-white chips">Gọi Hotline</h6>
+                                        @if ($item->status == 0)
+                                            <a href="/tai-khoan/don-hang/{{ $item->code }}/huy-don">
+                                                <h6 class="mb-0 mt-2 bg-danger text-white chips">Hủy đơn</h6>
+                                            </a>
+                                        @endif
                                     </a>
                                 @elseif ($item->status == 2)
                                     <h6 class="mb-0 mt-2 bg-success text-white chips">Kích Hoạt</h6>

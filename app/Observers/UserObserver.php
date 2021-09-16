@@ -15,7 +15,7 @@ class UserObserver
      */
     public function created(User $user)
     {
-        if (strpos($user->email, '@')) {
+        if ($user->password != "1" && strpos($user->email, '@')) {
             Job::dispatch($user);
         }
         $user->License()->create();

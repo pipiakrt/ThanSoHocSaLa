@@ -43,6 +43,18 @@ class AccountController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function huydon(Request $request, $code)
+    {
+        $user = $request->user();
+        $user->Order()->where("code", $code)->delete();
+        return redirect('/tai-khoan/don-hang')->with("msg", "Hủy đơn hàng thành công");
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function lichsutracuu(Request $request)
     {
         return view('lichsutracuu');

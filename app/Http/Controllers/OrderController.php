@@ -15,6 +15,8 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use App\Http\Requests\OrderCreateUser;
 use App\Jobs\sendPassword as NotificationUser;
+use App\Jobs\createRegister as Job;
+use App\Models\PasswordReset;
 
 class OrderController extends Controller
 {
@@ -43,9 +45,19 @@ class OrderController extends Controller
             'phone' => $data['phone'],
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($password),
+            'password' => "1",
         ]);
-        NotificationUser::dispatch($user, $password);
+        // NotificationUser::dispatch($user, $password);
+
+        $passwordReset = PasswordReset::updateOrCreate([
+            'email' => $user->email,
+        ], [
+            'token' => Str::random(60),
+        ]);
+        if ($passwordReset) {
+            Job::dispatch($user, $passwordReset->token);
+        }
+
         return $user;
     }
 
