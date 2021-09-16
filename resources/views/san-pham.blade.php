@@ -171,7 +171,7 @@
                         <div class="s-main h-100">
                             <div class="py-5">
                             </div>
-                            <div class="ms-0 ms-md-5 mt-5 pt-4">
+                            <div class="ms-0 ms-md-5 mt-5 pt-4 p-r">
                                 <div>
                                     <h2><b>Cuốn sách cuộc đời</b></h2>
                                     <h2><b>khám phá 19 cái "chạm nhẹ" thần kỳ</b></h2>
