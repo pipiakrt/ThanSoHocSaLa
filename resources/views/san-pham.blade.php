@@ -366,14 +366,11 @@
             color: rgb(13, 99, 87);
         }
 
-        .dangkytth .title-2 span {
-            font-family: 'iCiel DIN Pro Condensed';
-        }
         .dangkytth .title-2 {
             font-family: 'iCiel DIN Pro Condensed';
             font-size: 30px;
             line-height: 1.5;
-            color: rgb(13, 99, 87);
+            color: black;
         }
 
         .fsadfsd {
@@ -576,16 +573,16 @@
                 <div class="col-md-5">
                     <ul>
                         <li>
-                            <h4 class="title-2"><span class="text-dark">Bước 1:</span> Đăng ký thông tin theo form</h4>
+                            <h4 class="title-2">Bước 1: Đăng ký thông tin theo form</h4>
                         </li>
                         <li>
-                            <h4 class="title-2"><span class="text-dark">Bước 2:</span> Đặt lịch với nhân viên tư vấn</h4>
+                            <h4 class="title-2">Bước 2: Đặt lịch với nhân viên tư vấn</h4>
                         </li>
                         <li>
-                            <h4 class="title-2"><span class="text-dark">Bước 3:</span> Nhận "Cuốn sách cuộc đời" của riêng bạn</h4>
+                            <h4 class="title-2">Bước 3: Nhận "Cuốn sách cuộc đời" của riêng bạn</h4>
                         </li>
                         <li>
-                            <h4 class="title-2"><span class="text-dark">Bước 4:</span> Tham vấn cùng chuyên gia</h4>
+                            <h4 class="title-2">Bước 4: Tham vấn cùng chuyên gia</h4>
                         </li>
                     </ul>
                 </div>
