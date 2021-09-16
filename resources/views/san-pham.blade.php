@@ -610,7 +610,7 @@
                     </form>
                 </div>
                 <div class="col-12">
-                    <h3 class="text-dark mt-5 text-center">Chúng tôi CAM KẾT khi bạn có trong tay "CUỐN SÁCH CUỘC ĐỜI" và đi theo đúng lộ trình mà HỌC VIỆN CỔ HỌC chia sẻ Cuộc đời bạn sẽ thay đổi tích cực</h3>
+                    <h3 class="text-dark mt-5 text-center">Chúng tôi <b>CAM KẾT</b> khi bạn có trong tay "<b>CUỐN SÁCH CUỘC ĐỜI</b>" và đi theo đúng lộ trình mà <b>HỌC VIỆN CỔ HỌC SALA</b> chia sẻ Cuộc đời bạn sẽ thay đổi tích cực</h3>
                 </div>
             </div>
         </div>
