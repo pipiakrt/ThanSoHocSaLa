@@ -166,7 +166,7 @@
             <div class="vong-tron-2"></div>
             <div class="col-md-7 text-white bg-xanh s-height">
                 <div class="row g-0 h-100">
-                    <div class="col-md-3"></div>
+                    <div class="col-md-3 d-none d-md-block"></div>
                     <div class="col-md-9 bg-white">
                         <div class="s-main h-100">
                             <div class="pt-4">
@@ -203,7 +203,7 @@
                             <img class="mh-100 mw-100 drop-biasach" src="https://w.ladicdn.com/s750x900/5da96e02ecb4f20339f4c96d/z2716369956721_a17c2c0da89549aabce9938f801a7b26-20210914035702.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-md-3"></div>
+                    <div class="col-md-3 d-none d-md-block"></div>
                 </div>
             </div>
         </div>
