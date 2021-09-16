@@ -170,7 +170,6 @@
                     <div class="col-md-9 bg-white">
                         <div class="s-main h-100">
                             <div class="pt-4">
-                                <img src="/img/logoweb.png" alt="">
                             </div>
                             <div class="ms-0 ms-md-5 mt-5">
                                 <div>

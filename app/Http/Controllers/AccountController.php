@@ -71,8 +71,9 @@ class AccountController extends Controller
         return redirect('/tai-khoan/don-hang/')->with('msg', 'Gói sản phẩm gia hạn thành công, thanh toán để kích hoạt gói!');
     }
 
-    public function ketquathanhtoan() {
-        return view('ket-qua-thanh-toan');
+    public function ketquathanhtoan(Request $request, $code) {
+        $order = $request->user()->Order()->where("code", $code)->first();
+        return view("ket-qua-thanh-toan", compact("order"));
     }
 
     /**

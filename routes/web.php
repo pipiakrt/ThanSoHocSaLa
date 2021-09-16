@@ -27,9 +27,6 @@ use App\Http\Controllers\CheckingController;
 */
 
 
-Route::get('/test', function() {
-    return view("ket-qua-thanh-toan");
-});
 Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('/gioi-thieu')->group(function () {

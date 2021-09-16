@@ -106,11 +106,11 @@
                         <div class="order-info__content">
                             <h3 class="thanks-msg">Cảm ơn bạn đã mua hàng tại Thansohocsala!</h3>
                             <p>Mã số đơn hàng của bạn:</p>
-                            <div class="order-number">682028761</div>
-                            <p>Bạn có thể xem lại <a target="_blank" href="/sales/order/view/682028761">đơn hàng của tôi</a></p>
+                            <div class="order-number">#{{ $order["code"] }}</div>
+                            <p>Bạn có thể xem lại <a target="_blank" href="/tai-khoan/don-hang">đơn hàng của tôi</a></p>
                             <p class="notice-message">Đơn hàng được vận chuyển đến hoặc qua các khu vực đang bị ảnh hưởng bởi Covid-19 sẽ có thể giao chậm hơn dự kiến. Kính mong quý khách thông cảm.</p>
                             <p><img src="https://salt.tikicdn.com/ts/upload/0e/9f/db/225af8863b34521c0b97e96a769a686d.jpg" height="25" width="30" alt="" /> Giao vào Thứ hai, 11/10.</p>
-                            <p>Thông tin chi tiết về đơn hàng đã được gửi đến địa chỉ mail <span>trankienofficial@gmail.com</span>. Nếu không tìm thấy vui lòng kiểm tra trong hộp thư <strong>Spam</strong> hoặc <strong>Junk Folder</strong>.</p>
+                            <p>Thông tin chi tiết về đơn hàng đã được gửi đến địa chỉ mail <span>{{ $order["email"] }}</span>. Nếu không tìm thấy vui lòng kiểm tra trong hộp thư <strong>Spam</strong> hoặc liên hệ <strong>0942 384 382</strong>.</p>
                             <div class="alert">
                                 <p>Nhằm giúp việc xử lý đơn hàng nhanh hơn nữa, Thansohocsala sẽ không gọi điện cho bạn để xác nhận đơn hàng.</p>
                             </div>
