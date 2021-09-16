@@ -57,7 +57,6 @@ class OrderController extends Controller
     public function thanhtoan(OrderCreateUser $request)
     {
         $user = $this->registerUser($request->all());
-
         $diachi = '';
 
         if($request->payment == "Ship COD") {
@@ -90,16 +89,27 @@ class OrderController extends Controller
                         'payment' => $request->payment
                     ]);
                     sendMail::dispatch($order);
+                    Session::push("order.products", $order);
                 }
                 else {
                     Session::push("cart.products", $item);
                 }
             }
         }
-        return redirect("/ket-qua-thanh-toan");
+        return redirect("/ket-qua-thanh-toan/$order->code");
     }
 
-    public function ketquathanhtoan() {
-        return view('ket-qua-thanh-toan');
+    public function ketquathanhtoan($code) {
+        $orders = Session::get('order.products');
+
+        if ($orders) {
+            foreach ($orders as $order) {
+                if ($order->code == $code) {
+                    return view('ket-qua-thanh-toan', compact("order"));
+                }
+            }
+        }
+
+        return view('errors.404');
     }
 }

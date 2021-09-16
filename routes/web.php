@@ -65,7 +65,7 @@ Route::get('/gio-hang/xoa/{slug}', [CartController::class, 'destroy']);
 Route::get('/dat-hang', [OrderController::class, 'nhapdiachi']);
 Route::post('/thanh-toan', [OrderController::class, 'thanhtoan']);
 Route::post('/checking', [CheckingController::class, 'store']);
-Route::get('/ket-qua-thanh-toan', [OrderController::class, 'ketquathanhtoan']);
+Route::get('/ket-qua-thanh-toan/{code}', [OrderController::class, 'ketquathanhtoan']);
 
 Route::group(['middleware' => 'login'], function(){
     Route::prefix('/tai-khoan')->group(function () {
