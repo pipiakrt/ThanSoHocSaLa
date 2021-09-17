@@ -673,7 +673,7 @@
                     </svg>
                     <div class="text">
                         <div class="title">
-                            Yêu cầu đăng nhập
+                            Để tra cứu nâng cao, yêu cầu bạn phải mua gói sản phẩm
                             <div class="tooltip">
                                 <div class="tooltip-spacing">
                                     <div class="tooltip-bg1"></div>
@@ -705,17 +705,16 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="info">
-                            <p class="mb-1">Đăng nhập để xem được chỉ số cùng giải thích chi tiết</p>
+                        <div class="info mt-4">
                             <ul class="px-3">
                                 <li>
-                                    <p class="mb-1">Gói sản phẩm, dịch vụ của chúng tôi <a class="link-primary" href="/san-pham">Click</a></p>
+                                    <p class="mb-1">Bài viết hướng dẫn đăng ký tài khoản<a class="link-primary" href="/hoi-dap/huong-dan-dang-ky-tai-khoan">Click</a></p>
                                 </li>
                                 <li>
-                                    <p class="mb-1">Tra cứu Thần Số Học miễn phí <a class="link-primary" href="/tra-cuu">Click</a></p>
+                                    <p class="mb-1">Bài viết hướng dẫn mua hàng<a class="link-primary" href="/hoi-dap/huong-dan-mua-hang">Click</a></p>
                                 </li>
                                 <li>
-                                    <p>Hướng dẫn đăng kí gói sản phẩm <a class="link-primary" href="/">Click</a></p>
+                                    <p>Hướng dẫn tra cứu nâng cao<a class="link-primary" href="/hoi-dap/huong-dan-tra-cuu-nang-cao">Click</a></p>
                                 </li>
                             </ul>
                         </div>
