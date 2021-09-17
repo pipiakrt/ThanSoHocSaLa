@@ -72,7 +72,7 @@ Route::group(['middleware' => 'login'], function(){
         Route::get('/', [AccountController::class, 'index']);
         Route::post('/cap-nhap', [AccountController::class, 'update']);
         Route::get('/don-hang', [AccountController::class, 'donhang']);
-        Route::get('/don-hang/{code}/huy-don', [AccountController::class, 'huydon']);
+        Route::delete('/don-hang/{code}/huy-don', [AccountController::class, 'huydon']);
         Route::get('/dat-hang', [CartController::class, 'dathang']);
         Route::post('/thanh-toan', [ProductController::class, 'thanhtoan']);
         Route::get('/thanh-toan', [AccountController::class, 'thanhtoan']);

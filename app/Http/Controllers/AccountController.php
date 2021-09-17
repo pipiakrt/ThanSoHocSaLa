@@ -46,7 +46,9 @@ class AccountController extends Controller
     public function huydon(Request $request, $code)
     {
         $user = $request->user();
-        $user->Order()->where("code", $code)->delete();
+        $user->Order()->where("code", $code)->update([
+            "status" => 3,
+        ]);
         return redirect('/tai-khoan/don-hang')->with("msg", "Hủy đơn hàng thành công");
     }
 
