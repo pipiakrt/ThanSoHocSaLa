@@ -26,6 +26,7 @@ class CreateProductsTable extends Migration
             $table->longText('content')->nullable();
             $table->boolean('status')->index();
             $table->integer('number')->default(0);
+            $table->integer('gia')->nullable();
             $table->integer('sort')->nullable();
             $table->timestamps();
         });

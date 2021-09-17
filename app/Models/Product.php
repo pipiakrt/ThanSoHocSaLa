@@ -16,6 +16,7 @@ class Product extends Model
         'slug',
         'image',
         'price_origin',
+        'gia',
         'price',
         'promotion',
         'options',

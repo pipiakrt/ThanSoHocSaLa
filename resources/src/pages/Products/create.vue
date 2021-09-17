@@ -56,7 +56,7 @@
                                 <div class="form-group row">
                                     <label for="price" class="col-2 col-form-label">Giá Gốc</label>
                                     <div class="col-10">
-                                        <input v-model="price_origin" class="form-control" type="text" placeholder="Giá bán" />
+                                        <input v-model="gia" class="form-control" type="number" placeholder="Giá bán" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -439,7 +439,7 @@ export default {
             image: '',
             name: '',
             slug: '',
-            price_origin: '',
+            gia: '',
             price: '',
             description: '',
             content: '',
@@ -525,7 +525,7 @@ export default {
                 sort: this.sort,
                 name: this.name,
                 slug: this.slug,
-                price_origin: this.price_origin,
+                gia: this.gia,
                 price: this.price,
                 image: this.image,
                 promotion: this.promotion,
