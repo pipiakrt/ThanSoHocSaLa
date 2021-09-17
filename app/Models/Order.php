@@ -31,6 +31,7 @@ class Order extends Model
         'product_name',
         'mkt_id',
         'sale_id',
+        'lydohuy',
         'lendon_id',
         'xacnhan_id',
         'kichhoat_id',

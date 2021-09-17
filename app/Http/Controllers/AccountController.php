@@ -48,6 +48,7 @@ class AccountController extends Controller
         $user = $request->user();
         $user->Order()->where("code", $code)->update([
             "status" => 3,
+            "lydohuy" => $request->type . ", " . $request->lydohuy,
         ]);
         return redirect('/tai-khoan/don-hang')->with("msg", "Hủy đơn hàng thành công");
     }

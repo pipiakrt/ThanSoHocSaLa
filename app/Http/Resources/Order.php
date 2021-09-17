@@ -32,6 +32,7 @@ class Order extends JsonResource
             'bat_dau' => $this->bat_dau,
             'ket_thuc' => $this->ket_thuc,
             'number' => $this->Product ? $this->Product->number : '',
+            'lydohuy' => $this->lydohuy,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'licenses' => $this->User ? $this->User->License->number : "",

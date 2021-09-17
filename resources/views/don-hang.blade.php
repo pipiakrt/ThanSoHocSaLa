@@ -154,7 +154,7 @@
                                     </div>
                                     <div class="modal-body py-4">
                                         <label for="note" class="col-form-label">bạn hãy cho tối biết lý do hủy</label>
-                                        <select class="form-select" required>
+                                        <select name="type" class="form-select" required>
                                             <option value="">Chọn lý do hủy</option>
                                             <option value="Đặt trùng">Đặt trùng</option>
                                             <option value="Không còn nhu cầu">Không còn nhu cầu</option>
@@ -166,7 +166,7 @@
                                             <option value="Khác">Khác</option>
                                         </select>
                                         <label for="note" class="col-form-label mt-2">Ghi chú</label>
-                                        <input type="note" class="form-control" id="note" required>
+                                        <input type="note" name="lydohuy" class="form-control" id="note" required>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>

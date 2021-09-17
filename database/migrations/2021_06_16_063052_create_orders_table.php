@@ -34,6 +34,7 @@ class CreateOrdersTable extends Migration
             $table->string('bat_dau')->nullable();
             $table->string('ket_thuc')->nullable();
             $table->string('price')->nullable();
+            $table->string('lydohuy')->nullable();
             $table->mediumText('note')->nullable();
             $table->string('payment')->nullable();
             $table->string('address')->nullable();

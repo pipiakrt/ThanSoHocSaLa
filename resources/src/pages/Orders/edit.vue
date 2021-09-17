@@ -59,6 +59,12 @@
                                         <textarea v-model="note" class="form-control" placeholder="Ghi chú" rows="5" id="note" disabled></textarea>
                                     </div>
                                 </div>
+                                <div v-if="status_origin == 3" class="form-group row">
+                                    <label for="lydohuy" class="col-2 col-form-label">Ly do hủy</label>
+                                    <div class="col-10">
+                                        <textarea v-model="lydohuy" class="form-control" placeholder="Ly do hủy" rows="5" id="lydohuy" disabled></textarea>
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <label for="name" class="col-2 col-form-label">Trạng Thái Đơn Hàng</label>
                                     <div class="col-10">
@@ -107,6 +113,7 @@ export default {
             user_id: '',
             id: '',
             code: '',
+            lydohuy: '',
             name: '',
             phone: '',
             email: '',
@@ -135,6 +142,7 @@ export default {
             this.number = res.data.data.number
             this.address = res.data.data.address
             this.note = res.data.data.note
+            this.lydohuy = res.data.data.lydohuy
         })
     },
     methods: {
