@@ -72,7 +72,7 @@
                                             </div>
                                         </div>
                                         <div class="col-xl-5 h-100">
-                                            <div class="anhsp h-100 text-center" style="background-image: url('/img/kh/2.jpg');">
+                                            <div class="anhsp h-100 text-center" style="background-image: url('{{ $item->image }}');">
                                                 <div class="row g-0 position-absolute end-0 start-0 bottom-0">
                                                     <div class="col-md-6 position-relative">
                                                         <a href="/gio-hang/{{ $item->slug }}">
