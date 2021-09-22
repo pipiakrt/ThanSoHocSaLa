@@ -259,13 +259,13 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="group-mstc-1 ct ms-0 ms-lg-5">
-                                            <img src="https://w.ladicdn.com/s400x400/5da96e02ecb4f20339f4c96d/icon-2-20210921033450.png" alt="">
+                                            <img src="https://w.ladicdn.com/s400x400/5da96e02ecb4f20339f4c96d/icon-3-20210921033450.png" alt="">
                                             <div class="text">CHƯƠNG 2: SỨ MỆNH CUỘC ĐỜI & CON ĐƯỜNG PHÁT TRIỂN</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="group-mstc-1 ct ms-0 ms-lg-5">
-                                            <img src="https://w.ladicdn.com/s400x400/5da96e02ecb4f20339f4c96d/icon-2-20210921033450.png" alt="">
+                                            <img src="https://w.ladicdn.com/s400x400/5da96e02ecb4f20339f4c96d/icon-5-20210921033450.png" alt="">
                                             <div class="text">CHƯƠNG 3: LỜI KHUYÊN CHO BẠN</div>
                                         </div>
                                     </div>
