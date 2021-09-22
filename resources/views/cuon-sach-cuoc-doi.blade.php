@@ -214,7 +214,7 @@
                         <h1><b class="cst-mts1">NỘI DUNG "CUỐN SÁCH CUỘC ĐỜI"</b></h1>
                     </div>
                     <div class="row align-items-center mt-3 mt-lg-5">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 text-center">
                             <img class="biasach2" src="https://w.ladicdn.com/s750x900/5da96e02ecb4f20339f4c96d/z2716369956721_a17c2c0da89549aabce9938f801a7b26-20210914035702.jpg" alt="">
                         </div>
                         <div class="col-lg-8">
