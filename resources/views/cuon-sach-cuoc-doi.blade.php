@@ -122,7 +122,7 @@
                 padding: 15px;
             }
             .cst-mts1 {
-                font-size: 45px;
+                font-size: 41px;
             }
             .group-mstc-1 .text {
                 font-size: 24px;
@@ -136,10 +136,10 @@
                 <div class="col-lg-7">
                     <div class="content mt-4 mt-lg-0">
                         <p><b><em>Bạn Thân Mến!</em></b></p>
-                        <p>Đây là “Cuốn Sách Cuộc Đời” được thiết kế cho riêng bạn.</p>
-                        <p>Cuốn sách này được chia làm 3 phần với 19 chỉ số đại diện cho: Tính cách, Năng lực cùng những Ưu điểm và Hạn chế bên trong con người bạn. Từ đó, bạn có thể hình dung được “bức tranh” cuộc đời mình một cách toàn diện, để định hướng và phát huy năng lực vượt trội của chính bản thân mình.</p>
-                        <p>Cuốn sách này sẽ chỉ cho bạn thấy tiềm năng có trong con người bạn để phát huy. Tuy nhiên, việc có phát huy được nó hay không phụ thuộcvào nhiều yếu tố: ý chí, sự lựa chọn hay các yếu tố môi trường nằm ngoài tầm kiểm soát của bạn</p>
-                        <p>Xin hãy nhớ rằng Sức mạnh và Tiềm năng của bạn tuyệt vời hơn bạn nghĩ rất nhiều. Hành trình khám phá và phát triển bản thân chính là đích đến và lẽ sống của mỗi người.</p>
+                        <p>Đây là <b>“Cuốn Sách Cuộc Đời”</b> được thiết kế cho riêng bạn.</p>
+                        <p>Cuốn sách này được chia làm 3 phần với 19 chỉ số đại diện cho: <b>Tính cách</b>, <b>Năng lực</b> cùng những <b>Ưu điểm</b> và <b>Hạn chế</b> bên trong con người bạn. Từ đó, bạn có thể hình dung được “bức tranh” cuộc đời mình một cách toàn diện, để định hướng và phát huy năng lực vượt trội của chính bản thân mình.</p>
+                        <p>Cuốn sách này sẽ chỉ cho bạn thấy <b>tiềm năng</b> có trong con người bạn để phát huy. Tuy nhiên, việc có phát huy được nó hay không phụ thuộc vào nhiều yếu tố: <b>ý chí, sự lựa chọn hay các yếu tố môi trường</b> nằm ngoài tầm kiểm soát của bạn</p>
+                        <p>Xin hãy nhớ rằng <b>Sức mạnh</b> và <b>Tiềm năng</b> của bạn tuyệt vời hơn bạn nghĩ rất nhiều. Hành trình khám phá và phát triển bản thân chính là <b>đích đến</b> và <b>lẽ sống</b> của mỗi người.</p>
                         <p><em>Thân ái!</em></p>
                     </div>
                 </div>
@@ -211,7 +211,13 @@
             <div class="row justify-content-center">
                 <div class="col-lg-11 py-4 py-lg-5">
                     <div class="text-center text-white">
-                        <h1><b class="cst-mts1">NỘI DUNG "CUỐN SÁCH CUỘC ĐỜI"</b></h1>
+                        <div class="d-none d-md-block">
+                            <h1><b class="cst-mts1">NỘI DUNG "CUỐN SÁCH CUỘC ĐỜI"</b></h1>
+                        </div>
+                        <div class="d-block d-md-none">
+                            <h1><b class="cst-mts1">NỘI DUNG</b></h1>
+                            <h1><b class="cst-mts1">"CUỐN SÁCH CUỘC ĐỜI"</b></h1>
+                        </div>
                     </div>
                     <div class="row align-items-center mt-3 mt-lg-5">
                         <div class="col-lg-4 text-center">
