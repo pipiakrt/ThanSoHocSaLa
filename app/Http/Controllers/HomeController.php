@@ -61,6 +61,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    public function cuonsachcuocdoi()
+    {
+        return view('cuon-sach-cuoc-doi');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function hoidap()
     {
         return view('hoi-dap');

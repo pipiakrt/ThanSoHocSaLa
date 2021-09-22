@@ -35,6 +35,7 @@ Route::prefix('/gioi-thieu')->group(function () {
     Route::get('/chuyen-gia', [HomeController::class, 'chuyengia']);
     Route::get('/su-menh', [HomeController::class, 'sumenh']);
     Route::get('/duong-doi', [HomeController::class, 'duongdoi']);
+    Route::get('/cuon-sach-cuoc-doi', [HomeController::class, 'cuonsachcuocdoi']);
     Route::get('/{slug}', [PostController::class, 'show']);
 });
 
