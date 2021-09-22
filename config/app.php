@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Elibyy\TCPDF\ServiceProvider::class,
+        App\Providers\GoogleDriveServiceProvider::class,
         /*
          * Application Service Providers...
          */
