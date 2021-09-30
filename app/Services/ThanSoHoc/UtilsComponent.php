@@ -477,7 +477,7 @@ class UtilsComponent
     private function getKimTuThap($NgaySinh, $ThangSinh, $NamSinh, $duongDoi)
     {
         list($gd_tuoi_1, $gd_tuoi_2, $gd_tuoi_3, $gd_tuoi_4) = $this->getGiaiDoanTuoi($duongDoi);
-        $level_1 = array($ThangSinh, $NgaySinh, $NamSinh, $gd_tuoi_1, $gd_tuoi_2);
+        $level_1 = array($this->convertNumberGoc($ThangSinh), $this->convertNumberGoc($NgaySinh), $this->convertNumberGoc($NamSinh), $gd_tuoi_1, $gd_tuoi_2);
         // build level 2
         $Dinh_1 = $this->convertNumber($NgaySinh + $ThangSinh);
         $Dinh_2 = $this->convertNumber($NgaySinh + $NamSinh);
